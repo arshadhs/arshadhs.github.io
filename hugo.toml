@@ -1,0 +1,4 @@
+baseURL = "http://arshad.github.io/website/"
+languageCode = "en-us"
+title = "Arshad Siddiqui"
+theme = "ananke"
