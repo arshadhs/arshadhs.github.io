@@ -1,7 +1,7 @@
 +++
 title = 'Technology'
 date = 2024-07-04T10:55:52+01:00
-draft = true
+draft = false
 +++
 ## All things Technology
 
