@@ -24,17 +24,10 @@
     </item>
     <item>
       <title>Technology</title>
-      <link>http://arshadhs.github.io/technology/tech_1/</link>
-      <pubDate>Thu, 04 Jul 2024 10:55:52 +0100</pubDate>
-      <guid>http://arshadhs.github.io/technology/tech_1/</guid>
-      <description>All things Technology Plan to move blogs from blogger to github, for now these are here&#xA;Visit the github profile!</description>
-    </item>
-    <item>
-      <title>Technology</title>
       <link>http://arshadhs.github.io/technology/tech_2/</link>
       <pubDate>Thu, 04 Jul 2024 10:55:52 +0100</pubDate>
       <guid>http://arshadhs.github.io/technology/tech_2/</guid>
-      <description>All things Technology Plan to move blogs from blogger to github, for now these are here&#xA;Visit the github profile!</description>
+      <description>All things Technology Part II Plan to move blogs from blogger to github, for now these are here</description>
     </item>
     <item>
       <title>My First Post</title>
@@ -42,6 +35,13 @@
       <pubDate>Wed, 03 Jul 2024 12:29:34 +0100</pubDate>
       <guid>http://arshadhs.github.io/blog/my-first-post/</guid>
       <description>I&amp;rsquo;ve wanted to put a page on github for a while and finally here it is!</description>
+    </item>
+    <item>
+      <title>Technology</title>
+      <link>http://arshadhs.github.io/technology/tech_1/</link>
+      <pubDate>Mon, 04 Jul 2022 10:55:52 +0100</pubDate>
+      <guid>http://arshadhs.github.io/technology/tech_1/</guid>
+      <description>All things Technology Plan to move blogs from blogger to github, for now these are here&#xA;Visit the github profile!</description>
     </item>
   </channel>
 </rss>
