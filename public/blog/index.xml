@@ -15,5 +15,12 @@
       <guid>http://arshadhs.github.io/blog/my-second-post/</guid>
       <description>Just testing another post on github!</description>
     </item>
+    <item>
+      <title>My First Post</title>
+      <link>http://arshadhs.github.io/blog/my-first-post/</link>
+      <pubDate>Wed, 03 Jul 2024 12:29:34 +0100</pubDate>
+      <guid>http://arshadhs.github.io/blog/my-first-post/</guid>
+      <description>I&amp;rsquo;ve wanted to put a page on github for a while and finally here it is!</description>
+    </item>
   </channel>
 </rss>
