@@ -6,7 +6,21 @@
     <description>Recent content in Technologies on Arshad Siddiqui</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate></lastBuildDate>
+    <lastBuildDate>Thu, 04 Jul 2024 10:55:52 +0100</lastBuildDate>
     <atom:link href="http://arshadhs.github.io/technology/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Technology</title>
+      <link>http://arshadhs.github.io/technology/tech_1/</link>
+      <pubDate>Thu, 04 Jul 2024 10:55:52 +0100</pubDate>
+      <guid>http://arshadhs.github.io/technology/tech_1/</guid>
+      <description>All things Technology Plan to move blogs from blogger to github, for now these are here&#xA;Visit the github profile!</description>
+    </item>
+    <item>
+      <title>Technology</title>
+      <link>http://arshadhs.github.io/technology/tech_2/</link>
+      <pubDate>Thu, 04 Jul 2024 10:55:52 +0100</pubDate>
+      <guid>http://arshadhs.github.io/technology/tech_2/</guid>
+      <description>All things Technology Plan to move blogs from blogger to github, for now these are here&#xA;Visit the github profile!</description>
+    </item>
   </channel>
 </rss>
