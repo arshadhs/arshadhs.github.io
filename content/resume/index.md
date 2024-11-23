@@ -26,9 +26,9 @@ IPC/System Programming Perforce, Jenkins, GIT
 Wireshark
 
 ## Employment History
-- April 2013 - till Date – Staff Engineer at Qualcomm #### Technologies International Ltd.
+- April 2013 - till Date – Staff Engineer at Qualcomm Technologies International Ltd.
 - Jan 2013 - April 2013 – Senior Software Engineer at Sepura Limited
-- Aug 2004 - Dec 2012 – Technical leader at Aricent #### Technologies (Hughes Software System)
+- Aug 2004 - Dec 2012 – Technical leader at Aricent Technologies (Hughes Software System)
 - Jan 2004 - Aug 2004 – Member, R&D at Quark Software Inc.
 
 ## Education
@@ -40,8 +40,8 @@ Wireshark
 - Crystal Award Plaque - For AudioReach Contribution Qualcomm
 - Qualstar and ThankQ’s for Outstanding Contributions Qualcomm
 - Rated ‘Consistently Exceeds Expectations’ for last two years Qualcomm
-- Received Aricent team snap award Aricent #### Technologies
-- Alpha Award for the best project Aricent #### Technologies
+- Received Aricent team snap award Aricent Technologies
+- Alpha Award for the best project Aricent Technologies
 
 ## Professional Experience
 
@@ -141,9 +141,9 @@ in TCL and C++
 November 2005 to May 2007 (~1.5 Year) for Newport Network Ltd., UK
 #### Roles and responsibilities
 - Worked on various features.
-o CA-Load Balancing
-o Dynamic Configuration (CA Profile, Static FQDN, Signaling Policing)
-o Policy Decision Point Interface
+ - CA-Load Balancing
+ - Dynamic Configuration (CA Profile, Static FQDN, Signaling Policing)
+ - Policy Decision Point Interface
 - Responsible for bug fixing and the complete SDLC for the Dynamic Change Requirements
 (DCRs).
 - Testing - unit testing & integration testing
@@ -153,32 +153,31 @@ o Policy Decision Point Interface
 
 ### SPACEWAY group (STEEL) (Aricent)
 #### Duration and Place
-April 2005 to October 2005 (7 months) at Aricent #### Technologies
+April 2005 to October 2005 (7 months) at Aricent Technologies
 #### Description
 Contributed to the entire software development life cycle for the release of
 a load testing product.
 #### Roles and responsibilities
-● Introduced new features.
-o STEEL – TMS (web interface) integration into Test Harness
-o Procedure call support for STT
-o Global Variable Support for STT
-● Analysis and fixing of reported bugs.
-● Responsible for overseeing the Quality procedures related to the project.
+- Introduced new features.
+ - STEEL – TMS (web interface) integration into Test Harness
+ - Procedure call support for STT
+ - Global Variable Support for STT
+ - Analysis and fixing of reported bugs.
+ - Responsible for overseeing the Quality procedures related to the project.
 #### Technologies C, Lex and Yacc, TCL, ClearCase, gdb, Linux, Solaris
 
 ### SPACEWAY ST (Aricent)
 #### Duration and Place
-August 2004 – March 2005 (~1 Year) at Aricent #### Technologies
+August 2004 – March 2005 (~1 Year) at Aricent Technologies
 #### Description
 Contributed to the development of modules for a satellite video conferencing
 product, working on the entire software development life cycle.
 #### Roles and responsibilities
 - Introduced new features.
-
-- iBridge MCU-MP interface
-- iBridge Local User Interface (LUI)
-- Testing - unit testing & integration testing
-- Analysis and fixing of reported bugs.
+ - iBridge MCU-MP interface
+ - iBridge Local User Interface (LUI)
+ - Testing - unit testing & integration testing
+ - Analysis and fixing of reported bugs.
 #### Technologies H.323, C, HTML, CVS, gdb, gcc, Linux, Solaris
 
 ### QuarkXPress ME

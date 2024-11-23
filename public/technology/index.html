@@ -46,8 +46,8 @@
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="Technologies">
-  <meta itemprop="datePublished" content="2024-07-04T10:55:52+01:00">
-  <meta itemprop="dateModified" content="2024-07-04T10:55:52+01:00">
+  <meta itemprop="datePublished" content="2024-04-04T15:29:34+01:00">
+  <meta itemprop="dateModified" content="2024-04-04T15:29:34+01:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Technologies">
 
@@ -80,14 +80,20 @@
           </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="/blog" title="Blog page">
-              Blog
+            <a class="hover-white no-underline white-90" href="/technology" title="Technology page">
+              Technology
             </a>
           </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="/technology" title="Technology page">
-              Technology
+            <a class="hover-white no-underline white-90" href="/recipe" title="Recipes page">
+              Recipes
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/blog" title="Blog page">
+              Blog
             </a>
           </li>
           
@@ -135,12 +141,65 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Technologies</span>
     <h1 class="f3 near-black">
-      <a href="/technology/tech_2/" class="link black dim">
-        Technology
+      <a href="/technology/gitcheatsheet/" class="link black dim">
+        GIT
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      All things Technology Part II Plan to move blogs from blogger to github, for now these are here
+      Cheat Sheet git user
+git email
+git init
+git status
+git log
+git checkout
+git branch
+git checkout master
+git init -b main
+git add all
+git add .
+git commit -m &ldquo;&hellip;&rdquo;
+git remote add origin git push origin main -f
+    </div>
+    <a href="/technology/gitcheatsheet/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Technologies</span>
+    <h1 class="f3 near-black">
+      <a href="/technology/tech20/" class="link black dim">
+        Banana Pi HomeCloud
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Refresh MiniDLNA MiniDLNA couldn&rsquo;t find any new files in my media_dir even though I was adding new files. I think the problem was that my media_dir was set to an external hard drive.
+(media_dir=v,/media/ExtHD/x/x). I got it working, here are the steps I used to fix.
+sudo service minidlna stop sudo rm -rf /var/cache/minidlna/* sudo nano /etc/minidlna.conf
+Set the media_dir back to default location - media_dir=V,/var/lib/minidlna/video Create a link in /var/lib/minidlna to the directory you want monitored.
+    </div>
+    <a href="/technology/tech20/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Technologies</span>
+    <h1 class="f3 near-black">
+      <a href="/technology/tech_2/" class="link black dim">
+        Raspberry Pi
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Setup Steps I followed to set-up my raspberry Pi with Raspbian
+Also configure -
+XBMC (for playing videos) NFS (to access external hard drive from any device in the house) VNC viewer (to access the desktop from any device in the house) Format SD Card Windows Download SD Formatter https://www.sdcard.org/downloads/formatter_4/ Install SD Formatter and run the software Set &ldquo;FORMAT SIZE ADJUSTMENT&rdquo; to ON in the Options menu. Make sure you have selected the Drive your SD Card is inserted in Format the memory card Linux Use gparted (or the command-line version parted if you prefer), if you don&rsquo;t have it, install it as you usually would.
     </div>
     <a href="/technology/tech_2/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>

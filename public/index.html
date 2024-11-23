@@ -80,14 +80,20 @@
           </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="/blog" title="Blog page">
-              Blog
+            <a class="hover-white no-underline white-90" href="/technology" title="Technology page">
+              Technology
             </a>
           </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="/technology" title="Technology page">
-              Technology
+            <a class="hover-white no-underline white-90" href="/recipe" title="Recipes page">
+              Recipes
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/blog" title="Blog page">
+              Blog
             </a>
           </li>
           
@@ -186,14 +192,26 @@ Visit the linkedin profile!
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/technology/tech_2/" class="color-inherit dim link">
-            Technology
+          <a href="/technology/gitcheatsheet/" class="color-inherit dim link">
+            GIT
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          All things Technology Part II Plan to move blogs from blogger to github, for now these are here
+          Cheat Sheet git user
+git email
+git init
+git status
+git log
+git checkout
+git branch
+git checkout master
+git init -b main
+git add all
+git add .
+git commit -m &ldquo;&hellip;&rdquo;
+git remote add origin git push origin main -f
         </div>
-          <a href="/technology/tech_2/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="/technology/gitcheatsheet/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -210,15 +228,17 @@ Visit the linkedin profile!
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/technology/tech_1/" class="color-inherit dim link">
-            Technology
+          <a href="/technology/tech20/" class="color-inherit dim link">
+            Banana Pi HomeCloud
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          All things Technology Plan to move blogs from blogger to github, for now these are here
-Visit the github profile!
+          Refresh MiniDLNA MiniDLNA couldn&rsquo;t find any new files in my media_dir even though I was adding new files. I think the problem was that my media_dir was set to an external hard drive.
+(media_dir=v,/media/ExtHD/x/x). I got it working, here are the steps I used to fix.
+sudo service minidlna stop sudo rm -rf /var/cache/minidlna/* sudo nano /etc/minidlna.conf
+Set the media_dir back to default location - media_dir=V,/var/lib/minidlna/video Create a link in /var/lib/minidlna to the directory you want monitored.
         </div>
-          <a href="/technology/tech_1/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="/technology/tech20/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -229,6 +249,29 @@ Visit the github profile!
           
         </section>
 
+        
+        <section class="w-100">
+          <h1 class="f3">More</h1>
+          
+          
+            <h2 class="f5 fw4 mb4 dib mr3">
+              <a href="/technology/tech_2/" class="link black dim">
+                Raspberry Pi
+              </a>
+            </h2>
+          
+            <h2 class="f5 fw4 mb4 dib mr3">
+              <a href="/technology/tech_1/" class="link black dim">
+                Technology
+              </a>
+            </h2>
+          
+
+          
+          
+            <a href="/technology/" class="link db f6 pa2 br3 bg-mid-gray white dim w4 tc">All Technologies</a>
+          
+          </section>
         
 
         </div>
