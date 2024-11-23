@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Technologies on Arshad Siddiqui</title>
-    <link>http://arshadhs.github.io/technology/</link>
+    <link>http://localhost:1313/technology/</link>
     <description>Recent content in Technologies on Arshad Siddiqui</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 04 Apr 2024 15:29:34 +0100</lastBuildDate>
-    <atom:link href="http://arshadhs.github.io/technology/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/technology/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GIT</title>
-      <link>http://arshadhs.github.io/technology/gitcheatsheet/</link>
+      <link>http://localhost:1313/technology/gitcheatsheet/</link>
       <pubDate>Thu, 04 Apr 2024 15:29:34 +0100</pubDate>
-      <guid>http://arshadhs.github.io/technology/gitcheatsheet/</guid>
+      <guid>http://localhost:1313/technology/gitcheatsheet/</guid>
       <description>Cheat Sheet git user&#xA;git email&#xA;git init&#xA;git status&#xA;git log&#xA;git checkout&#xA;git branch&#xA;git checkout master&#xA;git init -b main&#xA;git add all&#xA;git add .&#xA;git commit -m &amp;ldquo;&amp;hellip;&amp;rdquo;&#xA;git remote add origin git push origin main -f</description>
     </item>
     <item>
       <title>Banana Pi HomeCloud</title>
-      <link>http://arshadhs.github.io/technology/tech20/</link>
+      <link>http://localhost:1313/technology/tech20/</link>
       <pubDate>Mon, 30 Mar 2020 12:29:34 +0100</pubDate>
-      <guid>http://arshadhs.github.io/technology/tech20/</guid>
+      <guid>http://localhost:1313/technology/tech20/</guid>
       <description>Refresh MiniDLNA MiniDLNA couldn&amp;rsquo;t find any new files in my media_dir even though I was adding new files. I think the problem was that my media_dir was set to an external hard drive.&#xA;(media_dir=v,/media/ExtHD/x/x). I got it working, here are the steps I used to fix.&#xA;sudo service minidlna stop sudo rm -rf /var/cache/minidlna/* sudo nano /etc/minidlna.conf&#xA;Set the media_dir back to default location - media_dir=V,/var/lib/minidlna/video Create a link in /var/lib/minidlna to the directory you want monitored.</description>
     </item>
     <item>
       <title>Raspberry Pi</title>
-      <link>http://arshadhs.github.io/technology/tech_2/</link>
+      <link>http://localhost:1313/technology/tech_2/</link>
       <pubDate>Wed, 24 Jul 2013 10:55:52 +0100</pubDate>
-      <guid>http://arshadhs.github.io/technology/tech_2/</guid>
+      <guid>http://localhost:1313/technology/tech_2/</guid>
       <description>Setup Steps I followed to set-up my raspberry Pi with Raspbian&#xA;Also configure -&#xA;XBMC (for playing videos) NFS (to access external hard drive from any device in the house) VNC viewer (to access the desktop from any device in the house) Format SD Card Windows Download SD Formatter https://www.sdcard.org/downloads/formatter_4/ Install SD Formatter and run the software Set &amp;ldquo;FORMAT SIZE ADJUSTMENT&amp;rdquo; to ON in the Options menu. Make sure you have selected the Drive your SD Card is inserted in Format the memory card Linux Use gparted (or the command-line version parted if you prefer), if you don&amp;rsquo;t have it, install it as you usually would.</description>
     </item>
     <item>
       <title>Technology</title>
-      <link>http://arshadhs.github.io/technology/tech_1/</link>
+      <link>http://localhost:1313/technology/tech_1/</link>
       <pubDate>Wed, 04 Jul 2012 10:55:52 +0100</pubDate>
-      <guid>http://arshadhs.github.io/technology/tech_1/</guid>
+      <guid>http://localhost:1313/technology/tech_1/</guid>
       <description>All things Technology Plan to move blogs from blogger to github, for now these are here&#xA;Visit the github profile!</description>
     </item>
   </channel>
