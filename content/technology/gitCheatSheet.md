@@ -25,3 +25,11 @@ draft = false
 > git commit -m "..."   
 > git remote add origin <url>  
 > git push origin main -f   
+
+---
+
+## Hugo Command
+> hugo server
+
+Test the run from workflow:
+https://github.com/arshadhs/arshadhs.github.io/actions
