@@ -13,7 +13,7 @@
       <link>http://localhost:1313/blog/my-second-post/</link>
       <pubDate>Thu, 04 Jul 2024 11:26:24 +0100</pubDate>
       <guid>http://localhost:1313/blog/my-second-post/</guid>
-      <description>Just testing another post on github!</description>
+      <description>Just testing other post on github!</description>
     </item>
     <item>
       <title>About Me</title>
@@ -21,13 +21,6 @@
       <pubDate>Thu, 04 Jul 2024 10:55:52 +0100</pubDate>
       <guid>http://localhost:1313/about/</guid>
       <description>Seasoned Staff Engineer with a passion to learn new skills both technical and non-technical!&#xA;Visit the linkedin profile!</description>
-    </item>
-    <item>
-      <title>Resume</title>
-      <link>http://localhost:1313/resume/</link>
-      <pubDate>Thu, 04 Jul 2024 10:55:52 +0100</pubDate>
-      <guid>http://localhost:1313/resume/</guid>
-      <description>About me As a Staff Engineer with extensive software development experience in the semi-conductor and telecom industry, I have a proven track record of leading product development. I have worked as a team member and as an individual contributor handling applications or software modules single handedly.&#xA;I have a broad range of experience with extensive development in C, C++, C# and scripting languages on Windows and Linux platforms. I have taken on various roles in the semi-conductor and telecom sectors.</description>
     </item>
     <item>
       <title>Hello World!</title>
@@ -63,13 +56,6 @@
       <pubDate>Wed, 04 Jul 2012 10:55:52 +0100</pubDate>
       <guid>http://localhost:1313/technology/tech_1/</guid>
       <description>All things Technology Plan to move blogs from blogger to github, for now these are here&#xA;Visit the github profile!</description>
-    </item>
-    <item>
-      <title>Sids Chicken Curry</title>
-      <link>http://localhost:1313/recipe/sids-chicken-curry/</link>
-      <pubDate>Tue, 25 Dec 2007 13:31:55 +0000</pubDate>
-      <guid>http://localhost:1313/recipe/sids-chicken-curry/</guid>
-      <description>99% of what I see is forgotten. 99% of what I think remains locked inside me. 99% of my words are lost within a short while of them being spoken. &amp;ldquo;Silence is Golden&amp;rdquo; but there may be a few of those words that are worth sharing. Recipes jotted down but incomplete; they could just be useful to someone. A thought - a trigger - a reminder. So I&amp;rsquo;m going to post them here.</description>
     </item>
   </channel>
 </rss>

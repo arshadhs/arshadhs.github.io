@@ -14,9 +14,6 @@
     <loc>http://localhost:1313/about/</loc>
     <lastmod>2024-07-04T10:55:52+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/resume/</loc>
-    <lastmod>2024-07-04T10:55:52+01:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/blog/my-first-post/</loc>
     <lastmod>2024-07-03T12:29:34+01:00</lastmod>
   </url><url>
@@ -36,9 +33,6 @@
     <lastmod>2012-07-04T10:55:52+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/recipe/</loc>
-    <lastmod>2007-12-25T13:31:55+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/recipe/sids-chicken-curry/</loc>
     <lastmod>2007-12-25T13:31:55+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
