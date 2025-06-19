@@ -1,53 +1,65 @@
 +++
-title = 'Sids Chicken Curry'
+title = "Sid's Chicken Curry"
 date = 2007-12-25T13:31:55Z
-draft = true
+draft = false
 +++
-99% of what I see is forgotten. 99% of what I think remains locked inside me. 99% of my words are lost within a short while of them being spoken. "Silence is Golden" but there may be a few of those words that are worth sharing. Recipes jotted down but incomplete; they could just be useful to someone. A thought - a trigger - a reminder. So I'm going to post them here. Hey - I might look back and they might be useful to me at some time!
 
-There is something very special about this dish, I ate it almost 4 days a week around 2007-2008. I was on a strict diet plan, one that I made for myself. And I made it a point that there was as less fat as possible, and I get enough proteins and vitamins. It was a plan to lose weight and still get a diet which I can burn during my morning run and evening gym session.
+Most of what I see is forgotten.  
+Most of what I think never makes it out of my head.  
+Most of what I say disappears into the air not long after I say it.
 
-This was the time I did not know how to cook chicken and slowly started working out on the recipe, improving it and adding removing bits I did not like. It is like many other recipes but one which was my own innovation. I did things I liked and it was an absolute hit.
+"Silence is golden"—but sometimes, a few of those thoughts or words might be worth capturing. Like that half-written recipe or a fleeting idea. Maybe it’ll help someone out there. Maybe it'll help me when I stumble across it again.
+
+So here’s one of those recipes. A bit of a throwback to 2007–2008, when I was on a strict self-designed diet. I’d eat this dish about four times a week. It was clean, protein-packed, low-fat, and gave me just enough energy for my early morning runs and evening gym sessions.
+
+Back then, I barely knew how to cook chicken. So I experimented—trial and error, tweaks and retweaks—until this recipe came to life. It's not revolutionary, but it's mine. Familiar, yet personal. Simple, yet satisfying.
 
 ## Ingredients
 
-- Chicken Breast - 1 kg (or a full chicken)
-- Onion - 1/2 kg
-- Garlic (grated) - 5 cloves
-- Ginger (grated) - about 2 tablespoons
-- Curd - 400 gram
+- 1 kg chicken breast (or a whole chicken, if you prefer)
+- ½ kg onions
+- 5 cloves garlic (grated)
+- 2 tbsp fresh ginger (grated)
+- 400 g plain curd (yoghurt)
 - Salt to taste
-- Olive Oil - 5 tablespoons (or sunflower / vegetable oil)
+- 5 tbsp olive oil (or sunflower/vegetable oil)
 
-**Whole Spices**
-- Bay Leaf (tez patta) - 2
-- Cinnamon (dalchini) -1 stick
-- Green Cardamom (chotti elaychi) - 4
-- Black Cardmom (badi elaychi) - 3
-- Cloves (laung) -4
-- Black Peeper (kali mirch) - 6
-- Nutmeg (Jaiphal) - about 3 pinch
-- Mace (Javitri) - 2 strands
+**Whole Spices**  
+- 2 bay leaves  
+- 1 stick cinnamon  
+- 4 green cardamoms  
+- 3 black cardamoms  
+- 4 cloves  
+- 6 black peppercorns  
+- 3 pinches nutmeg  
+- 2 strands mace  
 
-**Ground Spices**
-- Red Chilli powder - 1 teaspoon
-- Coriander powder - 2 teaspoon
-- Garam Masala - 2/3 teaspoon
-- Turmeric powder - 1/2 teaspoon
+**Ground Spices**  
+- 1 tsp red chilli powder  
+- 2 tsp coriander powder  
+- ⅔ tsp garam masala  
+- ½ tsp turmeric powder  
 
-## Recipe
+## Method
 
-1. Heat olive oil in a non-stick pot (remember you cannot overheat olive oil)
-2. Add whole spices
-3. Add chicken, ginger and garlic, salt and fry it, keep turning till all sides get white
-4. Remove chicken and keep in a bowl
-5. Remove spices from oil and keep in a separate bowl
-6. Add ground spices to chicken, add curd, leave it to marinate for about an hour or more
-7. Heat oil and fry the onions add the whole spices (which we had removed before from oil), add oil if there is not enough oil in the pot.
-8. Add marinated chicken to the pot
-9. Cover the pot and cook it on medium heat until the chicken is done (usually 15-20 minutes)
----	
-*PS: For variations, replace curd with tomato puree / sarso ka saag/spinach etc.*
-*Also, at times I had use Shana masala instead of ground spices.*
-*Add 2-3 green chilies if you like them (reduce the quantity of red chili and garam masala if doing so).*
-*Garnish with green coriander.*
+1. Heat the olive oil in a non-stick pot. *(Don’t overheat it—olive oil prefers it gentle.)*
+2. Add the whole spices and let them release their aroma.
+3. Add chicken, ginger, garlic, and salt. Sauté until the chicken turns white on all sides.
+4. Remove the chicken and set aside.
+5. Remove the whole spices from the oil and keep them aside too.
+6. Add the ground spices and curd to the chicken, and let it marinate for at least an hour.
+7. Meanwhile, in the same pot, fry the onions until golden.
+8. Add the whole spices back in. Top up the oil if needed.
+9. Add the marinated chicken and cook on medium heat with the lid on for 15–20 minutes, or until done.
+
+---
+
+**PS**  
+- For a twist, try using tomato purée, *sarson ka saag* (mustard greens), or spinach instead of curd.  
+- Sometimes I’d cheat and use *Shana* masala—nothing wrong with shortcuts.  
+- Want it spicy? Toss in 2–3 green chillies and dial down the red chilli and garam masala to balance.  
+- Garnish with fresh green coriander and serve it up hot.
+
+---
+
+This one’s close to my heart. Hope it finds a place in your kitchen too.
