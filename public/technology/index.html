@@ -7,7 +7,7 @@
     <title>Arshad Siddiqui</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="">
-    <meta name="generator" content="Hugo 0.128.1">
+    <meta name="generator" content="Hugo 0.147.8">
     
     
     
@@ -146,19 +146,33 @@
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Cheat Sheet git user
-git email
-git init
-git status
-git log
-git checkout
-git branch
-git checkout master
-git init -b main
-git add all
-git add .
-git commit -m &ldquo;&hellip;&rdquo;
-git remote add origin git push origin main -f
+      <h3 id="cheat-sheet">Cheat Sheet</h3>
+<blockquote>
+<p>git user<br>
+git email</p></blockquote>
+<blockquote>
+<p>git init<br>
+git status</p></blockquote>
+<blockquote>
+<p>git log</p></blockquote>
+<blockquote>
+<p>git checkout<br>
+git branch<br>
+git checkout master</p></blockquote>
+<hr>
+<blockquote>
+<p>git init -b main<br>
+<em>git add all</em><br>
+git add .<br>
+git commit -m &ldquo;&hellip;&rdquo;<br>
+git remote add origin <!-- raw HTML omitted --><br>
+git push origin main -f</p></blockquote>
+<hr>
+<h2 id="hugo-command">Hugo Command</h2>
+<blockquote>
+<p>hugo server</p></blockquote>
+<p>Test the run from workflow:
+<a href="https://github.com/arshadhs/arshadhs.github.io/actions">https://github.com/arshadhs/arshadhs.github.io/actions</a></p>
     </div>
     <a href="/technology/gitcheatsheet/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
@@ -176,10 +190,20 @@ git remote add origin git push origin main -f
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Refresh MiniDLNA MiniDLNA couldn&rsquo;t find any new files in my media_dir even though I was adding new files. I think the problem was that my media_dir was set to an external hard drive.
-(media_dir=v,/media/ExtHD/x/x). I got it working, here are the steps I used to fix.
-sudo service minidlna stop sudo rm -rf /var/cache/minidlna/* sudo nano /etc/minidlna.conf
-Set the media_dir back to default location - media_dir=V,/var/lib/minidlna/video Create a link in /var/lib/minidlna to the directory you want monitored.
+      <h3 id="refresh-minidlna">Refresh MiniDLNA</h3>
+<p>MiniDLNA couldn&rsquo;t find any new files in my media_dir even though I was adding new files. I think the problem was that my media_dir was set to an external hard drive.</p>
+<p>(media_dir=v,/media/ExtHD/x/x). I got it working, here are the steps I used to fix.</p>
+<blockquote>
+<p>sudo service minidlna stop
+sudo rm -rf /var/cache/minidlna/*
+sudo nano /etc/minidlna.conf</p></blockquote>
+<ul>
+<li>Set the media_dir back to default location - media_dir=V,/var/lib/minidlna/video</li>
+<li>Create a link in /var/lib/minidlna to the directory you want monitored.</li>
+</ul>
+<blockquote>
+<p>sudo ln -s /media/ExtHD/video /var/lib/minidlna/videos
+sudo service minidlna force-reload</p>
     </div>
     <a href="/technology/tech20/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
@@ -197,9 +221,35 @@ Set the media_dir back to default location - media_dir=V,/var/lib/minidlna/video
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Setup Steps I followed to set-up my raspberry Pi with Raspbian
-Also configure -
-XBMC (for playing videos) NFS (to access external hard drive from any device in the house) VNC viewer (to access the desktop from any device in the house) Format SD Card Windows Download SD Formatter https://www.sdcard.org/downloads/formatter_4/ Install SD Formatter and run the software Set &ldquo;FORMAT SIZE ADJUSTMENT&rdquo; to ON in the Options menu. Make sure you have selected the Drive your SD Card is inserted in Format the memory card Linux Use gparted (or the command-line version parted if you prefer), if you don&rsquo;t have it, install it as you usually would.
+      <h2 id="setup">Setup</h2>
+<p>Steps I followed to set-up my raspberry Pi with Raspbian</p>
+<p>Also configure -</p>
+<ul>
+<li>XBMC (for playing videos)</li>
+<li>NFS (to access external hard drive from any device in the house)</li>
+<li>VNC viewer (to access the desktop from any device in the house)</li>
+</ul>
+<h3 id="format-sd-card">Format SD Card</h3>
+<ul>
+<li><strong>Windows</strong></li>
+</ul>
+<ol>
+<li>Download SD Formatter
+<a href="https://www.sdcard.org/downloads/formatter_4/">https://www.sdcard.org/downloads/formatter_4/</a></li>
+<li>Install SD Formatter and run the software</li>
+<li>Set &ldquo;FORMAT SIZE ADJUSTMENT&rdquo; to ON in the Options menu.</li>
+<li>Make sure you have selected the Drive your SD Card is inserted in</li>
+<li>Format the memory card</li>
+</ol>
+<ul>
+<li><strong>Linux</strong></li>
+</ul>
+<ol>
+<li>Use gparted (or the command-line version parted if you prefer), if you don&rsquo;t have it, install it as you usually would.</li>
+<li>Format the entire disk as FAT / FAT16 (make sure you select the correct disk)</li>
+</ol>
+<h3 id="install-os">Install OS</h3>
+<p><strong>NOOBS</strong></p>
     </div>
     <a href="/technology/tech_2/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
@@ -217,8 +267,9 @@ XBMC (for playing videos) NFS (to access external hard drive from any device in 
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      All things Technology Plan to move blogs from blogger to github, for now these are here
-Visit the github profile!
+      <h2 id="all-things-technology">All things Technology</h2>
+<p>Plan to move blogs from blogger to github, for now these are <a href="https://scribbleontechnology.blogspot.com">here</a></p>
+<p>Visit the <a href="https://github.com/arshadhs">github</a> profile!</p>
     </div>
     <a href="/technology/tech_1/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>

@@ -6,10 +6,36 @@
     
     <title>Raspberry Pi | Arshad Siddiqui</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="Setup Steps I followed to set-up my raspberry Pi with Raspbian
+    <meta name="description" content="Setup
+Steps I followed to set-up my raspberry Pi with Raspbian
 Also configure -
-XBMC (for playing videos) NFS (to access external hard drive from any device in the house) VNC viewer (to access the desktop from any device in the house) Format SD Card Windows Download SD Formatter https://www.sdcard.org/downloads/formatter_4/ Install SD Formatter and run the software Set &ldquo;FORMAT SIZE ADJUSTMENT&rdquo; to ON in the Options menu. Make sure you have selected the Drive your SD Card is inserted in Format the memory card Linux Use gparted (or the command-line version parted if you prefer), if you don&rsquo;t have it, install it as you usually would.">
-    <meta name="generator" content="Hugo 0.128.1">
+
+XBMC (for playing videos)
+NFS (to access external hard drive from any device in the house)
+VNC viewer (to access the desktop from any device in the house)
+
+Format SD Card
+
+Windows
+
+
+Download SD Formatter
+https://www.sdcard.org/downloads/formatter_4/
+Install SD Formatter and run the software
+Set &ldquo;FORMAT SIZE ADJUSTMENT&rdquo; to ON in the Options menu.
+Make sure you have selected the Drive your SD Card is inserted in
+Format the memory card
+
+
+Linux
+
+
+Use gparted (or the command-line version parted if you prefer), if you don&rsquo;t have it, install it as you usually would.
+Format the entire disk as FAT / FAT16 (make sure you select the correct disk)
+
+Install OS
+NOOBS">
+    <meta name="generator" content="Hugo 0.147.8">
     
     
     
@@ -41,7 +67,7 @@ XBMC (for playing videos) NFS (to access external hard drive from any device in 
   <meta property="og:title" content="Raspberry Pi">
   <meta property="og:description" content="Setup Steps I followed to set-up my raspberry Pi with Raspbian
 Also configure -
-XBMC (for playing videos) NFS (to access external hard drive from any device in the house) VNC viewer (to access the desktop from any device in the house) Format SD Card Windows Download SD Formatter https://www.sdcard.org/downloads/formatter_4/ Install SD Formatter and run the software Set “FORMAT SIZE ADJUSTMENT” to ON in the Options menu. Make sure you have selected the Drive your SD Card is inserted in Format the memory card Linux Use gparted (or the command-line version parted if you prefer), if you don’t have it, install it as you usually would.">
+XBMC (for playing videos) NFS (to access external hard drive from any device in the house) VNC viewer (to access the desktop from any device in the house) Format SD Card Windows Download SD Formatter https://www.sdcard.org/downloads/formatter_4/ Install SD Formatter and run the software Set “FORMAT SIZE ADJUSTMENT” to ON in the Options menu. Make sure you have selected the Drive your SD Card is inserted in Format the memory card Linux Use gparted (or the command-line version parted if you prefer), if you don’t have it, install it as you usually would. Format the entire disk as FAT / FAT16 (make sure you select the correct disk) Install OS NOOBS">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="technology">
@@ -51,7 +77,7 @@ XBMC (for playing videos) NFS (to access external hard drive from any device in 
   <meta itemprop="name" content="Raspberry Pi">
   <meta itemprop="description" content="Setup Steps I followed to set-up my raspberry Pi with Raspbian
 Also configure -
-XBMC (for playing videos) NFS (to access external hard drive from any device in the house) VNC viewer (to access the desktop from any device in the house) Format SD Card Windows Download SD Formatter https://www.sdcard.org/downloads/formatter_4/ Install SD Formatter and run the software Set “FORMAT SIZE ADJUSTMENT” to ON in the Options menu. Make sure you have selected the Drive your SD Card is inserted in Format the memory card Linux Use gparted (or the command-line version parted if you prefer), if you don’t have it, install it as you usually would.">
+XBMC (for playing videos) NFS (to access external hard drive from any device in the house) VNC viewer (to access the desktop from any device in the house) Format SD Card Windows Download SD Formatter https://www.sdcard.org/downloads/formatter_4/ Install SD Formatter and run the software Set “FORMAT SIZE ADJUSTMENT” to ON in the Options menu. Make sure you have selected the Drive your SD Card is inserted in Format the memory card Linux Use gparted (or the command-line version parted if you prefer), if you don’t have it, install it as you usually would. Format the entire disk as FAT / FAT16 (make sure you select the correct disk) Install OS NOOBS">
   <meta itemprop="datePublished" content="2013-07-24T10:55:52+01:00">
   <meta itemprop="dateModified" content="2013-07-24T10:55:52+01:00">
   <meta itemprop="wordCount" content="554">
@@ -59,7 +85,7 @@ XBMC (for playing videos) NFS (to access external hard drive from any device in 
   <meta name="twitter:title" content="Raspberry Pi">
   <meta name="twitter:description" content="Setup Steps I followed to set-up my raspberry Pi with Raspbian
 Also configure -
-XBMC (for playing videos) NFS (to access external hard drive from any device in the house) VNC viewer (to access the desktop from any device in the house) Format SD Card Windows Download SD Formatter https://www.sdcard.org/downloads/formatter_4/ Install SD Formatter and run the software Set “FORMAT SIZE ADJUSTMENT” to ON in the Options menu. Make sure you have selected the Drive your SD Card is inserted in Format the memory card Linux Use gparted (or the command-line version parted if you prefer), if you don’t have it, install it as you usually would.">
+XBMC (for playing videos) NFS (to access external hard drive from any device in the house) VNC viewer (to access the desktop from any device in the house) Format SD Card Windows Download SD Formatter https://www.sdcard.org/downloads/formatter_4/ Install SD Formatter and run the software Set “FORMAT SIZE ADJUSTMENT” to ON in the Options menu. Make sure you have selected the Drive your SD Card is inserted in Format the memory card Linux Use gparted (or the command-line version parted if you prefer), if you don’t have it, install it as you usually would. Format the entire disk as FAT / FAT16 (make sure you select the correct disk) Install OS NOOBS">
 
 	
   </head>
@@ -212,8 +238,7 @@ XBMC (for playing videos) NFS (to access external hard drive from any device in 
 <blockquote>
 <p>login as: pi<br>
 <a href="mailto:pi@192.168.0.6">pi@192.168.0.6</a>&rsquo;s password:<br>
-Linux raspberrypi 3.6.11+ #474 PREEMPT Thu Jun 13 17:14:42 BST 2013 armv6l</p>
-</blockquote>
+Linux raspberrypi 3.6.11+ #474 PREEMPT Thu Jun 13 17:14:42 BST 2013 armv6l</p></blockquote>
 <p>The programs included with the Debian GNU/Linux system are free software;
 the exact distribution terms for each program are described in the
 individual files in /usr/share/doc/*/copyright.</p>
@@ -221,8 +246,7 @@ individual files in /usr/share/doc/*/copyright.</p>
 permitted by applicable law.</p>
 <p>NOTICE: the software on this Raspberry Pi has not been fully configured. Please run &lsquo;sudo raspi-config&rsquo;</p>
 <blockquote>
-<p>pi@raspberrypi ~ $ sudo raspi-config</p>
-</blockquote>
+<p>pi@raspberrypi ~ $ sudo raspi-config</p></blockquote>
 <p>┌─────────┤ Raspberry Pi Software Configuration Tool (raspi-config) ├──────┐
 │ Setup Options                                                                │
 │                                                                              │
@@ -241,30 +265,30 @@ permitted by applicable law.</p>
 │                                                                              │
 └────────────────────────────────────────────────────┘</p>
 <table>
-<thead>
-<tr>
-<th>Tables</th>
-<th style="text-align:center">Are</th>
-<th style="text-align:right">Cool</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>col 1 is</td>
-<td style="text-align:center">left-aligned</td>
-<td style="text-align:right">$1600</td>
-</tr>
-<tr>
-<td>col 2 is</td>
-<td style="text-align:center">centered</td>
-<td style="text-align:right">$12</td>
-</tr>
-<tr>
-<td>col 3 is</td>
-<td style="text-align:center">right-aligned</td>
-<td style="text-align:right">$1</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>Tables</th>
+          <th style="text-align: center">Are</th>
+          <th style="text-align: right">Cool</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>col 1 is</td>
+          <td style="text-align: center">left-aligned</td>
+          <td style="text-align: right">$1600</td>
+      </tr>
+      <tr>
+          <td>col 2 is</td>
+          <td style="text-align: center">centered</td>
+          <td style="text-align: right">$12</td>
+      </tr>
+      <tr>
+          <td>col 3 is</td>
+          <td style="text-align: center">right-aligned</td>
+          <td style="text-align: right">$1</td>
+      </tr>
+  </tbody>
 </table>
 <p>Notes:
 If using RCA for display edit /boot/config.txt, uncomment following line

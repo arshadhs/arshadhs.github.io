@@ -6,11 +6,21 @@
     
     <title>Banana Pi HomeCloud | Arshad Siddiqui</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="Refresh MiniDLNA MiniDLNA couldn&rsquo;t find any new files in my media_dir even though I was adding new files. I think the problem was that my media_dir was set to an external hard drive.
+    <meta name="description" content="Refresh MiniDLNA
+MiniDLNA couldn&rsquo;t find any new files in my media_dir even though I was adding new files. I think the problem was that my media_dir was set to an external hard drive.
 (media_dir=v,/media/ExtHD/x/x). I got it working, here are the steps I used to fix.
-sudo service minidlna stop sudo rm -rf /var/cache/minidlna/* sudo nano /etc/minidlna.conf
-Set the media_dir back to default location - media_dir=V,/var/lib/minidlna/video Create a link in /var/lib/minidlna to the directory you want monitored.">
-    <meta name="generator" content="Hugo 0.128.1">
+
+sudo service minidlna stop
+sudo rm -rf /var/cache/minidlna/*
+sudo nano /etc/minidlna.conf
+
+Set the media_dir back to default location - media_dir=V,/var/lib/minidlna/video
+Create a link in /var/lib/minidlna to the directory you want monitored.
+
+
+sudo ln -s /media/ExtHD/video /var/lib/minidlna/videos
+sudo service minidlna force-reload">
+    <meta name="generator" content="Hugo 0.147.8">
     
     
     
@@ -43,7 +53,7 @@ Set the media_dir back to default location - media_dir=V,/var/lib/minidlna/video
   <meta property="og:description" content="Refresh MiniDLNA MiniDLNA couldn’t find any new files in my media_dir even though I was adding new files. I think the problem was that my media_dir was set to an external hard drive.
 (media_dir=v,/media/ExtHD/x/x). I got it working, here are the steps I used to fix.
 sudo service minidlna stop sudo rm -rf /var/cache/minidlna/* sudo nano /etc/minidlna.conf
-Set the media_dir back to default location - media_dir=V,/var/lib/minidlna/video Create a link in /var/lib/minidlna to the directory you want monitored.">
+Set the media_dir back to default location - media_dir=V,/var/lib/minidlna/video Create a link in /var/lib/minidlna to the directory you want monitored. sudo ln -s /media/ExtHD/video /var/lib/minidlna/videos sudo service minidlna force-reload">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="technology">
@@ -54,7 +64,7 @@ Set the media_dir back to default location - media_dir=V,/var/lib/minidlna/video
   <meta itemprop="description" content="Refresh MiniDLNA MiniDLNA couldn’t find any new files in my media_dir even though I was adding new files. I think the problem was that my media_dir was set to an external hard drive.
 (media_dir=v,/media/ExtHD/x/x). I got it working, here are the steps I used to fix.
 sudo service minidlna stop sudo rm -rf /var/cache/minidlna/* sudo nano /etc/minidlna.conf
-Set the media_dir back to default location - media_dir=V,/var/lib/minidlna/video Create a link in /var/lib/minidlna to the directory you want monitored.">
+Set the media_dir back to default location - media_dir=V,/var/lib/minidlna/video Create a link in /var/lib/minidlna to the directory you want monitored. sudo ln -s /media/ExtHD/video /var/lib/minidlna/videos sudo service minidlna force-reload">
   <meta itemprop="datePublished" content="2020-03-30T12:29:34+01:00">
   <meta itemprop="dateModified" content="2020-03-30T12:29:34+01:00">
   <meta itemprop="wordCount" content="97">
@@ -63,7 +73,7 @@ Set the media_dir back to default location - media_dir=V,/var/lib/minidlna/video
   <meta name="twitter:description" content="Refresh MiniDLNA MiniDLNA couldn’t find any new files in my media_dir even though I was adding new files. I think the problem was that my media_dir was set to an external hard drive.
 (media_dir=v,/media/ExtHD/x/x). I got it working, here are the steps I used to fix.
 sudo service minidlna stop sudo rm -rf /var/cache/minidlna/* sudo nano /etc/minidlna.conf
-Set the media_dir back to default location - media_dir=V,/var/lib/minidlna/video Create a link in /var/lib/minidlna to the directory you want monitored.">
+Set the media_dir back to default location - media_dir=V,/var/lib/minidlna/video Create a link in /var/lib/minidlna to the directory you want monitored. sudo ln -s /media/ExtHD/video /var/lib/minidlna/videos sudo service minidlna force-reload">
 
 	
   </head>
@@ -182,16 +192,14 @@ Set the media_dir back to default location - media_dir=V,/var/lib/minidlna/video
 <blockquote>
 <p>sudo service minidlna stop
 sudo rm -rf /var/cache/minidlna/*
-sudo nano /etc/minidlna.conf</p>
-</blockquote>
+sudo nano /etc/minidlna.conf</p></blockquote>
 <ul>
 <li>Set the media_dir back to default location - media_dir=V,/var/lib/minidlna/video</li>
 <li>Create a link in /var/lib/minidlna to the directory you want monitored.</li>
 </ul>
 <blockquote>
 <p>sudo ln -s /media/ExtHD/video /var/lib/minidlna/videos
-sudo service minidlna force-reload</p>
-</blockquote>
+sudo service minidlna force-reload</p></blockquote>
 <p>Your files.db will be recreated, this can take a while though.</p>
 <ul class="pa0">
   
