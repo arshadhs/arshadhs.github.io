@@ -23,6 +23,13 @@
       <description>&lt;p&gt;Seasoned Staff Engineer with a passion to learn new skills both technical and &lt;a href=&#34;https://500px.com/p/ArshadSiddiqui&#34;&gt;non-technical&lt;/a&gt;!&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Visit the &lt;a href=&#34;https://www.linkedin.com/in/arshadsiddiqui/&#34;&gt;linkedin&lt;/a&gt; profile!&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Artificial Intelligence</title>
+      <link>http://localhost:1313/ai/</link>
+      <pubDate>Thu, 04 Jul 2024 10:55:52 +0100</pubDate>
+      <guid>http://localhost:1313/ai/</guid>
+      <description>&lt;p&gt;Seasoned Staff Engineer with a passion to learn new skills both technical and &lt;a href=&#34;https://500px.com/p/ArshadSiddiqui&#34;&gt;non-technical&lt;/a&gt;!&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Visit the &lt;a href=&#34;https://www.linkedin.com/in/arshadsiddiqui/&#34;&gt;linkedin&lt;/a&gt; profile!&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Hello World!</title>
       <link>http://localhost:1313/blog/my-first-post/</link>
       <pubDate>Wed, 03 Jul 2024 12:29:34 +0100</pubDate>
@@ -34,7 +41,7 @@
       <link>http://localhost:1313/technology/gitcheatsheet/</link>
       <pubDate>Thu, 04 Apr 2024 15:29:34 +0100</pubDate>
       <guid>http://localhost:1313/technology/gitcheatsheet/</guid>
-      <description>&lt;h3 id=&#34;cheat-sheet&#34;&gt;Cheat Sheet&lt;/h3&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;git user&lt;br&gt;&#xA;git email&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;git init&lt;br&gt;&#xA;git status&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;git log&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;git checkout&lt;br&gt;&#xA;git branch&lt;br&gt;&#xA;git checkout master&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;git init -b main&lt;br&gt;&#xA;&lt;em&gt;git add all&lt;/em&gt;&lt;br&gt;&#xA;git add .&lt;br&gt;&#xA;git commit -m &amp;ldquo;&amp;hellip;&amp;rdquo;&lt;br&gt;&#xA;git remote add origin &lt;!-- raw HTML omitted --&gt;&lt;br&gt;&#xA;git push origin main -f&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;hugo-command&#34;&gt;Hugo Command&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;hugo server&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;Test the run from workflow:&#xA;&lt;a href=&#34;https://github.com/arshadhs/arshadhs.github.io/actions&#34;&gt;https://github.com/arshadhs/arshadhs.github.io/actions&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;h3 id=&#34;cheat-sheet&#34;&gt;Cheat Sheet&lt;/h3&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;git user&lt;br&gt;&#xA;git email&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;git init&lt;br&gt;&#xA;git status&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;git log&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;git checkout&lt;br&gt;&#xA;git branch&lt;br&gt;&#xA;git checkout master&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;git init -b main&lt;br&gt;&#xA;&lt;em&gt;git add all&lt;/em&gt;&lt;br&gt;&#xA;git add .&lt;br&gt;&#xA;git commit -m &amp;ldquo;&amp;hellip;&amp;rdquo;&lt;br&gt;&#xA;git remote add origin &lt;url&gt;&lt;br&gt;&#xA;git push origin main -f&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;hugo-command&#34;&gt;Hugo Command&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;hugo server&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;Test the run from workflow:&#xA;&lt;a href=&#34;https://github.com/arshadhs/arshadhs.github.io/actions&#34;&gt;https://github.com/arshadhs/arshadhs.github.io/actions&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Banana Pi HomeCloud</title>
