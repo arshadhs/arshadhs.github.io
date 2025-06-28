@@ -12,6 +12,10 @@ theme = "ananke"
   url = '/technology'
   weight = 20
 [[menu.main]]
+  parent = "Technology"
+  name = 'AI'
+  url = '/technology/ai'
+[[menu.main]]
   name = 'Recipes'
   url = '/recipe'
   weight = 30  
