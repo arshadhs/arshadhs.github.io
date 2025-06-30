@@ -2,7 +2,8 @@
 title = 'Raspberry Pi Setup'
 date = 2013-07-24T10:55:52+01:00
 draft = false
-tags = "RaspberryPi"
+tags: [RaspberryPi]
+categories: [tutorials, raspberry-pi]
 +++
 ## Setup
 
