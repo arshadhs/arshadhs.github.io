@@ -1,7 +1,7 @@
 ---
 title: "VNC on Raspberry Pi"
 date: 2013-08-22T22:45:00
-tags: [raspberry-pi, vnc, remote-access, linux, ssh]
+tags: [RaspberryPi]
 categories: [tutorials, raspberry-pi]
 summary: "A quick guide to installing and using VNC for remote access on Raspberry Pi."
 ---
