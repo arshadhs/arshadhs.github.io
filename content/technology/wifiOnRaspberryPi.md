@@ -1,5 +1,5 @@
 +++
-title = "WiFi with Raspberry Pi"
+title = 'WiFi'
 date = 2013-12-14T22:47:00
 draft = false
 tags = ["RaspberryPi", "WiFi"]

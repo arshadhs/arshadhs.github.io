@@ -1,5 +1,5 @@
 +++
-title = "Bluetooth Speaker Raspberry Pi Setup"
+title = 'Bluetooth Speaker'
 date = 2018-11-13T20:45:00
 draft = false
 tags = ["RaspberryPi", "speaker", "bluetooth"]
@@ -11,7 +11,7 @@ categories = ["tutorials", "raspberry-pi"]
 Connecting Raspberry Pi to Mi Pocket Speaker 2
 
 ```pi@raspberrypi:~ $ sudo bluetoothctl
-[bluetooth]# power on```
+[bluetooth]# power on
 Changing power on succeeded
 [bluetooth]# agent on
 Agent registered

@@ -1,11 +1,12 @@
 +++
-title = 'Raspberry Pi Setup'
+title = 'Raspberry Pi'
 date = 2013-07-24T10:55:52+01:00
 draft = false
-tags: [RaspberryPi]
-categories: [tutorials, raspberry-pi]
+tags = ["RaspberryPi"]
+categories = ["tutorials", "raspberry-pi"]
 +++
-## Setup
+
+## Raspberry Pi Setup
 
 Steps I followed to set-up my raspberry Pi with Raspbian
 

@@ -2,9 +2,10 @@
 title = 'GIT'
 date = 2024-04-04T15:29:34+01:00
 draft = false
-tags: [GIT]
-categories: [tutorials, git]
+tags = ["GIT"]
+categories = ["tutorials", "git"]
 +++
+
 ### Cheat Sheet
 
 > git user   

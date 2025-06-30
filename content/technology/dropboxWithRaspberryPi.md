@@ -1,12 +1,12 @@
 +++
-title = "Dropbox via Raspberry Pi"
+title = 'Dropbox'
 date = 2016-10-27T23:45:00
 draft = false
 tags = ["RaspberryPi", "dropbox"]
 categories = ["tutorials", "raspberry-pi"]
 +++
 
-# Dropbox via Raspberry Pi
+# Dropbox with Raspberry Pi
 Act as root, since I wanted to run the script on startup as a service, so I must setup dropbox for 'root' user rather than 'pi' -
 
 ```pi@raspberrypi:~ $ sudo -s

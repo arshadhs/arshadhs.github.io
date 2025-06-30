@@ -1,5 +1,5 @@
 +++
-title = "e-mail with Raspberry Pi"
+title = 'e-mail'
 date = 2013-12-16T22:45:00
 draft = false
 tags = ["RaspberryPi", "e-mail"]

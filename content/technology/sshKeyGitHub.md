@@ -1,5 +1,5 @@
 +++
-title = "SSH key for GitHub account"
+title = 'GitHub'
 date = 2018-11-07T21:45:00
 draft = false
 tags = ["GitHub", "Git"]

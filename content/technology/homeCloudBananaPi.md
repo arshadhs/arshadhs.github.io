@@ -1,8 +1,8 @@
 +++
-title = "Banana Pi - Home Cloud"
+title = 'Home Cloud'
 date = 2016-03-05T22:51:00
 draft = false
-tags = ["BananaPi"]
+tags = ["BananaPi", "file-sharing", "storage"]
 categories = ["tutorials", "banana-pi"]
 +++
 

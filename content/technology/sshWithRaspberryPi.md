@@ -1,5 +1,5 @@
 +++
-title = "SSH with Raspberry Pi"
+title = 'SSH'
 date = 2014-11-08T14:08:00
 draft = false
 tags = ["RaspberryPi", "SSH"]

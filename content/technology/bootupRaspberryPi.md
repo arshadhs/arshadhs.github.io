@@ -1,5 +1,5 @@
 +++
-title = "Bootup script for Raspberry Pi"
+title = 'Bootup Script'
 date = 2013-12-16T22:45:00
 draft = false
 tags = ["RaspberryPi", "bootup"]

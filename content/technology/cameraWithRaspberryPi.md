@@ -1,18 +1,19 @@
 +++
-title = "Camera with Raspberry Pi"
+title = 'Camera'
 date = 2013-12-12T22:51:00
 draft = false
 tags = ["RaspberryPi"]
 categories = ["tutorials", "raspberry-pi"]
+summary = "Setting up and enabling the Raspberry Pi camera module along with useful imaging tools."
 +++
 
-# 📷 Camera with Raspberry Pi
+# Camera with Raspberry Pi
 
 A quick guide to setting up the official Raspberry Pi camera module and installing useful Python imaging tools.
 
 ---
 
-## 🔧 System Update
+## System Update
 
 Update your Raspberry Pi system and firmware:
 
@@ -24,7 +25,7 @@ sudo apt-get upgrade
 
 ---
 
-## 🎛️ Enable the Camera
+## Enable the Camera
 
 Access the configuration menu to enable the camera:
 
