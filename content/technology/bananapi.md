@@ -1,8 +1,10 @@
 +++
-title = 'Banana Pi HomeCloud'
+title = 'Banana Pi HomeCloud Setup'
 date = 2020-03-30T12:29:34+01:00
 draft = false
+tags = "BananaPi"
 +++
+
 ### Refresh MiniDLNA
 MiniDLNA couldn't find any new files in my media_dir even though I was adding new files. I think the problem was that my media_dir was set to an external hard drive. 
 
