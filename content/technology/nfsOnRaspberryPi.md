@@ -1,7 +1,7 @@
 ---
 title: "NFS on Raspberry Pi"
 date: 2013-09-05T22:43:00
-tags: [raspberry-pi, samba, nfs, file-sharing, storage]
+tags: [RaspberryPi, samba, nfs, file-sharing, storage]
 categories: [tutorials, raspberry-pi]
 summary: "How to turn your Raspberry Pi into a simple and effective network file server using Samba."
 ---
