@@ -2,6 +2,7 @@
 title: "Arshad Siddiqui"
 featured_image: '/images/zebrato.jpeg'
 description: ""
+toc: true
 ---
 
 Welcome to my little corner of the web.

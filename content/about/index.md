@@ -2,7 +2,7 @@
 title = 'About Me'
 date = 2024-07-04T10:55:52+01:00
 draft = false
-featured_image = '../images/zebrato.jpeg'
+featured_image = '/images/zebrato.jpeg'
 
 +++
 A lifelong learner, builder, and someone who enjoys making sense of complex things.
