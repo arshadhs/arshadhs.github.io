@@ -2,7 +2,7 @@
 title: "Conversation Starters"
 date: 2025-06-28T00:00:00Z
 weight: 10
-tags: ["Arabic", "Grammar", "Education", "Conversation Starters"]
+tags: ["Arabic", "Grammar", "Conversation Starters"]
 ---
 # Arabic Conversation Starters
 

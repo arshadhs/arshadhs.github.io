@@ -3,7 +3,7 @@ title: "Imperative"
 date: 2025-06-28T00:00:00Z
 weight: 10
 draft: false
-tags: ["Arabic", "Grammar", "Education", "Imperative"]
+tags: ["Arabic", "Grammar", "Imperative"]
 ---
 
 # Imperative Form in Arabic (الأمر)
