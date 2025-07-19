@@ -20,10 +20,11 @@ Maqluba is distinct from *Kabsa* and *Mandi* — while Kabsa is spiced rice ofte
 - 1 tablespoon maqluba ground spice *(cloves, nutmeg, cinnamon, pepper)*  
 - 1½ teaspoons salt  
 - 1 tomato *(sliced – helps prevent sticking)*  
-- 2 chicken stock cubes in 4 cups water OR 4 cups reserved chicken broth  
+- 1 tablespoon ghee
 
 ### For the Broth
-- 4–5 chicken legs with thighs  
+- 4–5 chicken legs with thighs
+- 2 chicken stock cubes in 4 cups water OR 4 cups reserved chicken broth    
 - 3 tablespoons oil  
 - 1 medium onion, halved  
 - 3 cloves garlic  

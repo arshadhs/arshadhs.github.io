@@ -1,6 +1,6 @@
 +++
 title = 'Rajasthani Dal Bati'
-date = 2025-07-6T12:30:00+01:00
+date = 2025-07-06T12:30:00+01:00
 draft = false
 tags = ["dal", "bati", "rajasthani", "vegetarian", "indian"]
 categories = ["recipes", "vegetarian"]
