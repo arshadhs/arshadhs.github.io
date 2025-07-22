@@ -20,7 +20,7 @@ stateDiagram-v2
 	State1 --> Unsupervised
 	Unsupervised --> Clustering
 	State1 --> Reinforcement
-	Reinforcement --> Decision_Making
+	Reinforcement --> DecisionMaking
 
 {{</mermaid>}}
 
