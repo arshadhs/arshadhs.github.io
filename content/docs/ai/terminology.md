@@ -22,7 +22,6 @@ stateDiagram-v2
 	State1 --> Reinforcement
 	Reinforcement --> Decision_Making
 
-{{</	>}}
-
+{{</mermaid>}}
 
 ---
