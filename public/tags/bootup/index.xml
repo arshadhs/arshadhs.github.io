@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bootup on Arshad Siddiqui</title>
+    <link>http://localhost:1313/tags/bootup/</link>
+    <description>Recent content in Bootup on Arshad Siddiqui</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 16 Dec 2013 22:45:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/bootup/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bootup Script</title>
+      <link>http://localhost:1313/docs/technology/bootupraspberrypi/</link>
+      <pubDate>Mon, 16 Dec 2013 22:45:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/technology/bootupraspberrypi/</guid>
+      <description>&lt;h1 id=&#34;bootup-script-setup&#34;&gt;&#xA;  Bootup script Setup&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#bootup-script-setup&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Edit Python script, add as first line -&#xA;&lt;code&gt;#!/usr/bin/python&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Change permissions -&#xA;&lt;code&gt;chmod 755 raspiLapseCam.py&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;That means you can execute it by typing &lt;code&gt;raspiLapseCam.py&lt;/code&gt; rather than &lt;code&gt;python raspiLapseCam.py&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Then we can use an /etc/init.d script to get it started when the system boots.&lt;/p&gt;&#xA;&lt;p&gt;Start by copying /etc/init.d/skeleton to /etc/init.d/timelapse -&#xA;&lt;code&gt;cd /etc/init.d &amp;amp;&amp;amp; sudo cp skeleton timelapse&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;edit /etc/init.d/timelapse, change lines 23 &amp;amp; 24 to refer to the command &amp;lsquo;/home/pi/raspiLapseCam.py&amp;rsquo; -&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

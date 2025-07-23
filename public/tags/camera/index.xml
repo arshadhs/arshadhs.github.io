@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Camera on Arshad Siddiqui</title>
+    <link>http://localhost:1313/tags/camera/</link>
+    <description>Recent content in Camera on Arshad Siddiqui</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 16 Dec 2013 22:45:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/camera/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Surveillance</title>
+      <link>http://localhost:1313/docs/technology/surveillanceraspberrypi/</link>
+      <pubDate>Mon, 16 Dec 2013 22:45:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/technology/surveillanceraspberrypi/</guid>
+      <description>&lt;h1 id=&#34;raspberry-pi-surveillance&#34;&gt;&#xA;  Raspberry Pi Surveillance&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#raspberry-pi-surveillance&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;One of the hobby projects:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Keep on capturing pictures in a loop, compare current picture with last picture, if the difference in pixel is more than threshold, capture a high resolution image, save it to RAM disk (so that memory card is safe from frequent read write operations), rename the image using date and time; e-mail it with date in subject field.&lt;/li&gt;&#xA;&lt;li&gt;Run a cron job to delete temporary files older than 20 minutes.&lt;/li&gt;&#xA;&lt;li&gt;Run the script as service and use another to monitor the service, on failure restart the service.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;python-script-to-detect-motion&#34;&gt;&#xA;  Python script to detect motion&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#python-script-to-detect-motion&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;(To Do: add git link for the code here))&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

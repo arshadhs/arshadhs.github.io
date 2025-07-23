@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Verb Forms on Arshad Siddiqui</title>
+    <link>http://localhost:1313/tags/verb-forms/</link>
+    <description>Recent content in Verb Forms on Arshad Siddiqui</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 20 Jul 2025 12:00:00 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/verb-forms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Verb Patterns</title>
+      <link>http://localhost:1313/docs/arabic/verb/verbpatterns/</link>
+      <pubDate>Sun, 20 Jul 2025 12:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/docs/arabic/verb/verbpatterns/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Forms I–V&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Each verb entry includes:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Active&lt;/strong&gt;: past, present, active participle&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Passive&lt;/strong&gt;: past, present, passive participle (shown only if verb is transitive)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Verbal noun (المصدر)&lt;/strong&gt;, &lt;strong&gt;imperative&lt;/strong&gt;, and &lt;strong&gt;negative imperative&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;Transitivity status&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;-form-i--intransitive&#34;&gt;&#xA;  ✅ Form I – Intransitive&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#-form-i--intransitive&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;ذَهَبَ – يَذْهَبُ – ذَاهِب&lt;/strong&gt;&lt;br&gt;&#xA;&lt;strong&gt;– – –&lt;/strong&gt;&lt;br&gt;&#xA;&lt;strong&gt;ذَهَاب – اِذْهَبْ – لَا تَذْهَبْ&lt;/strong&gt;&lt;br&gt;&#xA;🔁 &lt;em&gt;He went&lt;/em&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;-form-i--transitive&#34;&gt;&#xA;  ✅ Form I – Transitive&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#-form-i--transitive&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;كَتَبَ – يَكْتُبُ – كَاتِب&lt;/strong&gt;&lt;br&gt;&#xA;&lt;strong&gt;كُتِبَ – يُكْتَبُ – مَكْتُوب&lt;/strong&gt;&lt;br&gt;&#xA;&lt;strong&gt;كِتَابَة – اُكْتُبْ – لَا تَكْتُبْ&lt;/strong&gt;&lt;br&gt;&#xA;🔁 &lt;em&gt;He wrote&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

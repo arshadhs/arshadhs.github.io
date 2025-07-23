@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SSH on Arshad Siddiqui</title>
+    <link>http://localhost:1313/tags/ssh/</link>
+    <description>Recent content in SSH on Arshad Siddiqui</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 08 Nov 2014 14:08:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SSH</title>
+      <link>http://localhost:1313/docs/technology/sshwithraspberrypi/</link>
+      <pubDate>Sat, 08 Nov 2014 14:08:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/technology/sshwithraspberrypi/</guid>
+      <description>&lt;h1 id=&#34;ssh-login-to-raspberry-pi-without-password&#34;&gt;&#xA;  SSH login to Raspberry Pi without password&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#ssh-login-to-raspberry-pi-without-password&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Execute following 3 commands from PC/Laptop from which you want to login to Raspberry Pi without password.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-laptop:~$&#34; data-lang=&#34;laptop:~$&#34;&gt;Generating public/private rsa key pair.&#xD;&#xA;Enter file in which to save the key (/home/laptop/.ssh/id_rsa): &#xD;&#xA;Enter passphrase (empty for no passphrase): &#xD;&#xA;Enter same passphrase again: &#xD;&#xA;Your identification has been saved in /home/laptop/.ssh/id_rsa.&#xD;&#xA;Your public key has been saved in /home/laptop/.ssh/id_rsa.pub.&#xD;&#xA;The key fingerprint is:&#xD;&#xA;6f:72:4e:e5:f3:81:d4:27:9d:27:06:f0:ce:f1:75:7d laptop&#xD;&#xA;The key&amp;#39;s randomart image is:&#xD;&#xA;+--[ RSA 2048]----+&#xD;&#xA;|          .      |&#xD;&#xA;|                .|&#xD;&#xA;|            +   A|&#xD;&#xA;|           o = o+|&#xD;&#xA;|        S   = *.+|&#xD;&#xA;|         o + o +.|&#xD;&#xA;|        . = + .  |&#xD;&#xA;|         *   o . |&#xD;&#xA;|          .   .  |&#xD;&#xA;+-----------------+&#xD;&#xA;&#xD;&#xA;NUsing ssh create a directory ~/.ssh as user pi on Raspberry -&#xD;&#xA;&#xD;&#xA;laptop:~$ ssh pi@192.168.1.68 mkdir -p .sshpi@192.168.1.68&amp;#39;s password:```&#xD;&#xA;&#xD;&#xA;Append public key to pi@Raspberry:.ssh/authorized_keys and enter pi&amp;#39;s password one last time:&#xD;&#xA;&#xD;&#xA;```laptop:~$ cat .ssh/id_rsa.pub | ssh pi@192.168.1.68 &amp;#39;cat &amp;gt;&amp;gt; .ssh/authorized_keys&amp;#39;&#xD;&#xA;pi@192.168.1.68&amp;#39;s password:```&#xD;&#xA;&#xD;&#xA;Now you can log into Raspberry as pi without password:&#xD;&#xA;&#xD;&#xA;```laptop:~$ ssh pi@192.168.1.68```&#xD;&#xA;&#xD;&#xA;Depending on your version of SSH you might also have to do the following changes:&#xD;&#xA;- Put the public key in .ssh/authorized_keys2&#xD;&#xA;- Change the permissions of .ssh to 700&#xD;&#xA;- Change the permissions of .ssh/authorized_keys2 to 640&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

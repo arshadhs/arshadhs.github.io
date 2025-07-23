@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on Arshad Siddiqui</title>
+    <link>http://localhost:1313/tags/git/</link>
+    <description>Recent content in Git on Arshad Siddiqui</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 04 Apr 2024 15:29:34 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GIT</title>
+      <link>http://localhost:1313/docs/technology/gitcheatsheet/</link>
+      <pubDate>Thu, 04 Apr 2024 15:29:34 +0100</pubDate>
+      <guid>http://localhost:1313/docs/technology/gitcheatsheet/</guid>
+      <description>&lt;h3 id=&#34;cheat-sheet&#34;&gt;&#xA;  Cheat Sheet&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#cheat-sheet&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;git user&lt;br&gt;&#xA;git email&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;git init&lt;br&gt;&#xA;git status&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;git log&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;git checkout&lt;br&gt;&#xA;git branch&lt;br&gt;&#xA;git checkout master&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;git init -b main&lt;br&gt;&#xA;&lt;em&gt;git add all&lt;/em&gt;&lt;br&gt;&#xA;git add .&lt;br&gt;&#xA;git commit -m &amp;ldquo;&amp;hellip;&amp;rdquo;&lt;br&gt;&#xA;git remote add origin &lt;url&gt;&lt;br&gt;&#xA;git push origin main -f&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;hugo-command&#34;&gt;&#xA;  Hugo Command&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#hugo-command&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;hugo server&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;Test the run from workflow on &lt;a href=&#34;https://github.com/arshadhs/arshadhs.github.io/actions&#34;&gt;GitHub Actions&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>GitHub</title>
+      <link>http://localhost:1313/docs/technology/sshkeygithub/</link>
+      <pubDate>Wed, 07 Nov 2018 21:45:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/technology/sshkeygithub/</guid>
+      <description>&lt;h1 id=&#34;adding-a-ssh-key-to-github-account&#34;&gt;&#xA;  Adding a SSH key to GitHub account&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#adding-a-ssh-key-to-github-account&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;&lt;code&gt;ls -al ~/.ssh&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Generate a key&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-ssh-keygen&#34; data-lang=&#34;ssh-keygen&#34;&gt;eval $(ssh-agent -s)&#xD;&#xA;ssh-add ~/.ssh/id_rsa```&#xD;&#xA;&#xD;&#xA;Clip or copy manually&#xD;&#xA;```clip &amp;lt; ~/.ssh/id_rsa.pub&#xD;&#xA;cat ~/.ssh/id_rsa.pub```&#xD;&#xA;&#xD;&#xA;Go to GitHub, add the public key to settings -&#xD;&#xA;```https://github.com/settings/keys```&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>
