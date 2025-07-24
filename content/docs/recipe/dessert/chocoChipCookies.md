@@ -4,6 +4,7 @@ date = 2020-05-03T16:09:00+01:00
 draft = false
 tags = ["cookies", "chocolate", "dessert", "baking"]
 categories = ["desserts", "cookies"]
+weight = 300
 +++
 
 ## Ingredients

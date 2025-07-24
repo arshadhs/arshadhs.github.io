@@ -4,9 +4,11 @@ date = 2024-05-01T12:28:00+01:00
 draft = false
 tags = ["baking", "dessert", "cookies", "vegetarian"]
 categories = ["recipes", "vegetarian"]
+weight = 301
 +++
 
-**Crispy on the edges, chewy in the centre — these classic chocolate chip cookies are the ultimate comfort bake.**  
+Crispy on the edges, chewy in the centre — these classic chocolate chip cookies are the ultimate comfort bake.
+
 Perfect with a cup of tea or a glass of cold milk, they’re easy to make and hard to resist.
 
 ---

@@ -4,9 +4,10 @@ date = 2014-03-05T00:00:00+01:00
 draft = false
 tags = ["dip", "mezzeh", "vegetarian", "vegan", "middle eastern"]
 categories = ["recipes", "vegetarian"]
+weight = 10
 +++
 
-**Creamy, garlicky, and rich with tahini — hummus is a Middle Eastern classic that's both comforting and versatile. Perfect with warm bread, olives, or crisp veggies.**
+Creamy, garlicky, and rich with tahini, hummus is a Middle Eastern classic that's both comforting and versatile. Perfect with warm bread, olives, or crisp veggies.
 
 ---
 

@@ -4,6 +4,7 @@ date = 2014-10-20T00:00:00+01:00
 draft = false
 tags = ["paneer", "north Indian", "vegetarian", "curry"]
 categories = ["vegetarian"]
+weight = 162
 +++
 
 Shahi Paneer is a North Indian dish, a preparation of paneer pieces in a thick, creamy gravy prepared in tomato, onion and cashew-nut paste. Because of its richness, it is usually served at parties, dinners and other occasions which require a special menu.

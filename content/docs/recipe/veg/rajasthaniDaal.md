@@ -4,6 +4,7 @@ date = 2010-02-21T00:00:00+01:00
 draft = false
 tags = ["indian", "rajasthani", "daal", "vegetarian"]
 categories = ["recipes", "indian-cuisine", "vegetarian"]
+weight = 181
 +++
 
 This recipe is courtesy of our family friends from Rajasthan — shared exactly as they make it. It’s a very different way of cooking daal compared to what we’re used to in the North of India.

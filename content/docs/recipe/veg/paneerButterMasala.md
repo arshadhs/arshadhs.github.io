@@ -4,11 +4,14 @@ date = 2011-02-26T00:00:00+01:00
 draft = false
 tags = ["paneer", "vegetarian", "Indian"]
 categories = ["recipes", "North Indian"]
+weight = 160
 +++
 
 ## Paneer Butter Masala
 
 Loved this paneer recipe...
+
+I have a more [recent PBM version here](../paneerButterMasala-II/).
 
 ### Ingredients
 
@@ -27,7 +30,7 @@ Loved this paneer recipe...
 - Milk – ½ cup  
 - Oil – 3 tbsp  
 
-### Method
+### Recipe
 
 1. Heat 2 tbsp oil in a pan and fry the paneer cubes until golden brown. Remove and set aside.  
 2. In the same pan, add 1 more tbsp oil and fry the onions until golden brown.  
@@ -36,4 +39,4 @@ Loved this paneer recipe...
 5. Add the tomato paste/purée, tomato sauce, and kasuri methi. Mix well and pour in the milk.  
 6. Lower the heat and cook covered for 5 minutes.  
 7. Remove the lid, add the fried paneer and cream. Mix well and simmer for 3–4 minutes.  
-8. Garnish with freshly chopped coriander leaves.  
+8. Garnish with freshly chopped coriander leaves.

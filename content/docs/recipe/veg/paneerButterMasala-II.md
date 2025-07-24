@@ -1,10 +1,17 @@
 +++
-title = "Paneer Butter Masala"
+title = "Paneer Butter Masala - II"
 date = 2021-01-22T00:00:00+00:00
 draft = false
 tags = ["paneer", "butter masala", "indian", "vegetarian"]
 categories = ["main courses", "indian cuisine"]
+weight = 161
 +++
+
+## Paneer Butter Masala
+
+10 years later, another PBM!
+
+Find the [initial version here](../paneerButterMasala/).
 
 ---
 
