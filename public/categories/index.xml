@@ -6,6 +6,336 @@
     <description>Recent content in Categories on Arshad Siddiqui</description>
     <generator>Hugo</generator>
     <language>en-us</language>
+    <lastBuildDate>Tue, 22 Jul 2025 19:29:34 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo</title>
+      <link>http://localhost:1313/categories/hugo/</link>
+      <pubDate>Tue, 22 Jul 2025 19:29:34 +0100</pubDate>
+      <guid>http://localhost:1313/categories/hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Non-Vegetarian</title>
+      <link>http://localhost:1313/categories/non-vegetarian/</link>
+      <pubDate>Fri, 18 Jul 2025 12:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/non-vegetarian/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Recipes</title>
+      <link>http://localhost:1313/categories/recipes/</link>
+      <pubDate>Fri, 18 Jul 2025 12:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/recipes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vegetarian</title>
+      <link>http://localhost:1313/categories/vegetarian/</link>
+      <pubDate>Sun, 06 Jul 2025 12:30:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/vegetarian/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI</title>
+      <link>http://localhost:1313/categories/ai/</link>
+      <pubDate>Thu, 04 Jul 2024 10:55:52 +0100</pubDate>
+      <guid>http://localhost:1313/categories/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Arabic</title>
+      <link>http://localhost:1313/categories/arabic/</link>
+      <pubDate>Thu, 04 Jul 2024 10:55:52 +0100</pubDate>
+      <guid>http://localhost:1313/categories/arabic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Git</title>
+      <link>http://localhost:1313/categories/git/</link>
+      <pubDate>Thu, 04 Apr 2024 15:29:34 +0100</pubDate>
+      <guid>http://localhost:1313/categories/git/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tutorials</title>
+      <link>http://localhost:1313/categories/tutorials/</link>
+      <pubDate>Thu, 04 Apr 2024 15:29:34 +0100</pubDate>
+      <guid>http://localhost:1313/categories/tutorials/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Desserts</title>
+      <link>http://localhost:1313/categories/desserts/</link>
+      <pubDate>Sat, 06 May 2023 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/desserts/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Main Dishes</title>
+      <link>http://localhost:1313/categories/main-dishes/</link>
+      <pubDate>Mon, 02 Jan 2023 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/main-dishes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Indian-Cuisine</title>
+      <link>http://localhost:1313/categories/indian-cuisine/</link>
+      <pubDate>Fri, 22 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/indian-cuisine/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Main Courses</title>
+      <link>http://localhost:1313/categories/main-courses/</link>
+      <pubDate>Fri, 22 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/main-courses/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Baking</title>
+      <link>http://localhost:1313/categories/baking/</link>
+      <pubDate>Fri, 16 Oct 2020 16:29:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/baking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Roti</title>
+      <link>http://localhost:1313/categories/roti/</link>
+      <pubDate>Fri, 16 Oct 2020 16:29:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/roti/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Grill</title>
+      <link>http://localhost:1313/categories/grill/</link>
+      <pubDate>Sat, 18 Jul 2020 14:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/grill/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kebab</title>
+      <link>http://localhost:1313/categories/kebab/</link>
+      <pubDate>Sat, 18 Jul 2020 14:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/kebab/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Barbecue</title>
+      <link>http://localhost:1313/categories/barbecue/</link>
+      <pubDate>Wed, 20 May 2020 12:56:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/barbecue/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Regional</title>
+      <link>http://localhost:1313/categories/regional/</link>
+      <pubDate>Wed, 20 May 2020 12:56:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/regional/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rice Dishes</title>
+      <link>http://localhost:1313/categories/rice-dishes/</link>
+      <pubDate>Wed, 13 May 2020 15:08:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/rice-dishes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Main-Course</title>
+      <link>http://localhost:1313/categories/main-course/</link>
+      <pubDate>Tue, 05 May 2020 11:51:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/main-course/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pies</title>
+      <link>http://localhost:1313/categories/pies/</link>
+      <pubDate>Tue, 05 May 2020 11:51:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/pies/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cookies</title>
+      <link>http://localhost:1313/categories/cookies/</link>
+      <pubDate>Sun, 03 May 2020 16:09:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/cookies/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Meat Dishes</title>
+      <link>http://localhost:1313/categories/meat-dishes/</link>
+      <pubDate>Sun, 03 May 2020 15:32:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/meat-dishes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bread</title>
+      <link>http://localhost:1313/categories/bread/</link>
+      <pubDate>Sat, 25 Apr 2020 15:41:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/bread/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Side Dishes</title>
+      <link>http://localhost:1313/categories/side-dishes/</link>
+      <pubDate>Sat, 25 Apr 2020 15:41:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/side-dishes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Banana-Pi</title>
+      <link>http://localhost:1313/categories/banana-pi/</link>
+      <pubDate>Mon, 30 Mar 2020 12:29:34 +0100</pubDate>
+      <guid>http://localhost:1313/categories/banana-pi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Raspberry-Pi</title>
+      <link>http://localhost:1313/categories/raspberry-pi/</link>
+      <pubDate>Tue, 13 Nov 2018 20:45:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/raspberry-pi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dessert</title>
+      <link>http://localhost:1313/categories/dessert/</link>
+      <pubDate>Sun, 11 Nov 2018 01:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/dessert/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Github</title>
+      <link>http://localhost:1313/categories/github/</link>
+      <pubDate>Wed, 07 Nov 2018 21:45:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/github/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mediterranean</title>
+      <link>http://localhost:1313/categories/mediterranean/</link>
+      <pubDate>Thu, 05 Jul 2018 11:49:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/mediterranean/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Iftar</title>
+      <link>http://localhost:1313/categories/iftar/</link>
+      <pubDate>Thu, 24 May 2018 11:02:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/iftar/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>No-Bake</title>
+      <link>http://localhost:1313/categories/no-bake/</link>
+      <pubDate>Thu, 24 May 2018 11:02:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/no-bake/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Meat</title>
+      <link>http://localhost:1313/categories/meat/</link>
+      <pubDate>Thu, 12 Apr 2018 15:23:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/meat/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>North Indian</title>
+      <link>http://localhost:1313/categories/north-indian/</link>
+      <pubDate>Tue, 13 Sep 2011 16:10:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/north-indian/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Duas</title>
+      <link>http://localhost:1313/categories/duas/</link>
+      <pubDate>Wed, 15 Dec 2010 13:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/duas/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Islamic</title>
+      <link>http://localhost:1313/categories/islamic/</link>
+      <pubDate>Wed, 15 Dec 2010 13:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/islamic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>BBQ</title>
+      <link>http://localhost:1313/categories/bbq/</link>
+      <pubDate>Sat, 19 Jun 2010 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/bbq/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blog</title>
+      <link>http://localhost:1313/categories/blog/</link>
+      <pubDate>Sat, 19 Jun 2010 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/blog/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cake</title>
+      <link>http://localhost:1313/categories/cake/</link>
+      <pubDate>Sat, 19 Jun 2010 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/cake/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Chicken</title>
+      <link>http://localhost:1313/categories/chicken/</link>
+      <pubDate>Sat, 19 Jun 2010 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/chicken/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Deen</title>
+      <link>http://localhost:1313/categories/deen/</link>
+      <pubDate>Sat, 19 Jun 2010 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/deen/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lamb</title>
+      <link>http://localhost:1313/categories/lamb/</link>
+      <pubDate>Sat, 19 Jun 2010 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/lamb/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Recipe</title>
+      <link>http://localhost:1313/categories/recipe/</link>
+      <pubDate>Sat, 19 Jun 2010 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/recipe/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rice</title>
+      <link>http://localhost:1313/categories/rice/</link>
+      <pubDate>Sat, 19 Jun 2010 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/rice/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Soup</title>
+      <link>http://localhost:1313/categories/soup/</link>
+      <pubDate>Sat, 19 Jun 2010 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/soup/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Technology</title>
+      <link>http://localhost:1313/categories/technology/</link>
+      <pubDate>Sat, 19 Jun 2010 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/technology/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Verb</title>
+      <link>http://localhost:1313/categories/verb/</link>
+      <pubDate>Sat, 19 Jun 2010 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/verb/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

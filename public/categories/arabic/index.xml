@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arabic on Arshad Siddiqui</title>
+    <link>http://localhost:1313/categories/arabic/</link>
+    <description>Recent content in Arabic on Arshad Siddiqui</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 04 Jul 2024 10:55:52 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/arabic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arabic</title>
+      <link>http://localhost:1313/docs/arabic/</link>
+      <pubDate>Thu, 04 Jul 2024 10:55:52 +0100</pubDate>
+      <guid>http://localhost:1313/docs/arabic/</guid>
+      <description>&lt;h1 id=&#34;arabic-language&#34;&gt;&#xA;  Arabic Language&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#arabic-language&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Arabic is a beautiful language with deep roots and rich meaning.&#xA;These are my notes as I learn Arabic — vocabulary, grammar, and practice.&lt;/p&gt;&#xA;&lt;hr&gt;</description>
+    </item>
+  </channel>
+</rss>

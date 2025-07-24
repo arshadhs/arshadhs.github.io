@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>E-Mail on Arshad Siddiqui</title>
+    <link>http://localhost:1313/tags/e-mail/</link>
+    <description>Recent content in E-Mail on Arshad Siddiqui</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 16 Dec 2013 22:45:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/e-mail/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>e-mail</title>
+      <link>http://localhost:1313/docs/technology/emailwithraspberrypi/</link>
+      <pubDate>Mon, 16 Dec 2013 22:45:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/technology/emailwithraspberrypi/</guid>
+      <description>&lt;h1 id=&#34;e-mail-with-raspberry-pi&#34;&gt;&#xA;  E-Mail with Raspberry Pi&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#e-mail-with-raspberry-pi&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;A quick guide to setting up the E-Mail on Raspberry Pi.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;using-ssmtp&#34;&gt;&#xA;  Using SSMTP&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#using-ssmtp&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;code&gt;pi@raspberrypi ~ $ sudo apt-get install ssmtp mailutils mpack&lt;/code&gt;&#xA;Now edit the file /etc/ssmtp/ssmtp.conf as root and add the next lines. Please note that some of the lines already exist and may need to be changed. Others don&amp;rsquo;t exist yet and need to be added to the end of the file.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
