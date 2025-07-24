@@ -11,4 +11,17 @@ menu: main
 
 # AI Terminology
 
+{{<mermaid>}}
+stateDiagram-v2
+    State1: Machine Learning
+	State1 --> Supervised
+	Supervised --> 	Classification
+	Supervised --> 	Regression
+	State1 --> Unsupervised
+	Unsupervised --> Clustering
+	State1 --> Reinforcement
+	Reinforcement --> DecisionMaking
+
+{{</mermaid>}}
+
 ---

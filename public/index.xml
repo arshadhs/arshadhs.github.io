@@ -48,7 +48,7 @@
       <link>http://localhost:1313/docs/ai/terminology/</link>
       <pubDate>Thu, 04 Jul 2024 10:55:52 +0100</pubDate>
       <guid>http://localhost:1313/docs/ai/terminology/</guid>
-      <description>&lt;h1 id=&#34;ai-terminology&#34;&gt;&#xA;  AI Terminology&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#ai-terminology&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;hr&gt;</description>
+      <description>&lt;h1 id=&#34;ai-terminology&#34;&gt;&#xA;  AI Terminology&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#ai-terminology&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&#xA;&#xA;&lt;script src=&#34;http://localhost:1313/mermaid.min.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;  &lt;script&gt;mermaid.initialize({&#xA;  &#34;flowchart&#34;: {&#xA;    &#34;useMaxWidth&#34;:true&#xA;  },&#xA;  &#34;theme&#34;: &#34;default&#34;&#xA;}&#xA;)&lt;/script&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&lt;pre class=&#34;mermaid&#34;&gt;&#xD;&#xA;stateDiagram-v2&#xD;&#xA;    State1: Machine Learning&#xD;&#xA;&#x9;State1 --&gt; Supervised&#xD;&#xA;&#x9;Supervised --&gt; &#x9;Classification&#xD;&#xA;&#x9;Supervised --&gt; &#x9;Regression&#xD;&#xA;&#x9;State1 --&gt; Unsupervised&#xD;&#xA;&#x9;Unsupervised --&gt; Clustering&#xD;&#xA;&#x9;State1 --&gt; Reinforcement&#xD;&#xA;&#x9;Reinforcement --&gt; DecisionMaking&#xD;&#xA;&#xD;&#xA;&lt;/pre&gt;&#xA;&#xA;&lt;hr&gt;</description>
     </item>
     <item>
       <title>Red Velvet Cake</title>

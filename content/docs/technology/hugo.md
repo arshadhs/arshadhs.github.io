@@ -43,3 +43,19 @@ https://gohugo.io/getting-started/configuration-markup/#rendererunsafe
 
 You can suppress this warning by adding the following to your site configuration:
 ignoreLogs = ['warning-goldmark-raw-html']
+
+## Git Submodule update
+
+git submodule foreach git pull origin master
+
+## Reclone and set-up Hugo
+
+Delete and recreate the Hugo site after cloning:
+
+```git clone https://github.com/xxx/abc.github.io
+cd abc.github.io
+hugo new site . --force
+```
+
+and set-up the workflow again
+---
