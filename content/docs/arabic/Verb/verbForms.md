@@ -8,14 +8,14 @@ tags: ["Arabic", "Grammar", "Verb"]
 
 ## 10 Arabic Verb Forms (الأَوْزَان العَشَرَة)
 
-In Arabic, verbs can appear in **10 major patterns (forms)**. Each pattern adds a slightly different meaning or function to the root letters (usually 3). These forms helps understand passive, reflexive, causative, intensive, and reciprocal meanings.
+In Arabic, most verbs come from a set of three root letters. These roots can appear in **10 common patterns (called forms)**. Each form gives the root a slightly different meaning. Learning these helps you understand if something is **passive**, **intensive**, **repeated**, **reciprocal**, or **caused by someone**.
 
 ---
 
 ### 🔹 Form I – ٱلْفِعْلُ ٱلثُّلَاثِيّ ٱلْمُجَرَّد (faʿala)
 
 **Pattern:** فَعَلَ / يَفْعَلُ / فِعْلٌ  
-**Meaning:** Basic, general meaning of the root  
+**Meaning:** The basic/root meaning of the verb  
 **Example:** كَتَبَ – He wrote
 
 ---
@@ -23,7 +23,7 @@ In Arabic, verbs can appear in **10 major patterns (forms)**. Each pattern adds 
 ### 🔹 Form II – ٱلتَّفْعِيل (tafaʿīl)
 
 **Pattern:** فَعَّلَ / يُفَعِّلُ / تَفْعِيلٌ  
-**Meaning:** Causative or intensive  
+**Meaning:** Someone makes someone else do the action (causing or intensifying it)  
 **Example:** عَلَّمَ – He taught (made someone know)
 
 ---
@@ -31,23 +31,23 @@ In Arabic, verbs can appear in **10 major patterns (forms)**. Each pattern adds 
 ### 🔹 Form III – ٱلْمُفَاعَلَة (mufāʿalah)
 
 **Pattern:** فَاعَلَ / يُفَاعِلُ / مُفَاعَلَةٌ  
-**Meaning:** Reciprocal or interactive  
-**Example:** شَارَكَ – He participated
+**Meaning:** Doing the action **with** someone else (like talking, helping, fighting)  
+**Example:** شَارَكَ – He participated (took part together)
 
 ---
 
 ### 🔹 Form IV – ٱلْإِفْعَال (ifʿāl)
 
 **Pattern:** أَفْعَلَ / يُفْعِلُ / إِفْعَالٌ  
-**Meaning:** Causative (like Form II, but direct)  
-**Example:** أَسْلَمَ – He submitted
+**Meaning:** To make something happen or to start something  
+**Example:** أَسْلَمَ – He submitted (he accepted Islam)
 
 ---
 
 ### 🔹 Form V – ٱلتَّفَعُّل (tafaʿʿul)
 
 **Pattern:** تَفَعَّلَ / يَتَفَعَّلُ / تَفَعُّلٌ  
-**Meaning:** Reflexive of Form II (doing the action to oneself)  
+**Meaning:** Doing the action to yourself (like learning or getting dressed)  
 **Example:** تَعَلَّمَ – He learned (taught himself)
 
 ---
@@ -55,7 +55,7 @@ In Arabic, verbs can appear in **10 major patterns (forms)**. Each pattern adds 
 ### 🔹 Form VI – ٱلتَّفَاعُل (tafāʿul)
 
 **Pattern:** تَفَاعَلَ / يَتَفَاعَلُ / تَفَاعُلٌ  
-**Meaning:** Reciprocal of Form III  
+**Meaning:** Two or more people doing the action to each other  
 **Example:** تَشَارَكَ – They shared with each other
 
 ---
@@ -63,7 +63,7 @@ In Arabic, verbs can appear in **10 major patterns (forms)**. Each pattern adds 
 ### 🔹 Form VII – ٱلِانْفِعَال (infiʿāl)
 
 **Pattern:** اِنْفَعَلَ / يَنْفَعِلُ / اِنْفِعَالٌ  
-**Meaning:** Passive of Form I  
+**Meaning:** The action happened by itself or was done to the subject (passive)  
 **Example:** اِنْكَسَرَ – It was broken
 
 ---
@@ -71,7 +71,7 @@ In Arabic, verbs can appear in **10 major patterns (forms)**. Each pattern adds 
 ### 🔹 Form VIII – ٱفْتِعَال (iftiʿāl)
 
 **Pattern:** اِفْتَعَلَ / يَفْتَعِلُ / اِفْتِعَالٌ  
-**Meaning:** Reflexive or internal action  
+**Meaning:** The action is done by the person to benefit themselves or from within  
 **Example:** اِشْتَرَى – He bought
 
 ---
@@ -79,7 +79,7 @@ In Arabic, verbs can appear in **10 major patterns (forms)**. Each pattern adds 
 ### 🔹 Form IX – ٱفْعَلَّ (ifʿalla)
 
 **Pattern:** اِفْعَلَّ / يَفْعَلُّ / اِفْعِلَالٌ  
-**Meaning:** Related to colours or defects  
+**Meaning:** Used for colours or physical conditions  
 **Example:** اِحْمَرَّ – It turned red
 
 ---
@@ -87,25 +87,25 @@ In Arabic, verbs can appear in **10 major patterns (forms)**. Each pattern adds 
 ### 🔹 Form X – ٱسْتِفْعَال (istifʿāl)
 
 **Pattern:** اِسْتَفْعَلَ / يَسْتَفْعِلُ / اِسْتِفْعَالٌ  
-**Meaning:** Seeking or asking for something  
-**Example:** اِسْتَغْفَرَ – He sought forgiveness
+**Meaning:** Asking for or trying to do the action  
+**Example:** اِسْتَغْفَرَ – He asked for forgiveness
 
 ---
 
 ## Arabic Verb Forms – Summary Table
 
-| Form | Arabic Name          | Pattern (Past / Present / Masdar)               | Meaning                              | Example Verb (with translation)     |
-|------|----------------------|--------------------------------------------------|--------------------------------------|--------------------------------------|
-| I    | الفِعْل المُجَرَّد     | فَعَلَ / يَفْعَلُ / فِعْلٌ                      | Basic/root meaning                   | كَتَبَ – He wrote                    |
-| II   | التَّفْعِيل           | فَعَّلَ / يُفَعِّلُ / تَفْعِيلٌ                 | Causative/intensive                  | عَلَّمَ – He taught                  |
-| III  | المُفَاعَلَة           | فَاعَلَ / يُفَاعِلُ / مُفَاعَلَةٌ               | Reciprocal/interaction               | شَارَكَ – He participated           |
-| IV   | الإِفْعَال            | أَفْعَلَ / يُفْعِلُ / إِفْعَالٌ                 | Causative (direct)                   | أَسْلَمَ – He submitted              |
-| V    | التَّفَعُّل           | تَفَعَّلَ / يَتَفَعَّلُ / تَفَعُّلٌ             | Reflexive of Form II                 | تَعَلَّمَ – He learned              |
-| VI   | التَّفَاعُل           | تَفَاعَلَ / يَتَفَاعَلُ / تَفَاعُلٌ             | Reciprocal of Form III               | تَشَارَكَ – They shared             |
-| VII  | الانْفِعَال           | اِنْفَعَلَ / يَنْفَعِلُ / اِنْفِعَالٌ           | Passive of Form I                    | اِنْكَسَرَ – It was broken           |
-| VIII | الافْتِعَال           | اِفْتَعَلَ / يَفْتَعِلُ / اِفْتِعَالٌ           | Reflexive/internal action            | اِشْتَرَى – He bought               |
-| IX   | افْعَلَّ              | اِفْعَلَّ / يَفْعَلُّ / اِفْعِلَالٌ             | Colour/defect                        | اِحْمَرَّ – It turned red           |
-| X    | الاسْتِفْعَال         | اِسْتَفْعَلَ / يَسْتَفْعِلُ / اِسْتِفْعَالٌ     | Seeking/asking for something         | اِسْتَغْفَرَ – He sought forgiveness |
+| Form | Arabic Name          | Pattern (Past / Present / Masdar)               | Meaning                          | Example Verb (with translation)     |
+|------|----------------------|--------------------------------------------------|------------------------------------------|--------------------------------------|
+| I    | الفِعْل المُجَرَّد     | فَعَلَ / يَفْعَلُ / فِعْلٌ                      | Basic/root meaning                       | كَتَبَ – He wrote                    |
+| II   | التَّفْعِيل           | فَعَّلَ / يُفَعِّلُ / تَفْعِيلٌ                 | Causing or repeating the action          | عَلَّمَ – He taught                  |
+| III  | المُفَاعَلَة           | فَاعَلَ / يُفَاعِلُ / مُفَاعَلَةٌ               | Doing the action with someone            | شَارَكَ – He participated           |
+| IV   | الإِفْعَال            | أَفْعَلَ / يُفْعِلُ / إِفْعَالٌ                 | To cause or start the action             | أَسْلَمَ – He submitted              |
+| V    | التَّفَعُّل           | تَفَعَّلَ / يَتَفَعَّلُ / تَفَعُّلٌ             | Doing the action to yourself             | تَعَلَّمَ – He learned              |
+| VI   | التَّفَاعُل           | تَفَاعَلَ / يَتَفَاعَلُ / تَفَاعُلٌ             | Doing the action together (mutual)       | تَشَارَكَ – They shared             |
+| VII  | الانْفِعَال           | اِنْفَعَلَ / يَنْفَعِلُ / اِنْفِعَالٌ           | Passive – it happened to the subject     | اِنْكَسَرَ – It was broken           |
+| VIII | الافْتِعَال           | اِفْتَعَلَ / يَفْتَعِلُ / اِفْتِعَالٌ           | Reflexive or internal benefit            | اِشْتَرَى – He bought               |
+| IX   | افْعَلَّ              | اِفْعَلَّ / يَفْعَلُّ / اِفْعِلَالٌ             | Describing colours or states             | اِحْمَرَّ – It turned red           |
+| X    | الاسْتِفْعَال         | اِسْتَفْعَلَ / يَسْتَفْعِلُ / اِسْتِفْعَالٌ     | Asking for or trying to do something     | اِسْتَغْفَرَ – He sought forgiveness |
 
 ---
 
@@ -113,3 +113,5 @@ In Arabic, verbs can appear in **10 major patterns (forms)**. Each pattern adds 
 
 - All forms are **derived** from three-letter roots.
 - Verb forms affect the **meaning**, **grammar**, and sometimes **transitivity**.
+
+---
