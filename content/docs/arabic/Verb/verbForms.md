@@ -108,7 +108,8 @@ In Arabic, most verbs come from a set of three root letters. These roots can app
 | X    | الاسْتِفْعَال         | اِسْتَفْعَلَ / يَسْتَفْعِلُ / اِسْتِفْعَالٌ     | Asking for or trying to do something     | اِسْتَغْفَرَ – He sought forgiveness |
 
 ---
-
+![Verb Forms](/images/arabic/verbForms-10.jpg)
+---
 ## Notes
 
 - All forms are **derived** from three-letter roots.
