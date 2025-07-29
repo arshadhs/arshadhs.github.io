@@ -18,3 +18,7 @@ A quiet place to gather the duas I read, hadith  and verses that I turn to regul
 Things I return to often — for strength, peace, and remembrance. A space to help me stay connected, grounded, and mindful.
 
 ---
+
+{{< section-list >}}
+
+---

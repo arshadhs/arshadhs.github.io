@@ -16,3 +16,7 @@ Arabic is a beautiful language with deep roots and rich meaning.
 These are my notes as I learn Arabic — vocabulary, grammar, and practice.
 
 ---
+
+{{< section-list >}}
+
+---

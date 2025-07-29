@@ -17,3 +17,7 @@ Snippets from travels, hobbies, passing reflections, and quiet moments.
 A little corner for curiosity and creativity.
 
 ---
+
+{{< section-list >}}
+
+---

@@ -17,3 +17,7 @@ Learning how machines learn!
 My working notes as I learn AI.
 
 ---
+
+{{< section-list >}}
+
+---

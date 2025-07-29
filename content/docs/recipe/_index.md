@@ -16,3 +16,7 @@ Perhaps they'll be useful to someone.
 Perhaps, one day, even to me.
 
 ---
+
+{{< section-list >}}
+
+---

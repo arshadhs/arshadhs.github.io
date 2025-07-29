@@ -10,3 +10,9 @@ menu: main
 bookCollapseSection: true
 ---
 # Vegetarian
+
+---
+
+{{< section-list >}}
+
+---
