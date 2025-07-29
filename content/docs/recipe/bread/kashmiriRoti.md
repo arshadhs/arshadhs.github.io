@@ -4,6 +4,7 @@ date = 2020-10-16T16:29:00+01:00
 draft = false
 tags = ["bread", "vegetarian", "kashmiri"]
 categories = ["baking", "Roti"]
+weight: 20
 +++
 
 lso called **Kasher Czot**, **Kashmiri Czot**, or **Kandur Czot**, this humble bread is a quiet pillar of Kashmiri life.

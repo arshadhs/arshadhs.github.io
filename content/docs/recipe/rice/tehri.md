@@ -4,6 +4,7 @@ date = 2013-11-23T09:55:00+00:00
 draft = false
 tags = ["rice", "lamb", "non-vegetarian"]
 categories = ["recipes", "non-vegetarian"]
+weight: 55
 +++
 
 Tehri was a Sunday lunch in childhood. 'Tehri' is yellow rice with potato and peas.  

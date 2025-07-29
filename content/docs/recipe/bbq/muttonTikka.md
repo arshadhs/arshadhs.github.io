@@ -4,6 +4,7 @@ date = 2020-07-18T14:00:00+01:00
 draft = false
 tags = ["meat", "non-vegetarian", "barbecue", "kashmiri"]
 categories = ["grill", "kebab"]
+weight: 30
 +++
 
 Seekh Tuji — the smoky soul of Kashmiri street food. Skewered over charcoal by riverside vendors or in backyard barbecues, these succulent tikkas are marinated in a fiery spice blend, bursting with flavour and tradition.

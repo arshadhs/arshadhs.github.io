@@ -4,6 +4,7 @@ date = 2014-03-27T00:00:00+01:00
 draft = false
 tags = ["lamb", "roast", "tandoori", "non-vegetarian", "Indian"]
 categories = ["recipes", "non-vegetarian"]
+weight: 50
 +++
 
 **Rich, regal, and deeply spiced — this roast leg of lamb brings bold Indian flavours to your dinner table, perfect for celebrations and family feasts.**

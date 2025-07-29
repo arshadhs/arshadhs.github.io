@@ -4,7 +4,7 @@ date: 2017-02-10T11:46:00+01:00
 draft: false
 tags: ["rice", "vegetarian", "pilau", "light-meal"]
 categories: ["recipes", "vegetarian"]
-weight: 12
+weight: 53
 ---
 
 # Vegetable Pilau

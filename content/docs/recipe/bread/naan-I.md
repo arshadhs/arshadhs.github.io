@@ -4,7 +4,7 @@ date: 2016-04-22T17:07:00+01:00
 draft: false
 tags: ["bread", "naan", "indian", "baking", "side"]
 categories: ["recipes", "vegetarian"]
-weight: 61
+weight: 11
 ---
 
 # Naan Bread

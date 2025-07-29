@@ -4,6 +4,7 @@ date = 2020-09-23T18:11:00+01:00
 draft = false
 tags = ["bread", "vegetarian", "lucknow"]
 categories = ["baking", "roti"]
+weight: 30
 +++
 
 **Sheermal** is a fragrant, slightly sweet saffron milk bread — rich, golden, and soft — traditionally enjoyed with a cup of kehwa or served alongside kebabs. Infused with *kewra* and saffron, it's a royal treat from Mughal kitchens to Kashmiri bakeries.

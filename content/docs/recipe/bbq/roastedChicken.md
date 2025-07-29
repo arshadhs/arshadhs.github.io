@@ -4,7 +4,7 @@ date: 2016-09-07T08:04:00+01:00
 draft: false
 tags: ["chicken", "roast", "non-vegetarian", "spices", "grilled"]
 categories: ["recipes", "non-vegetarian"]
-weight: 26
+weight: 15
 ---
 
 # Roasted Chicken

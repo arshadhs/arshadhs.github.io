@@ -4,6 +4,7 @@ date = 2015-04-15T12:53:00+00:00
 draft = false
 tags = ["barbecue", "kebab", "grilled", "lamb"]
 categories = ["recipes", "main-courses"]
+weight: 32
 +++
 
 Seekh Kebab is a classic South Asian barbecue dish made from spiced minced lamb, shaped onto skewers and grilled to perfection. This recipe combines aromatic spices with fresh herbs to create juicy, flavorful kebabs ideal for outdoor grilling or a smoky indoor barbecue.

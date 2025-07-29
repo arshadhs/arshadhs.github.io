@@ -4,7 +4,7 @@ date: 2016-09-07T07:58:00+01:00
 draft: false
 tags: ["afghani", "chicken", "barbecue", "non-vegetarian"]
 categories: ["recipes", "non-vegetarian"]
-weight: 29
+weight: 11
 ---
 
 # Afghani Chicken (Barbecue)

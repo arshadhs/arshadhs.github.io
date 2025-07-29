@@ -4,6 +4,7 @@ date = 2020-05-13T15:08:00+01:00
 draft = false
 tags = ["pulao", "rice", "vegetarian", "quick"]
 categories = ["rice dishes", "vegetarian"]
+weight: 50
 +++
 
 Peas Pulao is a fragrant, simple, and comforting rice dish that brings together aromatic whole spices and fresh green peas for a perfect everyday meal. Sharing my mum's simple but favourite recipe.

@@ -4,6 +4,7 @@ date = 2020-05-20T12:56:00+01:00
 draft = false
 tags = ["kebab", "non-vegetarian", "grill", "bihari"]
 categories = ["barbecue", "regional"]
+weight: 21
 +++
 
 Smoky, spicy, and melt-in-the-mouth — Bihari Kebab is a dish steeped in North Indian heritage. Traditionally cooked on open flames, the key lies in its deeply aromatic marinade and mustard oil magic.
