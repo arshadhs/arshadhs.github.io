@@ -4,7 +4,7 @@ date = 2025-07-18T12:00:00+01:00
 draft = false
 tags = ["maqluba", "chicken", "rice", "Middle Eastern"]
 categories = ["recipes", "non-vegetarian"]
-weight: 30
+weight = 30
 +++
 
 Maqluba (مَقْلُوبَة literally "upside-down" in Arabic) is a stunning, layered rice dish with chicken, vegetables, and fragrant spices. 

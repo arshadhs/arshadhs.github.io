@@ -4,6 +4,7 @@ date = 2020-05-05T11:51:00+01:00
 draft = false
 tags = ["chicken", "pie", "traditional", "baking"]
 categories = ["pies", "main course"]
+weight = 90
 +++
 
 Thanks to Saqib for his traditional twist to this delicious Chicken Pie recipe.

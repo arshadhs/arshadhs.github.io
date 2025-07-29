@@ -4,6 +4,7 @@ date = 2007-12-25T13:31:55Z
 draft = false
 tags = ["indian", "non-vegetarian", "chicken"]
 categories = ["recipes", "indian-cuisine", "non-vegetarian"]
+weight = 50
 +++
 
 Most of what I see is forgotten.  

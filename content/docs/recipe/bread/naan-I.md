@@ -1,13 +1,11 @@
 ---
-title: "Naan Bread"
+title: "Naan - I"
 date: 2016-04-22T17:07:00+01:00
 draft: false
 tags: ["bread", "naan", "indian", "baking", "side"]
 categories: ["recipes", "vegetarian"]
 weight: 11
 ---
-
-# Naan Bread
 
 Soft, fluffy and delicious — perfect alongside curries or grilled dishes. This version is baked rather than made in a tandoor, making it great for home kitchens.
 

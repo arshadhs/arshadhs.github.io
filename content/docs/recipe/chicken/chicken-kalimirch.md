@@ -1,13 +1,13 @@
 ---
-title: "Chicken Kalimirch"
+title: "Kalimirch Chicken"
 date: 2016-09-06T04:30:00+01:00
 draft: false
 tags: ["chicken", "pepper", "non-vegetarian", "north-indian", "creamy"]
 categories: ["recipes", "non-vegetarian"]
-weight: 27
+weight: 15
 ---
 
-# Chicken Kalimirch
+# Kalimirch Chicken
 
 A rich and creamy North Indian chicken dish, flavoured with black pepper and kasoori methi. This version combines the warmth of whole spices, the smoothness of cream and khoya, and the subtle tang of yoghurt and lemon.
 

@@ -1,9 +1,10 @@
 +++
-title = 'Mint Chicken Curry (Pudina Murgh)'
+title = 'Mint Chicken Curry'
 date = 2013-09-09T02:30:00+01:00
 draft = false
 tags = ["chicken", "mint", "curry", "non-vegetarian"]
 categories = ["recipes", "main-course", "non-vegetarian"]
+weight = 20
 +++
 
 ## Mint Chicken Curry (Pudina Murgh)

@@ -4,7 +4,7 @@ date = 2015-04-15T13:36:00+00:00
 draft = false
 tags = ["chutney", "barbecue", "condiments", "sauces"]
 categories = ["recipes", "side-dishes"]
-weight: 100
+weight = 100
 +++
 
 Barbecue chutneys are essential accompaniments that add vibrant flavors and a spicy kick to grilled dishes. These easy-to-make chutneys complement the smoky taste of barbecue perfectly, with fresh herbs and roasted ingredients delivering bold, fresh, and tangy notes.

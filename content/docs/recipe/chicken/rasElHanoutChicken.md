@@ -4,6 +4,7 @@ date = 2018-01-13T14:42:00+01:00
 draft = false
 tags = ["chicken", "moroccan", "ras-el-hanout"]
 categories = ["main-course", "mediterranean"]
+weight = 55
 +++
 
 Ras el Hanout! رَأْسُ الحانُوتِ (raʾsu al-ḥānūti) literally means: 

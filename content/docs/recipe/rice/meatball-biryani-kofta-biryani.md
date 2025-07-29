@@ -4,7 +4,7 @@ date = 2015-05-03T10:54:00+00:00
 draft = false
 tags = ["biryani", "meatball", "kofta", "lamb", "chicken", "rice"]
 categories = ["recipes", "main-course"]
-weight: 20
+weight = 20
 +++
 
 Meatball Biryani, also known as Kofta Biryani, is a delicious layered rice dish featuring tender meatballs cooked in a fragrant and spiced curry. This rich and aromatic biryani combines succulent koftas with perfectly cooked basmati rice, enhanced by saffron and crispy fried onions, making it a true feast for the senses.

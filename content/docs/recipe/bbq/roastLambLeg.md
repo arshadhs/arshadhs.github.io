@@ -1,17 +1,13 @@
 +++
-title = 'Spiced Roast Leg of Lamb (Tandoori Raan)'
+title = 'Tandoori Raan'
 date = 2014-03-27T00:00:00+01:00
 draft = false
 tags = ["lamb", "roast", "tandoori", "non-vegetarian", "Indian"]
 categories = ["recipes", "non-vegetarian"]
-weight: 50
+weight = 50
 +++
 
-**Rich, regal, and deeply spiced — this roast leg of lamb brings bold Indian flavours to your dinner table, perfect for celebrations and family feasts.**
-
----
-
-## Spiced Roast Leg of Lamb (Tandoori Raan)
+# Spiced Roast Leg of Lamb (Tandoori Raan)
 
 A leg of lamb roast is divine — rich with flavour, tender in texture, and steeped in tradition. The first time I had *tandoori raan* was at Karim’s, during a special dinner to celebrate receiving my first salary. Since then, it's been close to my heart.
 
@@ -84,5 +80,7 @@ For my first home attempt, I used lamb shoulder. My concern was whether the insi
    Slice and serve with plain yoghurt and mint sauce.
 
 ---
+
+Rich, regal, and deeply spiced — this roast leg of lamb brings bold Indian flavours to your dinner table, perfect for celebrations and family feasts.
 
 This dish is a showstopper — aromatic, succulent, and unforgettable. A perfect centrepiece for your next celebration.

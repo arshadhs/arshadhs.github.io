@@ -1,9 +1,10 @@
 +++
-title = 'Chicken Chickpeas Curry (Murgh Cholay)'
+title = 'Choley Chicken'
 date = 2014-01-02T00:00:00+01:00
 draft = false
 tags = ["chicken", "non-vegetarian"]
 categories = ["recipes", "non-vegetarian"]
+weight = 14
 +++
 
 **A comforting, hearty dish where tender chicken meets the earthiness of chickpeas, Murgh Cholay is a flavour-packed curry perfect for a cosy dinner or weekend treat.**

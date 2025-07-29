@@ -1,9 +1,10 @@
 +++
-title = "Karahi Chicken (Karahi Murgh)"
+title = "Karahi Chicken"
 date = 2015-08-16T04:00:00+00:00
 draft = false
 tags = ["Pakistani", "Chicken", "Karahi", "Dinner"]
 categories = ["recipes", "main-course"]
+weight = 15
 +++
 
 ## Ingredients

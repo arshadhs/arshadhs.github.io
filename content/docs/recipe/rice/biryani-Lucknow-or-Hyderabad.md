@@ -4,7 +4,7 @@ date = 2014-06-04T00:00:00+01:00
 draft = false
 tags = ["biryani", "non-vegetarian", "Indian", "Lucknow", "Hyderabad", "Kolkata"]
 categories = ["recipes", "non-vegetarian"]
-weight: 10
+weight = 10
 +++
 
 **Wednesday, 4 June 2014**  

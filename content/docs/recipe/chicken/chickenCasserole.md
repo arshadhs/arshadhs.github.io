@@ -1,9 +1,10 @@
 +++
-title = "Mediterranean Chicken Casserole in Oven"
+title = "Mediterranean Chicken Casserole"
 date = 2018-07-05T11:49:00+01:00
 draft = false
 tags = ["chicken", "casserole", "mediterranean", "baking"]
 categories = ["main course", "mediterranean"]
+weight = 30
 +++
 
 It's a simple dish, but packed with flavour and incredibly straightforward to cook. There’s something in this casserole for everyone — the Mediterranean influences like apricots, olives, Ras-el-Hanout and Greek yoghurt come together to create a dish that’s hearty, comforting, and full of oomph.

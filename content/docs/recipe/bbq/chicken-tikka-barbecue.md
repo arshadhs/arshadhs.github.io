@@ -4,6 +4,7 @@ date = 2015-04-15T12:46:00+00:00
 draft = false
 tags = ["barbecue", "chicken", "tikka", "grilled"]
 categories = ["recipes", "main-courses"]
+weight = 17
 +++
 
 Chicken Tikka Barbecue is a popular South Asian grilled dish featuring marinated pieces of chicken infused with aromatic spices and yoghurt. This recipe creates tender, juicy chicken with a smoky flavour perfect for outdoor grilling or indoor barbecue.

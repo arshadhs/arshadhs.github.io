@@ -4,7 +4,7 @@ date: 2016-06-26T02:30:00+01:00
 draft: false
 tags: ["austrian", "schnitzel", "cutlet", "chicken", "fried"]
 categories: ["recipes", "non-vegetarian"]
-weight: 45
+weight: 100
 ---
 
 # Wiener Schnitzel

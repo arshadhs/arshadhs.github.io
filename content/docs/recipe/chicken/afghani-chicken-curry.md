@@ -4,7 +4,7 @@ date: 2016-09-06T14:40:00+01:00
 draft: false
 tags: ["afghani", "chicken", "non-vegetarian", "curry", "dinner"]
 categories: ["recipes", "non-vegetarian"]
-weight: 28
+weight: 10
 ---
 
 # Afghani Chicken Curry
