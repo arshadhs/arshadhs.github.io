@@ -10,10 +10,21 @@ tags: ["Arabic", "Grammar", "Verb Forms"]
 
 Each verb entry includes:
 
-- **Active**: past, present, active participle  
-- **Passive**: past, present, passive participle (shown only if verb is transitive)  
-- **Verbal noun (المصدر)**, **imperative**, and **negative imperative**  
-- Transitivity status
+- Form # - Transitivity status
+- **Active**: past, present, active participle
+
+**الْمَاضِي - الْمُضَارِع - اِسْم الْفَاعِل**
+- **Passive**: past, present, passive participle (shown only if verb is transitive)
+
+**الْمَبْنِي لِلْمَجْهُول (مَاضِي) - الْمَبْنِي لِلْمَجْهُول (مُضَارِع) - اِسْم الْمَفْعُول**
+
+- **Verbal noun (المصدر)**, **imperative**, and **negative imperative**
+
+**الْمَصْدَر - أَمْر - نَهْي**
+
+
+  
+
 
 ---
 
