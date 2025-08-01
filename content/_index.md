@@ -20,3 +20,5 @@ Here you'll find snapshots of ideas I’m exploring, side projects I’m tinkeri
 
 ---
 ![Zebrato](/images/zebrato.jpeg)
+---
+{{< list-docs-folders >}}

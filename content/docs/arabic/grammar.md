@@ -73,3 +73,4 @@ This section introduces essential Arabic Grammar (نحو عربي) terms, groupe
 | **Possessor (of the item)**  | مُضَافٌ إِلَيْهِ         | The owner; always in the genitive case.                                         |
 
 ---
+{{< home-link "Home" >}} | {{< section-index >}}  

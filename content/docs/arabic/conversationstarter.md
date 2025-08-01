@@ -49,3 +49,5 @@ A list of simple Arabic phrases to help break into a conversation with an Arabic
 - **أُرِيدُ أَنْ أُشَارِكَ فِي ٱلْحَدِيثِ، هَلْ هَذَا مُمْكِن؟**  
   _I want to join the conversation, is that okay?_
 
+---
+{{< home-link "Home" >}} | {{< section-index >}}  

@@ -1,1 +1,3 @@
-<a href="{{ .Page.Section | relURL }}">{{ .Page.Section | title }}</a>
+<a href="{{ .Page.Parent.RelPermalink }}">
+  {{ with .Get 0 }}{{ . }}{{ else }}{{ .Page.Parent.Title }}{{ end }}
+</a>

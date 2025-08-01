@@ -20,3 +20,4 @@ These are my notes as I learn Arabic — vocabulary, grammar, and practice.
 {{< section-list >}}
 
 ---
+{{< home-link "Home" >}}

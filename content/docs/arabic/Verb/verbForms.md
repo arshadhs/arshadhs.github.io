@@ -1,7 +1,7 @@
 ---
-title: "10 Arabic Verb Forms"
+title: "10 Verb Forms"
 date: 2025-07-16T00:00:00Z
-weight: 15
+weight: 31
 draft: false
 tags: ["Arabic", "Grammar", "Verb"]
 ---
@@ -116,3 +116,4 @@ In Arabic, most verbs come from a set of three root letters. These roots can app
 - Verb forms affect the **meaning**, **grammar**, and sometimes **transitivity**.
 
 ---
+{{< home-link "Home" >}} | {{< section-index >}}  

@@ -63,3 +63,4 @@ stateDiagram-v2
 {{</mermaid>}}
 
 ---
+{{< home-link "Home" >}} | {{< section-index >}}  

@@ -120,3 +120,6 @@ Plural Forms of زَارَ:
 > ⚠️ Remember: To form the imperative, look at the **vowel on the middle root letter** in the present tense **(he form)**:
 > - fatḥa or kasra → start with **إِ**
 > - ḍamma → start with **أُ**
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}  

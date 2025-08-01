@@ -1,0 +1,53 @@
+
+<style>
+  .folder-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  .folder-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    transition: box-shadow 0.2s ease;
+  }
+  .folder-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .folder-card img {
+    max-width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+  }
+  .folder-title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  .folder-description {
+    font-size: 0.9rem;
+    color: #666;
+  }
+</style>
+
+<div class="folder-grid">
+  {{ $docs := site.GetPage "section" "docs" }}
+  {{ range $docs.Sections }}
+    {{ if not (or .Params.bookHidden false) }}
+      <a href="{{ .RelPermalink }}" class="folder-card">
+        {{ with .Params.image }}
+          <img src="{{ . }}" alt="{{ $.Title }} image" />
+        {{ end }}
+        <span class="folder-title">{{ .Title }}</span>
+        {{ with .Params.description }}
+          <div class="folder-description">{{ . }}</div>
+        {{ end }}
+      </a>
+    {{ end }}
+  {{ end }}
+</div>
+

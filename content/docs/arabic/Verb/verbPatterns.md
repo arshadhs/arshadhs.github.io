@@ -2,7 +2,7 @@
 title: "Verb Patterns"
 date: 2025-07-20T12:00:00+01:00
 draft: false
-weight: 10
+weight: 30
 tags: ["Arabic", "Grammar", "Verb Forms"]
 ---
 
@@ -88,3 +88,6 @@ Each verb entry includes:
 **رُمِيَ – يُرْمَى – مَرْمِيّ**  
 **رَمْي – اِرْمِ – لَا تَرْمِ**  
 🔁 *He threw*
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}  

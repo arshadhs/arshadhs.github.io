@@ -87,3 +87,6 @@ tags: ["Arabic", "Grammar", "Verb"]
 | شَاهَدَ – يُشَاهِدُ – مُشَاهَدَةٌ | watch |
 | فَازَ – يَفُوزُ – فَوْزٌ | win |
 | كَتَبَ – يَكْتُبُ – كِتَابَةٌ | write |
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}  
