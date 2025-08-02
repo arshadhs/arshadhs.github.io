@@ -15,12 +15,26 @@ menu: main
 stateDiagram-v2
     State1: AI
 	State1 --> ANI
-	ANI: ANI (Artificial Neural Intelligence)
-	State1 --> 	GAI
-	GAI: Generative AI
+	ANI: ANI - Artificial Neural Intelligence
+	note right of ANI
+		GAI - Generative AI
+	end note
 	State1 --> 	AGI
+	AGI: AGI - Artificial General Intelligence
+	State1 --> ASI
+	ASI: ASI - Artificial Super Intelligence
+
 
 {{</mermaid>}}
+
+**ANI** also called Weak AI is trained on well labeled data sets to perform specfic task and operate within predefined environment. Doesn't go beyond it's designed purpose. Such as image and speech recognition. e.g. Siri, Alexa.
+
+**GAI** built using deep-learning creates new content such as text, images, music or videos by learning from vast datasets. e.g. ChatGPT.
+
+**AGI** also called strong AI is designed to perform a wide range of intelligent tasks, think abstract and adapt to new situations. e.g. Self Driving Cars to some extent.
+
+**ASI** represents hypothetical future where machine outsmarts human intelligence.
+
 
 ---
 
@@ -61,6 +75,12 @@ stateDiagram-v2
 	DM: Decision Making
 
 {{</mermaid>}}
+
+**Supervised Learning** uses labeled data and output training data.
+
+**Unsupervised Learning** learns relationship and patterns from unlabelled raw data.
+
+**Reinforcement** uses rewards and punishment model to train. The agent learns a policy/strategy that maximises its rewards over time.
 
 ---
 {{< home-link "Home" >}} | {{< section-index >}}  

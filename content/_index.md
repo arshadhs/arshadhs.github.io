@@ -4,6 +4,7 @@ featured_image: '/images/zebrato.jpeg'
 type: docs
 menu: main
 weight: 1
+bookToc: false
 ---
 
 Welcome to my little corner of the web.
