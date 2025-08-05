@@ -21,3 +21,4 @@ My working notes as I learn AI.
 {{< section-list >}}
 
 ---
+{{< home-link "Home" >}}
