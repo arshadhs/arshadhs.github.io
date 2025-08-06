@@ -6,41 +6,59 @@ weight: 30
 tags: ["Arabic", "Grammar", "Verb Forms"]
 ---
 
-**Forms I–V**
+# Verb Patterns
 
-Each verb entry includes:
+## **Forms I–V**
 
-- Form # - Transitivity status
-- **Active**: past, present, active participle
+Each verb entry follows the structure below:
 
-**الْمَاضِي - الْمُضَارِع - اِسْم الْفَاعِل**
-- **Passive**: past, present, passive participle (shown only if verb is transitive)
+✅ **Form # – Transitivity Status**
 
-**الْمَبْنِي لِلْمَجْهُول (مَاضِي) - الْمَبْنِي لِلْمَجْهُول (مُضَارِع) - اِسْم الْمَفْعُول**
-
-- **Verbal noun (المصدر)**, **imperative**, and **negative imperative**
-
-**الْمَصْدَر - أَمْر - نَهْي**
-
-
-  
-
+| •           | •                     | •                  |
+|:------------------------:|:--------------------------:|:--------------------------:|
+| Active Participle            | Present                     | Past                  |
+| **اِسْم الْفَاعِل**         |  **الْمُضَارِع**              | **الْمَاضِي**                |
+| Passive Participle             | Passive Present          | Passive Past       |
+| **اِسْم الْمَفْعُول**       | **الْمَبْنِي لِلْمَجْهُول (مُضَارِع)** |  **الْمَبْنِي لِلْمَجْهُول (مَاضِي)** |
+| Negative Imperative     | Imperative               | Verbal Noun      |
+| **نَهْي**                   | **أَمْر**                    | **الْمَصْدَر**             |   
 
 ---
+
+## 🔠 Three Vowel Variants on Third Root Letter (in Present Tense)
+
+### ✅ Form I – Transitive (Fatha)
+**فَتَحَ – يَفْتَحُ – فَاتِح**  
+**فُتِحَ – يُفْتَحُ – مَفْتُوح**  
+**فَتْح – اِفْتَحْ – لَا تَفْتَحْ**  
+🔁 *He opened*
+
+---
+
+### ✅ Form I – Transitive (Damma)
+**كَتَبَ – يَكْتُبُ – كَاتِب**  
+**كُتِبَ – يُكْتَبُ – مَكْتُوب**  
+**كِتَابَة – اُكْتُبْ – لَا تَكْتُبْ**  
+🔁 *He wrote*
+
+---
+
+### ✅ Form I – Transitive (Kasra)  
+**جَلَسَ – يَجْلِسُ – جَالِس**  
+**جُلِسَ – يُجْلَسُ – مَجْلُوس**  
+**جُلُوس – اِجْلِسْ – لَا تَجْلِسْ**  
+🔁 *He sat*  
+*Note: While جَلَسَ is typically intransitive, it can function transitively in causative constructions.*
+
+---
+
+## 🧱 Other Form I–V Verbs
 
 ### ✅ Form I – Intransitive
 **ذَهَبَ – يَذْهَبُ – ذَاهِب**  
 **– – –**  
 **ذَهَاب – اِذْهَبْ – لَا تَذْهَبْ**  
 🔁 *He went*
-
----
-
-### ✅ Form I – Transitive
-**كَتَبَ – يَكْتُبُ – كَاتِب**  
-**كُتِبَ – يُكْتَبُ – مَكْتُوب**  
-**كِتَابَة – اُكْتُبْ – لَا تَكْتُبْ**  
-🔁 *He wrote*
 
 ---
 
@@ -101,4 +119,5 @@ Each verb entry includes:
 🔁 *He threw*
 
 ---
-{{< home-link "Home" >}} | {{< section-index >}}  
+
+{{< home-link "Home" >}} | {{< section-index >}}
