@@ -17,7 +17,8 @@ A quick guide to setting up the official Raspberry Pi camera module and installi
 
 Update your Raspberry Pi system and firmware:
 
-```bash
+```
+bash
 sudo apt-get install rpi-update
 sudo apt-get update
 sudo apt-get upgrade
@@ -29,7 +30,8 @@ sudo apt-get upgrade
 
 Access the configuration menu to enable the camera:
 
-```bash
+```
+bash
 sudo raspi-config
 ```
 
@@ -37,23 +39,25 @@ sudo raspi-config
 - Select **Camera** and choose **Enable**
 - Then reboot your Pi:
 
-```bash
+```
+bash
 sudo reboot
 ```
 
 ---
 
-## 🐍 Install Python Imaging Tools
+## Install Python Imaging Tools
 
 Install Python Imaging (PIL/Tk) for working with images:
 
-```bash
+```
+bash
 sudo apt-get install python-imaging-tk
 ```
 
 ---
 
-## 💾 Hardware Info
+## Hardware Info
 
 ```
 ────────────────────────────────────────────────────────────

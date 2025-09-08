@@ -11,7 +11,8 @@ categories = ["tutorials", "raspberry-pi"]
 Make sure your interface file and wpa_supplicant.conf look like the ones below -
 
 ---
-```pi@raspberrypi ~ $ sudo nano /etc/network/interfaces
+```
+pi@raspberrypi ~ $ sudo nano /etc/network/interfaces
 
 auto lo
 
@@ -46,15 +47,20 @@ auth_alg=OPEN
 }
 
 
-pi@raspberrypi ~ $ sudo reboot```
+pi@raspberrypi ~ $ sudo reboot
+```
 
 To view all WiFi networks -
-```pi@raspberrypi ~ sudo iwlist wlan0 scan | grep ESSID```
+```
+pi@raspberrypi ~ sudo iwlist wlan0 scan | grep ESSID
+```
 
 To view WiFi network interface -
-```pi@raspberrypi ~ $ iwconfig```
+```
+pi@raspberrypi ~ $ iwconfig
+```
 
-## 💾 Hardware Info
+## Hardware Info
 
 ```
 ────────────────────────────────────────────────────

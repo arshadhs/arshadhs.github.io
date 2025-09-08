@@ -11,85 +11,49 @@ tags: ["Arabic", "Grammar", "Verb"]
 In Arabic, most verbs come from a set of three root letters. These roots can appear in **10 common patterns (called forms)**. Each form gives the root a slightly different meaning. Learning these helps you understand if something is **passive**, **intensive**, **repeated**, **reciprocal**, or **caused by someone**.
 
 ---
+{{% steps %}}
+1. ### 🔹 Form I – ٱلْفِعْلُ ٱلثُّلَاثِيّ ٱلْمُجَرَّد (faʿala)
+	**Pattern:** فَعَلَ / يَفْعَلُ / فِعْلٌ  
+	**Meaning:** The basic/root meaning of the verb  
+	**Example:** كَتَبَ – He wrote
 
-### 🔹 Form I – ٱلْفِعْلُ ٱلثُّلَاثِيّ ٱلْمُجَرَّد (faʿala)
-
-**Pattern:** فَعَلَ / يَفْعَلُ / فِعْلٌ  
-**Meaning:** The basic/root meaning of the verb  
-**Example:** كَتَبَ – He wrote
-
----
-
-### 🔹 Form II – ٱلتَّفْعِيل (tafaʿīl)
-
-**Pattern:** فَعَّلَ / يُفَعِّلُ / تَفْعِيلٌ  
-**Meaning:** Someone makes someone else do the action (causing or intensifying it)  
-**Example:** عَلَّمَ – He taught (made someone know)
-
----
-
-### 🔹 Form III – ٱلْمُفَاعَلَة (mufāʿalah)
-
-**Pattern:** فَاعَلَ / يُفَاعِلُ / مُفَاعَلَةٌ  
-**Meaning:** Doing the action **with** someone else (like talking, helping, fighting)  
-**Example:** شَارَكَ – He participated (took part together)
-
----
-
-### 🔹 Form IV – ٱلْإِفْعَال (ifʿāl)
-
-**Pattern:** أَفْعَلَ / يُفْعِلُ / إِفْعَالٌ  
-**Meaning:** To make something happen or to start something  
-**Example:** أَسْلَمَ – He submitted (he accepted Islam)
-
----
-
-### 🔹 Form V – ٱلتَّفَعُّل (tafaʿʿul)
-
-**Pattern:** تَفَعَّلَ / يَتَفَعَّلُ / تَفَعُّلٌ  
-**Meaning:** Doing the action to yourself (like learning or getting dressed)  
-**Example:** تَعَلَّمَ – He learned (taught himself)
-
----
-
-### 🔹 Form VI – ٱلتَّفَاعُل (tafāʿul)
-
-**Pattern:** تَفَاعَلَ / يَتَفَاعَلُ / تَفَاعُلٌ  
-**Meaning:** Two or more people doing the action to each other  
-**Example:** تَشَارَكَ – They shared with each other
-
----
-
-### 🔹 Form VII – ٱلِانْفِعَال (infiʿāl)
-
-**Pattern:** اِنْفَعَلَ / يَنْفَعِلُ / اِنْفِعَالٌ  
-**Meaning:** The action happened by itself or was done to the subject (passive)  
-**Example:** اِنْكَسَرَ – It was broken
-
----
-
-### 🔹 Form VIII – ٱفْتِعَال (iftiʿāl)
-
-**Pattern:** اِفْتَعَلَ / يَفْتَعِلُ / اِفْتِعَالٌ  
-**Meaning:** The action is done by the person to benefit themselves or from within  
-**Example:** اِشْتَرَى – He bought
-
----
-
-### 🔹 Form IX – ٱفْعَلَّ (ifʿalla)
-
-**Pattern:** اِفْعَلَّ / يَفْعَلُّ / اِفْعِلَالٌ  
-**Meaning:** Used for colours or physical conditions  
-**Example:** اِحْمَرَّ – It turned red
-
----
-
-### 🔹 Form X – ٱسْتِفْعَال (istifʿāl)
-
-**Pattern:** اِسْتَفْعَلَ / يَسْتَفْعِلُ / اِسْتِفْعَالٌ  
-**Meaning:** Asking for or trying to do the action  
-**Example:** اِسْتَغْفَرَ – He asked for forgiveness
-
+2. ### 🔹 Form II – ٱلتَّفْعِيل (tafaʿīl)
+	**Pattern:** فَعَّلَ / يُفَعِّلُ / تَفْعِيلٌ  
+	**Meaning:** Someone makes someone else do the action (causing or intensifying it)  
+	**Example:** عَلَّمَ – He taught (made someone know)
+3. ### 🔹 Form III – ٱلْمُفَاعَلَة (mufāʿalah)
+	**Pattern:** فَاعَلَ / يُفَاعِلُ / مُفَاعَلَةٌ  
+	**Meaning:** Doing the action **with** someone else (like talking, helping, fighting)  
+	**Example:** شَارَكَ – He participated (took part together)
+4. ### 🔹 Form IV – ٱلْإِفْعَال (ifʿāl)
+	**Pattern:** أَفْعَلَ / يُفْعِلُ / إِفْعَالٌ  
+	**Meaning:** To make something happen or to start something  
+	**Example:** أَسْلَمَ – He submitted (he accepted Islam)
+5. ### 🔹 Form V – ٱلتَّفَعُّل (tafaʿʿul)
+	**Pattern:** تَفَعَّلَ / يَتَفَعَّلُ / تَفَعُّلٌ  
+	**Meaning:** Doing the action to yourself (like learning or getting dressed)  
+	**Example:** تَعَلَّمَ – He learned (taught himself)
+6. ### 🔹 Form VI – ٱلتَّفَاعُل (tafāʿul)
+	**Pattern:** تَفَاعَلَ / يَتَفَاعَلُ / تَفَاعُلٌ  
+	**Meaning:** Two or more people doing the action to each other  
+	**Example:** تَشَارَكَ – They shared with each other
+7. ### 🔹 Form VII – ٱلِانْفِعَال (infiʿāl)
+	**Pattern:** اِنْفَعَلَ / يَنْفَعِلُ / اِنْفِعَالٌ  
+	**Meaning:** The action happened by itself or was done to the subject (passive)  
+	**Example:** اِنْكَسَرَ – It was broken
+8. ### 🔹 Form VIII – ٱفْتِعَال (iftiʿāl)
+	**Pattern:** اِفْتَعَلَ / يَفْتَعِلُ / اِفْتِعَالٌ  
+	**Meaning:** The action is done by the person to benefit themselves or from within  
+	**Example:** اِشْتَرَى – He bought
+9. ### 🔹 Form IX – ٱفْعَلَّ (ifʿalla)
+	**Pattern:** اِفْعَلَّ / يَفْعَلُّ / اِفْعِلَالٌ  
+	**Meaning:** Used for colours or physical conditions  
+	**Example:** اِحْمَرَّ – It turned red
+10. ### 🔹 Form X – ٱسْتِفْعَال (istifʿāl)
+	**Pattern:** اِسْتَفْعَلَ / يَسْتَفْعِلُ / اِسْتِفْعَالٌ  
+	**Meaning:** Asking for or trying to do the action  
+	**Example:** اِسْتَغْفَرَ – He asked for forgiveness
+{{% /steps %}}
 ---
 
 ## Arabic Verb Forms – Summary Table

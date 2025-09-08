@@ -10,7 +10,8 @@ categories = ["tutorials", "raspberry-pi"]
 
 Execute following 3 commands from PC/Laptop from which you want to login to Raspberry Pi without password.
 
-```laptop:~$ ssh-keygen -t rsa
+```
+laptop:~$ ssh-keygen -t rsa
 Generating public/private rsa key pair.
 Enter file in which to save the key (/home/laptop/.ssh/id_rsa): 
 Enter passphrase (empty for no passphrase): 
@@ -34,16 +35,21 @@ The key's randomart image is:
 
 NUsing ssh create a directory ~/.ssh as user pi on Raspberry -
 
-laptop:~$ ssh pi@192.168.1.68 mkdir -p .sshpi@192.168.1.68's password:```
+laptop:~$ ssh pi@192.168.1.68 mkdir -p .sshpi@192.168.1.68's password:
+```
 
 Append public key to pi@Raspberry:.ssh/authorized_keys and enter pi's password one last time:
 
-```laptop:~$ cat .ssh/id_rsa.pub | ssh pi@192.168.1.68 'cat >> .ssh/authorized_keys'
-pi@192.168.1.68's password:```
+```
+laptop:~$ cat .ssh/id_rsa.pub | ssh pi@192.168.1.68 'cat >> .ssh/authorized_keys'
+pi@192.168.1.68's password:
+```
 
 Now you can log into Raspberry as pi without password:
 
-```laptop:~$ ssh pi@192.168.1.68```
+```
+laptop:~$ ssh pi@192.168.1.68
+```
 
 Depending on your version of SSH you might also have to do the following changes:
 - Put the public key in .ssh/authorized_keys2

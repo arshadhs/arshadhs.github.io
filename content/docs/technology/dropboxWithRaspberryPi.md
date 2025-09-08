@@ -9,12 +9,15 @@ categories = ["tutorials", "raspberry-pi"]
 # Dropbox with Raspberry Pi
 Act as root, since I wanted to run the script on startup as a service, so I must setup dropbox for 'root' user rather than 'pi' -
 
-```pi@raspberrypi:~ $ sudo -s
-root@raspberrypi:/home/pi# cd /root/```
+```
+pi@raspberrypi:~ $ sudo -s
+root@raspberrypi:/home/pi# cd /root/
+```
 
 ### Get the script and link
 
-```root@raspberrypi:~# git clone http://github.com/andreafabrizi/Dropbox-Uploader.git
+```
+root@raspberrypi:~# git clone http://github.com/andreafabrizi/Dropbox-Uploader.git
 Cloning into 'Dropbox-Uploader'...
 
 remote: Counting objects: 785, done.
@@ -23,7 +26,8 @@ Receiving objects: 100% (785/785), 237.87 KiB | 0 bytes/s, done.
 Resolving deltas: 100% (409/409), done.
 Checking connectivity... done.
 root@raspberrypi:~# cd Dropbox-Uploader/
-root@raspberrypi:~/Dropbox-Uploader# ./dropbox_uploader.sh```
+root@raspberrypi:~/Dropbox-Uploader# ./dropbox_uploader.sh
+```
 
  This is the first time you run this script, please follow the instructions:
 
@@ -37,27 +41,33 @@ root@raspberrypi:~/Dropbox-Uploader# ./dropbox_uploader.sh```
  When your new App is successfully created, please click on the Generate button
  under the 'Generated access token' section, then copy and paste the new access token here:
 
- ```# Access token: .............
+ ```
+ # Access token: .............
 
  > The access token is ............. Looks ok? [y/N]: y
-   The configuration has been saved.```
+   The configuration has been saved.
+```
 
 ### Add to Python script
 
 from subprocess import call
-```Upload = "/home/pi/Dropbox-Uploader/dropbox_uploader.sh upload " + str(fileWithPath) + " " + str(fileName)
-call ([Upload], shell=True)```
+```
+Upload = "/home/pi/Dropbox-Uploader/dropbox_uploader.sh upload " + str(fileWithPath) + " " + str(fileName)
+call ([Upload], shell=True)
+```
 
 If you need to unlink from Dropbpx -
 
-```root@raspberrypi:~/Dropbox-Uploader# ./dropbox_uploader.sh unlink
+```
+root@raspberrypi:~/Dropbox-Uploader# ./dropbox_uploader.sh unlink
 
 pi@raspberrypi ~ $ crontab -e
 
 # m h  dom mon dow   command
 */10 * * * * /home/pi/deleteOldFile.sh
 
-pi@raspberrypi ~ $```
+pi@raspberrypi ~ $
+```
 
 ---
 {{< home-link "Home" >}} | {{< section-index >}}

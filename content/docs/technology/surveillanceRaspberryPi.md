@@ -21,26 +21,32 @@ One of the hobby projects:
 
 I used RAM disk to store the files before they get e-mailed to me. If you want /tmp to be a ramdisk put this line into /etc/fstab -
 
-```tmpfs           /tmp            tmpfs   defaults,noatime,nosuid   0       0```
+```
+tmpfs           /tmp            tmpfs   defaults,noatime,nosuid   0       0
+```
 
 ### Delete files
 
 And I am deleting jpg files older than 20 minutes from /tmp using a shell script -
 
-```pi@raspberrypi ~ $ cat deleteOldFile.sh 
+```
+pi@raspberrypi ~ $ cat deleteOldFile.sh 
 find /tmp/*jpg -mmin +20 -exec rm {} \;
-pi@raspberrypi ~ $```
+pi@raspberrypi ~ $
+```
 
 ### CRON job
 
 And run the shell script every 10 minutes -
 
-```pi@raspberrypi ~ $ crontab -e
+```
+pi@raspberrypi ~ $ crontab -e
 
 # m h  dom mon dow   command
 */10 * * * * /home/pi/deleteOldFile.sh
 
-pi@raspberrypi ~ $```
+pi@raspberrypi ~ $
+```
 
 ---
 {{< home-link "Home" >}} | {{< section-index >}}

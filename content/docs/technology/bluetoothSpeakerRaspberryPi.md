@@ -89,7 +89,8 @@ chmod +x scripts/autopair
 pi@raspberrypi:~ $ sudo vim /boot/config.txt
 #dtparam=audio=on
 pi@raspberrypi:~ $ vim ~/scripts/on.py
-#!/usr/bin/python```
+#!/usr/bin/python
+```
 
 ## Monitor removal of bluetooth reciever
 
@@ -125,18 +126,23 @@ pi@raspberrypi:~ $chmod +x ~/scripts/on.py
 pi@raspberrypi:~ $vim ~/.bashrc
 pulseaudio --start
 wait
-~/python/on.py```
+~/python/on.py
+```
 
 ### Reboot
 
 If the connection fails, remove the device and pair-trust-connect
 
-```remove aa:bb:cc:dd:ee:ff
+```
+remove aa:bb:cc:dd:ee:ff
+```
 
 ### Test the sound
 
-```pi@raspberrypi:~ $wget http://rpf.io/lamp3 -O example.mp3 --no-check-certificate
-pi@raspberrypi:~ $ omxplayer -o alsa ~/example.mp3```
+```
+pi@raspberrypi:~ $wget http://rpf.io/lamp3 -O example.mp3 --no-check-certificate
+pi@raspberrypi:~ $ omxplayer -o alsa ~/example.mp3
+```
 
 When you connect two Bluetooth devices together (i.e. you "pair" them) you only establish a connection between the two: network link, audio sink, audio source. If you connect your Pi to a Bluetooth audio source, it doesn't necessarily mean you want to use the new audio sink at once. You need a different command for that.
 In short, under GNU/Linux in this very case:

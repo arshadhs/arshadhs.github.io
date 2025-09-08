@@ -20,8 +20,10 @@ You can install **TightVNCServer** on the Raspberry Pi and a **VNC Viewer** on y
 
 Install the TightVNC package:
 
-```bash
+```
+bash
 $ sudo apt-get install tightvncserver
+```
 
 ---
 {{< home-link "Home" >}} | {{< section-index >}}

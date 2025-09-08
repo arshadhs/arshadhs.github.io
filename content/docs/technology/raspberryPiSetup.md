@@ -37,9 +37,11 @@ Also configure -
 4. You get a NOOBS menu, I wanted to install Rasbian so I selected the same from the menu. (remember on first start NOOBS selects HDMI as the output so any other display you need to press  the number buttons 1-4 on your keyboard)
 5. Rasbian will get installed typically in less than 5 minutes, you get another menu at this point where you need to click on “Finish.” (Your mouse will not work at this point and you need a keyboard to do this. If you dont have a keyboard remember your ssh is configured by now so you can ssh from a remote machine to Raspberry Pi and do this from your ssh window.)
 
-> login as: pi  
-> pi@192.168.0.6's password:  
-> Linux raspberrypi 3.6.11+ #474 PREEMPT Thu Jun 13 17:14:42 BST 2013 armv6l  
+```
+login as: pi  
+pi@192.168.0.6's password:  
+Linux raspberrypi 3.6.11+ #474 PREEMPT Thu Jun 13 17:14:42 BST 2013 armv6l  
+```
 
 The programs included with the Debian GNU/Linux system are free software;
 the exact distribution terms for each program are described in the
@@ -49,7 +51,7 @@ Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
 permitted by applicable law.
 
 NOTICE: the software on this Raspberry Pi has not been fully configured. Please run 'sudo raspi-config'
-
+```
 > pi@raspberrypi ~ $ sudo raspi-config
 
 ┌─────────┤ Raspberry Pi Software Configuration Tool (raspi-config) ├──────┐
@@ -74,7 +76,7 @@ NOTICE: the software on this Raspberry Pi has not been fully configured. Please 
 | col 1 is |  left-aligned | $1600 |
 | col 2 is |    centered   |   $12 |
 | col 3 is | right-aligned |    $1 |
-
+```
 Notes:
 If using RCA for display edit /boot/config.txt, uncomment following line
 sdtv_mode=2

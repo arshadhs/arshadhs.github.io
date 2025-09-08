@@ -12,16 +12,19 @@ categories = ["tutorials", "banana-pi"]
 ### SSH
 (Enable SSH)
 
-```$ sudo apt-get install openssh-server
+```
+$ sudo apt-get install openssh-server
 
 $ sudo nano /etc/rc.local
 /etc/init.d ssh
-exit 0```
+exit 0
+```
 
 ### Resize
 (Card on a ubuntu box)
 
-```$ sudo fdisk -l
+```
+$ sudo fdisk -l
 Disk /dev/mmcblk0: 7.4 GiB, 7948206080 bytes, 15523840 sectors
 Units: sectors of 1 * 512 = 512 bytes
 Sector size (logical/physical): 512 bytes / 512 bytes
@@ -72,12 +75,14 @@ The partition table has been altered.
 Calling ioctl() to re-read partition table.
 Syncing disks.
 
-pi@bananapi:~$ sudo resize2fs /dev/mmcblk0p2```
+pi@bananapi:~$ sudo resize2fs /dev/mmcblk0p2
+```
 
 ## SAMBA
 (For accessing SSD from Windows PC inside home network on DLNA)
 
-```pi@bananapi:~$ mkdir /home/pi/ssd
+```
+pi@bananapi:~$ mkdir /home/pi/ssd
 
 pi@bananapi:~$ sudo mount /dev/sda /home/pi/ssd
 
@@ -100,12 +105,14 @@ force user = pi
 only guest = no
 
 sudo service smbd restart
-sudo service nmbd restart```
+sudo service nmbd restart
+```
 
 ## Mini DLNA
 (For accessing SSD from devices in home network on DLNA)
 
-```pi@bananapi:~$ sudo add-apt-repository ppa:stedy6/stedy-minidna
+```
+pi@bananapi:~$ sudo add-apt-repository ppa:stedy6/stedy-minidna
 pi@bananapi:~$ sudo apt-get install minidlna
 pi@bananapi:~$ sudo nano /etc/minidlna.conf
 

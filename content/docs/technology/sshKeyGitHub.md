@@ -8,19 +8,27 @@ categories = ["tutorials", "git", "github"]
 
 # Adding a SSH key to GitHub account
 
-```ls -al ~/.ssh```
+```
+ls -al ~/.ssh
+```
 
 Generate a key
-```ssh-keygen -t rsa -b 4096 -C <user mail id>
+```
+ssh-keygen -t rsa -b 4096 -C <user mail id>
 eval $(ssh-agent -s)
-ssh-add ~/.ssh/id_rsa```
+ssh-add ~/.ssh/id_rsa
+```
 
 Clip or copy manually
-```clip < ~/.ssh/id_rsa.pub
-cat ~/.ssh/id_rsa.pub```
+```
+clip < ~/.ssh/id_rsa.pub
+cat ~/.ssh/id_rsa.pub
+```
 
 Go to GitHub, add the public key to settings -
-```https://github.com/settings/keys```
+```
+https://github.com/settings/keys
+```
 
 ---
 {{< home-link "Home" >}} | {{< section-index >}}
