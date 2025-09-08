@@ -59,3 +59,6 @@ categories = ["desserts"]
 - Once the sponge cakes are cool, layer and ice them with the ganache.  
 
 Enjoy your rich and moist chocolate cake with smooth ganache!
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

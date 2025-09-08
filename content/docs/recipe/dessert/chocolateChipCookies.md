@@ -45,3 +45,6 @@ Perfect with a cup of tea or a glass of cold milk, they’re easy to make and ha
 
 **Storage:**  
 Cookies stay fresh in an airtight container at room temperature for up to 1 week.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

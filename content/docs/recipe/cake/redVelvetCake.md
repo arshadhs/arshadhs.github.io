@@ -62,3 +62,6 @@ A classic, rich and vibrant cake layered with smooth cream cheese frosting.
 2. Place one layer (top side down) on a serving plate and spread with frosting.  
 3. Continue layering and frosting.  
 4. Cover top and sides with remaining frosting. Chill before serving if desired.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

@@ -66,3 +66,6 @@ Back then, I barely knew how to cook chicken. So I experimented—trial and erro
 ---
 
 This one’s close to my heart. Hope it finds a place in your kitchen too.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

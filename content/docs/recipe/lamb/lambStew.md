@@ -56,3 +56,6 @@ One of the best lamb stew recipes I've tried — courtesy of my dear cousin **Kh
 ---
 
 A hearty and flavoursome stew, best enjoyed with naan or basmati rice!
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

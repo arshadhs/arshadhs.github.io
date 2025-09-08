@@ -23,3 +23,4 @@ Visit the [github](https://github.com/arshadhs) profile!
 {{< section-list >}}
 
 ---
+{{< home-link "Home" >}}

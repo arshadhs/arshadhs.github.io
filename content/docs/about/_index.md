@@ -19,3 +19,6 @@ I am a seasoned Software Engineer and Technical Manager with a passion to learn 
 ---
 
 Visit the [linkedin](https://www.linkedin.com/in/arshadsiddiqui/) profile!
+
+---
+{{< home-link "Home" >}}

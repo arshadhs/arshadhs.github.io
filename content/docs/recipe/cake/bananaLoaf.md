@@ -38,4 +38,7 @@ A soft, moist banana loaf with dark chocolate chips and a touch of caramel. Grea
 6. Spoon the mixture into the loaf tin and level the top.  
 7. Bake for around 50 minutes, or until golden, risen, and pulling away from the sides.  
 8. Allow to cool in the tin for 10 minutes, then transfer to a wire rack.  
-9. Slice and enjoy.  
+9. Slice and enjoy.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

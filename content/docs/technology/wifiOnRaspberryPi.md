@@ -62,3 +62,6 @@ Stock No. Description Price
 760-3621 Edimax Wireless Nano USB Adapter £8.95
 ────────────────────────────────────────────────────
 ```
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}  

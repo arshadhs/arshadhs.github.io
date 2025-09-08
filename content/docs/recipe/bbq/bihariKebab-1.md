@@ -48,3 +48,6 @@ A classic Pakistani-style BBQ dish, full of bold spices and smoky flavour. Perfe
 ---
 
 Enjoy with naan, lemon wedges, and sliced onions.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

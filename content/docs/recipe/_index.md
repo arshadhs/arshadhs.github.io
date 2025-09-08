@@ -20,3 +20,4 @@ Perhaps, one day, even to me.
 {{< section-list >}}
 
 ---
+{{< home-link "Home" >}}

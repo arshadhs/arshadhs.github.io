@@ -84,3 +84,6 @@ For my first home attempt, I used lamb shoulder. My concern was whether the insi
 Rich, regal, and deeply spiced — this roast leg of lamb brings bold Indian flavours to your dinner table, perfect for celebrations and family feasts.
 
 This dish is a showstopper — aromatic, succulent, and unforgettable. A perfect centrepiece for your next celebration.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

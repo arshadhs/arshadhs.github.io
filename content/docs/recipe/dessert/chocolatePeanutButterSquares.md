@@ -37,4 +37,7 @@ A delicious no-bake treat combining the rich flavours of chocolate and crunchy p
 8. Pour the melted dark chocolate over the biscuit base, tilting the tin to spread evenly.  
 9. Melt the milk chocolate and drizzle it over the top. Use a spoon to create swirls.  
 10. Refrigerate for at least 2 hours until firm.  
-11. Once set, lift out using the parchment, and cut into squares with a sharp knife.  
+11. Once set, lift out using the parchment, and cut into squares with a sharp knife.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

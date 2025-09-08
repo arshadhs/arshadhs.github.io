@@ -95,3 +95,5 @@ Traditionally made using finely minced meat, unripe papaya and a mix of exotic s
 
 Serve hot Galawati Kebabs with paratha or naan, and don’t forget the mint chutney, sliced onions, and a squeeze of lemon. These kebabs are truly **melt-in-the-mouth**!
 
+---
+{{< home-link "Home" >}} | {{< section-index >}}

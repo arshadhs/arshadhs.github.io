@@ -28,3 +28,4 @@ You can connect to your Raspberry Pi Samba server from:
 - iPhone or iPad using any file explorer app that supports SMB/CIFS protocol
 
 ---
+{{< home-link "Home" >}} | {{< section-index >}}

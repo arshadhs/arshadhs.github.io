@@ -49,3 +49,6 @@ Depending on your version of SSH you might also have to do the following changes
 - Put the public key in .ssh/authorized_keys2
 - Change the permissions of .ssh to 700
 - Change the permissions of .ssh/authorized_keys2 to 640
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

@@ -48,3 +48,6 @@ A more recent version of my Naan Bread recipe.
 ---
 
 Enjoy warm naan with rich Nihari or your favourite curry!
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

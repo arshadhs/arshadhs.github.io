@@ -81,3 +81,6 @@ Dry roast all the ingredients in a pan until fragrant. Cool and grind into a fin
 ---
 
 Enjoy this warming and flavourful Afghani curry with naan, paratha, or plain basmati rice.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

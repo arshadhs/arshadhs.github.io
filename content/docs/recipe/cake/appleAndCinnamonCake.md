@@ -41,3 +41,6 @@ A moist and aromatic cake that combines sweet apples with the warmth of cinnamon
 7. Pour half the batter into the pan, spread the apples over it, then pour the remaining batter on top.  
 8. Mix the flaked almonds with 1/4 tsp cinnamon and sprinkle over the top.  
 9. Bake for 1 hour or until a toothpick inserted in the centre comes out clean.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

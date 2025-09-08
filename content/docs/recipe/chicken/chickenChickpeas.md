@@ -57,3 +57,6 @@ weight = 14
 ---
 
 Serve hot with naan or steamed rice!
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

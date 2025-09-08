@@ -39,3 +39,4 @@ Seekh Tuji — the smoky soul of Kashmiri street food. Skewered over charcoal by
 6. Serve hot with chutney, naan, or saffron rice.
 
 ---
+{{< home-link "Home" >}} | {{< section-index >}}

@@ -36,3 +36,6 @@ weight = 15
 8. Add jalapenos and dried methi leaves, cook for another 5 minutes.  
 
 Serve hot with naan or steamed rice.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

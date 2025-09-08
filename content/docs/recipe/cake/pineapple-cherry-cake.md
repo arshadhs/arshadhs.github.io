@@ -53,3 +53,6 @@ Use the following quantities for a **springform tin** (2.5x the original):
 ---
 
 A fruity, nostalgic delight that’s perfect for sharing!
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

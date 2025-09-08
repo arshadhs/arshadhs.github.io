@@ -48,3 +48,6 @@ It's a simple dish, but packed with flavour and incredibly straightforward to co
 ---
 
 Serve warm with couscous, crusty bread, or simply as is — it's rich, warming and full of character.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

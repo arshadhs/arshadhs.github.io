@@ -37,3 +37,6 @@ Nankhatai are traditional Indian shortbread biscuits, fragrant with cardamom and
 ---
 
 Enjoy these crumbly, aromatic biscuits with tea or as a sweet snack!
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

@@ -33,3 +33,6 @@ Add each account that you want to be able to send mail from by editing, ‘/etc/
 ## Logs
 
 ```pi@raspberrypi ~ $ grep -riI ssmtp /var/log```
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

@@ -30,3 +30,6 @@ Make it executable -
 
 gets it started at system boot and killed at shutdown -
 ```sudo update-rc.d timelapse enable```
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

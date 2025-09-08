@@ -39,3 +39,6 @@ Peas Pulao is a fragrant, simple, and comforting rice dish that brings together 
 7. Pour in hot water and cook either in a rice cooker or pressure cooker until the rice is tender and fluffy.  
 
 Serve warm as a delightful side or a light main course.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

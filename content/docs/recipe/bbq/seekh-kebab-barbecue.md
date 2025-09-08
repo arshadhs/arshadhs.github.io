@@ -36,3 +36,6 @@ Seekh Kebab is a classic South Asian barbecue dish made from spiced minced lamb,
 8. Remove the kebabs from the skewers and immediately squeeze 3-5 drops of lemon juice on each to enhance the flavor.  
 
 *Note: 1 kg of lamb mince will make approximately 18-20 seekh kebabs.*
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

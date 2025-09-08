@@ -73,3 +73,6 @@ Moussaka is an eggplant- or potato-based dish, often including ground meat, with
 ---
 
 Serve hot. Best enjoyed with crusty bread and a fresh green salad.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

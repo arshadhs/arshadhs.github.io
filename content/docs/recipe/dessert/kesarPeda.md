@@ -41,3 +41,6 @@ weight: 22
 ---
 
 Enjoy these fragrant, melt-in-your-mouth delights as a festive treat or after-meal dessert!
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

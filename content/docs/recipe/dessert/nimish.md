@@ -38,3 +38,6 @@ Nimish is a delicate and fragrant dessert from Lucknow, traditionally made with 
 ---
 
 A royal dessert with a cloud-like texture and fragrant notes—**Nimish** is sure to leave a lasting impression.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

@@ -66,3 +66,6 @@ A rich and moist coffee-flavoured walnut sponge cake layered with smooth coffee 
 ---
 
 Enjoy your delicious Coffee Walnut Cake with a fresh cup of coffee or tea!
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

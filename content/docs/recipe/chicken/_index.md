@@ -16,3 +16,4 @@ bookCollapseSection: true
 {{< section-list >}}
 
 ---
+{{< home-link "Home" >}} | {{< section-index >}}

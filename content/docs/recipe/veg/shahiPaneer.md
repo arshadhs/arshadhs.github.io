@@ -57,3 +57,4 @@ This is one of the paneer recipes you will find in every dhaba and restaurant, a
 16. Garnish with chopped coriander leaves and serve hot.
 
 ---
+{{< home-link "Home" >}} | {{< section-index >}}

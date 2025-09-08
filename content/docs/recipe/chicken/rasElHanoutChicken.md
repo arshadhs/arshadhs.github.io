@@ -53,3 +53,6 @@ On my trip to Morocco, I bought **Ras el Hanout** spice mix — I'd heard quite 
 ---
 
 Fragrant, rich and subtly sweet — a true Moroccan-inspired delight!
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

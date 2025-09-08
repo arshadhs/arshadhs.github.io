@@ -56,3 +56,6 @@ I used to get these cookies from Bon Bon Pastry Shop in New Friends Colony, New 
 ---
 
 Enjoy your rich, chocolatey coffee cookies – perfect with a cup of tea or more coffee!
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

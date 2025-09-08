@@ -22,3 +22,6 @@ Install the TightVNC package:
 
 ```bash
 $ sudo apt-get install tightvncserver
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

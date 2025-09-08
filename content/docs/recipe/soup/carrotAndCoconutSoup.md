@@ -43,3 +43,6 @@ A satisfying soup delicately spiced and perfect for warming up during the colder
 6. Add lemon juice.  
 7. Blend the soup using a food processor until smooth.  
 8. Serve in bowls with a swirl of reserved coconut milk and a sprinkle of curry powder if desired.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

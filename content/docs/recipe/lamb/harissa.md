@@ -78,3 +78,6 @@ Harissa slowly became a cherished cultural food, often gifted to celebrate snowf
 **Note:**  
 - Cut the meat very small so it requires less stirring.  
 - When reheating, if the Harissa has thickened too much, stir in a few tablespoons of milk to loosen the texture.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

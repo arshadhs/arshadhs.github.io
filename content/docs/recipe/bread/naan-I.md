@@ -39,3 +39,6 @@ Soft, fluffy and delicious — perfect alongside curries or grilled dishes. This
 ---
 
 Serve warm with curry, chutneys or grilled kebabs.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

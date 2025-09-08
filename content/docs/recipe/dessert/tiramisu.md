@@ -58,3 +58,6 @@ categories = ["recipes", "desserts"]
 
 **Tip:**  
 If using glasses for serving, break the sponge fingers into smaller pieces to fit. Follow the same dipping and layering method. Remember: **do not oversoak** the sponge fingers.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

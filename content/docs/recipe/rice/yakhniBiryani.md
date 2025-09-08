@@ -71,3 +71,6 @@ weight = 15
 10. Cover it with a heavy lid to prevent the steam from escaping.  
 11. Cook on low heat for about 15–20 minutes.  
 12. Serve hot with raita or chutney.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

@@ -79,3 +79,6 @@ A rich, flavour-packed cake with layers of caramel icing and creamy frosting, to
 4. Frost the cake generously.  
 5. Pipe additional frosting as desired.  
 6. Press chopped pecans onto the sides and garnish the top with pecan halves.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

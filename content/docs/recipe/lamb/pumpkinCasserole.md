@@ -66,3 +66,6 @@ Cut the pumpkin into wedges and serve warm, with the meat spilling out from insi
 ---
 
 Let me know if you'd like image support or internal links added to other recipes like the Mediterranean Chicken Casserole or Ras el Hanout Chicken!
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

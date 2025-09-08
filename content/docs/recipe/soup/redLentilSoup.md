@@ -55,3 +55,4 @@ I had obscene amounts of delicious food in Istanbul (one of the factors contribu
 14. Serve hot.
 
 ---
+{{< home-link "Home" >}} | {{< section-index >}}

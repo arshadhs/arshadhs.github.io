@@ -37,3 +37,6 @@ Using tongs, remove the tomatoes and garlic from the heat.
 Crush the tomatoes in a bowl.  
 Squeeze the roasted garlic from its peel into the bowl.  
 Add the green chillies, coriander leaves, mustard oil, and salt, then mix well.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

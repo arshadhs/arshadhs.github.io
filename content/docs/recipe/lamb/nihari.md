@@ -60,3 +60,6 @@ Top with:
 Serve hot with khameeri roti, naan or phulka.
 
 > _“Nihari is to winter what Haleem is to Ramzan.”_
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

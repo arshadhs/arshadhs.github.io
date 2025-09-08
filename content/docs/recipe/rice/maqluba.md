@@ -95,3 +95,6 @@ Maqluba is distinct from *Kabsa* and *Mandi* — while Kabsa is spiced rice ofte
 ---
 
 Enjoy your perfectly layered, fragrant Maqluba!
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

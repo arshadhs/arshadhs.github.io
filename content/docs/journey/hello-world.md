@@ -12,3 +12,4 @@ I've wanted to put a page on github for a while and finally here it is!
 Collecting my notes and blogs at one place.
 
 ---
+{{< home-link "Home" >}} | {{< section-index >}}  

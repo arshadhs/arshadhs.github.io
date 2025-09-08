@@ -34,3 +34,4 @@ Leave it to rest for a few hours.
 Roll the dough into flat rounds and bake in the oven until done.
 
 ---
+{{< home-link "Home" >}} | {{< section-index >}}

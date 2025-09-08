@@ -43,3 +43,6 @@ Cherry and Almond Cake is one of my all-time favourites — a dependable classic
 ---
 
 Serve slightly warm or at room temperature with tea or coffee — or even a scoop of vanilla ice cream!
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

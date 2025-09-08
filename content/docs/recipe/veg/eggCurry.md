@@ -64,3 +64,6 @@ categories = ["main dishes"]
 ---
 
 Serve hot with rice or roti.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

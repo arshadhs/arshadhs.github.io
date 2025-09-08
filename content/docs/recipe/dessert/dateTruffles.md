@@ -37,3 +37,6 @@ It's a Ramadan special delight — a rich date and chocolate combination that’
 
 Perfect for a quick Iftaar treat, or as a sweet bite any time of the day during Ramadan.
 ```
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

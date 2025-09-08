@@ -58,3 +58,6 @@ pi@raspberrypi ~ $ crontab -e
 */10 * * * * /home/pi/deleteOldFile.sh
 
 pi@raspberrypi ~ $```
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

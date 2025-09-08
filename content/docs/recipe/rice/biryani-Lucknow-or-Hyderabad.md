@@ -76,3 +76,6 @@ The variables are complicated such as amounts, moisture of yogurt mixture and ma
 ### As for India’s best city for biryani?
 
 Well, that depends on where you come from.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

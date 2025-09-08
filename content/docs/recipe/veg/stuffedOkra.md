@@ -53,3 +53,6 @@ categories = ["recipes", "North Indian"]
 ### Serving Suggestion
 
 Serve hot with roti or paratha.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

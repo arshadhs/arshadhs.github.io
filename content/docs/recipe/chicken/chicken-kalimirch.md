@@ -64,3 +64,6 @@ A rich and creamy North Indian chicken dish, flavoured with black pepper and kas
 ---
 
 This dish pairs beautifully with naan, tandoori roti, or jeera rice. Ideal for a comforting dinner with rich, peppery flavours.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

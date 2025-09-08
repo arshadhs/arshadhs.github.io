@@ -26,3 +26,6 @@ MiniDLNA couldn't find any new files in my media_dir even though I was adding ne
 > sudo service minidlna force-reload
 
 Your files.db will be recreated, this can take a while though.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

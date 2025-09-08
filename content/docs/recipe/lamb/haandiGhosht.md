@@ -47,3 +47,6 @@ categories = ["main dishes"]
 ---
 
 Serve hot with naan, roti, or rice.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

@@ -45,3 +45,6 @@ A flavourful dish combining smoky roasted eggplant with spiced lamb mince, perfe
 ---
 
 Serve hot with naan, roti, or plain rice.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

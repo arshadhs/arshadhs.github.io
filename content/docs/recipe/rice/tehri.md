@@ -50,3 +50,6 @@ So a while back when my taste buds asked for it, I was on the phone with my frie
 14. Cook on low heat for about 15–20 minutes.  
 
 **Serve hot with pickles.**
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

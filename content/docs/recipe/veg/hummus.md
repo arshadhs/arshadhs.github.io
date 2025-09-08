@@ -56,3 +56,6 @@ Want to switch things up? Try adding one of the following before blending:
 ---
 
 Enjoy hummus as a dip, a sandwich spread, or part of a mezzeh platter — it's healthy, delicious, and always a hit!
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

@@ -33,4 +33,7 @@ categories = ["desserts"]
 9. If not done, bake for another 5-10 minutes (a skewer inserted should come out clean).  
 10. Cool the cake in the pan on a wire rack for 10 minutes before removing.  
 
-Enjoy your delicious plum cake!  
+Enjoy your delicious plum cake!
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

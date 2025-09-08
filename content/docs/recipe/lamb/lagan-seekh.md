@@ -39,4 +39,7 @@ Spread the remaining beaten egg over the dough.
 
 Cover the pan with foil and bake in the oven or on the gas for 25 minutes.  
 
-Garnish with birasta, capsicum, tomato, and carrot before serving.  
+Garnish with birasta, capsicum, tomato, and carrot before serving.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

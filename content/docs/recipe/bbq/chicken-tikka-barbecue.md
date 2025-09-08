@@ -39,3 +39,6 @@ Chicken Tikka Barbecue is a popular South Asian grilled dish featuring marinated
 12. Remove from skewers once cooked through and squeeze 3-5 drops of lemon juice on each piece to enhance flavour.  
 
 *The lemon juice is absorbed better when applied immediately after grilling.*
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

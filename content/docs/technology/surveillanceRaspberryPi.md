@@ -41,3 +41,6 @@ And run the shell script every 10 minutes -
 */10 * * * * /home/pi/deleteOldFile.sh
 
 pi@raspberrypi ~ $```
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

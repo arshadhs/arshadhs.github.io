@@ -192,3 +192,6 @@ ME edition, which are software add-ons that augment the functionality of the pag
 - Porting (coding) of XTensions from QuarkXPress to QuarkXPress ME Version
 - Fixed several showstopper bugs
 #### Technologies C++, Code Warrior, Visual Studio, Windows, and Mac
+
+---
+{{< home-link "Home" >}}

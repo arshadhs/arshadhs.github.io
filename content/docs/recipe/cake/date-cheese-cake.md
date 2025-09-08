@@ -52,3 +52,4 @@ A creamy, luscious cheesecake topped with sweet dates—perfect for special occa
 12. Optional: Spread whipped cream on top and decorate with dates. Dust lightly with icing sugar if desired.
 
 ---
+{{< home-link "Home" >}} | {{< section-index >}}

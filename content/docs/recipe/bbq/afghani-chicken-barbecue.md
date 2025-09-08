@@ -48,3 +48,6 @@ A creamy, nutty, and subtly spiced North-Western style barbecue chicken, marinat
 ---
 
 This Afghani-style barbecue chicken pairs wonderfully with naan, green chutney, and fresh salad.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

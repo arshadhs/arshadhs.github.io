@@ -21,3 +21,6 @@ cat ~/.ssh/id_rsa.pub```
 
 Go to GitHub, add the public key to settings -
 ```https://github.com/settings/keys```
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

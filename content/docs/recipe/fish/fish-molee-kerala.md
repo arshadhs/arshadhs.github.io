@@ -39,3 +39,6 @@ Add coconut milk, bring to simmer and cook for further 2-3 minutes (until fish i
 Sharpen with lime juice.  
 
 *PS: Serve with boiled Basmati rice.*
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

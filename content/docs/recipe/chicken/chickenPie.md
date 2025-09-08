@@ -57,3 +57,6 @@ Thanks to Saqib for his traditional twist to this delicious Chicken Pie recipe.
 ---
 
 Enjoy your warm, comforting Chicken Pie with that special traditional touch from Saqib!
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

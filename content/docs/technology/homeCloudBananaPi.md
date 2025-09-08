@@ -114,3 +114,6 @@ media_dir=A,/home/pi/ssd/music
 
 friendly_name=my-cloud
 ```
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

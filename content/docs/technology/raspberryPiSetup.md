@@ -89,4 +89,6 @@ Stock No. Description Price
 Case-CLR Pi Type B Case - Clear £3.99  
 [3A114805](http://www.amazon.co.uk/dp/B007PYBOEU/ref=pe_385721_37038051_pe_217191_31005151_M3T1_dp_i1) SanDisk Ultra 16GB SDHC UHS-I Class 10 Card £10.73  
 ────────────────────────────────────────────────────
+
 ---
+{{< home-link "Home" >}} | {{< section-index >}}  

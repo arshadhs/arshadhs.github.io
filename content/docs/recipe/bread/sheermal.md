@@ -35,3 +35,4 @@ Brush with milk or cream and bake until golden.
 Enjoy warm with tea or as a festive side.
 
 ---
+{{< home-link "Home" >}} | {{< section-index >}}

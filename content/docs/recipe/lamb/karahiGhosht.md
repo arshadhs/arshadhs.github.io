@@ -54,3 +54,6 @@ categories = ["main course", "meat dishes"]
 ---
 
 A rich, flavourful Karahi Ghosht, perfect with naan or steamed rice.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

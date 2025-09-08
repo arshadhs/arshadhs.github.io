@@ -7,7 +7,7 @@ categories = ["islamic", "duas"]
 weight = 99
 +++
 
-## Duas After **Fajr** and **Maghrib** Salah
+## **Fajr** and **Maghrib** after Salah - Duas 
 
 After **Salām**:
 
@@ -98,7 +98,7 @@ After **Salām**:
 
 ---
 
-## Duas After **Dhuhr**, **ʿAsr**, and **ʿIshāʾ** Salah
+## **Dhuhr**, **ʿAsr**, and **ʿIshāʾ** after Salah - Duas
 
 After **Salām**:
 
@@ -122,3 +122,6 @@ After **Salām**:
 
 7.	*Lā ilāha illa Allāhu waḥdahu lā sharīka lahu, lahu al-mulku wa lahu al-ḥamdu wa huwa ʿalā kulli shayʾin qadīr*  
 > **لَا إِلَٰهَ إِلَّا ٱللّٰهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ ٱلْمُلْكُ وَلَهُ ٱلْحَمْدُ، وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ**
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}  

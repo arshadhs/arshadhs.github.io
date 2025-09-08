@@ -43,3 +43,6 @@ A spicy and flavourful **roasted chicken** recipe inspired by a chef at Lawaza. 
 Serve with mint chutney, onion rings, lemon wedges, and naan or rice.
 
 > Inspired by flavours from Lawaza — robust, spicy, and absolutely satisfying.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

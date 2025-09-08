@@ -57,3 +57,5 @@ This recipe is courtesy of our family friends from Rajasthan — shared exactly 
 - **For Chana daal**: Add a clove, black cardamom and a bay leaf to the oil, along with brown mustard seeds. Add tamarind or amchoor paste when simmering.  
 - **For Moong daal chilka**: Add garlic to the spice paste, and when frying whole spices, use only cumin seeds (omit mustard seeds, curry leaves, and asafoetida).
 
+---
+{{< home-link "Home" >}} | {{< section-index >}}

@@ -22,5 +22,4 @@ Learning how machines learn! My working notes as I learn AI.
 ![AI, ML, DL, and Data Science Diagram](/images/ai/ai_ml_dl_ds_diagram.png)
 
 ---
-
 {{< home-link "Home" >}}

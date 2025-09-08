@@ -63,3 +63,6 @@ Stock No.   Description                          Price (ex. VAT)
 ```
 
 This module allows you to capture still images and video with commands like `raspistill` and `raspivid`.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

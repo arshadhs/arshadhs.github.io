@@ -53,3 +53,6 @@ categories = ["desserts"]
 ---
 
 Enjoy your delicious Knafeh!
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

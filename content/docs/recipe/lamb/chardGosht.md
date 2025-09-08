@@ -44,3 +44,6 @@ categories = ["recipes", "main-course", "non-vegetarian"]
 ---
 
 Enjoy with roti or rice!
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

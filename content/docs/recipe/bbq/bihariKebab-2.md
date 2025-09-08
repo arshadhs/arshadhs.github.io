@@ -44,3 +44,6 @@ Smoky, spicy, and melt-in-the-mouth — Bihari Kebab is a dish steeped in North 
 6. Cook over a pan (covered) or grill in the oven/barbecue until cooked through and nicely charred.  
 
 Serve hot with paratha or mint chutney for the full Bihari experience.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

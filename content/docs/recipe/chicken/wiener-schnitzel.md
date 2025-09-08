@@ -44,3 +44,6 @@ Wiener Schnitzel is a very thin, breaded and pan-fried cutlet made from veal or 
 ---
 
 Crispy, golden, and indulgent—serve your Wiener Schnitzel with lemon, parsley potatoes or a light salad for a taste of Vienna at home!
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

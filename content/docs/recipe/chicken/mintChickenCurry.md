@@ -46,3 +46,6 @@ weight = 20
 ---
 
 Serve hot with naan or rice.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

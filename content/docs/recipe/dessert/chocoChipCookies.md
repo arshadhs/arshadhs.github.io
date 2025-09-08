@@ -37,3 +37,6 @@ weight = 300
 ---
 
 Enjoy your chewy, chocolate-loaded cookies fresh from the oven!
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

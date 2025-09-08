@@ -46,4 +46,7 @@ Add water, cover, and cook till the meat is tender.
 
 Add jalapenos and dried methi leaves at the end.  
 
-Cook for another 5 minutes before serving.  
+Cook for another 5 minutes before serving.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

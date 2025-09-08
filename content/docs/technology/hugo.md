@@ -58,4 +58,6 @@ hugo new site . --force
 ```
 
 and set-up the workflow again
+
 ---
+{{< home-link "Home" >}} | {{< section-index >}}

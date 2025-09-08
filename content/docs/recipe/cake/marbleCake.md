@@ -42,3 +42,6 @@ A beautiful and delicious cake with swirls of vanilla and chocolate, perfect for
 11. Bake for 55–70 minutes, or until a skewer inserted into the centre comes out clean (check from 55 minutes).  
 12. Remove the cake from the tin and let it cool on a wire rack.  
 13. Once cooled, dust with icing sugar before serving.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

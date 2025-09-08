@@ -43,3 +43,6 @@ A timeless British classic, the Victoria sponge cake is soft, light, and filled 
 ---
 
 A perfect centerpiece for any tea table — light, fluffy, and delightfully simple.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

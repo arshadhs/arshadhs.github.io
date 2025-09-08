@@ -76,3 +76,6 @@ Naboulsi or akawi cheese is traditionally layered between crispy thin Kataifi pa
 ---
 
 Enjoy this rich and traditional dessert, perfect for festive occasions or whenever you crave a sweet treat!
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

@@ -45,3 +45,6 @@ A succulent North Indian-style stuffed chicken leg kebab, marinated in a rich, t
 ---
 
 Serve hot with mint chutney, lemon wedges, and salad for a regal starter or main.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

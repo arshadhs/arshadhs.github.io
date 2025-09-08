@@ -76,3 +76,6 @@ Cover the dish and seal tightly.
 Bake in a hot oven for 30 minutes.  
 
 Serve hot with raita and a fresh green salad of your choice.  
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

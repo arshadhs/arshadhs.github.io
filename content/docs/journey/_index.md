@@ -21,3 +21,4 @@ A little corner for curiosity and creativity.
 {{< section-list >}}
 
 ---
+{{< home-link "Home" >}}

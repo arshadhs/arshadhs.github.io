@@ -150,3 +150,5 @@ If you want to play audio through a recently paired Bluetooth audio device, here
 list audio sinks : pacmd list-sinks | grep -E 'name:|index' . The * locates the currently selected sink. Note what follows name: for the Bluetooth device the Pi is connected to.
 set the default audio sink : pacmd set-default-sink <the name of the desired BT audio sink>
 
+---
+{{< home-link "Home" >}} | {{< section-index >}}

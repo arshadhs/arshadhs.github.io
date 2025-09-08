@@ -102,3 +102,6 @@ Although it is claimed the dish was created in Glasgow, it certainly has Indian 
 ---
 
 Serve with naan, steamed basmati rice, or chapatis — and enjoy a taste of Britain’s most beloved curry classic!
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

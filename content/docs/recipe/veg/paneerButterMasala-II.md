@@ -70,4 +70,7 @@ Find the [initial version here](../paneerButterMasala/).
 
 ---
 
-Enjoy your flavorful Butter Masala, vegetarian or non-vegetarian style!  
+Enjoy your flavorful Butter Masala, vegetarian or non-vegetarian style!
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

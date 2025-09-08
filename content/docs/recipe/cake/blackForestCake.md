@@ -60,3 +60,6 @@ categories = ["desserts"]
 ---
 
 Serve and enjoy your delicious Black Forest Cake!
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

@@ -35,3 +35,6 @@ categories = ["tutorials", "git"]
 > hugo server
 
 Test the run from workflow on [GitHub Actions](https://github.com/arshadhs/arshadhs.github.io/actions)
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

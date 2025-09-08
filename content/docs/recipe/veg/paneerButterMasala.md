@@ -40,3 +40,6 @@ I have a more [recent PBM version here](../paneerButterMasala-II/).
 6. Lower the heat and cook covered for 5 minutes.  
 7. Remove the lid, add the fried paneer and cream. Mix well and simmer for 3–4 minutes.  
 8. Garnish with freshly chopped coriander leaves.
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

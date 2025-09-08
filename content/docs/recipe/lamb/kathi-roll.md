@@ -50,3 +50,6 @@ Heat a griddle pan, grill or barbecue to very hot. Drain the beef of its marinad
 To serve, put the warm wraps egg-side up on plates and arrange the meat down the middle of each.  
 
 Drain the onion and chillies of the vinegar or lime juice, then toss with the chopped coriander. Scatter the salad over the meat, then roll up the wrap and serve.  
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

@@ -44,3 +44,6 @@ A popular vegetable rice dish that makes a tasty and satisfying light supper. Fr
 9. Turn off the heat and leave to stand, covered, for 10 minutes before serving.
 
 **Serves:** 4–6
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}

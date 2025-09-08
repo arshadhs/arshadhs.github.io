@@ -14,3 +14,6 @@ weight = 180
 I first tasted it at a Rajasthani friend’s place and have always requested them for it ever since. There are two common variations of *Bati* — one with a filling, and one without. I personally prefer the one with a filling.
 
 *Recipe awaited.*
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}
