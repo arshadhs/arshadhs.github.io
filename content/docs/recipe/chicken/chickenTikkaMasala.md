@@ -7,7 +7,7 @@ categories = ["recipes", "non-vegetarian"]
 weight = 12
 +++
 
-**Bold, creamy, and smoky – this Chicken Tikka Masala combines marinated grilled chicken with a rich spiced sauce that’s perfect for a weekend feast or a showstopping dinner.**
+Bold, creamy, and smoky – this Chicken Tikka Masala combines marinated grilled chicken with a rich spiced sauce that’s perfect for a weekend feast or a showstopping dinner.
 
 ---
 

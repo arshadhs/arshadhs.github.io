@@ -7,7 +7,7 @@ categories = ["recipes", "non-vegetarian"]
 weight = 14
 +++
 
-**A comforting, hearty dish where tender chicken meets the earthiness of chickpeas, Murgh Cholay is a flavour-packed curry perfect for a cosy dinner or weekend treat.**
+A comforting, hearty dish where tender chicken meets the earthiness of chickpeas, Murgh Cholay is a flavour-packed curry perfect for a cosy dinner or weekend treat.
 
 ---
 
