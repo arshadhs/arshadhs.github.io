@@ -12,6 +12,13 @@ I have a broad range of experience with extensive development in C, C++, C# and 
 ## Skills Profile
 Software Development | Product Development | Application Development | Embedded Software | Tools Development | Requirements Analysis | Development and Integration | Design Documentation | Continuous Integration | Test Plan | Test Automation | Leadership | Mentoring | Training | Problem Solving | Cross-Functional Collaboration | Stakeholder Engagement
 
+## Techinical
+- Programming - C++ | C | C# (WPF) | Python | Shell | Multi-threading | IPC/System | HTML 
+- C++ Template Libraries – STL | BOOST
+- GUI Dev – Visual Studio | Win API
+- Tools - Visual Studio | GDB | CVS | SVN | Perforce | Jenkins | GIT | Protocol Decoding (Wireshark)
+- Platforms – Windows | Linux | VxWorks
+
 ## Employment History
 - April 2013 - April 2024 – Staff Engineer at Qualcomm Technologies International Ltd.
 - Jan 2013 - April 2013 – Senior Software Engineer at Sepura Limited
@@ -183,3 +190,4 @@ ME edition, which are software add-ons that augment the functionality of the pag
 ---
 
 {{< home-link "Home" >}}
+
