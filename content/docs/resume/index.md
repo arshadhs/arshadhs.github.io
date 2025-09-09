@@ -5,28 +5,15 @@ draft: false
 ---
 
 ## About me
-As a Staff Engineer with extensive software development experience in the semi-conductor and telecom industry, I have a proven track record of leading product development. I have worked as a team member and as an individual contributor handling applications or software modules single handedly.
+A results driven and accomplished engineer with a wealth of experience in software development in the global semi-conductor and telecom industry. A successful track record of leading product development and individually handling applications or software modules. An analytical approach able to overcome complex problems and drive improvements. A strength in building relationships, collaborating cross-functionally and engaging with stakeholders.
 
 I have a broad range of experience with extensive development in C, C++, C# and scripting languages on Windows and Linux platforms. I have taken on various roles in the semi-conductor and telecom sectors.
 
 ## Skills Profile
-Software Dev. Life Cycle C++ template libraries Platforms Experience
-Requirement Analysis STL Windows Semi-Conductor
-Development & Integration BOOST Linux Telecom
-Design Documentation Embedded Software
-Test Plan GUI Dev. Tools Development
-Testing Visual Studio/Win API Test Automation
-Mentoring & Training (Coded UI Test)
-Protocol Decoding
-Programming Tools Web (Wireshark)
-C, C++, C# (WPF) Visual Studio HTML
-Python, Shell GDB
-Multi-threading CVS/SVN
-IPC/System Programming Perforce, Jenkins, GIT
-Wireshark
+Software Development | Product Development | Application Development | Embedded Software | Tools Development | Requirements Analysis | Development and Integration | Design Documentation | Continuous Integration | Test Plan | Test Automation | Leadership | Mentoring | Training | Problem Solving | Cross-Functional Collaboration | Stakeholder Engagement
 
 ## Employment History
-- April 2013 - till Date – Staff Engineer at Qualcomm Technologies International Ltd.
+- April 2013 - April 2024 – Staff Engineer at Qualcomm Technologies International Ltd.
 - Jan 2013 - April 2013 – Senior Software Engineer at Sepura Limited
 - Aug 2004 - Dec 2012 – Technical leader at Aricent Technologies (Hughes Software System)
 - Jan 2004 - Aug 2004 – Member, R&D at Quark Software Inc.
@@ -47,7 +34,7 @@ Wireshark
 
 ### Audio Calibration Tool
 #### Duration and Place
-January 2019 - Till Date (5 Years) at Qualcomm, Cambridge UK
+January 2019 - April 2024 (5 Years) at Qualcomm, Cambridge UK
 #### Description
 Contributed for the development and maintenance of QACT, an audio tuning
 solution for audio products. Led and managed the Voice & Music Business Unit project, resolved
@@ -194,4 +181,5 @@ ME edition, which are software add-ons that augment the functionality of the pag
 #### Technologies C++, Code Warrior, Visual Studio, Windows, and Mac
 
 ---
+
 {{< home-link "Home" >}}
