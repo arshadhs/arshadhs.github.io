@@ -5,15 +5,22 @@ tags: ["Arabic", "Grammar", "Pronouns"]
 ---
 # Demonstrative Pronouns
 
-Arabic demonstrative pronoun (اسم الإشارة ism al-ishirāh) is an article that comes before a noun to point to something specific. So, its main use is to refer to a specific thing or definite person whether it is singular, dual (Muthanna), plural, masculine, feminine, and near or remote.
+The demonstrative pronoun (اِسْم الإشَارَة ism al-ishārah) is a word used to point to something specific. It always comes before the noun it refers to and makes that noun definite.
+
+Its role is to indicate whether the thing being pointed to is:
+- Singular, Dual (المُثنّى), or Plural
+- Masculine or Feminine
+- Near (قريب) or Far (بعيد)
 
 ---
+### Demonstrative Pronouns (أسماء الإشارة)
 
-| | | singular |  | plural |
-| masculine, near | هذا | هذا | هَؤُلاءِ | هذه |
-| feminine,  near | هذه | هذه | هَؤُلاءِ | هذه |
-| masculine, far | ذلك | ذلك | أُولئِكَ | تلك |
-| feminine, far | تلك | تلك | أُولئِكَ | تلك |
+| Number   | Human / Non-human | Near (قريب)        | Far (بعيد)          |
+|----------|-------------------|--------------------|---------------------|
+| Singular | Masculine         | هٰذَا              | ذٰلِكَ              |
+| Singular | Feminine          | هٰذِهِ             | تِلْكَ              |
+| Plural   | Human (masc/fem)  | هٰؤُلَاءِ          | أُولٰئِكَ           |
+| Plural   | Non-human (all)   | هٰذِهِ *(fem. sg.)* | تِلْكَ *(fem. sg.)* |
 
 ---
 {{< home-link "Home" >}} | {{< section-index >}}  
