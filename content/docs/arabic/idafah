@@ -1,0 +1,90 @@
+---
+title: "Possessive Construction"
+date: 2025-10-01T10:00:00+01:00
+draft: false
+weight: 30
+tags: ["Arabic", "Grammar", "Idafah"]
+---
+
+# Iḍāfah (الإضافة) - The Possessive Construction
+
+**الإضافة (Iḍāfah)** means "annexation" or "genitive construction."  
+It is used when **two (or more) nouns** are linked together, where the **first noun** is "possessed" and the **second noun** is the "possessor".  
+In English, it often translates as **“the ___ of ___”** or with **’s**.  
+
+Example:  
+- **كِتَابُ الطَّالِبِ** → *the student's book* / *book of the student*  
+
+---
+
+## Structure  
+
+An Iḍāfah consists of **two parts**:  
+
+| Arabic Term       | Meaning   | Description |
+|:-----------------:|:---------:|-------------|
+| **المُضَاف**      | Possessed | The first noun (never takes "ال" or tanwīn) |
+| **المُضَاف إِلَيْهِ** | Possessor | The second noun (always in the genitive case – مَجْرُور) |
+
+---
+
+## Rules of Iḍāfah  
+
+1. **The first noun (مُضَاف)** cannot take:  
+   - **ال (definite article)**  
+   - **Tanwīn**  
+
+2. **The second noun (مُضَاف إِلَيْهِ)**:  
+   - Is always **genitive (مَجْرُور)**  
+   - Can take **ال** or remain indefinite depending on meaning  
+
+3. **Definiteness is determined by the مُضَاف إِلَيْهِ**:  
+   - If the second noun has **ال**, the whole phrase is definite.  
+   - If the second noun is indefinite, the whole phrase is indefinite.  
+
+---
+
+## 🧩 Examples  
+
+| Arabic Phrase         | Literal Translation       | Natural English Meaning |
+|:---------------------:|:-------------------------:|-------------------------|
+| **كِتَابُ الطَّالِبِ**  | Book of the student       | The student’s book |
+| **بَيْتُ رَجُلٍ**      | House of a man            | A man’s house |
+| **مُدَرِّسُ الْمَدْرَسَةِ** | Teacher of the school     | The school’s teacher |
+| **مَفَاتِيحُ الْبَيْتِ** | Keys of the house         | The house keys |
+
+---
+
+## Mnemonic  
+
+Think of Iḍāfah as a **“chain of nouns”**:  
+
+- **First noun** = the *thing being owned* (no الـ, no tanwīn)  
+- **Second noun** = the *owner/possessor* (always majrūr, often with الـ)  
+
+- *Ownership is shown by position, not by adding an ’s like in English.*  
+
+---
+
+## Common Uses of Iḍāfah  
+
+- **Possession**: كِتَابُ الطَّالِبِ (*the student’s book*)  
+- **Descriptions**: رَجُلُ صِدْقٍ (*a man of truth*)  
+- **Time Expressions**: يَوْمُ الجُمُعَةِ (*Friday / the day of Friday*)  
+- **Places**: مَدِينَةُ لُندُن (*the city of London*)  
+
+---
+
+## 🆚 Iḍāfah vs. Simple Noun with "ال"  
+
+| Type                     | Arabic Example        | Literal Translation      | Meaning in English |
+|:------------------------:|:---------------------:|:------------------------:|--------------------|
+| **Iḍāfah (الإضافة)**      | كِتَابُ الطَّالِبِ       | Book of the student      | The student’s book |
+| **Simple Noun with "ال"** | الْكِتَابُ الطَّالِبُ يَقْرَؤُهُ | The book – the student is reading it | The student reads the book |
+
+- In **Iḍāfah**, the nouns are joined to show **ownership/relationship**.  
+- In a **simple noun phrase with "ال"**, each noun stands alone and does not form a genitive construction.  
+
+---
+
+{{< home-link "Home" >}} | {{< section-index >}}
