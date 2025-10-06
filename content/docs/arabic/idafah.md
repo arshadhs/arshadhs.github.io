@@ -47,13 +47,13 @@ An Iḍāfah consists of **two parts**:
 ---
 ### 🧩 Examples and Explanation
 
-| English Phrase              | Arabic                       | Definite?     |Structure Type                | Notes |
-|----------------------------|------------------------------|-------------------------------|-------|
-| The boy is good            | الولدُ صَالِحٌ               | ✅ Yes        |Nominal sentence (جملة اسمية) | "صالح" is the predicate (not part of Idāfah). |
-| A good boy                 | وَلَدٌ صَالِحٌ               | ❌ No         |Noun + adjective (صفة)         | Both are indefinite; matches in case, gender. |
-| The good boy               | الولدُ الصَّالِحُ            | ✅ Yes        |Noun + adjective (صفة)         | Both are definite and matched. |
-| Boy of a good man          | وَلَدُ صَالِحٍ               | ❌ No         |Idāfah (إضافة)                 | Indefinite Idāfah; means: "boy of a good man". |
-| Boy of the good man        | وَلَدُ الصَّالِحِ            | ✅ Yes        |Idāfah (إضافة)                 | Definite Idāfah; means: "boy of the good man". |
+| **English Phrase**         | **Arabic**             | **Definite?** | **Structure Type**              | **Notes**                                                  |
+|---------------------------|------------------------|---------------|----------------------------------|------------------------------------------------------------|
+| The boy is good           | الولدُ صَالِحٌ         | ✅ Yes        | Nominal sentence (جملة اسمية)   | "صالح" is the predicate (not part of Idāfah).              |
+| A good boy                | وَلَدٌ صَالِحٌ         | ❌ No         | Noun + adjective (صفة)           | Both are indefinite; matches in case, gender.              |
+| The good boy              | الولدُ الصَّالِحُ      | ✅ Yes        | Noun + adjective (صفة)           | Both are definite and matched.                             |
+| Boy of a good man         | وَلَدُ صَالِحٍ         | ❌ No         | Idāfah (إضافة)                   | Indefinite Idāfah; means: "boy of a good man".             |
+| Boy of the good man       | وَلَدُ الصَّالِحِ      | ✅ Yes        | Idāfah (إضافة)                   | Definite Idāfah; means: "boy of the good man".             |
 
 Note: Idāfah links two nouns, while a noun + adjective phrase describes one noun.
 ---
