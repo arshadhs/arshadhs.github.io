@@ -8,9 +8,11 @@ tags: ["Arabic", "Grammar", "Idafah"]
 
 # Iḍāfah (الإضافة) - The Possessive Construction
 
-**الإضافة (Iḍāfah)** means "annexation" or "genitive construction."  
-It is used when **two (or more) nouns** are linked together, where the **first noun** is "possessed" and the **second noun** is the "possessor".  
-In English, it often translates as **“the ___ of ___”** or with **’s**.  
+In Arabic grammar, **الإضافة (Idāfah)** is a grammatical structure that links two nouns together. It’s often translated as "the [something] of [something/someone]" in English.
+- The first noun is called **المُضاف** (the added/possessed thing).
+- The second noun is **المُضاف إليه** (the possessor or the one described).
+
+Iḍāfah **الإضافة** means "annexation" or "genitive construction."
 
 Example:  
 - **كِتَابُ الطَّالِبِ** → *the student's book* / *book of the student*  
@@ -43,15 +45,26 @@ An Iḍāfah consists of **two parts**:
    - If the second noun is indefinite, the whole phrase is indefinite.  
 
 ---
+### 🧩 Examples and Explanation
 
-## 🧩 Examples  
+| English Phrase              | Arabic                       | Definite?     |Structure Type                | Notes |
+|----------------------------|------------------------------|-------------------------------|-------|
+| The boy is good            | الولدُ صَالِحٌ               | ✅ Yes        |Nominal sentence (جملة اسمية) | "صالح" is the predicate (not part of Idāfah). |
+| A good boy                 | وَلَدٌ صَالِحٌ               | ❌ No         |Noun + adjective (صفة)         | Both are indefinite; matches in case, gender. |
+| The good boy               | الولدُ الصَّالِحُ            | ✅ Yes        |Noun + adjective (صفة)         | Both are definite and matched. |
+| Boy of a good man          | وَلَدُ صَالِحٍ               | ❌ No         |Idāfah (إضافة)                 | Indefinite Idāfah; means: "boy of a good man". |
+| Boy of the good man        | وَلَدُ الصَّالِحِ            | ✅ Yes        |Idāfah (إضافة)                 | Definite Idāfah; means: "boy of the good man". |
 
-| Arabic Phrase         | Literal Translation       | Natural English Meaning |
-|:---------------------:|:-------------------------:|-------------------------|
-| **كِتَابُ الطَّالِبِ**  | Book of the student       | The student’s book |
-| **بَيْتُ رَجُلٍ**      | House of a man            | A man’s house |
-| **مُدَرِّسُ الْمَدْرَسَةِ** | Teacher of the school     | The school’s teacher |
-| **مَفَاتِيحُ الْبَيْتِ** | Keys of the house         | The house keys |
+Note: Idāfah links two nouns, while a noun + adjective phrase describes one noun.
+---
+
+#### 🔁 Compare:
+
+- **وَلَدُ صَالِحٍ** → *boy of a good man* (indefinite Idāfah)
+- **وَلَدُ الصَّالِحِ** → *boy of the good man* (definite Idāfah)
+
+In both cases, the second noun is in the **genitive case (مجرور)** — shown by the **kasrah** (ِ) at the end:  
+→ **صَالِحٍ** / **الصَّالِحِ**
 
 ---
 
