@@ -23,4 +23,18 @@ Its role is to indicate whether the thing being pointed to is:
 | Plural   | Non-human (all)   | هٰذِهِ *(fem. sg.)* | تِلْكَ *(fem. sg.)* |
 
 ---
+   
+### **Mnemonic:**  
+- Think of **هٰذَا / هٰذِهِ** as “this” (close), 
+-  and **ذٰلِكَ / تِلْكَ** as “that” (far).
+
+For plurals:
+- “these (people)” → **هٰؤُلَاءِ**
+- “those (people)” → **أُولٰئِكَ**
+
+Note: Non-human plural uses feminine singular form.  
+- “these (books)” → **هٰذِهِ**
+- “those (books)” → **تِلْكَ**
+
+---
 {{< home-link "Home" >}} | {{< section-index >}}  
