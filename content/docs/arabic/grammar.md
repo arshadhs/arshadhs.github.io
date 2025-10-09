@@ -1,7 +1,7 @@
 ---
 title: "Grammar Terminology"
 date: 2025-06-28T00:00:00Z
-weight: 500
+weight: 10
 draft: false
 tags: ["Arabic", "Grammar", "Education"]
 ---
@@ -75,3 +75,4 @@ This section introduces essential Arabic Grammar (نحو عربي) terms, groupe
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}  
+
