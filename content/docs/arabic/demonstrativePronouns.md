@@ -1,9 +1,9 @@
 ---
 title: "Demonstrative Pronouns"
-weight: 10
+weight: 20
 tags: ["Arabic", "Grammar", "Pronouns"]
 ---
-# Demonstrative Pronouns
+# Demonstrative Pronouns (أسماء الإشارة)
 
 The demonstrative pronoun (اِسْم الإشَارَة ism al-ishārah) is a word used to point to something specific. It always comes before the noun it refers to and makes that noun definite.
 
