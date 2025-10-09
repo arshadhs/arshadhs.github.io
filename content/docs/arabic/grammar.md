@@ -1,7 +1,7 @@
 ---
 title: "Grammar Terminology"
 date: 2025-06-28T00:00:00Z
-weight: 10
+weight: 500
 draft: false
 tags: ["Arabic", "Grammar", "Education"]
 ---
@@ -73,4 +73,5 @@ This section introduces essential Arabic Grammar (نحو عربي) terms, groupe
 | **Possessor (of the item)**  | مُضَافٌ إِلَيْهِ         | The owner; always in the genitive case.                                         |
 
 ---
+
 {{< home-link "Home" >}} | {{< section-index >}}  
