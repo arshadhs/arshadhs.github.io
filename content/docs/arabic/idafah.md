@@ -1,5 +1,5 @@
 ---
-title: "Possessive Construction"
+title: "Idafah - Possessive Construction"
 date: 2025-10-01T10:00:00+01:00
 draft: false
 weight: 30
