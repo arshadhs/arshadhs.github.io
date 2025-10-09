@@ -1,6 +1,6 @@
 ---
 title: "Demonstrative Pronouns"
-weight: 20
+weight: 50
 tags: ["Arabic", "Grammar", "Pronouns"]
 ---
 # Demonstrative Pronouns (أسماء الإشارة)
