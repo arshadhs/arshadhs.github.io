@@ -1,7 +1,7 @@
 ---
 title: "Nouns: Plurals"
 date: 2025-06-28T00:00:00Z
-weight: 70
+weight: 65
 tags: ["Arabic", "Grammar", "Plurals"]
 ---
 # Nouns: Plurals (الجمع)
