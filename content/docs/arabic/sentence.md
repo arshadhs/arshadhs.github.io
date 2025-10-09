@@ -9,8 +9,7 @@ Overview of Arabic sentence types:
 
 {{% steps %}}
 
-1- Nominal (جملة اسمية)
-
+1. Nominal (جملة اسمية)
 2. Verbal (جملة فعلية)
 
 {{% /steps %}}
