@@ -1,5 +1,5 @@
 ---
-title: "Sentence Structure"
+title: "Gender"
 weight: 30
 tags: ["Arabic", "Grammar", "Gender"]
 ---
