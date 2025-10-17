@@ -13,6 +13,13 @@ A list of simple Arabic phrases to help break into a conversation with an Arabic
 - **أَنَا أَتَكَلَّمُ ٱللُّغَةَ ٱلْعَرَبِيَّةَ وَلَٰكِنْ بِبُطْءٍ وَفُصْحَى فَقَطْ**  
   _I speak Arabic, but slowly and only in formal Arabic._
 
+- **أُرِيدُ أَنْ أُشَارِكَ فِي ٱلْحَدِيثِ، هَلْ هَذَا مُمْكِن؟**  
+  _I want to join the conversation, is that okay?_
+  
+- **لَا فُضَّ فُوكَ**
+ _[I hope] your mouth does not become empty_
+ _Your speech is admirable / Well said!_
+
 - **كَيْفَ حَالُكَ؟**  
   _How are you?_
 
@@ -45,9 +52,6 @@ A list of simple Arabic phrases to help break into a conversation with an Arabic
 
 - **مَا ٱلْمَوْضُوعُ ٱلَّذِي تَتَحَدَّثُونَ عَنْهُ؟**  
   _What are you talking about?_
-
-- **أُرِيدُ أَنْ أُشَارِكَ فِي ٱلْحَدِيثِ، هَلْ هَذَا مُمْكِن؟**  
-  _I want to join the conversation, is that okay?_
 
 ---
 {{< home-link "Home" >}} | {{< section-index >}}  
