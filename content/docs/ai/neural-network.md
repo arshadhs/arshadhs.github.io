@@ -11,7 +11,7 @@ menu: main
 
 - A **network of artificial neurons** inspired by how neurons function in the **human brain**.  
 - At its core - a **mathematical model** designed to process and learn from data.  
-- Neural networks form the **foundation of [Deep Learning](/ai/deep-learning/)** (involves training large and complex networks on vast amounts of data).  
+- Neural networks form the **foundation of [Deep Learning](/docs/ai/deep-learning/)** (involves training large and complex networks on vast amounts of data).  
 
 ---
 
