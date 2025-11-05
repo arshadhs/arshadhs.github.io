@@ -8,7 +8,10 @@ categories = ['artificial intelligence']
 
 ## Deep Learning
 
-Subset of ML, focuses on algorithms inspired by the structure and function of the brain called **Artificial Neural Networks**.
+- Subset of ML
+- focuses on algorithms inspired by the structure and function of the brain called **Artificial Neural Networks**.
+- A [neural network](/docs/ai/neural-network/) with multiple hidden layers and multiple nodes in each hidden layer is known as a deep learning system or a deep neural network. 
+- Allows systems to **automatically learn hierarchical representations** (features) from raw input, such as images, sound, or text.
 
 ### Applications
 
