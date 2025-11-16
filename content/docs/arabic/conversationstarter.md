@@ -10,18 +10,18 @@ A list of simple Arabic phrases to help break into a conversation with an Arabic
 
 ---
 
-- **أَنَا أَتَكَلَّمُ ٱللُّغَةَ ٱلْعَرَبِيَّةَ وَلَٰكِنْ بِبُطْءٍ وَفُصْحَى فَقَطْ**  
-  _I speak Arabic, but slowly and only in formal Arabic._
+## Greetings & Starting
 
-- **أُرِيدُ أَنْ أُشَارِكَ فِي ٱلْحَدِيثِ، هَلْ هَذَا مُمْكِن؟**  
-  _I want to join the conversation, is that okay?_
-  
-- **لَا فُضَّ فُوكَ**
- _[I hope] your mouth does not become empty_
- _Your speech is admirable / Well said!_
+{{% details title="Show Greetings" %}}
 
 - **كَيْفَ حَالُكَ؟**  
   _How are you?_
+  
+- **أَنَا بِخَيْرٍ مَا دَامَ أَحِبَّائِي بِخَيْرٍ**
+  _I am well as long as you (my loved ones) are well._
+
+- **سَعِيدٌ بِلِقَائِكَ!**  
+  _Nice to meet you!_
 
 - **مَا ٱسْمُكَ؟**  
   _What is your name?_
@@ -29,11 +29,29 @@ A list of simple Arabic phrases to help break into a conversation with an Arabic
 - **مِنْ أَيْنَ أَنْتَ؟**  
   _Where are you from?_
 
+{{% /details %}}
+---
+
+## Starting or Joining a Conversation
+
 - **هَلْ تَسْمَحُ لِي بِمُحَادَثَتِكَ؟**  
   _May I talk to you?_
 
 - **هَلْ يُمْكِنُنَا أَنْ نَتَحَدَّثَ قَلِيلًا؟**  
   _Can we talk a little?_
+
+- **أُرِيدُ أَنْ أُشَارِكَ فِي ٱلْحَدِيثِ، هَلْ هَذَا مُمْكِن؟**  
+  _I want to join the conversation, is that okay?_
+
+- **مَا ٱلْمَوْضُوعُ ٱلَّذِي تَتَحَدَّثُونَ عَنْهُ؟**  
+  _What are you talking about?_
+
+---
+
+## Talking About Your Arabic Ability
+
+- **أَنَا أَتَكَلَّمُ ٱللُّغَةَ ٱلْعَرَبِيَّةَ وَلَٰكِنْ بِبُطْءٍ وَفُصْحَى فَقَطْ**  
+  _I speak Arabic, but slowly and only in formal Arabic._
 
 - **لُغَتِي ٱلْعَرَبِيَّةُ لَيْسَتْ جَيِّدَةً، لَكِنِّي أُحَاوِلُ.**  
   _My Arabic is not good, but I’m trying._
@@ -41,17 +59,37 @@ A list of simple Arabic phrases to help break into a conversation with an Arabic
 - **هَلْ تَسْتَطِيعُ أَنْ تَتَكَلَّمَ بِبُطْءٍ؟**  
   _Can you speak slowly?_
 
-- **مَاذَا تَعْنِي هَذِهِ ٱلْكَلِمَةُ؟**  
-  _What does this word mean?_
-
 - **هَلْ تَتَكَلَّمُ ٱلْإِنْجْلِيزِيَّةَ؟**  
   _Do you speak English?_
 
-- **سَعِيدٌ بِلِقَائِكَ!**  
-  _Nice to meet you!_
-
-- **مَا ٱلْمَوْضُوعُ ٱلَّذِي تَتَحَدَّثُونَ عَنْهُ؟**  
-  _What are you talking about?_
+- **مَاذَا تَعْنِي هَذِهِ ٱلْكَلِمَةُ؟**  
+  _What does this word mean?_
 
 ---
-{{< home-link "Home" >}} | {{< section-index >}}  
+
+## Phone / Call-Related Phrases
+
+- **هَلْ تَسْمَحُ لِي بِمُحَادَثَتِكَ**  
+  _May I call you?_
+
+- **سَأَتَّصِلُ بِكَ بَعْدَ قَلِيلٍ.**  
+  _I'll call you back in a short while._
+
+- **لِمَاذَا لَمْ تُجِبْ عَلَى الِاتِّصَالِ؟**  
+  _Why didn't you answer the call?_
+
+- **لَا تَقْلَق، مَشْكُورٌ عَلَى إِخْبَارِي.**  
+  _No problem. Thank you for letting me know._
+
+---
+
+## Praises & Miscellaneous
+
+- **لَا فُضَّ فُوكَ**  
+  _Well said!_
+
+- **خُذْ قِسْطًا مِنَ الرَّاحَةِ**  
+  _Take a rest / Have a break_
+
+---
+{{< home-link "Home" >}} | {{< section-index >}}
