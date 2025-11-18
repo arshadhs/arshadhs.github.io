@@ -90,6 +90,12 @@ A list of simple Arabic phrases to help break into a conversation with an Arabic
 
 - **خُذْ قِسْطًا مِنَ الرَّاحَةِ**  
   _Take a rest / Have a break_
+  
+- **لَا تَتَعَجَّلْ**
+  _Don't rush!_
+  
+- **لَا تَتَعَجَّلْ فِي القَرَارِ، فَالصَّبْرُ خَيْرٌ**
+  _Do not hurry in making decisions, for patience is better._
 
 ---
 {{< home-link "Home" >}} | {{< section-index >}}
