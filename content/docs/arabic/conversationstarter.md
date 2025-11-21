@@ -94,6 +94,7 @@ A list of simple Arabic phrases to help break into a conversation with an Arabic
 - **لَا تَتَعَجَّلْ**
   _Don't rush!_
   
+- **َلَا تَتَعَجَّلْ فِي القَرَارِ، فَالتَّأَنِّي خَيْرٌ** 
 - **لَا تَتَعَجَّلْ فِي القَرَارِ، فَالصَّبْرُ خَيْرٌ**
   _Do not hurry in making decisions, for patience is better._
 

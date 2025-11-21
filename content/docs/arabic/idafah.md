@@ -5,27 +5,25 @@ weight: 70
 tags: ["Arabic", "Grammar", "Idafah"]
 ---
 
-# Iḍāfah (الإضافة) - The Possessive Construction
+# Iḍāfah (الإضافة) – The Possessive Construction
 
-In Arabic grammar, **الإضافة (Idāfah)** is a grammatical structure that links two nouns together. It’s often translated as "the [something] of [something/someone]" in English.
-- The first noun is called **المُضاف** (the added/possessed thing).
-- The second noun is **المُضاف إليه** (the possessor or the one described).
+In Arabic, **الإضافة (Idāfah)** is the structure used to link **two nouns** together in a relationship of possession or description.  
+It often means **“the X of Y”** in English.
 
-Iḍāfah **الإضافة** means "annexation" or "genitive construction."
+- The **first noun** is the **مُضَاف** (the possessed thing).  
+- The **second noun** is the **مُضَاف إِلَيْهِ** (the possessor / owner).
 
 Example:  
-- **كِتَابُ الطَّالِبِ** → *the student's book* / *book of the student*  
+- **كِتَابُ الطَّالِبِ** → *the student’s book* (*book of the student*)
 
 ---
 
-## Structure  
+## Structure (Two-Noun Idāfah)
 
-An Iḍāfah consists of **two parts**:  
-
-| Arabic Term       | Meaning   | Description |
-|:-----------------:|:---------:|-------------|
-| **المُضَاف**      | Possessed | The first noun (never takes "ال" or tanwīn) |
-| **المُضَاف إِلَيْهِ** | Possessor | The second noun (always in the genitive case – مَجْرُور) |
+| Arabic Term | Meaning | Rules |
+|------------|---------|-------|
+| **المُضَاف** | the possessed thing | • **Always first**<br>• **Never** takes **ال** or **tanwīn** |
+| **المُضَاف إِلَيْهِ** | the possessor | • **Always last**<br>• Always **genitive (مَجْرُور)** with kasrah<br>• Can be definite or indefinite |
 
 ---
 
@@ -41,29 +39,27 @@ An Iḍāfah consists of **two parts**:
 
 3. **Definiteness is determined by the مُضَاف إِلَيْهِ**:  
    - If the second noun has **ال**, the whole phrase is definite.  
-   - If the second noun is indefinite, the whole phrase is indefinite.  
+     **وَلَدُ الرَّجُلِ** → *the man’s boy*
+
+   - If the second noun is indefinite → **the whole phrase is indefinite**  
+     **وَلَدُ رَجُلٍ** → *a boy of a man*
+	 
+   - In both cases, the second noun is in the **genitive case (مجرور)** — shown by the **kasrah** (ِ) at the end:  
+→ **صَالِحٍ** / **الصَّالِحِ**
 
 ---
-### 🧩 Examples and Explanation
 
-| **English Phrase**         | **Arabic**             | **Definite?** | **Structure Type**              | **Notes**                                                  |
-|---------------------------|------------------------|---------------|----------------------------------|------------------------------------------------------------|
-| The boy is good           | الولدُ صَالِحٌ         | ✅ Yes        | Nominal sentence (جملة اسمية)   | "صالح" is the predicate (not part of Idāfah).              |
-| A good boy                | وَلَدٌ صَالِحٌ         | ❌ No         | Noun + adjective (صفة)           | Both are indefinite; matches in case, gender.              |
-| The good boy              | الولدُ الصَّالِحُ      | ✅ Yes        | Noun + adjective (صفة)           | Both are definite and matched.                             |
-| Boy of a good man         | وَلَدُ صَالِحٍ         | ❌ No         | Idāfah (إضافة)                   | Indefinite Idāfah; means: "boy of a good man".             |
-| Boy of the good man       | وَلَدُ الصَّالِحِ      | ✅ Yes        | Idāfah (إضافة)                   | Definite Idāfah; means: "boy of the good man".             |
+## Examples (Only 2-noun Idāfah)
+
+| English Meaning | Arabic | Notes |
+|-----------------|--------|-------|
+| the student’s book | **كِتَابُ الطَّالِبِ** | definite Idāfah |
+| a student’s book | **كِتَابُ طَالِبٍ** | indefinite Idāfah |
+| the city of London | **مَدِينَةُ لُنْدُن** | proper noun as مُضاف إليه |
+| the teacher’s pen | **قَلَمُ الْمُعَلِّمِ** | مُضاف إليه has **الـ** |
+| a pen of a teacher | **قَلَمُ مُعَلِّمٍ** | both nouns indefinite |
 
 Note: Idāfah links two nouns, while a noun + adjective phrase describes one noun.
----
-
-#### 🔁 Compare:
-
-- **وَلَدُ صَالِحٍ** → *boy of a good man* (indefinite Idāfah)
-- **وَلَدُ الصَّالِحِ** → *boy of the good man* (definite Idāfah)
-
-In both cases, the second noun is in the **genitive case (مجرور)** — shown by the **kasrah** (ِ) at the end:  
-→ **صَالِحٍ** / **الصَّالِحِ**
 
 ---
 
@@ -74,7 +70,7 @@ Think of Iḍāfah as a **“chain of nouns”**:
 - **First noun** = the *thing being owned* (no الـ, no tanwīn)  
 - **Second noun** = the *owner/possessor* (always majrūr, often with الـ)  
 
-- *Ownership is shown by position, not by adding an ’s like in English.*  
+*Ownership is shown by position, not by adding an ’s like in English.*  
 
 ---
 
