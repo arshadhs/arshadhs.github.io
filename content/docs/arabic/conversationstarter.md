@@ -30,6 +30,36 @@ A list of simple Arabic phrases to help break into a conversation with an Arabic
   _Where are you from?_
 
 {{% /details %}}
+
+---
+
+## Prayer Line Commands (Before Ṣalāh)
+
+{{% details title="Before Ṣalāh" %}}
+
+- **اِسْتَوُوا**   
+  _Straighten yourselves; make your lines straight._
+
+- **اِعْتَدِلُوا**  
+  _Stand upright; maintain a straight posture._
+
+- **سَوُّوا صُفُوفَكُمْ**  
+  _Straighten your rows.
+  **سَوُّوا** = straighten  
+  **صُفُوفَكُمْ** = your rows  
+
+- **تَرَاصُّوا**  
+  _Stand close together; shoulder-to-shoulder; close the gaps._
+
+- **سُدُّوا الخَلَلَ**  
+  _Fill the gaps._  
+  **الخَلَل** = the gaps/spaces in the row.
+
+- **سُدُّوا الفُرَجَ**  
+  _Close the spaces between you._
+
+{{% /details %}}
+
 ---
 
 ## Starting or Joining a Conversation
