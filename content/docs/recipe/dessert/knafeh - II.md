@@ -1,5 +1,5 @@
 +++
-title = "Knafeh - I"
+title = "Knafeh - II"
 date = 2022-04-15T00:00:00+01:00
 draft = false
 tags = ["dessert", "Middle Eastern", "sweet"]
@@ -50,10 +50,6 @@ weight = 51
 10. Preheat the oven and bake for about 15 minutes until the pastry turns crispy and golden.  
 11. Remove from the oven and immediately pour the cooled syrup over the hot pastry.  
 12. Decorate with pistachios and serve.  
-
----
-
-Enjoy your delicious Knafeh!
 
 ---
 {{< home-link "Home" >}} | {{< section-index >}}

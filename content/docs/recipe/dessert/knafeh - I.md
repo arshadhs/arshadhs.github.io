@@ -9,9 +9,7 @@ weight: 50
 
 # Kunafa
 
-Kunafa (also spelled knafeh, kunafeh, kunafeh, knafeh, or kunafah) is a Mediterranean cheese pastry soaked in sweet sugar-based syrup, typical of the regions belonging to the former Ottoman Empire. It is especially popular during Ramadan.
-
-Naboulsi or akawi cheese is traditionally layered between crispy thin Kataifi pastry dough. This recipe uses vermicelli as a substitute for kataifi and ricotta with mozzarella in place of the cheeses. The flavoured sugar syrup and crunchy nuts finish this delicious dessert.
+ This recipe uses vermicelli as a substitute for kataifi and ricotta with mozzarella in place of the cheeses.
 
 ---
 
@@ -75,9 +73,6 @@ Naboulsi or akawi cheese is traditionally layered between crispy thin Kataifi pa
 - Syrup should be room temperature when poured, never hot or crystallized.  
 - Garnish with small mango or banana pieces instead of dried fruits if preferred.
 
----
-
-Enjoy this rich and traditional dessert, perfect for festive occasions or whenever you crave a sweet treat!
 
 ---
 {{< home-link "Home" >}} | {{< section-index >}}
