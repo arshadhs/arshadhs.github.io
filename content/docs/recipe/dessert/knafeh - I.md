@@ -17,10 +17,12 @@ Naboulsi or akawi cheese is traditionally layered between crispy thin Kataifi pa
 
 ## Ingredients
 
-- **Vermicelli (or Kataifi)** – 200 g  
-- **Butter (unsalted)** – 50 g  
+- **Kataifi** – 200 g  
+- **Butter (unsalted) or Ghee** – 50 g  
 - **Ricotta cheese** – 200 g  
 - **Mozzarella (shredded)** – 100 g  
+
+#### For the syrup
 - **Sugar** – 1½ cups  
 - **Water** – 1 cup  
 - **Lemon juice** – 2 tablespoons  

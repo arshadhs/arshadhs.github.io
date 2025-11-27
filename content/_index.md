@@ -19,7 +19,8 @@ I am a seasoned Techie with a passion to learn new skills both technical and [no
 
 Here you'll find snapshots of ideas I’m exploring, side projects I’m tinkering with, and topics that keep me curious. Some things are still rough around the edges—and that’s exactly how I like it.
 
+{{< list-docs-folders >}}
+
 ---
 ![Zebrato](/images/zebrato.jpeg)
 ---
-{{< list-docs-folders >}}
