@@ -15,7 +15,7 @@ menu: main
 stateDiagram-v2
     State1: AI
 	State1 --> ANI
-	ANI: ANI - Artificial Neural Intelligence
+	ANI: ANI - Artificial Narrow Intelligence
 	note right of ANI
 		GAI - Generative AI
 	end note
@@ -27,13 +27,17 @@ stateDiagram-v2
 
 {{</mermaid>}}
 
-**ANI** also called Weak AI is trained on well labeled data sets to perform specfic task and operate within predefined environment. Doesn't go beyond it's designed purpose. Such as image and speech recognition. e.g. Siri, Alexa.
+## **Artificial Narrow Intelligence** 
+ANI is also called **Weak AI** is trained on well labeled data sets to perform specfic task and operate within predefined environment. Doesn't go beyond it's designed purpose. Such as image and speech recognition. e.g. Siri, Alexa.
 
-**GAI** built using deep-learning creates new content such as text, images, music or videos by learning from vast datasets. e.g. ChatGPT.
+### **Generative AI** 
+GAI is built using deep-learning creates new content such as text, images, music or videos by learning from vast datasets. e.g. ChatGPT.
 
-**AGI** also called strong AI is designed to perform a wide range of intelligent tasks, think abstract and adapt to new situations. e.g. Self Driving Cars to some extent.
+## **Artificial General Intelligence**
+AGI is also called strong AI is designed to perform a wide range of intelligent tasks, think abstract and adapt to new situations. e.g. Self Driving Cars to some extent.
 
-**ASI** represents hypothetical future where machine outsmarts human intelligence.
+## **Artificial Super Intelligence**
+ASI represents hypothetical future where machine outsmarts human intelligence.
 
 ---
 {{< home-link "Home" >}} | {{< section-index >}}  
