@@ -8,6 +8,7 @@ weight: 450
 menu: main
 ---
 # Foundation Model
+
 AI models trained on massive datasets to perform a wide range of tasks with minimal fine-tuning.
 
 - are large deep learning neural networks

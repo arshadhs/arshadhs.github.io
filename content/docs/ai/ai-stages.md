@@ -8,7 +8,6 @@ categories: ["AI", "ML"]
 weight: 100
 menu: main
 ---
-
 # AI Development Stages: ANI → AGI → ASI
 
 Artificial Intelligence is often described in **three stages**, based on capability and scope:

@@ -9,7 +9,6 @@ weight: 10
 menu: main
 bookCollapseSection: true
 ---
-
 # My AI Notes
 
 Learning how machines learn! My working notes as I learn AI.

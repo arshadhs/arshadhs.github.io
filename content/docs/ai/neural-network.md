@@ -6,16 +6,46 @@ categories: ["AI", "ML"]
 weight: 410
 menu: main
 ---
-
-## Neural Networks
+# Neural Networks
 
 - A **network of artificial neurons** inspired by how neurons function in the **human brain**.  
 - At its core - a **mathematical model** designed to process and learn from data.  
 - Neural networks form the **foundation of [Deep Learning](/docs/ai/deep-learning/)** (involves training large and complex networks on vast amounts of data).  
 
 ---
+{{< mermaid >}}
+flowchart LR
+ subgraph subGraph0["Input Layer"]
+        I1(("Input 1"))
+        I2(("Input 2"))
+        I3(("Input 3"))
+  end
+ subgraph subGraph1["Hidden Layer"]
+        H1(("Hidden 1"))
+        H2(("Hidden 2"))
+        H3(("Hidden 3"))
+  end
+ subgraph subGraph2["Output Layer"]
+        O(("Output"))
+  end
+    I1 --> H1 & H2 & H3
+    I2 --> H1 & H2 & H3
+    I3 --> H1 & H2 & H3
+    H1 --> O
+    H2 --> O
+    H3 --> O
 
-![Neural Network](/images/ai/neural_network.png)
+    style I1 fill:#C8E6C9
+    style I2 fill:#C8E6C9
+    style I3 fill:#C8E6C9
+    style H1 stroke:#2962FF,fill:#BBDEFB
+    style H2 fill:#BBDEFB
+    style H3 fill:#BBDEFB
+    style O fill:#FFCDD2
+    style subGraph0 stroke:none,fill:transparent
+    style subGraph1 stroke:none,fill:transparent
+    style subGraph2 stroke:none,fill:transparent
+{{< /mermaid >}}
 
 ---
 

@@ -6,10 +6,11 @@ categories: ["AI"]
 weight: 200
 menu: main
 ---
-
 # AI Stack
 
 The **AI Stack** describes the **layers required to build an end-to-end AI system**, from infrastructure at the bottom to user-facing applications at the top.
+
+Different organisations represent the AI stack differently; this is a simplified conceptual view for learning.
 
 Each layer depends on the one below it.
 

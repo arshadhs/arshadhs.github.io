@@ -7,10 +7,7 @@ tags: ["AI", "ML"]
 categories: ["AI", "ML"]
 weight: 400
 ---
-
 # Machine Learning
-
----
 
 {{< mermaid >}}
 stateDiagram-v2
