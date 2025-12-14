@@ -1,10 +1,12 @@
 ---
-title: 'AI Terminology'
+
+---
+title: "AI Stages: ANI, AGI, ASI"
 featured_image: '/images/zebrato.jpeg'
 date: 2024-07-04T10:55:52+01:00
 draft: false
-tags: ["AI"]
-categories: ["AI"]
+tags: ["AI", "ANI", "AGI", "ASI"]
+categories: ["AI", "ML"]
 weight: 10
 menu: main
 ---
@@ -38,6 +40,28 @@ AGI is also called strong AI is designed to perform a wide range of intelligent 
 
 ## **Artificial Super Intelligence**
 ASI represents hypothetical future where machine outsmarts human intelligence.
+
+---
+
+## AI Stages: ANI → AGI → ASI
+
+These terms describe increasing levels of AI capability:
+
+- **ANI (Artificial Narrow Intelligence):** specialised systems that perform specific tasks well (e.g., spam filters, speech recognition).
+- **AGI (Artificial General Intelligence):** a system that can learn and reason across many tasks like a human-level general thinker.
+- **ASI (Artificial Superintelligence):** intelligence that surpasses human capability across most domains.
+
+---
+
+## Mermaid Diagram
+
+```mermaid
+flowchart LR
+  A["ANI<br/>Artificial Narrow Intelligence<br/><small>Task-specific intelligence</small>"] --> B["AGI<br/>Artificial General Intelligence<br/><small>Human-level general intelligence</small>"] --> C["ASI<br/>Artificial Superintelligence<br/><small>Beyond human intelligence</small>"]
+
+  A --- A1["Examples:<br/>• Face recognition<br/>• Recommendations<br/>• Translation<br/>• Fraud detection"]
+  B --- B1["Expected traits:<br/>• Transfers learning across domains<br/>• Reasoning + planning<br/>• Broad adaptability"]
+  C --- C1["Implications:<br/>• Rapid problem-solving<br/>• High impact on society<br/>• Requires strong safety controls"]
 
 ---
 {{< home-link "Home" >}} | {{< section-index >}}  
