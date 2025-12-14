@@ -5,51 +5,55 @@ date: 2024-08-06T23:29:52+01:00
 draft: false
 tags: ["AI", "ML"]
 categories: ["AI", "ML"]
-weight: 20
-menu: main
+weight: 400
 ---
 
 # Machine Learning
 
 ---
 
-{{<mermaid>}}
+{{< mermaid >}}
 stateDiagram-v2
-	classDef ahsState font-style:italic,font-weight:bold,fill:lightblue
-    State1: Machine Learning
-	State1 --> SL:::ahsState
-	SL: Supervised Learning
+    classDef ahsState font-style:italic,font-weight:bold,fill:lightblue
 
-	SL --> 	Classification
-	Classification --> NB
-	NB: Naive Bayes
-	NB --> NN
-	NN: Nearest Neighbour
-	NN --> SVM
-	SL --> 	Regression
-	Regression --> LR
-	LR: Linear Regression
-	LR --> NNetwork
-	NNetwork: Neural Network
-	NNetwork --> DT
-	DT: Decision Tree
-	State1 --> USL:::ahsState
-	USL: Unsupervised Learning
-	USL --> Clustering
-	Clustering --> KM
-	KM: K-Means
-	KM --> GM
-	GM : Gaussian Matrix
-	note right of GM
-		Neural Networks
-	end note
-	GM --> HM
-	HM : Hidden Markov
-	State1 --> Reinforcement:::ahsState
-	Reinforcement --> DM
-	DM: Decision Making
+    ML: Machine Learning
 
-{{</mermaid>}}
+    ML --> SL:::ahsState
+    SL: Supervised Learning
+
+    SL --> Classification
+    Classification --> NB
+    NB: Naive Bayes
+    NB --> KNN
+    KNN: k-Nearest Neighbours
+    KNN --> SVM
+    SVM: Support Vector Machine
+
+    SL --> Regression
+    Regression --> LR
+    LR: Linear Regression
+    LR --> NN
+    NN: Neural Network
+    NN --> DT
+    DT: Decision Tree
+
+    ML --> USL:::ahsState
+    USL: Unsupervised Learning
+
+    USL --> Clustering
+    Clustering --> KM
+    KM: K-Means
+    KM --> GMM
+    GMM: Gaussian Mixture Model
+    GMM --> HMM
+    HMM: Hidden Markov Model
+
+    ML --> RL:::ahsState
+    RL: Reinforcement Learning
+    RL --> DM
+    DM: Decision Making
+{{< /mermaid >}}
+
 
 ## Supervised Learning
 - Trained using **labelled data**.  

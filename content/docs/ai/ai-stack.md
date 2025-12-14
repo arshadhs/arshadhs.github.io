@@ -1,44 +1,115 @@
 ---
-title: 'AI Stack'
+title: "AI Stack"
 draft: false
 tags: ["AI"]
 categories: ["AI"]
-weight: 11
+weight: 200
 menu: main
 ---
+
 # AI Stack
 
-Provides a structure for building AI solutions by layering components to support end-to-end AI lifecycle.
+The **AI Stack** describes the **layers required to build an end-to-end AI system**, from infrastructure at the bottom to user-facing applications at the top.
 
-{{% steps %}}
-1. ## Application
-   - Interfaces
-		- Text
-		- Images
-		- Audio
-		- Numerical
-   - Integrations
-		- Inputs
-		- Outputs
-2. ## Orchestration
-   - Think + Execute + Review
-3. ## Data
-   - Data Sources
-   - Pipelines
-   - Vector DBS ...
-4. ## Model
-   - Open Source or Proprietary
-   - Size - Large (LLM) and Small
-   - Specialisation
-5. ## Infrastructure
-   - On Premise
-   - Cloud
-   - Local
-{{% /steps %}}
-
+Each layer depends on the one below it.
 
 ---
-{{< home-link "Home" >}} | {{< section-index >}}  
 
+## 1. Infrastructure
+The foundation that provides **compute and storage**.
 
-	
+- Cloud (AWS, Azure, GCP)
+- On-premise servers
+- Local machines (laptops, edge devices)
+- CPUs, GPUs, TPUs
+- Networking and storage
+
+> Without infrastructure, AI cannot run or scale.
+
+---
+
+## 2. Models
+The **intelligence layer** of the system.
+
+- Open-source or proprietary models
+- Small models or large models (LLMs)
+- General-purpose or specialised models
+- Examples:
+  - Classical ML models
+  - Neural Networks
+  - Deep Learning models
+  - Foundation Models
+  - LLMs
+
+> Models transform data into predictions or generated content.
+
+---
+
+## 3. Data
+The **fuel** for AI systems.
+
+- Data sources (databases, APIs, files, sensors)
+- Data pipelines (ingestion, cleaning, transformation)
+- Structured and unstructured data
+- Vector databases for embeddings
+
+> Better data usually matters more than bigger models.
+
+---
+
+## 4. Orchestration
+The **control layer** that manages AI behaviour.
+
+- Decides **when** and **how** models are used
+- Combines:
+  - Thinking
+  - Execution
+  - Review and feedback
+- Handles workflows, retries, and tool usage
+
+> This is where modern AI systems become *intelligent systems*, not just models.
+
+---
+
+## 5. Applications
+The **user-facing layer**.
+
+- Interfaces:
+  - Text
+  - Images
+  - Audio
+  - Numerical data
+- Integrations:
+  - Inputs (users, systems)
+  - Outputs (dashboards, APIs, actions)
+
+> This is the only layer users usually see.
+
+---
+
+## One-Line Summary
+- **Infrastructure** runs everything  
+- **Models** provide intelligence  
+- **Data** feeds the models  
+- **Orchestration** coordinates behaviour  
+- **Applications** deliver value to users  
+
+---
+
+{{< mermaid >}}
+flowchart TB
+    INFRA[Infrastructure]
+    MODEL[Models]
+    DATA[Data]
+    ORCH[Orchestration]
+    APP[Applications]
+
+    INFRA --> MODEL
+    MODEL --> DATA
+    DATA --> ORCH
+    ORCH --> APP
+{{< /mermaid >}}
+
+---
+
+{{< home-link "Home" >}} | {{< section-index >}}

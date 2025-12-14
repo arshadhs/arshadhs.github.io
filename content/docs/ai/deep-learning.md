@@ -1,10 +1,10 @@
-+++
-title = 'Deep Learning'
-date = 2025-08-06T12:00:00+01:00
-draft = false
-tags = ['deep learning', 'neural networks', 'ai']
-categories = ['artificial intelligence']
-+++
+---
+title: 'Deep Learning'
+draft: false
+tags: ['deep learning', 'neural networks', 'ai']
+categories: ['artificial intelligence']
+weight: 415
+---
 
 ## Deep Learning
 
@@ -12,6 +12,8 @@ categories = ['artificial intelligence']
 - focuses on algorithms inspired by the structure and function of the brain called **Artificial Neural Networks**.
 - A [neural network](/docs/ai/neural-network/) with multiple hidden layers and multiple nodes in each hidden layer is known as a deep learning system or a deep neural network. 
 - Allows systems to **automatically learn hierarchical representations** (features) from raw input, such as images, sound, or text.
+
+![Deep Learning](/images/ai/deep_learning.png)
 
 ### Applications
 

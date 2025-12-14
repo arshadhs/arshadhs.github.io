@@ -5,7 +5,7 @@ date: 2024-07-04T10:55:52+01:00
 draft: false
 tags: ["AI"]
 categories: ["AI"]
-weight: 12
+weight: 300
 menu: main
 ---
 # AI Pipeline
