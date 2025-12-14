@@ -49,8 +49,6 @@ These terms describe increasing levels of AI capability:
 
 ---
 
-```mermaid
-
 {{<mermaid>}}
 flowchart LR
     ANI["ANI - Artificial Narrow Intelligence"]
@@ -64,5 +62,6 @@ flowchart LR
     ASI --> ASI_EX["Implications:\nBeyond human intelligence\nHigh societal impact\nRequires safety controls"
 
 {{<\mermaid>}}
+
 ---
 {{< home-link "Home" >}} | {{< section-index >}}  
