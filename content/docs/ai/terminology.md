@@ -23,8 +23,6 @@ stateDiagram-v2
 	AGI: AGI - Artificial General Intelligence
 	State1 --> ASI
 	ASI: ASI - Artificial Super Intelligence
-
-
 {{</mermaid>}}
 
 ## **Artificial Narrow Intelligence** 
@@ -52,6 +50,8 @@ These terms describe increasing levels of AI capability:
 ---
 
 ```mermaid
+
+{{<mermaid>}}
 flowchart LR
     ANI["ANI - Artificial Narrow Intelligence"]
     AGI["AGI - Artificial General Intelligence"]
@@ -63,5 +63,6 @@ flowchart LR
     AGI --> AGI_EX["Traits:\nGeneral reasoning\nLearning across tasks\nAdaptability"]
     ASI --> ASI_EX["Implications:\nBeyond human intelligence\nHigh societal impact\nRequires safety controls"
 
+{{<\mermaid>}}
 ---
 {{< home-link "Home" >}} | {{< section-index >}}  
