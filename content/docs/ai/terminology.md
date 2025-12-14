@@ -1,6 +1,4 @@
 ---
-
----
 title: "AI Stages: ANI, AGI, ASI"
 featured_image: '/images/zebrato.jpeg'
 date: 2024-07-04T10:55:52+01:00
@@ -53,15 +51,17 @@ These terms describe increasing levels of AI capability:
 
 ---
 
-## Mermaid Diagram
-
 ```mermaid
 flowchart LR
-  A["ANI<br/>Artificial Narrow Intelligence<br/><small>Task-specific intelligence</small>"] --> B["AGI<br/>Artificial General Intelligence<br/><small>Human-level general intelligence</small>"] --> C["ASI<br/>Artificial Superintelligence<br/><small>Beyond human intelligence</small>"]
+    ANI["ANI - Artificial Narrow Intelligence"]
+    AGI["AGI - Artificial General Intelligence"]
+    ASI["ASI - Artificial Superintelligence"]
 
-  A --- A1["Examples:<br/>• Face recognition<br/>• Recommendations<br/>• Translation<br/>• Fraud detection"]
-  B --- B1["Expected traits:<br/>• Transfers learning across domains<br/>• Reasoning + planning<br/>• Broad adaptability"]
-  C --- C1["Implications:<br/>• Rapid problem-solving<br/>• High impact on society<br/>• Requires strong safety controls"]
+    ANI --> AGI --> ASI
+
+    ANI --> ANI_EX["Examples:\nFace recognition\nSpam filtering\nRecommendation systems"]
+    AGI --> AGI_EX["Traits:\nGeneral reasoning\nLearning across tasks\nAdaptability"]
+    ASI --> ASI_EX["Implications:\nBeyond human intelligence\nHigh societal impact\nRequires safety controls"
 
 ---
 {{< home-link "Home" >}} | {{< section-index >}}  
