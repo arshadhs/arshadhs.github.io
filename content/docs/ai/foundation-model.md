@@ -23,6 +23,104 @@ AI models trained on massive datasets to perform a wide range of tasks with mini
 - uses **transfer learning**, allowing knowledge learned from one task to be reused for others.  
 - can be adapted using **fine-tuning** or **prompting**.  
 
+Foundation models are **trained once on diverse data** and adapted many times to solve different tasks.
+
+---
+
+{{< mermaid >}}
+flowchart LR
+
+    %% -------------------
+    %% Data Sources
+    %% -------------------
+    subgraph DATA_GROUP["Data"]
+        TEXT[Textual Data]
+        STRUCT[Structured Data]
+        SPEECH[Speech]
+        SIGNALS[3D Signals]
+        IMAGES[Images]
+    end
+
+    %% -------------------
+    %% Foundation Model
+    %% -------------------
+    subgraph FM_GROUP["Foundation Model"]
+        FM[Pre-trained Model]
+    end
+
+    %% -------------------
+    %% Adaptation Layer
+    %% -------------------
+    subgraph ADAPT_GROUP["Adaptation"]
+        FT[Fine-tuning]
+        PROMPT[Prompting]
+        RAG[RAG]
+    end
+
+    %% -------------------
+    %% Tasks
+    %% -------------------
+    subgraph TASKS_GROUP["Tasks"]
+        IE[Information Extraction]
+        OR[Object Recognition]
+        IF[Instruction Following]
+        IC[Image Captioning]
+        SA[Sentiment Analysis]
+        QA[Question Answering]
+    end
+
+    %% -------------------
+    %% Connections
+    %% -------------------
+    TEXT -->|Training| FM
+    STRUCT -->|Training| FM
+    SPEECH -->|Training| FM
+    SIGNALS -->|Training| FM
+    IMAGES -->|Training| FM
+
+    FM -->|Adaptation| FT
+    FM -->|Adaptation| PROMPT
+    FM -->|Adaptation| RAG
+
+    FT --> IE
+    FT --> SA
+
+    PROMPT --> IF
+    PROMPT --> QA
+
+    RAG --> IE
+    RAG --> QA
+    RAG --> IC
+
+    %% -------------------
+    %% Styling
+    %% -------------------
+    style TEXT fill:#C8E6C9
+    style STRUCT fill:#C8E6C9
+    style SPEECH fill:#C8E6C9
+    style SIGNALS fill:#C8E6C9
+    style IMAGES fill:#C8E6C9
+
+    style FM fill:#90CAF9
+
+    style FT fill:#BBDEFB
+    style PROMPT fill:#BBDEFB
+    style RAG fill:#BBDEFB
+
+    style IE fill:#FFCCBC
+    style OR fill:#FFCCBC
+    style IF fill:#FFCCBC
+    style IC fill:#FFCCBC
+    style SA fill:#FFCCBC
+    style QA fill:#FFCCBC
+
+    style DATA_GROUP stroke:none,fill:transparent
+    style FM_GROUP stroke:none,fill:transparent
+    style ADAPT_GROUP stroke:none,fill:transparent
+    style TASKS_GROUP stroke:none,fill:transparent
+{{< /mermaid >}}
+
+
 ---
 
 ## Traditional ML vs Foundation Models
