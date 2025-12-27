@@ -62,6 +62,20 @@ A list of simple Arabic phrases to help break into a conversation with an Arabic
 
 ---
 
+## Duʿāʾ or Expressions in Conversation
+
+{{% details title="Dua" %}}
+
+- **يَسَّرَ اللهُ أَمْرَكَ.**  
+  _May Allah make your matter easy._
+
+- **أَعْطَاكَ اللهُ خَيْرَ مَا يَخْتَارُ لَكَ.**  
+  _May Allah grant you what is best for you._
+
+{{% /details %}}
+
+---
+
 ## Starting or Joining a Conversation
 
 - **هَلْ تَسْمَحُ لِي بِمُحَادَثَتِكَ؟**  
