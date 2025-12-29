@@ -15,6 +15,45 @@ Different organisations represent the AI stack differently; this is a simplified
 Each layer depends on the one below it.
 
 ---
+{{< mermaid >}}
+graph TB
+
+    subgraph APP["Applications"]
+        A[User Interfaces & Integrations]
+    end
+
+    subgraph ORCH["Orchestration"]
+        O[Workflows • Agents • Control Logic]
+    end
+
+    subgraph DATA["Data"]
+        D[Data Sources • Pipelines • Vector DBs]
+    end
+
+    subgraph MODEL["Models"]
+        M[ML • DL • Foundation Models • LLMs]
+    end
+
+    subgraph INFRA["Infrastructure"]
+        I[Cloud • On-prem • GPUs • Storage]
+    end
+
+    %% Styling
+    style APP fill:#FFCCBC
+    style ORCH fill:#90CAF9
+    style DATA fill:#BBDEFB
+    style MODEL fill:#C8E6C9
+    style INFRA fill:#E1F5FE
+
+    style A fill:#FFE0B2
+    style O fill:#B3E5FC
+    style D fill:#E3F2FD
+    style M fill:#DCEDC8
+    style I fill:#E1F5FE
+{{< /mermaid >}}
+
+
+---
 
 ## 1. Infrastructure
 The foundation that provides **compute and storage**.

@@ -1,7 +1,7 @@
 ---
 title: "Vocabulary - Similar Words"
 date: 2025-12-06T10:00:00+00:00
-weight: 102
+weight: 110
 tags: ["Arabic", "Grammar", "words"]
 ---
 # Similar Arabic Words – Meanings and Nuances
