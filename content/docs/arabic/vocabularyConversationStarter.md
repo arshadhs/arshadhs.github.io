@@ -200,6 +200,7 @@ A collection of useful Arabic phrases to help with conversation, daily interacti
 | Water, please | مَاء مِنْ فَضْلِكَ |
 | The bill, please | الحِسَاب مِنْ فَضْلِكَ |
 | I don’t want spicy food | لَا أُرِيدُ طَعَامًا حَارًّا |
+| Enjoy your food | بِالْهَنَاء وَالشِّفَاء |
 
 ---
 

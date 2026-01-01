@@ -34,6 +34,13 @@ flowchart LR
 
 ---
 
+- Mathematical Foundations for Machine Learning
+- Introduction to Statistical Methods
+- Deep Neural Networks
+- Machine Learning
+
+---
+
 {{< section-list >}}
 
 - Machine Learning → The broad field where systems learn patterns from data to make predictions or decisions.

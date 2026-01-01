@@ -59,5 +59,9 @@ hugo new site . --force
 
 and set-up the workflow again
 
+# Mermaid
+
+See [shortcodes/mermaid/](https://hugo-book-demo.netlify.app/docs/shortcodes/mermaid/) 
+
 ---
 {{< home-link "Home" >}} | {{< section-index >}}

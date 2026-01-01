@@ -4,7 +4,7 @@ date: 2025-12-15T10:55:52+01:00
 draft: false
 tags: ["AI", "ANI", "AGI", "ASI"]
 categories: ["AI", "ML"]
-weight: 700
+weight: 1100
 menu: main
 ---
 # Transformer
