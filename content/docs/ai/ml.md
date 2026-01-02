@@ -11,47 +11,132 @@ weight: 400
 
 {{< mermaid >}}
 stateDiagram-v2
-    classDef ahsState font-style:italic,font-weight:bold,fill:lightblue
 
+    %% ===== CLASS DEFINITIONS (Math-based colours) =====
+    classDef algebra fill:#cfe8ff,stroke:#1e3a8a,stroke-width:1px
+    classDef probability fill:#d1fae5,stroke:#065f46,stroke-width:1px
+    classDef geometry fill:#ffedd5,stroke:#9a3412,stroke-width:1px
+    classDef logic fill:#ede9fe,stroke:#5b21b6,stroke-width:1px
+    classDef category font-style:italic,font-weight:bold,fill:#f3f4f6,stroke:#374151
+
+    %% ===== ROOT =====
     ML: Machine Learning
 
-    ML --> SL:::ahsState
+    %% ===== SUPERVISED =====
+    ML --> SL:::category
     SL: Supervised Learning
 
     SL --> Classification
-    Classification --> NB
+    Classification --> NB:::probability
     NB: Naive Bayes
-    NB --> KNN
+
+    NB --> KNN:::geometry
     KNN: k-Nearest Neighbours
-    KNN --> SVM
+
+    KNN --> SVM:::algebra
     SVM: Support Vector Machine
 
     SL --> Regression
-    Regression --> LR
+    Regression --> LR:::algebra
     LR: Linear Regression
-    LR --> NN
+
+    LR --> NN:::algebra
     NN: Neural Network
-    NN --> DT
+
+    NN --> DT:::logic
     DT: Decision Tree
 
-    ML --> USL:::ahsState
+    %% ===== UNSUPERVISED =====
+    ML --> USL:::category
     USL: Unsupervised Learning
 
     USL --> Clustering
-    Clustering --> KM
+    Clustering --> KM:::geometry
     KM: K-Means
-    KM --> GMM
+
+    KM --> GMM:::probability
     GMM: Gaussian Mixture Model
-    GMM --> HMM
+
+    GMM --> HMM:::probability
     HMM: Hidden Markov Model
 
-    ML --> RL:::ahsState
+    %% ===== REINFORCEMENT =====
+    ML --> RL:::category
     RL: Reinforcement Learning
-    RL --> DM
+
+    RL --> DM:::logic
     DM: Decision Making
 {{< /mermaid >}}
 
+---
 
+{{% details title="Mathematical Legend" open=false %}}
+
+### Algebra / Linear Algebra (Blue)
+
+Used heavily when models rely on:
+
+- Equations  
+- Vectors  
+- Hyperplanes  
+- Weights  
+
+**Examples:**
+
+- Linear Regression  
+- Neural Networks  
+- Support Vector Machines (SVM)  
+
+---
+
+### Probability & Statistics (Green)
+
+Used when models are based on:
+
+- Likelihood  
+- Distributions  
+- Randomness  
+- Bayesian thinking  
+
+**Examples:**
+
+- Naive Bayes  
+- Gaussian Mixture Models (GMM)  
+- Hidden Markov Models (HMM)  
+
+---
+
+### Geometry / Distance (Orange)
+
+Used when models depend on:
+
+- Distance  
+- Similarity  
+- Clustering in space  
+
+**Examples:**
+
+- k-Nearest Neighbours (k-NN)  
+- K-Means  
+
+---
+
+### Logic / Decision / Optimisation (Purple)
+
+Used when models are based on:
+
+- Rules  
+- Decisions  
+- Reward and punishment  
+- Tree structures  
+
+**Examples:**
+
+- Decision Trees  
+- Reinforcement Learning  
+{{% /details %}}
+
+---
 ## Supervised Learning
 - Trained using **labelled data**.  
 - Each example in the training set includes the **correct output**.  

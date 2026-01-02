@@ -12,6 +12,9 @@ bookCollapseSection: true
 # My AI Notes
 
 Learning how machines learn! My working notes as I learn AI.
+
+---
+
 {{< mermaid >}}
 flowchart LR
     AI[Artificial Intelligence]

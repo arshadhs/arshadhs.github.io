@@ -1,7 +1,7 @@
 ---
 title: "Mathematical Foundation"
 draft: false
-tags: ["Machine Learning", "Mathematics", "Linear Algebra", "Calculus"]
+tags: ["Machine Learning", "Mathematics", "Linear Algebra", "Probability", "Statistics", "Calculus"]
 categories: ["AI", "ML"]
 weight: 1100
 menu: main
@@ -11,7 +11,38 @@ menu: main
 
 Machine Learning is built on **mathematical principles** that allow models to represent data, learn patterns, and optimise performance.
 
-ML needs **core mathematical tools** required to understand how ML algorithms work internally.
+ML requires **core mathematical tools** to understand how ML algorithms work internally.
+
+---
+
+## Core Mathematical Pillars in Machine Learning
+
+The following **five mathematical areas** form the foundation of Machine Learning.
+
+{{< mermaid >}}
+flowchart TB
+    ML[Maths for Machine Learning]
+
+    LA[Linear Algebra]
+    PR[Probability]
+    ST[Statistics]
+    CA[Calculus]
+    GR[Graphs]
+
+    ML --> LA
+    ML --> PR
+    ML --> ST
+    ML --> CA
+    ML --> GR
+
+    %% Colours (your pastel scheme)
+    style ML fill:#E1F5FE,stroke:#333
+    style LA fill:#C8E6C9,stroke:#333
+    style PR fill:#BBDEFB,stroke:#333
+    style ST fill:#90CAF9,stroke:#333
+    style CA fill:#64B5F6,stroke:#333
+    style GR fill:#FFCCBC,stroke:#333
+{{< /mermaid >}}
 
 ---
 
@@ -19,7 +50,7 @@ ML needs **core mathematical tools** required to understand how ML algorithms wo
 
 - Machine learning models are **mathematical functions**
 - Training a model means **optimising equations**
-- Understanding maths helps:
+- Understanding maths helps to:
   - Debug models
   - Improve performance
   - Choose the right algorithms
@@ -28,10 +59,46 @@ ML needs **core mathematical tools** required to understand how ML algorithms wo
 
 ## Key Mathematical Areas
 
+{{< mermaid >}}
+mindmap
+  Mathematics for Machine Learning
+    Linear Algebra
+      Vectors
+      Matrices
+      Eigenvalues
+      Matrix Multiplication
+
+    Probability
+      Random Variables
+      Probability Distributions
+      Conditional Probability
+      Bayes Theorem
+
+    Statistics
+      Mean
+      Variance
+      Sampling
+      Hypothesis Testing
+
+    Calculus
+      Derivatives
+      Gradients
+      Chain Rule
+      Optimisation
+
+    Graphs
+      Line Plots
+      Loss Curves
+      Decision Boundaries
+      Data Visualisation
+{{< /mermaid >}}
+
+---
+
 ### 1. Linear Algebra
 Used to represent and manipulate data.
 
-- Vectors and matrices
+- Scalars, vectors, and matrices
 - Matrix multiplication
 - Eigenvalues and eigenvectors
 - Vector spaces and projections
@@ -43,22 +110,7 @@ Used to represent and manipulate data.
 
 ---
 
-### 2. Calculus
-Used to **optimise models** during training.
-
-- Derivatives and gradients
-- Partial derivatives
-- Chain rule
-- Gradient descent
-
-**Used in:**
-- Backpropagation
-- Loss minimisation
-- Model training
-
----
-
-### 3. Probability Theory
+### 2. Probability Theory
 Used to model **uncertainty**.
 
 - Random variables
@@ -73,17 +125,69 @@ Used to model **uncertainty**.
 
 ---
 
-### 4. Optimisation
-Used to find **best model parameters**.
+### 3. Statistics
+Statistics enables **estimation, inference, and model evaluation** from data samples.
 
-- Cost functions
-- Convex vs non-convex optimisation
-- Local vs global minima
-- Regularisation techniques
+**Key Topics**
+- Mean, variance, and standard deviation
+- Sampling and estimation
+- Hypothesis testing
+- Bias–variance trade-off
 
 **Used in:**
+- Model evaluation
+- Error analysis
+- Experimental validation
+
+---
+
+### 4. Calculus
+Used to **optimise models** during training.
+
+- Derivatives and gradients
+- Partial derivatives
+- Chain rule
+- Gradient descent
+
+**Used in:**
+- Backpropagation
+- Loss minimisation
+- Model training
+
+---
+
+### 5. Graphs
+Graphs are used to **visualise data and learning behaviour**.
+
+**Key Topics**
+- Line plots and scatter plots
+- Loss curves
+- Decision boundaries
+- Convergence plots
+
+**Used in:**
+- Analysing training behaviour
+- Debugging models
+- Explaining results
+
+---
+
+## Optimisation (Cross-Cutting Concept)
+
+Optimisation is the **process of finding the best model parameters** by minimising or maximising an objective function.
+
+> Optimisation is **not an independent mathematical pillar**, but a mechanism that relies on multiple mathematical areas.
+
+**Depends on:**
+- **Calculus** → gradient computation  
+- **Linear Algebra** → parameter updates  
+- **Probability & Statistics** → loss functions  
+- **Graphs** → convergence analysis  
+
+**Used in:**
+- Gradient descent and its variants
 - Training deep neural networks
-- Preventing overfitting
+- Regularisation and generalisation
 
 ---
 
