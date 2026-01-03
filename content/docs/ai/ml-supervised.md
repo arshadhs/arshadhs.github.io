@@ -19,23 +19,18 @@ Widely used due to its **accuracy and efficiency**.
 Produces **highly accurate results** when trained on good-quality labelled data.  
 
 ---
-
 {{< mermaid >}}
-flowchart TB
-
-  SL[Supervised Learning]
-
-  SL --> CL[Classification]
-  SL --> RG[Regression]
-
-  CL --> BIN[Binary Classification]
-  CL --> MULC[Multi-Class Classification]
-  CL --> MULL[Multi-Label Classification]
-
-  RG --> LREG[Linear Regression]
-  RG --> MLREG[Multiple Linear Regression]
-  RG --> PREG[Polynomial Regression]
-  RG --> LOGREG[Logistic Regression]
+mindmap
+  root(Supervised Learning)
+      Regression
+        Linear Regression
+        Multiple Linear Regression
+        Polynomial Regression
+        Logistic Regression
+      Classification
+        Binary Classification
+        Multi Class Classification
+        Multi Label Classification
 {{< /mermaid >}}
 
 ---

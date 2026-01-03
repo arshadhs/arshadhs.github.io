@@ -17,6 +17,47 @@ weight: 402
 
 ---
 
+{{< mermaid >}}
+stateDiagram-v2
+
+  %% ML maths-based colours (same palette as supervised)
+  classDef probability fill:#d1fae5,stroke:#065f46,stroke-width:1px
+  classDef geometry fill:#ffedd5,stroke:#9a3412,stroke-width:1px
+  classDef category font-style:italic,font-weight:bold,fill:#f3f4f6,stroke:#374151
+
+  %% Root
+  USL: Unsupervised Learning
+
+  %% Main branches
+  USL --> CLU:::category
+  CLU: Clustering
+
+  USL --> DR:::category
+  DR: Dimensionality Reduction
+
+  %% Clustering algorithms
+  CLU --> KM:::geometry
+  KM: K-Means
+
+  CLU --> HC:::geometry
+  HC: Hierarchical Clustering
+
+  CLU --> DB:::geometry
+  DB: DBSCAN
+
+  %% Probabilistic models
+  USL --> PM:::category
+  PM: Probabilistic Models
+
+  PM --> GMM:::probability
+  GMM: Gaussian Mixture Model
+
+  PM --> HMM:::probability
+  HMM: Hidden Markov Model
+{{< /mermaid >}}
+
+---
+
 ## Clustering
 - Groups **similar data points** together based on shared features.  
 - Commonly used for **market segmentation**, **image compression**, and **anomaly detection**.  
@@ -47,6 +88,24 @@ weight: 402
 - **Linear Discriminant Analysis (LDA)** – Focuses on class separation.  
 - **t-SNE (t-Distributed Stochastic Neighbour Embedding)** – Used for visualising high-dimensional data.  
 - **Autoencoders** – Neural networks that compress and reconstruct data.  
+
+---
+
+{{< mermaid >}}
+mindmap
+  root(Unsupervised Learning)
+    Clustering
+      K Means
+      Hierarchical Clustering
+      DBSCAN
+    Dimensionality Reduction
+      PCA
+      t SNE
+      Autoencoders
+    Probabilistic Models
+      Gaussian Mixture Model
+      Hidden Markov Model
+{{< /mermaid >}}
 
 ---
 
