@@ -76,14 +76,60 @@ Fetch, pull, and push changes between local and remote.
 
 ---
 
-## History Manipulation
+## 🧠 History & Branch Integration
 
-> git reset <commit>  
-> git reset --hard <commit>  
 > git merge branch-name  
+
+Merge the specified branch **into the current branch**.  
+- Preserves full branch history  
+- Creates a merge commit (unless fast-forward)  
+- Safe for shared branches  
+
+Use when you want to **keep context of parallel work**.
+
+---
+
 > git rebase branch-name  
 
-Move HEAD, discard changes, merge branches, or rebase commits.
+Reapply current branch commits **on top of another branch**.  
+- Creates a linear history  
+- Rewrites commit hashes  
+- Do **not** rebase shared branches  
+
+Use when you want a **clean commit history**.
+
+---
+
+## ♻️ Reset (Undo Commits)
+
+> git reset --soft <commit>  
+
+Move HEAD to `<commit>`.  
+- Keeps changes **staged**  
+- Keeps file changes  
+
+Use to redo commit messages or squash commits.
+
+---
+
+> git reset <commit>  
+
+(Default = `--mixed`)  
+- Moves HEAD to `<commit>`  
+- Unstages files  
+- Keeps file changes  
+
+Use to undo commits but keep work.
+
+---
+
+> git reset --hard <commit>  
+
+- Moves HEAD to `<commit>`  
+- Deletes all local changes  
+- Working directory matches the commit  
+
+⚠️ **Dangerous** — changes are permanently lost.
 
 ---
 
@@ -92,6 +138,7 @@ Move HEAD, discard changes, merge branches, or rebase commits.
 > git restore file.txt  
 
 Restore file contents without switching branches.
+
 ---
 
 ## Switch and Restore
