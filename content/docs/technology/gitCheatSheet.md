@@ -6,29 +6,92 @@ tags = ["GIT"]
 categories = ["tutorials", "git"]
 +++
 
-### Cheat Sheet
-
-> git user   
-> git email   
-
-> git init   
-> git status   
-
-> git log   
-
-> git checkout   
-> git branch   
-> git checkout master   
+## Git Cheat Sheet
 
 ---
 
-> git init -b main   
-*git add all*   
-> git add .   
-> git commit -m "..."   
-> git remote add origin <url>  
-> git push origin main -f   
+## 🔧 Configuration (One-time setup)
 
+> git config user.name "Your Name"  
+> git config user.email "you@example.com"  
+
+Set username and email for commits.
+
+---
+
+## 📁 Repository Setup
+
+> git init  
+> git init -b main  
+> git remote add origin <url>  
+
+Initialise a repository and connect it to a remote.
+
+---
+
+## 🔍 Status & Inspection
+
+> git status  
+> git log  
+> git show <commit>  
+> git diff  
+
+Check repository state, history, commit details, and differences.
+
+---
+
+## 🌿 Branching & Navigation
+
+> git branch  
+> git checkout branch-name  
+> git checkout -b new-branch  
+> git switch branch-name  
+> git switch -c new-branch  
+
+Create, list, and switch branches.  
+(`git switch` is the modern alternative to `checkout`.)
+
+---
+
+## 📦 Staging & Committing
+
+> git add .  
+> git commit -m "message"  
+> git rm file.txt  
+
+Stage changes, commit them, or remove tracked files.
+
+---
+
+## 🔄 Sync with Remote
+
+> git fetch  
+> git pull origin branch-name  
+> git push  
+> git push --set-upstream origin branch-name  
+> git push origin main -f  
+
+Fetch, pull, and push changes between local and remote.  
+⚠️ Force push (`-f`) overwrites remote history.
+
+---
+
+## History Manipulation
+
+> git reset <commit>  
+> git reset --hard <commit>  
+> git merge branch-name  
+> git rebase branch-name  
+
+Move HEAD, discard changes, merge branches, or rebase commits.
+
+---
+
+## 🔁 Restore Files (Modern Way)
+
+> git restore file.txt  
+
+Restore file contents without switching branches.
 ---
 
 ## Switch and Restore
@@ -52,11 +115,14 @@ categories = ["tutorials", "git"]
 
 ---
 
-## Hugo Command
-> hugo server
+
+## 🛠 Hugo
+
+> hugo server  
+
+Run Hugo local development server.
 
 Test the run from workflow on [GitHub Actions](https://github.com/arshadhs/arshadhs.github.io/actions)
-
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}
