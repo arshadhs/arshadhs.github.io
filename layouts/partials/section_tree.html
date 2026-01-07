@@ -1,0 +1,21 @@
+{{/* Renders a section and all descendants (sections + pages) */}}
+
+{{ $section := . }}
+
+<ul>
+  {{ range $section.Sections.ByWeight }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+
+      {{ if or (.Pages) (.Sections) }}
+        {{ partial "section_tree.html" . }}
+      {{ end }}
+    </li>
+  {{ end }}
+
+  {{ range $section.Pages.ByWeight }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
+  {{ end }}
+</ul>
