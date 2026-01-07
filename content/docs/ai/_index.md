@@ -43,10 +43,8 @@ flowchart LR
 - Machine Learning
 
 ---
-{{< section_tree >}}
----
 
-{{< section_menu >}}
+{{< section_tree >}}
 
 ---
 
@@ -137,6 +135,7 @@ flowchart TD
 
 ---
 {{< home-link "Home" >}}
+
 
 
 
