@@ -1,0 +1,22 @@
+{{/* Lists direct child sections of the current section, then lists pages inside each child section */}}
+
+{{ $sections := .Page.Sections.ByWeight }}
+
+<ul>
+  {{ range $sections }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+
+      {{ $pages := .Pages.ByWeight }}
+      {{ if $pages }}
+        <ul>
+          {{ range $pages }}
+            <li>
+              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </li>
+          {{ end }}
+        </ul>
+      {{ end }}
+    </li>
+  {{ end }}
+</ul>
