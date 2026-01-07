@@ -44,11 +44,9 @@ flowchart LR
 
 ---
 
-{{< section-list >}}
+{{< section_menu >}}
 
 ---
-
-{{< section-index >}}
 
 - Machine Learning → The broad field where systems learn patterns from data to make predictions or decisions.
 - Neural Networks → A subset of machine learning that uses interconnected artificial neurons to model complex relationships.
@@ -137,5 +135,6 @@ flowchart TD
 
 ---
 {{< home-link "Home" >}}
+
 
 
