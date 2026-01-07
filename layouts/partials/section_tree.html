@@ -1,21 +1,29 @@
-{{/* Renders a section and all descendants (sections + pages) */}}
+{{/* 
+  Renders current section:
+  1) regular pages first (sorted by weight)
+  2) then child sections (sorted by weight), each with its own subtree
+*/}}
 
 {{ $section := . }}
 
 <ul>
+  {{/* 1) Regular pages FIRST */}}
+  {{ range $section.Pages.ByWeight }}
+    {{/* Avoid listing section _index pages as normal pages (safety) */}}
+    {{ if not .IsSection }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </li>
+    {{ end }}
+  {{ end }}
+
+  {{/* 2) Child sections AFTER pages */}}
   {{ range $section.Sections.ByWeight }}
     <li>
       <a href="{{ .RelPermalink }}">{{ .Title }}</a>
 
-      {{ if or (.Pages) (.Sections) }}
-        {{ partial "section_tree.html" . }}
-      {{ end }}
-    </li>
-  {{ end }}
-
-  {{ range $section.Pages.ByWeight }}
-    <li>
-      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      {{/* Render that section's pages/subsections */}}
+      {{ partial "section_tree.html" . }}
     </li>
   {{ end }}
 </ul>
