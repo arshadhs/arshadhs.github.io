@@ -140,9 +140,6 @@ For non-singular square matrices:
 
 ### Fundamental Linear Algebra Results
 
-**Linear Transformations**  
-Every \( m \times n \) matrix represents a linear map between vector spaces.
-
 **Rank–Nullity Theorem**  
 {{< katex display=true >}}
 \text{rank}(A) + \text{nullity}(A) = n
@@ -157,8 +154,54 @@ They describe the principal directions of a transformation.
 
 ---
 
-__The following concepts connect linear algebra directly to how data is represented in machine learning.__
+## Linear Transformations
 
+Linear transformations describe how vectors are **systematically mapped** from one space to another.
+
+They form the conceptual bridge between **matrices**, **geometry**, and **machine learning models**.
+
+### Definition
+A function \( T : \mathbb{R}^n \rightarrow \mathbb{R}^m \) is a **linear transformation** if:
+
+{{< katex display=true >}}
+T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v})
+{{< /katex >}}
+
+{{< katex display=true >}}
+T(c\mathbf{u}) = cT(\mathbf{u})
+{{< /katex >}}
+
+### Geometric Intuition
+A linear transformation:
+- Preserves straight lines  
+- Preserves the origin  
+- Preserves parallelism  
+
+It can rotate, scale, reflect, or project space — but **never bend it**.
+
+### Matrices as Linear Transformations
+Every matrix defines a linear transformation.
+
+{{< katex display=true >}}
+T(\mathbf{x}) = A\mathbf{x}
+{{< /katex >}}
+
+This means:
+> **Matrices are concrete representations of linear transformations.**
+
+### Composition
+Applying transformations in sequence corresponds to matrix multiplication.
+
+{{< katex display=true >}}
+T_2(T_1(\mathbf{x})) = BA\mathbf{x}
+{{< /katex >}}
+
+This explains why **matrix multiplication is not commutative**.
+
+---
+{{% hint [info] %}}
+The following concepts connect linear algebra directly to how data is represented in machine learning.
+{{% /hint %}}
 ## Feature
 
 ### Definition
@@ -345,14 +388,12 @@ c(d\mathbf{u}) = (cd)\mathbf{u}
 ## Summary
 
 - **Scalar** → a number  
-
 - **Vector** → a directed point  
-- **Vector space** → where vectors live  
-
 - **Matrix** → a space transformer  
-
+- **Linear transformation** → structured mapping  
 - **Feature** → one axis  
 - **Feature space** → where data lives  
+- **Vector space** → where vectors live  
 
 ---
 
