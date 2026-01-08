@@ -138,7 +138,7 @@ For non-singular square matrices:
 
 ---
 
-## Fundamental Linear Algebra Results
+### Fundamental Linear Algebra Results
 
 **Linear Transformations**  
 Every \( m \times n \) matrix represents a linear map between vector spaces.
