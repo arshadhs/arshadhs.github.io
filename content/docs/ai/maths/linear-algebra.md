@@ -92,8 +92,10 @@ a_{21} & a_{22}
 \end{bmatrix}
 {{< /katex >}}
 
+Matrices are rectangular arrays of numbers that generalise vectors (a vector is a "skinny" matrix with one row or column)
+
 ### Geometric Intuition
-A matrix represents a **transformation of space**.
+A matrix represents a **linear transformation of space**.
 
 When a matrix multiplies a vector, it can:
 - Rotate it  
@@ -105,6 +107,57 @@ When a matrix multiplies a vector, it can:
 Matrices act as **transformation operators** applied to data and parameters.
 
 ---
+
+## Matrix Properties
+
+### Operational Properties
+
+**Addition**  
+- Commutative {{< katex display=true >}}(A+B=B+A){{< /katex >}} and associative, but only for matrices of the same dimensions.
+
+**Multiplication**  
+{{< katex display=true >}}
+AB \ne BA \quad \text{(in general)}
+{{< /katex >}}
+
+The order of multiplication matters.
+
+**Transpose**  
+{{< katex display=true >}}
+(A^T)^T = A, \quad (AB)^T = B^T A^T
+{{< /katex >}}
+
+**Inverse**  
+For non-singular square matrices:
+{{< katex display=true >}}
+(AB)^{-1} = B^{-1} A^{-1}
+{{< /katex >}}
+
+**Determinant**  
+ Identifies if a matrix is invertible; similar matrices share the same determinant.
+
+---
+
+## Fundamental Linear Algebra Results
+
+**Linear Transformations**  
+Every \( m \times n \) matrix represents a linear map between vector spaces.
+
+**Rank–Nullity Theorem**  
+{{< katex display=true >}}
+\text{rank}(A) + \text{nullity}(A) = n
+{{< /katex >}}
+
+**Eigenvalues and Eigenvectors**  
+{{< katex display=true >}}
+A\mathbf{x} = \lambda \mathbf{x}
+{{< /katex >}}
+
+They describe the principal directions of a transformation.
+
+---
+
+__The following concepts connect linear algebra directly to how data is represented in machine learning.__
 
 ## Feature
 
@@ -185,9 +238,11 @@ Operations such as projection, rotation, and dimensionality reduction occur dire
 ## Vector Space
 
 ### Definition
-A **vector space** is a set of vectors that is closed under:
+A **vector space** is a set of vectors that follows **ten axioms**, defined under two operations:
 - Vector addition  
 - Scalar multiplication  
+
+These axioms ensure consistent linear behaviour.
 
 It also:
 - Contains a zero vector  
@@ -203,49 +258,6 @@ Examples:
 
 ### In Machine Learning
 Feature spaces and embedding spaces are vector spaces.
----
-
-## Conditions for a Vector Space (or Subspace)
-
-For a set of vectors to qualify as a vector space (or subspace), it must satisfy the following conditions.
-
-### 1. Contain the Zero Vector
-
-{{< katex display=true >}}
-\mathbf{0} =
-\begin{bmatrix}
-0 \\
-0 \\
-\vdots \\
-0
-\end{bmatrix}
-{{< /katex >}}
-
-The zero vector represents the **origin** and acts as the additive identity.
-
-{{< katex display=true >}}
-\mathbf{v} + \mathbf{0} = \mathbf{v}
-{{< /katex >}}
-
----
-
-### 2. Closed Under Addition
-
-{{< katex display=true >}}
-\mathbf{u}, \mathbf{v} \in V \Rightarrow \mathbf{u} + \mathbf{v} \in V
-{{< /katex >}}
-
-Adding two vectors must not take you outside the space.
-
----
-
-### 3. Closed Under Scalar Multiplication
-
-{{< katex display=true >}}
-\alpha \in \mathbb{R},\ \mathbf{v} \in V \Rightarrow \alpha \mathbf{v} \in V
-{{< /katex >}}
-
-Scaling a vector must keep it within the same space.
 
 ---
 
@@ -270,16 +282,77 @@ Examples:
 Subspaces capture **lower-dimensional structure** in data, such as the space spanned by principal components.
 
 ---
+## Axioms of a Vector Space
+
+### Properties of Vector Addition
+
+**Closure**  
+{{< katex display=true >}}
+\mathbf{u}, \mathbf{v} \in V \Rightarrow \mathbf{u} + \mathbf{v} \in V
+{{< /katex >}}
+
+**Commutativity**  
+{{< katex display=true >}}
+\mathbf{u} + \mathbf{v} = \mathbf{v} + \mathbf{u}
+{{< /katex >}}
+
+**Associativity**  
+{{< katex display=true >}}
+(\mathbf{u} + \mathbf{v}) + \mathbf{w} = \mathbf{u} + (\mathbf{v} + \mathbf{w})
+{{< /katex >}}
+
+**Additive Identity**  
+{{< katex display=true >}}
+\mathbf{u} + \mathbf{0} = \mathbf{u}
+{{< /katex >}}
+
+**Additive Inverse**  
+{{< katex display=true >}}
+\mathbf{u} + (-\mathbf{u}) = \mathbf{0}
+{{< /katex >}}
+
+---
+
+### Properties of Scalar Multiplication
+
+**Distributivity over Vector Addition**  
+{{< katex display=true >}}
+c(\mathbf{u} + \mathbf{v}) = c\mathbf{u} + c\mathbf{v}
+{{< /katex >}}
+
+**Distributivity over Scalar Addition**  
+{{< katex display=true >}}
+(c + d)\mathbf{u} = c\mathbf{u} + d\mathbf{u}
+{{< /katex >}}
+
+**Associativity of Scalars**  
+{{< katex display=true >}}
+c(d\mathbf{u}) = (cd)\mathbf{u}
+{{< /katex >}}
+
+**Multiplicative Identity**  
+{{< katex display=true >}}
+1\mathbf{u} = \mathbf{u}
+{{< /katex >}}
+
+**Zero Property**  
+{{< katex display=true >}}
+0\mathbf{u} = \mathbf{0}, \quad c\mathbf{0} = \mathbf{0}
+{{< /katex >}}
+
+---
 
 ## Summary
 
 - **Scalar** → a number  
+
 - **Vector** → a directed point  
+- **Vector space** → where vectors live  
+
 - **Matrix** → a space transformer  
+
 - **Feature** → one axis  
 - **Feature space** → where data lives  
-- **Vector space** → where vectors live  
-- **Subspace** → meaningful structure inside that space  
 
 ---
 
