@@ -329,10 +329,7 @@ Subspaces capture **lower-dimensional structure** in data, such as the space spa
 
 ### Properties of Vector Addition
 
-**Closure**  
-{{< katex display=true >}}
-\mathbf{u}, \mathbf{v} \in V \Rightarrow \mathbf{u} + \mathbf{v} \in V
-{{< /katex >}}
+**Closure**  {{< katex display=true >}}\mathbf{u}, \mathbf{v} \in V \Rightarrow \mathbf{u} + \mathbf{v} \in V{{< /katex >}}
 
 **Commutativity**  
 {{< katex display=true >}}
