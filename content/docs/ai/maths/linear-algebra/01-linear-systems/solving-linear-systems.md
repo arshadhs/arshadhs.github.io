@@ -1,10 +1,11 @@
 ---
-title: "Linear Algebra -II"
+title: "Solving Linear Systems"
 draft: false
-tags: ["Maths", "Linear Algebra", "Octave", "Machine Learning"]
-categories: ["AI", "ML", "Maths"]
-weight: 1140
+tags: ["Machine Learning", "Mathematics", "Linear Algebra"]
+categories: ["AI", "ML"]
+weight: 1150
 ---
+# Solving Linear Systems
 
 ## Positive Definite Matrices
 
@@ -40,6 +41,15 @@ Allowed operations:
 
 ---
 
+## REF and RREF
+- REF: pivots step right, zeros below
+- RREF: pivot = 1 and only non-zero entry in its column
+
+{{% hint success %}}
+RREF is unique.
+{{% /hint %}}
+
+
 ## Row Echelon Form (REF)
 
 A matrix is in REF if:
@@ -68,6 +78,17 @@ Rank is:
 - the number of non-zero rows in REF or RREF
 
 Rank is invariant under row operations.
+
+---
+
+## Rank test
+{{< katex display=true >}}
+\text{rank}(A) < \text{rank}([A|b]) \Rightarrow \text{no solution}
+{{< /katex >}}
+
+{{< katex display=true >}}
+\text{rank}(A) = \text{rank}([A|b]) \Rightarrow \text{solution exists}
+{{< /katex >}}
 
 ---
 

@@ -1,12 +1,10 @@
 ---
-title: "Linear Algebra -I"
+title: "Matrices"
 draft: false
-tags: ["Maths", "Linear Algebra", "Octave", "Machine Learning"]
-categories: ["AI", "ML", "Maths"]
-weight: 1125
+tags: ["Machine Learning", "Mathematics", "Linear Algebra"]
+categories: ["AI", "ML"]
+weight: 1140
 ---
-
-# Linear Algebra Basics
 
 ## Scalar
 

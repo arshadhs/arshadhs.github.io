@@ -1,7 +1,7 @@
 ---
 title: "Matrix Transposition"
 draft: false
-weight: 1129
+weight: 1141
 ---
 
 # Transposition of a Matrix

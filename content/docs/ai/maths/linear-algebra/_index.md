@@ -6,12 +6,13 @@ categories: ["AI", "ML"]
 weight: 1110
 bookCollapseSection: true
 ---
-
 # Linear Algebra
 
 Linear Algebra forms the foundation for representing data and transformations in machine learning.
 
 Linear Algebra provides the mathematical language used to represent data, transformations, and structure in machine learning.
+
+{{< section_tree >}}
 
 ---
 
@@ -39,20 +40,6 @@ Linear Algebra provides the mathematical language used to represent data, transf
 - **Feature** → one axis  
 - **Feature space** → where data lives  
 - **Vector space** → where vectors live  
----
-![Matrix](/images/ai/matrix_vector_operations.png)
-
----
-
-## Machine Learning View
-
-Many machine learning models can be abstracted as:
-
-{{< katex display=true >}}
-y = Wx + b
-{{< /katex >}}
-
-> **Models transform input vectors using matrices.**
 
 ---
 
