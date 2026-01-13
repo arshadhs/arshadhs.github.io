@@ -1,7 +1,7 @@
 ---
 title: "Matrix Transposition"
 draft: false
-weight: 1140
+weight: 1125
 ---
 
 # Transposition of a Matrix
@@ -211,17 +211,14 @@ A **sparse matrix** contains mostly zero elements.
 Only a small number of values carry meaningful information.
 
 **Used in**
+- Recommender systems
 - Large-scale machine learning
 - Graph representations
-- Recommender systems
 - Natural language processing
 
 Sparse matrices reduce:
 - Memory usage
 - Computational cost
-
----
-
 
 ---
 
