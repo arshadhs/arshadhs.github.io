@@ -3,7 +3,7 @@ title: "Vector Spaces and Feature Spaces"
 draft: false
 tags: ["Machine Learning", "Mathematics", "Linear Algebra"]
 categories: ["AI", "ML"]
-weight: 1120
+weight: 1125
 ---
 
 # Vector Spaces and Feature Spaces
@@ -192,3 +192,4 @@ c(d\mathbf{u}) = (cd)\mathbf{u}
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}
+
