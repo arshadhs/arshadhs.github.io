@@ -125,6 +125,8 @@ c(A + B) = cA + cB
 
 ## Matrix Multiplication (Very Important)
 
+If AB = 0 does not necessarily imply BA = 0 or A = 0 or B = 0.
+
 If:
 - A ∈ ℝ^{m × n}
 - B ∈ ℝ^{n × p}
@@ -143,7 +145,6 @@ Matrix multiplication is **not commutative** in general.
 AB \neq BA
 {{< /katex >}}
 
-If AB = 0 does not necessarily imply BA = 0 or A = 0 or B = 0.
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}
