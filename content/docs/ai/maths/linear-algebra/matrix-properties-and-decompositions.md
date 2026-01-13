@@ -3,7 +3,7 @@ title: "Matrix Properties and Decompositions"
 draft: false
 tags: ["Machine Learning", "Mathematics", "Linear Algebra"]
 categories: ["AI", "ML"]
-weight: 1130
+weight: 1135
 ---
 
 # Matrix Properties and Decompositions
@@ -17,41 +17,6 @@ Advanced linear algebra concepts are used to analyse, simplify, and optimise mac
 Linear systems describe multiple linear equations solved simultaneously.
 
 They connect algebraic equations with matrix representations.
-
----
-
-## Matrix Properties
-
-### Addition
-Commutative and associative for same-sized matrices.
-
-### Multiplication
-{{< katex display=true >}}
-AB \ne BA
-{{< /katex >}}
-
-Order matters.
-
----
-
-### Transpose
-{{< katex display=true >}}
-(AB)^T = B^T A^T
-{{< /katex >}}
-
----
-
-### Inverse
-For invertible matrices:
-
-{{< katex display=true >}}
-(AB)^{-1} = B^{-1} A^{-1}
-{{< /katex >}}
-
----
-
-### Determinant
-Indicates invertibility and volume scaling.
 
 ---
 
@@ -119,3 +84,4 @@ Matrix decompositions help:
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}
+
