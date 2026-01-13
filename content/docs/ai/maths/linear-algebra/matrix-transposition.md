@@ -1,7 +1,7 @@
 ---
 title: "Matrix Transposition"
 draft: false
-weight: 1125
+weight: 1129
 ---
 
 # Transposition of a Matrix
@@ -109,4 +109,5 @@ Inversion and transposition commute for invertible matrices.
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}
+
 
