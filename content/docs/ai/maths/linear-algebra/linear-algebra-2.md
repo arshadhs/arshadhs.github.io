@@ -3,10 +3,14 @@ title: "Linear Algebra -II"
 draft: false
 tags: ["Maths", "Linear Algebra", "Octave", "Machine Learning"]
 categories: ["AI", "ML", "Maths"]
-weight: 1127
+weight: 1140
 ---
 
 ## Positive Definite Matrices
+
+A square matrix is positive definite if pre-multiplying and post-multiplying it by the same vector always gives a positive number as a result, independently of how we choose the vector.
+
+Positive definite symmetric matrices have the property that all their eigenvalues are positive.
 
 For a real symmetric matrix A:
 
