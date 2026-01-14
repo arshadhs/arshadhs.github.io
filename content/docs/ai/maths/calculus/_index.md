@@ -9,6 +9,7 @@ bookCollapseSection: true
 ---
 # Calculus
 
+{{< section_tree >}}
 ---
 
 ## What is Multivariate Calculus?
