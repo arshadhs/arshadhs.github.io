@@ -89,6 +89,25 @@ flowchart LR
 
 ---
 
+## Types of Neural Networks
+- Standard NN - Small and Standard for a smaller and simpler data (e.g. Real Estate
+- CNN - Convolution - used for Images (e.g. Photo Tagging, Object Detection)
+- RNN - used for Text (e.g. Speech Recognition, Translation)
+- Hybrid NN (e.g. Autonoumous Driving)
+
+--
+
+## Components of DL
+
+- Data
+- Learning Algorithm : How to transform data
+- Loss Function: Objective function that quantifies how well is model doing?  lower the loss function, the better the model. So loss function will try to quantify how well or badly the model is learning or the model is doing.
+- Optimnisation Algorithm: in order to adjust the loss function, Learning Algorithm will try to **optimize our algorithm**. searching for the best possible parameters for minimizing the loss function. Popular optimization algorithms for deep learning are based on an approach called **gradient descent**.
+- Model
+
+
+
+
 ## Applications
 
 - Computer Vision (e.g., face detection, medical imaging)
