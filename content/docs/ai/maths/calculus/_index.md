@@ -5,9 +5,11 @@ tags: ["Machine Learning", "Mathematics", "Calculus"]
 categories: ["AI", "ML"]
 weight: 1140
 menu: main
+bookCollapseSection: true
 ---
 # Calculus
 
+{{< section_tree >}}
 ---
 
 ## What is Multivariate Calculus?
