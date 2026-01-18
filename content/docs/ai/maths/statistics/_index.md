@@ -7,7 +7,9 @@ weight: 1200
 menu: main
 ---
 
-# Introduction to Statistical Methods
+# Statistical Methods
+
+Statistical methods help you turn **raw data into reliable conclusions**, while understanding **uncertainty, variability, and confidence**.
 
 Statistics provides the **language and tools** for reasoning about data, uncertainty, and inference.
 
@@ -24,7 +26,7 @@ ML needs **understanding data behaviour**, drawing conclusions, and validating m
 
 ---
 
-## Core Topics
+## Core
 
 ### 1. Descriptive Statistics
 Summarises and describes data.

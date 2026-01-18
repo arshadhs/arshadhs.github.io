@@ -1,6 +1,5 @@
 ---
 title: 'Machine Learning'
-featured_image: '/images/zebrato.jpeg'
 date: 2024-08-06T23:29:52+01:00
 draft: false
 tags: ["AI", "ML"]
