@@ -9,7 +9,48 @@ bookCollapseSection: true
 ---
 # Calculus
 
+Calculus is the mathematical framework for understanding and controlling how quantities change.
+
+- How fast is something changing **right now**?
+- What happens to a system when inputs change **slightly**?
+- Where is something **maximum or minimum**?
+
+---
 {{< section_tree >}}
+---
+
+{{% steps }}
+1. Differential Calculus (Rates of Change)
+This part studies **how things change**.
+
+- How steep is a curve at a point?
+- Is something increasing or decreasing?
+- Where are the maxima and minima?
+- The key idea is the derivative.
+
+A **derivative** measures how a small change in input affects the output.
+
+Example intuition:
+- Slope of a curve
+- Instantaneous speed
+- Gradient of a loss function
+
+2. Integral Calculus (Accumulation)
+This part studies **how things add up**.
+
+- What is the total effect over time?
+- How much area lies under a curve?
+- How do small changes accumulate?
+
+The key idea is the **integral**.
+
+Example intuition:
+- Total distance from speed
+- Area under a curve
+- Summing many tiny contributions
+
+{{% /steps }}
+
 ---
 
 ## What is Multivariate Calculus?
