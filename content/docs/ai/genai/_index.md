@@ -5,6 +5,7 @@ tags: ["AI", "Generative AI", "GenAI", "LLM"]
 categories: ["AI"]
 weight: 400
 menu: main
+bookCollapseSection: true
 ---
 
 # Generative AI
