@@ -23,14 +23,14 @@ PCA prioritizes the directions where the data varies the most because more varia
 
 ---
 
-{{% step %}}
+{{% steps %}}
 
 1. Standardize the Data
 3. Calculate **Covariance Matrix**
 4. Find the Principal Components
 5. Pick the Top Directions & Transform Data
 
-{{% /step %}}
+{{% /steps %}}
 
 ---
 
