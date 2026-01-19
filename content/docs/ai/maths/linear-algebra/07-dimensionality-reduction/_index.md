@@ -1,12 +1,12 @@
 ---
-title: "Dimensionality Reduction and Kernels"
+title: "Dimensionality reduction and PCA"
 draft: false
 tags: ["Machine Learning", "Mathematics", "Linear Algebra"]
 categories: ["AI", "ML"]
 weight: 1700
 bookCollapseSection: true
 ---
-# Dimensionality Reduction and Kernels
+# Dimensionality reduction and PCA
 
 PCA and SVM connect linear algebra, geometry, and optimisation.
 

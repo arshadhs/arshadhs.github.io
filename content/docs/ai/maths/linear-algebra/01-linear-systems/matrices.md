@@ -51,22 +51,6 @@ An m × n matrix has:
 
 ---
 
-## Vectors
-
-A **vector** is a matrix with only one row or one column.
-
-{{< katex display=true >}}
-\text{Row vector: } 1 \times n \qquad
-\text{Column vector: } m \times 1
-{{< /katex >}}
-
-Vectors represent:
-- data points
-- feature sets
-- model parameters
-
----
-
 ## Equality of Matrices
 
 Two matrices are equal if:
@@ -142,6 +126,22 @@ Matrix multiplication is **not commutative** in general.
 {{< katex display=true >}}
 AB \neq BA
 {{< /katex >}}
+
+---
+
+## Vectors
+
+A **vector** is a matrix with only one row or one column.
+
+{{< katex display=true >}}
+\text{Row vector: } 1 \times n \qquad
+\text{Column vector: } m \times 1
+{{< /katex >}}
+
+Vectors represent:
+- data points
+- feature sets
+- model parameters
 
 ---
 

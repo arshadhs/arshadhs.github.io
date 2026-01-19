@@ -7,6 +7,7 @@ weight: 1140
 menu: main
 bookCollapseSection: true
 ---
+
 # Calculus
 
 Calculus is the mathematical framework for understanding and controlling how quantities change.
@@ -21,75 +22,93 @@ Calculus is the mathematical framework for understanding and controlling how qua
 
 ---
 
-{{% steps }}
-1. Differential Calculus (Rates of Change)
-This part studies **how things change**.
+{{% steps %}}
 
-- How steep is a curve at a point?
-- Is something increasing or decreasing?
-- Where are the maxima and minima?
-- The key idea is the derivative.
+1. ## Differential Calculus (Rates of Change)
 
-A **derivative** measures how a small change in input affects the output.
+	Studies **how things change**.
 
-Example intuition:
-- Slope of a curve
-- Instantaneous speed
-- Gradient of a loss function
+	- How steep is a curve at a point?
+	- Is something increasing or decreasing?
+	- Where are the maxima and minima?
+	- The key idea is the **derivative**.
 
-2. Integral Calculus (Accumulation)
-This part studies **how things add up**.
+	A **derivative** measures how a small change in input affects the output.
 
-- What is the total effect over time?
-- How much area lies under a curve?
-- How do small changes accumulate?
+	Example intuition:
+	- Slope of a curve
+	- Instantaneous speed
+	- Gradient of a loss function
 
-The key idea is the **integral**.
+2. ## Integral Calculus (Accumulation)
 
-Example intuition:
-- Total distance from speed
-- Area under a curve
-- Summing many tiny contributions
+	Studies **how things add up**.
 
-{{% /steps }}
+	- What is the total effect over time?
+	- How much area lies under a curve?
+	- How do small changes accumulate?
+
+	The key idea is the **integral**.
+
+	Example intuition:
+	- Total distance from speed
+	- Area under a curve
+	- Summing many tiny contributions
+
+{{% /steps %}}
 
 ---
 
-## What is Multivariate Calculus?
+## Multivariate Calculus
 
-Multivariate calculus is the branch of calculus that deals with functions of more than one variable.
+Multivariate calculus deals with functions of **more than one variable**.
 
-Instead of working with functions like:
+Univariate (single variable):
+
+{{< katex display=true >}}
 y = f(x)
+{{< /katex >}}
 
-it works with functions like:
+Multivariate (many variables):
+
+{{< katex display=true >}}
 z = f(x, y)
-f(x, y, z)
-L(w₁, w₂, ..., wₙ)
+{{< /katex >}}
 
-In Machine Learning, almost every function is multivariate.
+{{< katex display=true >}}
+L(w_1, w_2, \dots, w_n)
+{{< /katex >}}
+
+In Machine Learning, almost every function is **multivariate**.
 
 ---
 
 ## Why Multivariate Calculus Matters in Machine Learning
 
-Machine learning models do not learn one parameter at a time.
+Machine learning models do not learn one parameter at a time.  
 They optimise many parameters simultaneously.
 
 Example:
-Loss(w₁, w₂, w₃, ..., wₙ)
 
-### Multivariate calculus tells us:
+{{< katex display=true >}}
+\text{Loss}(w_1, w_2, \dots, w_n)
+{{< /katex >}}
+
+### Multivariate calculus tells us
+
 - How changing each parameter affects the output
 - Which direction reduces the error fastest
 - Whether a solution is a minimum, maximum, or saddle point
 
 ---
+
+## Key Topics (for ML)
+
 - Univariate differentiation (revision)
 - Partial derivatives
 - Gradients
-- Jacobian & Hessian
-- Gradients of vectors & matrices
+- Jacobian and Hessian
+- Gradients of vectors and matrices
 - Useful gradient identities
 - Backpropagation (conceptual)
 - Automatic differentiation
@@ -99,14 +118,14 @@ Loss(w₁, w₂, w₃, ..., wₙ)
 ## Focus
 
 - Compute gradients correctly
-- Hessian-based minima/maxima
-- Taylor series (multivariate)
+- Use Hessian intuition for minima/maxima
+- Understand Taylor series (multivariate)
 
 ---
 
-## ML connection:
+## ML Connection
 
-Training neural networks
+- Training neural networks (gradient-based learning)
 
 ---
 

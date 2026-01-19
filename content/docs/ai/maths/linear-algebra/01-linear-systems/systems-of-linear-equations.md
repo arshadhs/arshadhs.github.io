@@ -21,25 +21,8 @@ Consider a system of linear equations written in matrix form:
 A\mathbf{x} = \mathbf{b}
 {{< /katex >}}
 
-- \(A\) → **Coefficient matrix**
-- \([A | b]\) → **Augmented matrix**
----
-
-## Summary Table
-
-| Condition | Result |
-|---------|--------|
-| {{< katex >}}\text{rank}(A) < \text{rank}([A \mid \mathbf{b}]){{< /katex >}} | **No solution** (Inconsistent system) |
-| {{< katex >}}\text{rank}(A) = \text{rank}([A \mid \mathbf{b}]){{< /katex >}}, no free variables | **Unique solution** |
-| {{< katex >}}\text{rank}(A) = \text{rank}([A \mid \mathbf{b}]){{< /katex >}}, free variables exist | **Infinitely many solutions** |
-
----
-
-{{% hint info %}}
-**Key idea:**  
-The rank measures the number of independent equations.  
-Free variables indicate degrees of freedom in the solution.
-{{% /hint %}}
+- (A) → **Coefficient matrix**
+- ([A | b]) → **Augmented matrix**
 
 
 ## What you should know

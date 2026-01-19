@@ -7,6 +7,11 @@ weight: 1150
 ---
 # Solving Linear Systems
 
+A system can have:
+- **no solution**
+- **a unique solution**
+- **infinitely many solutions**
+
 ## Positive Definite Matrices
 
 A square matrix is positive definite if pre-multiplying and post-multiplying it by the same vector always gives a positive number as a result, independently of how we choose the vector.
@@ -82,25 +87,6 @@ Rank is invariant under row operations.
 ---
 
 ## Rank test
-{{< katex display=true >}}
-\text{rank}(A) < \text{rank}([A|b]) \Rightarrow \text{no solution}
-{{< /katex >}}
-
-{{< katex display=true >}}
-\text{rank}(A) = \text{rank}([A|b]) \Rightarrow \text{solution exists}
-{{< /katex >}}
-
----
-
-## Solving Linear Systems
-
-A system can have:
-- **no solution**
-- **a unique solution**
-- **infinitely many solutions**
-
-### Rank test
-
 {{< katex display=true >}}
 \text{rank}(A) < \text{rank}([A|b]) \Rightarrow \text{no solution}
 {{< /katex >}}
