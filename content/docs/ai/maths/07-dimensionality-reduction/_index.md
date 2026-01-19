@@ -12,4 +12,8 @@ PCA and SVM connect linear algebra, geometry, and optimisation.
 
 ---
 
+{{< section_tree >}}
+
+---
+
 {{< home-link "Home" >}} | {{< section-index >}}
