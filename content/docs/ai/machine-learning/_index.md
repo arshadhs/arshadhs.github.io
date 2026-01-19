@@ -5,6 +5,7 @@ draft: false
 tags: ["AI", "ML"]
 categories: ["AI", "ML"]
 weight: 400
+bookCollapseSection: true
 ---
 # Machine Learning
 
@@ -138,4 +139,5 @@ Used when models are based on:
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}
+
 
