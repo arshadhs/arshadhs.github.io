@@ -16,7 +16,9 @@ Calculus is the mathematical framework for understanding and controlling how qua
 - Where is something **maximum or minimum**?
 
 ---
+
 {{< section_tree >}}
+
 ---
 
 {{% steps }}
