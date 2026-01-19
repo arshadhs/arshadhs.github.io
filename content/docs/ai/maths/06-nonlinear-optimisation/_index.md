@@ -1,5 +1,5 @@
 ---
-title: "Nonlinear Optimisation in Machine Learning"
+title: "Nonlinear Optimisation"
 draft: false
 tags: ["Machine Learning", "Mathematics", "Linear Algebra"]
 categories: ["AI", "ML"]
@@ -9,6 +9,10 @@ bookCollapseSection: true
 # Nonlinear Optimisation in Machine Learning
 
 Practical training challenges and modern optimisers used in ML.
+
+---
+
+{{< section_tree >}}
 
 ---
 
