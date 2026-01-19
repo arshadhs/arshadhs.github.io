@@ -15,17 +15,21 @@ menu: main
 - finds these by calculating **eigenvectors (directions)** and **eigenvalues (importance)** from the **covariance matrix**.
 - PCA **selects the top components with the highest eigenvalues** and **projects the data onto them simplify the dataset**.
 
-{{% hint info %}}
+{{% hint %}}
+
 Note: It prioritizes the directions where the data varies the most because more variation = more useful information.
+
 {{% /hint %}}
 
 ---
 
 {{% step %}}
+
 1. Standardize the Data
 2. Calculate **Covariance Matrix**
 3. Find the Principal Components
 4. Pick the Top Directions & Transform Data
+5. 
 {{% /step %}}
 
 ---
