@@ -5,6 +5,7 @@ tags: ["Machine Learning", "Mathematics", "Linear Algebra", "Probability", "Stat
 categories: ["AI", "ML"]
 weight: 1100
 menu: main
+bookCollapseSection: true
 ---
 
 # Mathematical Foundations for Machine Learning
@@ -216,3 +217,4 @@ flowchart LR
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}
+
