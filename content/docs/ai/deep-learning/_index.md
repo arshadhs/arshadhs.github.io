@@ -4,6 +4,7 @@ draft: false
 tags: ['deep learning', 'neural networks', 'ai']
 categories: ['artificial intelligence']
 weight: 415
+bookCollapseSection: true
 ---
 # Deep Learning
 
@@ -117,3 +118,4 @@ flowchart LR
 
 ---
 {{< home-link "Home" >}} | {{< section-index >}}  
+
