@@ -12,4 +12,8 @@ Gradients power learning. This section builds differentiation skills needed for 
 
 ---
 
+{{< section_tree >}}
+
+---
+
 {{< home-link "Home" >}} | {{< section-index >}}
