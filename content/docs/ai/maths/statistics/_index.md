@@ -17,6 +17,8 @@ Statistics provides the **language and tools** for reasoning about data, uncerta
 ML needs **understanding data behaviour**, drawing conclusions, and validating machine learning models.
 
 ---
+{{< section_tree >}}
+---
 
 ## Role of Statistics in AI and ML
 
@@ -101,4 +103,5 @@ flowchart LR
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}
+
 
