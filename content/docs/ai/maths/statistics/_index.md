@@ -3,8 +3,9 @@ title: "Statistical Methods"
 draft: false
 tags: ["Statistics", "Probability", "Data Analysis"]
 categories: ["AI", "ML"]
-weight: 1200
+weight: 2000
 menu: main
+bookCollapseSection: true
 ---
 
 # Statistical Methods
@@ -100,3 +101,4 @@ flowchart LR
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}
+
