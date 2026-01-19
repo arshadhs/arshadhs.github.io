@@ -3,7 +3,7 @@ title: "Principal Component Analysis (PCA)"
 draft: false
 tags: ["Machine Learning", "Mathematics", "Linear Algebra", "Probability", "Statistics", "Calculus"]
 categories: ["AI", "ML"]
-weight: 1170
+weight: 1705
 menu: main
 ---
 # Principal Component Analysis (PCA)
