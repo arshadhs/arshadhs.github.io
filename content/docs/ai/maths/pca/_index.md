@@ -17,7 +17,7 @@ menu: main
 
 {{% hint %}}
 
-Note: It prioritizes the directions where the data varies the most because more variation = more useful information.
+PCA prioritizes the directions where the data varies the most because more variation = more useful information.
 
 {{% /hint %}}
 
@@ -26,10 +26,10 @@ Note: It prioritizes the directions where the data varies the most because more 
 {{% step %}}
 
 1. Standardize the Data
-2. Calculate **Covariance Matrix**
-3. Find the Principal Components
-4. Pick the Top Directions & Transform Data
-5. 
+3. Calculate **Covariance Matrix**
+4. Find the Principal Components
+5. Pick the Top Directions & Transform Data
+
 {{% /step %}}
 
 ---
