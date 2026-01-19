@@ -3,7 +3,7 @@ title: "Retrieval-Augmented Generation (RAG)"
 draft: false
 tags: ["AI", "Generative AI", "LLM", "RAG"]
 categories: ["AI", "ML"]
-weight: 320
+weight: 490
 menu: main
 ---
 
