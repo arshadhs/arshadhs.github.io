@@ -1,16 +1,17 @@
 ---
-title: 'Support Vector Machines'
+title: "Support Vector Machine (SVM)"
 draft: false
-tags: ["AI", "ML"]
+tags: ["AI", "ML", "SVM", "Classification"]
 categories: ["AI", "ML"]
 weight: 470
 ---
+
 # Support Vector Machine (SVM)
 
-SVM is a **supervised machine learning algorithm** used for:
+A **Support Vector Machine (SVM)** is a **supervised machine learning algorithm** used for:
 
 - **Classification** (most common)
-- **Regression** (called SVR)
+- **Regression** (SVR – Support Vector Regression)
 
 > Find the decision boundary that separates classes with the **maximum margin**.
 
@@ -18,23 +19,24 @@ SVM is a **supervised machine learning algorithm** used for:
 A Support Vector Machine is a supervised learning algorithm that finds an optimal hyperplane by maximising the margin between classes, using support vectors and kernel functions to handle non-linear data.
 {{% /hint %}}
 
----
-
 ## Intuition
 
 Imagine two groups of points on a graph.
 
 Many lines can separate them, but SVM asks:
 
-> **Which line stays as far away as possible from both groups?**
+> **Which boundary stays as far away as possible from both groups?**
 
-That safest line is the **optimal hyperplane**.
+That safest boundary is the **optimal hyperplane**.
+
+A larger margin usually leads to **better generalisation** on unseen data.
 
 ---
 
 ## Key Concepts
 
 {{% steps %}}
+
 1. ## Hyperplane
   - The **decision boundary**
   - In 2D → a line  
@@ -44,36 +46,36 @@ That safest line is the **optimal hyperplane**.
 2.  ## Margin
   - Distance between the hyperplane and the nearest points
   - SVM **maximises** this margin
-  
+
   Larger margin = better generalisation
 
 3.  ## Support Vectors
   - The **closest points** to the hyperplane
   - They **define** the decision boundary
   - Removing them changes the model
+
 {{% /steps %}}
 
 ---
 
-{{< mermaid >}}
-flowchart LR
-    A1((●)) -->| | H[Hyperplane]
-    A2((●)) -->| | H
-    B1((○)) -->| | H
-    B2((○)) -->| | H
+## Linearly Separable Data
 
-    SV1[Support Vector] --- H
-    SV2[Support Vector] --- H
-{{< /mermaid >}}
+Data is **linearly separable** if a straight line (or hyperplane) can perfectly separate the classes.
+
+- No misclassification
+- Clean decision boundary
+- Ideal case for SVM
+
+This leads to **Hard-Margin SVM**.
 
 ---
 
-## Hard Margin vs Soft Margin
+## Hard-Margin vs Soft-Margin SVM
 
 ### Hard-Margin SVM
 - Perfect separation
-- No misclassification allowed
-- Works only if data is clean and separable
+- No errors allowed
+- Works only when data is clean and separable
 
 ---
 
@@ -86,23 +88,48 @@ flowchart LR
 | Large C | Strict fit, low error, risk of overfitting |
 | Small C | More tolerant, better generalisation |
 
+Soft-margin SVM is used **in practice**.
+
 ---
 
-## The Kernel Trick
+## Non-Linearly Separable Data
 
-### Problem
-Some data is **not linearly separable**.
+Many real-world datasets **cannot** be separated using a straight line.
 
-### Solution
-Map data into a **higher-dimensional space** where it *is* separable.
+Examples:
+- Concentric circles
+- XOR-like patterns
+- Complex text or image data
 
-**Kernels do this implicitly**, without computing the higher dimension.
+In such cases, a linear boundary is insufficient.
 
-### Common kernels
-- Linear  
-- Polynomial  
-- **RBF (Radial Basis Function) Gaussian** - most popular  
-- Sigmoid  
+---
+
+## Kernel Trick (Mercer’s Idea)
+
+### The Problem
+Data is **not linearly separable** in the original feature space.
+
+### The Solution
+Map the data into a **higher-dimensional space** where it *becomes* separable.
+
+### The Key Insight
+This mapping can be done **implicitly** using a **kernel function**, without explicitly computing the higher dimension.
+
+This idea is known as the **Kernel Trick**.
+
+---
+
+### Common Kernels
+
+- **Linear** – when data is already separable
+- **Polynomial** – captures interactions
+- (**RBF** - Radial Basis Function Gaussian)[https://www.geeksforgeeks.org/machine-learning/radial-basis-function-kernel-machine-learning/] - most popular  
+- **Sigmoid**
+
+{{% hint info %}}
+The kernel trick allows SVMs to create **non-linear decision boundaries** while still using a linear algorithm in a transformed space.
+{{% /hint %}}
 
 ---
 
@@ -112,21 +139,26 @@ SVM can also predict **continuous values**.
 
 - Fits a function inside an **ε-tube**
 - Errors inside the tube are ignored
-- Only points outside the margin matter
+- Only points outside the margin influence the model
 
 ---
 
-## When Should You Use SVM?
+## Applications of SVM
 
-### Works well when
-- Medium-sized datasets
-- High-dimensional data
-- Clear margins exist
+SVMs are effective for both **structured** and **unstructured** data.
 
-### Not ideal when
-- Very large datasets
-- Very noisy data (without tuning)
-- You need probabilistic outputs (by default)
+### Structured Data
+- Tabular datasets
+- Finance and risk scoring
+- Bioinformatics
+
+### Unstructured Data
+- Text classification
+- Image recognition
+- Handwriting and OCR
+- Spam detection
+
+They work especially well in **high-dimensional spaces**.
 
 ---
 
@@ -141,23 +173,9 @@ SVM can also predict **continuous values**.
 
 ---
 
+## Intuition
+
 **SVM draws the safest possible boundary between classes.**
-
----
-
-## Linearly separable data  
-
----
-
-## Non-linearly separable data 
-
----
-
-## Kernel Trick (Mercer) 
-
----
-
-## Applications to both structured and unstructured data
 
 ---
 
