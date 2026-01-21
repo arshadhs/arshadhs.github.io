@@ -16,9 +16,80 @@ Statistics provides the **language and tools** for reasoning about data, uncerta
 
 ML needs **understanding data behaviour**, drawing conclusions, and validating machine learning models.
 
+
+- Collect Data
+- Present & Organise Data (in a systematic manner)
+- Alalyse Data
+- Infer about the Data
+- Take Decision from the Data
+
 ---
 
 {{< section_tree >}}
+
+---
+
+## Data - Types
+
+{{< mermaid >}}
+flowchart TD
+  A[Data] --> B[Qualitative<br/>(Categorical)]
+  A --> C[Quantitative<br/>(Numerical)]
+
+  B --> B1[Nominal]
+  B --> B2[Ordinal]
+
+  C --> C1[Discrete]
+  C --> C2[Continuous]
+
+  C2 --> C21[Interval]
+  C2 --> C22[Ratio]
+  
+	%% Styling
+	style A fill:#E1F5FE
+	style B fill:#90CAF9
+	style B1 fill:#90CAF9
+	style B2 fill:#90CAF9
+	style C fill:#FFF9C4
+	style C1 fill:#FFF9C4
+	style C2 fill:#FFF9C4
+	style C21 fill:#FFF9C4
+	style C22 fill:#FFF9C4
+{{< /mermaid >}}
+
+{{% steps %}}
+
+1. ## Qualitative (Categorical)
+	express a qualitative attribute
+	e.g. hair color, eye color
+	- Nominal: **no natural ordering** is possible
+				e.g. hair color, eye color
+	- Ordinal:  a **meaningful order** is possible
+				e.g. health, which can take values such as poor, reasonable, good, or excellent
+
+2. ## Quantitative (Numerical)
+	measured using numbers
+	e.g. height, weight, number of people. 
+	- Discrete:
+		**countable** and typically whole numbers
+				e.g. number of people
+	- Continuous: 
+		**measured**, not counted, and can take infinitely many values in a range
+				e.g. height
+		- INTERVAL: ratio of values of variable do not have any meaning and it does not have an inherently defined zero value
+				e.g. temperature
+		- RATIO: ratio of values of variable have  meaning and it have an inherently defined zero value such as weight
+
+{{% steps %}}
+
+{{% hint info %}}
+
+If the data is a **label** → categorical.  
+If the data is a **count** → discrete.  
+If the data is a **measurement** → continuous.  
+If “twice as much” makes sense → ratio scale.
+
+{{% /hint %}}
 
 ---
 
@@ -105,6 +176,7 @@ flowchart LR
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}
+
 
 
 
