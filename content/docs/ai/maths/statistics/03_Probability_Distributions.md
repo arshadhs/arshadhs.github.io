@@ -3,7 +3,7 @@ title: "Probability Distributions"
 draft: false
 tags: ["AI", "Statistics"]
 categories: ["AI", "Statistics"]
-weight: 430
+weight: 300
 menu: main
 ---
 # Probability Distributions
@@ -41,3 +41,4 @@ menu: main
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}
+
