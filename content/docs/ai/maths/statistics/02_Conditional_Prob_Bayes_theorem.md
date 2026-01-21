@@ -22,6 +22,7 @@ menu: main
 ## Reference
 
 [CP vs BT](https://www.geeksforgeeks.org/maths/conditional-probability-vs-bayes-theorem/)
+
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}

@@ -28,6 +28,7 @@ menu: main
 ## Reference
 
 [Hypothesis Testing]()
+
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}

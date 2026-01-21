@@ -38,6 +38,7 @@ menu: main
 ## Reference
 
 [Probability Distributions]()
+
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}

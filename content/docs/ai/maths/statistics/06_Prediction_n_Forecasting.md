@@ -11,7 +11,10 @@ menu: main
 ---
 ## Reference
 
-[Gaussian Mixture model & Expectation Maximization]()
+[Gaussian Mixture model](https://www.geeksforgeeks.org/machine-learning/gaussian-mixture-model/)
+
+[Expectation Maximization](https://www.geeksforgeeks.org/machine-learning/ml-expectation-maximization-algorithm/)
+
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}
