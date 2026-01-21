@@ -3,7 +3,7 @@ title: "Basic Probability & Statistics"
 draft: false
 tags: ["AI", "Statistics"]
 categories: ["AI", "Statistics"]
-weight: 1210
+weight: 100
 menu: main
 ---
 # Basic Probability & Statistics
@@ -299,3 +299,4 @@ This is where “given what I already know…” becomes mathematics, and where 
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}
+
