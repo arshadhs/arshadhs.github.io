@@ -9,6 +9,8 @@ tags: ["Linear Algebra", "Vector Spaces"]
 
 A **norm** measures the length (magnitude) of a vector.
 
+- the norm of a vector x measures the distance from the origin to the point x.
+
 Common example: Euclidean norm.
 
 {{< katex display=true >}}

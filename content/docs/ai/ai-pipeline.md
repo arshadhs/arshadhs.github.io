@@ -10,24 +10,35 @@ menu: main
 ---
 # AI Pipeline
 
-- Collect Data
+The AI pipeline is a continuous process where data is collected, prepared, used to train models, evaluated for performance, and continuously improved after deployment.
 
+{{% steps %}}
 
-- Train Model 
+1. ## Collect Data
+
+2. ## Prepare data
+
+3. ## Train Model 
 	- Iterate until model is good enough
-
-
-- Deploy Model 
+	
+4. ## Deploy Model 
 	- Get data back
 	- Maintain & update model
+
+{{% /steps %}}
 
 {{<mermaid>}}
 timeline
     title AI Pipeline
     Collect Data : Data Ingestion
-				 : Data Preparation (Clean & Prepare Data)
-    Train Models : Model Building & Training
-    Deploy & Predict : Model Deployment
+                 : Data Understanding
+    Prepare Data : Cleaning
+                 : Feature Engineering
+                 : Sampling
+    Train Model  : Model Training
+                 : Validation & Metrics
+    Deploy Model : Deployment
+                 : Monitoring & Retraining
 {{</mermaid>}}
 
 ---

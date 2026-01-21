@@ -8,9 +8,8 @@ weight: 1310
 # Determinant and Trace
 
 ---
-# Minor
 
-## Definition
+# Minor
 
 The **minor** of an element \(a_{ij}\) is the determinant of the smaller square matrix formed by:
 - removing **row \(i\)**
@@ -25,8 +24,6 @@ Minors are used to compute **cofactors**, which are used for determinants and in
 ---
 
 # Cofactor
-
-## Definition
 
 The **cofactor** of \(a_{ij}\), denoted \(C_{ij}\), is:
 
@@ -57,19 +54,19 @@ The **cofactor matrix** is the matrix formed by taking the cofactor of every ent
 
 The **determinant** is a **scalar value** that can be calculated for a **square matrix** (m x m).
 
-Determinants tell us whether a matrix is invertible and enable the computation of eigenvalues, which are fundamental to PCA and dimensionality reduction in machine learning.
+The determinant of a square matrix,  \( det(A) \), is a function that maps matrices to real scalars. The determinant is equal to the product of all the eigenvalues of the matrix.
 
 It is written as:
-- \( \det(A) \) or \( |A| \)
+- \( det(A) \) or \( |A| \)
 
-## Why determinants matter
 
 - It serves as a scaling factor that is used for the transformation of a matrix.
 - Acts as a **scaling factor** for linear transformations
-   
+  
 - Indicates whether a matrix is **invertible**
 
 - It is a single numerical value that plays a key role in various matrix operations, such as calculating the inverse of a matrix or solving **systems of linear equations**.
+- enable the **computation of eigenvalues**, which are fundamental to PCA and dimensionality reduction in machine learning.
 - Appears in **calculus**, **optimisation**, and **probability** (e.g., Jacobians, covariance matrices)
 
 ---
@@ -125,8 +122,6 @@ The **adjoint** (more precisely, **adjugate**) of \(A\) is:
 Where:
 - \(C\) is the cofactor matrix
 - \(C^T\) is its transpose
-
-## Why it matters
 
 - Used in the classical formula for the inverse:
   - \(A^{-1} = \frac{1}{\det(A)}\operatorname{adj}(A)\) (when \(\det(A)\neq 0\))

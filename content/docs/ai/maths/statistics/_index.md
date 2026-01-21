@@ -33,33 +33,33 @@ ML needs **understanding data behaviour**, drawing conclusions, and validating m
 
 {{< mermaid >}}
 flowchart TD
-  A[Data] --> B[Qualitative<br/>(Categorical)]
-  A --> C[Quantitative<br/>(Numerical)]
+	A[(Data)] --> B["Categorical (Qualitative)"]
+    A --> C["Numerical (Quantitative)"]
 
-  B --> B1[Nominal]
-  B --> B2[Ordinal]
+    B --> B1[Nominal]
+    B --> B2[Ordinal]
 
-  C --> C1[Discrete]
-  C --> C2[Continuous]
+    C --> C1[Discrete]
+    C --> C2[Continuous]
 
-  C2 --> C21[Interval]
-  C2 --> C22[Ratio]
-  
-	%% Styling
-	style A fill:#E1F5FE
-	style B fill:#90CAF9
-	style B1 fill:#90CAF9
-	style B2 fill:#90CAF9
-	style C fill:#FFF9C4
-	style C1 fill:#FFF9C4
-	style C2 fill:#FFF9C4
-	style C21 fill:#FFF9C4
-	style C22 fill:#FFF9C4
+    C2 --> C21[Interval]
+    C2 --> C22[Ratio]
+
+    %% Styling
+    style A fill:#E1F5FE,stroke:#333
+    style B fill:#90CAF9,stroke:#333
+    style B1 fill:#90CAF9,stroke:#333
+    style B2 fill:#90CAF9,stroke:#333
+    style C fill:#FFF9C4,stroke:#333
+    style C1 fill:#FFF9C4,stroke:#333
+    style C2 fill:#FFF9C4,stroke:#333
+    style C21 fill:#FFF9C4,stroke:#333
+    style C22 fill:#FFF9C4,stroke:#333
 {{< /mermaid >}}
 
 {{% steps %}}
 
-1. ## Qualitative (Categorical)
+1. ## Categorical (Qualitative)
 	express a qualitative attribute
 	e.g. hair color, eye color
 	- Nominal: **no natural ordering** is possible
@@ -67,7 +67,7 @@ flowchart TD
 	- Ordinal:  a **meaningful order** is possible
 				e.g. health, which can take values such as poor, reasonable, good, or excellent
 
-2. ## Quantitative (Numerical)
+2. ## Numerical (Quantitative)
 	measured using numbers
 	e.g. height, weight, number of people. 
 	- Discrete:
