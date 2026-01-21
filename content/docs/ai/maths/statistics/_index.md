@@ -80,7 +80,7 @@ flowchart TD
 				e.g. temperature
 		- RATIO: ratio of values of variable have  meaning and it have an inherently defined zero value such as weight
 
-{{% steps %}}
+{{% /steps %}}
 
 {{% hint info %}}
 
@@ -176,6 +176,7 @@ flowchart LR
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}
+
 
 
 
