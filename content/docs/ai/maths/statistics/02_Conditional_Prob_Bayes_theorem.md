@@ -3,7 +3,7 @@ title: "Conditional Probability & Bayes theorem"
 draft: false
 tags: ["AI", "Statistics"]
 categories: ["AI", "Statistics"]
-weight: 420
+weight: 200
 menu: main
 ---
 # Conditional Probability & Bayes theorem
@@ -25,3 +25,4 @@ menu: main
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}
+
