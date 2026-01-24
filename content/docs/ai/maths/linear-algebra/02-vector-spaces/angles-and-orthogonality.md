@@ -51,7 +51,7 @@ Let \( \alpha \) be the angle between vectors \( \mathbf{a} \) and \( \mathbf{b}
 
 ## Orthogonality
 
-Two vectors are **orthogonal** if their dot product is zero:
+{{% colour RED %}} Two vectors are **orthogonal** if their dot product is zero.{{% /colour %}}
 
 {{< katex display=true >}}
 \langle \mathbf{a}, \mathbf{b} \rangle = 0
@@ -67,7 +67,7 @@ This means the vectors are **perpendicular**.
 
 {{% hint info%}}
 If the angle between two vectors is 𝜋/ 2, their Dot product = 0 ⇔ vectors are perpendicular (orthogonal).
-{{% /hint info%}}
+{{% /hint %}}
 
 ---
 
