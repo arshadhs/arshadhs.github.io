@@ -10,15 +10,28 @@ bookCollapseSection: true
 
 # Mathematical Foundations for Machine Learning
 
-Machine Learning is built on **mathematical principles** that allow models to represent data, learn patterns, and optimise performance.
+Machine Learning is built on **mathematical principles** that allow models to:
+- represent data
+- learn patterns
+- optimise performance
 
-ML requires **core mathematical tools** to understand how ML algorithms work internally.
+{{< mermaid >}}
+flowchart LR
+    DATA[Data]
+    MATH[Math Models]
+    OPT[Optimisation]
+    MODEL[Trained Model]
+
+    DATA --> MATH
+    MATH --> OPT
+    OPT --> MODEL
+{{< /mermaid >}}
+
+ML requires **core mathematical tools** to understand how ML algorithms work internally. Algebra deals with relationships between variables and quantities, while Calculus focuses on change and optimization.
 
 ---
 
 ## Core Mathematical Pillars in Machine Learning
-
-The following **five mathematical areas** form the foundation of Machine Learning.
 
 {{< mermaid >}}
 flowchart TB
@@ -58,8 +71,6 @@ flowchart TB
 
 ---
 
-## Key Mathematical Areas
-
 {{< mermaid >}}
 mindmap
   Mathematics for Machine Learning
@@ -95,6 +106,8 @@ mindmap
 {{< /mermaid >}}
 
 ---
+
+{{% details title="Key Mathematical Areas"%}}
 
 ### 1. Linear Algebra
 Used to represent and manipulate data.
@@ -171,17 +184,19 @@ Graphs are used to **visualise data and learning behaviour**.
 - Debugging models
 - Explaining results
 
+{{% /details %}}
+
 ---
 
 ## Optimisation (Cross-Cutting Concept)
 
-Optimisation is the **process of finding the best model parameters** by minimising or maximising an objective function.
+Optimisation is the **process of finding the best model parameters** by **minimising** or **maximising** an objective function.
 
-> Optimisation is **not an independent mathematical pillar**, but a mechanism that relies on multiple mathematical areas.
+- a mechanism that relies on multiple mathematical areas.
 
 **Depends on:**
-- **Calculus** → gradient computation  
 - **Linear Algebra** → parameter updates  
+- **Calculus** → gradient computation  
 - **Probability & Statistics** → loss functions  
 - **Graphs** → convergence analysis  
 
@@ -192,27 +207,13 @@ Optimisation is the **process of finding the best model parameters** by minimisi
 
 ---
 
-## Conceptual View
+## Refrences
 
-{{< mermaid >}}
-flowchart LR
-    DATA[Data]
-    MATH[Math Models]
-    OPT[Optimisation]
-    MODEL[Trained Model]
+[MML-Book](https://mml-book.github.io/book/mml-book.pdf)
 
-    DATA --> MATH
-    MATH --> OPT
-    OPT --> MODEL
-{{< /mermaid >}}
+[Calculus & Algebra](https://medium.com/@rajat01221/calculus-and-algebra-for-data-science-beginner-to-advanced-062018c7f8ad)
 
----
-
-## Outcome
-
-- Understand the maths behind ML algorithms
-- Interpret optimisation behaviour
-- Read and implement ML research papers more confidently
+[Essence of linear algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
 
 ---
 

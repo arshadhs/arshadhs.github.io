@@ -28,4 +28,10 @@ Common example: Euclidean norm.
 
 ---
 
+## References
+
+[Vector Norms](https://www.geeksforgeeks.org/maths/vector-norms/)
+
+---
+
 {{< home-link "Home" >}} | {{< section-index >}}

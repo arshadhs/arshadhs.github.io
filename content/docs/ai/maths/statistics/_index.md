@@ -175,6 +175,14 @@ flowchart LR
 
 ---
 
+## Refrences
+
+[Probability & Statistics](https://medium.com/@naghma2404/probability-and-statistics-for-data-science-4f580829ed60)
+
+[Probability & Statistics](https://www.analyticsvidhya.com/blog/2021/04/statistics-and-probability-concepts-for-data-science/)
+
+---
+
 {{< home-link "Home" >}} | {{< section-index >}}
 
 

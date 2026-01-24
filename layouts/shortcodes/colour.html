@@ -1,0 +1,4 @@
+{{ $c := .Get 0 | default "red" | lower }}
+<span style="color: {{ $c | safeCSS }};">
+  {{ .Inner | markdownify }}
+</span>

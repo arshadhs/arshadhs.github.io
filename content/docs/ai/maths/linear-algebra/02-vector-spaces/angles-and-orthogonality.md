@@ -65,6 +65,10 @@ In this case, the angle between them is:
 
 This means the vectors are **perpendicular**.
 
+{{% hint info%}}
+If the angle between two vectors is 𝜋/ 2, their Dot product = 0 ⇔ vectors are perpendicular (orthogonal).
+{{% /hint info%}}
+
 ---
 
 ## Example
