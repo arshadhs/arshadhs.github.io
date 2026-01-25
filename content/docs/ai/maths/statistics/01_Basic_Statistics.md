@@ -1,5 +1,5 @@
 ---
-title: "Basic Probability & Statistics"
+title: "Basic Statistics"
 draft: false
 tags: ["AI", "Statistics"]
 categories: ["AI", "Statistics"]
@@ -7,7 +7,7 @@ weight: 100
 menu: main
 ---
 
-# Basic Probability & Statistics
+# Basic Statistics
 
 **Statistics**: describes data (what you *see*).  
 **Probability**: models uncertainty (what you *don’t know* yet).
@@ -117,6 +117,14 @@ s^2=\frac{\sum_{i=1}^{n}(x_i-\bar{x})^2}{n-1}
 
 Variance is in **squared units**, so it can be harder to interpret directly.
 
+#### Population Variance
+
+- Population variance equals mean (average) squared deviation (distance) of the scores from the population mean 
+
+- Variance is the average of squared deviations, so we identify population variance with a lowercase Greek letter sigma squared: σ^2
+
+- Standard deviation is the square root of the variance, so we identify it with a lowercase Greek letter sigma: σ
+
 ### Standard Deviation
 
 Standard deviation is the square root of variance.
@@ -139,6 +147,11 @@ Quartiles split sorted data into four equal parts:
 - **Q3**: 75% of data lies below it
 
 Interquartile Range (IQR):
+
+- It is measure of Variation
+- Also Known as Mid-spread : Spread in the Middle 50%
+- Difference Between Third & First Quartiles: 
+- Not Affected by Extreme Values
 
 {{% hint danger %}}
 {{< katex display=true >}}
@@ -180,29 +193,11 @@ This is the backbone of the **box-and-whisker plot**.
 
 ---
 
-## Box-and-Whisker Plot (Concept)
+## Box-and-Whisker Plot
 
-This diagram shows the *structure* of a box plot using the five-number summary.
+*Structure* of a box plot using the five-number summary.
 
-{{< mermaid >}}
-flowchart LR
-    MIN[Minimum] --- Q1[Q1] --- MED[Median] --- Q3[Q3] --- MAX[Maximum]
-
-    %% Box region
-    Q1 --- BOX1[ ]
-    BOX1 --- MED
-    MED --- BOX2[ ]
-    BOX2 --- Q3
-
-    %% Styling (soft)
-    style MIN fill:#E1F5FE,stroke:#333
-    style Q1 fill:#C8E6C9,stroke:#333
-    style MED fill:#BBDEFB,stroke:#333
-    style Q3 fill:#C8E6C9,stroke:#333
-    style MAX fill:#E1F5FE,stroke:#333
-    style BOX1 fill:#FFF9C4,stroke:#333
-    style BOX2 fill:#FFF9C4,stroke:#333
-{{< /mermaid >}}
+![Box Plot](/images/ai/stats-box-plot.png)
 
 {{% hint info %}}
 In a real box plot:
@@ -210,161 +205,6 @@ In a real box plot:
 - The **line inside** the box is the **median**
 - The **whiskers** extend towards the minimum and maximum (or to non-outlier limits)
 {{% /hint %}}
-
----
-
-## Probability
-
-Probability quantifies uncertainty: a number between 0 and 1.
-
-- 0 means: impossible
-- 1 means: certain
-
-### Sample space and events
-
-- Sample space \(S\): all possible outcomes  
-  Example: dice roll → \(S=\{1,2,3,4,5,6\}\)
-
-- Event \(A\): a subset of outcomes  
-  Example: “even number” → \(A=\{2,4,6\}\)
-
----
-
-## Axioms of Probability
-
-For any event \(A\):
-
-1. **Non-negativity**
-
-{{% hint danger %}}
-{{< katex display=true >}}
-P(A)\ge 0
-{{< /katex >}}
-{{% /hint %}}
-
-2. **Normalisation**
-
-{{% hint danger %}}
-{{< katex display=true >}}
-P(S)=1
-{{< /katex >}}
-{{% /hint %}}
-
-3. **Additivity (mutually exclusive events)**  
-If \(A\cap B=\emptyset\), then
-
-{{% hint danger %}}
-{{< katex display=true >}}
-P(A\cup B)=P(A)+P(B)
-{{< /katex >}}
-{{% /hint %}}
-
-These axioms are the rules of the game: everything else follows from them.
-
----
-
-## Definition of Probability
-
-Two useful interpretations:
-
-### Classical (equally likely outcomes)
-
-{{% hint danger %}}
-{{< katex display=true >}}
-P(A)=\frac{\text{number of outcomes in }A}{\text{number of outcomes in }S}
-{{< /katex >}}
-{{% /hint %}}
-
-Example: rolling a 6 on a fair die
-
-{{% hint danger %}}
-{{< katex display=true >}}
-P(\{6\})=\frac{1}{6}
-{{< /katex >}}
-{{% /hint %}}
-
-### Empirical (long-run frequency)
-
-{{% hint danger %}}
-{{< katex display=true >}}
-P(A)\approx\frac{\text{count of }A}{\text{number of trials}}
-{{< /katex >}}
-{{% /hint %}}
-
-Example: if “heads” appears 498 times in 1000 flips
-
-{{% hint danger %}}
-{{< katex display=true >}}
-P(\text{heads})\approx 0.498
-{{< /katex >}}
-{{% /hint %}}
-
----
-
-## Mutually Exclusive vs Independent Events
-
-These are often confused: they are different ideas.
-
-### Mutually exclusive (cannot happen together)
-
-Events \(A\) and \(B\) are mutually exclusive if:
-
-{{% hint danger %}}
-{{< katex display=true >}}
-A\cap B=\emptyset
-{{< /katex >}}
-{{% /hint %}}
-
-If mutually exclusive:
-
-{{% hint danger %}}
-{{< katex display=true >}}
-P(A\cap B)=0
-{{< /katex >}}
-{{% /hint %}}
-
-### Independent (one does not affect the other)
-
-Events \(A\) and \(B\) are independent if:
-
-{{% hint danger %}}
-{{< katex display=true >}}
-P(A\cap B)=P(A)\,P(B)
-{{< /katex >}}
-{{% /hint %}}
-
----
-
-{{< mermaid >}}
-flowchart LR
-    A["Two events: A and B"] --> B{"Can they happen together?"}
-    B -->|No| C["Mutually Exclusive: A ∩ B = ∅"]
-    B -->|Yes| D{"Does A change B?"}
-    D -->|No| E["Independent: P(A ∩ B)=P(A)P(B)"]
-    D -->|Yes| F["Dependent: use conditional probability"]
-{{< /mermaid >}}
-
----
-
-## Mini-check (self-test)
-
-1. If \(P(A)=0.4\) and \(P(B)=0.3\) and \(A,B\) are independent: what is \(P(A\cap B)\)?
-2. If \(A,B\) are mutually exclusive: what is \(P(A\cap B)\)?
-3. Which measure is more robust to outliers: mean or median?
-
-{{% hint success %}}
-Answers:  
-1) \(0.4\times 0.3=0.12\)  
-2) \(0\)  
-3) Median
-{{% /hint %}}
-
----
-
-## What’s next
-
-**Conditional Probability & Bayes’ Theorem**  
-This is where “given what I already know…” becomes mathematics, and where Naïve Bayes begins.
 
 ---
 

@@ -13,7 +13,71 @@ A curated list of **high-quality online courses** to learn Artificial Intelligen
 
 ---
 
-## Machine Learning Foundations
+## Recommended Books & References
+
+---
+
+### Deep Neural Networks (DNN)
+
+- **Deep Learning**. MIT Press.  
+  Goodfellow, I., Bengio, Y., & Courville, A. (2016). (Vol. 1, No. 2).
+
+- **Introduction to Deep Learning**. MIT Press.  
+  Eugene, C. (2019).
+
+- **Deep Learning with Python**. Simon & Schuster.  
+  Chollet, F. (2021).
+
+- **Deep Learning for Time Series Forecasting**. Machine Learning Mastery.  
+  Brownlee, J. (2018).
+
+- **Neural Architecture Search: A Survey**.  
+  Journal of Machine Learning Research, 20(55), 1–21.  
+  Elsken, T., Metzen, J. H., & Hutter, F. (2019).
+
+---
+
+### Mathematics (for Machine Learning)
+
+- **Linear Algebra**. Pearson Education, 2nd Edition.  
+  Hoffman, K., & Kunze, R. (2005).
+
+- **Advanced Engineering Mathematics**. Wiley India, 10th Edition.  
+  Kreyszig, E. (2015).  
+  *(Earlier editions are also acceptable)*
+
+---
+
+### Machine Learning
+
+- **Machine Learning**. McGraw-Hill, Indian Edition.  
+  Mitchell, Tom M. (1997).
+
+- **Pattern Recognition and Machine Learning**. Springer.  
+  Bishop, C. M. (2006).
+
+- **Introduction to Data Mining**. Pearson, 2nd Edition.  
+  Tan, P.-N., Steinbach, M., & Kumar, V.
+
+- **A Tutorial on Support Vector Machines for Pattern Recognition**.  
+  Kluwer Academic Publishers, Boston, pp. 1–43.  
+  Burges, C. J. C.
+
+---
+
+### Probability & Statistics
+
+- **Probability and Statistics for Engineers**. PHI Learning, 8th Edition.  
+  Miller & Freund.
+
+- **Statistics for Business and Economics**. Cengage Learning.  
+  Anderson, D. R., Sweeney, D. J., & Williams, T. A.
+
+---
+
+## Online Resources
+
+---
 
 ### Machine Learning Specialization  
 **Stanford University | DeepLearning.AI**  
@@ -23,9 +87,8 @@ A comprehensive introduction to Machine Learning, covering supervised learning, 
 
 ---
 
-## Mathematics for Machine Learning
-
 ### Mathematics for Machine Learning Specialization  
+
 **Imperial College London**  
 Builds the mathematical foundations required for Machine Learning, including linear algebra, calculus, and probability.
 
@@ -33,9 +96,8 @@ Builds the mathematical foundations required for Machine Learning, including lin
 
 ---
 
-## AI Concepts for Everyone
-
 ### AI For Everyone  
+
 **DeepLearning.AI**  
 A non-technical course explaining what AI is, how it is used, and its impact on society and business.
 
@@ -43,9 +105,8 @@ A non-technical course explaining what AI is, how it is used, and its impact on 
 
 ---
 
-## Deep Learning & Neural Networks
-
 ### Deep Learning Specialization  
+
 **DeepLearning.AI**  
 An in-depth program covering neural networks, deep learning architectures, CNNs, RNNs, and optimisation techniques.
 
@@ -54,6 +115,7 @@ An in-depth program covering neural networks, deep learning architectures, CNNs,
 ---
 
 ### Neural Networks and Deep Learning  
+
 **DeepLearning.AI**  
 The first course in the Deep Learning Specialization, focusing on the fundamentals of neural networks.
 
@@ -61,9 +123,8 @@ The first course in the Deep Learning Specialization, focusing on the fundamenta
 
 ---
 
-## Machine Learning Project Design
-
 ### Structuring Machine Learning Projects  
+
 **DeepLearning.AI**  
 Learn how to design, evaluate, and improve Machine Learning systems in real-world projects.
 
