@@ -39,7 +39,7 @@ They learn language by analysing **massive amounts of text data**, discovering p
 
 ## Foundation: Transformer Architecture
 
-LLMs are based on the **[Transformer Architecture](/ai/deep-learning/transformer/)**, which allows models to understand **context and long-range dependencies** in text.
+LLMs are based on the **[Transformer Architecture](/docs/ai/deep-learning/transformer/)**, which allows models to understand **context and long-range dependencies** in text.
 
 Instead of reading text one word at a time, Transformers:
 - Look at **all words in a sentence at once**

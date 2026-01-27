@@ -41,7 +41,7 @@ Where:
 - \(x_i\) → input features  
 - \(w_i\) → weights  
 - \(b\) → bias  
-- \( f(\cdot) \) → activation function  
+- {{< katex display=true >}}f(\cdot){{< /katex >}} → activation function  
 
 ---
 
