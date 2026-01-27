@@ -7,7 +7,12 @@ weight: 1150
 ---
 # Solving Linear Systems
 
-A system can have:
+Solve using:
+- Substitution Method
+- Elimination Method (Multiple & then Subtract)
+- Cross Multiplication
+
+Linear system can have:
 - **no solution**
 - **a unique solution**
 - **infinitely many solutions**
