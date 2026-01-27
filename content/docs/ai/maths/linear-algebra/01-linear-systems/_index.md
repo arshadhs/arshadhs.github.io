@@ -26,10 +26,13 @@ Many machine learning models can be abstracted as:
 y = Wx + b
 {{< /katex >}}
 
-x → input data, 
-W → weight, how model transforms it, 
+x → input data
+
+W → weight, how model transforms it
+
 𝑏 → bias adjusts the result
-y → is the output.
+
+y → is the output
 
 > **Models transform input vectors using matrices.**
 
