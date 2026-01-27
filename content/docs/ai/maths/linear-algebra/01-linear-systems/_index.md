@@ -24,7 +24,7 @@ vectors
 
 -  performing a specific operation (like addition or multiplication) on members of a set always produces a result that belongs to the same set
 
-- idea of closure is fundamental to defining a **[Vector space]**(/docs/ai/linear-algebra/01-linear-systems) because it ensures that performing arithmetic operations (addition and scalar multiplication) on vectors within a set does not produce a new element outside that set. 
+- idea of closure is fundamental to defining a **[Vector space](/docs/ai/linear-algebra/01-linear-systems)** because it ensures that performing arithmetic operations (addition and scalar multiplication) on vectors within a set does not produce a new element outside that set. 
 
 ---
 
