@@ -41,7 +41,7 @@ Where:
 - \(x_i\) → input features  
 - \(w_i\) → weights  
 - \(b\) → bias  
-- \(f(\cdot)\) → activation function  
+- \( f(\cdot) \) → activation function  
 
 ---
 
