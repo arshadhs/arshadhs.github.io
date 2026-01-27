@@ -3,7 +3,7 @@ title: 'Deep Learning'
 draft: false
 tags: ['deep learning', 'neural networks', 'ai']
 categories: ['artificial intelligence']
-weight: 415
+weight: 400
 bookCollapseSection: true
 ---
 # Deep Learning

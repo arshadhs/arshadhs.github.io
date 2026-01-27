@@ -3,7 +3,7 @@ title: "Generative AI"
 draft: false
 tags: ["AI", "Generative AI", "GenAI", "LLM"]
 categories: ["AI"]
-weight: 400
+weight: 300
 menu: main
 bookCollapseSection: true
 ---

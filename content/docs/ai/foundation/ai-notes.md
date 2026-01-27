@@ -46,6 +46,8 @@ A curated list of **high-quality online courses** to learn Artificial Intelligen
   Kreyszig, E. (2015).  
   *(Earlier editions are also acceptable)*
 
+- [MML-Book](https://mml-book.github.io/book/mml-book.pdf)
+
 ---
 
 ### Machine Learning

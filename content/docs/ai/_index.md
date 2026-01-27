@@ -38,9 +38,9 @@ flowchart LR
 ---
 
 - Mathematical Foundations for Machine Learning
-- Introduction to Statistical Methods
-- Deep Neural Networks
+- Statistical Methods
 - Machine Learning
+- Deep Neural Networks
 
 ---
 

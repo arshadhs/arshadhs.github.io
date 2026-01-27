@@ -3,7 +3,7 @@ title: "Mathematical Foundation"
 draft: false
 tags: ["Machine Learning", "Mathematics", "Linear Algebra", "Probability", "Statistics", "Calculus"]
 categories: ["AI", "ML"]
-weight: 1100
+weight: 500
 menu: main
 bookCollapseSection: true
 ---
@@ -57,6 +57,10 @@ flowchart TB
     style CA fill:#64B5F6,stroke:#333
     style GR fill:#FFCCBC,stroke:#333
 {{< /mermaid >}}
+
+---
+
+{{< section_tree >}}
 
 ---
 

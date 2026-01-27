@@ -3,7 +3,7 @@ title: "Statistical Methods"
 draft: false
 tags: ["Statistics", "Probability", "Data Analysis"]
 categories: ["AI", "ML"]
-weight: 2000
+weight: 600
 menu: main
 bookCollapseSection: true
 ---

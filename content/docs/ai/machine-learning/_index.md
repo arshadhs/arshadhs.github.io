@@ -4,7 +4,7 @@ date: 2024-08-06T23:29:52+01:00
 draft: false
 tags: ["AI", "ML"]
 categories: ["AI", "ML"]
-weight: 400
+weight: 200
 bookCollapseSection: true
 ---
 # Machine Learning

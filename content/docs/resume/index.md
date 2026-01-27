@@ -26,6 +26,7 @@ Software Development | Product Development | Application Development | Embedded 
 - Jan 2004 - Aug 2004 – Member, R&D at Quark Software Inc.
 
 ## Education
+- M.Tech. Artificial Intelligence & Machine Learning, BITS Pilani, India 2027
 - Master of Computer Applications, Hamdard University, New Delhi India 2004
 - Bachelor of Computer Application, Institute of Technology and Science, India 2001
 - Cisco Certified Network Associate 2003
