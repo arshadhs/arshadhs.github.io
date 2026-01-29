@@ -79,6 +79,8 @@ RREF additionally requires:
 The RREF of a matrix is **unique**.
 {{% /hint %}}
 
+**Free Variables**: Variables whose **column has no leading entry** are called free variables and variables whose column does contain a leading entry are called pivot variables.
+
 ---
 
 ## Rank of a Matrix

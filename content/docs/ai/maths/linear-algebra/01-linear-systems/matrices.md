@@ -6,142 +6,202 @@ categories: ["AI", "ML"]
 weight: 1140
 ---
 
-## Scalar
+# Matrices
 
-### Definition
-A **scalar** is a single numerical value representing **magnitude only**.
-
-{{< katex display=true >}}
-\alpha \in \mathbb{R}
-{{< /katex >}}
-
-Scalars do not have direction — only size.
-
-### Geometric Intuition
-A scalar is like a number on a number line.  
-It tells you **how much**, not **which way**.
-
-### In Machine Learning
-- Learning rates  
-- Bias terms  
-- Loss values  
+Matrices are the **core data structure of linear algebra** and the **workhorse of machine learning**.  
+Almost every ML model can be described as a sequence of matrix operations.
 
 ---
 
-## Matrices
+## Matrix
 
-### Definition
-A **matrix** is a rectangular array of numbers arranged in rows and columns.
+A **matrix** is a rectangular array of numbers arranged in **rows and columns**.
 
+{{% hint danger %}}
 {{< katex display=true >}}
 A \in \mathbb{R}^{m \times n}
 {{< /katex >}}
+{{% /hint %}}
 
-An m × n matrix has:
-- m rows
-- n columns
+An \( m \times n \) matrix has:
+- \( m \) rows
+- \( n \) columns
 
+Example of a matrix:
+
+{{% hint danger %}}
 {{< katex display=true >}}
-\mathbf{x} =
+A =
 \begin{bmatrix}
-1 2 3 \\
-4 5 6 \\
+1 & 2 & 3 \\
+4 & 5 & 6
 \end{bmatrix}
 {{< /katex >}}
+{{% /hint %}}
+
+{{% hint info %}}
+Vectors are just special cases of matrices (with one row or one column).
+{{% /hint %}}
 
 ---
 
 ## Equality of Matrices
 
-Two matrices are equal if:
-1. They have the same dimensions
-2. All corresponding entries are equal
+Two matrices are **equal** if:
+1. They have the **same dimensions**
+2. Every **corresponding entry** is equal
+
+If either condition fails, the matrices are **not equal**.
 
 ---
 
 ## Matrix Operations
 
-### Matrix Addition
+### Matrix addition
 
-- Matrices should have the same size (e.g. A mxn and B mxn)
+Matrices can be added **only if they have the same dimensions**.
+
+{{% hint danger %}}
 {{< katex display=true >}}
-{A}^{m \times n} and {B}^{m \times n} 
+A \in \mathbb{R}^{m \times n}, \quad B \in \mathbb{R}^{m \times n}
 {{< /katex >}}
-- Addition is performed element-wise
+{{% /hint %}}
 
-Properties:
-- Commutative:
+Addition is performed **element-wise**.
+
+#### Properties
+
+**Commutative**
+{{% hint danger %}}
 {{< katex display=true >}}
 A + B = B + A
 {{< /katex >}}
+{{% /hint %}}
 
-- Associative:
+**Associative**
+{{% hint danger %}}
 {{< katex display=true >}}
 (A + B) + C = A + (B + C)
 {{< /katex >}}
+{{% /hint %}}
 
 ---
 
-### Scalar Multiplication
+### Scalar multiplication
 
-Multiplying a matrix by a scalar multiplies **every entry**.
+Multiplying a matrix by a scalar multiplies **every entry** of the matrix.
 
-Properties:
+#### Properties
+
+{{% hint danger %}}
 {{< katex display=true >}}
 c(A + B) = cA + cB
 {{< /katex >}}
+{{% /hint %}}
 
+{{% hint danger %}}
 {{< katex display=true >}}
 (c + k)A = cA + kA
 {{< /katex >}}
+{{% /hint %}}
 
+{{% hint danger %}}
 {{< katex display=true >}}
 (ck)A = c(kA)
 {{< /katex >}}
+{{% /hint %}}
 
+{{% hint danger %}}
 {{< katex display=true >}}
 1A = A
 {{< /katex >}}
+{{% /hint %}}
 
 ---
 
-## Matrix Multiplication (Very Important)
+### Matrix multiplication (very important)
 
-If AB = 0 does not necessarily imply BA = 0 or A = 0 or B = 0.
+Matrix multiplication combines **rows of the first matrix** with **columns of the second**.
 
 If:
-- A ∈ ℝ^{m × n}
-- B ∈ ℝ^{n × p}
+- \( A \in \mathbb{R}^{m \times n} \)
+- \( B \in \mathbb{R}^{n \times p} \)
 
 then:
 
+{{% hint danger %}}
 {{< katex display=true >}}
 AB \in \mathbb{R}^{m \times p}
 {{< /katex >}}
+{{% /hint %}}
+
+{{% hint info %}}
+Matrix multiplication represents **composition of linear transformations**.
+{{% /hint %}}
 
 {{% hint warning %}}
 Matrix multiplication is **not commutative** in general.
 {{% /hint %}}
 
+{{% hint danger %}}
 {{< katex display=true >}}
 AB \neq BA
 {{< /katex >}}
+{{% /hint %}}
+
+{{% hint info %}}
+Even if \( AB = 0 \), it does **not** imply  
+\( A = 0 \) or \( B = 0 \).
+{{% /hint %}}
 
 ---
 
-## Vectors
+## Vector
 
-A **vector** is a matrix with only one row or one column.
+A **vector** is a matrix with **exactly one row or one column**.
 
+{{% hint danger %}}
 {{< katex display=true >}}
 \text{Row vector: } 1 \times n \qquad
 \text{Column vector: } m \times 1
 {{< /katex >}}
+{{% /hint %}}
 
-Vectors represent:
-- data points
-- feature sets
-- model parameters
+### In machine learning
+
+Vectors are used to represent:
+- Data points  
+- Feature sets  
+- Model parameters  
+
+{{% hint info %}}
+Machine learning models transform **input vectors** into **output vectors** using matrices.
+{{% /hint %}}
+
+
+---
+
+## Scalar
+
+A **scalar** is a single numerical value representing **magnitude only**.
+
+{{% hint danger %}}
+{{< katex display=true >}}
+\alpha \in \mathbb{R}
+{{< /katex >}}
+{{% /hint %}}
+
+Scalars do **not** have direction — only size.
+
+### Geometric intuition
+A scalar is like a number on a number line.  
+It tells you **how much**, not **which way**.
+
+### In machine learning
+Scalars commonly represent:
+- Learning rates  
+- Bias terms  
+- Loss values  
 
 ---
 
