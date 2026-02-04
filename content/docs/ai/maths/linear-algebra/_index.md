@@ -8,9 +8,9 @@ bookCollapseSection: true
 ---
 # Linear Algebra
 
-Linear Algebra forms the foundation for representing data and transformations in machine learning.
+The **study of vectors and matrices** is called Linear Algebra.
 
-Linear Algebra provides the mathematical language used to represent data, transformations, and structure in machine learning.
+Linear Algebra provides the **mathematical language** used **to represent data, transformations, and structure** in ML.
 
 {{< section_tree >}}
 
