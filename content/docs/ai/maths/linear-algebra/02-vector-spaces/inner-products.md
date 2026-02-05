@@ -1,26 +1,236 @@
 ---
-title: "Inner Products"
+title: "Inner Products and Dot Product"
 draft: false
-weight: 24
-tags: ["Linear Algebra", "Vector Spaces"]
+tags: ["Machine Learning", "Mathematics", "Linear Algebra"]
+categories: ["AI", "ML"]
+weight: 1225
 ---
 
-# Inner Products
+# Inner Products and Dot Product
 
-- generalise the dot product 
-- define angles and projections
-- measures similarity between vectors
+In Machine Learning, we constantly measure:
+- **similarity** between data points
+- **angles** between vectors
+- **lengths** (magnitudes)
+- **orthogonality** (independence / no overlap)
 
+All of these start with one key tool:
+
+**the inner product**.
+
+---
+
+## What is an Inner Product?
+
+An **inner product** is an operation that takes two vectors and returns a **single number**.
+
+{{% hint info %}}
+In \(\mathbb{R}^n\), the most common inner product is the **dot product**.
+{{% /hint %}}
+
+For vectors \(\mathbf{a}, \mathbf{b} \in \mathbb{R}^n\), we write the inner product as:
+- \(\langle \mathbf{a}, \mathbf{b} \rangle\)
+
+---
+
+## Dot Product (Inner Product in \(\mathbb{R}^n\))
+
+Let:
+
+- \(\mathbf{a} = (a_1, a_2, \dots, a_n)\)
+- \(\mathbf{b} = (b_1, b_2, \dots, b_n)\)
+
+The **dot product** is:
+
+{{% hint danger %}}
 {{< katex display=true >}}
-\langle \mathbf{u}, \mathbf{v} \rangle = \mathbf{u}^T\mathbf{v}
+\mathbf{a}\cdot\mathbf{b} \;=\; \langle \mathbf{a}, \mathbf{b} \rangle
+\;=\; \sum_{i=1}^{n} a_i b_i
 {{< /katex >}}
+{{% /hint %}}
 
-It determines angles and orthogonality, and it induces a norm:
+---
 
+## Geometric Meaning of the Dot Product
+
+The dot product connects algebra to geometry:
+
+{{% hint danger %}}
 {{< katex display=true >}}
-\lVert \mathbf{u} \rVert = \sqrt{\langle \mathbf{u}, \mathbf{u} \rangle}
+\mathbf{a}\cdot\mathbf{b} \;=\; \|\mathbf{a}\|\,\|\mathbf{b}\|\cos(\theta)
 {{< /katex >}}
+{{% /hint %}}
+
+Where:
+- \(\|\mathbf{a}\|\) and \(\|\mathbf{b}\|\) are vector lengths (norms)
+- \(\theta\) is the angle between them
+
+{{% hint info %}}
+Interpretation (Important):
+- If \(\cos(\theta)\) is large (near 1), vectors point in a **similar direction**
+- If \(\cos(\theta)=0\), vectors are **orthogonal**
+- If \(\cos(\theta)\) is negative, vectors point in **opposite directions**
+{{% /hint %}}
+
+---
+
+## Angle Between Two Vectors
+
+Rearranging the geometric formula gives the angle:
+
+{{% hint danger %}}
+{{< katex display=true >}}
+\theta \;=\; \cos^{-1}\!\left(\frac{\mathbf{a}\cdot\mathbf{b}}{\|\mathbf{a}\|\,\|\mathbf{b}\|}\right)
+{{< /katex >}}
+{{% /hint %}}
+
+{{% hint info %}}
+The fraction \(\dfrac{\mathbf{a}\cdot\mathbf{b}}{\|\mathbf{a}\|\,\|\mathbf{b}\|}\) always lies in \([-1,1]\), so the angle is well-defined.
+{{% /hint %}}
+
+---
+
+## Orthogonality
+
+Two vectors are **orthogonal** if their dot product is zero:
+
+{{% hint danger %}}
+{{< katex display=true >}}
+\mathbf{a}\cdot\mathbf{b} = 0
+{{< /katex >}}
+{{% /hint %}}
+
+This implies:
+
+{{% hint danger %}}
+{{< katex display=true >}}
+\theta = \frac{\pi}{2}
+{{< /katex >}}
+{{% /hint %}}
+
+So the vectors are **perpendicular**.
+
+---
+
+## Worked Example
+
+Let:
+
+{{% hint danger %}}
+{{< katex display=true >}}
+\mathbf{a} =
+\begin{bmatrix}
+2\\
+2
+\end{bmatrix},
+\quad
+\mathbf{b} =
+\begin{bmatrix}
+2\\
+-2
+\end{bmatrix}
+{{< /katex >}}
+{{% /hint %}}
+
+Compute dot product:
+
+{{% hint danger %}}
+{{< katex display=true >}}
+\mathbf{a}\cdot\mathbf{b} = (2)(2) + (2)(-2) = 4 - 4 = 0
+{{< /katex >}}
+{{% /hint %}}
+
+So \(\mathbf{a}\) and \(\mathbf{b}\) are **orthogonal**.
+
+---
+
+## Key Properties of the Dot Product
+
+Let \(\mathbf{a},\mathbf{b},\mathbf{c}\in\mathbb{R}^n\) and \(\lambda\in\mathbb{R}\).
+
+### 1) Symmetry
+
+{{% hint danger %}}
+{{< katex display=true >}}
+\mathbf{a}\cdot\mathbf{b} = \mathbf{b}\cdot\mathbf{a}
+{{< /katex >}}
+{{% /hint %}}
+
+### 2) Linearity in each argument
+
+{{% hint danger %}}
+{{< katex display=true >}}
+(\mathbf{a}+\mathbf{b})\cdot\mathbf{c} = \mathbf{a}\cdot\mathbf{c} + \mathbf{b}\cdot\mathbf{c}
+{{< /katex >}}
+{{% /hint %}}
+
+{{% hint danger %}}
+{{< katex display=true >}}
+(\lambda\mathbf{a})\cdot\mathbf{b} = \lambda(\mathbf{a}\cdot\mathbf{b})
+{{< /katex >}}
+{{% /hint %}}
+
+### 3) Positivity
+
+{{% hint danger %}}
+{{< katex display=true >}}
+\mathbf{a}\cdot\mathbf{a} \ge 0
+{{< /katex >}}
+{{% /hint %}}
+
+and equals 0 only when \(\mathbf{a}=\mathbf{0}\).
+
+### 4) Link to the norm
+
+{{% hint danger %}}
+{{< katex display=true >}}
+\|\mathbf{a}\| = \sqrt{\mathbf{a}\cdot\mathbf{a}}
+{{< /katex >}}
+{{% /hint %}}
+
+---
+
+## Why This Matters in Machine Learning
+
+The dot product appears everywhere:
+
+- **Linear models**: predictions use dot products
+  {{% hint danger %}}
+  {{< katex display=true >}}
+  \hat{y} = \mathbf{w}\cdot\mathbf{x} + b
+  {{< /katex >}}
+  {{% /hint %}}
+
+- **Similarity**: cosine similarity is derived from the dot product
+- **SVMs**: kernels (especially linear kernel) use dot products
+- **Neural networks**: each neuron computes a weighted sum (dot product)
+- **Optimisation**: gradients and updates rely on inner products
+
+{{% hint info %}}
+Practical intuition:
+The dot product measures how much two vectors “point in the same direction”.
+In ML, that often means “how similar” two feature vectors are.
+{{% /hint %}}
+
+---
+
+## Summary
+
+- An **inner product** maps two vectors to a scalar
+- In \(\mathbb{R}^n\), the inner product is usually the **dot product**
+- Dot product connects to:
+  - angle between vectors
+  - orthogonality
+  - lengths (norms)
+- It is foundational to many ML models and similarity measures
+
+---
+
+## Reference
+
+- [Dot Product](https://www.geeksforgeeks.org/maths/dot-product/)
 
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}
+```
