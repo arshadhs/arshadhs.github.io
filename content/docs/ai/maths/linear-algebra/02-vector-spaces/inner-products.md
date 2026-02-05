@@ -25,27 +25,31 @@ All of these start with one key tool:
 An **inner product** is an operation that takes two vectors and returns a **single number**.
 
 {{% hint info %}}
-In \(\mathbb{R}^n\), the most common inner product is the **dot product**.
+In {{< katex >}}\mathbb{R}^n{{< /katex >}}, the most common inner product is the **dot product**.
 {{% /hint %}}
 
-For vectors \(\mathbf{a}, \mathbf{b} \in \mathbb{R}^n\), we write the inner product as:
-- \(\langle \mathbf{a}, \mathbf{b} \rangle\)
+For vectors  
+{{< katex >}}\mathbf{a}, \mathbf{b} \in \mathbb{R}^n{{< /katex >}},  
+we write the inner product as:
+
+- {{< katex >}}\langle \mathbf{a}, \mathbf{b} \rangle{{< /katex >}}
 
 ---
 
-## Dot Product (Inner Product in \(\mathbb{R}^n\))
+## Dot Product (Inner Product in {{< katex >}}\mathbb{R}^n{{< /katex >}})
 
 Let:
 
-- \(\mathbf{a} = (a_1, a_2, \dots, a_n)\)
-- \(\mathbf{b} = (b_1, b_2, \dots, b_n)\)
+- {{< katex >}}\mathbf{a} = (a_1, a_2, \dots, a_n){{< /katex >}}
+- {{< katex >}}\mathbf{b} = (b_1, b_2, \dots, b_n){{< /katex >}}
 
 The **dot product** is:
 
 {{% hint danger %}}
 {{< katex display=true >}}
-\mathbf{a}\cdot\mathbf{b} \;=\; \langle \mathbf{a}, \mathbf{b} \rangle
-\;=\; \sum_{i=1}^{n} a_i b_i
+\mathbf{a}\cdot\mathbf{b}
+= \langle \mathbf{a}, \mathbf{b} \rangle
+= \sum_{i=1}^{n} a_i b_i
 {{< /katex >}}
 {{% /hint %}}
 
@@ -57,35 +61,41 @@ The dot product connects algebra to geometry:
 
 {{% hint danger %}}
 {{< katex display=true >}}
-\mathbf{a}\cdot\mathbf{b} \;=\; \|\mathbf{a}\|\,\|\mathbf{b}\|\cos(\theta)
+\mathbf{a}\cdot\mathbf{b}
+= \|\mathbf{a}\|\,\|\mathbf{b}\|\cos(\theta)
 {{< /katex >}}
 {{% /hint %}}
 
 Where:
-- \(\|\mathbf{a}\|\) and \(\|\mathbf{b}\|\) are vector lengths (norms)
-- \(\theta\) is the angle between them
+- {{< katex >}}\|\mathbf{a}\|{{< /katex >}} and {{< katex >}}\|\mathbf{b}\|{{< /katex >}} are vector lengths (norms)
+- {{< katex >}}\theta{{< /katex >}} is the angle between them
 
 {{% hint info %}}
 Interpretation (Important):
-- If \(\cos(\theta)\) is large (near 1), vectors point in a **similar direction**
-- If \(\cos(\theta)=0\), vectors are **orthogonal**
-- If \(\cos(\theta)\) is negative, vectors point in **opposite directions**
+- If {{< katex >}}\cos(\theta){{< /katex >}} is near **1** → vectors align
+- If {{< katex >}}\cos(\theta)=0{{< /katex >}} → vectors are **orthogonal**
+- If {{< katex >}}\cos(\theta)<0{{< /katex >}} → vectors oppose each other
 {{% /hint %}}
 
 ---
 
 ## Angle Between Two Vectors
 
-Rearranging the geometric formula gives the angle:
+Rearranging gives the angle:
 
 {{% hint danger %}}
 {{< katex display=true >}}
-\theta \;=\; \cos^{-1}\!\left(\frac{\mathbf{a}\cdot\mathbf{b}}{\|\mathbf{a}\|\,\|\mathbf{b}\|}\right)
+\theta
+= \cos^{-1}
+\left(
+\frac{\mathbf{a}\cdot\mathbf{b}}
+{\|\mathbf{a}\|\,\|\mathbf{b}\|}
+\right)
 {{< /katex >}}
 {{% /hint %}}
 
 {{% hint info %}}
-The fraction \(\dfrac{\mathbf{a}\cdot\mathbf{b}}{\|\mathbf{a}\|\,\|\mathbf{b}\|}\) always lies in \([-1,1]\), so the angle is well-defined.
+The fraction always lies in {{< katex >}}[-1,1]{{< /katex >}}, so the angle is well-defined.
 {{% /hint %}}
 
 ---
@@ -136,41 +146,50 @@ Compute dot product:
 
 {{% hint danger %}}
 {{< katex display=true >}}
-\mathbf{a}\cdot\mathbf{b} = (2)(2) + (2)(-2) = 4 - 4 = 0
+\mathbf{a}\cdot\mathbf{b}
+= (2)(2) + (2)(-2)
+= 4 - 4
+= 0
 {{< /katex >}}
 {{% /hint %}}
 
-So \(\mathbf{a}\) and \(\mathbf{b}\) are **orthogonal**.
+So the vectors are **orthogonal**.
 
 ---
 
 ## Key Properties of the Dot Product
 
-Let \(\mathbf{a},\mathbf{b},\mathbf{c}\in\mathbb{R}^n\) and \(\lambda\in\mathbb{R}\).
+Let  
+{{< katex >}}\mathbf{a},\mathbf{b},\mathbf{c}\in\mathbb{R}^n{{< /katex >}}  
+and {{< katex >}}\lambda\in\mathbb{R}{{< /katex >}}.
 
-### 1) Symmetry
-
-{{% hint danger %}}
-{{< katex display=true >}}
-\mathbf{a}\cdot\mathbf{b} = \mathbf{b}\cdot\mathbf{a}
-{{< /katex >}}
-{{% /hint %}}
-
-### 2) Linearity in each argument
+### 1. Symmetry
 
 {{% hint danger %}}
 {{< katex display=true >}}
-(\mathbf{a}+\mathbf{b})\cdot\mathbf{c} = \mathbf{a}\cdot\mathbf{c} + \mathbf{b}\cdot\mathbf{c}
+\mathbf{a}\cdot\mathbf{b}
+= \mathbf{b}\cdot\mathbf{a}
+{{< /katex >}}
+{{% /hint %}}
+
+### 2. Linearity
+
+{{% hint danger %}}
+{{< katex display=true >}}
+(\mathbf{a}+\mathbf{b})\cdot\mathbf{c}
+= \mathbf{a}\cdot\mathbf{c}
++ \mathbf{b}\cdot\mathbf{c}
 {{< /katex >}}
 {{% /hint %}}
 
 {{% hint danger %}}
 {{< katex display=true >}}
-(\lambda\mathbf{a})\cdot\mathbf{b} = \lambda(\mathbf{a}\cdot\mathbf{b})
+(\lambda\mathbf{a})\cdot\mathbf{b}
+= \lambda(\mathbf{a}\cdot\mathbf{b})
 {{< /katex >}}
 {{% /hint %}}
 
-### 3) Positivity
+### 3. Positivity
 
 {{% hint danger %}}
 {{< katex display=true >}}
@@ -178,13 +197,15 @@ Let \(\mathbf{a},\mathbf{b},\mathbf{c}\in\mathbb{R}^n\) and \(\lambda\in\mathbb{
 {{< /katex >}}
 {{% /hint %}}
 
-and equals 0 only when \(\mathbf{a}=\mathbf{0}\).
+Equality holds **only** when  
+{{< katex >}}\mathbf{a}=\mathbf{0}{{< /katex >}}.
 
-### 4) Link to the norm
+### 4. Relation to Norm
 
 {{% hint danger %}}
 {{< katex display=true >}}
-\|\mathbf{a}\| = \sqrt{\mathbf{a}\cdot\mathbf{a}}
+\|\mathbf{a}\|
+= \sqrt{\mathbf{a}\cdot\mathbf{a}}
 {{< /katex >}}
 {{% /hint %}}
 
@@ -217,12 +238,12 @@ In ML, that often means “how similar” two feature vectors are.
 ## Summary
 
 - An **inner product** maps two vectors to a scalar
-- In \(\mathbb{R}^n\), the inner product is usually the **dot product**
+- Inner product is usually the **dot product** {{< katex >}}\mathbb{R}^n{{< /katex >}}
 - Dot product connects to:
   - angle between vectors
   - orthogonality
   - lengths (norms)
-- It is foundational to many ML models and similarity measures
+- Fundamental to ML models
 
 ---
 
@@ -233,4 +254,3 @@ In ML, that often means “how similar” two feature vectors are.
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}
-```
