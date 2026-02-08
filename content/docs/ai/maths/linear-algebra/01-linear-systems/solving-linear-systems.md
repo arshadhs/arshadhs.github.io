@@ -62,6 +62,8 @@ RREF is unique.
 
 ## Row Echelon Form (REF)
 
+REF simplifies a system of linear equations into a staircase form that makes solutions easy to read and classify.
+
 A matrix is in REF if:
 - All zero rows are at the bottom
 - Pivots (Leading entry) move to the right as rows go down
@@ -79,7 +81,13 @@ RREF additionally requires:
 The RREF of a matrix is **unique**.
 {{% /hint %}}
 
-**Free Variables**: Variables whose **column has no leading entry** are called free variables and variables whose column does contain a leading entry are called pivot variables.
+### Free Variables
+
+**Free Variables**: Variables whose **column has no leading entry**
+
+**Pivot (Basic) variables**: Variables whose column contain a leading entry
+
+A non pivot column can be written as a Linear combination of other pivot columns.
 
 ---
 

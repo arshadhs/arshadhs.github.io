@@ -11,6 +11,8 @@ weight: 1140
 Matrices are the **core data structure of linear algebra** and the **workhorse of machine learning**.  
 Almost every ML model can be described as a sequence of matrix operations.
 
+- [Special Matrices](/docs/ai/maths/linear-algebra/03-matrix-decomposition/special-matrices/)
+
 ---
 
 ## Matrix

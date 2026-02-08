@@ -37,6 +37,8 @@ flowchart TD
 ## Measures of Central Tendency
 
 Central tendency tells you where the “middle” of the data is.
+Describes a set of scores with a **single number** that describes the **PERFORMANCE** of the group. 
+
 
 ### Mean (average)
 
