@@ -173,8 +173,142 @@ Where:
 ---
 
 ## Trace
-- Sum of diagonal entries
-- Appears in many ML objectives
+
+The **trace** of an \( n \times n \) square matrix \( A \) is defined as the **sum of its diagonal elements**.
+
+{{% hint danger %}}
+{{< katex display=true >}}
+\operatorname{tr}(A) = \sum_{i=1}^{n} a_{ii}
+{{< /katex >}}
+{{% /hint %}}
+
+In simple terms:
+
+> Trace = sum of diagonal entries.
+
+---
+
+## Example
+
+For:
+
+{{% hint danger %}}
+{{< katex display=true >}}
+A =
+\begin{bmatrix}
+a_{11} & a_{12} \\
+a_{21} & a_{22}
+\end{bmatrix}
+{{< /katex >}}
+{{% /hint %}}
+
+{{% hint danger %}}
+{{< katex display=true >}}
+\operatorname{tr}(A) = a_{11} + a_{22}
+{{< /katex >}}
+{{% /hint %}}
+
+---
+
+# Properties of the Trace
+
+Let \( A, B \in \mathbb{R}^{n \times n} \) and \( \alpha \in \mathbb{R} \).
+
+---
+
+### 1. Linearity (Addition)
+
+{{% hint danger %}}
+{{< katex display=true >}}
+\operatorname{tr}(A + B) = \operatorname{tr}(A) + \operatorname{tr}(B)
+{{< /katex >}}
+{{% /hint %}}
+
+---
+
+### 2. Scalar Multiplication
+
+{{% hint danger %}}
+{{< katex display=true >}}
+\operatorname{tr}(\alpha A) = \alpha \operatorname{tr}(A)
+{{< /katex >}}
+{{% /hint %}}
+
+---
+
+### 3. Trace of Identity
+
+{{% hint danger %}}
+{{< katex display=true >}}
+\operatorname{tr}(I_n) = n
+{{< /katex >}}
+{{% /hint %}}
+
+Because the identity matrix has \( n \) ones on the diagonal.
+
+---
+
+### 4. Cyclic Property (Very Important ⭐)
+
+If  
+\( A \in \mathbb{R}^{n \times k} \) and  
+\( B \in \mathbb{R}^{k \times n} \), then:
+
+{{% hint danger %}}
+{{< katex display=true >}}
+\operatorname{tr}(AB) = \operatorname{tr}(BA)
+{{< /katex >}}
+{{% /hint %}}
+
+{{% hint info %}}
+This does **not** mean \( AB = BA \).  
+It only means their traces are equal.
+{{% /hint %}}
+
+This property is extremely important in:
+- Optimisation
+- Matrix calculus
+- Machine learning derivations
+
+---
+
+## Important Identity
+
+If \( A \) has eigenvalues \( \lambda_1, \lambda_2, \dots, \lambda_n \), then:
+
+{{% hint danger %}}
+{{< katex display=true >}}
+\operatorname{tr}(A) = \sum_{i=1}^{n} \lambda_i
+{{< /katex >}}
+{{% /hint %}}
+
+---
+
+## Why Trace Matters in Machine Learning
+
+Trace appears in:
+
+- Matrix derivatives
+- Quadratic forms
+- PCA
+- Gaussian likelihoods
+- Optimisation proofs
+
+Example quadratic form:
+
+{{% hint danger %}}
+{{< katex display=true >}}
+\mathbf{x}^T A \mathbf{x} = \operatorname{tr}(\mathbf{x}^T A \mathbf{x})
+{{< /katex >}}
+{{% /hint %}}
+
+Trace is often used to simplify matrix expressions.
+
+---
+
+{{% hint info %}}
+The proofs of these properties are straightforward and follow directly from the definition of the trace and properties of summation.
+{{% /hint %}}
 
 ---
 

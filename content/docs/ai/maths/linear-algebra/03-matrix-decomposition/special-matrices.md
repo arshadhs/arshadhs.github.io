@@ -8,7 +8,9 @@ weight: 1126
 
 Certain types of matrices have special structural properties that are widely used in linear algebra and machine learning.
 
-### Identity Matrix
+---
+
+## Identity Matrix
 
 An **identity matrix** is a square matrix where:
 - all diagonal entries are 1
@@ -19,21 +21,19 @@ Example (3×3):
 {{< katex display=true >}}
 I =
 \begin{bmatrix}
-1 & 0 & 0\\
-0 & 1 & 0\\
+1 & 0 & 0 \\
+0 & 1 & 0 \\
 0 & 0 & 1
 \end{bmatrix}
 {{< /katex >}}
 
-## Key property
-
-Multiplying by the identity matrix does not change a matrix (or vector):
+### Key Property
 
 {{< katex display=true >}}
 AI = IA = A
 {{< /katex >}}
 
-## Determinant of identity
+### Determinant
 
 {{< katex display=true >}}
 \det(I) = 1
@@ -41,9 +41,7 @@ AI = IA = A
 
 ---
 
----
-
-### Symmetric Matrix
+## Symmetric Matrix
 
 A matrix is **symmetric** if:
 
@@ -51,17 +49,17 @@ A matrix is **symmetric** if:
 A^T = A
 {{< /katex >}}
 
-**Intuition**  
-The matrix is symmetric about its main diagonal.
-
 **Used in**
-- Covariance matrices
-- Optimisation problems
-- Quadratic forms
+- Covariance matrices  
+- Quadratic forms  
+- Optimisation  
+
+
+The matrix is symmetric about its main diagonal.
 
 ---
 
-### Skew-Symmetric Matrix
+## Skew-Symmetric Matrix
 
 A matrix is **skew-symmetric** if:
 
@@ -69,21 +67,19 @@ A matrix is **skew-symmetric** if:
 A^T = -A
 {{< /katex >}}
 
+This implies:
+
+{{< katex display=true >}}
+a_{ii} = 0
+{{< /katex >}}
+
 This implies all diagonal elements are zero.
-
-**Intuition**  
-The matrix is antisymmetric across the main diagonal.
-
-**Used in**
-- Rotations
-- Cross-product representations
-- Physics and control systems
 
 ---
 
-### Diagonal Matrix
+## Diagonal Matrix
 
-A **diagonal matrix** has non-zero elements only on its main diagonal.
+A matrix with non-zero elements only on its main diagonal.
 
 {{< katex display=true >}}
 A =
@@ -94,19 +90,15 @@ a_1 & 0 & 0 \\
 \end{bmatrix}
 {{< /katex >}}
 
-**Intuition**  
-Each dimension is scaled independently.
+---
 
-**Used in**
-- Feature scaling
-- Eigenvalue matrices
-- Simplified computations
+# Triangular Matrices
 
 ---
 
-### Upper Triangular Matrix
+## Upper Triangular Matrix
 
-An **upper triangular matrix** has all elements below the main diagonal equal to zero.
+All elements below the main diagonal are zero:
 
 {{< katex display=true >}}
 a_{ij} = 0 \quad \text{for } i > j
@@ -114,42 +106,149 @@ a_{ij} = 0 \quad \text{for } i > j
 
 ---
 
-### Lower Triangular Matrix
+## Lower Triangular Matrix
 
-A **lower triangular matrix** has all elements above the main diagonal equal to zero.
+All elements above the main diagonal are zero:
 
 {{< katex display=true >}}
 a_{ij} = 0 \quad \text{for } i < j
 {{< /katex >}}
 
-**Intuition (Triangular Matrices)**  
-Dependencies flow in one direction.
+---
 
-**Used in**
-- Solving linear systems
-- Cholesky decomposition
-- LU decomposition
+## Determinant of Triangular Matrices ⭐
+
+For **both upper and lower triangular matrices**:
+
+{{< katex display=true >}}
+\det(A) = \prod_{i=1}^{n} a_{ii}
+{{< /katex >}}
+
+- The determinant equals the **product of diagonal entries**.
+
+{{% hint info %}}
+This makes computing determinants extremely fast for triangular matrices.
+{{% /hint %}}
 
 ---
 
-### Sparse Matrix
+## Inverse of Triangular Matrices ⭐
 
-A **sparse matrix** contains mostly zero elements.
+A triangular matrix is invertible **if and only if**:
 
-**Intuition**  
-Only a small number of values carry meaningful information.
+{{< katex display=true >}}
+a_{ii} \neq 0 \quad \forall i
+{{< /katex >}}
+
+If invertible:
+
+{{< katex display=true >}}
+A^{-1} \text{ is also triangular of the same type}
+{{< /katex >}}
+
+- Upper triangular → inverse is upper triangular  
+- Lower triangular → inverse is lower triangular  
+
+---
+
+## Strictly Lower Triangular Matrix
+
+All elements on and above the diagonal are zero:
+
+{{< katex display=true >}}
+a_{ij} = 0 \quad \text{for } i \le j
+{{< /katex >}}
+
+---
+
+## Unit Lower Triangular Matrix
+
+Diagonal entries are 1:
+
+{{< katex display=true >}}
+a_{ii} = 1
+{{< /katex >}}
+
+Appears in **LU decomposition**.
+
+---
+
+## Solving Systems with Triangular Matrices
+
+For lower triangular:
+
+{{< katex display=true >}}
+A\mathbf{x} = \mathbf{b}
+{{< /katex >}}
+
+Solve using **forward substitution**.
+
+For upper triangular:
+
+Use **back substitution**.
+
+---
+
+# Positive Definite Matrix ⭐
+
+A symmetric matrix \(A\) is **positive definite** if:
+
+{{< katex display=true >}}
+\mathbf{x}^T A \mathbf{x} > 0 \quad \forall \mathbf{x} \neq 0
+{{< /katex >}}
+
+---
+
+## Positive Semi-Definite
+
+{{< katex display=true >}}
+\mathbf{x}^T A \mathbf{x} \ge 0
+{{< /katex >}}
+
+---
+
+## Key Properties
+
+If \(A\) is positive definite:
+
+- All eigenvalues are positive  
+- Determinant is positive  
+- Matrix is invertible  
+- Cholesky decomposition exists  
+
+---
+
+## Why Positive Definite Matters in ML
+
+- Covariance matrices are positive semi-definite  
+- Hessian matrix in optimisation  
+- Guarantees convexity of quadratic functions  
+- Appears in Gaussian distributions  
+
+Example quadratic form:
+
+{{< katex display=true >}}
+f(\mathbf{x}) = \mathbf{x}^T A \mathbf{x}
+{{< /katex >}}
+
+If \(A\) is positive definite → function has a **unique global minimum**.
+
+---
+
+## Sparse Matrix
+
+A matrix with mostly zero entries.
 
 **Used in**
-- Recommender systems
-- Large-scale machine learning
-- Graph representations
-- Natural language processing
+- Recommender systems  
+- Graph representations  
+- NLP  
+- Large-scale ML  
 
-Sparse matrices reduce:
-- Memory usage
-- Computational cost
+Reduces:
+- Memory  
+- Computation time  
 
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}
-

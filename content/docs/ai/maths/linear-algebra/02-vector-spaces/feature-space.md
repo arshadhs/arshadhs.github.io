@@ -4,7 +4,6 @@ draft: false
 tags: ["Machine Learning", "Mathematics", "Linear Algebra"]
 categories: ["AI", "ML"]
 weight: 1201
-bookCollapseSection: true
 ---
 
 # Feature
