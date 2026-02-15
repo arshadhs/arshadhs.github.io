@@ -3,7 +3,7 @@ title: 'Perceptron'
 draft: false
 tags: ["AI", "ML", "Neural Networks"]
 categories: ["AI", "ML"]
-weight: 412
+weight: 210
 menu: main
 ---
 
@@ -13,6 +13,17 @@ A **Perceptron** is the **simplest form of an artificial neural network (ANN)**.
 It is an algorithm for **supervised learning** used mainly for **binary classification** problems.
 
 It forms the **basic building block** of modern neural networks and deep learning models.
+
+Typical use-cases: 
+- learning simple decision boundaries (like AND/OR logic)
+- understanding why deeper networks are needed for harder patterns
+
+{{% hint info %}}
+Think of a perceptron as:
+- a **single neuron**,
+- doing a **linear decision** (a hyperplane boundary),
+- trained using the **Perceptron Learning Algorithm (PLA)** when data is linearly separable.
+{{% /hint %}}
 
 ---
 
@@ -28,6 +39,37 @@ A perceptron:
 - Produces a **binary output**
 
 In simple terms, it decides between **two classes**.
+
+## Decision boundary
+
+The boundary is where the neuron is exactly “on the fence”:
+
+{{% hint danger %}}
+{{< katex display=true >}}
+w^T x + b = 0
+{{< /katex >}}
+{{% /hint %}}
+
+In 2D, this is a line; in 3D, a plane; in {{< katex >}}d{{< /katex >}} dimensions, a hyperplane.
+
+## Perceptron as a geometry tool
+
+Training the perceptron is essentially searching for a separating line/plane that places one class on one side and the other class on the other side.
+
+---
+
+## Properties
+
+### Linear separability is the key condition
+A perceptron can correctly classify a dataset only if the two classes can be separated by a hyperplane (i.e., the data is **linearly separable**).
+
+{{% hint info %}}
+The perceptron is powerful for *linear* decision problems (many logic gates), but it fails on patterns like **XOR** which are **not** linearly separable.
+{{% /hint %}}
+
+### Logic gates: what it can and cannot represent
+- Can represent **AND**, **OR**, **NAND**, **NOR**, **NOT** using suitable weights and bias.  
+- Cannot represent **XOR** with a single perceptron.
 
 ---
 
@@ -145,6 +187,17 @@ A single perceptron **cannot** solve problems like XOR because they are not line
 
 This limitation led to **multi-layer neural networks**.
 
+### Why XOR matters
+
+XOR is the clean demonstration that **linear models are limited**, which motivates adding **hidden layers** (moving from a single perceptron to an MLP).
+
+If your data is not linearly separable, you typically need:
+- feature transforms, or
+- multiple layers (hidden units), or
+- a different model family.
+
+The perceptron story is the “why” behind depth.
+
 ---
 
 ## From Perceptron to Neural Networks
@@ -205,16 +258,22 @@ Activation depends on the task:
 
 ---
 
-## Key Takeaway
+## Summary
 
 - A **perceptron** models a straight decision line
+- A perceptron is the **simplest artificial neuron** for **binary classification**
+- It computes a weighted sum and applies a **threshold** to decide the class.
+- It learns a **linear decision boundary** and works well only for **linearly separable** data.
+- It can model many logic gates (AND/OR/etc.) but **fails on XOR**, motivating hidden layers.
 - **Neural networks** combine many perceptrons
 - Non-linear activations allow complex decision boundaries
 - Deep learning is built by stacking perceptrons
 
----
-
-## Further Reading
+## Reference
+- **AIML Module 2 — ANN Perceptron**.
+- Rosenblatt, F. (1958) — *The Perceptron: A Probabilistic Model*.
+- Goodfellow, Bengio, Courville — *Deep Learning* (Ch. 1–6).
+- Zhang et al. — *Dive into Deep Learning* (Intro/linear models).
 
 - [Perceptron – GeeksforGeeks](https://www.geeksforgeeks.org/machine-learning/what-is-perceptron-the-simplest-artificial-neural-network/)
 
