@@ -29,7 +29,7 @@ Linear regression assumes the output is a linear combination of the input featur
 **Linear regression as a single-neuron neural network** with an **identity activation**.  
 {{% /hint %}}
 
-## Mathemetaical Form
+## Mathematical Form
 
 {{% hint danger %}}
 {{< katex display=true >}}

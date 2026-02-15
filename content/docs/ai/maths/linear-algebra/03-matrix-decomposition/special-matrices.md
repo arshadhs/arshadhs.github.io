@@ -189,7 +189,7 @@ Use **back substitution**.
 
 ---
 
-# Positive Definite Matrix ⭐
+## Positive Definite Matrix ⭐
 
 A symmetric matrix \(A\) is **positive definite** if:
 
