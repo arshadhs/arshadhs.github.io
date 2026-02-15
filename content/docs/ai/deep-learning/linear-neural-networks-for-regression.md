@@ -178,12 +178,14 @@ Interpretation (rule of thumb):
 - Course deck: **DNN Module #3 — Linear Neural Networks for Regression**.
 - Zhang, Lipton, Li, Smola — *Dive into Deep Learning* (sections on linear regression).
 - Goodfellow, Bengio, Courville — *Deep Learning* (optimisation and regression basics).
+
 <!--
 - [Activation Functions]({{< relref "activation-functions" >}})
 - [Loss Functions]({{< relref "loss-functions" >}})
 - [Optimisation: SGD and Adam]({{< relref "optimisation-sgd-adam" >}})
 - [Computation Graphs]({{< relref "computational-graphs" >}})
 -->
+
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}
