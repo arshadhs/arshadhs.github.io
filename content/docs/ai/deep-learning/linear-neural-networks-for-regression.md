@@ -175,16 +175,11 @@ Interpretation (rule of thumb):
 - This “data → model → objective → optimiser” pipeline generalises to deep networks.
 
 ## Reference
-- Course deck: **DNN Module #3 — Linear Neural Networks for Regression**.
+- **DNN Module #3 — Linear Neural Networks for Regression**.
 - Zhang, Lipton, Li, Smola — *Dive into Deep Learning* (sections on linear regression).
 - Goodfellow, Bengio, Courville — *Deep Learning* (optimisation and regression basics).
 
-<!--
-- [Activation Functions]({{< relref "activation-functions" >}})
-- [Loss Functions]({{< relref "loss-functions" >}})
-- [Optimisation: SGD and Adam]({{< relref "optimisation-sgd-adam" >}})
-- [Computation Graphs]({{< relref "computational-graphs" >}})
--->
+- [Why Square the Error?](https://medium.com/@mail.alireza.a/why-square-the-error-in-machine-learning-153067c1ef64)
 
 ---
 
