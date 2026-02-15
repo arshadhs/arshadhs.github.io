@@ -1,4 +1,3 @@
-<!-- File: content/docs/deep-learning/perceptron.md -->
 ---
 title: "Perceptron"
 date: 2026-02-15
