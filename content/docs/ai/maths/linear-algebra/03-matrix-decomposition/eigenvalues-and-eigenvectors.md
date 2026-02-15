@@ -5,17 +5,19 @@ tags: ["Machine Learning", "Mathematics", "Linear Algebra"]
 categories: ["AI", "ML"]
 weight: 1320
 ---
+
 # Eigenvalues and Eigenvectors
 
-- Eigenvalues give scaling.
-- Eigenvectors define invariant directions of transformation.
+- Eigenvalues give **scaling**.
+- Eigenvectors define **invariant directions** of transformation.
 
-Eigenvalues and eigenvectors describe **directions that remain unchanged under a linear transformation**, except for scaling.
+Eigenvalues and eigenvectors describe directions that remain unchanged under a linear transformation, except for scaling.
 
-Let \( A \in \mathbb{R}^{n \times n} \).
+Let {{< katex >}}A \in \mathbb{R}^{n \times n}{{< /katex >}}.
 
-A scalar \( \lambda \in \mathbb{R} \) is an **eigenvalue** of \( A \), and 
-a non-zero vector \( \mathbf{x} \in \mathbb{R}^n \setminus \{0\} \) is an **eigenvector** corresponding to \( \lambda \), if:
+A scalar {{< katex >}}\lambda \in \mathbb{R}{{< /katex >}} is an **eigenvalue** of {{< katex >}}A{{< /katex >}}, and a non-zero vector  
+{{< katex >}}\mathbf{x} \in \mathbb{R}^n \setminus \{0\}{{< /katex >}}  
+is an **eigenvector** corresponding to {{< katex >}}\lambda{{< /katex >}} if:
 
 {{% hint danger %}}
 {{< katex display=true >}}
@@ -26,22 +28,22 @@ A\mathbf{x} = \lambda \mathbf{x}
 This is called the **eigenvalue equation**.
 
 They are fundamental in:
-- PCA
-- Optimisation
-- Spectral methods
-- Stability analysis
-- Least squares
-- Neural networks
+- PCA  
+- Optimisation  
+- Spectral methods  
+- Stability analysis  
+- Least squares  
+- Neural networks  
 
 ---
 
-# Equivalent Characterisations ⭐
+# Equivalent Characterisations
 
 The following statements are equivalent:
 
-1. \( \lambda \) is an eigenvalue of \( A \)
+1. {{< katex >}}\lambda{{< /katex >}} is an eigenvalue of {{< katex >}}A{{< /katex >}}.
 
-2. There exists \( \mathbf{x} \neq 0 \) such that:
+2. There exists {{< katex >}}\mathbf{x} \neq 0{{< /katex >}} such that:
 
 {{% hint danger %}}
 {{< katex display=true >}}
@@ -49,7 +51,7 @@ The following statements are equivalent:
 {{< /katex >}}
 {{% /hint %}}
 
-3. The system has a **non-trivial solution**
+3. The system has a **non-trivial solution**.
 
 4. Rank condition:
 
@@ -71,23 +73,19 @@ The following statements are equivalent:
 
 # Characteristic Polynomial
 
-The polynomial:
-
 {{% hint danger %}}
 {{< katex display=true >}}
 p_A(\lambda) = \det(A - \lambda I)
 {{< /katex >}}
 {{% /hint %}}
 
-is called the **characteristic polynomial**.
-
-Eigenvalues are the **roots** of this polynomial.
+Eigenvalues are the **roots** of the characteristic polynomial.
 
 ---
 
-# Important Property
+# Scaling Property
 
-If \( \mathbf{x} \) is an eigenvector corresponding to \( \lambda \), then:
+If {{< katex >}}\mathbf{x}{{< /katex >}} is an eigenvector corresponding to {{< katex >}}\lambda{{< /katex >}}, then:
 
 {{% hint danger %}}
 {{< katex display=true >}}
@@ -97,7 +95,7 @@ c\mathbf{x}, \quad c \in \mathbb{R} \setminus \{0\}
 
 is also an eigenvector.
 
-> Eigenvectors are defined **up to scaling**.
+Eigenvectors are defined **up to scaling**.
 
 ---
 
@@ -150,11 +148,7 @@ Eigenvalues:
 
 ## Step 2: Eigenvectors
 
-For \( \lambda = 0 \):
-
-Solve \( A\mathbf{x} = 0 \).
-
-Nullspace gives:
+For {{< katex >}}\lambda = 0{{< /katex >}}:
 
 {{% hint danger %}}
 {{< katex display=true >}}
@@ -166,7 +160,7 @@ Nullspace gives:
 {{< /katex >}}
 {{% /hint %}}
 
-For \( \lambda = 2 \):
+For {{< katex >}}\lambda = 2{{< /katex >}}:
 
 {{% hint danger %}}
 {{< katex display=true >}}
@@ -180,17 +174,9 @@ For \( \lambda = 2 \):
 
 ---
 
-# General Procedure
-
-1. Compute \( \det(A - \lambda I) \)
-2. Solve for roots \( \lambda \)
-3. For each \( \lambda \), compute nullspace of \( A - \lambda I \)
-
----
-
 # Eigenspace
 
-For eigenvalue \( \lambda \), the **eigenspace** is:
+For eigenvalue {{< katex >}}\lambda{{< /katex >}}, the eigenspace is:
 
 {{% hint danger %}}
 {{< katex display=true >}}
@@ -198,45 +184,41 @@ E_\lambda = \operatorname{Null}(A - \lambda I)
 {{< /katex >}}
 {{% /hint %}}
 
-It is a **subspace of \( \mathbb{R}^n \)**.
+It is a subspace of {{< katex >}}\mathbb{R}^n{{< /katex >}}.
 
 ---
 
 # Spectrum
 
-The set of all eigenvalues of \( A \) is called the **spectrum** of \( A \).
+The set of all eigenvalues of {{< katex >}}A{{< /katex >}} is called the **spectrum** of {{< katex >}}A{{< /katex >}}.
 
 ---
 
-# Additional Properties
+# Important Properties
 
-### 1. Transpose Property
-
-A matrix and its transpose have the same eigenvalues.
-
-Reason:
+### Transpose Property
 
 {{% hint danger %}}
 {{< katex display=true >}}
 \det(A - \lambda I)
 =
-\det((A - \lambda I)^T)
-=
 \det(A^T - \lambda I)
 {{< /katex >}}
 {{% /hint %}}
 
----
-
-### 2. Distinct Eigenvalues ⇒ Linear Independence ⭐
-
-If an \( n \times n \) matrix has \( n \) **distinct eigenvalues**, then its eigenvectors are **linearly independent**.
+Therefore, {{< katex >}}A{{< /katex >}} and {{< katex >}}A^T{{< /katex >}} have the same eigenvalues.
 
 ---
 
-### 3. Identity Matrix Example
+### Distinct Eigenvalues
 
-For \( I_n \):
+If an {{< katex >}}n \times n{{< /katex >}} matrix has {{< katex >}}n{{< /katex >}} distinct eigenvalues, its eigenvectors are linearly independent.
+
+---
+
+### Identity Matrix Example
+
+For {{< katex >}}I_n{{< /katex >}}:
 
 {{% hint danger %}}
 {{< katex display=true >}}
@@ -244,28 +226,28 @@ I_n \mathbf{x} = 1 \cdot \mathbf{x}
 {{< /katex >}}
 {{% /hint %}}
 
-- Only eigenvalue: \( \lambda = 1 \)
-- Eigenspace: \( \mathbb{R}^n \)
+- Only eigenvalue: {{< katex >}}\lambda = 1{{< /katex >}}  
+- Eigenspace: {{< katex >}}\mathbb{R}^n{{< /katex >}}
 
 ---
 
-# Symmetric Matrices ⭐
+# Symmetric Matrices
 
-If \( A \) is symmetric:
+If {{< katex >}}A{{< /katex >}} is symmetric:
 
 - All eigenvalues are **real**
-- Eigenvectors corresponding to different eigenvalues are **orthogonal**
+- Eigenvectors for distinct eigenvalues are **orthogonal**
 
 ---
 
-# Spectral Theorem ⭐
+# Spectral Theorem
 
-If \( A \in \mathbb{R}^{n \times n} \) is symmetric:
+If {{< katex >}}A \in \mathbb{R}^{n \times n}{{< /katex >}} is symmetric:
 
-- There exists an **orthonormal basis** of eigenvectors
+- There exists an orthonormal basis of eigenvectors
 - All eigenvalues are real
 
-This allows diagonalisation:
+Diagonalisation:
 
 {{% hint danger %}}
 {{< katex display=true >}}
@@ -274,16 +256,14 @@ A = Q \Lambda Q^T
 {{% /hint %}}
 
 Where:
-- \( Q \) = orthogonal matrix of eigenvectors
-- \( \Lambda \) = diagonal matrix of eigenvalues
+- {{< katex >}}Q{{< /katex >}} is orthogonal  
+- {{< katex >}}\Lambda{{< /katex >}} is diagonal  
 
 ---
 
-# Connection to Machine Learning
+# Machine Learning Connection
 
-## 1. Least Squares
-
-If \( A \in \mathbb{R}^{m \times n} \), then:
+If {{< katex >}}A \in \mathbb{R}^{m \times n}{{< /katex >}}, then:
 
 {{% hint danger %}}
 {{< katex display=true >}}
@@ -291,11 +271,7 @@ A^T A
 {{< /katex >}}
 {{% /hint %}}
 
-is:
-- Symmetric
-- Positive definite (if rank \( A = n \))
-
-Because:
+is symmetric and positive definite (if {{< katex >}}\operatorname{rank}(A)=n{{< /katex >}}), because:
 
 {{% hint danger %}}
 {{< katex display=true >}}
@@ -305,59 +281,21 @@ Because:
 {{< /katex >}}
 {{% /hint %}}
 
-This matrix appears in:
-- Linear regression
-- Normal equations
-- PCA
-
----
-
-# Important Conceptual Question
-
-Does every matrix have \( n \) eigenvectors?
-
-- **No**
-
-Example:
-
-{{% hint danger %}}
-{{< katex display=true >}}
-\begin{bmatrix}
-0 & 1 \\
-0 & 0
-\end{bmatrix}
-{{< /katex >}}
-{{% /hint %}}
-
-This matrix does not have a full set of linearly independent eigenvectors.
-
----
-
-# Geometric Interpretation
-
-The equation:
-
-{{% hint danger %}}
-{{< katex display=true >}}
-A\mathbf{x} = \lambda \mathbf{x}
-{{< /katex >}}
-{{% /hint %}}
-
-means:
-
-> Matrix \( A \) preserves the direction of \( \mathbf{x} \)  
-> and only scales it by \( \lambda \).
+Appears in:
+- Linear regression  
+- Normal equations  
+- PCA  
 
 ---
 
 # Summary
 
 - Eigenvalues are roots of the characteristic polynomial
-- Eigenvectors form eigenspaces
+- Eigenspace is the nullspace of {{< katex >}}A - \lambda I{{< /katex >}}
 - Symmetric matrices have real eigenvalues
-- Distinct eigenvalues ⇒ independent eigenvectors
-- \( A^T A \) is symmetric positive definite (full rank case)
-- Spectral theorem gives orthonormal eigenbasis
+- Distinct eigenvalues imply independence
+- {{< katex >}}A^T A{{< /katex >}} is symmetric positive definite (full rank case)
+- Spectral theorem provides orthonormal eigenbasis
 
 ---
 
