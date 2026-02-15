@@ -14,7 +14,7 @@ A **linear neural network for regression** is a model that predicts a **continuo
 Typical use-cases: house prices, temperature forecasting, and other continuous predictions.
 
 {{% hint info %}}
-T**linear regression as a single-neuron neural network** with an **identity activation**.
+**linear regression as a single-neuron neural network** with an **identity activation**.
 It is the cleanest “first example” of the full ML pipeline: data → model → objective → learning algorithm → evaluation.
 {{% /hint %}}
 
@@ -178,12 +178,12 @@ Interpretation (rule of thumb):
 - Course deck: **DNN Module #3 — Linear Neural Networks for Regression**.
 - Zhang, Lipton, Li, Smola — *Dive into Deep Learning* (sections on linear regression).
 - Goodfellow, Bengio, Courville — *Deep Learning* (optimisation and regression basics).
-
+<!--
 - [Activation Functions]({{< relref "activation-functions" >}})
 - [Loss Functions]({{< relref "loss-functions" >}})
 - [Optimisation: SGD and Adam]({{< relref "optimisation-sgd-adam" >}})
 - [Computation Graphs]({{< relref "computational-graphs" >}})
-
+-->
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}
