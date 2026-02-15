@@ -40,22 +40,6 @@ A perceptron:
 
 In simple terms, it decides between **two classes**.
 
-## Decision boundary
-
-The boundary is where the neuron is exactly “on the fence”:
-
-{{% hint danger %}}
-{{< katex display=true >}}
-w^T x + b = 0
-{{< /katex >}}
-{{% /hint %}}
-
-In 2D, this is a line; in 3D, a plane; in {{< katex >}}d{{< /katex >}} dimensions, a hyperplane.
-
-## Perceptron as a geometry tool
-
-Training the perceptron is essentially searching for a separating line/plane that places one class on one side and the other class on the other side.
-
 ---
 
 ## Properties
@@ -84,6 +68,22 @@ Where:
 - \(w_i\) → weights  
 - \(b\) → bias  
 - {{< katex >}}f(\cdot){{< /katex >}} → activation function 
+
+### Decision boundary
+
+The boundary is where the neuron is exactly “on the fence”:
+
+{{% hint danger %}}
+{{< katex display=true >}}
+w^T x + b = 0
+{{< /katex >}}
+{{% /hint %}}
+
+In 2D, this is a line; in 3D, a plane; in {{< katex >}}d{{< /katex >}} dimensions, a hyperplane.
+
+### Perceptron as a geometry tool
+
+Training the perceptron is essentially searching for a separating line/plane that places one class on one side and the other class on the other side.
 
 ---
 

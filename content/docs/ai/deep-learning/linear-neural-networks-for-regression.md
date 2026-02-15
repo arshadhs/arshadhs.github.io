@@ -11,114 +11,120 @@ categories: ["AI", "Machine Learning"]
 
 A **linear neural network for regression** is a model that predicts a **continuous** target by taking a weighted sum of input features and applying the **identity activation** (so the output can be any real number).
 
-Typical use-cases: house prices, temperature forecasting, and other continuous predictions.
+## Regression
+
+Regression is a supervised learning task that predicts a continuous-valued output based on input features.
+
+Typical use-cases: 
+- house prices prediction
+- temperature forecasting
+- stock price prediction
+- other continuous predictions
+
+## Linear Regression
+
+Linear regression assumes the output is a linear combination of the input features.
 
 {{% hint info %}}
 **Linear regression as a single-neuron neural network** with an **identity activation**.  
-It is the cleanest “first example” of the full ML pipeline: data → model → objective → learning algorithm → evaluation.
 {{% /hint %}}
 
-## General Form
+## Mathemetaical Form
 
 {{% hint danger %}}
-**Regression task**  
-Given an input feature vector {{< katex >}}x \in \mathbb{R}^d{{< /katex >}}, predict a real-valued target {{< katex >}}y \in \mathbb{R}{{< /katex >}} by learning a function {{< katex >}}f:\mathbb{R}^d \to \mathbb{R}{{< /katex >}}.
-
-**Linear regression form**
-
 {{< katex display=true >}}
 \hat{y} = w_0 + w_1x_1 + \cdots + w_dx_d
 {{< /katex >}}
+{{% /hint %}}
 
-**Single-neuron (augmented vector) form**  
-Let {{< katex >}}\tilde{x} = [1, x_1, \dots, x_d]^T{{< /katex >}} and {{< katex >}}w = [w_0, w_1, \dots, w_d]^T{{< /katex >}}.  
-With identity activation {{< katex >}}f(z)=z{{< /katex >}}:
+where:
+- {{< katex >}}x = [x_1, x_2, \dots, x_d]^T{{< /katex >}} are the input features
+- {{< katex >}}w = [w_1, w_2, \dots, w_d]^T{{< /katex >}} are the weights
+- {{< katex >}}w_0{{< /katex >}} is the bias term
 
-{{< katex display=true >}}
-\hat{y} = f(w^T\tilde{x}) = w^T\tilde{x}
-{{< /katex >}}
+## The Four Components
 
-**Vectorised predictions**  
-For {{< katex >}}N{{< /katex >}} examples, design matrix {{< katex >}}X \in \mathbb{R}^{N \times (d+1)}{{< /katex >}}, targets {{< katex >}}y \in \mathbb{R}^N{{< /katex >}}:
+A complete ML system has four components:
+- **Data**: inputs {{< katex >}}X{{< /katex >}} and targets {{< katex >}}y{{< /katex >}}
+- **Model**: Single neuron implementing linear function - the function that maps inputs to predictions
+- **Objective**: Measures prediction error - a loss that measures error
+- **Learning algorithm**: an optimiser (Gradient descent to optimise weights)
 
-{{< katex display=true >}}
-\hat{y} = Xw
-{{< /katex >}}
+{{% hint info %}}
+This same template extends directly to multi-layer networks:  
+only the model {{< katex >}}f_\theta{{< /katex >}} becomes deeper, and backpropagation computes gradients efficiently.
+{{% /hint %}}
+
+## Linear Model Prediction
+
+Model: A single neuron computes a weighted sum and applied identity activation function.
+
+## Identity Activation Function
+
+Properties of Identity Function Output: Continuous, (-\infty, \infty)  
+Differentiable everywhere: {{< katex >}}f'(z) = 1{{< /katex >}} Allows output to take any real value  
+Gradient flows unchanged through the neuron Perfect for predicting continuous targets  
+Why identity for regression?  
+Target values are continuous (prices, temperatures, etc.) Need to predict any real number, not just binary {{< katex >}}\{0,1\}{{< /katex >}} Differentiability enables gradient-based optimisation  
+No information loss from input to output
+
+## Objective Function: Squared Error Loss
+
+Measure how well our model fits the data.
 
 **Squared error (MSE) objective**
 
-{{< katex display=true >}}
-J(w) = \frac{1}{N}\sum_{i=1}^{N}\big(\hat{y}^{(i)} - y^{(i)}\big)^2
-{{< /katex >}}
+### Why Squared Error?
 
-Equivalently, with error vector {{< katex >}}e = \hat{y} - y{{< /katex >}}:
+Advantages of squared error loss:  
+Differentiable: Smooth everywhere, easy to optimise Convex: Single global minimum (for linear models) Penalises large errors: Quadratic growth  
+Statistical interpretation: Maximum likelihood under Gaussian noise
 
-{{< katex display=true >}}
-J(w) = \frac{1}{N} e^T e
-{{< /katex >}}
-{{% /hint %}}
+---
 
-{{% hint danger %}}
-**Gradient for MSE (vector form)**
+## Gradient Descent Algorithm
 
-{{< katex display=true >}}
-\nabla J(w) = \frac{2}{N}X^T(\hat{y}-y) = \frac{2}{N}X^T e
-{{< /katex >}}
+Iteratively update weights in the direction of steepest descent
 
-**Gradient descent update**
+- Cost Function: The curve represents the cost function, labeled {{< katex >}}J(w){{< /katex >}} on the vertical axis. This function measures the "cost" or error of the model's predictions based on a given weight parameter {{< katex >}}w{{< /katex >}} on the horizontal axis. 
+- Objective: The goal of the algorithm is to find the parameter {{< katex >}}w{{< /katex >}} that minimises the cost function, reaching the "Global cost minimum", {{< katex >}}J_{\min}(w){{< /katex >}}. 
+- Initial Point: The process begins at an "Initial weight" (the black dot), a randomly chosen starting point on the cost function curve. 
+- Gradient and Iteration: The "Gradient" (dashed line) represents the slope of the tangent at the current point. The algorithm iteratively updates the weight by moving in the direction opposite to the gradient (down the slope), as indicated by the arrows. This process is repeated until the minimum is reached, effectively minimising the model's error. The update rule is typically {{< katex >}}w = w - \eta \cdot \nabla J(w){{< /katex >}}, where {{< katex >}}\eta{{< /katex >}} is the learning rate and {{< katex >}}\nabla J(w){{< /katex >}} is the gradient. 
 
-{{< katex display=true >}}
-w^{(t+1)} = w^{(t)} - \eta \, \nabla J\big(w^{(t)}\big)
-{{< /katex >}}
+### Computing GDA
 
-where {{< katex >}}\eta > 0{{< /katex >}} is the learning rate.
-{{% /hint %}}
+In a neural network, the gradient is a vector that represents the direction and magnitude of the steepest ascent of the loss function.
 
-## Properties
+It is calculated using the partial derivatives of the loss function with respect to each of the network's parameters (weights and biases).
 
-### Identity activation is the right match for regression
-- Output range is {{< katex >}}(-\infty, \infty){{< /katex >}}, so the model can predict any real number.
-- It is differentiable everywhere, and its derivative is constant.
+During training, this information is used to guide the process of gradient descent, which adjusts the parameters in the opposite direction of the gradient to minimise the loss and improve the model's predictions
 
-{{% hint danger %}}
-Identity activation:
+Both Batch Gradient Descent and Stochastic Gradient Descent are useful optimization algorithms that serve different purposes depending on the problem at hand.
 
-{{< katex display=true >}}
-f(z)=z,\qquad f'(z)=1
-{{< /katex >}}
-{{% /hint %}}
+### Variations of GDA
 
-{{% hint info %}}
-Because {{< katex >}}f'(z)=1{{< /katex >}}, the gradient signal passes through this neuron unchanged.  
-This is one reason linear regression is a great “first training example”.
-{{% /hint %}}
+Choosing between the two algorithms depends on factors like the size of the dataset, computational resources and the nature of the error surface.
 
-### Squared error gives a well-behaved objective for a linear model
-- Differentiable and smooth.
-- Convex for linear models (so there is a single global optimum for {{< katex >}}J(w){{< /katex >}}).
-- Penalises large errors more strongly (quadratic growth).
+#### Batch GDA
+Uses the entire dataset to calculate the gradient and update parameters in one go.
+Batch Gradient Descent is more accurate but slower and computationally expensive. It is ideal when working with small to medium-sized datasets and when high accuracy is required.
 
-### Vectorisation simplifies implementation
-- Writing {{< katex >}}\hat{y}=Xw{{< /katex >}} makes gradients and updates compact and efficient.
+#### Stochastic GDA (SGD)
+Updates parameters based on one training sample at a time.
+Stochastic Gradient Descent, on the other hand, is faster and requires less computational power, making it suitable for large datasets. It can also escape local minima more easily but may converge less accurately.
 
-## Intuition
+#### Mini-batch Gradient Descent (Mid)
+The most commonly used middle ground, using small random subsets (e.g., 32-512 samples) to update. It balances speed (via GPU optimization) with stability, providing faster convergence than Batch and smoother updates than Stochastic. 
 
-### One neuron = a weighted “mixing” of features
-Each weight {{< katex >}}w_j{{< /katex >}} tells the model how strongly feature {{< katex >}}x_j{{< /katex >}} influences the prediction.  
-The bias {{< katex >}}w_0{{< /katex >}} shifts the output up or down.
+### Which to choose?
+- Small/Medium Data: Batch GD is fine.
+- Large Data/Deep Learning: Mini-batch is the standard approach.
+- Online Learning/Very Fast Updates: Stochastic GD. 
 
-### Why gradient descent works here
-You can imagine an “error surface” over weight space.  
-Gradient descent repeatedly:
-- computes the slope (gradient),
-- steps downhill (negative gradient direction),
-- and moves closer to the minimum.
+---
 
-{{% hint info %}}
-Each gradient step is perpendicular to the contours of the error surface, moving toward lower loss.
-{{% /hint %}}
+## Computing Gradient
 
-### Computational graph view (one gradient step)
 This is the forward → loss → gradient → update pipeline:
 
 1. **Forward**: {{< katex >}}\hat{y} = Xw{{< /katex >}}  
@@ -127,58 +133,9 @@ This is the forward → loss → gradient → update pipeline:
 4. **Gradient**: {{< katex >}}\nabla J(w) = \frac{2}{N}X^Te{{< /katex >}}  
 5. **Update**: {{< katex >}}w \leftarrow w - \eta \nabla J(w){{< /katex >}}
 
-## ML relevance
-
-### This is the “template” for training deeper networks
-A complete ML system has four components:
-- **Data**: inputs {{< katex >}}X{{< /katex >}} and targets {{< katex >}}y{{< /katex >}}
-- **Model**: the function that maps inputs to predictions
-- **Objective**: a loss that measures error
-- **Learning algorithm**: an optimiser (gradient descent here)
-
-{{% hint info %}}
-This same template extends directly to multi-layer networks:  
-only the model {{< katex >}}f_\theta{{< /katex >}} becomes deeper, and backpropagation computes gradients efficiently.
-{{% /hint %}}
-
-### Training vs test error (generalisation)
-You should always compare:
-- **Training error**: how well you fit the data you trained on
-- **Test/validation error**: how well you generalise to unseen data
-
-If training error keeps decreasing but test error stops improving or worsens, you are likely overfitting.
-
-### Common evaluation metric: R-squared (R^2)
-{{< katex >}}R^2{{< /katex >}} (coefficient of determination) compares your model to a naive baseline (predicting the mean).
-
-{{% hint danger %}}
-Let {{< katex >}}y_i{{< /katex >}} be true targets, {{< katex >}}\hat{y}_i{{< /katex >}} predictions, and {{< katex >}}\bar{y}{{< /katex >}} the mean of {{< katex >}}y{{< /katex >}}.
-
-Residual sum of squares:
-
-{{< katex display=true >}}
-SS_{\text{res}}=\sum_{i=1}^{N}(y_i-\hat{y}_i)^2
-{{< /katex >}}
-
-Total sum of squares:
-
-{{< katex display=true >}}
-SS_{\text{tot}}=\sum_{i=1}^{N}(y_i-\bar{y})^2
-{{< /katex >}}
-
-Coefficient of determination:
-
-{{< katex display=true >}}
-R^2 = 1 - \frac{SS_{\text{res}}}{SS_{\text{tot}}}
-{{< /katex >}}
-{{% /hint %}}
-
-{{% hint info %}}
-Interpretation (rule of thumb):
-- {{< katex >}}R^2 \approx 1{{< /katex >}}: excellent fit
-- {{< katex >}}R^2 \approx 0{{< /katex >}}: no better than predicting the mean
-- {{< katex >}}R^2 < 0{{< /katex >}}: worse than predicting the mean
-{{% /hint %}}
+---
+...
+---
 
 ## Summary
 - Linear regression can be viewed as a **single-neuron neural network** with **identity activation**.
@@ -193,6 +150,7 @@ Interpretation (rule of thumb):
 - Goodfellow, Bengio, Courville — *Deep Learning* (optimisation and regression basics).
 
 - [Why Square the Error?](https://medium.com/@mail.alireza.a/why-square-the-error-in-machine-learning-153067c1ef64)
+- [Variations of GDA](https://www.geeksforgeeks.org/machine-learning/difference-between-batch-gradient-descent-and-stochastic-gradient-descent/)
 
 ---
 
