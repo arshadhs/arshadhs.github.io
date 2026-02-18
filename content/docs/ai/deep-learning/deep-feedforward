@@ -1,0 +1,30 @@
+---
+title: 'Deep Feedforward Neural Networks'
+draft: false
+tags: ["AI", "ML", "Neural Networks"]
+categories: ["AI", "ML"]
+weight: 300
+menu: main
+---
+
+# Deep Feedforward Neural Networks
+
+●	Forward and backward propagation
+●	Backward Propagation (review)
+●	Training a DNN using Gradient Descent algorithm
+●	Computational Graphs
+●	Activation Functions
+●	Softmax Regression
+●	Impact of depth in DNN
+
+---
+  
+## Reference
+- **Dive into deep learning. Cambridge University Press.**.
+- Rosenblatt, F. (1958) — *The Perceptron: A Probabilistic Model*.
+- Goodfellow, Bengio, Courville — *Deep Learning* (Ch. 1–6).
+- Zhang et al. — *Dive into Deep Learning* (Intro/linear models).
+
+---
+
+{{< home-link "Home" >}} | {{< section-index >}}
