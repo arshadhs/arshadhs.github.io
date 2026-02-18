@@ -3,7 +3,7 @@ title: 'Attention Mechanism'
 draft: false
 tags: ["AI", "ML", "Neural Networks"]
 categories: ["AI", "ML"]
-weight: 1100
+weight: 700
 menu: main
 ---
 
