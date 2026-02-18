@@ -3,7 +3,7 @@ title: 'Optimisation of Deep models'
 draft: false
 tags: ["AI", "ML", "Neural Networks"]
 categories: ["AI", "ML"]
-weight: 500
+weight: 300
 menu: main
 ---
 
