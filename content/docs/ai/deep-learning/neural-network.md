@@ -3,7 +3,7 @@ title: 'Neural Networks'
 draft: false
 tags: ["AI", "ML", "Neural Networks"]
 categories: ["AI", "ML"]
-weight: 410
+weight: 150
 menu: main
 ---
 # Neural Networks
