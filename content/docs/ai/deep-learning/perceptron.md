@@ -1,13 +1,13 @@
 ---
-title: 'Perceptron'
+title: 'Artificial Neuron and Perceptron'
 draft: false
 tags: ["AI", "ML", "Neural Networks"]
 categories: ["AI", "ML"]
-weight: 110
+weight: 200
 menu: main
 ---
 
-# Perceptron
+# Artificial Neuron and Perceptron  
 
 A **Perceptron** is the **simplest form of an artificial neural network (ANN)**.  
 It is an algorithm for **supervised learning** used mainly for **binary classification** problems.

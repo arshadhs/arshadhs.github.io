@@ -3,18 +3,25 @@ title: 'Attention Mechanism'
 draft: false
 tags: ["AI", "ML", "Neural Networks"]
 categories: ["AI", "ML"]
-weight: 700
+weight: 800
 menu: main
 ---
 
 # Attention Mechanism
 
-- Attention Pooling
-- Attention Scoring Functions
-- Multi-Head Attention, Self-Attention and Positional Encoding
-
-- Transformer architecture
-- Applications of Transformers
+- Queries, Keys, and Values 
+- Attention Pooling by Similarity 
+- Attention Pooling via Nadaraya–Watson Regression 
+- Attention Scoring Functions 
+- Dot Product Attention 
+- Convenience Functions 
+- Scaled Dot Product Attention 
+- Additive Attention 
+- Bahdanau Attention Mechanism 
+- Multi-Head Attention 
+- Self-Attention 
+- Positional Encoding 
+- Code implementation (webinar)  
 
 ---
   

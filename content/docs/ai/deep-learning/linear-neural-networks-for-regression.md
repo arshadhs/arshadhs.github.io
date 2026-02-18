@@ -2,7 +2,7 @@
 title: "Linear NN for Regression"
 date: 2026-02-15
 draft: false
-weight: 250
+weight: 300
 tags: ["Deep Learning", "Regression", "Optimisation"]
 categories: ["AI", "Machine Learning"]
 ---
@@ -10,6 +10,12 @@ categories: ["AI", "Machine Learning"]
 # Linear Neural Networks for Regression
 
 A **linear neural network for regression** is a model that predicts a **continuous** target by taking a weighted sum of input features and applying the **identity activation** (so the output can be any real number).
+
+- Single neuron for regression - how much or how many 
+- Data, linear model with single neuron and squared loss function for single neuron for regression  (no hidden layers) 
+- Training using batch gradient descent algorithm 
+- Prediction or inference  
+- Eg: Auto MPG (UCI) prediction with a single neuron - code implementation from scratch (webinar)
 
 ## Regression
 
@@ -145,7 +151,7 @@ This is the forward → loss → gradient → update pipeline:
 - This “data → model → objective → optimiser” pipeline generalises to deep networks.
 
 ## Reference
-- **DNN Module #3 — Linear Neural Networks for Regression**.
+- **DNN Module #3 — Linear Neural Networks for Regression**. (T1 – Ch 3, T1 - Ch 12)
 - Zhang, Lipton, Li, Smola — *Dive into Deep Learning* (sections on linear regression).
 - Goodfellow, Bengio, Courville — *Deep Learning* (optimisation and regression basics).
 

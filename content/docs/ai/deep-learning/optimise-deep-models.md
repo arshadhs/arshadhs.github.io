@@ -3,23 +3,28 @@ title: 'Optimisation of Deep models'
 draft: false
 tags: ["AI", "ML", "Neural Networks"]
 categories: ["AI", "ML"]
-weight: 300
+weight: 1000
 menu: main
 ---
 
 # Optimisation of Deep models
 
-●	Challenges in Neural Network Optimization – saddle points and plateau 
-●	Non-convex optimization intuition
-●	Stochastic Gradient Descent (SGD), Minibatch SGD
-●	Overview of Rprop, Quickprop
-●	Momentum, Nastrov’s Accelarated Momentum
-●	Algorithms with Adaptive Learning Rates, Adagrad, RMSprop, ADAM
+- Goal of Optimization 
+- Optimization Challenges in Deep Learning 
+- Gradient Descent 
+- Stochastic Gradient Descent 
+- Minibatch Stochastic Gradient Descent 
+- Momentum 
+- Adagrad and Algorithm 
+- RMSProp and  Algorithm 
+- Adadelta and  Algorithm 
+- Adam and Algorithm 
+- Code Implementation and comparison of algorithms  (webinar) 
 
 ---
   
 ## Reference
-- **Dive into deep learning. Cambridge University Press.**. (Ch11)
+- **Dive into deep learning. Cambridge University Press.**. (Ch12)
 
 ---
 
