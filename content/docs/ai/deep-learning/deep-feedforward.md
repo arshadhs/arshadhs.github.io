@@ -20,10 +20,7 @@ menu: main
 ---
   
 ## Reference
-- **Dive into deep learning. Cambridge University Press.**.
-- Rosenblatt, F. (1958) — *The Perceptron: A Probabilistic Model*.
-- Goodfellow, Bengio, Courville — *Deep Learning* (Ch. 1–6).
-- Zhang et al. — *Dive into Deep Learning* (Intro/linear models).
+- **Dive into deep learning. Cambridge University Press.**. (Ch4 and Ch3.4)
 
 ---
 
