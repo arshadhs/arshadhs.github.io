@@ -14,6 +14,11 @@ bookCollapseSection: true
 - Allows systems to **automatically learn hierarchical representations** (features) from raw input, such as images, sound, or text.
 
 ---
+
+{{< section_tree >}}
+
+---
+
 {{< mermaid >}}
 flowchart LR
     %% Input Layer
@@ -129,4 +134,5 @@ Deep Learning is the machine learning approach that uses Deep Neural Networks to
 
 ---
 {{< home-link "Home" >}} | {{< section-index >}}  
+
 
