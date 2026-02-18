@@ -2,7 +2,7 @@
 title: "Linear NN for Regression"
 date: 2026-02-15
 draft: false
-weight: 345
+weight: 250
 tags: ["Deep Learning", "Regression", "Optimisation"]
 categories: ["AI", "Machine Learning"]
 ---
