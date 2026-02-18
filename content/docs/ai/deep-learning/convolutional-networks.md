@@ -9,14 +9,14 @@ menu: main
 
 # Convolutional Networks
 
-●	Convolutions for Images
-●	Learning a Kernel
-●	Padding and stride,  Channels, Pooling
-●	Design of CNN
+- Convolutions for Images
+- Learning a Kernel
+- Padding and stride,  Channels, Pooling
+- Design of CNN
 
-●	Popular CNN architectures
-●	Transfer Learning
-●	Applications of CNN
+- Popular CNN architectures
+- Transfer Learning
+- Applications of CNN
 
 ---
   
