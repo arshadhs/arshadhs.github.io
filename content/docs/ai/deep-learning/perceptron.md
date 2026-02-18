@@ -3,7 +3,7 @@ title: 'Perceptron'
 draft: false
 tags: ["AI", "ML", "Neural Networks"]
 categories: ["AI", "ML"]
-weight: 210
+weight: 110
 menu: main
 ---
 
