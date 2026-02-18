@@ -3,7 +3,7 @@ title: 'Convolutional Networks'
 draft: false
 tags: ["AI", "ML", "Neural Networks"]
 categories: ["AI", "ML"]
-weight: 600
+weight: 500
 menu: main
 ---
 
