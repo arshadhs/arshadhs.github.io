@@ -3,7 +3,7 @@ title: 'Deep Feedforward Neural Networks'
 draft: false
 tags: ["AI", "ML", "Neural Networks"]
 categories: ["AI", "ML"]
-weight: 300
+weight: 200
 menu: main
 ---
 
