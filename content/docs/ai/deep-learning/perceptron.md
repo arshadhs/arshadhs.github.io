@@ -49,11 +49,11 @@ z = \sum_{i=1}^{n} w_i x_i + b
 {{< /katex >}}
 {{< /colour >}}
 
-{{< color "red" >}}
+{{< colour "red" >}}
 {{< katex display=true >}}
 \hat{y} = f(z)
 {{< /katex >}}
-{{< /color >}}
+{{< /colour >}}
 
 Where:
 - inputs: {{< katex >}}x_1, x_2, \dots, x_n{{< /katex >}}
@@ -132,11 +132,11 @@ The perceptron is powerful for *linear* decision problems (many logic gates), bu
 
 ### Mathematical Model
 
-{{< color "red" >}}
+{{< colour "red" >}}
 {{< katex display=true >}}
 \hat{y} = f\left(\sum_{i=1}^{n} w_i x_i + b\right)
 {{< /katex >}}
-{{< /color >}}
+{{< /colour >}}
 
 Where:
 - {{< katex >}}x_i{{< /katex >}} → input features
@@ -148,11 +148,11 @@ Where:
 
 The boundary is where the neuron is exactly “on the fence”:
 
-{{< color "red" >}}
+{{< colour "red" >}}
 {{< katex display=true >}}
 w^T x + b = 0
 {{< /katex >}}
-{{< /color >}}
+{{< /colour >}}
 
 In 2D, this is a line; in 3D, a plane; in {{< katex >}}d{{< /katex >}} dimensions, a hyperplane.
 
@@ -191,11 +191,11 @@ Inputs are the **features** or measurable attributes of a data point.
 
 Example (OR gate):
 
-{{< color "red" >}}
+{{< colour "red" >}}
 {{< katex display=true >}}
 (x_1, x_2) \in \{0,1\}^2
 {{< /katex >}}
-{{< /color >}}
+{{< /colour >}}
 
 Inputs by themselves have **no influence** unless multiplied by weights.
 
@@ -226,11 +226,11 @@ The bias is a constant added to the weighted sum.
 
 #### 4. Net Input (Weighted Sum)
 
-{{< color "red" >}}
+{{< colour "red" >}}
 {{< katex display=true >}}
 z = \sum_{i=1}^{n} w_i x_i + b
 {{< /katex >}}
-{{< /color >}}
+{{< /colour >}}
 
 This value determines whether the perceptron activates.
 
@@ -240,7 +240,7 @@ This value determines whether the perceptron activates.
 
 The classic perceptron uses a **step function**:
 
-{{< color "red" >}}
+{{< colour "red" >}}
 {{< katex display=true >}}
 \hat{y} =
 \begin{cases}
@@ -248,7 +248,7 @@ The classic perceptron uses a **step function**:
 0 & \text{otherwise}
 \end{cases}
 {{< /katex >}}
-{{< /color >}}
+{{< /colour >}}
 
 - Output is **binary**
 - Decision boundary is **linear**
@@ -270,7 +270,7 @@ This limitation led to **multi-layer neural networks**.
 
 ---
 
-### Perceptron Learning Algorithm for logic gates
+### PLA for logic gates
 
 Goal:
 learn parameters (weights and bias) so that predicted output matches the target.
@@ -286,11 +286,11 @@ Update intuition:
 
 A common PLA rule (for targets {{< katex >}}t \in \{-1,+1\}{{< /katex >}}):
 
-{{< color "red" >}}
+{{< colour "red" >}}
 {{< katex display=true >}}
 \text{If } \hat{y} \ne t:\quad w \leftarrow w + \eta\, t\, x,\qquad b \leftarrow b + \eta\, t
 {{< /katex >}}
-{{< /color >}}
+{{< /colour >}}
 
 Where:
 - {{< katex >}}\eta > 0{{< /katex >}} is the learning rate.
@@ -542,6 +542,7 @@ A step function is an activation function, but it’s a specific kind of activat
 - Goodfellow, Bengio, Courville — *Deep Learning* (Ch. 1–6).
 - Zhang et al. — *Dive into Deep Learning* (Intro/linear models).
 
+- [Non Linear Model — Solve using combination of Linear Models](https://medium.com/analytics-vidhya/non-linear-model-1a9067d79dd3)
 - [Perceptron – GeeksforGeeks](https://www.geeksforgeeks.org/machine-learning/what-is-perceptron-the-simplest-artificial-neural-network/)
 
 ---
