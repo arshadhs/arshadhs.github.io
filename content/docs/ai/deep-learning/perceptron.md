@@ -10,7 +10,6 @@ menu: main
 # Artificial Neuron and Perceptron
 
 {{% hint info %}}
-Key idea:
 knowledge in neural networks is stored in **connection weights**, and learning means **modifying those weights**.
 {{% /hint %}}
 
@@ -101,7 +100,7 @@ Think of a perceptron as:
 
 ---
 
-## What a Perceptron Does
+### What a Perceptron Does
 
 A perceptron:
 - takes **multiple real-valued inputs**
@@ -115,9 +114,9 @@ In simple terms, it decides between **two classes**.
 
 ---
 
-## Properties
+### Properties
 
-### Linear separability is the key condition
+1. Linear separability is the key condition
 
 A perceptron can correctly classify a dataset only if the two classes can be separated by a hyperplane (i.e., the data is **linearly separable**).
 
@@ -125,13 +124,13 @@ A perceptron can correctly classify a dataset only if the two classes can be sep
 The perceptron is powerful for *linear* decision problems (many logic gates), but it fails on patterns like **XOR** which are **not** linearly separable.
 {{% /hint %}}
 
-### Logic gates: what it can and cannot represent
+2. Logic gates: what it can and cannot represent
 - Can represent **AND**, **OR**, **NAND**, **NOR**, **NOT** using suitable weights and bias.
 - Cannot represent **XOR** with a single perceptron.
 
 ---
 
-## Mathematical Model
+### Mathematical Model
 
 {{< color "red" >}}
 {{< katex display=true >}}
@@ -163,7 +162,7 @@ Training the perceptron is essentially searching for a separating line/plane tha
 
 ---
 
-## Perceptron Architecture
+### Perceptron Architecture
 
 {{< mermaid >}}
 flowchart LR
@@ -184,9 +183,9 @@ flowchart LR
 
 ---
 
-## Core Components
+### Core Components
 
-### 1. Inputs (x_1, x_2, ... , x_n)
+#### 1. Inputs (x_1, x_2, ... , x_n)
 
 Inputs are the **features** or measurable attributes of a data point.
 
@@ -202,7 +201,7 @@ Inputs by themselves have **no influence** unless multiplied by weights.
 
 ---
 
-### 2. Weights (w_1, w_2, ... , w_n)
+#### 2. Weights (w_1, w_2, ... , w_n)
 
 - Weights determine **how strongly each input influences the output**
 - Larger weights → higher importance
@@ -211,7 +210,7 @@ Inputs by themselves have **no influence** unless multiplied by weights.
 
 ---
 
-### 3. Bias (b)
+#### 3. Bias (b)
 
 The bias is a constant added to the weighted sum.
 
@@ -225,7 +224,7 @@ The bias is a constant added to the weighted sum.
 
 ---
 
-### 4. Net Input (Weighted Sum)
+#### 4. Net Input (Weighted Sum)
 
 {{< color "red" >}}
 {{< katex display=true >}}
@@ -237,7 +236,7 @@ This value determines whether the perceptron activates.
 
 ---
 
-### 5. Activation Function (Step Function)
+#### 5. Activation Function (Step Function)
 
 The classic perceptron uses a **step function**:
 
@@ -261,7 +260,7 @@ A single perceptron **cannot** solve problems like XOR because they are not line
 
 ---
 
-## Why the Perceptron Is Limited
+### Why the Perceptron Is Limited
 
 - Uses a **linear decision boundary**
 - Can only solve **linearly separable** problems
@@ -271,43 +270,7 @@ This limitation led to **multi-layer neural networks**.
 
 ---
 
-## Perceptron for NOT, AND, OR gates
-
-We can model simple Boolean logic using a perceptron by choosing weights and bias.
-
-### NOT gate
-One input {{< katex >}}x \in \{0,1\}{{< /katex >}} and output should flip the value.
-
-Example parameters (one workable choice):
-- weight negative, bias positive
-
-### AND gate
-Truth table:
-- {{< katex >}}(0,0)\mapsto 0{{< /katex >}}
-- {{< katex >}}(0,1)\mapsto 0{{< /katex >}}
-- {{< katex >}}(1,0)\mapsto 0{{< /katex >}}
-- {{< katex >}}(1,1)\mapsto 1{{< /katex >}}
-
-Geometric meaning:
-- only the point {{< katex >}}(1,1){{< /katex >}} should fall on the “positive” side of the decision boundary.
-
-### OR gate
-Truth table:
-- {{< katex >}}(0,0)\mapsto 0{{< /katex >}}
-- {{< katex >}}(0,1)\mapsto 1{{< /katex >}}
-- {{< katex >}}(1,0)\mapsto 1{{< /katex >}}
-- {{< katex >}}(1,1)\mapsto 1{{< /katex >}}
-
-Geometric meaning:
-- only {{< katex >}}(0,0){{< /katex >}} should fall on the “negative” side.
-
-{{% hint info %}}
-AND and OR are **linearly separable**, so a single perceptron can represent them.
-{{% /hint %}}
-
----
-
-## Perceptron Learning Algorithm for logic gates
+### Perceptron Learning Algorithm for logic gates
 
 Goal:
 learn parameters (weights and bias) so that predicted output matches the target.
@@ -338,7 +301,43 @@ PLA converges (finds a separating hyperplane) **only if** the dataset is linearl
 
 ---
 
-## Perceptron for linearly separable data
+### Perceptron for NOT, AND, OR gates
+
+We can model simple Boolean logic using a perceptron by choosing weights and bias.
+
+#### NOT gate
+One input {{< katex >}}x \in \{0,1\}{{< /katex >}} and output should flip the value.
+
+Example parameters (one workable choice):
+- weight negative, bias positive
+
+#### AND gate
+Truth table:
+- {{< katex >}}(0,0)\mapsto 0{{< /katex >}}
+- {{< katex >}}(0,1)\mapsto 0{{< /katex >}}
+- {{< katex >}}(1,0)\mapsto 0{{< /katex >}}
+- {{< katex >}}(1,1)\mapsto 1{{< /katex >}}
+
+Geometric meaning:
+- only the point {{< katex >}}(1,1){{< /katex >}} should fall on the “positive” side of the decision boundary.
+
+#### OR gate
+Truth table:
+- {{< katex >}}(0,0)\mapsto 0{{< /katex >}}
+- {{< katex >}}(0,1)\mapsto 1{{< /katex >}}
+- {{< katex >}}(1,0)\mapsto 1{{< /katex >}}
+- {{< katex >}}(1,1)\mapsto 1{{< /katex >}}
+
+Geometric meaning:
+- only {{< katex >}}(0,0){{< /katex >}} should fall on the “negative” side.
+
+{{% hint info %}}
+AND and OR are **linearly separable**, so a single perceptron can represent them.
+{{% /hint %}}
+
+---
+
+### Perceptron for linearly separable data
 
 Definition (course view):
 two classes are linearly separable if there exists a hyperplane that separates all positive examples from all negative examples.
@@ -369,7 +368,7 @@ To solve XOR, you need **non-linearity**, typically via **hidden layers** (an ML
 
 ---
 
-## Code: AND, OR, XOR from scratch (webinar-style)
+## Code: AND, OR, XOR from scratch
 
 Below is a minimal “from scratch” perceptron (no ML libraries) that:
 - learns AND / OR (works)
