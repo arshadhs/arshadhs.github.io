@@ -43,11 +43,11 @@ What it does:
 - applies an activation function
 - produces an output
 
-{{< color "red" >}}
+{{< colour "red" >}}
 {{< katex display=true >}}
 z = \sum_{i=1}^{n} w_i x_i + b
 {{< /katex >}}
-{{< /color >}}
+{{< /colour >}}
 
 {{< color "red" >}}
 {{< katex display=true >}}
@@ -260,7 +260,7 @@ A single perceptron **cannot** solve problems like XOR because they are not line
 
 ---
 
-### Why the Perceptron Is Limited
+### Why Perceptron Is Limited
 
 - Uses a **linear decision boundary**
 - Can only solve **linearly separable** problems
@@ -305,13 +305,13 @@ PLA converges (finds a separating hyperplane) **only if** the dataset is linearl
 
 We can model simple Boolean logic using a perceptron by choosing weights and bias.
 
-#### NOT gate
+1. NOT gate
 One input {{< katex >}}x \in \{0,1\}{{< /katex >}} and output should flip the value.
 
 Example parameters (one workable choice):
 - weight negative, bias positive
 
-#### AND gate
+2. AND gate
 Truth table:
 - {{< katex >}}(0,0)\mapsto 0{{< /katex >}}
 - {{< katex >}}(0,1)\mapsto 0{{< /katex >}}
@@ -321,7 +321,7 @@ Truth table:
 Geometric meaning:
 - only the point {{< katex >}}(1,1){{< /katex >}} should fall on the “positive” side of the decision boundary.
 
-#### OR gate
+3. OR gate
 Truth table:
 - {{< katex >}}(0,0)\mapsto 0{{< /katex >}}
 - {{< katex >}}(0,1)\mapsto 1{{< /katex >}}
@@ -350,7 +350,9 @@ In higher dimensions:
 
 ---
 
-## XOR Problem: perceptron fails on non-linearly separable data
+### XOR Problem
+
+> Perceptron fails on non-linearly separable data
 
 XOR truth table:
 - {{< katex >}}(0,0)\mapsto 0{{< /katex >}}
@@ -368,7 +370,7 @@ To solve XOR, you need **non-linearity**, typically via **hidden layers** (an ML
 
 ---
 
-## Code: AND, OR, XOR from scratch
+### Code: AND, OR, XOR from scratch
 
 Below is a minimal “from scratch” perceptron (no ML libraries) that:
 - learns AND / OR (works)
@@ -488,6 +490,38 @@ Activation depends on the task:
 - **Sigmoid** → binary classification  
 - **Softmax** → multi-class classification  
 - **Linear** → regression  
+
+---
+
+## Activation Function
+
+An activation function is any function applied to the neuron’s net input to produce the neuron’s output.
+
+## Step Function
+
+A step function (also called a threshold function) is particular type of activation function  used for binary decisions (hard thresholding).
+
+In a perceptron, you first compute a score (net input) and then “step” to class 0 or 1 depending on whether the score crosses a threshold.
+
+- If the weighted evidence 𝑧 is positive (or above the threshold), output 1.
+- Otherwise output 0.
+
+- Step Function makes the perceptron a hard classifier with a linear decision boundary.
+- But it’s not differentiable at the threshold, which is why modern neural nets usually use smooth activations (ReLU, sigmoid, tanh) when training with gradient descent.
+
+A step function is an activation function, but it’s a specific kind of activation function.
+
+**Output type**
+- Step: outputs only 0 or 1 (or sometimes −1 or +1)
+- Others (sigmoid, tanh, ReLU): output is continuous
+
+**Differentiability**
+- Step: not differentiable at the threshold and gradient is zero elsewhere
+- Others: (mostly) differentiable, so they work well with gradient descent/backprop
+
+**Modern usage**
+- Step: classic perceptron, simple logic gates
+- Smooth activations: training deep neural networks
 
 ---
 
