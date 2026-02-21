@@ -45,34 +45,34 @@ It is random because the outcome is **uncertain before performing it**.
 
 ---
 
-### Sample space \(S\)
+### Sample space {{< katex >}}S{{< /katex >}}
 
 Sample space:
 the set of **all possible outcomes**.
 
 Examples:
 - Die roll:
-\(S=\{1,2,3,4,5,6\}\)
+{{< katex >}}S=\{1,2,3,4,5,6\}{{< /katex >}}
 - Quality test (accepted/rejected):
-\(S=\{a,r\}\)
+{{< katex >}}S=\{a,r\}{{< /katex >}}
 
 ---
 
-### Event \(A\)
+### Event {{< katex >}}A{{< /katex >}}
 
 Event:
 a **subset of the sample space**.
 
 It can be:
 - Empty event:
-\(\varnothing\)
+{{< katex >}}\varnothing{{< /katex >}}
 - Certain event:
-\(S\)
+{{< katex >}}S{{< /katex >}}
 - Any meaningful subset of outcomes
 
 Example (die roll):
 - Event “even”:
-\(A=\{2,4,6\}\)
+{{< katex >}}A=\{2,4,6\}{{< /katex >}}
 
 ---
 
@@ -81,7 +81,7 @@ Example (die roll):
 ### Complement
 
 Complement:
-event “not \(A\)”.
+event “not {{< katex >}}A{{< /katex >}}”.
 
 {{% colour %}}
 {{< katex display=true >}}
@@ -100,7 +100,7 @@ P(A^c)=1-P(A)
 ### Union
 
 Union:
-\(A\cup B\) means “\(A\) OR \(B\) OR both”.
+{{< katex >}}A\cup B{{< /katex >}} means “{{< katex >}}A{{< /katex >}} OR {{< katex >}}B{{< /katex >}} OR both”.
 
 {{% colour %}}
 {{< katex display=true >}}
@@ -113,7 +113,7 @@ A \cup B = \{ \omega : \omega \in A \text{ or } \omega \in B \}
 ### Intersection
 
 Intersection:
-\(A\cap B\) means “\(A\) AND \(B\)”.
+{{< katex >}}A\cap B{{< /katex >}} means “{{< katex >}}A{{< /katex >}} AND {{< katex >}}B{{< /katex >}}”.
 
 {{% colour %}}
 {{< katex display=true >}}
@@ -186,7 +186,7 @@ This is the approach used throughout probability theory.
 
 ## Axioms of probability
 
-For any event \(A\) in sample space \(S\):
+For any event {{< katex >}}A{{< /katex >}} in sample space {{< katex >}}S{{< /katex >}}:
 
 ### 1) Non-negativity
 
@@ -206,7 +206,7 @@ P(S)=1
 
 ### 3) Additivity (for mutually exclusive events)
 
-If \(A\cap B=\varnothing\), then:
+If {{< katex >}}A\cap B=\varnothing{{< /katex >}}, then:
 
 {{% colour %}}
 {{< katex display=true >}}
@@ -223,7 +223,7 @@ Most probability formulas you use later are consequences of these.
 
 ## The Addition Rule (general case)
 
-Even if \(A\) and \(B\) overlap, the union probability is:
+Even if {{< katex >}}A{{< /katex >}} and {{< katex >}}B{{< /katex >}} overlap, the union probability is:
 
 {{% colour %}}
 {{< katex display=true >}}
@@ -232,7 +232,7 @@ P(A\cup B)=P(A)+P(B)-P(A\cap B)
 {{% /colour %}}
 
 Why we subtract:
-the overlap \(A\cap B\) gets counted twice if we only add \(P(A)\) and \(P(B)\).
+the overlap {{< katex >}}A\cap B{{< /katex >}} gets counted twice if we only add {{< katex >}}P(A){{< /katex >}} and {{< katex >}}P(B){{< /katex >}}.
 
 ---
 
@@ -257,9 +257,13 @@ P(A\cap B)=0
 {{% /colour %}}
 
 Example (one die roll):
-- \(A\): roll a 2
-- \(B\): roll a 5  
+- {{< katex >}}A{{< /katex >}}: roll a 2
+- {{< katex >}}B{{< /katex >}}: roll a 5  
 They cannot occur together.
+
+#### Collective Exaustive
+
+Two events A and B are Mutually Exclusive, but other than A and B there is nothing left.
 
 ---
 
@@ -280,7 +284,7 @@ These are independent.
 
 {{% hint warning %}}
 Mutually exclusive events are usually NOT independent (unless one event has probability 0).
-If \(A\cap B=\varnothing\) and both have positive probability, then \(P(A\cap B)=0\) but \(P(A)P(B)>0\).
+If {{< katex >}}A\cap B=\varnothing{{< /katex >}} and both have positive probability, then {{< katex >}}P(A\cap B)=0{{< /katex >}} but {{< katex >}}P(A)P(B)>0{{< /katex >}}.
 So they cannot be equal.
 {{% /hint %}}
 
@@ -303,14 +307,14 @@ flowchart LR
 
 ### Pattern 1: Valid probability assignment
 
-If outcomes \(A,B,C,\dots\) are mutually exclusive and exhaustive, then a valid assignment must satisfy:
+If outcomes {{< katex >}}A,B,C,\dots{{< /katex >}} are mutually exclusive and exhaustive, then a valid assignment must satisfy:
 - Each probability is between 0 and 1
 - Total must sum to 1
 
 {{% hint success %}}
 Checklist:
-1) Are all \(P(\cdot)\ge 0\)?
-2) Is \(\sum P(\text{outcomes})=1\)?
+1) Are all {{< katex >}}P(\cdot)\ge 0{{< /katex >}}?
+2) Is {{< katex >}}\sum P(\text{outcomes})=1{{< /katex >}}?
 If both yes, it is permissible.
 {{% /hint %}}
 
@@ -335,17 +339,17 @@ try the complement first.
 
 ## Mini-check (self-test)
 
-1) If \(P(A)=0.4\) and \(P(B)=0.3\) and \(A,B\) are independent, find \(P(A\cap B)\).  
-2) If \(A,B\) are mutually exclusive, what is \(P(A\cap B)\)?  
-3) If \(P(A)=0.7\), what is \(P(A^c)\)?  
-4) If \(P(A)=0.6\), \(P(B)=0.5\), and \(P(A\cap B)=0.2\), find \(P(A\cup B)\).
+1) If {{< katex >}}P(A)=0.4{{< /katex >}} and {{< katex >}}P(B)=0.3{{< /katex >}} and {{< katex >}}A,B{{< /katex >}} are independent, find {{< katex >}}P(A\cap B){{< /katex >}}.  
+2) If {{< katex >}}A,B{{< /katex >}} are mutually exclusive, what is {{< katex >}}P(A\cap B){{< /katex >}}?  
+3) If {{< katex >}}P(A)=0.7{{< /katex >}}, what is {{< katex >}}P(A^c){{< /katex >}}?  
+4) If {{< katex >}}P(A)=0.6{{< /katex >}}, {{< katex >}}P(B)=0.5{{< /katex >}}, and {{< katex >}}P(A\cap B)=0.2{{< /katex >}}, find {{< katex >}}P(A\cup B){{< /katex >}}.
 
 {{% hint success %}}
 Answers:
-1) \(0.4\times 0.3=0.12\)  
-2) \(0\)  
-3) \(1-0.7=0.3\)  
-4) \(0.6+0.5-0.2=0.9\)
+1) {{< katex >}}0.4\times 0.3=0.12{{< /katex >}}  
+2) {{< katex >}}0{{< /katex >}}  
+3) {{< katex >}}1-0.7=0.3{{< /katex >}}  
+4) {{< katex >}}0.6+0.5-0.2=0.9{{< /katex >}}
 {{% /hint %}}
 
 ---
