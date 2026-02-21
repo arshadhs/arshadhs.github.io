@@ -36,6 +36,7 @@ flowchart LR
     Function --> Gradient
     Gradient --> Optimisation
 {{< /mermaid >}}
+
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}
