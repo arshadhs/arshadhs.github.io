@@ -1,5 +1,5 @@
 ---
-title: "Statistical Methods"
+title: "Statistics"
 draft: false
 tags: ["Statistics", "Probability", "Data Analysis"]
 categories: ["AI", "ML"]
@@ -8,14 +8,13 @@ menu: main
 bookCollapseSection: true
 ---
 
-# Statistical Methods
+# Statistics
 
-Statistical methods help you turn **raw data into reliable conclusions**, while understanding **uncertainty, variability, and confidence**.
+**Statistical methods** help you turn **raw data into reliable conclusions**, while understanding **uncertainty, variability, and confidence**.
 
 Statistics provides the **language and tools** for reasoning about data, uncertainty, and inference.
 
 ML needs **understanding data behaviour**, drawing conclusions, and validating machine learning models.
-
 
 - Collect Data
 - Present & Organise Data (in a systematic manner)
@@ -28,6 +27,85 @@ ML needs **understanding data behaviour**, drawing conclusions, and validating m
 {{< section_tree >}}
 
 ---
+
+| Statistics Topic | What you learn (plain English) | ML Connection |
+|---|---|---|
+| 1. Basic Probability & Statistics | Summarise data; understand spread; basic probability rules | Data understanding (EDA), feature sanity checks, detecting outliers, interpreting “average behaviour” |
+| 2. Conditional Probability & Bayes | Update probability using new information; Bayes’ rule | Naïve Bayes, Bayesian thinking, posterior probabilities, probabilistic classification |
+| 3. Probability Distributions | Model randomness with distributions; expectation/variance/covariance | Likelihood models, noise assumptions (Gaussian), sampling, probabilistic modelling foundations |
+| 4. Hypothesis Testing | Sampling, CLT, confidence intervals, significance tests, ANOVA, MLE | A/B testing, evaluating model improvements, significance vs noise, parameter estimation (MLE) |
+| 5. Prediction & Forecasting | Correlation, regression, time series (AR/MA/ARIMA/SARIMA etc.) | Linear regression, forecasting, sequential data modelling, baseline predictive modelling |
+| 6. GMM & EM | Mixtures of Gaussians; iterative estimation with EM | Unsupervised learning (soft clustering), density estimation, latent-variable models |
+
+---
+
+{{< mermaid >}}
+flowchart TD
+  A[Intro to Statistical Methods<br/>AIML ZC418] --> B[1. Basic Probability & Statistics]
+  A --> C[2. Conditional Probability & Bayes]
+  A --> D[3. Probability Distributions]
+  A --> E[4. Hypothesis Testing]
+  A --> F[5. Prediction & Forecasting]
+  A --> G[6. Gaussian Mixture Model & EM]
+
+  %% Block 1
+  B --> B1[Central Tendency<br/>Mean • Median • Mode]
+  B --> B2[Variability<br/>Range • Variance • SD • Quartiles]
+  B --> B3[Basic Probability Concepts]
+  B3 --> B31[Axioms of Probability]
+  B3 --> B32[Definition of Probability]
+  B3 --> B33[Mutually Exclusive vs Independent]
+
+  %% Block 2
+  C --> C1[Conditional Probability]
+  C --> C2[Independence (conditional)]
+  C --> C3[Bayes' Theorem]
+  C --> C4[Naïve Bayes (intro)]
+
+  %% Block 3
+  D --> D1[Random Variables<br/>Discrete & Continuous]
+  D --> D2[Expectation • Variance • Covariance]
+  D --> D3[Transformations of RVs]
+  D --> D4[Key Distributions]
+  D4 --> D41[Bernoulli]
+  D4 --> D42[Binomial]
+  D4 --> D43[Poisson]
+  D4 --> D44[Normal (Gaussian)]
+  D4 --> D45[t • Chi-square • F (intro)]
+
+  %% Block 4
+  E --> E1[Sampling<br/>Random • Stratified]
+  E --> E2[Sampling Distributions<br/>CLT]
+  E --> E3[Estimation<br/>Confidence Intervals]
+  E --> E4[Hypothesis Tests<br/>Means • Proportions]
+  E --> E5[ANOVA<br/>Single & Dual factor]
+  E --> E6[Maximum Likelihood]
+
+  %% Block 5
+  F --> F1[Correlation]
+  F --> F2[Regression]
+  F --> F3[Time Series Basics<br/>Components]
+  F --> F4[Moving Averages<br/>Simple & Weighted]
+  F --> F5[Time Series Models]
+  F5 --> F51[AR]
+  F5 --> F52[ARMA / ARIMA]
+  F5 --> F53[SARIMA / SARIMAX]
+  F5 --> F54[VAR / VARMAX]
+  F --> F6[Exponential Smoothing]
+
+  %% Block 6
+  G --> G1[GMM<br/>Mixture of Gaussians]
+  G --> G2[EM Algorithm<br/>E-step • M-step]
+
+  %% Learning flow emphasis
+  B -.-> C
+  C -.-> D
+  D -.-> E
+  E -.-> F
+  F -.-> G
+{{< /mermaid >}}
+
+--- 
 
 ## Data - Types
 

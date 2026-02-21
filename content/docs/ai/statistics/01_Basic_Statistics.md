@@ -53,14 +53,14 @@ Describes a set of scores with a **single number** that describes the **PERFORMA
 
 ### Median
 
-The middle value when sorted (or the average of the two middle values).
+The **middle value when sorted** (or the average of the two middle values).
 
 - Good for: skewed data and outliers
 - Often preferred for: income, house prices, anything with long tails
 
 ### Mode
 
-The most frequent value.
+The **most frequent value**.
 
 - Useful for: categorical data (e.g., favourite colour) or repeated discrete values
 
