@@ -1,12 +1,14 @@
 ---
 title: "Vector Calculus"
 draft: false
-tags: ["Machine Learning", "Mathematics", "Linear Algebra"]
+tags: ["Machine Learning", "Mathematics", "Vector Calculus"]
 categories: ["AI", "ML"]
 weight: 1400
 bookCollapseSection: true
 ---
 # Vector Calculus
+
+Vector calculus extends differentiation to multivariate and vector-valued functions.
 
 Gradients power learning. This section builds differentiation skills needed for backpropagation.
 
