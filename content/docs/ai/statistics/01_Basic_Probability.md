@@ -45,9 +45,10 @@ It is random because the outcome is **uncertain before performing it**.
 
 ---
 
-### Sample space {{< katex >}}S{{< /katex >}}
+### Sample space
 
-Sample space:
+Sample space  {{< katex >}}S{{< /katex >}}:
+
 the set of **all possible outcomes**.
 
 Examples:
@@ -58,9 +59,10 @@ Examples:
 
 ---
 
-### Event {{< katex >}}A{{< /katex >}}
+### Event
 
-Event:
+Event  {{< katex >}}A{{< /katex >}}:
+
 a **subset of the sample space**.
 
 It can be:
@@ -263,7 +265,7 @@ They cannot occur together.
 
 #### Collective Exaustive
 
-Two events A and B are Mutually Exclusive, but other than A and B there is nothing left.
+Two events A and B are Mutually Exclusive, but other than A and B there is nothing left in the Sample Space.
 
 ---
 
