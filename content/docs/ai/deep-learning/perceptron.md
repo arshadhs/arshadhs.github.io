@@ -542,6 +542,7 @@ A step function is an activation function, but it’s a specific kind of activat
 - Goodfellow, Bengio, Courville — *Deep Learning* (Ch. 1–6).
 - Zhang et al. — *Dive into Deep Learning* (Intro/linear models).
 
+- [Basic Matrix Operations via Python](https://medium.com/math-for-data-science/math-for-data-science-bits-wilp-program-58417c654665)
 - [Non Linear Model — Solve using combination of Linear Models](https://medium.com/analytics-vidhya/non-linear-model-1a9067d79dd3)
 - [Perceptron – GeeksforGeeks](https://www.geeksforgeeks.org/machine-learning/what-is-perceptron-the-simplest-artificial-neural-network/)
 
