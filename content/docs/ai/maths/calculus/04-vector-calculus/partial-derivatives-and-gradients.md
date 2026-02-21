@@ -1,7 +1,7 @@
 ---
 title: "Partial Differentiation and Gradients"
 draft: false
-tags: ["Machine Learning", "Mathematics", ""Vector Calculus""]
+tags: ["Machine Learning", "Mathematics", "Vector Calculus"]
 categories: ["AI", "ML"]
 weight: 1420
 ---
