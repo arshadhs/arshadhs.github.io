@@ -39,8 +39,8 @@ flowchart TD
     DQ -->|defines| PD
     PD -->|collected in| JH
     JH -->|used in| TS
-
-    PD -->|used in| CH6
+    JH -->|used in| CH6
+	
     PD -->|used in| CH7
     PD -->|used in| CH9
     PD -->|used in| CH10
@@ -53,8 +53,8 @@ flowchart TD
     style DQ fill:#CE93D8,stroke:#8E24AA,color:#000
     style JH fill:#CE93D8,stroke:#8E24AA,color:#000
     style TS fill:#CE93D8,stroke:#8E24AA,color:#000
-
-    style CH6 fill:#C8E6C9,stroke:#2E7D32,color:#000
+    style CH6 fill:#CE93D8,stroke:#8E24AA,color:#000
+	
     style CH7 fill:#C8E6C9,stroke:#2E7D32,color:#000
     style CH9 fill:#C8E6C9,stroke:#2E7D32,color:#000
     style CH10 fill:#C8E6C9,stroke:#2E7D32,color:#000
