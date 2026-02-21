@@ -311,12 +311,10 @@ If outcomes {{< katex >}}A,B,C,\dots{{< /katex >}} are mutually exclusive and ex
 - Each probability is between 0 and 1
 - Total must sum to 1
 
-{{% hint success %}}
 Checklist:
 1) Are all {{< katex >}}P(\cdot)\ge 0{{< /katex >}}?
 2) Is {{< katex >}}\sum P(\text{outcomes})=1{{< /katex >}}?
 If both yes, it is permissible.
-{{% /hint %}}
 
 ---
 
@@ -344,13 +342,11 @@ try the complement first.
 3) If {{< katex >}}P(A)=0.7{{< /katex >}}, what is {{< katex >}}P(A^c){{< /katex >}}?  
 4) If {{< katex >}}P(A)=0.6{{< /katex >}}, {{< katex >}}P(B)=0.5{{< /katex >}}, and {{< katex >}}P(A\cap B)=0.2{{< /katex >}}, find {{< katex >}}P(A\cup B){{< /katex >}}.
 
-{{% hint success %}}
 Answers:
 1) {{< katex >}}0.4\times 0.3=0.12{{< /katex >}}  
 2) {{< katex >}}0{{< /katex >}}  
 3) {{< katex >}}1-0.7=0.3{{< /katex >}}  
 4) {{< katex >}}0.6+0.5-0.2=0.9{{< /katex >}}
-{{% /hint %}}
 
 ---
 
