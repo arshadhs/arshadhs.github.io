@@ -227,7 +227,7 @@ Standard deviation:
 
 ---
 
-## 5) Rules you should memorise
+## 5) Rules to memorise
 
 Expected value rules:
 
