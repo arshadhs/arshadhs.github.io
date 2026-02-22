@@ -226,10 +226,8 @@ P(T1\mid R1)=\frac{P(R1\mid T1)P(T1)}{P(R1)}=\frac{0.95(0.4)}{0.44}\approx 0.864
 2) If {{< katex >}}P(A)=0.3{{< /katex >}} and {{< katex >}}P(B\mid A)=0.8{{< /katex >}}, find {{< katex >}}P(A\cap B){{< /katex >}}.  
 3) Create a 3-branch total probability tree from your work (e.g., device type, customer segment, failure mode), and compute an overall probability.
 
-{{% hint success %}}
 Quick answer for 2):
 {{< katex >}}P(A\cap B)=0.3	imes 0.8=0.24{{< /katex >}}
-{{% /hint %}}
 
 ---
 
