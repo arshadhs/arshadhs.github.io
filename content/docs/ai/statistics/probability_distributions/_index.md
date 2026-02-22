@@ -25,42 +25,28 @@ what values are possible, how likely they are, and how we summarise them (mean, 
 
 ---
 
-## What you will learn in Module 3
-
-- How to define random variables (discrete and continuous)
-- How to describe them using:
-pmf, pdf, and cdf
-- How to compute:
-expectation, variance, and covariance
-- How common named distributions work (Bernoulli, Binomial, Poisson, Normal)
-- Why t, chi-square, and F distributions matter later (hypothesis testing)
-
----
-
-## Roadmap (this module)
-
 {{< mermaid >}}
 flowchart TD
-  A[Module 3: Probability Distributions] --> B[3.1 Random Variables]
-  A --> C[3.2 Common Distributions]
+  M["Module 3<br/>Probability Distributions"] --> RV["3.1 Random Variables"]
+  M --> DS["3.2 Probability Distributions"]
 
-  B --> B1[Discrete RVs]
-  B --> B2[Continuous RVs]
-  B --> B3[pmf / pdf / cdf]
-  B --> B4[Mean, Variance, Covariance]
-  B --> B5[Joint & Marginal Distributions]
-  B --> B6[Transformations]
+  RV --> RV1["Discrete RVs"]
+  RV --> RV2["Continuous RVs"]
+  RV --> RV3["PMF / PDF / CDF"]
+  RV --> RV4["Mean, Variance, Covariance"]
+  RV --> RV5["Joint & Marginal Distributions"]
+  RV --> RV6["Transformations"]
 
-  C --> C1[Bernoulli]
-  C --> C2[Binomial]
-  C --> C3[Poisson]
-  C --> C4[Normal (Gaussian)]
-  C --> C5[t, Chi-square, F (intro)]
+  DS --> D1["Bernoulli"]
+  DS --> D2["Binomial"]
+  DS --> D3["Poisson"]
+  DS --> D4["Normal (Gaussian)"]
+  DS --> D5["t / Chi-square / F (intro)"]
 {{< /mermaid >}}
 
 ---
 
-## How this connects to AI/ML
+## AI/ML Connection
 
 - Many ML models are probabilistic:
 they assume data (or errors) follow a distribution.
@@ -78,7 +64,7 @@ prediction, uncertainty estimates, and what “rare” or “typical” means in
 
 ---
 
-## Quick glossary
+## Glossary
 
 Random variable:
 a rule that maps each outcome to a number.
