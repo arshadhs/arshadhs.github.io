@@ -23,6 +23,43 @@ Naïve Bayes turns Bayes’ theorem into a practical classifier by assuming cond
 
 ---
 
+{{< mermaid >}}
+flowchart TD
+
+A[Conditional<br/>probability] -->|foundation| B[Bayes<br/>theorem]
+C[Independence] -->|simplifies| A
+D[Independent<br/>events] -->|P(A|B)=P(A)| C
+
+B -->|used for| E[Posterior<br/>probability]
+F[Prior] -->|with likelihood| B
+G[Likelihood] -->|updates| E
+H[Evidence] -->|normalises| B
+
+I[Naïve Bayes] -->|applies| B
+J[Naïve<br/>assumption] -->|features independent<br/>given class| I
+K[Features] -->|given class| J
+L[Classification] -->|predict class| I
+
+%% Styling
+style A fill:#90CAF9,stroke:#1E88E5,color:#000
+style B fill:#90CAF9,stroke:#1E88E5,color:#000
+style C fill:#90CAF9,stroke:#1E88E5,color:#000
+
+style D fill:#CE93D8,stroke:#8E24AA,color:#000
+style F fill:#CE93D8,stroke:#8E24AA,color:#000
+style G fill:#CE93D8,stroke:#8E24AA,color:#000
+style H fill:#CE93D8,stroke:#8E24AA,color:#000
+style J fill:#CE93D8,stroke:#8E24AA,color:#000
+style K fill:#CE93D8,stroke:#8E24AA,color:#000
+
+style E fill:#C8E6C9,stroke:#2E7D32,color:#000
+style I fill:#C8E6C9,stroke:#2E7D32,color:#000
+style L fill:#C8E6C9,stroke:#2E7D32,color:#000
+
+{{< /mermaid >}}
+
+---
+
 ## Section 1 — Conditional Probability (and Independent Events)
 
 ### 1.1 Conditional probability
