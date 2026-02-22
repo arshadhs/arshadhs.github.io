@@ -15,7 +15,9 @@ Conditional probability and Bayes’ theorem give a structured way to **update b
 
 {{% hint info %}}
 Conditional probability updates probabilities after observing an event.
+
 Bayes’ theorem lets you estimate a hidden cause from observed evidence.
+
 Naïve Bayes turns Bayes’ theorem into a practical classifier by assuming conditional independence of features given the class.
 {{% /hint %}}
 
@@ -30,7 +32,7 @@ What is the probability of event {{< katex >}}B{{< /katex >}}, given that {{< ka
 
 {{% colour %}}
 {{< katex display=true >}}
-P(B \mid A)=rac{P(A\cap B)}{P(A)},\quad P(A)>0
+P(B \mid A)=\frac{P(A\cap B)}{P(A)},\quad P(A)>0
 {{< /katex >}}
 {{% /colour %}}
 
@@ -42,10 +44,12 @@ we restrict attention to the outcomes where {{< katex >}}A{{< /katex >}} is true
 
 {{% hint info %}}
 Conditioning “shrinks the universe”:
+
 once {{< katex >}}A{{< /katex >}} is known to have happened, we only count outcomes inside {{< katex >}}A{{< /katex >}}.
 {{% /hint %}}
 
 Conditioning on {{< katex >}}A{{< /katex >}} means we restrict our attention to outcomes inside {{< katex >}}A{{< /katex >}}.
+
 ---
 
 ### 1.2 Multiplication rule (joint probability)
@@ -54,7 +58,7 @@ Start from the definition:
 
 {{% colour %}}
 {{< katex display=true >}}
-P(B \mid A)=rac{P(A\cap B)}{P(A)}
+P(B \mid A)=\frac{P(A\cap B)}{P(A)}
 {{< /katex >}}
 {{% /colour %}}
 
@@ -121,7 +125,7 @@ Mutually exclusive events cannot be independent unless one of them is impossible
 If two events cannot happen together, learning one occurred forces the other to be false.
 {{% /hint %}}
 
-If {{< katex >}}A\cap B=arnothing{{< /katex >}}, then {{< katex >}}P(A\cap B)=0{{< /katex >}},
+If {{< katex >}}A\cap B = \varnothing{{< /katex >}}, then {{< katex >}}P(A\cap B)=0{{< /katex >}},
 but {{< katex >}}P(A)P(B){{< /katex >}} is positive if both events can occur.
 
 ---
@@ -188,7 +192,7 @@ Bayes’ theorem “reverses” conditioning:
 
 {{% colour %}}
 {{< katex display=true >}}
-P(A\mid B)=rac{P(B\mid A)\,P(A)}{P(B)},\quad P(B)>0
+P(A\mid B)=\frac{P(B\mid A)\,P(A)}{P(B)},\quad P(B)>0
 {{< /katex >}}
 {{% /colour %}}
 
@@ -210,7 +214,7 @@ If {{< katex >}}E_1,\dots,E_k{{< /katex >}} is a partition and B is observed, th
 
 {{% colour %}}
 {{< katex display=true >}}
-P(E_j\mid B)=rac{P(B\mid E_j)\,P(E_j)}{\sum_{i=1}^{k} P(B\mid E_i)\,P(E_i)}
+P(E_j\mid B)=\frac{P(B\mid E_j)\,P(E_j)}{\sum_{i=1}^{k} P(B\mid E_i)\,P(E_i)}
 {{< /katex >}}
 {{% /colour %}}
 
@@ -247,7 +251,7 @@ Now apply Bayes:
 
 {{% colour %}}
 {{< katex display=true >}}
-P(D\mid +)=rac{0.99(0.001)}{0.02097}pprox 0.047
+P(D\mid +)=\frac{0.99(0.001)}{0.02097}\approx 0.047
 {{< /katex >}}
 {{% /colour %}}
 
@@ -293,7 +297,7 @@ Bayes:
 
 {{% colour %}}
 {{< katex display=true >}}
-P(T1\mid R1)=rac{P(R1\mid T1)P(T1)}{P(R1)}=rac{0.95(0.4)}{0.44}pprox 0.864
+P(T1\mid R1)=\frac{P(R1\mid T1)P(T1)}{P(R1)}=\frac{0.95(0.4)}{0.44}\approx 0.864
 {{< /katex >}}
 {{% /colour %}}
 
@@ -310,7 +314,7 @@ For a class {{< katex >}}Y{{< /katex >}} and observed features {{< katex >}}X{{<
 
 {{% colour %}}
 {{< katex display=true >}}
-P(Y\mid X)=rac{P(X\mid Y)\,P(Y)}{P(X)}
+P(Y\mid X)=\frac{P(X\mid Y)\,P(Y)}{P(X)}
 {{< /katex >}}
 {{% /colour %}}
 
@@ -351,7 +355,7 @@ Decision rule (MAP classification):
 
 {{% colour %}}
 {{< katex display=true >}}
-\hat{y}=rg\max_{y} \; P(y)\prod_{i=1}^{n} P(x_i\mid y)
+\hat{y}=\arg\max_{y} \; P(y)\prod_{i=1}^{n} P(x_i\mid y)
 {{< /katex >}}
 {{% /colour %}}
 
@@ -383,13 +387,13 @@ Compute scores:
 
 {{% colour %}}
 {{< katex display=true >}}
-	ext{Score(Yes)}=P(Yes)\,P(Sunny\mid Yes)=rac{9}{14}\cdotrac{3}{9}
+	ext{Score(Yes)}=P(Yes)\,P(Sunny\mid Yes)=\frac{9}{14}\cdot\frac{3}{9}
 {{< /katex >}}
 {{% /colour %}}
 
 {{% colour %}}
 {{< katex display=true >}}
-	ext{Score(No)}=P(No)\,P(Sunny\mid No)=rac{5}{14}\cdotrac{2}{5}
+	ext{Score(No)}=P(No)\,P(Sunny\mid No)=\frac{5}{14}\cdot\frac{2}{5}
 {{< /katex >}}
 {{% /colour %}}
 
