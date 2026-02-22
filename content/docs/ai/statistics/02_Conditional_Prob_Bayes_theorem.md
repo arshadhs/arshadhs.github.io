@@ -188,6 +188,15 @@ flowchart TD
 
 ### 2.2 Bayes’ theorem (two-event form)
 
+Bayes' Theorem is a mathematical formula used to determine the **conditional probability of an event based on prior knowledge and new evidence**.
+
+It adjusts probabilities when new information comes in and helps make better decisions in uncertain situations.
+
+Bayes' theorem (also known as the Bayes Rule or Bayes Law) is used to determine the conditional probability of event {{< katex >}}A{{< /katex >}} when event {{< katex >}}B{{< /katex >}} has already occurred.
+
+The general statement of Bayes’ theorem is:
+The conditional probability of an event {{< katex >}}A{{< /katex >}}, given the occurrence of another event {{< katex >}}B{{< /katex >}}, is equal to the product of the probability of {{< katex >}}B{{< /katex >}} given {{< katex >}}A{{< /katex >}} and the probability of {{< katex >}}A{{< /katex >}} divided by the probability of event {{< katex >}}B{{< /katex >}}.
+
 Bayes’ theorem “reverses” conditioning:
 
 {{% colour %}}
@@ -205,6 +214,63 @@ Language you will hear often:
 {{< katex >}}P(B){{< /katex >}}
 - Posterior:
 {{< katex >}}P(A\mid B){{< /katex >}}
+
+---
+
+### Terms related to Bayes' Theorem
+
+#### Hypotheses
+
+Hypotheses refer to possible events or outcomes in the sample space; they are denoted as {{< katex >}}E_1,E_2,\dots,E_n{{< /katex >}}.
+
+Each hypothesis represents a distinct scenario that could explain an observed event.
+
+#### Priori Probability
+
+Priori probability {{< katex >}}P(E_i){{< /katex >}} is the initial probability of an event occurring before any new data is taken into account.
+
+It reflects existing knowledge or assumptions about the event.
+
+Example:
+The probability of a person having a disease before taking a test.
+
+#### Posterior Probability
+
+Posterior probability {{< katex >}}P(E_i\mid A){{< /katex >}} is the updated probability of an event after considering new information.
+
+It is derived using Bayes’ Theorem.
+
+Example:
+The probability of having a disease given a positive test result.
+
+#### Conditional Probability
+
+The probability of an event {{< katex >}}A{{< /katex >}} based on the occurrence of another event {{< katex >}}B{{< /katex >}} is termed conditional probability.
+
+It is denoted as {{< katex >}}P(A\mid B){{< /katex >}} and represents the probability of {{< katex >}}A{{< /katex >}} when event {{< katex >}}B{{< /katex >}} has already happened.
+
+#### Joint Probability
+
+When the probability of two or more events occurring together and at the same time is measured, it is called joint probability.
+
+For two events {{< katex >}}A{{< /katex >}} and {{< katex >}}B{{< /katex >}}, it is denoted by {{< katex >}}P(A\cap B){{< /katex >}}.
+
+#### Random Variables
+
+Real-valued variables whose possible values are determined by random experiments are called random variables.
+
+The probability of finding such variables is the experimental probability.
+
+---
+
+### Difference between Conditional Probability and Bayes Theorem
+
+| Topic | Bayes Theorem | Conditional Probability |
+|---|---|---|
+| Meaning | Derived using conditional probability and used to find the “reverse” probability. | Probability of event {{< katex >}}A{{< /katex >}} when event {{< katex >}}B{{< /katex >}} has already occurred. |
+| Formula | {{< katex >}}P(A\mid B)=\frac{P(B\mid A)P(A)}{P(B)}{{< /katex >}} | {{< katex >}}P(A\mid B)=\frac{P(A\cap B)}{P(B)}{{< /katex >}} |
+| Purpose | Update the probability of an event based on new evidence. | Find the probability of one event based on the occurrence of another. |
+| Focus | Uses prior knowledge and evidence to compute a revised probability. | Direct relationship between two events. |
 
 ---
 
@@ -511,7 +577,9 @@ Move from events to random variables and distributions.
 
 ## Reference
 
+- [Bayes' Theorem](https://www.geeksforgeeks.org/maths/bayes-theorem/)
 - [Conditional Probability vs Bayes’ Theorem – GeeksforGeeks](https://www.geeksforgeeks.org/maths/conditional-probability-vs-bayes-theorem/)
+- [Bayes' theorem in Artificial intelligence](https://www.geeksforgeeks.org/artificial-intelligence/bayes-theorem-in-artificial-intelligence/)
 
 ---
 
