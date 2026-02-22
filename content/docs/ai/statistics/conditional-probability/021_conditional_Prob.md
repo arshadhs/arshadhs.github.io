@@ -26,11 +26,7 @@ Meaning:
 - Conditioning on {{< katex >}}A{{< /katex >}} means:
 we restrict attention to the outcomes where {{< katex >}}A{{< /katex >}} is true.
 
-{{% hint info %}}
-Conditioning “shrinks the universe”:
-
-once {{< katex >}}A{{< /katex >}} is known to have happened, we only count outcomes inside {{< katex >}}A{{< /katex >}}.
-{{% /hint %}}
+**Conditioning “shrinks the universe”**: once {{< katex >}}A{{< /katex >}}is known to have happened, we only count outcomes inside {{< katex >}}A{{< /katex >}}.
 
 Conditioning on {{< katex >}}A{{< /katex >}} means we restrict our attention to outcomes inside {{< katex >}}A{{< /katex >}}.
 
