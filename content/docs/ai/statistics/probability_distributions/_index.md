@@ -78,13 +78,6 @@ prediction, uncertainty estimates, and what “rare” or “typical” means in
 
 ---
 
-## Pages in this module
-
-- {{< relref "random-variables" >}}3.1 Random Variables{{< /relref >}}
-- {{< relref "common-distributions" >}}3.2 Probability Distributions (Bernoulli, Binomial, Poisson, Normal, …){{< /relref >}}
-
----
-
 ## Quick glossary
 
 Random variable:
@@ -107,8 +100,6 @@ accumulates probability up to x:
 
 - Devore:
 Probability and Statistics for Engineering and the Sciences (Ch. 3–4; plus t/chi-square/F later in the book)
-- ISM Session notes:
-Random Variables (Session 5)
 
 ---
 
