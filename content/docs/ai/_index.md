@@ -59,74 +59,63 @@ flowchart LR
 {{< mermaid >}}
 flowchart TD
 
-    %% Core hierarchy
-    AI[Artificial Intelligence]
-    ML[Machine Learning]
-    NN[Neural Networks]
-    DL[Deep Learning]
-    FM[Foundation Models]
-    LLM[LLM Models]
+%% Core hierarchy
+AI["Artificial<br/>Intelligence"] --> ML["Machine<br/>Learning"]
+ML --> NN["Neural<br/>Networks"]
+NN --> DL["Deep<br/>Learning"]
+DL --> FM["Foundation<br/>Models"]
+FM --> LLM["LLM<br/>Models"]
 
-    %% Relationships
-    AI --> ML
-    ML --> NN
-    NN --> DL
-    DL --> FM
-    FM --> LLM
+%% ML examples
+ML --> LR["Linear<br/>Regression"]
+ML --> DT["Decision<br/>Trees"]
 
-    %% ML examples
-    ML --> LR[Linear Regression]
-    ML --> DT[Decision Trees]
+%% NN examples
+NN --> MLP["MLP"]
+NN --> CNN["CNN"]
 
-    %% NN examples
-    NN --> MLP[MLP]
-    NN --> CNN[CNN]
+%% DL examples
+DL --> CNN_DL["CNN<br/>(deep)"]
+DL --> RNN["RNN"]
 
-    %% DL examples
-    DL --> CNN_DL[CNN Deep]
-    DL --> RNN[RNN]
+%% Foundation Model examples
+FM --> BERT["BERT"]
+FM --> CLIP["CLIP"]
 
-    %% Foundation Model examples
-    FM --> BERT[BERT]
-    FM --> CLIP[CLIP]
+%% LLM examples
+LLM --> GPT["GPT"]
+LLM --> LLAMA["LLaMA"]
 
-    %% LLM examples
-    LLM --> GPT[GPT]
-    LLM --> LLAMA[LLaMA]
+%% Modalities
+LLM --> TEXT["Text"]
+LLM --> IMAGE["Images"]
+LLM --> AUDIO["Audio"]
+LLM --> VIDEO["Video"]
 
-    %% Modalities
-    LLM --> TEXT[Text]
-    LLM --> IMAGE[Images]
-    LLM --> AUDIO[Audio]
-    LLM --> VIDEO[Video]
+%% Styling (your pastel palette)
+style AI fill:#90CAF9,stroke:#1E88E5,color:#000
+style ML fill:#90CAF9,stroke:#1E88E5,color:#000
+style NN fill:#90CAF9,stroke:#1E88E5,color:#000
 
-    %% Styling
-    style AI fill:#E1F5FE
-    style ML fill:#C8E6C9
-    style NN fill:#BBDEFB
-    style DL fill:#90CAF9
-    style FM fill:#64B5F6
-    style LLM fill:#FFCCBC
+style DL fill:#CE93D8,stroke:#8E24AA,color:#000
+style FM fill:#CE93D8,stroke:#8E24AA,color:#000
 
-    style LR fill:#DCEDC8
-    style DT fill:#DCEDC8
+style LLM fill:#C8E6C9,stroke:#2E7D32,color:#000
+style LR fill:#C8E6C9,stroke:#2E7D32,color:#000
+style DT fill:#C8E6C9,stroke:#2E7D32,color:#000
+style MLP fill:#C8E6C9,stroke:#2E7D32,color:#000
+style CNN fill:#C8E6C9,stroke:#2E7D32,color:#000
+style CNN_DL fill:#C8E6C9,stroke:#2E7D32,color:#000
+style RNN fill:#C8E6C9,stroke:#2E7D32,color:#000
+style BERT fill:#C8E6C9,stroke:#2E7D32,color:#000
+style CLIP fill:#C8E6C9,stroke:#2E7D32,color:#000
+style GPT fill:#C8E6C9,stroke:#2E7D32,color:#000
+style LLAMA fill:#C8E6C9,stroke:#2E7D32,color:#000
+style TEXT fill:#C8E6C9,stroke:#2E7D32,color:#000
+style IMAGE fill:#C8E6C9,stroke:#2E7D32,color:#000
+style AUDIO fill:#C8E6C9,stroke:#2E7D32,color:#000
+style VIDEO fill:#C8E6C9,stroke:#2E7D32,color:#000
 
-    style MLP fill:#E3F2FD
-    style CNN fill:#E3F2FD
-
-    style CNN_DL fill:#BBDEFB
-    style RNN fill:#BBDEFB
-
-    style BERT fill:#B3E5FC
-    style CLIP fill:#B3E5FC
-
-    style GPT fill:#FFE0B2
-    style LLAMA fill:#FFE0B2
-
-    style TEXT fill:#FFF9C4
-    style IMAGE fill:#FFF9C4
-    style AUDIO fill:#FFF9C4
-    style VIDEO fill:#FFF9C4
 {{< /mermaid >}}
 
 ---
