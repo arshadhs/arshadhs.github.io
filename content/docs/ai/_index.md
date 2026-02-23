@@ -58,41 +58,53 @@ flowchart LR
 
 {{< mermaid >}}
 flowchart TD
+AI["Artificial<br/>Intelligence"]
+ML["Machine<br/>Learning"]
+NN["Neural<br/>Networks"]
+DL["Deep<br/>Learning"]
+FM["Foundation<br/>Models"]
+LLM["LLM<br/>Models"]
 
-%% Core hierarchy
-AI["Artificial<br/>Intelligence"] --> ML["Machine<br/>Learning"]
-ML --> NN["Neural<br/>Networks"]
-NN --> DL["Deep<br/>Learning"]
-DL --> FM["Foundation<br/>Models"]
-FM --> LLM["LLM<br/>Models"]
+AI --> ML
+ML --> NN
+NN --> DL
+DL --> FM
+FM --> LLM
 
-%% ML examples
-ML --> LR["Linear<br/>Regression"]
-ML --> DT["Decision<br/>Trees"]
+LR["Linear<br/>Regression"]
+DT["Decision<br/>Trees"]
+ML --> LR
+ML --> DT
 
-%% NN examples
-NN --> MLP["MLP"]
-NN --> CNN["CNN"]
+MLP["MLP"]
+CNN["CNN"]
+NN --> MLP
+NN --> CNN
 
-%% DL examples
-DL --> CNN_DL["CNN<br/>(deep)"]
-DL --> RNN["RNN"]
+CNNDL["CNN<br/>(deep)"]
+RNN["RNN"]
+DL --> CNNDL
+DL --> RNN
 
-%% Foundation Model examples
-FM --> BERT["BERT"]
-FM --> CLIP["CLIP"]
+BERT["BERT"]
+CLIP["CLIP"]
+FM --> BERT
+FM --> CLIP
 
-%% LLM examples
-LLM --> GPT["GPT"]
-LLM --> LLAMA["LLaMA"]
+GPT["GPT"]
+LLAMA["LLaMA"]
+LLM --> GPT
+LLM --> LLAMA
 
-%% Modalities
-LLM --> TEXT["Text"]
-LLM --> IMAGE["Images"]
-LLM --> AUDIO["Audio"]
-LLM --> VIDEO["Video"]
+TEXT["Text"]
+IMAGE["Images"]
+AUDIO["Audio"]
+VIDEO["Video"]
+LLM --> TEXT
+LLM --> IMAGE
+LLM --> AUDIO
+LLM --> VIDEO
 
-%% Styling (your pastel palette)
 style AI fill:#90CAF9,stroke:#1E88E5,color:#000
 style ML fill:#90CAF9,stroke:#1E88E5,color:#000
 style NN fill:#90CAF9,stroke:#1E88E5,color:#000
@@ -105,7 +117,7 @@ style LR fill:#C8E6C9,stroke:#2E7D32,color:#000
 style DT fill:#C8E6C9,stroke:#2E7D32,color:#000
 style MLP fill:#C8E6C9,stroke:#2E7D32,color:#000
 style CNN fill:#C8E6C9,stroke:#2E7D32,color:#000
-style CNN_DL fill:#C8E6C9,stroke:#2E7D32,color:#000
+style CNNDL fill:#C8E6C9,stroke:#2E7D32,color:#000
 style RNN fill:#C8E6C9,stroke:#2E7D32,color:#000
 style BERT fill:#C8E6C9,stroke:#2E7D32,color:#000
 style CLIP fill:#C8E6C9,stroke:#2E7D32,color:#000
@@ -115,7 +127,6 @@ style TEXT fill:#C8E6C9,stroke:#2E7D32,color:#000
 style IMAGE fill:#C8E6C9,stroke:#2E7D32,color:#000
 style AUDIO fill:#C8E6C9,stroke:#2E7D32,color:#000
 style VIDEO fill:#C8E6C9,stroke:#2E7D32,color:#000
-
 {{< /mermaid >}}
 
 ---
