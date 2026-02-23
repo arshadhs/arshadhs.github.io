@@ -21,6 +21,35 @@ binary outcomes, counts, and measurement noise.
 
 ---
 
+{{< mermaid >}}
+flowchart TD
+PD["Probability<br/>distributions"] --> DS["Common<br/>distributions"]
+
+DS --> DIS["Discrete"]
+DS --> CON["Continuous"]
+
+DIS --> D1["Bernoulli"]
+DIS --> D2["Binomial"]
+DIS --> D3["Poisson"]
+
+CON --> D4["Normal<br/>(Gaussian)"]
+CON --> D5["t / Chi-square / F<br/>(intro)"]
+
+style PD fill:#90CAF9,stroke:#1E88E5,color:#000
+style DS fill:#90CAF9,stroke:#1E88E5,color:#000
+
+style DIS fill:#CE93D8,stroke:#8E24AA,color:#000
+style CON fill:#CE93D8,stroke:#8E24AA,color:#000
+
+style D1 fill:#C8E6C9,stroke:#2E7D32,color:#000
+style D2 fill:#C8E6C9,stroke:#2E7D32,color:#000
+style D3 fill:#C8E6C9,stroke:#2E7D32,color:#000
+style D4 fill:#C8E6C9,stroke:#2E7D32,color:#000
+style D5 fill:#C8E6C9,stroke:#2E7D32,color:#000
+{{< /mermaid >}}
+
+---
+
 ## 1) Bernoulli distribution (binary)
 
 Use when:
@@ -179,17 +208,28 @@ ANOVA and comparing two variances.
 
 {{< mermaid >}}
 flowchart TD
-  A[What type of data are you modelling?] --> B[Binary outcome]
-  A --> C[Count of events]
-  A --> D[Continuous measurement]
+A["What type of data<br/>are you modelling?"] --> B["Binary outcome"]
+A --> C["Count of events"]
+A --> D["Continuous measurement"]
 
-  B --> B1[Bernoulli (single trial)]
-  B --> B2[Binomial (n trials)]
+B --> B1["Bernoulli<br/>(single trial)"]
+B --> B2["Binomial<br/>(n trials)"]
 
-  C --> C1[Poisson (rate-based counts)]
+C --> C1["Poisson<br/>(rate-based counts)"]
 
-  D --> D1[Normal (measurement noise)]
-  D --> D2[t / Chi-square / F\nused in inference]
+D --> D1["Normal<br/>(measurement noise)"]
+D --> D2["t / Chi-square / F<br/>used in inference"]
+
+style A fill:#90CAF9,stroke:#1E88E5,color:#000
+style B fill:#CE93D8,stroke:#8E24AA,color:#000
+style C fill:#CE93D8,stroke:#8E24AA,color:#000
+style D fill:#CE93D8,stroke:#8E24AA,color:#000
+
+style B1 fill:#C8E6C9,stroke:#2E7D32,color:#000
+style B2 fill:#C8E6C9,stroke:#2E7D32,color:#000
+style C1 fill:#C8E6C9,stroke:#2E7D32,color:#000
+style D1 fill:#C8E6C9,stroke:#2E7D32,color:#000
+style D2 fill:#C8E6C9,stroke:#2E7D32,color:#000
 {{< /mermaid >}}
 
 ---

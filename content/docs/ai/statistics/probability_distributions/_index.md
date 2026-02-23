@@ -27,21 +27,12 @@ what values are possible, how likely they are, and how we summarise them (mean, 
 
 {{< mermaid >}}
 flowchart TD
-  M["Module 3<br/>Probability Distributions"] --> RV["3.1 Random Variables"]
-  M --> DS["3.2 Probability Distributions"]
+	PD["Probability<br/>distributions"] --> RV["Random<br/>variables"]
+	PD["Probability<br/>distributions"] --> DS["Common<br/>distributions"]
 
-  RV --> RV1["Discrete RVs"]
-  RV --> RV2["Continuous RVs"]
-  RV --> RV3["PMF / PDF / CDF"]
-  RV --> RV4["Mean, Variance, Covariance"]
-  RV --> RV5["Joint & Marginal Distributions"]
-  RV --> RV6["Transformations"]
-
-  DS --> D1["Bernoulli"]
-  DS --> D2["Binomial"]
-  DS --> D3["Poisson"]
-  DS --> D4["Normal (Gaussian)"]
-  DS --> D5["t / Chi-square / F (intro)"]
+	style PD fill:#90CAF9,stroke:#1E88E5,color:#000
+	style RV fill:#90CAF9,stroke:#1E88E5,color:#000
+	style DS fill:#90CAF9,stroke:#1E88E5,color:#000
 {{< /mermaid >}}
 
 ---

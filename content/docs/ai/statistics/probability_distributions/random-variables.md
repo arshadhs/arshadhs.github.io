@@ -25,6 +25,33 @@ Once you define the random variable clearly, the rest (pmf/pdf/cdf, mean, varian
 
 ---
 
+{{< mermaid >}}
+flowchart TD
+PD["Probability<br/>distributions"] --> RV["Random<br/>variables"]
+
+RV --> T["Types"]
+T --> RV1["Discrete<br/>RVs"]
+T --> RV2["Continuous<br/>RVs"]
+
+RV --> F["PMF / PDF / CDF"]
+RV --> S["Mean / Variance<br/>Covariance"]
+RV --> J["Joint & Marginal<br/>distributions"]
+RV --> X["Transformations"]
+
+style PD fill:#90CAF9,stroke:#1E88E5,color:#000
+style RV fill:#90CAF9,stroke:#1E88E5,color:#000
+
+style T fill:#CE93D8,stroke:#8E24AA,color:#000
+style F fill:#CE93D8,stroke:#8E24AA,color:#000
+style S fill:#CE93D8,stroke:#8E24AA,color:#000
+style J fill:#CE93D8,stroke:#8E24AA,color:#000
+style X fill:#CE93D8,stroke:#8E24AA,color:#000
+style RV1 fill:#CE93D8,stroke:#8E24AA,color:#000
+style RV2 fill:#CE93D8,stroke:#8E24AA,color:#000
+{{< /mermaid >}}
+
+---
+
 ## 1) Definition
 
 Random variable:
