@@ -40,20 +40,28 @@ This is the cleanest “first example” of the full ML pipeline: data → model
 
 {{< mermaid >}}
 flowchart LR
-  D[Data<br/>X, y] --> M[Model<br/>Single neuron]
-  M --> L[Loss<br/>MSE]
-  L --> O[Optimiser<br/>Batch Gradient Descent]
-  O --> P[Parameters<br/>w, b]
-  P --> I[Inference<br/>Predict ŷ for new x]
+  D["Data<br/>X, y"] --> M["Model<br/>Single neuron"]
+  M --> L["Loss<br/>MSE"]
+  L --> O["Optimiser<br/>Batch Gradient Descent"]
+  O --> P["Parameters<br/>w, b"]
+  P --> I["Inference<br/>Predict y-hat for new x"]
+
+  %% Pastel colour scheme
+  style D fill:#E3F2FD,stroke:#1E88E5,stroke-width:1px
+  style M fill:#E8F5E9,stroke:#43A047,stroke-width:1px
+  style L fill:#FFF3E0,stroke:#FB8C00,stroke-width:1px
+  style O fill:#F3E5F5,stroke:#8E24AA,stroke-width:1px
+  style P fill:#FCE4EC,stroke:#D81B60,stroke-width:1px
+  style I fill:#E0F7FA,stroke:#00838F,stroke-width:1px
 {{< /mermaid >}}
 
 ## Mathematical Form
 
-{{< color "green" >}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 \hat{y} = w_0 + w_1x_1 + \cdots + w_dx_d
 {{< /katex >}}
-{{< /color >}}
+{{< /colour >}}
 
 where:
 - {{< katex >}}x = [x_1, x_2, \dots, x_d]^T{{< /katex >}} are the input features
@@ -62,11 +70,11 @@ where:
 
 If you use an augmented feature vector {{< katex >}}\tilde{x} = [1, x_1, \dots, x_d]^T{{< /katex >}}, then the same model is:
 
-{{< color "green" >}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 \hat{y} = w^T\tilde{x}
 {{< /katex >}}
-{{< /color >}}
+{{< /colour >}}
 
 ## The Four Components
 
@@ -85,11 +93,19 @@ only the model {{< katex >}}f_\theta{{< /katex >}} becomes deeper, and backpropa
 
 {{< mermaid >}}
 flowchart LR
-  X1[x₁] --> S[Weighted sum<br/>z = wᵀx + b]
-  X2[x₂] --> S
-  X3[x₃] --> S
-  S --> A[Identity activation<br/>f(z)=z]
-  A --> Y[Output<br/>ŷ]
+  X1["x1"] --> S["Weighted sum<br/>z = w^T x + b"]
+  X2["x2"] --> S
+  X3["x3"] --> S
+  S --> A["Identity activation<br/>f(z)=z"]
+  A --> Y["Output<br/>y-hat"]
+
+  %% Pastel colour scheme
+  style X1 fill:#E3F2FD,stroke:#1E88E5,stroke-width:1px
+  style X2 fill:#E3F2FD,stroke:#1E88E5,stroke-width:1px
+  style X3 fill:#E3F2FD,stroke:#1E88E5,stroke-width:1px
+  style S  fill:#FFF3E0,stroke:#FB8C00,stroke-width:1px
+  style A  fill:#E8F5E9,stroke:#43A047,stroke-width:1px
+  style Y  fill:#FCE4EC,stroke:#D81B60,stroke-width:1px
 {{< /mermaid >}}
 
 ## Linear Model Prediction
@@ -104,11 +120,11 @@ Given a new input {{< katex >}}x{{< /katex >}}:
 
 The identity activation is:
 
-{{< color "green" >}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 f(z)=z
 {{< /katex >}}
-{{< /color >}}
+{{< /colour >}}
 
 Key properties:
 - Output is continuous in {{< katex >}}(-\infty, \infty){{< /katex >}}
@@ -125,19 +141,19 @@ Measure how well our model fits the data.
 
 A common choice is mean squared error (MSE):
 
-{{< color "green" >}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 J(w)=\frac{1}{N}\sum_{i=1}^{N}\left(\hat{y}^{(i)}-y^{(i)}\right)^2
 {{< /katex >}}
-{{< /color >}}
+{{< /colour >}}
 
 Equivalently, using the error vector {{< katex >}}e=\hat{y}-y{{< /katex >}}:
 
-{{< color "green" >}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 J(w)=\frac{1}{N}e^Te
 {{< /katex >}}
-{{< /color >}}
+{{< /colour >}}
 
 ### Why Squared Error?
 
@@ -159,11 +175,11 @@ Gradient descent updates weights in the direction of steepest descent (downhill 
 
 Update rule:
 
-{{< color "green" >}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 w \leftarrow w - \eta \,\nabla J(w)
 {{< /katex >}}
-{{< /color >}}
+{{< /colour >}}
 
 where:
 - {{< katex >}}\eta{{< /katex >}} is the learning rate
@@ -212,11 +228,11 @@ This is the forward → loss → gradient → update pipeline:
 
 The vector-form gradient used above is:
 
-{{< color "green" >}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 \nabla J(w)=\frac{2}{N}X^T(Xw-y)
 {{< /katex >}}
-{{< /color >}}
+{{< /colour >}}
 
 {{% hint info %}}
 Practical tip:
@@ -234,11 +250,11 @@ Common regression checks:
 
 Definition of {{< katex >}}R^2{{< /katex >}}:
 
-{{< color "green" >}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 R^2 = 1 - \frac{\sum_{i=1}^{N}(y_i-\hat{y}_i)^2}{\sum_{i=1}^{N}(y_i-\bar{y})^2}
 {{< /katex >}}
-{{< /color >}}
+{{< /colour >}}
 
 where {{< katex >}}\bar{y}{{< /katex >}} is the mean of the true targets.
 
