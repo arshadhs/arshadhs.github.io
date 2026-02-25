@@ -11,12 +11,14 @@ bookCollapseSection: true
 # Calculus
 
 Calculus is:
-- the mathematical framework for understanding and controlling how quantities change.
-- the mathematics of **change** and **accumulation**.
+- the mathematical framework for understanding and controlling how quantities change
+- the mathematics of **change** and **accumulation**
 
+It helps answer:
 - How fast is something changing **right now**?
-- What happens to a system when inputs change **slightly**?
+- What happens when inputs change **slightly**?
 - Where is something **maximum or minimum**?
+
 It answers two big questions:
 - **How fast is something changing right now?** → derivatives (differentiation)
 - **How much has accumulated over an interval?** → integrals (integration)
@@ -82,17 +84,24 @@ flowchart TD
 Differentiation is used to calculate **rates of change**.
 
 ### Real-life intuition
+
 In mechanics:
 - Rate of change of displacement with respect to time → **velocity**
 - Rate of change of velocity with respect to time → **acceleration**
 
 ---
 
-## The derivative and common notations
+## Derivative and common notations
 
-If \(y=f(x)\), the derivative is the rate of change of \(y\) with respect to \(x\).
+If
 
-You will see these notations:
+{{< katex display=true >}}
+y=f(x)
+{{< /katex >}}
+
+the derivative is the rate of change of \(y\) with respect to \(x\).
+
+Notations:
 - **Leibniz notation**: \(\dfrac{dy}{dx}\)
 - **Prime notation**: \(f'(x)\)
 - **Operator notation**: \(\dfrac{d}{dx}(f(x))\)
@@ -122,6 +131,7 @@ f'(a)=\lim_{h\to 0}\frac{f(a+h)-f(a)}{h}
 ## Basic differentiation rules
 
 ### Power rule
+
 If
 
 {{% colour colour="indigo" %}}
@@ -181,14 +191,14 @@ Intuition:
 Leibniz notation is widely used because it clearly shows **which variable** you are differentiating with respect to.
 
 ### What it tells you
-- **Derivative**: the derivative of \(y\) with respect to \(x\) is \(\dfrac{dy}{dx}\)
+- **Derivative**: the derivative of $(y$) with respect to \(x\) is $\dfrac{dy}{dx}$
 - **Operator**: \(\dfrac{d}{dx}\) means “differentiate with respect to \(x\)”
 - **Higher-order derivatives**: \(\dfrac{d^2y}{dx^2}\), \(\dfrac{d^3y}{dx^3}\), etc.
 - **Chain rule** is naturally expressed as products like \(\dfrac{dy}{du}\dfrac{du}{dx}\)
 - **Integrals** pair \(\int\) with \(dx\), e.g. \(\int f(x)\,dx\)
 
 ### Advantages
-- Explicit variables: very helpful for multivariable work
+- Explicit variables: helpful for multivariable work
 - Fraction-like behaviour: often behaves like fractions in chain rule and differential equations
 - Dimensional analysis: units of \(\dfrac{dy}{dx}\) are “units of \(y\) per unit of \(x\)”
 
@@ -230,7 +240,7 @@ z = f(x, y)
 L(w_1, w_2, \dots, w_n)
 {{< /katex >}}
 
-In Machine Learning, almost every function is **multivariate**.
+In machine learning, almost every function is **multivariate**.
 
 ---
 
@@ -245,11 +255,10 @@ Example:
 \text{Loss}(w_1, w_2, \dots, w_n)
 {{< /katex >}}
 
-### Multivariate calculus tells us
-
-- How changing each parameter affects the output
-- Which direction reduces the error fastest
-- Whether a solution is a minimum, maximum, or saddle point
+Multivariate calculus tells us:
+- how changing each parameter affects the output
+- which direction reduces the error fastest
+- whether a solution is a minimum, maximum, or saddle point
 
 ---
 
