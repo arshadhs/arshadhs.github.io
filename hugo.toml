@@ -5,8 +5,25 @@ theme = 'hugo-book'
 
 # Needed for mermaid/katex shortcodes
 [markup]
-[markup.goldmark.renderer]
-  unsafe = true
+  [markup.goldmark.renderer]
+    unsafe = true
+
+  [markup.goldmark.extensions]
+    [markup.goldmark.extensions.passthrough]
+      enable = true
+
+      [markup.goldmark.extensions.passthrough.delimiters]
+        [markup.goldmark.extensions.passthrough.delimiters.block]
+          delimiters = [
+            ['\\[', '\\]'],
+            ['$$', '$$']
+          ]
+
+        [markup.goldmark.extensions.passthrough.delimiters.inline]
+          delimiters = [
+            ['\\(', '\\)'],
+            ['$', '$']
+          ]
 
 [caches]
   [caches.images]
