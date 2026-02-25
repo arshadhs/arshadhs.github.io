@@ -38,66 +38,58 @@ ML needs **understanding data behaviour**, drawing conclusions, and validating m
 | 6. GMM & EM | Mixtures of Gaussians; iterative estimation with EM | Unsupervised learning (soft clustering), density estimation, latent-variable models |
 
 ---
-
 {{< mermaid >}}
 flowchart TD
-  A[Intro to Statistical Methods<br/>AIML ZC418] --> B[1. Basic Probability & Statistics]
-  A --> C[2. Conditional Probability & Bayes]
-  A --> D[3. Probability Distributions]
-  A --> E[4. Hypothesis Testing]
-  A --> F[5. Prediction & Forecasting]
-  A --> G[6. Gaussian Mixture Model & EM]
+  A["Statistical Methods<br/>AIML ZC418"] --> B["1. Basic Probability and Statistics"]
+  A --> C["2. Conditional Probability and Bayes"]
+  A --> D["3. Probability Distributions"]
+  A --> E["4. Hypothesis Testing"]
+  A --> F["5. Prediction and Forecasting"]
+  A --> G["6. Gaussian Mixture Model and EM"]
 
-  %% Block 1
-  B --> B1[Central Tendency<br/>Mean • Median • Mode]
-  B --> B2[Variability<br/>Range • Variance • SD • Quartiles]
-  B --> B3[Basic Probability Concepts]
-  B3 --> B31[Axioms of Probability]
-  B3 --> B32[Definition of Probability]
-  B3 --> B33[Mutually Exclusive vs Independent]
+  B --> B1["Central Tendency<br/>Mean - Median - Mode"]
+  B --> B2["Variability<br/>Range - Variance - SD - Quartiles"]
+  B --> B3["Basic Probability Concepts"]
+  B3 --> B31["Axioms of Probability"]
+  B3 --> B32["Definition of Probability"]
+  B3 --> B33["Mutually Exclusive vs Independent"]
 
-  %% Block 2
-  C --> C1[Conditional Probability]
-  C --> C2[Independence (conditional)]
-  C --> C3[Bayes' Theorem]
-  C --> C4[Naïve Bayes (intro)]
+  C --> C1["Conditional Probability"]
+  C --> C2["Independence (conditional)"]
+  C --> C3["Bayes Theorem"]
+  C --> C4["Naive Bayes (intro)"]
 
-  %% Block 3
-  D --> D1[Random Variables<br/>Discrete & Continuous]
-  D --> D2[Expectation • Variance • Covariance]
-  D --> D3[Transformations of RVs]
-  D --> D4[Key Distributions]
-  D4 --> D41[Bernoulli]
-  D4 --> D42[Binomial]
-  D4 --> D43[Poisson]
-  D4 --> D44[Normal (Gaussian)]
-  D4 --> D45[t • Chi-square • F (intro)]
+  D --> D1["Random Variables<br/>Discrete and Continuous"]
+  D --> D2["Expectation - Variance - Covariance"]
+  D --> D3["Transformations of RVs"]
+  D --> D4["Key Distributions"]
+  D4 --> D41["Bernoulli"]
+  D4 --> D42["Binomial"]
+  D4 --> D43["Poisson"]
+  D4 --> D44["Normal (Gaussian)"]
+  D4 --> D45["t - Chi-square - F (intro)"]
 
-  %% Block 4
-  E --> E1[Sampling<br/>Random • Stratified]
-  E --> E2[Sampling Distributions<br/>CLT]
-  E --> E3[Estimation<br/>Confidence Intervals]
-  E --> E4[Hypothesis Tests<br/>Means • Proportions]
-  E --> E5[ANOVA<br/>Single & Dual factor]
-  E --> E6[Maximum Likelihood]
+  E --> E1["Sampling<br/>Random and Stratified"]
+  E --> E2["Sampling Distributions<br/>CLT"]
+  E --> E3["Estimation<br/>Confidence Intervals"]
+  E --> E4["Hypothesis Tests<br/>Means and Proportions"]
+  E --> E5["ANOVA<br/>Single and Dual factor"]
+  E --> E6["Maximum Likelihood"]
 
-  %% Block 5
-  F --> F1[Correlation]
-  F --> F2[Regression]
-  F --> F3[Time Series Basics<br/>Components]
-  F --> F4[Moving Averages<br/>Simple & Weighted]
-  F --> F5[Time Series Models]
-  F5 --> F51[AR]
-  F5 --> F52[ARMA / ARIMA]
-  F5 --> F53[SARIMA / SARIMAX]
-  F5 --> F54[VAR / VARMAX]
-  F --> F6[Exponential Smoothing]
+  F --> F1["Correlation"]
+  F --> F2["Regression"]
+  F --> F3["Time Series Basics<br/>Components"]
+  F --> F4["Moving Averages<br/>Simple and Weighted"]
+  F --> F5["Time Series Models"]
+  F5 --> F51["AR"]
+  F5 --> F52["ARMA / ARIMA"]
+  F5 --> F53["SARIMA / SARIMAX"]
+  F5 --> F54["VAR / VARMAX"]
+  F --> F6["Exponential Smoothing"]
 
-  %% Block 6
-  G --> G1[GMM<br/>Mixture of Gaussians]
-  G --> G2[EM Algorithm<br/>E-step • M-step]
+  G --> G1["GMM<br/>Mixture of Gaussians"]
+  G --> G2["EM Algorithm<br/>E-step - M-step"]
 
-  %% Learning flow emphasis
   B -.-> C
   C -.-> D
   D -.-> E
