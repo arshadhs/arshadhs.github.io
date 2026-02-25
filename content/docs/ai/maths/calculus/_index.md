@@ -1,7 +1,7 @@
 ---
 title: "Calculus"
 draft: false
-tags: ["Machine Learning", "Mathematics", "Calculus"]
+tags: ["Mathematics", "Calculus", "Derivatives", "Integration"]
 categories: ["AI", "ML"]
 weight: 1140
 menu: main
@@ -10,11 +10,29 @@ bookCollapseSection: true
 
 # Calculus
 
-Calculus is the mathematical framework for understanding and controlling how quantities change.
+Calculus is:
+- the mathematical framework for understanding and controlling how quantities change.
+- the mathematics of **change** and **accumulation**.
 
 - How fast is something changing **right now**?
 - What happens to a system when inputs change **slightly**?
 - Where is something **maximum or minimum**?
+It answers two big questions:
+- **How fast is something changing right now?** → derivatives (differentiation)
+- **How much has accumulated over an interval?** → integrals (integration)
+
+---
+
+{{< mermaid >}}
+flowchart TD
+  A[Calculus] --> B[Limits]
+  B --> C[Continuity]
+  B --> D[Derivatives]
+  B --> E[Integrals]
+  D --> F[Optimisation: maxima/minima]
+  D --> G[ML: gradients & learning]
+  E --> H[Accumulation: area/total change]
+{{< /mermaid >}}
 
 ---
 
@@ -56,6 +74,139 @@ Calculus is the mathematical framework for understanding and controlling how qua
 	- Summing many tiny contributions
 
 {{% /steps %}}
+
+---
+
+## Differentiation
+
+Differentiation is used to calculate **rates of change**.
+
+### Real-life intuition
+In mechanics:
+- Rate of change of displacement with respect to time → **velocity**
+- Rate of change of velocity with respect to time → **acceleration**
+
+---
+
+## The derivative and common notations
+
+If \(y=f(x)\), the derivative is the rate of change of \(y\) with respect to \(x\).
+
+You will see these notations:
+- **Leibniz notation**: \(\dfrac{dy}{dx}\)
+- **Prime notation**: \(f'(x)\)
+- **Operator notation**: \(\dfrac{d}{dx}(f(x))\)
+
+Different questions often mean the same thing:
+- “Differentiate the function …”
+- “Find \(f'(x)\)”
+- “Find \(\dfrac{dy}{dx}\)”
+- “Find the derivative of …”
+- “Calculate the gradient of the tangent to the curve …”
+- “Calculate the rate of change of …”
+
+---
+
+## The idea behind the derivative
+
+The derivative at a point measures the slope of the tangent line.
+
+{{% colour colour="indigo" %}}
+{{< katex display=true >}}
+f'(a)=\lim_{h\to 0}\frac{f(a+h)-f(a)}{h}
+{{< /katex >}}
+{{% /colour %}}
+
+---
+
+## Basic differentiation rules
+
+### Power rule
+If
+
+{{% colour colour="indigo" %}}
+{{< katex display=true >}}
+f(x)=a x^n
+{{< /katex >}}
+{{% /colour %}}
+
+then
+
+{{% colour colour="indigo" %}}
+{{< katex display=true >}}
+f'(x)=na x^{n-1}
+{{< /katex >}}
+{{% /colour %}}
+
+Key fact:
+- bring the power down to the front
+- subtract 1 from the power
+
+---
+
+## Trigonometric derivatives
+
+{{% colour colour="indigo" %}}
+{{< katex display=true >}}
+\frac{d}{dx}(\sin x)=\cos x,\qquad \frac{d}{dx}(\cos x)=-\sin x
+{{< /katex >}}
+{{% /colour %}}
+
+Key fact:
+- these standard trig derivatives assume angles are measured in **radians**
+
+---
+
+## The Chain Rule
+
+The chain rule is used to differentiate **composite functions** (a function inside another function).
+
+If \(y\) depends on \(u\), and \(u\) depends on \(x\), then:
+
+{{% colour colour="indigo" %}}
+{{< katex display=true >}}
+\frac{dy}{dx}=\frac{dy}{du}\cdot\frac{du}{dx}
+{{< /katex >}}
+{{% /colour %}}
+
+Intuition:
+- differentiate the outside function
+- keep the inside
+- multiply by the derivative of the inside
+
+---
+
+## Leibniz Notation (why it’s useful)
+
+Leibniz notation is widely used because it clearly shows **which variable** you are differentiating with respect to.
+
+### What it tells you
+- **Derivative**: the derivative of \(y\) with respect to \(x\) is \(\dfrac{dy}{dx}\)
+- **Operator**: \(\dfrac{d}{dx}\) means “differentiate with respect to \(x\)”
+- **Higher-order derivatives**: \(\dfrac{d^2y}{dx^2}\), \(\dfrac{d^3y}{dx^3}\), etc.
+- **Chain rule** is naturally expressed as products like \(\dfrac{dy}{du}\dfrac{du}{dx}\)
+- **Integrals** pair \(\int\) with \(dx\), e.g. \(\int f(x)\,dx\)
+
+### Advantages
+- Explicit variables: very helpful for multivariable work
+- Fraction-like behaviour: often behaves like fractions in chain rule and differential equations
+- Dimensional analysis: units of \(\dfrac{dy}{dx}\) are “units of \(y\) per unit of \(x\)”
+
+### Comparison to other notations
+- **Newton’s notation**: dots (e.g. \(\dot{x}\)) mainly for time derivatives in physics
+- **Lagrange’s notation**: primes (e.g. \(f'(x)\)) compact but less explicit about the independent variable
+
+---
+
+## Integration (big picture)
+
+Integration is about **accumulation**.
+
+Typical interpretations:
+- area under a curve
+- total change built up from a rate
+
+The key link between differentiation and integration is that they are inverse ideas (captured formally by the Fundamental Theorem of Calculus, which you’ll meet later).
 
 ---
 
@@ -126,6 +277,13 @@ Example:
 ## ML Connection
 
 - Training neural networks (gradient-based learning)
+
+Most ML training is **optimisation**:
+- define a loss function
+- compute how it changes (derivatives / gradients)
+- update parameters to reduce the loss
+
+This is why derivatives (and later, gradients) are central to learning algorithms like gradient descent.
 
 ---
 
