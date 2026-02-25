@@ -11,7 +11,7 @@ bookCollapseSection: true
 # Calculus
 
 Calculus is:
-- the mathematical framework for understanding & controlling how quantities change
+- the mathematical framework for understanding and controlling how quantities change
 - the mathematics of **change** and **accumulation**
 
 It helps answer:
@@ -99,17 +99,17 @@ If
 y=f(x)
 {{< /katex >}}
 
-the derivative is the rate of change of \(y\) with respect to \(x\).
+the derivative is the rate of change of $y$ with respect to $x$.
 
 Notations:
-- **Leibniz notation**: \(\dfrac{dy}{dx}\)
-- **Prime notation**: \(f'(x)\)
-- **Operator notation**: \(\dfrac{d}{dx}(f(x))\)
+- **Leibniz notation**: $\dfrac{dy}{dx}$
+- **Prime notation**: $f'(x)$
+- **Operator notation**: $\dfrac{d}{dx}(f(x))$
 
 Different questions often mean the same thing:
 - “Differentiate the function …”
-- “Find \(f'(x)\)”
-- “Find \(\dfrac{dy}{dx}\)”
+- “Find $f'(x)$”
+- “Find $\dfrac{dy}{dx}$”
 - “Find the derivative of …”
 - “Calculate the gradient of the tangent to the curve …”
 - “Calculate the rate of change of …”
@@ -171,7 +171,7 @@ Key fact:
 
 The chain rule is used to differentiate **composite functions** (a function inside another function).
 
-If \(y\) depends on \(u\), and \(u\) depends on \(x\), then:
+If $y$ depends on $u$, and $u$ depends on $x$, then:
 
 {{% colour colour="indigo" %}}
 {{< katex display=true >}}
@@ -191,20 +191,20 @@ Intuition:
 Leibniz notation is widely used because it clearly shows **which variable** you are differentiating with respect to.
 
 ### What it tells you
-- **Derivative**: the derivative of $(y$) with respect to \(x\) is $\dfrac{dy}{dx}$
-- **Operator**: \(\dfrac{d}{dx}\) means “differentiate with respect to \(x\)”
-- **Higher-order derivatives**: \(\dfrac{d^2y}{dx^2}\), \(\dfrac{d^3y}{dx^3}\), etc.
-- **Chain rule** is naturally expressed as products like \(\dfrac{dy}{du}\dfrac{du}{dx}\)
-- **Integrals** pair \(\int\) with \(dx\), e.g. \(\int f(x)\,dx\)
+- **Derivative**: the derivative of $y$ with respect to $x$ is $\dfrac{dy}{dx}$
+- **Operator**: $\dfrac{d}{dx}$ means “differentiate with respect to $x$”
+- **Higher-order derivatives**: $\dfrac{d^2y}{dx^2}$, $\dfrac{d^3y}{dx^3}$, etc.
+- **Chain rule** is naturally expressed as products like $\dfrac{dy}{du}\dfrac{du}{dx}$
+- **Integrals** pair $\int$ with $dx$, e.g. $\int f(x)\,dx$
 
 ### Advantages
 - Explicit variables: helpful for multivariable work
 - Fraction-like behaviour: often behaves like fractions in chain rule and differential equations
-- Dimensional analysis: units of \(\dfrac{dy}{dx}\) are “units of \(y\) per unit of \(x\)”
+- Dimensional analysis: units of $\dfrac{dy}{dx}$ are “units of $y$ per unit of $x$”
 
 ### Comparison to other notations
-- **Newton’s notation**: dots (e.g. \(\dot{x}\)) mainly for time derivatives in physics
-- **Lagrange’s notation**: primes (e.g. \(f'(x)\)) compact but less explicit about the independent variable
+- **Newton’s notation**: dots (e.g. $\dot{x}$) mainly for time derivatives in physics
+- **Lagrange’s notation**: primes (e.g. $f'(x)$) compact but less explicit about the independent variable
 
 ---
 
