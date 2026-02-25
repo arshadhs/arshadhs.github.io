@@ -11,7 +11,7 @@ bookCollapseSection: true
 # Calculus
 
 Calculus is:
-- the mathematical framework for understanding and controlling how quantities change
+- the mathematical framework for understanding & controlling how quantities change
 - the mathematics of **change** and **accumulation**
 
 It helps answer:
