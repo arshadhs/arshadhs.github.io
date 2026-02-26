@@ -18,6 +18,24 @@ Gradient Descent Algorithm (GDA) is
 In deep learning, the default training approach is almost always **mini-batch gradient descent**, usually with **Adam** or **SGD + momentum**.
 {{% /hint %}}
 
+Gradient Descent is **used in both regression and classification**.
+
+It’s not tied to the task type — it’s tied to the fact you have:
+- **a model with parameters (weights/bias)**, and
+- **a loss function you want to minimise**.
+
+### In regression
+
+- You **predict a number** (e.g., house price).
+- Common loss: **Mean Squared Error (MSE)**.
+- Gradient descent **adjusts weights to reduce MSE**.
+
+### In classification
+
+- You **predict a class** (e.g., spam vs not spam).
+- Common loss: **cross-entropy / log loss**.
+- Gradient descent **adjusts weights to reduce classification loss**.
+
 ---
 
 ## What gradient descent does
@@ -68,6 +86,9 @@ flowchart TD
 
 ## Batch Gradient Descent
 
+- Uses the **entire dataset** to compute one update.
+- **Stable** updates, but can be **slow** on large datasets.
+
 **How it works:** one update uses all {{< katex >}}N{{< /katex >}} training examples.
 
 Pros:
@@ -81,6 +102,9 @@ Cons:
 ---
 
 ## Stochastic Gradient Descent (SGD)
+
+- Uses **one training example at a time** for each update.
+- Very **fast per update**, but updates are **noisy** (loss may bounce around).
 
 **How it works:** one update uses a single training example.
 
@@ -97,6 +121,9 @@ Cons:
 ## Mini-batch Gradient Descent
 
 Mini-batch GD is the **most widely used** training method in deep learning.
+
+- Uses a **small batch** each update (common sizes: 32, 64, 128, 256).
+- This is the **standard** approach in deep learning.
 
 **How it works:** each update uses a small batch of size {{< katex >}}B{{< /katex >}} (often 32–512).
 
@@ -130,6 +157,9 @@ These are still gradient descent, but with smarter updates.
 ### Momentum (very common with SGD)
 
 Momentum keeps a running “velocity” so updates build up in consistent directions.
+
+- Adds “inertia” so updates keep moving in the same direction when that helps.
+- Reduces zig-zagging and speeds up convergence.
 
 {{< colour "green" >}}
 {{< katex display=true >}}
