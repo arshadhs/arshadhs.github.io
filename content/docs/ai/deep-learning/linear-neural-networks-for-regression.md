@@ -137,15 +137,28 @@ Why identity for regression?
 
 ## Objective Function: Squared Error Loss
 
-Measure how well our model fits the data.
+Measure how well our model fits the data. A common choice is mean squared error (MSE).
 
-A common choice is mean squared error (MSE):
+### Mean Squared Error (MSE)
+
+Way to measure how wrong regression predictions are on average.
 
 {{< colour "green" >}}
 {{< katex display=true >}}
 J(w)=\frac{1}{N}\sum_{i=1}^{N}\left(\hat{y}^{(i)}-y^{(i)}\right)^2
 {{< /katex >}}
 {{< /colour >}}
+
+- If predictions are close to the true values → MSE is small
+- If predictions are far off → MSE is large
+- Squaring means a mistake of 10 counts much more than a mistake of 1
+
+**What it does?**
+
+For each example:
+- take the error = (prediction − true value)
+- square it (so negatives don’t cancel positives, and big mistakes count more)
+- take the mean (average) across all examples
 
 Equivalently, using the error vector {{< katex >}}e=\hat{y}-y{{< /katex >}}:
 
