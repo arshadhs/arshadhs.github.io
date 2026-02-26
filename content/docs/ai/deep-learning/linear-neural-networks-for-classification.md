@@ -1,5 +1,5 @@
 ---
-title: "Linear NN for Classification"
+title: "LNN for Classification"
 date: 2026-02-15
 draft: false
 weight: 400
