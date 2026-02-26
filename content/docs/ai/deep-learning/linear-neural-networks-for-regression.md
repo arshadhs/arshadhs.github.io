@@ -1,5 +1,5 @@
 ---
-title: "Linear NN for Regression"
+title: "LNN for Regression"
 date: 2026-02-15
 draft: false
 weight: 300
