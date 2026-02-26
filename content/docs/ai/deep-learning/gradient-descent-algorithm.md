@@ -186,6 +186,10 @@ In practice, Adam is often the quickest way to get a model training well with mi
 - Singh & Raj — *Deep Learning* (training and optimisation fundamentals).
 - Zhang, Lipton, Li, Smola — *Dive into Deep Learning* (optimisation chapters).
 
+- [GDA in ML](https://www.geeksforgeeks.org/machine-learning/gradient-descent-algorithm-and-its-variants/)
+- [Different Variants of Gradient Descent](https://www.geeksforgeeks.org/machine-learning/different-variants-of-gradient-descent/)
+- [Mastering Gradient Descent: A Comprehensive Guide with Real-World Applications](https://medium.com/@danailkhan1999/gradient-descent-explained-from-theory-to-practice-in-machine-learning-b00840d0ba0e)
+
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}
