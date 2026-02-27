@@ -209,7 +209,7 @@ Both Batch Gradient Descent and Stochastic Gradient Descent are useful optimisat
 ## Computational graph for one gradient update (linear regression)
 
 {{< mermaid >}}
-flowchart LR
+flowchart TD
 
   %% Nodes
   Wt["w(t)"] -->|forward| MUL(("×"))
