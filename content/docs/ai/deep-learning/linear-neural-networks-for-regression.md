@@ -206,6 +206,153 @@ In a neural network, the gradient tells you:
 
 Both Batch Gradient Descent and Stochastic Gradient Descent are useful optimisation algorithms that serve different purposes depending on the problem.
 
+## Computational graph for one gradient update (linear regression)
+
+{{< mermaid >}}
+flowchart LR
+
+  %% Nodes
+  Wt["w(t)"] -->|forward| MUL(("×"))
+  X["X"] -->|forward| MUL
+  MUL -->|forward| YH["y-hat (ŷ)"]
+
+  Y["y"] -->|forward| MINUS(("−"))
+  YH -->|forward| MINUS
+  MINUS -->|forward| E["e"]
+
+  E -->|forward| NORM(("||·||^2"))
+  NORM -->|forward| J["J(w)"]
+
+  %% Backward / gradient flow
+  J -.->|backward| dJ["∇J"]
+  dJ -.-> XT["X^T"]
+  XT -.-> Wt1["w(t+1)"]
+
+  %% Learning rate annotation path
+  Wt -.->|−η| Wt1
+
+  %% Pastel colour scheme (nodes)
+  style Wt fill:#E3F2FD,stroke:#1E88E5,stroke-width:1px
+  style X fill:#E3F2FD,stroke:#1E88E5,stroke-width:1px
+  style Y fill:#E3F2FD,stroke:#1E88E5,stroke-width:1px
+
+  style MUL fill:#FFF3E0,stroke:#FB8C00,stroke-width:1px
+  style MINUS fill:#FFF3E0,stroke:#FB8C00,stroke-width:1px
+  style NORM fill:#FFF3E0,stroke:#FB8C00,stroke-width:1px
+
+  style YH fill:#E8F5E9,stroke:#43A047,stroke-width:1px
+  style E fill:#E8F5E9,stroke:#43A047,stroke-width:1px
+  style J fill:#FCE4EC,stroke:#D81B60,stroke-width:1px
+
+  style dJ fill:#F3E5F5,stroke:#8E24AA,stroke-width:1px
+  style XT fill:#F3E5F5,stroke:#8E24AA,stroke-width:1px
+  style Wt1 fill:#F1F8E9,stroke:#558B2F,stroke-width:1px
+
+  %% Link colours
+  linkStyle 0 stroke:#1E88E5,stroke-width:2px
+  linkStyle 1 stroke:#1E88E5,stroke-width:2px
+  linkStyle 2 stroke:#1E88E5,stroke-width:2px
+  linkStyle 3 stroke:#1E88E5,stroke-width:2px
+  linkStyle 4 stroke:#1E88E5,stroke-width:2px
+  linkStyle 5 stroke:#1E88E5,stroke-width:2px
+  linkStyle 6 stroke:#1E88E5,stroke-width:2px
+  linkStyle 7 stroke:#1E88E5,stroke-width:2px
+
+  linkStyle 8 stroke:#D32F2F,stroke-width:2px,stroke-dasharray:6 4
+  linkStyle 9 stroke:#D32F2F,stroke-width:2px,stroke-dasharray:6 4
+  linkStyle 10 stroke:#D32F2F,stroke-width:2px,stroke-dasharray:6 4
+  linkStyle 11 stroke:#D32F2F,stroke-width:2px,stroke-dasharray:6 4
+{{< /mermaid >}}
+
+This diagram shows **one full training step** (one gradient update) for a **linear model** trained with **squared error loss**.
+
+Blue arrows represent the **forward computation**.  
+Red dashed arrows represent the **backward (gradient) flow**.
+
+### Nodes (what each block means)
+
+- {{< katex >}}w^{(t)}{{< /katex >}}: current weights (parameters) at iteration {{< katex >}}t{{< /katex >}}
+- {{< katex >}}X{{< /katex >}}: input data (design matrix)
+- {{< katex >}}y{{< /katex >}}: targets (true outputs)
+- {{< katex >}}\hat{y}{{< /katex >}}: prediction
+- {{< katex >}}e{{< /katex >}}: error (prediction minus target)
+- {{< katex >}}J(w){{< /katex >}}: loss (single number)
+- {{< katex >}}\nabla J{{< /katex >}}: gradient of the loss w.r.t. weights
+- {{< katex >}}w^{(t+1)}{{< /katex >}}: updated weights after one step
+- {{< katex >}}\eta{{< /katex >}}: learning rate (step size)
+
+### Forward pass (blue)
+
+Prediction (weighted sum):
+
+{{< colour "green" >}}
+{{< katex display=true >}}
+\hat{y} = X\,w^{(t)}
+{{< /katex >}}
+{{< /colour >}}
+
+Error:
+
+{{< colour "green" >}}
+{{< katex display=true >}}
+e = \hat{y} - y
+{{< /katex >}}
+{{< /colour >}}
+
+Squared loss (shown as squared norm in the slide):
+
+{{< colour "green" >}}
+{{< katex display=true >}}
+\|e\|^2 = e^T e
+{{< /katex >}}
+{{< /colour >}}
+
+One common scaling (matches the slide’s gradient flow label):
+
+{{< colour "green" >}}
+{{< katex display=true >}}
+J\!\left(w^{(t)}\right) = \frac{1}{2N}\,e^T e
+{{< /katex >}}
+{{< /colour >}}
+
+### Backward pass (red dashed)
+
+Gradient back to error:
+
+{{< colour "green" >}}
+{{< katex display=true >}}
+\frac{\partial J}{\partial e} = \frac{1}{N}\,e
+{{< /katex >}}
+{{< /colour >}}
+
+Gradient w.r.t. weights ({{< katex >}}X^T{{< /katex >}} appears here):
+
+{{< colour "green" >}}
+{{< katex display=true >}}
+\nabla_w J\!\left(w^{(t)}\right)
+=
+\frac{1}{N}\,X^T(\hat{y}-y)
+=
+\frac{1}{N}\,X^T e
+{{< /katex >}}
+{{< /colour >}}
+
+### Update step
+
+{{< colour "green" >}}
+{{< katex display=true >}}
+w^{(t+1)} = w^{(t)} - \eta\,\nabla_w J\!\left(w^{(t)}\right)
+{{< /katex >}}
+{{< /colour >}}
+
+Quick intuition:
+
+- If predictions are too high, {{< katex >}}e{{< /katex >}} is positive → weights get pushed down.
+- If predictions are too low, {{< katex >}}e{{< /katex >}} is negative → weights get pushed up.
+- Repeating steps reduces {{< katex >}}J(w){{< /katex >}}.
+
+---
+
 ### Variations of GDA
 
 Choosing between the algorithms depends on dataset size, compute, and the noise/stability you want during training.
