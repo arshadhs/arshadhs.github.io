@@ -1,6 +1,6 @@
 ---
-title: "Linear NN for Classification"
-date: 2026-02-26
+title: "LNN for Classification"
+date: 2026-02-15
 draft: false
 weight: 400
 tags: ["Deep Learning", "Classification", "Optimisation"]
