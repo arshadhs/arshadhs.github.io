@@ -2,7 +2,7 @@
 title: "Deep Feedforward Neural Networks (DFNN) for Classification"
 date: 2026-02-26
 draft: false
-weight: 320
+weight: 500
 tags: ["Deep Learning", "DFNN", "MLP", "Classification"]
 categories: ["AI", "Machine Learning"]
 ---
