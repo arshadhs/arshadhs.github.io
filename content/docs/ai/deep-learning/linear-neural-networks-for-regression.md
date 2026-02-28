@@ -93,7 +93,7 @@ only the model $f_\theta$ becomes deeper, and backpropagation computes gradients
 
 {{< mermaid >}}
 flowchart LR
-  X1["x1"] --> S["Weighted sum<br/>$z = w^T x + b$"]
+  X1["x1"] --> S["Weighted sum<br/>z = w^T x + b"]
   X2["x2"] --> S
   X3["x3"] --> S
   S --> A["Identity activation<br/>f(z)=z"]

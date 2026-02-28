@@ -30,6 +30,21 @@ Common settings:
 
 ---
 
+## The Four Components
+
+A complete ML system for **linear classification (single neuron)** has four components:
+- **Data**: input feature matrix {{< katex >}}X \in \mathbb{R}^{N \times d}{{< /katex >}} and binary targets {{< katex >}}y \in \{0,1\}^N{{< /katex >}}
+- **Model**: single neuron implementing a linear function followed by a sigmoid activation (maps inputs to probabilities)
+- **Objective**: binary cross-entropy loss (measures prediction error)
+- **Learning algorithm**: Stochastic gradient descent (SGD) to optimise weights
+
+{{% hint info %}}
+This same template extends directly to multi-class classification and deep neural networks.  
+Only the model becomes multi-output (softmax) or deeper (MLP), and backpropagation computes gradients efficiently.
+{{% /hint %}}
+
+---
+
 ## Binary Classification: Logistic Regression as a Single Neuron
 
 ### Model (logit → probability)
