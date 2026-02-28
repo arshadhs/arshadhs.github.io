@@ -47,6 +47,31 @@ Only the model becomes multi-output (softmax) or deeper (MLP), and backpropagati
 
 ## Binary Classification: Logistic Regression as a Single Neuron
 
+{{< mermaid >}}
+flowchart LR
+
+  %% Inputs (features + bias)
+  B["1 (bias input)"] -->|w0| SUM["Weighted sum<br/>z = w^T x + b"]
+  X1["x1"] -->|w1| SUM
+  X2["x2"] -->|w2| SUM
+  XD["x_d"] -->|w_d| SUM
+
+  %% Activation + output
+  SUM --> SIG["Sigmoid<br/>ŷ = σ(z)"]
+  SIG --> OUT["Output probability<br/>ŷ = P(y=1|x) ∈ [0,1]"]
+
+  %% Pastel colour scheme (same as your regression diagram)
+  style B fill:#E3F2FD,stroke:#1E88E5,stroke-width:1px
+  style X1 fill:#E3F2FD,stroke:#1E88E5,stroke-width:1px
+  style X2 fill:#E3F2FD,stroke:#1E88E5,stroke-width:1px
+  style XD fill:#E3F2FD,stroke:#1E88E5,stroke-width:1px
+
+  style SUM fill:#FFF3E0,stroke:#FB8C00,stroke-width:1px
+  style SIG fill:#E8F5E9,stroke:#43A047,stroke-width:1px
+  style OUT fill:#FCE4EC,stroke:#D81B60,stroke-width:1px
+
+{{< /mermaid >}}
+
 ### Model (logit → probability)
 
 {{< colour "green" >}}
