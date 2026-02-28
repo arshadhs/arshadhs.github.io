@@ -86,14 +86,14 @@ A complete ML system has four components:
 
 {{% hint info %}}
 This same template extends directly to multi-layer networks:  
-only the model {{< katex >}}f_\theta{{< /katex >}} becomes deeper, and backpropagation computes gradients efficiently.
+only the model $f_\theta$ becomes deeper, and backpropagation computes gradients efficiently.
 {{% /hint %}}
 
 ## Single neuron for regression
 
 {{< mermaid >}}
 flowchart LR
-  X1["x1"] --> S["Weighted sum<br/>z = w^T x + b"]
+  X1["x1"] --> S["Weighted sum<br/>$z = w^T x + b$"]
   X2["x2"] --> S
   X3["x3"] --> S
   S --> A["Identity activation<br/>f(z)=z"]
