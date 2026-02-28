@@ -44,7 +44,7 @@ flowchart LR
   M --> L["Loss<br/>MSE"]
   L --> O["Optimiser<br/>Batch Gradient Descent"]
   O --> P["Parameters<br/>w, b"]
-  P --> I["Inference<br/>Predict y-hat for new x"]
+  P --> I["Inference<br/>Predict ŷ for new x"]
 
   %% Pastel colour scheme
   style D fill:#E3F2FD,stroke:#1E88E5,stroke-width:1px
@@ -97,7 +97,7 @@ flowchart LR
   X2["x2"] --> S
   X3["x3"] --> S
   S --> A["Identity activation<br/>f(z)=z"]
-  A --> Y["Output<br/>y-hat"]
+  A --> Y["Output<br/>ŷ"]
 
   %% Pastel colour scheme
   style X1 fill:#E3F2FD,stroke:#1E88E5,stroke-width:1px
@@ -214,7 +214,7 @@ flowchart TD
   %% Nodes
   Wt["w(t)"] -->|forward| MUL(("×"))
   X["X"] -->|forward| MUL
-  MUL -->|forward| YH["y-hat (ŷ)"]
+  MUL -->|forward| YH["ŷ"]
 
   Y["y"] -->|forward| MINUS(("−"))
   YH -->|forward| MINUS

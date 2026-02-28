@@ -12,9 +12,9 @@ Differentiation measures rate of change.
 For a function f(x), the derivative measures the rate of change.
 
 {{% colour RED %}}
-\[
-f'(x) = \lim_{h \to 0} \frac{f(x+h)-f(x)}{h}
-\]
+$[
+f'(x) = $lim_{h $to 0} $frac{f(x+h)-f(x)}{h}
+$]
 {{% /colour %}}
 
 Interpretation:
