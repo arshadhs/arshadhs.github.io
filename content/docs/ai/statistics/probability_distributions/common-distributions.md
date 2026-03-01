@@ -104,7 +104,7 @@ E(X)=np,\quad V(X)=np(1-p)
 ML connection:
 how many “positive” outcomes in n repeated trials (quality checks, conversions, etc.).
 
-## Binomial Distribution: Understanding
+### 3.1 Binomial Distribution: Understanding
 
 | Phrase in questions | Meaning in maths | Example for a Binomial RV $X$ |
 |---|---|---|
