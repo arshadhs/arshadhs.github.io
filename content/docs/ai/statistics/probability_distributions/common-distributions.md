@@ -104,6 +104,16 @@ E(X)=np,\quad V(X)=np(1-p)
 ML connection:
 how many “positive” outcomes in n repeated trials (quality checks, conversions, etc.).
 
+## Binomial Distribution: Understanding
+
+| Phrase in questions | Meaning in maths | Example for a Binomial RV $X$ |
+|---|---|---|
+| “at least” | $X \ge k$ | $P(X \ge 3)$ |
+| “more than” / “greater than” | $X > k$ | $P(X > 3)=P(X \ge 4)$ |
+| “fewer than” / “less than” | $X < k$ | $P(X < 3)=P(X \le 2)$ |
+| “no more than” / “at most” | $X \le k$ | $P(X \le 3)$ |
+| “exactly” | $X = k$ | $P(X = 3)$ |
+
 ---
 
 ## 3) Poisson distribution (counts over time/space)
