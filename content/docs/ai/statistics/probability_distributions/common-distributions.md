@@ -102,7 +102,7 @@ E(X)=np,\quad V(X)=np(1-p)
 {{% /colour %}}
 
 ML connection:
-how many “positive” outcomes in n repeated trials (quality checks, conversions, etc.).
+how many “positive” outcomes in n repeated trials (quality checks, conversions, etc.)
 
 ### 2.1 Binomial Distribution: Understanding
 
