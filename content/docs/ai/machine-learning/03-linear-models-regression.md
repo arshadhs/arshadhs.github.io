@@ -1,5 +1,5 @@
 ---
-title: 'Linear models for Regression'
+title: '03 - Linear models for Regression'
 draft: false
 tags: ["AI", "ML"]
 categories: ["AI", "ML"]
@@ -110,4 +110,5 @@ When you build a linear regression model, always check:
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}
+
 
