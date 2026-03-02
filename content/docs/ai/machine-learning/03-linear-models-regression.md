@@ -147,6 +147,7 @@ Instead of solving in one step, we can minimise $J(w)$ by iterative updates.
 
 ### Cost function (MSE style)
 
+**Squared Error Function**
 ![Zebrato](/images/ai/cost-function.png)
 
 {{% colour %}}
