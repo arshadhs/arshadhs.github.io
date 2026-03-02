@@ -81,7 +81,7 @@ But if we consider the entire training set and try to measure how well is our mo
 
 ## Role of Gradient Descent in Updating the Weights
 
-Gradient descent is an optimisation algorithm used to minimize the cost function and find the best-fit line for the model.
+Gradient Descent is an optimisation algorithm used to minimize the cost function and find the best-fit line for the model.
 
 - Iteratively adjust the weights of the model to reduce the error. 
 - each iteration updates the weights in the direction that minimises the cost function leading to the optimal set of parameters.
@@ -91,7 +91,7 @@ Gradient descent is an optimisation algorithm used to minimize the cost function
 ## References
 
 - [Cost Function](https://www.geeksforgeeks.org/machine-learning/what-is-the-cost-function-in-linear-regression/)
-
+- [Gradient Descent](
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}
