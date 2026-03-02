@@ -100,8 +100,21 @@ Also: Being able to fit a line does not necessarily mean the model is good.
 
 ## Direct Solution Method
 
-In regression we pick parameters to minimise prediction error.
-A common choice is **least squares**.
+In regression we pick parameters to minimise prediction error. A common choice is **Least Square Method**.
+
+- mathematical optimisation method used to find the best-fitting curve or line through a set of data points
+- by minimizing the sum of the squared residuals (differences) between observed and predicted values.
+- commonly used in regression analysis to determine the line of best fit 
+
+For a simple linear regression, a line of the form:
+
+y = mx+c
+
+y is the dependent variable
+x is the independent variable
+m is the slope of the line
+c is the y-intercept
+
 
 ### Objective (least squares)
 
@@ -141,7 +154,9 @@ Practical notes:
 
 ---
 
-## Iterative Method – Gradient Descent (batch/stochastic/mini-batch)
+## Iterative Method
+
+### Gradient Descent (batch/stochastic/mini-batch)
 
 Instead of solving in one step, we can minimise $J(w)$ by iterative updates.
 
