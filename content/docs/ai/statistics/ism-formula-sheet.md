@@ -123,7 +123,7 @@ CV=\frac{s}{\bar{x}}\times 100\%
 ### Five-number summary, IQR, and Outliers
 
 Five-number summary:
-\(\min,\; Q_1,\; Q_2\;(\text{median}),\; Q_3,\; \max\)
+$\min,\; Q_1,\; Q_2$ (median), $Q_3,\; \max$
 
 **Interquartile range (IQR):**
 
