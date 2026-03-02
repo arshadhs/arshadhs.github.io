@@ -90,14 +90,11 @@ For every 1 unit increase in age, the visibility distance decreases by approxima
 
 ---
 
-## Important Note About Correlation
+## Correlation
 
 Correlation measures **linear** dependence only.
-A low correlation does not mean “no relationship”:
-It may mean the data is poorly explained by a linear model.
-
-Also:
-Being able to fit a line does not necessarily mean the model is good.
+A low correlation does not mean “no relationship”: It may mean the data is poorly explained by a linear model.
+Also: Being able to fit a line does not necessarily mean the model is good.
 
 ---
 
@@ -149,6 +146,8 @@ Practical notes:
 Instead of solving in one step, we can minimise $J(w)$ by iterative updates.
 
 ### Cost function (MSE style)
+
+![Zebrato](/images/ai/cost-function.png)
 
 {{% colour %}}
 {{< katex display=true >}}
