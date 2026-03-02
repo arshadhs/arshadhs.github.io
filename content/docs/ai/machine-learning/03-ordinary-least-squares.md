@@ -2,7 +2,7 @@
 title: "Ordinary Least Squares and the Line of Best Fit"
 date: 2026-02-21
 draft: false
-weight: 350
+weight: 320
 tags: ["AI", "ML", "Linear Regression", "OLS"]
 categories: ["AI", "ML"]
 ---

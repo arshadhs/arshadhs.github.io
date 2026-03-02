@@ -2,7 +2,7 @@
 title: "Gradient Descent for Linear Regression"
 date: 2026-02-21
 draft: false
-weight: 435
+weight: 360
 tags: ["AI", "ML", "Linear Regression", "Gradient Descent"]
 categories: ["AI", "ML"]
 ---
@@ -17,6 +17,54 @@ Gradient descent is an iterative optimisation method used to minimise the regres
 Key takeaway:
 Gradient descent starts with initial parameter values and repeatedly updates them using the gradient until the cost stops decreasing.
 {{% /hint %}}
+
+{{< mermaid >}}
+flowchart TD
+GD["Gradient<br/>Descent"] -->|minimises| CF["Cost<br/>function"]
+GD -->|updates| W["Parameters<br/>(weights)"]
+GD -->|uses| GR["Gradient<br/>(slope)"]
+
+GD --> T["Types"]
+
+T --> BGD["Batch<br/>GD"]
+BGD -->|uses| ALL["All data<br/>per step"]
+BGD -->|stable| STB["Smooth<br/>updates"]
+
+T --> SGD["Stochastic<br/>GD"]
+SGD -->|uses| ONE["1 sample<br/>per step"]
+SGD -->|fast| FAST["Quick<br/>progress"]
+SGD -->|noisy| NOISE["Noisy<br/>updates"]
+
+T --> MGD["Mini-batch<br/>GD"]
+MGD -->|uses| MB["Small batch<br/>per step"]
+MGD -->|common| PRACT["Practical<br/>default"]
+
+GD --> H["Hyperparameters"]
+H --> LR["Learning<br/>rate"]
+H --> BS["Batch<br/>size"]
+H --> EP["Epochs"]
+
+style GD fill:#90CAF9,stroke:#1E88E5,color:#000
+style CF fill:#CE93D8,stroke:#8E24AA,color:#000
+style W fill:#CE93D8,stroke:#8E24AA,color:#000
+style GR fill:#CE93D8,stroke:#8E24AA,color:#000
+style T fill:#CE93D8,stroke:#8E24AA,color:#000
+style H fill:#CE93D8,stroke:#8E24AA,color:#000
+style LR fill:#CE93D8,stroke:#8E24AA,color:#000
+style BS fill:#CE93D8,stroke:#8E24AA,color:#000
+style EP fill:#CE93D8,stroke:#8E24AA,color:#000
+
+style BGD fill:#C8E6C9,stroke:#2E7D32,color:#000
+style SGD fill:#C8E6C9,stroke:#2E7D32,color:#000
+style MGD fill:#C8E6C9,stroke:#2E7D32,color:#000
+style ALL fill:#C8E6C9,stroke:#2E7D32,color:#000
+style STB fill:#C8E6C9,stroke:#2E7D32,color:#000
+style ONE fill:#C8E6C9,stroke:#2E7D32,color:#000
+style FAST fill:#C8E6C9,stroke:#2E7D32,color:#000
+style NOISE fill:#C8E6C9,stroke:#2E7D32,color:#000
+style MB fill:#C8E6C9,stroke:#2E7D32,color:#000
+style PRACT fill:#C8E6C9,stroke:#2E7D32,color:#000
+{{< /mermaid >}}
 
 ---
 
