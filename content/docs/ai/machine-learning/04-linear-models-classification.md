@@ -3,7 +3,7 @@ title: 'Linear models for classification'
 draft: false
 tags: ["AI", "ML"]
 categories: ["AI", "ML"]
-weight: 440
+weight: 400
 ---
 # Linear models for Classification
  

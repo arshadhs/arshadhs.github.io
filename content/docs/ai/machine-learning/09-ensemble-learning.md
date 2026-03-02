@@ -3,7 +3,7 @@ title: 'Ensemble Learning'
 draft: false
 tags: ["AI", "ML"]
 categories: ["AI", "ML"]
-weight: 490
+weight: 900
 ---
 # Ensemble Learning 
 

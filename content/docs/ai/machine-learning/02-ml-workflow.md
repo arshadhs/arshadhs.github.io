@@ -3,7 +3,7 @@ title: 'Machine learning Workflow'
 draft: false
 tags: ["AI", "ML"]
 categories: ["AI", "ML"]
-weight: 420
+weight: 200
 ---
 # Machine learning Workflow
 

@@ -3,7 +3,7 @@ title: 'Bayesian Learning'
 draft: false
 tags: ["AI", "ML"]
 categories: ["AI", "ML"]
-weight: 480
+weight: 800
 ---
 # Bayesian Learning 
 

@@ -3,7 +3,7 @@ title: 'ML Model Evaluation/Comparison'
 draft: false
 tags: ["AI", "ML"]
 categories: ["AI", "ML"]
-weight: 510
+weight: 1100
 ---
 # Machine Learning Model Evaluation/Comparison 
 

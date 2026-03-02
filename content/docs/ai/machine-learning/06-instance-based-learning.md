@@ -3,7 +3,7 @@ title: 'Instance-based Learning'
 draft: false
 tags: ["AI", "ML"]
 categories: ["AI", "ML"]
-weight: 460
+weight: 600
 ---
 # Instance-based Learning 
 

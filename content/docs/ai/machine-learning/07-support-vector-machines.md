@@ -3,7 +3,7 @@ title: "Support Vector Machine (SVM)"
 draft: false
 tags: ["AI", "ML", "SVM", "Classification"]
 categories: ["AI", "ML"]
-weight: 470
+weight: 700
 ---
 
 # Support Vector Machine (SVM)

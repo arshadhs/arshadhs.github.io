@@ -5,7 +5,7 @@ date: 2026-01-03T10:29:52+01:00
 draft: false
 tags: ["AI", "ML"]
 categories: ["AI", "ML"]
-weight: 402
+weight: 020
 ---
 # Unsupervised Learning
 - Works on **unlabelled raw data**.

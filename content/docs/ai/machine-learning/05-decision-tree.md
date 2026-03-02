@@ -3,7 +3,7 @@ title: 'Decision Tree'
 draft: false
 tags: ["AI", "ML"]
 categories: ["AI", "ML"]
-weight: 450
+weight: 500
 ---
 # Decision Tree 
 

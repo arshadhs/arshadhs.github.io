@@ -3,7 +3,7 @@ title: "Reinforcement Learning"
 draft: false
 tags: ["AI", "Machine Learning", "Reinforcement Learning"]
 categories: ["AI", "ML"]
-weight: 405
+weight: 040
 menu: main
 ---
 

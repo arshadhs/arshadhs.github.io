@@ -3,20 +3,21 @@ title: '03 - Linear models for Regression'
 draft: false
 tags: ["AI", "ML"]
 categories: ["AI", "ML"]
-weight: 430
+weight: 300
 ---
 
 # Linear models for Regression
 
-Linear regression is a method used to predict a **numerical** output by fitting a model that is **linear in its parameters**.
+Linear Regression is a supervised {{< color color="blue" >}}ML{{< /color >}} method used to predict a **numerical** target by fitting a model that is **linear in its parameters**.
 
 In {{< color color="blue" >}}ML{{< /color >}}, linear models are a core baseline:
 they’re fast, often surprisingly strong, and usually easy to interpret.
 
 {{% hint info %}}
 Key takeaway:
-A “linear model” can still model **non-linear patterns** by using **basis functions**,
-as long as the model remains linear in the parameters.
+Linear Regression learns parameters by minimising a squared-error cost.
+You can solve it directly (closed form) or iteratively (gradient descent),
+and you can extend it using basis functions and regularisation.
 {{% /hint %}}
 
 ---

@@ -5,7 +5,7 @@ date: 2026-01-03T10:29:52+01:00
 draft: false
 tags: ["AI", "ML"]
 categories: ["AI", "ML"]
-weight: 401
+weight: 010
 ---
 
 # Supervised Learning
