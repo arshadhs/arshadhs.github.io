@@ -43,7 +43,7 @@ style EP fill:#CE93D8,stroke:#8E24AA,color:#000
 
 ---
 
-## Types of GDA
+## Types of GD
 
 {{< mermaid >}}
 flowchart TD
@@ -132,6 +132,9 @@ Each iteration includes:
 
 ## Gradients (Partial Derivatives)
 
+We minimise the cost $J(w,b)$ defined here:
+- {{< relref "03-cost-function.md" >}}
+
 The partial derivatives are:
 
 {{% colour "blue" %}}
@@ -183,7 +186,7 @@ For an overdetermined system $Ap=b$, the squared error can be written as:
 
 {{% colour "blue" %}}
 {{< katex display=true >}}
-SSE(p) = (Ap-b)^T(Ap-b)
+SSE = (Ap-b)^T(Ap-b)
 {{< /katex >}}
 {{% /colour %}}
 
@@ -223,6 +226,9 @@ monitor the cost $J$ across iterations and ensure it decreases steadily.
 ## References
 
 - [Also see DNN - GD](/docs/ai/deep-learning/gradient-descent-algorithm.md)
+- {{< relref "03-linear-models-regression.md" >}}
+- {{< relref "03-ordinary-least-squares.md" >}}
+- {{< relref "03-cost-function.md" >}}
 
 ---
 

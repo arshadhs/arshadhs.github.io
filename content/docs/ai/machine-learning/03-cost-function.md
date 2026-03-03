@@ -279,9 +279,10 @@ Gradient Descent is an optimisation algorithm used to minimise the cost function
 ## References
 
 - [Cost Function](https://www.geeksforgeeks.org/machine-learning/what-is-the-cost-function-in-linear-regression/)
+- {{< relref "03-gradient-descent-linear-regression.md" >}}
+- {{< relref "03-linear-models-regression.md" >}}
 
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}
 
----

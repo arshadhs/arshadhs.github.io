@@ -94,64 +94,24 @@ For every 1 unit increase in age, the visibility distance decreases by approxima
 ## Correlation
 
 Correlation measures **linear** dependence only.
-A low correlation does not mean “no relationship”: It may mean the data is poorly explained by a linear model.
-Also: Being able to fit a line does not necessarily mean the model is good.
+A low correlation does not mean “no relationship”:
+It may mean the data is poorly explained by a linear model.
+
+Also:
+Being able to fit a line does not necessarily mean the model is good.
 
 ---
-
 ## Direct Solution Method
 
-In regression we pick parameters to minimise prediction error. A common choice is **Least Square Method**.
+In regression we pick parameters to minimise prediction error.
+A common choice is the **least squares method**.
 
 - mathematical optimisation method used to find the best-fitting curve or line through a set of data points
-- by minimizing the sum of the squared residuals (differences) between observed and predicted values.
+- by minimising the sum of the squared residuals (differences) between observed and predicted values
 - commonly used in regression analysis to determine the line of best fit 
 
-For a simple linear regression, a line of the form:
-
-y = mx+c
-
-y is the dependent variable
-x is the independent variable
-m is the slope of the line
-c is the y-intercept
-
-
-### Objective (least squares)
-
-For each example $(x_i, y_i)$, the prediction is $\hat{y}_i$.
-The residual is:
-$r_i = y_i - \hat{y}_i$
-
-Sum of squared errors (SSE):
-
-{{% colour "blue" %}}
-{{< katex display=true >}}
-SSE(w) = \sum_{i=1}^{n}(y_i - \hat{y}_i)^2
-{{< /katex >}}
-{{% /colour %}}
-
-A common scaled version is Mean Squared Error (MSE):
-
-{{% colour "blue" %}}
-{{< katex display=true >}}
-J(w) = \frac{1}{n}\sum_{i=1}^{n}(Xw - y)_i^2
-{{< /katex >}}
-{{% /colour %}}
-
-### Normal equation (closed-form)
-
-If $X^T X$ is invertible, the least-squares solution is:
-
-{{% colour "blue" %}}
-{{< katex display=true >}}
-w^* = (X^T X)^{-1}X^T y
-{{< /katex >}}
-{{% /colour %}}
-
-Practical notes:
-- If $X^T X$ is not invertible (e.g., redundant features), use a pseudoinverse or regularisation.
-- Direct solutions can be fast for small/medium problems, but may be expensive for very large $d$.
+For the full OLS derivation and closed-form solutions:
+- {{< relref "03-ordinary-least-squares.md" >}}
 
 ---
 
@@ -159,93 +119,15 @@ Practical notes:
 
 ### Gradient Descent (batch/stochastic/mini-batch)
 
-Instead of solving in one step, we can minimise $J(w)$ by iterative updates.
+When a direct solution is expensive (or you prefer iterative optimisation),
+you can minimise the cost using gradient descent.
 
-### Cost function (MSE style)
+Full gradient descent notes (types, gradients, updates):
+- {{< relref "03-gradient-descent-linear-regression.md" >}}
 
-**Squared Error Function**
-![Zebrato](/images/ai/cost-function.png)
+Cost function definition:
+- {{< relref "03-cost-function.md" >}}
 
-{{% colour "blue" %}}
-{{< katex display=true >}}
-J(w) = \frac{1}{n}\lVert Xw - y \rVert^2
-{{< /katex >}}
-{{% /colour %}}
-
-Gradient (direction of steepest increase):
-
-{{% colour "blue" %}}
-{{< katex display=true >}}
-\nabla J(w) = \frac{2}{n}X^T(Xw - y)
-{{< /katex >}}
-{{% /colour %}}
-
-Update rule:
-
-{{% colour "blue" %}}
-{{< katex display=true >}}
-w^{(t+1)} = w^{(t)} - \alpha \nabla J\left(w^{(t)}\right)
-{{< /katex >}}
-{{% /colour %}}
-
-Where:
-- $\alpha$:
-learning rate
-- $t$:
-iteration number
-
-### Batch gradient descent
-
-Batch gradient descent:
-uses all $n$ training examples to compute each update.
-It is stable, but can be slow when $n$ is large.
-
-### Stochastic gradient descent (SGD)
-
-SGD:
-uses one training example per update.
-For a single example $(x_i, y_i)$:
-
-{{% colour "blue" %}}
-{{< katex display=true >}}
-w \leftarrow w - \alpha \cdot 2x_i\big(x_i^T w - y_i\big)
-{{< /katex >}}
-{{% /colour %}}
-
-SGD is:
-- fast per update
-- noisy (the loss may bounce around)
-- often good for large-scale learning
-
-### Mini-batch gradient descent
-
-Mini-batch gradient descent:
-uses a small batch $B$ (e.g., 32/64/128 examples) per update.
-This is the most common in practical {{< colour "blue" >}}ML{{< /colour >}} workflows.
-
-Mini-batch gradient estimate:
-
-{{% colour "blue" %}}
-{{< katex display=true >}}
-\nabla J(w) \approx \frac{2}{|B|}X_B^T(X_B w - y_B)
-{{< /katex >}}
-{{% /colour %}}
-
-### What makes gradient descent work well
-
-Feature scaling matters:
-if features have very different scales, convergence can be slow.
-
-Learning rate $\alpha$ matters:
-- too large:
-diverges or oscillates
-- too small:
-converges very slowly
-
-Stopping criteria:
-- max iterations
-- cost improvement below a threshold
-- validation error stops improving (early stopping)
 
 ---
 

@@ -129,6 +129,11 @@ Ordinary Least Squares is:
 
 ---
 
-{{< home-link "Home" >}} | {{< section-index >}}
+## References
+
+- {{< relref "03-linear-models-regression.md" >}}
+- {{< relref "03-cost-function.md" >}}
 
 ---
+
+{{< home-link "Home" >}} | {{< section-index >}}
