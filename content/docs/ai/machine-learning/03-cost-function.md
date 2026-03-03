@@ -25,48 +25,64 @@ flowchart TD
 CF["Cost<br/>function"] -->|measures| ERR["Prediction<br/>error"]
 CF -->|guides| OPT["Optimisation<br/>(training)"]
 
-CF --> T["Types"]
+CF -->|includes| DATA["Data<br/>fit"]
+CF -->|may include| PEN["Penalty<br/>(regularisation)"]
 
-T --> REG["Regression"]
+style CF fill:#90CAF9,stroke:#1E88E5,color:#000
+
+style ERR fill:#CE93D8,stroke:#8E24AA,color:#000
+style OPT fill:#CE93D8,stroke:#8E24AA,color:#000
+
+style DATA fill:#C8E6C9,stroke:#2E7D32,color:#000
+style PEN fill:#C8E6C9,stroke:#2E7D32,color:#000
+{{< /mermaid >}}
+
+---
+
+**Squared Error Function**
+![Zebrato](/images/ai/cost-function.png)
+
+---
+
+## Types
+
+{{< mermaid >}}
+flowchart TD
+T["Cost function<br/>types"] --> REG["Regression"]
+T --> CLS["Classification"]
+T --> PROB["Probabilistic<br/>models"]
+T --> REGZ["Regularisation"]
+
 REG --> MSE["MSE"]
 REG --> MAE["MAE"]
 REG --> HUB["Huber"]
 
-T --> CLS["Classification"]
-CLS --> LOG["Log loss<br/>(Cross-entropy)"]
+CLS --> CE["Cross-entropy<br/>(log loss)"]
 CLS --> HNG["Hinge"]
 
-T --> PROB["Probabilistic<br/>models"]
 PROB --> NLL["Negative<br/>log-likelihood"]
 
-T --> REGZ["Regularisation"]
 REGZ --> L2["L2 (Ridge)"]
 REGZ --> L1["L1 (Lasso)"]
 REGZ --> EN["Elastic<br/>Net"]
 
-style CF fill:#90CAF9,stroke:#1E88E5,color:#000
-style ERR fill:#CE93D8,stroke:#8E24AA,color:#000
-style OPT fill:#CE93D8,stroke:#8E24AA,color:#000
-style T fill:#CE93D8,stroke:#8E24AA,color:#000
+style T fill:#90CAF9,stroke:#1E88E5,color:#000
 
 style REG fill:#C8E6C9,stroke:#2E7D32,color:#000
 style CLS fill:#C8E6C9,stroke:#2E7D32,color:#000
 style PROB fill:#C8E6C9,stroke:#2E7D32,color:#000
 style REGZ fill:#C8E6C9,stroke:#2E7D32,color:#000
 
-style MSE fill:#C8E6C9,stroke:#2E7D32,color:#000
-style MAE fill:#C8E6C9,stroke:#2E7D32,color:#000
-style HUB fill:#C8E6C9,stroke:#2E7D32,color:#000
-style LOG fill:#C8E6C9,stroke:#2E7D32,color:#000
-style HNG fill:#C8E6C9,stroke:#2E7D32,color:#000
-style NLL fill:#C8E6C9,stroke:#2E7D32,color:#000
-style L2 fill:#C8E6C9,stroke:#2E7D32,color:#000
-style L1 fill:#C8E6C9,stroke:#2E7D32,color:#000
-style EN fill:#C8E6C9,stroke:#2E7D32,color:#000
+style MSE fill:#CE93D8,stroke:#8E24AA,color:#000
+style MAE fill:#CE93D8,stroke:#8E24AA,color:#000
+style HUB fill:#CE93D8,stroke:#8E24AA,color:#000
+style CE fill:#CE93D8,stroke:#8E24AA,color:#000
+style HNG fill:#CE93D8,stroke:#8E24AA,color:#000
+style NLL fill:#CE93D8,stroke:#8E24AA,color:#000
+style L2 fill:#CE93D8,stroke:#8E24AA,color:#000
+style L1 fill:#CE93D8,stroke:#8E24AA,color:#000
+style EN fill:#CE93D8,stroke:#8E24AA,color:#000
 {{< /mermaid >}}
-
-**Squared Error Function**
-![Zebrato](/images/ai/cost-function.png)
 
 ---
 
