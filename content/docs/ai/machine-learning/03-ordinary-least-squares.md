@@ -1,5 +1,5 @@
 ---
-title: "Ordinary Least Squares and the Line of Best Fit"
+title: "Direct Solution - Ordinary Least Squares"
 date: 2026-02-21
 draft: false
 weight: 320
@@ -7,9 +7,11 @@ tags: ["AI", "ML", "Linear Regression", "OLS"]
 categories: ["AI", "ML"]
 ---
 
-# Ordinary Least Squares and the Line of Best Fit
+# Direct solution method - Ordinary Least Squares and the Line of Best Fit
 
-**Direct solution method**
+It is possible to compute the best parameters for linear regression in one shot, using algebra, instead of iteratively improving them step-by-step.
+
+For linear regression, the direct method is usually **Ordinary Least Squares (OLS)**.
 
 Ordinary Least Squares (OLS) is the standard way to choose the “best” line in linear regression by minimising squared prediction errors.
 
