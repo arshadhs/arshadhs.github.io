@@ -8,9 +8,9 @@ weight: 300
 
 # Linear models for Regression
 
-Linear Regression is a supervised {{< color color="blue" >}}ML{{< /color >}} method used to predict a **numerical** target by fitting a model that is **linear in its parameters**.
+Linear Regression is a supervised {{< colour "blue" >}}ML{{< /colour >}} method used to predict a **numerical** target by fitting a model that is **linear in its parameters**.
 
-In {{< color color="blue" >}}ML{{< /color >}}, linear models are a core baseline:
+In {{< colour "blue" >}}ML{{< /colour >}}, linear models are a core baseline:
 they’re fast, often surprisingly strong, and usually easy to interpret.
 
 {{% hint info %}}
@@ -49,7 +49,7 @@ y = \beta_0 + \beta_1 x_1 + \dots + \beta_n x_n
 {{< /katex >}}
 {{% /colour %}}
 
-Matrix form (useful for implementation in {{< color color="blue" >}}ML{{< /color >}}):
+Matrix form (useful for implementation in {{< colour "blue" >}}ML{{< /colour >}}):
 
 - Design matrix:
 $X \in \mathbb{R}^{n \times (d+1)}$
@@ -221,7 +221,7 @@ SGD is:
 
 Mini-batch gradient descent:
 uses a small batch $B$ (e.g., 32/64/128 examples) per update.
-This is the most common in practical {{< color color="blue" >}}ML{{< /color >}} workflows.
+This is the most common in practical {{< colour "blue" >}}ML{{< /colour >}} workflows.
 
 Mini-batch gradient estimate:
 
@@ -251,7 +251,7 @@ Stopping criteria:
 
 ## Linear basis function models
 
-A key idea in {{< color color="blue" >}}ML{{< /color >}} is:
+A key idea in {{< colour "blue" >}}ML{{< /colour >}} is:
 you can make linear regression more powerful by transforming inputs.
 
 Instead of using $x$ directly, we use a feature mapping $\phi(x)$:
@@ -369,5 +369,6 @@ are you controlling overfitting (validation, regularisation, early stopping)?
 - Tom Mitchell: Machine Learning (textbook reference for core concepts)
 
 ---
+
 
 {{< home-link "Home" >}} | {{< section-index >}}
