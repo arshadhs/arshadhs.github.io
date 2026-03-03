@@ -39,12 +39,39 @@ style PEN fill:#C8E6C9,stroke:#2E7D32,color:#000
 
 ---
 
+## Computing Cost
+
+Equation for cost with one variable is:
+
+{{% colour "blue" %}}
+{{< katex display=true >}}
+J(w,b)=\frac{1}{2m}\sum_{i=0}^{m-1}\left(f_{w,b}\!\left(x^{(i)}\right)-y^{(i)}\right)^2
+{{< /katex >}}
+{{% /colour %}}
+
+where
+
+{{% colour "blue" %}}
+{{< katex display=true >}}
+f_{w,b}\!\left(x^{(i)}\right)=w\,x^{(i)}+b
+{{< /katex >}}
+{{% /colour %}}
+
+- {{% colour "blue" %}}$f_{w,b}\!\left(x^{(i)}\right)${{% /colour %}}:
+our prediction for example $i$ using parameters $w,b$
+
+- {{% colour "blue" %}}$\left(f_{w,b}\!\left(x^{(i)}\right)-y^{(i)}\right)^2${{% /colour %}}:
+the squared difference between the target value and the prediction
+
+- The squared differences are summed over all the {{% colour "blue" %}}$m${{% /colour %}} examples and divided by {{% colour "blue" %}}$2m${{% /colour %}} to produce the cost {{% colour "blue" %}}$J(w,b)${{% /colour %}}
+
+---
 ## Squared Error & Mean Squared Error (MSE)
 
 | Feature | Squared Error | Mean Squared Error (MSE) |
 |---|---|---|
 | Scope | Individual data point (residual) | Entire dataset |
-| Formula | {{% colour "blue" %}}{{< katex >}}(\hat{y}_i - y_i)^2{{< /katex >}}{{% /colour %}} | {{% colour "blue" %}}{{< katex >}}\frac{1}{n}\sum_{i=1}^{n}(\hat{y}_i - y_i)^2{{< /katex >}}{{% /colour %}} |
+| Formula | {{< katex >}}(\hat{y}_i - y_i)^2{{< /katex >}} | {{< katex >}}\frac{1}{n}\sum_{i=1}^{n}(\hat{y}_i - y_i)^2{{< /katex >}} |
 | Output | One value per observation | One single value for the model |
 | Purpose | Measures individual error | Measures overall model performance |
 
