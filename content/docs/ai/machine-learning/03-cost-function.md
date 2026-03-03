@@ -100,6 +100,9 @@ For input $x^{(i)}$, the model predicts:
 {{< /katex >}}
 {{% /colour %}}
 
+{{% colour "blue" %}}$f_{w,b}\!\left(x^{(i)}\right)${{% /colour %}}:
+our prediction for example $i$ using parameters $w,b$
+
 Goal:
 choose $w$ and $b$ so that $\hat{y}^{(i)}$ is close to $y^{(i)}$ for many (ideally all) training examples.
 
@@ -115,21 +118,10 @@ J(w,b)=\frac{1}{2m}\sum_{i=0}^{m-1}\left(f_{w,b}\!\left(x^{(i)}\right)-y^{(i)}\r
 {{< /katex >}}
 {{% /colour %}}
 
-where
-
-{{% colour "blue" %}}
-{{< katex display=true >}}
-f_{w,b}\!\left(x^{(i)}\right)=w\,x^{(i)}+b
-{{< /katex >}}
-{{% /colour %}}
-
-- {{% colour "blue" %}}$f_{w,b}\!\left(x^{(i)}\right)${{% /colour %}}:
-our prediction for example $i$ using parameters $w,b$
-
-- {{% colour "blue" %}}$\left(f_{w,b}\!\left(x^{(i)}\right)-y^{(i)}\right)^2${{% /colour %}}:
+{{% colour "blue" %}}$\left(f_{w,b}\!\left(x^{(i)}\right)-y^{(i)}\right)^2${{% /colour %}}:
 the squared difference between the target value and the prediction
 
-- The squared differences are summed over all the {{% colour "blue" %}}$m${{% /colour %}} examples and divided by {{% colour "blue" %}}$2m${{% /colour %}} to produce the cost {{% colour "blue" %}}$J(w,b)${{% /colour %}}
+The squared differences are summed over all the {{% colour "blue" %}}$m${{% /colour %}} examples and divided by {{% colour "blue" %}}$2m${{% /colour %}} to produce the cost {{% colour "blue" %}}$J(w,b)${{% /colour %}}
 
 ![Cost Fn](/images/ai/cost-function.png)
 
