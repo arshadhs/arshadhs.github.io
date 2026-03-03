@@ -83,6 +83,13 @@ style PRACT fill:#CE93D8,stroke:#8E24AA,color:#000
 ### SGD
 
 - go-to solution
+- takes random samples and updates parameters
+- since randon → all updates are noisy
+- does not converge perfectly to sharpest minima
+- settles near to flat minima → better generalisation → helps prevent over fitting
+
+- if learning rate is too high → can cause under fitting
+- if learning rate is too high → can cause over fitting
 
 ### Mini-batch
 
@@ -96,6 +103,7 @@ style PRACT fill:#CE93D8,stroke:#8E24AA,color:#000
 
 ### Epochs
 
+- hyperparameter
 - one full pass of the entire training dataset through the learning algorithm
 - dictates how many times the model updates its internal parameters by seeing every sample
 - multiple epochs are generally needed for convergence
