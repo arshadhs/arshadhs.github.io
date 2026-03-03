@@ -24,46 +24,55 @@ GD["Gradient<br/>Descent"] -->|minimises| CF["Cost<br/>function"]
 GD -->|updates| W["Parameters<br/>(weights)"]
 GD -->|uses| GR["Gradient<br/>(slope)"]
 
-GD --> T["Types"]
-
-T --> BGD["Batch<br/>GD"]
-BGD -->|uses| ALL["All data<br/>per step"]
-BGD -->|stable| STB["Smooth<br/>updates"]
-
-T --> SGD["Stochastic<br/>GD"]
-SGD -->|uses| ONE["1 sample<br/>per step"]
-SGD -->|fast| FAST["Quick<br/>progress"]
-SGD -->|noisy| NOISE["Noisy<br/>updates"]
-
-T --> MGD["Mini-batch<br/>GD"]
-MGD -->|uses| MB["Small batch<br/>per step"]
-MGD -->|common| PRACT["Practical<br/>default"]
-
 GD --> H["Hyperparameters"]
 H --> LR["Learning<br/>rate"]
 H --> BS["Batch<br/>size"]
 H --> EP["Epochs"]
 
 style GD fill:#90CAF9,stroke:#1E88E5,color:#000
+
 style CF fill:#CE93D8,stroke:#8E24AA,color:#000
 style W fill:#CE93D8,stroke:#8E24AA,color:#000
 style GR fill:#CE93D8,stroke:#8E24AA,color:#000
-style T fill:#CE93D8,stroke:#8E24AA,color:#000
 style H fill:#CE93D8,stroke:#8E24AA,color:#000
 style LR fill:#CE93D8,stroke:#8E24AA,color:#000
 style BS fill:#CE93D8,stroke:#8E24AA,color:#000
 style EP fill:#CE93D8,stroke:#8E24AA,color:#000
+{{< /mermaid >}}
+
+---
+
+## Types of GDA
+
+{{< mermaid >}}
+flowchart TD
+T["Gradient Descent<br/>types"] --> BGD["Batch<br/>GD"]
+T --> SGD["Stochastic<br/>GD"]
+T --> MGD["Mini-batch<br/>GD"]
+
+BGD --> ALL["All data<br/>per step"]
+BGD --> STB["Smooth<br/>updates"]
+
+SGD --> ONE["1 sample<br/>per step"]
+SGD --> FAST["Quick<br/>progress"]
+SGD --> NOISE["Noisy<br/>updates"]
+
+MGD --> MB["Small batch<br/>per step"]
+MGD --> PRACT["Practical<br/>default"]
+
+style T fill:#90CAF9,stroke:#1E88E5,color:#000
 
 style BGD fill:#C8E6C9,stroke:#2E7D32,color:#000
 style SGD fill:#C8E6C9,stroke:#2E7D32,color:#000
 style MGD fill:#C8E6C9,stroke:#2E7D32,color:#000
-style ALL fill:#C8E6C9,stroke:#2E7D32,color:#000
-style STB fill:#C8E6C9,stroke:#2E7D32,color:#000
-style ONE fill:#C8E6C9,stroke:#2E7D32,color:#000
-style FAST fill:#C8E6C9,stroke:#2E7D32,color:#000
-style NOISE fill:#C8E6C9,stroke:#2E7D32,color:#000
-style MB fill:#C8E6C9,stroke:#2E7D32,color:#000
-style PRACT fill:#C8E6C9,stroke:#2E7D32,color:#000
+
+style ALL fill:#CE93D8,stroke:#8E24AA,color:#000
+style STB fill:#CE93D8,stroke:#8E24AA,color:#000
+style ONE fill:#CE93D8,stroke:#8E24AA,color:#000
+style FAST fill:#CE93D8,stroke:#8E24AA,color:#000
+style NOISE fill:#CE93D8,stroke:#8E24AA,color:#000
+style MB fill:#CE93D8,stroke:#8E24AA,color:#000
+style PRACT fill:#CE93D8,stroke:#8E24AA,color:#000
 {{< /mermaid >}}
 
 ---

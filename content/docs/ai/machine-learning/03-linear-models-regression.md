@@ -1,5 +1,5 @@
 ---
-title: '03 - Linear models for Regression'
+title: 'Linear models for Regression'
 draft: false
 tags: ["AI", "ML"]
 categories: ["AI", "ML"]
