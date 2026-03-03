@@ -35,7 +35,7 @@ Common reasons to use linear regression:
 
 **Simple linear regression** (one predictor variable):
 
-{{% colour = blue %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
 y = \beta_0 + \beta_1 x
 {{< /katex >}}
@@ -43,7 +43,7 @@ y = \beta_0 + \beta_1 x
 
 **Multiple linear regression** (many predictors):
 
-{{% colour = blue %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
 y = \beta_0 + \beta_1 x_1 + \dots + \beta_n x_n
 {{< /katex >}}
@@ -59,7 +59,7 @@ $w \in \mathbb{R}^{d+1}$
 - Targets:
 $y \in \mathbb{R}^{n}$
 
-{{% colour = blue %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
 \hat{y} = Xw
 {{< /katex >}}
@@ -80,7 +80,7 @@ Distance visible (ft)
 
 A fitted “line of best fit” from the lecture is:
 
-{{% colour = blue %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
 \text{dist} = -3.0068(\text{Age}) + 576.6819
 {{< /katex >}}
@@ -125,7 +125,7 @@ $r_i = y_i - \hat{y}_i$
 
 Sum of squared errors (SSE):
 
-{{% colour = blue %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
 SSE(w) = \sum_{i=1}^{n}(y_i - \hat{y}_i)^2
 {{< /katex >}}
@@ -133,7 +133,7 @@ SSE(w) = \sum_{i=1}^{n}(y_i - \hat{y}_i)^2
 
 A common scaled version is Mean Squared Error (MSE):
 
-{{% colour = blue %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
 J(w) = \frac{1}{n}\sum_{i=1}^{n}(Xw - y)_i^2
 {{< /katex >}}
@@ -143,7 +143,7 @@ J(w) = \frac{1}{n}\sum_{i=1}^{n}(Xw - y)_i^2
 
 If $X^T X$ is invertible, the least-squares solution is:
 
-{{% colour = blue %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
 w^* = (X^T X)^{-1}X^T y
 {{< /katex >}}
@@ -166,7 +166,7 @@ Instead of solving in one step, we can minimise $J(w)$ by iterative updates.
 **Squared Error Function**
 ![Zebrato](/images/ai/cost-function.png)
 
-{{% colour = blue %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
 J(w) = \frac{1}{n}\lVert Xw - y \rVert^2
 {{< /katex >}}
@@ -174,7 +174,7 @@ J(w) = \frac{1}{n}\lVert Xw - y \rVert^2
 
 Gradient (direction of steepest increase):
 
-{{% colour = blue %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
 \nabla J(w) = \frac{2}{n}X^T(Xw - y)
 {{< /katex >}}
@@ -182,7 +182,7 @@ Gradient (direction of steepest increase):
 
 Update rule:
 
-{{% colour = blue %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
 w^{(t+1)} = w^{(t)} - \alpha \nabla J\left(w^{(t)}\right)
 {{< /katex >}}
@@ -206,7 +206,7 @@ SGD:
 uses one training example per update.
 For a single example $(x_i, y_i)$:
 
-{{% colour = blue %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
 w \leftarrow w - \alpha \cdot 2x_i\big(x_i^T w - y_i\big)
 {{< /katex >}}
@@ -225,7 +225,7 @@ This is the most common in practical {{< colour "blue" >}}ML{{< /colour >}} work
 
 Mini-batch gradient estimate:
 
-{{% colour = blue %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
 \nabla J(w) \approx \frac{2}{|B|}X_B^T(X_B w - y_B)
 {{< /katex >}}
@@ -256,7 +256,7 @@ you can make linear regression more powerful by transforming inputs.
 
 Instead of using $x$ directly, we use a feature mapping $\phi(x)$:
 
-{{% colour = blue %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
 \phi(x) = [\phi_0(x), \phi_1(x), \dots, \phi_M(x)]
 {{< /katex >}}
@@ -264,7 +264,7 @@ Instead of using $x$ directly, we use a feature mapping $\phi(x)$:
 
 Then the model becomes:
 
-{{% colour = blue %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
 y \approx \sum_{j=0}^{M} w_j \phi_j(x)
 {{< /katex >}}
@@ -282,7 +282,7 @@ $\phi(x) = [1, x, x^2, \dots, x^M]$
 Radial basis function (Gaussian / RBF):
 centres $\mu_j$, width $\sigma$
 
-{{% colour = blue %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
 \phi_j(x) = \exp\left(-\frac{(x-\mu_j)^2}{2\sigma^2}\right)
 {{< /katex >}}
@@ -306,7 +306,7 @@ bias–variance decomposition.
 
 For squared error, expected prediction error at input $x$ can be decomposed into:
 
-{{% colour = blue %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
 \mathbb{E}\left[(y-\hat{f}(x))^2\right]
 =
@@ -372,3 +372,4 @@ are you controlling overfitting (validation, regularisation, early stopping)?
 
 
 {{< home-link "Home" >}} | {{< section-index >}}
+
