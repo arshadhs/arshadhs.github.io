@@ -39,7 +39,18 @@ style PEN fill:#C8E6C9,stroke:#2E7D32,color:#000
 
 ---
 
-**Squared Error Function**
+## Squared Error & Mean Squared Error (MSE)
+
+| Feature | Squared Error | Mean Squared Error (MSE) |
+|---|---|---|
+| Scope | Individual data point (residual) | Entire dataset |
+| Formula | {{% colour "blue" %}}{{< katex >}}(\hat{y}_i - y_i)^2{{< /katex >}}{{% /colour %}} | {{% colour "blue" %}}{{< katex >}}\frac{1}{n}\sum_{i=1}^{n}(\hat{y}_i - y_i)^2{{< /katex >}}{{% /colour %}} |
+| Output | One value per observation | One single value for the model |
+| Purpose | Measures individual error | Measures overall model performance |
+
+---
+
+**Mean Squared Error Function**
 ![Zebrato](/images/ai/cost-function.png)
 
 ---
