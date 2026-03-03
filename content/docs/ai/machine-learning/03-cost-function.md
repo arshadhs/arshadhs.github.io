@@ -60,10 +60,13 @@ f_{w,b}\!\left(x^{(i)}\right)=w\,x^{(i)}+b
 {{% colour "blue" %}}$f_{w,b}\!\left(x^{(i)}\right)${{% /colour %}}:
 our prediction for example $i$ using parameters $w,b$
 
+
 {{% colour "blue" %}}$\left(f_{w,b}\!\left(x^{(i)}\right)-y^{(i)}\right)^2${{% /colour %}}:
 the squared difference between the target value and the prediction
 
 The squared differences are summed over all the {{% colour "blue" %}}$m${{% /colour %}} examples and divided by {{% colour "blue" %}}$2m${{% /colour %}} to produce the cost {{% colour "blue" %}}$J(w,b)${{% /colour %}}
+
+![Cost Fn](/images/ai/cost-function.png)
 
 ---
 ## Squared Error & Mean Squared Error (MSE)
@@ -76,12 +79,6 @@ The squared differences are summed over all the {{% colour "blue" %}}$m${{% /col
 | Purpose | Measures individual error | Measures overall model performance |
 
 ---
-
-**Mean Squared Error Function**
-![Zebrato](/images/ai/cost-function.png)
-
----
-
 ## Types
 
 {{< mermaid >}}
@@ -123,13 +120,24 @@ style EN fill:#CE93D8,stroke:#8E24AA,color:#000
 {{< /mermaid >}}
 
 ---
+![Cost Fn](/images/ai/cost-fn-types.png)
 
+### MSE
+measures the avg of residuals in the dataset
+
+### MAE
+It measures the variance of residuals in the dataset
+
+### RMSE
+measures the standard deviation of residuals
+
+---
 ## Loss Function
 
 - defined on a single training example.
 - measures how well your model performing on a single training exampls
 
-But if we consider the entire training set and try to measure how well is our model performing on it, we define a function called the cost function.
+**Cost function:** if we consider the entire training set and try to measure how well is our model performing on it, we define a function called the cost function.
 
 ---
 
