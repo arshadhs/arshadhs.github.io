@@ -17,8 +17,8 @@ categories: ["AI", "ML"]
 
 - method used to predict values by drawing the best-fit line through the data
 
-- used to evaluate the accuracy of a model’s predictions 
-- to guide the process of adjusting the model’s parameters in order to minimise the difference between predicted and actual values
+- used to evaluate the accuracy of a model’s predictions
+- guides the process of adjusting the model’s parameters in order to minimise the difference between predicted and actual values
 
 {{< mermaid >}}
 flowchart TD
@@ -36,6 +36,72 @@ style OPT fill:#CE93D8,stroke:#8E24AA,color:#000
 style DATA fill:#C8E6C9,stroke:#2E7D32,color:#000
 style PEN fill:#C8E6C9,stroke:#2E7D32,color:#000
 {{< /mermaid >}}
+
+{{% hint info %}}
+Key takeaway:
+In {{< color color="blue" >}}ML{{< /color >}}, we choose model parameters to minimise a cost $J$.
+For linear regression, the most common choice is the squared error cost.
+{{% /hint %}}
+
+---
+
+## Training set and model
+
+You have a training set with:
+- input features $x$
+- output targets $y$
+
+The linear regression model is:
+
+{{% colour "blue" %}}
+{{< katex display=true >}}
+f_{w,b}(x)=wx+b
+{{< /katex >}}
+{{% /colour %}}
+
+The values $w$ and $b$ are the **parameters** of the model.
+You adjust them during training to improve the model.
+
+You may also hear:
+- $w,b$ called **coefficients**
+- $w,b$ called **weights**
+
+---
+
+## What w and b do
+
+Different values of $w$ and $b$ give different straight lines.
+
+- $b$ is the **y-intercept**:
+the value of the prediction when $x=0$
+- $w$ is the **slope**:
+how much the prediction changes when $x$ increases
+
+Examples:
+- If $w=0$ and $b=1.5$:
+the model predicts a constant $1.5$ (horizontal line)
+- If $w=0.5$ and $b=0$:
+the line passes through the origin and has slope $0.5$
+- If $w=0.5$ and $b=1$:
+same slope, shifted up by 1
+
+---
+
+## Predictions on training examples
+
+A training example is written as:
+$(x^{(i)},y^{(i)})$
+
+For input $x^{(i)}$, the model predicts:
+
+{{% colour "blue" %}}
+{{< katex display=true >}}
+\hat{y}^{(i)} = f_{w,b}\!\left(x^{(i)}\right)=wx^{(i)}+b
+{{< /katex >}}
+{{% /colour %}}
+
+Goal:
+choose $w$ and $b$ so that $\hat{y}^{(i)}$ is close to $y^{(i)}$ for many (ideally all) training examples.
 
 ---
 
@@ -57,18 +123,40 @@ f_{w,b}\!\left(x^{(i)}\right)=w\,x^{(i)}+b
 {{< /katex >}}
 {{% /colour %}}
 
-{{% colour "blue" %}}$f_{w,b}\!\left(x^{(i)}\right)${{% /colour %}}:
+- {{% colour "blue" %}}$f_{w,b}\!\left(x^{(i)}\right)${{% /colour %}}:
 our prediction for example $i$ using parameters $w,b$
 
-
-{{% colour "blue" %}}$\left(f_{w,b}\!\left(x^{(i)}\right)-y^{(i)}\right)^2${{% /colour %}}:
+- {{% colour "blue" %}}$\left(f_{w,b}\!\left(x^{(i)}\right)-y^{(i)}\right)^2${{% /colour %}}:
 the squared difference between the target value and the prediction
 
-The squared differences are summed over all the {{% colour "blue" %}}$m${{% /colour %}} examples and divided by {{% colour "blue" %}}$2m${{% /colour %}} to produce the cost {{% colour "blue" %}}$J(w,b)${{% /colour %}}
+- The squared differences are summed over all the {{% colour "blue" %}}$m${{% /colour %}} examples and divided by {{% colour "blue" %}}$2m${{% /colour %}} to produce the cost {{% colour "blue" %}}$J(w,b)${{% /colour %}}
 
 ![Cost Fn](/images/ai/cost-function.png)
 
 ---
+
+## Intuition: error and squared error
+
+For one example $i$, the error is:
+
+{{% colour "blue" %}}
+{{< katex display=true >}}
+\hat{y}^{(i)}-y^{(i)}
+{{< /katex >}}
+{{% /colour %}}
+
+Squared error for example $i$:
+
+{{% colour "blue" %}}
+{{< katex display=true >}}
+\left(\hat{y}^{(i)}-y^{(i)}\right)^2
+{{< /katex >}}
+{{% /colour %}}
+
+The cost function sums squared errors over the dataset and averages them (via $2m$).
+
+---
+
 ## Squared Error & Mean Squared Error (MSE)
 
 | Feature | Squared Error | Mean Squared Error (MSE) |
@@ -79,6 +167,47 @@ The squared differences are summed over all the {{% colour "blue" %}}$m${{% /col
 | Purpose | Measures individual error | Measures overall model performance |
 
 ---
+
+## Cost surface visualisation
+
+### Simplified visualisation: set b=0
+
+To build intuition, sometimes we simplify the model by setting $b=0$:
+
+{{% colour "blue" %}}
+{{< katex display=true >}}
+f_w(x)=wx
+{{< /katex >}}
+{{% /colour %}}
+
+Now the cost depends on one parameter:
+
+{{% colour "blue" %}}
+{{< katex display=true >}}
+J(w)=\frac{1}{2m}\sum_{i=0}^{m-1}\left(wx^{(i)}-y^{(i)}\right)^2
+{{< /katex >}}
+{{% /colour %}}
+
+Plotting $J(w)$ versus $w$ gives a U-shaped curve (“bowl”).
+
+### Full visualisation: $J(w,b)$ as a surface
+
+With both parameters $w$ and $b$:
+- $J(w,b)$ becomes a 3D surface (bowl / hammock shape)
+- each point $(w,b)$ corresponds to a single value of $J$
+
+### Contour plot view
+
+A contour plot is a 2D way to visualise the same 3D surface:
+- x-axis: $w$
+- y-axis: $b$
+- each contour (oval) shows points with the same cost $J$
+
+The centre of the smallest oval:
+is the minimum cost point.
+
+---
+
 ## Types
 
 {{< mermaid >}}
@@ -120,30 +249,35 @@ style EN fill:#CE93D8,stroke:#8E24AA,color:#000
 {{< /mermaid >}}
 
 ---
+
 ![Cost Fn](/images/ai/cost-fn-types.png)
 
 ### MSE
-measures the avg of residuals in the dataset
+measures the average of squared residuals in the dataset
 
 ### MAE
-It measures the variance of residuals in the dataset
+measures the average absolute error in the dataset
 
 ### RMSE
 measures the standard deviation of residuals
 
 ---
-## Loss Function
 
-- defined on a single training example.
-- measures how well your model performing on a single training exampls
+## Loss Function vs Cost Function
 
-**Cost function:** if we consider the entire training set and try to measure how well is our model performing on it, we define a function called the cost function.
+Loss function:
+- defined on a single training example
+- measures how well the model performs on one example
+
+Cost function:
+- aggregates loss over the whole training set
+- measures how well the model performs across the dataset
 
 ---
 
 ## Role of Gradient Descent in Updating the Weights
 
-Gradient Descent is an optimisation algorithm used to minimize the cost function and find the best-fit line for the model.
+Gradient Descent is an optimisation algorithm used to minimise the cost function and find the best-fit line for the model.
 
 - Iteratively adjust the weights of the model to reduce the error. 
 - each iteration updates the weights in the direction that minimises the cost function leading to the optimal set of parameters.
@@ -153,7 +287,7 @@ Gradient Descent is an optimisation algorithm used to minimize the cost function
 ## References
 
 - [Cost Function](https://www.geeksforgeeks.org/machine-learning/what-is-the-cost-function-in-linear-regression/)
-- [Gradient Descent](
+
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}
