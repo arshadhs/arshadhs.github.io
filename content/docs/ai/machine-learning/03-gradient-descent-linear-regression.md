@@ -9,9 +9,10 @@ categories: ["AI", "ML"]
 
 # Gradient Descent for Linear Regression
 
-**Iterative Method – Gradient Descent (batch/stochastic/mini-batch)**
-
 Gradient descent is an iterative optimisation method used to minimise the regression cost function by repeatedly updating parameters in the direction that reduces error.
+
+- **Iterative method**
+- Types: batch / stochastic / mini-batch
 
 {{% hint info %}}
 Key takeaway:
@@ -75,28 +76,49 @@ style MB fill:#CE93D8,stroke:#8E24AA,color:#000
 style PRACT fill:#CE93D8,stroke:#8E24AA,color:#000
 {{< /mermaid >}}
 
+### Batch
+
+- Use only if you have huge compute and a lot of time to train
+
+### SGD
+
+- go-to solution
+
+### Mini-batch
+
+- choose a batch size
+- pick mini-batches from training data
+- randomly take (32, 64, ...) points in every epoch across iterations
+
 ---
 
-## Cost Function
+## Terminology
 
-A common cost function for linear regression is the Sum of Squared Errors:
+### Epochs
 
-{{% colour %}}
-{{< katex display=true >}}
-J(\beta_1,\beta_0) = \sum_{i=1}^{n}(\beta_1 x_i + \beta_0 - y_i)^2
-{{< /katex >}}
-{{% /colour %}}
+- one full pass of the entire training dataset through the learning algorithm
+- dictates how many times the model updates its internal parameters by seeing every sample
+- multiple epochs are generally needed for convergence
+  - too few cause underfitting
+  - too many can cause overfitting
 
-Equivalent forms often used:
-Mean Squared Error:
+### Batch
 
-{{% colour %}}
-{{< katex display=true >}}
-J(w,b) = \frac{1}{n}\sum_{i=1}^{n}(w x_i + b - y_i)^2
-{{< /katex >}}
-{{% /colour %}}
+- a subset of the training data processed together during one training step
+- used because the entire dataset is often too large to process at once
 
-Sometimes \(\frac{1}{2n}\) is used to simplify derivatives.
+### Batch size
+
+- hyperparameter that defines the number of training examples in one batch
+- determines how much data is processed before the model updates its parameters
+
+### Iterations
+
+- a single training step where the model processes one batch and updates its parameters (weights and biases)
+
+Each iteration includes:
+- Forward pass: compute predictions and cost
+- Backward pass: compute gradients and update model’s parameters to reduce the loss
 
 ---
 
@@ -104,19 +126,19 @@ Sometimes \(\frac{1}{2n}\) is used to simplify derivatives.
 
 The partial derivatives are:
 
-{{% colour %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
-\frac{\partial J}{\partial \beta_1}
+\frac{\partial J}{\partial w}
 =
-\frac{1}{n}\sum_{i=1}^{n}(\beta_1 x_i + \beta_0 - y_i)x_i
+\frac{1}{m}\sum_{i=0}^{m-1}\left(f_{w,b}\!\left(x^{(i)}\right)-y^{(i)}\right)x^{(i)}
 {{< /katex >}}
 {{% /colour %}}
 
-{{% colour %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
-\frac{\partial J}{\partial \beta_0}
+\frac{\partial J}{\partial b}
 =
-\frac{1}{n}\sum_{i=1}^{n}(\beta_1 x_i + \beta_0 - y_i)
+\frac{1}{m}\sum_{i=0}^{m-1}\left(f_{w,b}\!\left(x^{(i)}\right)-y^{(i)}\right)
 {{< /katex >}}
 {{% /colour %}}
 
@@ -129,37 +151,37 @@ It tells you how to change parameters to reduce the cost fastest.
 
 Starting from initial values, parameters are updated each iteration:
 
-{{% colour %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
-\beta_1^{(i+1)} := \beta_1^{(i)} - \alpha \frac{\partial J}{\partial \beta_1}
+w^{(t+1)} := w^{(t)} - \alpha \frac{\partial J}{\partial w}
 {{< /katex >}}
 {{% /colour %}}
 
-{{% colour %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
-\beta_0^{(i+1)} := \beta_0^{(i)} - \alpha \frac{\partial J}{\partial \beta_0}
+b^{(t+1)} := b^{(t)} - \alpha \frac{\partial J}{\partial b}
 {{< /katex >}}
 {{% /colour %}}
 
 Where:
-- \(\alpha\) is the learning rate.
-- \(i\) is the iteration number.
+- $\alpha$ is the learning rate
+- $t$ is the iteration number
 
 ---
 
 ## Matrix/Vector Form (Least Squares + Gradient Descent)
 
-For the overdetermined system \(Ap=b\), SSE can be written as:
+For an overdetermined system $Ap=b$, the squared error can be written as:
 
-{{% colour %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
-SSE = (Ap-b)^T(Ap-b)
+SSE(p) = (Ap-b)^T(Ap-b)
 {{< /katex >}}
 {{% /colour %}}
 
 Its gradient:
 
-{{% colour %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
 \nabla_p(SSE) = 2A^TAp - 2A^Tb
 {{< /katex >}}
@@ -167,33 +189,32 @@ Its gradient:
 
 Gradient descent update:
 
-{{% colour %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
-p^{(i+1)} = p^{(i)} - \alpha\left(2A^TAp^{(i)} - 2A^Tb\right)
+p^{(t+1)} = p^{(t)} - \alpha\left(2A^TAp^{(t)} - 2A^Tb\right)
 {{< /katex >}}
 {{% /colour %}}
 
 ---
 
-## Choosing the Learning Rate \(\alpha\)
+## Choosing the learning rate $\alpha$
 
-If \(\alpha\) is too large:
-You can overshoot the minimum.
-The cost may oscillate or diverge.
+If $\alpha$ is too large:
+- you can overshoot the minimum
+- the cost may oscillate or diverge
 
-If \(\alpha\) is too small:
-Training is very slow.
-You may need many iterations.
+If $\alpha$ is too small:
+- training is very slow
+- you may need many iterations
 
 Practical habit:
-Monitor the cost \(J\) across iterations and ensure it decreases steadily.
+monitor the cost $J$ across iterations and ensure it decreases steadily.
 
 ---
 
 ## References
 
-- {{< relref "03-linear-models-regression.md" >}}
-- {{< relref "03-ordinary-least-squares.md" >}}
+- [Also see DNN - GD](/docs/ai/deep-learning/gradient-descent-algorithm.md)
 
 ---
 
