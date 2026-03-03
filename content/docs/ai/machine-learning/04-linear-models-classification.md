@@ -5,7 +5,7 @@ tags: ["AI", "ML"]
 categories: ["AI", "ML"]
 weight: 400
 ---
-# Linear models for Classification
+# Linear Classification
  
 ## Discriminant Functions 
 

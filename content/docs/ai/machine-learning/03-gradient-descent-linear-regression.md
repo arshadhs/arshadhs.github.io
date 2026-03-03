@@ -1,5 +1,5 @@
 ---
-title: "Gradient Descent for Linear Regression"
+title: "Gradient Descent"
 date: 2026-02-21
 draft: false
 weight: 360

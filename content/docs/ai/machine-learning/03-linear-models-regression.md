@@ -6,7 +6,7 @@ categories: ["AI", "ML"]
 weight: 300
 ---
 
-# Linear models for Regression
+# Linear Regression
 
 Linear Regression is a supervised {{< colour "blue" >}}ML{{< /colour >}} method used to predict a **numerical** target by fitting a model that is **linear in its parameters**.
 
