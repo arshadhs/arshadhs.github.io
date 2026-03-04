@@ -276,5 +276,11 @@ estimate $w,b$ by maximising likelihood of observed data
 
 ---
 
+## Refrences
+
+- [Maximum Likelihood Estimation (MLE) and Maximum A Posteriori (MAP)](https://www.geeksforgeeks.org/data-science/mle-vs-map/)
+
+---
+
 {{< home-link "Home" >}} | {{< section-index >}}
 
