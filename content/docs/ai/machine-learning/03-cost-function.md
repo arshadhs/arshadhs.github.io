@@ -11,6 +11,8 @@ categories: ["AI", "ML"]
 
 - also known as an objective function
 
+- **how far the predicted values are from the actual ones**
+
 - measure of the difference between predicted values and actual values
 - quantifies the error between a model's predicted values and actual values
 - measures the model’s error on a group of datapoints
@@ -253,6 +255,42 @@ measures the average absolute error in the dataset
 ### RMSE
 measures the standard deviation of residuals
 
+### Cross-Entropy (Log Loss)
+
+Used mainly in classification, especially **Logistic Regression**.
+
+It measures the **difference between the predicted probability and the true class label**.
+
+Per-example cost:
+
+{{< colour "blue" >}}
+{{< katex display=true >}}
+\mathrm{Cost}\!\left(h_\theta(x),y\right)
+=
+-y\log\!\left(h_\theta(x)\right)
+-(1-y)\log\!\left(1-h_\theta(x)\right)
+{{< /katex >}}
+{{< /colour >}}
+
+Cost over the full training set:
+
+{{< colour "blue" >}}
+{{< katex display=true >}}
+J(\theta)
+=
+-\frac{1}{m}\sum_{i=1}^{m}
+\left[
+y^{(i)}\log\!\left(h_\theta\!\left(x^{(i)}\right)\right)
++
+\left(1-y^{(i)}\right)\log\!\left(1-h_\theta\!\left(x^{(i)}\right)\right)
+\right]
+{{< /katex >}}
+{{< /colour >}}
+
+Why it is used:
+- works well for probabilistic classification
+- penalises confident wrong predictions heavily
+- gives a convex optimisation objective for Logistic Regression
 ---
 
 ## Loss Function vs Cost Function
@@ -279,7 +317,7 @@ Gradient Descent is an optimisation algorithm used to minimise the cost function
 ## References
 
 - [Cost Function](https://www.geeksforgeeks.org/machine-learning/what-is-the-cost-function-in-linear-regression/)
-- {{< relref "03-gradient-descent-linear-regression.md" >}}
+- [Gradient Descent]{{< relref "/docs/ai/machine-learning/03-gradient-descent-linear-regression.md" >}}
 - {{< relref "03-linear-models-regression.md" >}}
 
 ---
