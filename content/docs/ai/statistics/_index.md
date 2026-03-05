@@ -30,7 +30,7 @@ ML needs **understanding data behaviour**, drawing conclusions, and validating m
 
 | Statistics Topic | What you learn (plain English) | ML Connection |
 |---|---|---|
-| 1. Basic Probability & Statistics | Summarise data; understand spread; basic probability rules | Data understanding (EDA), feature sanity checks, detecting outliers, interpreting “average behaviour” |
+| 1. Basic Probability & Statistics | Summarise data;<br>understand spread;<br>basic probability rules | Data understanding (EDA), feature sanity checks, detecting outliers, interpreting “average behaviour” |
 | 2. Conditional Probability & Bayes | Update probability using new information; Bayes’ rule | Naïve Bayes, Bayesian thinking, posterior probabilities, probabilistic classification |
 | 3. Probability Distributions | Model randomness with distributions; expectation/variance/covariance | Likelihood models, noise assumptions (Gaussian), sampling, probabilistic modelling foundations |
 | 4. Hypothesis Testing | Sampling, CLT, confidence intervals, significance tests, ANOVA, MLE | A/B testing, evaluating model improvements, significance vs noise, parameter estimation (MLE) |
@@ -254,6 +254,7 @@ flowchart LR
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}
+
 
 
 
