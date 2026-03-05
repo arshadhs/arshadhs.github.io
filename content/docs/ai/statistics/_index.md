@@ -30,9 +30,9 @@ ML needs **understanding data behaviour**, drawing conclusions, and validating m
 
 | Statistics Topic | What you learn (plain English) | ML Connection |
 |---|---|---|
-| 1. Basic Probability & Statistics | Summarise data;<br>understand spread;<br>basic probability rules | Data understanding (EDA), feature sanity checks, detecting outliers, interpreting “average behaviour” |
-| 2. Conditional Probability & Bayes | Update probability using new information;<br>Bayes’ rule | Naïve Bayes, Bayesian thinking, posterior probabilities, probabilistic classification |
-| 3. Probability Distributions | Model randomness with distributions;<br>expectation/variance/covariance | Likelihood models, noise assumptions (Gaussian), sampling, probabilistic modelling foundations |
+| 1. Basic Probability & Statistics | Summarise data;<br>understand spread;<br>basic probability rules | Data understanding (EDA), feature sanity checks,<br>detecting outliers, interpreting “average behaviour” |
+| 2. Conditional Probability & Bayes | Update probability using new information;<br>Bayes’ rule | Naïve Bayes, Bayesian thinking,<br>posterior probabilities, probabilistic classification |
+| 3. Probability Distributions | Model randomness with distributions;<br>expectation/variance/covariance | Likelihood models, noise assumptions (Gaussian), sampling,<br>probabilistic modelling foundations |
 | 4. Hypothesis Testing | Sampling, CLT, confidence intervals,<br>significance tests, ANOVA, MLE | A/B testing, evaluating model improvements,<br>significance vs noise, parameter estimation (MLE) |
 | 5. Prediction & Forecasting | Correlation, regression,<br>time series (AR/MA/ARIMA/SARIMA etc.) | Linear regression, forecasting, sequential data modelling, baseline predictive modelling |
 | 6. GMM & EM | Mixtures of Gaussians;<br>iterative estimation with EM | Unsupervised learning (soft clustering),<br>density estimation, latent-variable models |
@@ -254,6 +254,7 @@ flowchart LR
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}
+
 
 
 
