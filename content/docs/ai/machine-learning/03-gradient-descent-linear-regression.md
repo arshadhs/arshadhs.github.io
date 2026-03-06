@@ -133,7 +133,7 @@ Each iteration includes:
 ## Gradients (Partial Derivatives)
 
 We minimise the cost $J(w,b)$ defined here:
-- {{< relref "03-cost-function.md" >}}
+- [Cost Function]({{% relref "03-cost-function.md" %}})
 
 The partial derivatives are:
 
@@ -226,9 +226,9 @@ monitor the cost $J$ across iterations and ensure it decreases steadily.
 ## References
 
 - [Also see DNN - GD](/docs/ai/deep-learning/gradient-descent-algorithm.md)
-- {{< relref "03-linear-models-regression.md" >}}
-- {{< relref "03-ordinary-least-squares.md" >}}
-- {{< relref "03-cost-function.md" >}}
+- {{% relref "03-linear-models-regression.md" %}}
+- {{% relref "03-ordinary-least-squares.md" %}}
+- {{% relref "03-cost-function.md" %}}
 
 ---
 
