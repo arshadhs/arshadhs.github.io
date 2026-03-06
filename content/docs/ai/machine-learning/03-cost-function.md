@@ -291,6 +291,21 @@ Why it is used:
 - works well for probabilistic classification
 - penalises confident wrong predictions heavily
 - gives a convex optimisation objective for Logistic Regression
+
+---
+
+## Linear vs Logistic (5-Step Comparison)
+
+Model → Predict → Cost → Gradient → Update
+
+| Step | Linear Regression (MSE / Squared Error) | Logistic Regression (Log Loss / Cross-Entropy) |
+|---|---|---|
+| 1) Model | {{< colour "blue" >}}{{< katex >}}\hat{y}=wx+b{{< /katex >}}{{< /colour >}} | {{< colour "blue" >}}{{< katex >}}z=w\cdot x+b,\quad p=\sigma(z)=\frac{1}{1+e^{-z}} {{< /katex >}}{{< /colour >}} |
+| 2) Predict | {{< colour "blue" >}}{{< katex >}}\hat{y}^{(i)}=wx^{(i)}+b{{< /katex >}}{{< /colour >}} | {{< colour "blue" >}}{{< katex >}}z^{(i)}=w\cdot x^{(i)}+b,\quad p^{(i)}=\sigma(z^{(i)}){{< /katex >}}{{< /colour >}} |
+| 3) Cost | {{< colour "blue" >}}{{< katex >}}J(w,b)=\frac{1}{2m}\sum_{i=1}^{m}\left(\hat{y}^{(i)}-y^{(i)}\right)^2{{< /katex >}}{{< /colour >}} | {{< colour "blue" >}}{{< katex >}}J(w,b)=\frac{1}{m}\sum_{i=1}^{m}\left[-y^{(i)}\log p^{(i)}-(1-y^{(i)})\log(1-p^{(i)})\right]{{< /katex >}}{{< /colour >}} |
+| 4) Gradients | {{< colour "blue" >}}{{< katex >}}\frac{\partial J}{\partial w}=\frac{1}{m}\sum_{i=1}^{m}\left(\hat{y}^{(i)}-y^{(i)}\right)x^{(i)},\quad \frac{\partial J}{\partial b}=\frac{1}{m}\sum_{i=1}^{m}\left(\hat{y}^{(i)}-y^{(i)}\right){{< /katex >}}{{< /colour >}} | {{< colour "blue" >}}{{< katex >}}\frac{\partial J}{\partial w}=\frac{1}{m}\sum_{i=1}^{m}\left(p^{(i)}-y^{(i)}\right)x^{(i)},\quad \frac{\partial J}{\partial b}=\frac{1}{m}\sum_{i=1}^{m}\left(p^{(i)}-y^{(i)}\right){{< /katex >}}{{< /colour >}} |
+| 5) Update | {{< colour "blue" >}}{{< katex >}}w:=w-\alpha\frac{\partial J}{\partial w},\quad b:=b-\alpha\frac{\partial J}{\partial b}{{< /katex >}}{{< /colour >}} | {{< colour "blue" >}}{{< katex >}}w:=w-\alpha\frac{\partial J}{\partial w},\quad b:=b-\alpha\frac{\partial J}{\partial b}{{< /katex >}}{{< /colour >}} |
+
 ---
 
 ## Loss Function vs Cost Function
