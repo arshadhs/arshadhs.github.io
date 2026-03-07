@@ -47,33 +47,34 @@ It is random because the outcome is **uncertain before performing it**.
 
 ### Sample space
 
-Sample space $S$:
+Sample space  {{< katex >}}S{{< /katex >}}:
 
 the set of **all possible outcomes**.
 
 Examples:
 - Die roll:
-  $S=\{1,2,3,4,5,6\}$
+{{< katex >}}S=\{1,2,3,4,5,6\}{{< /katex >}}
 - Quality test (accepted/rejected):
-  $S=\{a,r\}$
+{{< katex >}}S=\{a,r\}{{< /katex >}}
 
 ---
 
 ### Event
 
-Event $A$:
+Event  {{< katex >}}A{{< /katex >}}:
+
 a **subset of the sample space**.
 
 It can be:
 - Empty event:
-  $\varnothing$
+{{< katex >}}\varnothing{{< /katex >}}
 - Certain event:
-  $S$
+{{< katex >}}S{{< /katex >}}
 - Any meaningful subset of outcomes
 
 Example (die roll):
 - Event “even”:
-  $A=\{2,4,6\}$
+{{< katex >}}A=\{2,4,6\}{{< /katex >}}
 
 ---
 
@@ -82,45 +83,45 @@ Example (die roll):
 ### Complement
 
 Complement:
-event “not $A$”.
+event “not {{< katex >}}A{{< /katex >}}”.
 
-{{< colour "red" >}}
-$$
+{{% colour %}}
+{{< katex display=true >}}
 A^c = S \setminus A
-$$
-{{< /colour >}}
+{{< /katex >}}
+{{% /colour %}}
 
-{{< colour "red" >}}
-$$
+{{% colour %}}
+{{< katex display=true >}}
 P(A^c)=1-P(A)
-$$
-{{< /colour >}}
+{{< /katex >}}
+{{% /colour %}}
 
 ---
 
 ### Union
 
 Union:
-$A\cup B$ means “$A$ OR $B$ OR both”.
+{{< katex >}}A\cup B{{< /katex >}} means “{{< katex >}}A{{< /katex >}} OR {{< katex >}}B{{< /katex >}} OR both”.
 
-{{< colour "red" >}}
-$$
+{{% colour %}}
+{{< katex display=true >}}
 A \cup B = \{ \omega : \omega \in A \text{ or } \omega \in B \}
-$$
-{{< /colour >}}
+{{< /katex >}}
+{{% /colour %}}
 
 ---
 
 ### Intersection
 
 Intersection:
-$A\cap B$ means “$A$ AND $B$”.
+{{< katex >}}A\cap B{{< /katex >}} means “{{< katex >}}A{{< /katex >}} AND {{< katex >}}B{{< /katex >}}”.
 
-{{< colour "red" >}}
-$$
+{{% colour %}}
+{{< katex display=true >}}
 A \cap B = \{ \omega : \omega \in A \text{ and } \omega \in B \}
-$$
-{{< /colour >}}
+{{< /katex >}}
+{{% /colour %}}
 
 ---
 
@@ -146,20 +147,20 @@ If you ever compute a probability less than 0 or greater than 1, something is wr
 
 Used when outcomes are equally likely.
 
-{{< colour "red" >}}
-$$
+{{% colour %}}
+{{< katex display=true >}}
 P(A)=\frac{\text{number of favourable outcomes}}{\text{total number of possible outcomes}}
-$$
-{{< /colour >}}
+{{< /katex >}}
+{{% /colour %}}
 
 Example:
 rolling an even number on a fair die.
 
-{{< colour "red" >}}
-$$
+{{% colour %}}
+{{< katex display=true >}}
 P(\text{even})=\frac{3}{6}=\frac{1}{2}
-$$
-{{< /colour >}}
+{{< /katex >}}
+{{% /colour %}}
 
 ---
 
@@ -167,11 +168,11 @@ $$
 
 Used when probability is estimated from repeated observations.
 
-{{< colour "red" >}}
-$$
+{{% colour %}}
+{{< katex display=true >}}
 P(A)\approx\frac{\text{number of times event occurs}}{\text{total number of trials}}
-$$
-{{< /colour >}}
+{{< /katex >}}
+{{% /colour %}}
 
 Intuition:
 with many trials, empirical probability tends to stabilise.
@@ -187,33 +188,33 @@ This is the approach used throughout probability theory.
 
 ## Axioms of probability
 
-For any event $A$ in sample space $S$:
+For any event {{< katex >}}A{{< /katex >}} in sample space {{< katex >}}S{{< /katex >}}:
 
 ### 1) Non-negativity
 
-{{< colour "red" >}}
-$$
+{{% colour %}}
+{{< katex display=true >}}
 P(A)\ge 0
-$$
-{{< /colour >}}
+{{< /katex >}}
+{{% /colour %}}
 
 ### 2) Normalisation
 
-{{< colour "red" >}}
-$$
+{{% colour %}}
+{{< katex display=true >}}
 P(S)=1
-$$
-{{< /colour >}}
+{{< /katex >}}
+{{% /colour %}}
 
 ### 3) Additivity (for mutually exclusive events)
 
-If $A\cap B=\varnothing$, then:
+If {{< katex >}}A\cap B=\varnothing{{< /katex >}}, then:
 
-{{< colour "red" >}}
-$$
+{{% colour %}}
+{{< katex display=true >}}
 P(A\cup B)=P(A)+P(B)
-$$
-{{< /colour >}}
+{{< /katex >}}
+{{% /colour %}}
 
 {{% hint info %}}
 These axioms are “rules of the game”.
@@ -224,16 +225,16 @@ Most probability formulas you use later are consequences of these.
 
 ## The Addition Rule (general case)
 
-Even if $A$ and $B$ overlap, the union probability is:
+Even if {{< katex >}}A{{< /katex >}} and {{< katex >}}B{{< /katex >}} overlap, the union probability is:
 
-{{< colour "red" >}}
-$$
+{{% colour %}}
+{{< katex display=true >}}
 P(A\cup B)=P(A)+P(B)-P(A\cap B)
-$$
-{{< /colour >}}
+{{< /katex >}}
+{{% /colour %}}
 
 Why we subtract:
-the overlap $A\cap B$ gets counted twice if we only add $P(A)$ and $P(B)$.
+the overlap {{< katex >}}A\cap B{{< /katex >}} gets counted twice if we only add {{< katex >}}P(A){{< /katex >}} and {{< katex >}}P(B){{< /katex >}}.
 
 ---
 
@@ -243,25 +244,23 @@ the overlap $A\cap B$ gets counted twice if we only add $P(A)$ and $P(B)$.
 
 Cannot happen together.
 
-{{< colour "red" >}}
-$$
+{{% colour %}}
+{{< katex display=true >}}
 A\cap B=\varnothing
-$$
-{{< /colour >}}
+{{< /katex >}}
+{{% /colour %}}
 
 So:
 
-{{< colour "red" >}}
-$$
+{{% colour %}}
+{{< katex display=true >}}
 P(A\cap B)=0
-$$
-{{< /colour >}}
+{{< /katex >}}
+{{% /colour %}}
 
 Example (one die roll):
-- $A$:
-roll a 2
-- $B$:
-roll a 5  
+- {{< katex >}}A{{< /katex >}}: roll a 2
+- {{< katex >}}B{{< /katex >}}: roll a 5  
 They cannot occur together.
 
 #### Collectively exhaustive
@@ -271,20 +270,20 @@ Two events A and B are Mutually Exclusive, but other than A and B there is nothi
 Collectively exhaustive means:
 together, the events cover the entire sample space.
 
-If $A$ and $B$ are collectively exhaustive:
+If A and B are collectively exhaustive:
 
 {{< colour "red" >}}
-$$
+{{< katex display=true >}}
 A\cup B = S
-$$
+{{< /katex >}}
 {{< /colour >}}
 
 If they are both mutually exclusive and collectively exhaustive, then:
 
 {{< colour "red" >}}
-$$
+{{< katex display=true >}}
 P(A)+P(B)=1
-$$
+{{< /katex >}}
 {{< /colour >}}
 ---
 
@@ -293,9 +292,9 @@ $$
 One event happening does not change the probability of the other.
 
 {{< colour "red" >}}
-$$
+{{< katex display=true >}}
 P(A\cap B)=P(A)\,P(B)
-$$
+{{< /katex >}}
 {{< /colour >}}
 
 Example:
@@ -336,13 +335,13 @@ style F fill:#C8E6C9,stroke:#2E7D32,color:#000
 
 ### Pattern 1: Valid probability assignment
 
-If outcomes $A,B,C,\dots$ are mutually exclusive and exhaustive, then a valid assignment must satisfy:
+If outcomes {{< katex >}}A,B,C,\dots{{< /katex >}} are mutually exclusive and exhaustive, then a valid assignment must satisfy:
 - Each probability is between 0 and 1
 - Total must sum to 1
 
 Checklist:
-1) Are all $P(\cdot)\ge 0$?
-2) Is $\sum P(\text{outcomes})=1$?
+1) Are all {{< katex >}}P(\cdot)\ge 0{{< /katex >}}?
+2) Is {{< katex >}}\sum P(\text{outcomes})=1{{< /katex >}}?
 If both yes, it is permissible.
 
 ---
@@ -353,8 +352,8 @@ If both yes, it is permissible.
 
 Example idea:
 “At least one desktop”  
-= $1 - P(\text{no desktop})$  
-= $1 - P(\text{both are laptops})$
+= 1 − P(no desktop)  
+= 1 − P(both are laptops)
 
 {{% hint info %}}
 Whenever you see:
@@ -366,16 +365,16 @@ try the complement first.
 
 ## Mini-check (self-test)
 
-1) If $P(A)=0.4$ and $P(B)=0.3$ and $A,B$ are independent, find $P(A\cap B)$.  
-2) If $A,B$ are mutually exclusive, what is $P(A\cap B)$?  
-3) If $P(A)=0.7$, what is $P(A^c)$?  
-4) If $P(A)=0.6$, $P(B)=0.5$, and $P(A\cap B)=0.2$, find $P(A\cup B)$.
+1) If {{< katex >}}P(A)=0.4{{< /katex >}} and {{< katex >}}P(B)=0.3{{< /katex >}} and {{< katex >}}A,B{{< /katex >}} are independent, find {{< katex >}}P(A\cap B){{< /katex >}}.  
+2) If {{< katex >}}A,B{{< /katex >}} are mutually exclusive, what is {{< katex >}}P(A\cap B){{< /katex >}}?  
+3) If {{< katex >}}P(A)=0.7{{< /katex >}}, what is {{< katex >}}P(A^c){{< /katex >}}?  
+4) If {{< katex >}}P(A)=0.6{{< /katex >}}, {{< katex >}}P(B)=0.5{{< /katex >}}, and {{< katex >}}P(A\cap B)=0.2{{< /katex >}}, find {{< katex >}}P(A\cup B){{< /katex >}}.
 
 Answers:
-1) $0.4\times 0.3=0.12$  
-2) $0$  
-3) $1-0.7=0.3$  
-4) $0.6+0.5-0.2=0.9$
+1) {{< katex >}}0.4\times 0.3=0.12{{< /katex >}}  
+2) {{< katex >}}0{{< /katex >}}  
+3) {{< katex >}}1-0.7=0.3{{< /katex >}}  
+4) {{< katex >}}0.6+0.5-0.2=0.9{{< /katex >}}
 
 ---
 
