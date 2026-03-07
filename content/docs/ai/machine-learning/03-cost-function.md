@@ -320,6 +320,16 @@ Cost function:
 
 ---
 
+## Training objective
+
+Training means:
+choose parameters that minimise the cost on the training data.
+
+For regression → cost is often squared error.
+For classification → a common cost is cross-entropy (log loss).
+
+--
+
 ## Role of Gradient Descent in Updating the Weights
 
 Gradient Descent is an optimisation algorithm used to minimise the cost function and find the best-fit line for the model.

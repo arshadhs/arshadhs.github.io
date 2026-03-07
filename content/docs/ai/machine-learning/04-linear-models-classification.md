@@ -149,6 +149,31 @@ predict Class 0
 
 ---
 
+### Link function vs sigmoid (common confusion)
+
+Logistic Regression can be described in two linked ways:
+
+1) Linear score:
+$z=w\cdot x+b$
+
+2) Probability:
+$p=\sigma(z)$
+
+The **logit** is the link between probability and score:
+
+{{< colour "blue" >}}
+{{< katex display=true >}}
+\log\left(\frac{p}{1-p}\right)=w\cdot x+b
+{{< /katex >}}
+{{< /colour >}}
+
+- logit:
+often called the **link function** in GLM language
+- sigmoid:
+the **inverse link** that maps $z$ to a probability
+
+---
+
 ### How Logistic Regression Works
 
 #### Input features and labels

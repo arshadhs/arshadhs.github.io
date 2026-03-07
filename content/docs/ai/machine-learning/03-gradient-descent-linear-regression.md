@@ -180,6 +180,24 @@ Where:
 
 ---
 
+## One iteration
+
+To do **one iteration of gradient descent**:
+
+1. Use current parameters to compute predictions.
+2. Compute the gradients at the current parameters.
+3. Apply the update:
+
+{{< colour "blue" >}}
+{{< katex display=true >}}
+\theta \leftarrow \theta - \alpha \nabla J(\theta)
+{{< /katex >}}
+{{< /colour >}}
+
+Then stop (if claculating for one iteration only).
+
+---
+
 ## Matrix/Vector Form (Least Squares + Gradient Descent)
 
 For an overdetermined system $Ap=b$, the squared error can be written as:

@@ -101,6 +101,77 @@ Also:
 Being able to fit a line does not necessarily mean the model is good.
 
 ---
+
+## Covariance vs correlation
+
+Covariance:
+
+{{< colour "blue" >}}
+{{< katex display=true >}}
+\mathrm{cov}(x,y)=\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})
+{{< /katex >}}
+{{< /colour >}}
+
+- sign tells direction of relationship
+- units depend on the scale of $x$ and $y$ (harder to compare across datasets)
+
+Correlation:
+
+{{< colour "blue" >}}
+{{< katex display=true >}}
+r=\frac{\mathrm{cov}(x,y)}{\sigma_x\sigma_y}
+{{< /katex >}}
+{{< /colour >}}
+
+- dimensionless and bounded in $[-1,1]$
+- easier to interpret and compare
+
+---
+
+## R-squared (R²)
+
+R² measures how much variance the model explains (compared to predicting the mean):
+
+{{< colour "blue" >}}
+{{< katex display=true >}}
+R^2=1-\frac{SSE}{SST}
+{{< /katex >}}
+{{< /colour >}}
+
+Where:
+- $SSE=\sum (y_i-\hat{y}_i)^2$
+- $SST=\sum (y_i-\bar{y})^2$
+
+Interpretation:
+- higher R² usually means better fit
+- very high R² on training data can indicate overfitting (check validation/test)
+
+---
+
+## Underfitting vs overfitting (quick diagnosis)
+
+- high training error and high test error:
+underfitting (high bias)
+- low training error but high test error:
+overfitting (high variance)
+
+---
+
+
+## Interpreting a log-transform (quick note)
+
+If you model $\log(y)$ as linear:
+
+{{< colour "blue" >}}
+{{< katex display=true >}}
+\log(y)=\beta_0+\beta_1 x
+{{< /katex >}}
+{{< /colour >}}
+
+Then a 1-unit increase in $x$ multiplies $y$ by $e^{\beta_1}$ (approximately a percentage change effect).
+
+---
+
 ## Direct Solution Method
 
 In regression we pick parameters to minimise prediction error.

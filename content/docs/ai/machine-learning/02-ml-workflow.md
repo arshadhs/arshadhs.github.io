@@ -74,6 +74,43 @@ additional notes to augment above:
 - Encoding categorical variables
 - Feature selection
 
+---
+
+### Distance / similarity (why scaling matters)
+
+Many algorithms compare examples by “closeness”.
+The definition of closeness depends on a distance or similarity measure.
+
+#### Cosine similarity vs Euclidean distance
+
+Cosine similarity compares direction (angle), not magnitude:
+
+{{< colour "blue" >}}
+{{< katex display=true >}}
+\cos(\theta)=\frac{x\cdot y}{\|x\|\|y\|}
+{{< /katex >}}
+{{< /colour >}}
+
+When to use cosine:
+- text/document vectors (high-dimensional, sparse)
+- when vector length should not dominate similarity
+
+Euclidean distance measures straight-line distance:
+
+{{< colour "blue" >}}
+{{< katex display=true >}}
+d(x,y)=\|x-y\|
+{{< /katex >}}
+{{< /colour >}}
+
+When to use Euclidean:
+- continuous features on comparable scales (often after normalisation)
+
+Key takeaway:
+Euclidean distance changes when features are on different scales, so scaling is often required.
+
+---
+
 **Categorical Preprocessing**
 
 - **One Hot Encoding (OHE)**
@@ -106,7 +143,12 @@ Common techniques:
 - Oversampling minority class
 - Undersampling majority class
 - Stratified sampling
-
+- **Bootstrapping (sampling with replacement)**
+  - Create a new dataset by sampling from the training data **with replacement**
+  - Some rows repeat, some are left out
+  - Used heavily in **bagging** (and Random Forests) to reduce variance
+  - Each bootstrap sample is used to train a separate model, then predictions are averaged/voted
+  
 Goal:
 Ensure the model learns fairly from all classes.
 

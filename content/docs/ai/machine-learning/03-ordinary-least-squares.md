@@ -65,6 +65,35 @@ Why square the residuals:
 
 ---
 
+## What OLS is minimising
+
+OLS chooses parameters to minimise the **sum of squared residuals**:
+
+{{< colour "blue" >}}
+{{< katex display=true >}}
+SSE=\sum_{i=1}^{n}\left(y_i-\hat{y}_i\right)^2
+{{< /katex >}}
+{{< /colour >}}
+
+This is why OLS is called “least squares”:
+it penalises large errors more heavily than small ones.
+
+---
+
+## Multicollinearity (perfectly correlated features)
+
+If two (or more) input features are perfectly correlated, the design matrix becomes rank-deficient:
+$X^T X$ can become singular.
+
+Practical result:
+the OLS solution may not be unique (many parameter vectors fit equally well).
+
+What you do in practice:
+- remove/reduce redundant features
+- or use regularisation (e.g. ridge)
+
+---
+
 ## Closed-form solution (single predictor)
 
 When there is a single predictor variable, the solution can be written using covariance and variance:
