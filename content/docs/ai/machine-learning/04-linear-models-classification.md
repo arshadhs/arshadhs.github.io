@@ -72,6 +72,40 @@ style ORD1 fill:#CE93D8,stroke:#8E24AA,color:#000
 
 ---
 
+### Multiclass strategies (OvR / OvO)
+
+Logistic regression is naturally a **binary** classifier.
+To handle more than two classes, use strategies like One-vs-Rest or One-vs-One.
+
+#### One-vs-Rest (OvR)
+
+- Train $K$ binary logistic regression models (one per class).
+- For class $k$, set labels:
+  - $y=1$ if the example belongs to class $k$
+  - $y=0$ otherwise
+- At prediction time, choose the class with the highest predicted probability.
+
+{{< colour "blue" >}}
+{{< katex display=true >}}
+\hat{k}=\arg\max_{k\in\{1,\dots,K\}} p_k(x)
+{{< /katex >}}
+{{< /colour >}}
+
+When to use:
+- Works well when $K$ is moderate.
+- Simple to implement.
+
+#### One-vs-One (OvO)
+
+- Train a binary classifier for every pair of classes.
+- Total classifiers: $K(K-1)/2$.
+- At prediction time, each classifier votes; the class with most votes wins.
+
+When to use:
+- Useful when $K$ is small.
+- Training can be heavier if $K$ is large.
+
+---
 ### Assumptions of Logistic Regression
 
 - Independent observations:
@@ -255,6 +289,169 @@ For weight component $w_j$:
 
 ---
 
+### Evaluation metrics for classification
+
+To evaluate Logistic Regression (and other classifiers), we often use a **confusion matrix** and derived metrics.
+
+#### Confusion Matrix
+
+For binary classification (positive class = 1):
+
+- True Positive (TP):
+actual 1, predicted 1
+- False Positive (FP):
+actual 0, predicted 1
+- False Negative (FN):
+actual 1, predicted 0
+- True Negative (TN):
+actual 0, predicted 0
+
+{{< colour "blue" >}}
+{{< katex display=true >}}
+\begin{array}{c|cc}
+ & \text{Pred }1 & \text{Pred }0\\ \hline
+\text{Actual }1 & TP & FN\\
+\text{Actual }0 & FP & TN
+\end{array}
+{{< /katex >}}
+{{< /colour >}}
+
+#### Accuracy
+
+Accuracy measures the overall fraction of correct predictions.
+
+{{< colour "blue" >}}
+{{< katex display=true >}}
+\text{Accuracy}=\frac{TP+TN}{TP+FP+FN+TN}
+{{< /katex >}}
+{{< /colour >}}
+
+When to use:
+- When classes are fairly balanced.
+- When FP and FN have similar cost.
+
+#### Precision
+
+Precision tells you: “When the model predicts 1, how often is it correct?”
+
+{{< colour "blue" >}}
+{{< katex display=true >}}
+\text{Precision}=\frac{TP}{TP+FP}
+{{< /katex >}}
+{{< /colour >}}
+
+When to use:
+- When false positives are costly.
+- Example:
+flagging a legitimate customer as fraud.
+
+#### Recall (Sensitivity / True Positive Rate)
+
+Recall tells you: “Out of all actual 1s, how many did we catch?”
+
+{{< colour "blue" >}}
+{{< katex display=true >}}
+\text{Recall}=\frac{TP}{TP+FN}
+{{< /katex >}}
+{{< /colour >}}
+
+When to use:
+- When false negatives are costly.
+- Example:
+missing a fraud case / missing a disease.
+
+#### F1 score
+
+{{< colour "blue" >}}
+{{< katex display=true >}}
+F1=\frac{2\cdot \text{Precision}\cdot \text{Recall}}{\text{Precision}+\text{Recall}}
+{{< /katex >}}
+{{< /colour >}}
+
+#### Log loss (Cross-entropy)
+
+Log loss evaluates **probabilities**, not just hard class labels.
+It penalises confident wrong predictions heavily.
+
+Per-example:
+
+{{< colour "blue" >}}
+{{< katex display=true >}}
+\mathrm{Cost}\!\left(p,y\right)
+=
+-y\log(p)-(1-y)\log(1-p)
+{{< /katex >}}
+{{< /colour >}}
+
+Over the full dataset:
+
+{{< colour "blue" >}}
+{{< katex display=true >}}
+J=-\frac{1}{m}\sum_{i=1}^{m}\left[y^{(i)}\log(p^{(i)})+(1-y^{(i)})\log(1-p^{(i)})\right]
+{{< /katex >}}
+{{< /colour >}}
+
+When to use:
+- When you care about **well-calibrated probabilities**.
+- When comparing probabilistic classifiers (like logistic regression).
+
+---
+
+#### ROC curve and AUC
+
+ROC curve plots:
+- True Positive Rate (TPR) vs False Positive Rate (FPR)
+as you vary the classification threshold.
+
+{{< colour "blue" >}}
+{{< katex display=true >}}
+TPR=\frac{TP}{TP+FN}
+{{< /katex >}}
+{{< /colour >}}
+
+{{< colour "blue" >}}
+{{< katex display=true >}}
+FPR=\frac{FP}{FP+TN}
+{{< /katex >}}
+{{< /colour >}}
+
+AUC:
+Area under the ROC curve.
+
+When to use:
+- When you want a threshold-independent performance summary.
+- Often useful when classes are imbalanced and you want ranking quality.
+
+---
+
+## Decision Tree
+
+A Decision Tree is a non-linear classification model that splits the feature space into regions using if-then rules.
+
+How it works:
+- choose a feature and split threshold
+- split the data into two (or more) groups
+- repeat until a stopping rule is met
+
+Common split criteria:
+- Gini impurity
+- Entropy / Information Gain
+
+When to use:
+- when relationships are non-linear
+- when you want interpretable rule-based decisions
+- when feature interactions matter
+
+Typical risks:
+- can overfit without pruning / depth limits
+- can be unstable (small data changes can change the tree)
+
+Evaluation:
+Use the same metrics as logistic regression:
+confusion matrix, accuracy, precision, recall, ROC/AUC.
+
+---
+
 ### Terminology
 
 - Independent variables:
@@ -276,7 +473,7 @@ estimate $w,b$ by maximising likelihood of observed data
 
 ---
 
-## Refrences
+## References
 
 - [Maximum Likelihood Estimation (MLE) and Maximum A Posteriori (MAP)](https://www.geeksforgeeks.org/data-science/mle-vs-map/)
 
