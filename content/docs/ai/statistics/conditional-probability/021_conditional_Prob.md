@@ -9,6 +9,9 @@ menu: main
 
 # Conditional Probability (and Independent Events)
 
+- Prior Probablity: No condition
+- Posterior Probability: Same Event, but now with new knowledge i.e. with Condition
+
 ### 1.1 Conditional probability
 
 Conditional probability answers:
@@ -22,8 +25,8 @@ P(B \mid A)=\frac{P(A\cap B)}{P(A)},\quad P(A)>0
 
 How to think about it:
 Meaning:
-- {{< katex >}}P(A\cap B){{< /katex >}} is the probability that both events happen together (joint probability).
-- Conditioning on {{< katex >}}A{{< /katex >}} means:
+- Numerator: {{< katex >}}P(A\cap B){{< /katex >}} is the probability that both events happen together (**joint probability**).
+- Denominator: Conditioning on {{< katex >}}A{{< /katex >}} means:
 we restrict attention to the outcomes where {{< katex >}}A{{< /katex >}} is true.
 
 **Conditioning “shrinks the universe”**: once {{< katex >}}A{{< /katex >}}is known to have happened, we only count outcomes inside {{< katex >}}A{{< /katex >}}.
