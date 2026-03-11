@@ -9,6 +9,13 @@ menu: main
 
 # Naïve Bayes
 
+- Supervised Learning Problem
+- Binary Classification - final target variable is considered in two classes
+- Hypothesis is target which you want to classify
+- Total Probability (Prior) of Yes and No is already calculated
+- Post / Posterior is when you start studying data
+- Based on max probability of hypotheses classify given instance into a class
+
 ### 3.1 From Bayes to learning (posterior over classes)
 
 In classification, we want:
