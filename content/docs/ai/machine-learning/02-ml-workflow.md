@@ -148,7 +148,7 @@ Common techniques:
   - Some rows repeat, some are left out
   - Used heavily in **bagging** (and Random Forests) to reduce variance
   - Each bootstrap sample is used to train a separate model, then predictions are averaged/voted
-  
+
 Goal:
 Ensure the model learns fairly from all classes.
 
@@ -166,18 +166,146 @@ Training is iterative, not one-time.
 ### Model Testing and performance metrics
 
 Training accuracy alone is misleading.
+Models must be evaluated on unseen data (validation/test).
 
-Models must be evaluated on unseen data.
+This tells us:
+Does the model generalise beyond training data?
 
-Common metrics:
+For **regression**:
+common metrics include MSE, MAE, RMSE.
+
+For **classification**:
+we usually start with a **confusion matrix**, then derive metrics like:
 - Accuracy
 - Precision
 - Recall
 - F1-score
 - ROC-AUC
+---
 
-This tells us:
-Does the model generalise beyond training data?
+#### Confusion matrix (binary classification)
+
+A confusion matrix counts how predictions compare to the true labels.
+You must decide which label is the **positive class** (the class you care about most).
+
+|  | Predicted Positive | Predicted Negative |
+|---|---:|---:|
+| Actual Positive | TP | FN |
+| Actual Negative | FP | TN |
+
+- TP (true positive): actual positive, predicted positive
+- TN (true negative): actual negative, predicted negative
+- FP (false positive): actual negative, predicted positive
+- FN (false negative): actual positive, predicted negative
+
+---
+
+#### Accuracy
+
+Accuracy measures overall correctness.
+
+{{< colour "blue" >}}
+{{< katex display=true >}}
+\mathrm{Accuracy}=\frac{TP+TN}{TP+TN+FP+FN}
+{{< /katex >}}
+{{< /colour >}}
+
+Error rate:
+
+{{< colour "blue" >}}
+{{< katex display=true >}}
+\mathrm{Error}=1-\mathrm{Accuracy}
+{{< /katex >}}
+{{< /colour >}}
+
+When accuracy works well:
+- class distribution is roughly balanced
+
+When accuracy is misleading:
+- highly skewed/imbalanced data (a trivial model can predict the majority class and still get high accuracy)
+
+---
+
+#### Precision
+
+Precision measures **positive prediction correctness**:
+out of everything predicted positive, how many are truly positive?
+
+{{< colour "blue" >}}
+{{< katex display=true >}}
+\mathrm{Precision}=\frac{TP}{TP+FP}
+{{< /katex >}}
+{{< /colour >}}
+
+When to focus on precision:
+- false positives are costly
+- example: spam filtering (avoid marking important email as spam)
+
+---
+
+#### Recall (TPR / Sensitivity)
+
+Recall measures **positive case finding ability**:
+out of all actual positives, how many did the model find?
+
+{{< colour "blue" >}}
+{{< katex display=true >}}
+\mathrm{Recall}=\mathrm{TPR}=\frac{TP}{TP+FN}
+{{< /katex >}}
+{{< /colour >}}
+
+When to focus on recall:
+- false negatives are costly
+- example: disease screening (missing a positive case is dangerous)
+
+---
+
+#### F1-score
+
+F1 combines precision and recall into one number (harmonic mean).
+Useful when data is imbalanced and you want a single metric.
+
+{{< colour "blue" >}}
+{{< katex display=true >}}
+F_1=\frac{2\,(\mathrm{Precision})(\mathrm{Recall})}{\mathrm{Precision}+\mathrm{Recall}}
+{{< /katex >}}
+{{< /colour >}}
+
+Rule of thumb:
+if $F_1$ is closer to 1, the model has a better balance between precision and recall.
+
+---
+
+#### ROC curve and ROC-AUC
+
+ROC curve plots:
+- x-axis: false positive rate (FPR)
+- y-axis: true positive rate (TPR)
+
+{{< colour "blue" >}}
+{{< katex display=true >}}
+\mathrm{FPR}=\frac{FP}{FP+TN}
+\qquad
+\mathrm{TPR}=\frac{TP}{TP+FN}
+{{< /katex >}}
+{{< /colour >}}
+
+ROC is mainly used for:
+- threshold selection (not always $0.5$)
+- performance assessment
+- comparing classifiers
+
+AUC (Area Under the ROC Curve):
+- $AUC=1$ → perfect model
+- $AUC=0.5$ → random guessing
+- higher AUC → better separability between classes
+
+How to construct ROC (exam-style steps):
+- take a classifier that outputs a continuous score (e.g., probability)
+- sort instances by score (descending)
+- apply thresholds at each unique score
+- compute (TP, FP, TN, FN) at each threshold
+- compute TPR and FPR and plot points
 
 ---
 
@@ -190,5 +318,3 @@ Does the model generalise beyond training data?
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}
-
-
