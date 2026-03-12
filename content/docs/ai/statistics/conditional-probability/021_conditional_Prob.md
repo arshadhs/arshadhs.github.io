@@ -325,20 +325,18 @@ P(B\mid A)=P(B)\ \Rightarrow\ P(B\mid A^c)=P(B)
 3) If {{< katex >}}A{{< /katex >}} and {{< katex >}}B{{< /katex >}} are independent, what is {{< katex >}}P(A\mid B){{< /katex >}}?  
 4) If {{< katex >}}A{{< /katex >}} and {{< katex >}}B{{< /katex >}} are mutually exclusive and both possible, are they independent?
 
-{{% hint success %}}
 Answers:
 1) {{< katex >}}P(B)>0{{< /katex >}}  
 2) {{< katex >}}P(A\cap B)=P(B)P(A\mid B){{< /katex >}}  
 3) {{< katex >}}P(A\mid B)=P(A){{< /katex >}}  
 4) No
-{{% /hint %}}
 
 ---
 
 ## What’s next
 
-Total probability and Bayes’ theorem
-This is where you combine conditional probability with a partition of the sample space and “reverse” the conditioning.
+- Total probability and Bayes’ theorem
+- This is where you combine conditional probability with a partition of the sample space and “reverse” the conditioning.
 
 ---
 

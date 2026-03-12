@@ -1,5 +1,6 @@
 ---
 title: "Hypothesis Testing"
+date: 2026-03-12
 draft: false
 tags: ["AI", "Statistics"]
 categories: ["AI", "Statistics"]
@@ -10,26 +11,52 @@ menu: main
 # Hypothesis Testing
 
 Hypothesis testing is a structured way to decide:
-“Is what I’m seeing in the sample just random noise, or is there real evidence of a change in the population?”
 
-This topic sits inside **inferential statistics**:
+Is what we see in a sample just random variation,
+or is there evidence of a real effect in the population?
+
+Hypothesis Testing topic sits inside **inferential statistics**:
 we use a **sample** to make a statement about a **population**.
+
+- Sampling (random and stratified)
+- Sampling distribution and Central Limit Theorem
+- Estimation (confidence intervals and confidence level)
+- Testing hypotheses (mean, proportion, ANOVA)
+- Maximum likelihood (MLE)
+
+{{% hint info %}}
+Key takeaway:
+The logic is always the same:
+
+1) define a claim (null) and a competing claim (alternative)  
+2) compute a test statistic from the sample  
+3) use a threshold (critical value) or a p-value  
+4) make a decision and write the conclusion in words
+{{% /hint %}}
 
 ---
 
 ## Big picture roadmap
 
 {{< mermaid >}}
+%%{init: {'theme':'base','themeVariables': {
+  'fontFamily':'Inter, ui-sans-serif, system-ui',
+  'primaryColor':'#E8F1FF',
+  'primaryTextColor':'#1F2937',
+  'primaryBorderColor':'#A7C7FF',
+  'lineColor':'#94A3B8',
+  'tertiaryColor':'#F8FAFC'
+}}}%%
 flowchart TD
-  A["Population<br/>Unknown truth"] --> B["Draw a sample<br/>Random or stratified"]
-  B --> C["Compute statistic<br/>mean, proportion, variance"]
+  A["Population<br/>unknown truth"] --> B["Sampling<br/>random / stratified"]
+  B --> C["Statistic from sample<br/>mean / proportion / variance"]
   C --> D["Sampling distribution<br/>standard error"]
-  D --> E["Estimation<br/>point and interval (CI)"]
-  D --> F["Hypothesis testing<br/>z-test / t-test / proportion tests"]
-  F --> G["Decision<br/>reject or fail to reject H0"]
-  E --> H["Interpretation<br/>confidence level, margin of error"]
-  G --> I["Report<br/>p-value, conclusion in words"]
-  H --> I
+  D --> E["Estimation<br/>confidence intervals"]
+  D --> F["Hypothesis test<br/>Z / t / proportion / F"]
+  E --> G["Interpretation<br/>confidence level, margin of error"]
+  F --> H["Decision<br/>reject H0 or fail to reject H0"]
+  H --> I["Report<br/>p-value + conclusion in words"]
+  G --> I
 {{< /mermaid >}}
 
 {{% hint info %}}
@@ -40,9 +67,9 @@ That is why we start with sampling and the Central Limit Theorem.
 
 ---
 
-## Sampling
+## 1) Sampling
 
-### Population vs sample
+### 1.1 Population vs sample
 
 - **Population**:
 the full set of elements you care about (usually huge).
@@ -55,36 +82,29 @@ money, manpower, material, and time.
 
 ---
 
-## Sampling methods
-
-### Random sampling
+### 1.2 Random sampling
 
 Random sampling means:
-every unit has a known chance of being selected,
+each element has a known chance of selection,
 and selection is not biased.
 
-Examples of how randomness is implemented:
-- random number generator on a list (sampling frame)
-- random selection of IDs (roll numbers, employee IDs)
-
-{{% hint warning %}}
-If your sample is biased, your estimate will be biased.
-Sampling quality matters before any formula.
-{{% /hint %}}
+Typical approach:
+- assign IDs to the population list (sampling frame)
+- use a random number generator to pick IDs
 
 ---
 
-### Stratified sampling
+### 1.3 Stratified sampling
 
-Use stratified sampling when the population is **heterogeneous**.
+Use stratified sampling when the population is heterogeneous.
 
 Steps:
-1) split the population into strata (groups) so each stratum is internally similar  
-2) take random samples inside each stratum  
-3) combine results using a weighted average (weights based on stratum sizes)
+1) split population into strata (groups)
+2) take a random sample within each stratum
+3) combine results using weights proportional to stratum sizes
 
 Why it helps:
-you avoid over-sampling one group and under-sampling another.
+it prevents under-representing important subgroups.
 
 ---
 
@@ -100,444 +120,322 @@ the difference between a sample estimate and the true (unknown) population param
 A useful mental model:
 
 Observed data = Truth + Bias + Random error
-
 Sampling design tries to reduce bias and control random error.
 
 ---
+## 2) Sampling distributions and the Central Limit Theorem
 
-## Sampling distribution
+### 2.1 Sampling distribution
 
-A **statistic** (like sample mean) becomes a random variable when you repeat sampling.
-The probability distribution of that statistic is called the **sampling distribution**.
+A statistic (like the sample mean) becomes a random variable if we repeat sampling.
+Its distribution over repeated samples is the sampling distribution.
 
-Examples:
-- sampling distribution of the sample mean
-- sampling distribution of the sample proportion
+This is the key reason we can quantify uncertainty.
 
 ---
 
-## Central Limit Theorem
+### 2.2 Central Limit Theorem for the sample mean
 
-### CLT for the sample mean
+If you take a random sample of size {{< katex >}}n{{< /katex >}} from a population with mean {{< katex >}}\mu{{< /katex >}} and standard deviation {{< katex >}}\sigma{{< /katex >}}:
 
-If you take a random sample of size $n$ from a population with mean $\mu$ and standard deviation $\sigma$:
-
-- for sufficiently large $n$ (rule-of-thumb: $n\ge 30$),
-the distribution of the sample mean $\bar{x}$ is approximately normal.
-
-Also:
-if the population itself is normal, then $\bar{x}$ is normal for any $n$.
+- for sufficiently large {{< katex >}}n{{< /katex >}} (rule of thumb: {{< katex >}}n\ge 30{{< /katex >}}),
+the distribution of the sample mean {{< katex >}}\bar{x}{{< /katex >}} is approximately normal
+- if the population itself is normal, then {{< katex >}}\bar{x}{{< /katex >}} is normal for any {{< katex >}}n{{< /katex >}}
 
 Mean and standard deviation of the sampling distribution:
 
 {{< colour "red" >}}
-$$
+{{< katex display=true >}}
 E(\bar{x})=\mu
-$$
+{{< /katex >}}
 {{< /colour >}}
 
 {{< colour "red" >}}
-$$
+{{< katex display=true >}}
 \sigma_{\bar{x}}=\frac{\sigma}{\sqrt{n}}
-$$
+{{< /katex >}}
 {{< /colour >}}
 
-The quantity $\sigma_{\bar{x}}$ is called the **standard error of the mean**.
+The quantity {{< katex >}}\sigma_{\bar{x}}{{< /katex >}} is the standard error of the mean.
 
 ---
 
-### Z score for sample means
-
-Once we know the sampling distribution is normal (or approximately normal),
-we can convert sample means into Z scores.
+### 2.3 Z-score for sample means
 
 {{< colour "red" >}}
-$$
+{{< katex display=true >}}
 Z=\frac{\bar{x}-\mu}{\sigma/\sqrt{n}}
-$$
+{{< /katex >}}
 {{< /colour >}}
 
-This is used for:
-- probability questions about $\bar{x}$
-- confidence intervals for the mean (when $\sigma$ is known)
-- z-tests for the mean (one-sample)
+This lets you convert a sample mean into a standard normal value,
+so you can compute probabilities and thresholds.
 
 ---
 
-### Finite population correction
+### 2.4 CLT for the sample proportion
 
-If the population is finite (fixed size $N$) and sampling is without replacement,
-a correction factor can be used:
+For a binary variable (success/failure),
+let {{< katex >}}\hat{p}=x/n{{< /katex >}}.
 
-{{< colour "red" >}}
-$$
-\text{FPC}=\sqrt{\frac{N-n}{N-1}}
-$$
-{{< /colour >}}
+Approximate normality holds when:
+{{< katex >}}np{{< /katex >}} and {{< katex >}}n(1-p){{< /katex >}} are both sufficiently large.
 
-Then the standard error becomes:
+Mean and standard error:
 
 {{< colour "red" >}}
-$$
-\sigma_{\bar{x}}=\frac{\sigma}{\sqrt{n}}\,\sqrt{\frac{N-n}{N-1}}
-$$
-{{< /colour >}}
-
-Rule of thumb:
-if $\frac{n}{N}<0.05$, the correction is usually small.
-
----
-
-## Sample proportion and its sampling distribution
-
-### Sample proportion
-
-When the data are “countable” (yes/no, success/failure),
-we use the sample proportion.
-
-Let $x$ be the number of “successes” in a sample of size $n$:
-
-{{< colour "red" >}}
-$$
-\hat{p}=\frac{x}{n}
-$$
-{{< /colour >}}
-
----
-
-### CLT for sample proportion
-
-The sampling distribution of $\hat{p}$ is approximately normal when:
-
-- $np > 15$
-- $n(1-p) > 15$
-
-Mean and standard deviation:
-
-{{< colour "red" >}}
-$$
+{{< katex display=true >}}
 E(\hat{p})=p
-$$
+{{< /katex >}}
 {{< /colour >}}
 
 {{< colour "red" >}}
-$$
+{{< katex display=true >}}
 \sigma_{\hat{p}}=\sqrt{\frac{p(1-p)}{n}}
-$$
+{{< /katex >}}
 {{< /colour >}}
 
-(When $p$ is unknown in practice, we often plug in $\hat{p}$.)
+In practice, when {{< katex >}}p{{< /katex >}} is unknown, we often plug in {{< katex >}}\hat{p}{{< /katex >}}.
 
 ---
 
-## Estimation – Interval Estimation,Confidence level 
+## 3) Estimation (confidence intervals)
 
-Statistical inference has three common forms:
-- point estimation
-- interval estimation (confidence intervals)
-- hypothesis testing
+### 3.1 Confidence level
 
----
-
-### Point estimation
-
-A **point estimate** is a single best guess for a population parameter.
-
-Examples:
-- $\bar{x}$ estimates $\mu$
-- $s^2$ estimates $\sigma^2$
-- $\hat{p}$ estimates $p$
-
-{{% hint info %}}
-Point estimates are easy to compute, but they do not show uncertainty.
-That is why we use confidence intervals.
-{{% /hint %}}
-
----
-
-### Interval estimation and confidence intervals
-
-A **confidence interval (CI)** gives a range that is likely to contain the true parameter.
-
-Confidence level:
-$100(1-\alpha)\%$
+A confidence level is written as:
+{{< katex >}}100(1-\alpha)\%{{< /katex >}}.
 
 Common values:
-- 90% (α = 0.10)
-- 95% (α = 0.05)
-- 99% (α = 0.01)
-
-The “critical value”:
-$Z_{\alpha/2}$ comes from the standard normal table.
-
-Typical:
-- for 95%: $Z_{\alpha/2}=1.96$
-- for 99%: $Z_{\alpha/2}=2.58$
+- 90% ({{< katex >}}\alpha=0.10{{< /katex >}})
+- 95% ({{< katex >}}\alpha=0.05{{< /katex >}})
+- 99% ({{< katex >}}\alpha=0.01{{< /katex >}})
 
 ---
 
-## Confidence interval for the mean
-
-Use this when:
-- population standard deviation $\sigma$ is known
-- sample size is large, or population is normal
+### 3.2 Confidence interval for the mean (sigma known)
 
 Standard error:
 
 {{< colour "red" >}}
-$$
+{{< katex display=true >}}
 SE(\bar{x})=\frac{\sigma}{\sqrt{n}}
-$$
+{{< /katex >}}
 {{< /colour >}}
 
 Confidence interval:
 
 {{< colour "red" >}}
-$$
-\mu\in \bar{x}\pm Z_{\alpha/2}\,SE(\bar{x})
-=\bar{x}\pm Z_{\alpha/2}\frac{\sigma}{\sqrt{n}}
-$$
+{{< katex display=true >}}
+\mu\in \bar{x}\pm Z_{\alpha/2}\,\frac{\sigma}{\sqrt{n}}
+{{< /katex >}}
 {{< /colour >}}
 
 Margin of error:
 
 {{< colour "red" >}}
-$$
-E=Z_{\alpha/2}\frac{\sigma}{\sqrt{n}}
-$$
+{{< katex display=true >}}
+E=Z_{\alpha/2}\,\frac{\sigma}{\sqrt{n}}
+{{< /katex >}}
 {{< /colour >}}
 
 Interpretation:
-“we are $(1-\alpha)$ confident that the interval contains $\mu$.”
-
-{{% hint warning %}}
-A 95% confidence interval does NOT mean:
-“there is a 95% chance $\mu$ is in this particular interval”.
-It means:
-the method produces intervals that capture $\mu$ about 95% of the time in repeated sampling.
-{{% /hint %}}
+the method produces intervals that capture {{< katex >}}\mu{{< /katex >}} about {{< katex >}}100(1-\alpha)\%{{< /katex >}} of the time under repeated sampling.
 
 ---
 
-## Confidence interval for difference of two means
+### 3.3 Confidence interval for a proportion
 
-Use when comparing two population means.
-
-A common large-sample form (using sample SDs):
+Standard error (using {{< katex >}}\hat{p}{{< /katex >}}):
 
 {{< colour "red" >}}
-$$
-(\mu_1-\mu_2)\in (\bar{x}_1-\bar{x}_2)
-\pm Z_{\alpha/2}\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}
-$$
-{{< /colour >}}
-
-Pooled standard deviation approach (when population SDs are assumed equal):
-often used in two-sample t procedures, discussed later in more detail.
-
----
-
-## Confidence interval for a proportion
-
-Standard error (using $\hat{p}$ in practice):
-
-{{< colour "red" >}}
-$$
+{{< katex display=true >}}
 SE(\hat{p})=\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}
-$$
+{{< /katex >}}
 {{< /colour >}}
 
 Confidence interval:
 
 {{< colour "red" >}}
-$$
-p\in \hat{p}\pm Z_{\alpha/2}\,SE(\hat{p})
-=\hat{p}\pm Z_{\alpha/2}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}
-$$
+{{< katex display=true >}}
+p\in \hat{p}\pm Z_{\alpha/2}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}
+{{< /katex >}}
 {{< /colour >}}
 
 ---
 
-## Confidence interval for difference in proportions
-
-Let $\hat{p}_1=\frac{x_1}{n_1}$ and $\hat{p}_2=\frac{x_2}{n_2}$.
-
-Standard error:
+### 3.4 Difference of two means (large-sample form)
 
 {{< colour "red" >}}
-$$
+{{< katex display=true >}}
+(\mu_1-\mu_2)\in (\bar{x}_1-\bar{x}_2)\pm Z_{\alpha/2}\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}
+{{< /katex >}}
+{{< /colour >}}
+
+---
+
+### 3.5 Difference of two proportions
+
+{{< colour "red" >}}
+{{< katex display=true >}}
 SE(\hat{p}_1-\hat{p}_2)=\sqrt{\frac{\hat{p}_1(1-\hat{p}_1)}{n_1}+\frac{\hat{p}_2(1-\hat{p}_2)}{n_2}}
-$$
+{{< /katex >}}
 {{< /colour >}}
 
-Confidence interval:
-
 {{< colour "red" >}}
-$$
+{{< katex display=true >}}
 (p_1-p_2)\in (\hat{p}_1-\hat{p}_2)\pm Z_{\alpha/2}\,SE(\hat{p}_1-\hat{p}_2)
-$$
+{{< /katex >}}
 {{< /colour >}}
 
 ---
 
-## Testing of hypothesis
+## 4) Testing of hypothesis
 
-Hypothesis testing is about comparing two claims:
+### 4.1 Hypotheses
 
-- $H_0$ (null hypothesis):
-“nothing changed” / “no effect” / “baseline”
-- $H_1$ (alternative hypothesis):
-“something changed” / “effect exists”
+- Null hypothesis {{< katex >}}H_0{{< /katex >}}:
+baseline claim (no change / no effect)
+- Alternative hypothesis {{< katex >}}H_1{{< /katex >}}:
+competing claim (change / effect)
 
 A hypothesis test outputs:
-- a **test statistic** (like $Z$)
-- a **p-value**
-- a decision:
-reject $H_0$ or fail to reject $H_0$
+- a test statistic ({{< katex >}}Z{{< /katex >}}, {{< katex >}}t{{< /katex >}}, {{< katex >}}\chi^2{{< /katex >}}, {{< katex >}}F{{< /katex >}})
+- a p-value (or a critical region decision)
+- a final conclusion
 
 ---
 
-## The test workflow (exam-friendly)
+### 4.2 Errors in testing
+
+- Type I error:
+reject {{< katex >}}H_0{{< /katex >}} when {{< katex >}}H_0{{< /katex >}} is true  
+probability = {{< katex >}}\alpha{{< /katex >}}
+
+- Type II error:
+fail to reject {{< katex >}}H_0{{< /katex >}} when {{< katex >}}H_1{{< /katex >}} is true  
+probability = {{< katex >}}\beta{{< /katex >}}
+
+Power of a test:
+{{< katex >}}1-\beta{{< /katex >}}
+
+---
+
+### 4.3 Test workflow
 
 {{< mermaid >}}
+%%{init: {'theme':'base','themeVariables': {
+  'fontFamily':'Inter, ui-sans-serif, system-ui',
+  'primaryColor':'#FDEBFF',
+  'primaryTextColor':'#1F2937',
+  'primaryBorderColor':'#F5B7FF',
+  'lineColor':'#94A3B8',
+  'tertiaryColor':'#F8FAFC'
+}}}%%
 flowchart TD
-  A["1. Define H0 and H1"] --> B["2. Choose alpha<br/>0.10, 0.05, 0.01"]
-  B --> C["3. Pick test statistic<br/>Z or t or chi-square or F"]
-  C --> D["4. Compute statistic from sample"]
-  D --> E["5. Compute p-value or critical region"]
-  E --> F{"6. Decision"}
-  F -->|p <= alpha| G["Reject H0"]
-  F -->|p > alpha| H["Fail to reject H0"]
-  G --> I["7. Write conclusion in words"]
+  A["Define hypotheses<br/>H0 and H1"] --> B["Choose significance level<br/>alpha = 0.10 or 0.05 or 0.01"]
+  B --> C["Select test statistic<br/>Z or t or chi-square or F"]
+  C --> D["Compute statistic<br/>from sample data"]
+  D --> E["Compute p-value<br/>or compare with critical value"]
+  E --> F["Decision"]
+  F --> G["If p <= alpha<br/>Reject H0"]
+  F --> H["If p > alpha<br/>Fail to reject H0"]
+  G --> I["Conclusion in words"]
   H --> I
 {{< /mermaid >}}
 
 ---
 
-## Errors in testing
+## 5) Mean-based tests (one mean)
 
-Two key risks:
+Use this when testing a claim about {{< katex >}}\mu{{< /katex >}}.
 
-- Type I error:
-reject $H_0$ when $H_0$ is true  
-Probability = $\alpha$
-
-- Type II error:
-fail to reject $H_0$ when $H_1$ is true  
-Probability = $\beta$
-
-Power of the test:
-$1-\beta$
-
----
-
-## Mean-based hypothesis tests (z-test idea)
-
-Use a one-sample mean test when:
-- you test a claim about $\mu$
-- $\sigma$ is known (or $n$ is large and you use $s$ as an approximation)
-
-Test statistic:
+A common Z-form (when {{< katex >}}\sigma{{< /katex >}} is known):
 
 {{< colour "red" >}}
-$$
+{{< katex display=true >}}
 Z=\frac{\bar{x}-\mu_0}{\sigma/\sqrt{n}}
-$$
+{{< /katex >}}
 {{< /colour >}}
 
-Where $\mu_0$ is the mean claimed by $H_0$.
+Where {{< katex >}}\mu_0{{< /katex >}} is the mean stated in {{< katex >}}H_0{{< /katex >}}.
 
 Decision approaches:
 - critical value method:
-compare $Z$ to $Z_{\alpha/2}$ (two-tailed) or $Z_{\alpha}$ (one-tailed)
+compare {{< katex >}}Z{{< /katex >}} to {{< katex >}}Z_{\alpha/2}{{< /katex >}} (two-tailed) or {{< katex >}}Z_{\alpha}{{< /katex >}} (one-tailed)
 - p-value method:
-compute p-value from the Z table
+compute the p-value from the Z table
 
 ---
 
-## Proportion-based hypothesis tests (z-test idea)
+## 6) Proportion-based tests (one proportion)
 
-Use when:
-- binary outcomes
-- testing a claim about $p$
-
-Test statistic (basic large-sample form):
+Use when outcomes are binary and you test a claim about {{< katex >}}p{{< /katex >}}.
 
 {{< colour "red" >}}
-$$
+{{< katex display=true >}}
 Z=\frac{\hat{p}-p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}}
-$$
+{{< /katex >}}
 {{< /colour >}}
 
-Where $p_0$ is the proportion claimed by $H_0$.
+Where {{< katex >}}p_0{{< /katex >}} is the proportion stated in {{< katex >}}H_0{{< /katex >}}.
 
 ---
 
-## ANOVA
+## 7) ANOVA (single and dual factor)
 
-ANOVA is used when:
-you compare **more than two means** at once.
+ANOVA is used when comparing more than two means.
 
-Instead of doing many pairwise tests (which increases Type I error),
-ANOVA uses an **F statistic**.
+Instead of running many pairwise tests (which inflates Type I error),
+ANOVA uses an {{< katex >}}F{{< /katex >}} statistic.
 
 - Single-factor ANOVA:
-one categorical factor (one “grouping variable”)
+one categorical factor (one grouping variable)
 - Two-factor ANOVA:
-two factors (and possibly interaction effects)
+two factors (and possibly an interaction effect)
 
-High-level idea:
-compare variation **between groups** to variation **within groups**.
-
-{{% hint info %}}
-If “between-group variation” is much larger than “within-group variation”,
-it suggests at least one group mean is different.
-{{% /hint %}}
+Core idea:
+compare variation between groups to variation within groups.
+If between-group variation is much larger, at least one mean is different.
 
 ---
 
-## Maximum likelihood (MLE)
+## 8) Maximum likelihood (MLE)
 
-Maximum likelihood is a method for estimating model parameters.
+Maximum likelihood estimates model parameters by choosing values that make the observed data most probable.
 
-Idea:
-choose the parameter values that make the observed data most probable.
-
-Let the data be $x_1,\dots,x_n$ and the model have parameter $\theta$.
+Let the data be {{< katex >}}x_1,\dots,x_n{{< /katex >}} and parameter {{< katex >}}\theta{{< /katex >}}.
 
 Likelihood:
 
 {{< colour "red" >}}
-$$
+{{< katex display=true >}}
 L(\theta)=\prod_{i=1}^{n} f(x_i\mid \theta)
-$$
+{{< /katex >}}
 {{< /colour >}}
 
-Log-likelihood (often easier):
+Log-likelihood:
 
 {{< colour "red" >}}
-$$
+{{< katex display=true >}}
 \ell(\theta)=\log L(\theta)=\sum_{i=1}^{n} \log f(x_i\mid \theta)
-$$
+{{< /katex >}}
 {{< /colour >}}
 
 MLE:
 
 {{< colour "red" >}}
-$$
+{{< katex display=true >}}
 \hat{\theta}_{\text{MLE}}=\arg\max_{\theta}\; L(\theta)
 =\arg\max_{\theta}\; \ell(\theta)
-$$
+{{< /katex >}}
 {{< /colour >}}
 
-Quick examples you should remember:
+Quick examples:
 - Bernoulli trials:
-MLE for $p$ is $\hat{p}=x/n$
-- Normal with known $\sigma$:
-MLE for $\mu$ is $\bar{x}$
-
-MLE is important in ML because many models are trained by:
-maximising likelihood (or equivalently minimising negative log-likelihood).
+{{< katex >}}\hat{p}=x/n{{< /katex >}}
+- Normal with known {{< katex >}}\sigma{{< /katex >}}:
+{{< katex >}}\hat{\mu}=\bar{x}{{< /katex >}}
 
 ---
 
@@ -545,15 +443,16 @@ maximising likelihood (or equivalently minimising negative log-likelihood).
 
 1) What does “95% confidence” mean in repeated sampling?  
 2) What is the standard error of the mean?  
-3) In hypothesis testing, what does $\alpha$ represent?  
-4) What is the difference between “reject $H_0$” and “fail to reject $H_0$”?
+3) In hypothesis testing, what does {{< katex >}}\alpha{{< /katex >}} represent?  
+4) What is the difference between “reject {{< katex >}}H_0{{< /katex >}}” and “fail to reject {{< katex >}}H_0{{< /katex >}}”?  
+5) Why is ANOVA preferred over multiple pairwise mean tests?
 
-{{% hint success %}}
+Answers:
 1) The method captures the true parameter about 95% of the time over repeated samples.  
-2) $\sigma/\sqrt{n}$ (or with FPC for finite populations).  
+2) {{< katex >}}\sigma/\sqrt{n}{{< /katex >}} (or with finite population correction if needed).  
 3) Probability of Type I error.  
-4) “Fail to reject” is not the same as “accept”; it means the sample evidence is not strong enough.
-{{% /hint %}}
+4) Fail to reject means evidence is not strong enough; it does not mean {{< katex >}}H_0{{< /katex >}} is proven true.  
+5) It controls Type I error inflation when comparing several means.
 
 ---
 
@@ -564,3 +463,5 @@ maximising likelihood (or equivalently minimising negative log-likelihood).
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}
+
+---
