@@ -11,22 +11,24 @@ A decision tree classifies an example by asking a sequence of questions about it
 
 {{% hint info %}}
 Key takeaway:
-A decision tree grows by repeatedly splitting the training data into **purer** subsets using an impurity measure (entropy / Gini / classification error).
+A decision tree grows by repeatedly splitting the training data into **purer** subsets using an impurity measure
+(Entropy / Gini / Classification Error).
 {{% /hint %}}
 
 ---
 
 ## Information Theory
 
-Decision trees use **information theory** ideas to measure how “mixed” a node is.
+Decision trees need a way to measure:
+“How mixed are the class labels at a node?”
 
 ### Impurity (how mixed are the labels?)
 
 A node is:
 - **pure** if all records belong to the same class → impurity = 0
-- **most impure** if classes are evenly split
+- **impure** if records are mixed across classes
 
-### Entropy
+### Entropy (base-2)
 
 Entropy measures impurity/uncertainty in the class distribution at a node.
 
@@ -45,7 +47,7 @@ H(S)= -p_{+}\log_2(p_{+}) - p_{-}\log_2(p_{-})
 {{< /colour >}}
 
 Interpretation:
-- $H(S)=0$ when the node is pure
+- $H(S)=0$ → pure node
 - $H(S)$ is maximum when classes are evenly distributed
 
 ### Information Gain (entropy reduction)
@@ -63,8 +65,30 @@ Where:
 - $S_v$ is the subset where attribute $A$ takes value $v$
 
 Decision rule:
-- pick the attribute with **maximum** information gain
+- choose the attribute with **maximum** information gain
 - equivalently: pick the attribute with **minimum weighted child entropy**
+
+---
+
+### Numerical template (entropy + information gain)
+
+When you see question like:
+“Compute entropy / compute IG / choose the root node”:
+
+1. Count class distribution at the parent node (e.g., Yes/No).
+2. Compute parent entropy $H(S)$ using log base 2.
+3. For each candidate attribute $A$:
+   - split the dataset into subsets $S_v$
+   - compute entropy of each subset $H(S_v)$
+   - compute weighted child entropy: $\sum \frac{|S_v|}{|S|}H(S_v)$
+   - compute gain: $H(S)$ minus weighted child entropy
+4. Pick the attribute with **highest gain** (unless the question asks otherwise).
+
+Exam note (important wording):
+- If the question says “compute entropy only”, pick the split with **minimum entropy**.
+- If the question says “information gain”, pick the split with **maximum gain**.
+
+---
 
 ### Alternative impurity measures
 
@@ -76,7 +100,7 @@ Decision rule:
 {{< /katex >}}
 {{< /colour >}}
 
-Lower Gini = purer node.
+Lower Gini → purer node.
 
 #### Classification Error
 
@@ -91,7 +115,7 @@ classification error is less sensitive than entropy/Gini, so it is often not use
 
 ### Gain Ratio (fixes information gain bias)
 
-Information gain can prefer attributes with many distinct values (e.g. CustomerID).
+Information gain can unfairly prefer attributes with many distinct values (e.g., CustomerID).
 Gain ratio penalises such splits.
 
 Split information:
@@ -128,9 +152,13 @@ At each node:
 
 1) If all records belong to the same class → make it a leaf.
 2) Otherwise:
-   - choose the best attribute test condition (using Gain / Gini gain / etc.)
+   - choose the best attribute test condition (Entropy/IG or Gini)
    - split records into children
    - repeat recursively for each child
+3. Stop when:
+   - all records are learned, or
+   - no more useful splits exist, or
+   - constraints (hyperparameters) say “stop”.
 
 ### ID3 summary (entropy + information gain)
 
