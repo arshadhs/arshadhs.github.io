@@ -7,13 +7,48 @@ weight: 210
 menu: main
 ---
 
-# Conditional Probability (and Independent Events)
-
-### 1.1 Conditional probability
+# Conditional Probability and Independent Events
 
 Conditional probability answers:
-What is the probability of event {{< katex >}}B{{< /katex >}}, given that {{< katex >}}A{{< /katex >}} has occurred?
+“How likely is one event, given that another event has already happened?”
+{{% hint info %}}
+Key takeaway:
+Conditional probability is always
+(joint probability) ÷ (probability of the condition).
+The condition must not be an impossible event.
+{{% /hint %}}
 
+It is the maths behind phrases like:
+- “given that…”
+- “among those who…”
+- “out of the people who…”
+- “if it did not fail immediately…”
+
+---
+
+## Why conditional probability exists
+
+In many real situations:
+
+- You assign probabilities before seeing any extra information.
+- Later, partial information becomes available.
+- You then revise your probability assignment based on that information.
+
+Typical examples:
+- Medical diagnosis:
+the probability of a disease changes after a test result.
+- Quality control:
+the probability that an item is acceptable changes once it passes an initial check.
+- Reliability / systems:
+the probability of failure changes once you know one component has failed or survived.
+---
+## 1.1 Conditional probability
+
+Conditional probability answers:
+What is the probability of event {{< katex >}}B{{< /katex >}}, given that {{< katex >}}A{{< /katex >}} has already occurred?
+
+Notation:
+{{< katex >}}P(B\mid A){{< /katex >}} is read as “B given A” (not “B by A”).
 {{% colour %}}
 {{< katex display=true >}}
 P(B \mid A)=\frac{P(A\cap B)}{P(A)},\quad P(A)>0
@@ -66,6 +101,10 @@ P(A\cap B\cap C)=P(A)\,P(B\mid A)\,P(C\mid A\cap B)
 {{< /katex >}}
 {{% /colour %}}
 
+Rule of thumb:
+every time you add a new event,
+the condition becomes the intersection of all previous events.
+
 This chain form is the backbone of many probability models (including ML sequence models).
 {{% hint warning %}}
 This is the bridge between:
@@ -98,6 +137,26 @@ P(A\mid B)=P(A)
 P(A\cap B)=P(A)\,P(B)
 {{< /katex >}}
 {{% /colour %}}
+
+---
+
+### Do not confuse: mutually exclusive vs independent
+
+Mutually exclusive means they cannot happen together:
+
+{{< colour "red" >}}
+{{< katex display=true >}}
+A\cap B=\varnothing
+{{< /katex >}}
+{{< /colour >}}
+
+So:
+
+{{< colour "red" >}}
+{{< katex display=true >}}
+P(A\cap B)=0
+{{< /katex >}}
+{{< /colour >}}
 
 {{% hint warning %}}
 Common confusion:
