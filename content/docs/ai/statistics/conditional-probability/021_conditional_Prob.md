@@ -7,10 +7,16 @@ weight: 210
 menu: main
 ---
 
-# Conditional Probability and Independent Events
+# Conditional Probability (and Independent Events)
+
+- Prior Probablity: No condition
+- Posterior Probability: Same Event, but now with new knowledge i.e. with Condition
+
+### 1.1 Conditional probability
 
 Conditional probability answers:
-“How likely is one event, given that another event has already happened?”
+What is the probability of event {{< katex >}}B{{< /katex >}}, given that {{< katex >}}A{{< /katex >}} has already occurred?
+
 {{% hint info %}}
 Key takeaway:
 Conditional probability is always
@@ -23,6 +29,24 @@ It is the maths behind phrases like:
 - “among those who…”
 - “out of the people who…”
 - “if it did not fail immediately…”
+
+Notation:
+{{< katex >}}P(B\mid A){{< /katex >}} is read as “B given A” (not “B by A”).
+{{% colour %}}
+{{< katex display=true >}}
+P(B \mid A)=\frac{P(A\cap B)}{P(A)},\quad P(A)>0
+{{< /katex >}}
+{{% /colour %}}
+
+How to think about it:
+Meaning:
+- Numerator: {{< katex >}}P(A\cap B){{< /katex >}} is the probability that both events happen together (**joint probability**).
+- Denominator: Conditioning on {{< katex >}}A{{< /katex >}} means:
+we restrict attention to the outcomes where {{< katex >}}A{{< /katex >}} is true.
+
+**Conditioning “shrinks the universe”**: once {{< katex >}}A{{< /katex >}}is known to have happened, we only count outcomes inside {{< katex >}}A{{< /katex >}}.
+
+Conditioning on {{< katex >}}A{{< /katex >}} means we restrict our attention to outcomes inside {{< katex >}}A{{< /katex >}}.
 
 ---
 
@@ -41,29 +65,6 @@ the probability of a disease changes after a test result.
 the probability that an item is acceptable changes once it passes an initial check.
 - Reliability / systems:
 the probability of failure changes once you know one component has failed or survived.
----
-## 1.1 Conditional probability
-
-Conditional probability answers:
-What is the probability of event {{< katex >}}B{{< /katex >}}, given that {{< katex >}}A{{< /katex >}} has already occurred?
-
-Notation:
-{{< katex >}}P(B\mid A){{< /katex >}} is read as “B given A” (not “B by A”).
-{{% colour %}}
-{{< katex display=true >}}
-P(B \mid A)=\frac{P(A\cap B)}{P(A)},\quad P(A)>0
-{{< /katex >}}
-{{% /colour %}}
-
-How to think about it:
-Meaning:
-- {{< katex >}}P(A\cap B){{< /katex >}} is the probability that both events happen together (joint probability).
-- Conditioning on {{< katex >}}A{{< /katex >}} means:
-we restrict attention to the outcomes where {{< katex >}}A{{< /katex >}} is true.
-
-**Conditioning “shrinks the universe”**: once {{< katex >}}A{{< /katex >}}is known to have happened, we only count outcomes inside {{< katex >}}A{{< /katex >}}.
-
-Conditioning on {{< katex >}}A{{< /katex >}} means we restrict our attention to outcomes inside {{< katex >}}A{{< /katex >}}.
 
 ---
 
