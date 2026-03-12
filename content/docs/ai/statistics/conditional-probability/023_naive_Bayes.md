@@ -1,13 +1,16 @@
 ---
 title: "Naïve Bayes"
+date: 2026-03-12
 draft: false
-tags: ["AI", "Statistics", "Probability"]
+tags: ["AI", "Statistics", "Probability", "Machine Learning"]
 categories: ["AI", "Statistics"]
 weight: 230
 menu: main
 ---
 
 # Naïve Bayes
+
+Naïve Bayes is a **probabilistic classifier**.
 
 - Supervised Learning Problem
 - Binary Classification - final target variable is considered in two classes
@@ -16,209 +19,291 @@ menu: main
 - Post / Posterior is when you start studying data
 - Based on max probability of hypotheses classify given instance into a class
 
-### 3.1 From Bayes to learning (posterior over classes)
-
-In classification, we want:
-class probability given features.
-
-For a class {{< katex >}}Y{{< /katex >}} and observed features {{< katex >}}X{{< /katex >}}:
-
-{{% colour %}}
-{{< katex display=true >}}
-P(Y\mid X)=\frac{P(X\mid Y)\,P(Y)}{P(X)}
-{{< /katex >}}
-{{% /colour %}}
-
-This is a generative viewpoint:
-model {{< katex >}}P(X\mid Y){{< /katex >}} and {{< katex >}}P(Y){{< /katex >}}, then infer {{< katex >}}P(Y\mid X){{< /katex >}}.
-
----
-
-### 3.2 Conditional independence (the “naïve” assumption)
-
-Naïve Bayes assumes:
-features are conditionally independent given the class.
-
-Meaning:
-once you know the class, learning one feature does not change the probability of another feature.
+It predicts a class label by computing:
+- a **prior** for each class
+- **conditional probabilities** of features given the class
+- a **score** for each class (multiply probabilities)
+- the class with the **maximum score** is chosen
 
 {{% hint info %}}
-Why it helps:
-Without the independence assumption, modelling the full joint probability of many features becomes expensive.
-With it, we can multiply simple 1-feature probabilities.
+Key takeaway:
+Naïve Bayes = Bayes + conditional independence.
+
+It works by comparing:
+
+{{< katex >}}P(\text{class}) \times \prod P(\text{feature}\mid \text{class}){{< /katex >}}
 {{% /hint %}}
 
 ---
 
-### 3.3 Naïve Bayes formula (multiple features)
+## 1) The classification setup
 
-For features {{< katex >}}X_1,\dots,X_n{{< /katex >}} and class {{< katex >}}Y{{< /katex >}}:
-
-{{% colour %}}
-{{< katex display=true >}}
-P(Y\mid X_1,\dots,X_n)\propto P(Y)\prod_{i=1}^{n} P(X_i\mid Y)
-{{< /katex >}}
-{{% /colour %}}
-
-We use “proportional to” because {{< katex >}}P(X_1,\dots,X_n){{< /katex >}} is the same for all classes when comparing classes.
-
-Decision rule (MAP classification):
-
-{{% colour %}}
-{{< katex display=true >}}
-\hat{y}=\arg\max_{y} \; P(y)\prod_{i=1}^{n} P(x_i\mid y)
-{{< /katex >}}
-{{% /colour %}}
-
----
-
-### 3.4 How to build a Naïve Bayes classifier from data
-
-Steps (the same workflow used in the session examples):
-1) Collect raw data  
-2) Convert to frequency tables  
-3) Convert counts to probabilities  
-4) Plug into Bayes / Naïve Bayes and compare class scores
-
----
-
-### 3.5 Worked example A (Play Tennis with one feature: Weather)
+We have:
+- feature vector:
+{{< katex >}}X=(X_1,X_2,\dots,X_n){{< /katex >}}
+- class label:
+{{< katex >}}Y \in \{c_1,c_2,\dots,c_K\}{{< /katex >}}
 
 Goal:
-If today is Sunny, predict Play = Yes or No.
+given a new instance {{< katex >}}x{{< /katex >}},
+predict {{< katex >}}\hat{y}{{< /katex >}}.
 
-From the frequency table:
-- {{< katex >}}P(Yes)=9/14{{< /katex >}}, {{< katex >}}P(No)=5/14{{< /katex >}}
-- Weather counts:
-Sunny has 3 Yes and 2 No, so:
-{{< katex >}}P(Sunny\mid Yes)=3/9{{< /katex >}},
-{{< katex >}}P(Sunny\mid No)=2/5{{< /katex >}}
-
-Compute scores:
-
-{{% colour %}}
-{{< katex display=true >}}
-	ext{Score(Yes)}=P(Yes)\,P(Sunny\mid Yes)=\frac{9}{14}\cdot\frac{3}{9}
-{{< /katex >}}
-{{% /colour %}}
-
-{{% colour %}}
-{{< katex display=true >}}
-	ext{Score(No)}=P(No)\,P(Sunny\mid No)=\frac{5}{14}\cdot\frac{2}{5}
-{{< /katex >}}
-{{% /colour %}}
-
-Compare the two scores:
-the larger score gives the predicted class.
-
-{{% hint info %}}
-You do not need to compute the denominator P(Sunny) when comparing classes.
-The denominator is the same for both classes.
-{{% /hint %}}
+Examples:
+- Play = Yes/No given weather
+- Spam / Not spam given words
+- Pass / Fail given attributes
 
 ---
 
-### 3.6 Worked example B (Play Tennis with multiple features)
+## 2) Bayes theorem for a class
 
-Today:
-Outlook = Sunny, Temp = Hot, Humidity = Normal, Windy = False
+For a class {{< katex >}}Y=c_k{{< /katex >}} and observed features {{< katex >}}X=x{{< /katex >}}:
 
-Use:
-- Prior:
-{{< katex >}}P(Yes)=9/14{{< /katex >}}, {{< katex >}}P(No)=5/14{{< /katex >}}
-- Likelihood terms from the tables, e.g.
-{{< katex >}}P(Outlook=Sunny\mid Yes)=3/9{{< /katex >}},
-{{< katex >}}P(Temp=Hot\mid Yes)=2/9{{< /katex >}},
-{{< katex >}}P(Humidity=Normal\mid Yes)=6/9{{< /katex >}},
-{{< katex >}}P(Windy=False\mid Yes)=6/9{{< /katex >}},
-and similarly for No.
-
-Score each class:
-
-{{% colour %}}
+{{< colour "red" >}}
 {{< katex display=true >}}
-	ext{Score(Yes)}=P(Yes)\,P(Sunny\mid Yes)\,P(Hot\mid Yes)\,P(Normal\mid Yes)\,P(False\mid Yes)
+P(Y=c_k\mid X=x)=\frac{P(X=x\mid Y=c_k)\,P(Y=c_k)}{P(X=x)}
 {{< /katex >}}
-{{% /colour %}}
+{{< /colour >}}
 
-{{% colour %}}
-{{< katex display=true >}}
-	ext{Score(No)}=P(No)\,P(Sunny\mid No)\,P(Hot\mid No)\,P(Normal\mid No)\,P(False\mid No)
-{{< /katex >}}
-{{% /colour %}}
-
-Pick the larger score.
-
-{{% hint warning %}}
-Zero-frequency problem:
-If a feature value never appears with a class in your training data, the probability can become zero and the whole product becomes zero.
-In practice, you use smoothing (e.g., Laplace smoothing) to avoid this.
-{{% /hint %}}
+Meaning:
+- {{< katex >}}P(Y=c_k){{< /katex >}}:
+prior probability of class {{< katex >}}c_k{{< /katex >}}
+- {{< katex >}}P(X=x\mid Y=c_k){{< /katex >}}:
+likelihood of observing {{< katex >}}x{{< /katex >}} if the class were {{< katex >}}c_k{{< /katex >}}
+- {{< katex >}}P(Y=c_k\mid X=x){{< /katex >}}:
+posterior (updated probability after seeing the features)
 
 ---
 
-### 3.7 Naïve Bayes pipeline (Mermaid)
+## 3) MAP decision rule (choose the best class)
+
+Since {{< katex >}}P(X=x){{< /katex >}} is the same for all classes,
+we can drop it when comparing classes.
+
+{{< colour "red" >}}
+{{< katex display=true >}}
+\hat{y}=\arg\max_{c_k}\; P(Y=c_k\mid X=x)
+=\arg\max_{c_k}\; P(X=x\mid Y=c_k)\,P(Y=c_k)
+{{< /katex >}}
+{{< /colour >}}
+
+This is a **comparison rule**:
+we only need relative scores.
+
+---
+
+## 4) The “naïve” assumption (conditional independence)
+
+Naïve Bayes assumes:
+features are **conditionally independent** given the class.
+
+{{< colour "red" >}}
+{{< katex display=true >}}
+P(X_1,\dots,X_n\mid Y)=\prod_{i=1}^{n} P(X_i\mid Y)
+{{< /katex >}}
+{{< /colour >}}
+
+Plain meaning:
+once the class is fixed,
+learning one feature does not change the probability of another feature.
+
+---
+
+## 5) The Naïve Bayes scoring formula
+
+Using conditional independence:
+
+{{< colour "red" >}}
+{{< katex display=true >}}
+P(Y=c_k\mid X=x)\propto P(Y=c_k)\prod_{i=1}^{n} P(X_i=x_i\mid Y=c_k)
+{{< /katex >}}
+{{< /colour >}}
+
+So, for each class:
+1) compute the prior {{< katex >}}P(Y=c_k){{< /katex >}}
+2) compute each conditional probability {{< katex >}}P(X_i=x_i\mid Y=c_k){{< /katex >}}
+3) multiply to get a score
+4) choose the maximum score
+
+---
+
+## 6) Pipeline
 
 {{< mermaid >}}
+%%{init: {'theme':'base','themeVariables': {
+  'fontFamily':'Inter, ui-sans-serif, system-ui',
+  'primaryColor':'#EAF7F1',
+  'primaryTextColor':'#1F2937',
+  'primaryBorderColor':'#A7E3C8',
+  'lineColor':'#94A3B8',
+  'tertiaryColor':'#F8FAFC'
+}}}%%
 flowchart TD
-  A[Training data] --> B[Count frequencies per class]
-  B --> C[Convert to probabilities]
-  C --> D[Compute class scores for new X]
-  D --> E{Pick max score}
-  E --> F[Predicted class]
+  A["Training data<br/>features + labels"] --> B["Count frequencies per class"]
+  B --> C["Convert counts to probabilities<br/>priors + conditional probs"]
+  C --> D["Score a new instance x<br/>P(class) × product P(feature|class)"]
+  D --> E{"Pick the max score"}
+  E --> F["Predicted class"]
 {{< /mermaid >}}
 
 ---
 
-## Types of Naïve Bayes Models
+## 7) Worked example A: Play Tennis (multiple features)
 
-Naïve Bayes has a few common variants, mainly depending on the **type of features** you have.
+Feature vector:
 
-### 1) Gaussian Naïve Bayes (for continuous features)
+{{< katex >}}X=(\text{Outlook},\text{Temp},\text{Humidity},\text{Windy}){{< /katex >}}
 
-Gaussian Naïve Bayes is used when your features are **continuous numbers** (e.g., height, temperature, sensor readings).
+Example instance:
+- Outlook = Sunny
+- Temp = Hot
+- Humidity = Normal
+- Windy = False
 
-It assumes that for each class, the feature values follow a **Normal (Gaussian) distribution** — the familiar bell-shaped curve that is symmetric around the mean.
+Compute two class scores (Yes/No):
 
-Typical examples:
-- medical measurements
-- sensor data
-- continuous-valued features in small/medium datasets
+{{< colour "red" >}}
+{{< katex display=true >}}
+\text{Score(Yes)}=
+P(\text{Yes})\,
+P(\text{Sunny}\mid \text{Yes})\,
+P(\text{Hot}\mid \text{Yes})\,
+P(\text{Normal}\mid \text{Yes})\,
+P(\text{False}\mid \text{Yes})
+{{< /katex >}}
+{{< /colour >}}
+
+{{< colour "red" >}}
+{{< katex display=true >}}
+\text{Score(No)}=
+P(\text{No})\,
+P(\text{Sunny}\mid \text{No})\,
+P(\text{Hot}\mid \text{No})\,
+P(\text{Normal}\mid \text{No})\,
+P(\text{False}\mid \text{No})
+{{< /katex >}}
+{{< /colour >}}
+
+Decision:
+- if Score(Yes) > Score(No) → predict Yes
+- otherwise → predict No
+
+{{% hint info %}}
+Tip:
+You do not need to divide by {{< katex >}}P(X){{< /katex >}} to choose the class,
+because it is common to both classes.
+{{% /hint %}}
 
 ---
 
-### 2) Multinomial Naïve Bayes (for counts / frequencies)
+## 8) Worked example B: Binary attributes (Pass/Fail style)
 
-Multinomial Naïve Bayes is used when features represent **counts**, most commonly **word frequencies** in a document.
+Suppose the class is:
+{{< katex >}}Y\in\{\text{Pass},\text{Fail}\}{{< /katex >}}
 
-It works well when “how many times a word appears” matters.
+Attributes:
+- Confident = Yes/No
+- Sick = Yes/No
 
-Typical examples:
-- document classification
-- sentiment analysis using word counts
-- topic classification using term frequency features
+For a new instance:
+Confident = Yes, Sick = No
+
+Compute the score for each class:
+
+{{< colour "red" >}}
+{{< katex display=true >}}
+\text{Score(Pass)}=
+P(\text{Pass})\,
+P(\text{Confident=Yes}\mid \text{Pass})\,
+P(\text{Sick=No}\mid \text{Pass})
+{{< /katex >}}
+{{< /colour >}}
+
+{{< colour "red" >}}
+{{< katex display=true >}}
+\text{Score(Fail)}=
+P(\text{Fail})\,
+P(\text{Confident=Yes}\mid \text{Fail})\,
+P(\text{Sick=No}\mid \text{Fail})
+{{< /katex >}}
+{{< /colour >}}
+
+Pick the larger score.
 
 ---
 
-### 3) Bernoulli Naïve Bayes (for binary features)
+## 9) Practical issue: zero-frequency problem
 
-Bernoulli Naïve Bayes is used when features are **binary** (0/1), meaning they represent **presence or absence**.
+If any conditional probability becomes 0,
+the entire product becomes 0.
 
-For text, it treats each word feature as:
-- 1 if the word appears in the document
-- 0 if the word does not appear
-
-This is useful when “word present vs not present” matters more than how many times it appears.
-
-Typical examples:
-- document classification with binary bag-of-words
-- spam detection based on keyword presence
+{{% hint warning %}}
+Zero-frequency problem:
+A single zero can kill the entire score.
+This is why smoothing is used.
+{{% /hint %}}
 
 ---
+
+## 10) Laplace smoothing
+
+Laplace smoothing adds 1 (or a constant {{< katex >}}k{{< /katex >}}) to every count.
+
+{{< colour "red" >}}
+{{< katex display=true >}}
+P(w\mid c)=\frac{\operatorname{count}(w,c)+k}{\operatorname{count}(c)+k|V|}
+{{< /katex >}}
+{{< /colour >}}
+
+Where:
+- {{< katex >}}|V|{{< /katex >}} is vocabulary size
+- {{< katex >}}k=1{{< /katex >}} is common
+
+---
+
+## 11) Worked example C: text classification with smoothing
+
+Classes:
+- Sports
+- Not sports
+
+Sentence:
+“A very close game”
+
+Words are features:
+{{< katex >}}(\text{a},\text{very},\text{close},\text{game}){{< /katex >}}
+
+Score each class:
+
+{{< colour "red" >}}
+{{< katex display=true >}}
+\text{Score(Sports)}=
+P(\text{Sports})\prod_{w\in\text{sentence}} P(w\mid \text{Sports})
+{{< /katex >}}
+{{< /colour >}}
+
+{{< colour "red" >}}
+{{< katex display=true >}}
+\text{Score(Not sports)}=
+P(\text{Not sports})\prod_{w\in\text{sentence}} P(w\mid \text{Not sports})
+{{< /katex >}}
+{{< /colour >}}
+
+---
+
+## 12) Variants (choose by feature type)
 
 {{< mermaid >}}
+%%{init: {'theme':'base','themeVariables': {
+  'fontFamily':'Inter, ui-sans-serif, system-ui',
+  'primaryColor':'#FFF3E6',
+  'primaryTextColor':'#1F2937',
+  'primaryBorderColor':'#FFD6A5',
+  'lineColor':'#94A3B8',
+  'tertiaryColor':'#F8FAFC'
+}}}%%
 flowchart TD
-  A["Naïve Bayes: choose model by feature type"] --> B["Continuous values"]
+  A["Naïve Bayes: choose by feature type"] --> B["Continuous values"]
   A --> C["Counts / frequencies"]
   A --> D["Binary (0/1)"]
 
@@ -227,63 +312,55 @@ flowchart TD
   D --> D1["Bernoulli NB<br/>presence vs absence"]
 {{< /mermaid >}}
 
----
+### Gaussian Naïve Bayes
 
-## Advantages
+Continuous features.
+Assumes a Normal distribution per class.
 
-- Easy to implement and computationally efficient.
-- Works well when the number of features is large (common in text data).
-- Can perform well even with limited training data.
-- Handles categorical features effectively.
-- For numerical features, Gaussian NB provides a simple and often useful assumption (Normal distribution).
+### Multinomial Naïve Bayes
 
----
+Count features.
+Used for word counts / term frequencies.
 
-## Disadvantages
+### Bernoulli Naïve Bayes
 
-- Assumes features are independent given the class, which is often not strictly true in real data.
-- Can be affected by irrelevant or noisy features.
-- Can assign zero probability to unseen events (unless smoothing is used), which may reduce generalisation.
+Binary features (0/1).
+Used for presence vs absence.
 
 ---
 
-## Applications
+## 13) Advantages, disadvantages, applications
 
-- Spam email filtering:
-classifies emails as spam or not spam.
-- Text classification:
-sentiment analysis, document categorisation, topic classification.
-- Medical diagnosis:
-estimates likelihood of disease given symptoms or test results.
-- Credit scoring:
-supports decisions about loan approval based on applicant features.
-- Weather prediction:
-classifies weather conditions from observed factors.
+Advantages:
+- easy to implement and computationally efficient
+- works well with many features (especially text)
+- performs well even with limited training data
+
+Disadvantages:
+- conditional independence assumption may not be true
+- can be influenced by irrelevant attributes
+- without smoothing, unseen events can cause zero probabilities
+
+Applications:
+- spam email filtering
+- sentiment analysis and document categorisation
+- medical diagnosis support
+- credit scoring
 
 ---
-
 
 ## Mini-check (self-test)
 
-1) If {{< katex >}}P(A)=0.3{{< /katex >}} and {{< katex >}}P(B\mid A)=0.8{{< /katex >}}, find {{< katex >}}P(A\cap B){{< /katex >}}.  
-2) If {{< katex >}}P(B\mid A)=P(B){{< /katex >}}, what does that tell you about A and B?  
-3) In Bayes’ theorem, what usually has the biggest impact when an event is rare?
+1) What does “naïve” mean here?  
+2) Why can we skip dividing by {{< katex >}}P(X){{< /katex >}} when classifying?  
+3) What problem does Laplace smoothing fix?
 
+{{% hint success %}}
 Answers:
-1) Multiply base probability by the conditional probability.
-2) The events are independent.
-3) The prior probability (base rate).
-
----
-
-## Practice prompts
-
-1) Write {{< katex >}}P(A\cap B\cap C\cap D){{< /katex >}} using the multiplication rule.  
-2) If {{< katex >}}P(A)=0.3{{< /katex >}} and {{< katex >}}P(B\mid A)=0.8{{< /katex >}}, find {{< katex >}}P(A\cap B){{< /katex >}}.  
-3) Create a 3-branch total probability tree from your work (e.g., device type, customer segment, failure mode), and compute an overall probability.
-
-Quick answer for 2):
-{{< katex >}}P(A\cap B)=0.3\times 0.8=0.24{{< /katex >}}
+1) Features are assumed conditionally independent given the class.  
+2) {{< katex >}}P(X){{< /katex >}} is common to all classes, so it cancels when comparing.  
+3) Zero-frequency problem (a probability becomes 0).
+{{% /hint %}}
 
 ---
 
@@ -299,7 +376,6 @@ Move from events to random variables and distributions.
 - [Naive Bayes](https://www.geeksforgeeks.org/machine-learning/naive-bayes-classifiers/)
 
 ---
-
 {{< home-link "Home" >}} | {{< section-index >}}
 
 ---

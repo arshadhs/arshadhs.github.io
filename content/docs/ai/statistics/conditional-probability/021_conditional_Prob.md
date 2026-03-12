@@ -1,5 +1,6 @@
 ---
 title: "Conditional Probability"
+date: 2026-03-12
 draft: false
 tags: ["AI", "Statistics", "Probability"]
 categories: ["AI", "Statistics"]
@@ -7,141 +8,141 @@ weight: 210
 menu: main
 ---
 
-# Conditional Probability (and Independent Events)
+# Conditional Probability
 
-- Prior Probablity: No condition
-- Posterior Probability: Same Event, but now with new knowledge i.e. with Condition
+Conditional probability updates the probability of an event when new information is available.
 
-### 1.1 Conditional probability
-
-Conditional probability answers:
-What is the probability of event {{< katex >}}B{{< /katex >}}, given that {{< katex >}}A{{< /katex >}} has already occurred?
+It shows up whenever a question says:
+- “given that…”
+- “among those who…”
+- “out of the items that…”
+- “if it does not fail immediately…”
 
 {{% hint info %}}
 Key takeaway:
-Conditional probability is always
-(joint probability) ÷ (probability of the condition).
+Conditional probability is always:
+
+joint probability ÷ probability of the condition.
+
 The condition must not be an impossible event.
 {{% /hint %}}
 
-It is the maths behind phrases like:
-- “given that…”
-- “among those who…”
-- “out of the people who…”
-- “if it did not fail immediately…”
+---
 
-Notation:
-{{< katex >}}P(B\mid A){{< /katex >}} is read as “B given A” (not “B by A”).
-{{% colour %}}
+## Prior vs posterior
+
+- Prior probability:
+probability with no condition (before new information)
+
+- Posterior probability:
+probability of the same event after new information (with a condition)
+
+---
+
+## 1) Conditioning changes the sample space
+
+Before you condition, your “universe” is the sample space {{< katex >}}S{{< /katex >}}.
+
+After you condition on {{< katex >}}B{{< /katex >}}, your “universe” becomes:
+only the outcomes where {{< katex >}}B{{< /katex >}} is true.
+
+So:
+- {{< katex >}}P(A){{< /katex >}}:
+probability of {{< katex >}}A{{< /katex >}} in the full sample space
+- {{< katex >}}P(A\mid B){{< /katex >}}:
+probability of {{< katex >}}A{{< /katex >}} inside {{< katex >}}B{{< /katex >}}
+
+Conditioning “shrinks the universe”.
+
+---
+
+## 2) Definition of conditional probability
+
+For events {{< katex >}}A{{< /katex >}} and {{< katex >}}B{{< /katex >}}, with {{< katex >}}P(B)>0{{< /katex >}}:
+
+{{< colour "red" >}}
 {{< katex display=true >}}
-P(B \mid A)=\frac{P(A\cap B)}{P(A)},\quad P(A)>0
+P(A\mid B)=\frac{P(A\cap B)}{P(B)}
 {{< /katex >}}
-{{% /colour %}}
+{{< /colour >}}
 
-How to think about it:
 Meaning:
-- Numerator: {{< katex >}}P(A\cap B){{< /katex >}} is the probability that both events happen together (**joint probability**).
-- Denominator: Conditioning on {{< katex >}}A{{< /katex >}} means:
-we restrict attention to the outcomes where {{< katex >}}A{{< /katex >}} is true.
+- Numerator {{< katex >}}P(A\cap B){{< /katex >}}:
+joint probability (“A and B together”)
+- Denominator {{< katex >}}P(B){{< /katex >}}:
+probability of the condition (“B happened”)
 
-**Conditioning “shrinks the universe”**: once {{< katex >}}A{{< /katex >}}is known to have happened, we only count outcomes inside {{< katex >}}A{{< /katex >}}.
-
-Conditioning on {{< katex >}}A{{< /katex >}} means we restrict our attention to outcomes inside {{< katex >}}A{{< /katex >}}.
-
----
-
-## Why conditional probability exists
-
-In many real situations:
-
-- You assign probabilities before seeing any extra information.
-- Later, partial information becomes available.
-- You then revise your probability assignment based on that information.
-
-Typical examples:
-- Medical diagnosis:
-the probability of a disease changes after a test result.
-- Quality control:
-the probability that an item is acceptable changes once it passes an initial check.
-- Reliability / systems:
-the probability of failure changes once you know one component has failed or survived.
+Important:
+you cannot condition on an impossible event.
+If {{< katex >}}P(B)=0{{< /katex >}}, then {{< katex >}}P(A\mid B){{< /katex >}} is not defined.
 
 ---
 
-### 1.2 Multiplication rule (joint probability)
+## 3) Multiplication rule (joint probability)
 
-Start from the definition:
+Start from the definition and rearrange:
 
-{{% colour %}}
-{{< katex display=true >}}
-P(B \mid A)=\frac{P(A\cap B)}{P(A)}
-{{< /katex >}}
-{{% /colour %}}
-
-Rearranging the definition gives the multiplication rule:
-
-{{% colour %}}
-{{< katex display=true >}}
-P(A\cap B)=P(A)\,P(B\mid A)
-{{< /katex >}}
-{{% /colour %}}
-
-Similarly:
-
-{{% colour %}}
+{{< colour "red" >}}
 {{< katex display=true >}}
 P(A\cap B)=P(B)\,P(A\mid B)
 {{< /katex >}}
-{{% /colour %}}
+{{< /colour >}}
 
-For three events (chain form):
+Rearranging the definition gives the multiplication rule:
 
-{{% colour %}}
+{{< colour "red" >}}
+{{< katex display=true >}}
+P(A\cap B)=P(A)\,P(B\mid A)
+{{< /katex >}}
+{{< /colour >}}
+
+This multiplication rule is valid for any two events:
+independent or dependent.
+
+---
+
+## 4) Chain rule for three events
+
+For {{< katex >}}A,B,C{{< /katex >}}:
+
+{{< colour "red" >}}
 {{< katex display=true >}}
 P(A\cap B\cap C)=P(A)\,P(B\mid A)\,P(C\mid A\cap B)
 {{< /katex >}}
-{{% /colour %}}
+{{< /colour >}}
 
 Rule of thumb:
-every time you add a new event,
-the condition becomes the intersection of all previous events.
-
-This chain form is the backbone of many probability models (including ML sequence models).
-{{% hint warning %}}
-This is the bridge between:
-conditional probability and joint probability.
-In ML, this “chain idea” shows up when modelling sequences and joint distributions.
-{{% /hint %}}
+each new event is conditioned on everything that happened before it.
 
 ---
 
-### 1.3 Conditional probability of independent events
+## 5) Independence as a special case
 
-Two events {{< katex >}}A{{< /katex >}} and {{< katex >}}B{{< /katex >}} are independent if knowing one does not change the probability of the other.
+Two events are independent if knowing one does not change the probability of the other.
 
 Equivalent tests:
 
-{{% colour %}}
-{{< katex display=true >}}
-P(B\mid A)=P(B)
-{{< /katex >}}
-{{% /colour %}}
-
-{{% colour %}}
+{{< colour "red" >}}
 {{< katex display=true >}}
 P(A\mid B)=P(A)
 {{< /katex >}}
-{{% /colour %}}
+{{< /colour >}}
 
-{{% colour %}}
+{{< colour "red" >}}
+{{< katex display=true >}}
+P(B\mid A)=P(B)
+{{< /katex >}}
+{{< /colour >}}
+
+{{< colour "red" >}}
 {{< katex display=true >}}
 P(A\cap B)=P(A)\,P(B)
 {{< /katex >}}
-{{% /colour %}}
+{{< /colour >}}
 
 ---
 
-### Do not confuse: mutually exclusive vs independent
+## 6) Do not confuse: mutually exclusive vs independent
 
 Mutually exclusive means they cannot happen together:
 
@@ -160,39 +161,184 @@ P(A\cap B)=0
 {{< /colour >}}
 
 {{% hint warning %}}
-Common confusion:
-Mutually exclusive events cannot be independent unless one of them is impossible (unless one has probability 0).
-If two events cannot happen together, learning one occurred forces the other to be false.
+Mutually exclusive events are almost never independent.
+
+If {{< katex >}}A\cap B=\varnothing{{< /katex >}} and both events are possible,
+then {{< katex >}}P(A)P(B)>0{{< /katex >}} but {{< katex >}}P(A\cap B)=0{{< /katex >}}.
+So they cannot be equal.
 {{% /hint %}}
 
-If {{< katex >}}A\cap B = \varnothing{{< /katex >}}, then {{< katex >}}P(A\cap B)=0{{< /katex >}},
-but {{< katex >}}P(A)P(B){{< /katex >}} is positive if both events can occur.
-
 ---
 
-### 1.4 A quick “independent events” example (engineering style)
-
-If a washer needs service with probability 0.30 and a dryer needs service with probability 0.10, and they are assumed independent, then the probability both need service is found by multiplying the probabilities.  
-
-{{% colour %}}
-{{< katex display=true >}}
-P(	ext{both})=0.30	imes 0.10=0.03
-{{< /katex >}}
-{{% /colour %}}
-
----
-
-### 1.5 When independence fails (why conditional probability matters)
-
-If {{< katex >}}P(B\mid A)
-eq P(B){{< /katex >}}, then A changes B and the events are dependent.
+## 7) Visual guide: what relationship do events have?
 
 {{< mermaid >}}
+%%{init: {'theme':'base','themeVariables': {
+  'fontFamily':'Inter, ui-sans-serif, system-ui',
+  'primaryColor':'#E8F1FF',
+  'primaryTextColor':'#1F2937',
+  'primaryBorderColor':'#A7C7FF',
+  'lineColor':'#94A3B8',
+  'tertiaryColor':'#F8FAFC'
+}}}%%
 flowchart LR
-  A["Know A happened"] --> B{"Does B change?"}
-  B -->|No| C["Independent: use multiplication P(A∩B)=P(A)P(B)"]
-  B -->|Yes| D["Dependent: compute P(B|A) using joint/total probability"]
+  A["Two events A and B"] --> Q{"Can A and B happen together?"}
+  Q -->|No| M["Mutually exclusive<br/>A ∩ B = ∅"]
+  Q -->|Yes| R{"Does knowing A change B?"}
+  R -->|No| I["Independent<br/>P(A ∩ B)=P(A)P(B)"]
+  R -->|Yes| D["Dependent<br/>Use conditional probability"]
 {{< /mermaid >}}
+
+---
+
+## 8) Worked patterns
+
+### Pattern A: “fraction of those who passed first also passed second”
+
+Let:
+- {{< katex >}}A{{< /katex >}}:
+passed exam 1
+- {{< katex >}}B{{< /katex >}}:
+passed exam 2
+
+If you are given {{< katex >}}P(A\cap B){{< /katex >}} and {{< katex >}}P(A){{< /katex >}}:
+
+{{< colour "red" >}}
+{{< katex display=true >}}
+P(B\mid A)=\frac{P(A\cap B)}{P(A)}
+{{< /katex >}}
+{{< /colour >}}
+
+Example values:
+if {{< katex >}}P(A\cap B)=0.35{{< /katex >}} and {{< katex >}}P(A)=0.42{{< /katex >}},
+
+{{< colour "red" >}}
+{{< katex display=true >}}
+P(B\mid A)=\frac{0.35}{0.42}=\frac{35}{42}=\frac{5}{6}
+{{< /katex >}}
+{{< /colour >}}
+
+---
+
+### Pattern B: “given it does not fail immediately”
+
+Conditioning removes some outcomes.
+
+Example structure:
+if “fails immediately” bulbs are excluded by the condition,
+then the sample space becomes only:
+(partially defective + acceptable)
+
+{{< colour "red" >}}
+{{< katex display=true >}}
+P(\text{acceptable}\mid \text{not immediate fail})
+=\frac{\text{acceptable}}{\text{acceptable}+\text{partial}}
+{{< /katex >}}
+{{< /colour >}}
+
+---
+
+### Pattern C: table-based conditional probability (counts)
+
+If you have a two-way table (like Age group vs Default Yes/No),
+then:
+
+- joint count:
+a cell in the table
+- marginal count:
+row total or column total
+
+Example structure:
+
+{{< colour "red" >}}
+{{< katex display=true >}}
+P(\text{No default}\mid \text{Middle-aged})
+=\frac{\text{No default and Middle-aged}}{\text{Middle-aged total}}
+{{< /katex >}}
+{{< /colour >}}
+
+Reverse conditioning changes the denominator:
+
+{{< colour "red" >}}
+{{< katex display=true >}}
+P(\text{Middle-aged}\mid \text{No default})
+=\frac{\text{No default and Middle-aged}}{\text{No default total}}
+{{< /katex >}}
+{{< /colour >}}
+
+---
+
+## 9) Common traps
+
+### Trap 1: mixing up “A given B” and “B given A”
+
+They are usually different.
+
+{{< colour "red" >}}
+{{< katex display=true >}}
+P(A\mid B)=\frac{P(A\cap B)}{P(B)}
+\qquad
+P(B\mid A)=\frac{P(A\cap B)}{P(A)}
+{{< /katex >}}
+{{< /colour >}}
+
+Same joint probability:
+different denominators.
+
+---
+
+### Trap 2: adding conditional probabilities
+
+In general:
+{{< katex >}}P(C\mid B)+P(C\mid B^c){{< /katex >}}
+is not equal to 1.
+
+What is true is the weighted version:
+
+{{< colour "red" >}}
+{{< katex display=true >}}
+P(C)=P(C\mid B)P(B)+P(C\mid B^c)P(B^c)
+{{< /katex >}}
+{{< /colour >}}
+
+---
+
+### Trap 3: complements of independent events
+
+If {{< katex >}}A{{< /katex >}} and {{< katex >}}B{{< /katex >}} are independent, then complements remain independent:
+{{< katex >}}A^c{{< /katex >}} and {{< katex >}}B{{< /katex >}} are also independent.
+
+A quick check form:
+
+{{< colour "red" >}}
+{{< katex display=true >}}
+P(B\mid A)=P(B)\ \Rightarrow\ P(B\mid A^c)=P(B)
+{{< /katex >}}
+{{< /colour >}}
+
+---
+
+## Mini-check (self-test)
+
+1) What must be true for {{< katex >}}P(A\mid B){{< /katex >}} to be defined?  
+2) Rewrite {{< katex >}}P(A\cap B){{< /katex >}} using conditional probability.  
+3) If {{< katex >}}A{{< /katex >}} and {{< katex >}}B{{< /katex >}} are independent, what is {{< katex >}}P(A\mid B){{< /katex >}}?  
+4) If {{< katex >}}A{{< /katex >}} and {{< katex >}}B{{< /katex >}} are mutually exclusive and both possible, are they independent?
+
+{{% hint success %}}
+Answers:
+1) {{< katex >}}P(B)>0{{< /katex >}}  
+2) {{< katex >}}P(A\cap B)=P(B)P(A\mid B){{< /katex >}}  
+3) {{< katex >}}P(A\mid B)=P(A){{< /katex >}}  
+4) No
+{{% /hint %}}
+
+---
+
+## What’s next
+
+Total probability and Bayes’ theorem
+This is where you combine conditional probability with a partition of the sample space and “reverse” the conditioning.
 
 ---
 
