@@ -4,7 +4,7 @@ date: 2026-02-25
 draft: false
 tags: ["AI", "Statistics", "Probability", "Revision"]
 categories: ["AI", "Statistics"]
-weight: 999
+weight: 020
 ---
 
 # Stats Formula Sheet
