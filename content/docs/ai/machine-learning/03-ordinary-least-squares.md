@@ -296,8 +296,9 @@ Ordinary Least Squares is:
 
 ## References
 
-- {{< relref "03-linear-models-regression.md" >}}
-- {{< relref "03-cost-function.md" >}}
+- [My Notes: Cost Function]({{% relref "03-cost-function.md" %}})
+- [My Notes: Linear Models]({{% relref "03-linear-models-regression.md" %}})
+- [My Notes: Gradient Descent]({{% relref "03-gradient-descent-linear-regression.md" %}})
 
 ---
 
