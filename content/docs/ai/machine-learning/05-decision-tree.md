@@ -264,10 +264,10 @@ Given a continuous attribute $A$, create a binary attribute $A_c$:
 
 {{< colour "blue" >}}
 {{< katex display=true >}}
-A_c=
+A_c =
 \begin{cases}
-\text{True} & A<c\\
-\text{False} & A\ge c
+\text{True} & A < c \\\\
+\text{False} & A \ge c
 \end{cases}
 {{< /katex >}}
 {{< /colour >}}
