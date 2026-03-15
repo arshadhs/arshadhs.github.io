@@ -1,5 +1,5 @@
 ---
-title: "Direct Solution - Ordinary Least Squares"
+title: "Ordinary Least Squares"
 date: 2026-02-21
 draft: false
 weight: 320

@@ -1,5 +1,5 @@
 ---
-title: "Support Vector Machine (SVM)"
+title: "Support Vector Machine"
 draft: false
 tags: ["AI", "ML", "SVM", "Classification"]
 categories: ["AI", "ML"]

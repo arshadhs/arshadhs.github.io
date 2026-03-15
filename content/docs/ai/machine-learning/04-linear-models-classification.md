@@ -1,5 +1,5 @@
 ---
-title: 'Linear models for classification'
+title: 'Classification (Linear Models)'
 draft: false
 tags: ["AI", "ML"]
 categories: ["AI", "ML"]

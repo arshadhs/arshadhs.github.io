@@ -1,5 +1,5 @@
 ---
-title: 'ML Model Evaluation/Comparison'
+title: 'Evaluation/Comparison'
 draft: false
 tags: ["AI", "ML"]
 categories: ["AI", "ML"]

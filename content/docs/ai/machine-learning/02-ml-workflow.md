@@ -1,5 +1,5 @@
 ---
-title: 'Machine learning Workflow'
+title: 'ML Workflow'
 draft: false
 tags: ["AI", "ML"]
 categories: ["AI", "ML"]
@@ -64,7 +64,6 @@ Raw data is never ready for training.
     - Use when the upper/lower bounds are known, such as in image processing or neural networks
   - **Z-Score Normalization** (Standardization)
     - Transforms data to have a mean of 0 and a standard deviation of 1
-    - The resulting dataset has a mean () of 0 and a standard deviation () of 1
     - Use when your data follows a normal distribution or contains significant **outliers**, as it is **more robust to extreme values**
 
 additional notes to augment above:
