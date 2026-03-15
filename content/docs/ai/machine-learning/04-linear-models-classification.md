@@ -1,5 +1,5 @@
 ---
-title: 'Classification (Linear Models)'
+title: 'Classification(Linear Models)'
 draft: false
 tags: ["AI", "ML"]
 categories: ["AI", "ML"]
@@ -7,6 +7,29 @@ weight: 400
 ---
 # Linear models for Classification
  
+- categorises data by finding a linear boundary (hyperplane) that separates classes
+- calculating a weighted sum of input features plus bias
+ 
+ {{< mermaid >}}
+flowchart TD
+T["Linear<br/>classification<br/>models"] --> P["Perceptron"]
+T --> LR["Logistic<br/>regression"]
+T --> SVM["Linear<br/>SVM"]
+
+P -->|uses| STEP["Step<br/>activation"]
+LR -->|uses| SIG["Sigmoid<br/>+ log loss"]
+SVM -->|uses| HNG["Hinge<br/>loss"]
+
+style T fill:#90CAF9,stroke:#1E88E5,color:#000
+
+style P fill:#C8E6C9,stroke:#2E7D32,color:#000
+style LR fill:#C8E6C9,stroke:#2E7D32,color:#000
+style SVM fill:#C8E6C9,stroke:#2E7D32,color:#000
+
+style STEP fill:#CE93D8,stroke:#8E24AA,color:#000
+style SIG fill:#CE93D8,stroke:#8E24AA,color:#000
+style HNG fill:#CE93D8,stroke:#8E24AA,color:#000
+{{< /mermaid >}}
 
 ## Discriminant Functions 
 

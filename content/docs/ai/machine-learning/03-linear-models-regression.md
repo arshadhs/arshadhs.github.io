@@ -1,5 +1,5 @@
 ---
-title: 'Regression (Linear Models)'
+title: 'Regression(Linear Models)'
 draft: false
 tags: ["AI", "ML"]
 categories: ["AI", "ML"]
@@ -19,6 +19,41 @@ Linear Regression learns parameters by minimising a squared-error cost.
 You can solve it directly (closed form) or iteratively (gradient descent),
 and you can extend it using basis functions and regularisation.
 {{% /hint %}}
+
+{{< mermaid >}}
+flowchart TD
+T["Linear<br/>regression<br/>models"] --> SL["Simple<br/>linear"]
+T --> ML["Multiple<br/>linear"]
+T --> PR["Polynomial<br/>(linear in params)"]
+T --> R["Ridge<br/>(L2)"]
+T --> L["Lasso<br/>(L1)"]
+T --> EN["Elastic<br/>Net"]
+
+SL -->|1 feature| X1["One<br/>predictor"]
+ML -->|many features| XM["Multiple<br/>predictors"]
+PR -->|feature mapping| PHI["Basis<br/>functions"]
+
+R -->|shrinks| W2["Weights"]
+L -->|selects| SP["Sparse<br/>weights"]
+EN -->|mixes| MIX["L1 + L2"]
+
+style T fill:#90CAF9,stroke:#1E88E5,color:#000
+
+style SL fill:#C8E6C9,stroke:#2E7D32,color:#000
+style ML fill:#C8E6C9,stroke:#2E7D32,color:#000
+style PR fill:#C8E6C9,stroke:#2E7D32,color:#000
+style R fill:#C8E6C9,stroke:#2E7D32,color:#000
+style L fill:#C8E6C9,stroke:#2E7D32,color:#000
+style EN fill:#C8E6C9,stroke:#2E7D32,color:#000
+
+style X1 fill:#CE93D8,stroke:#8E24AA,color:#000
+style XM fill:#CE93D8,stroke:#8E24AA,color:#000
+style PHI fill:#CE93D8,stroke:#8E24AA,color:#000
+style W2 fill:#CE93D8,stroke:#8E24AA,color:#000
+style SP fill:#CE93D8,stroke:#8E24AA,color:#000
+style MIX fill:#CE93D8,stroke:#8E24AA,color:#000
+{{< /mermaid >}}
+
 
 ---
 
