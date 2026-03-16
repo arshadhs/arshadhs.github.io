@@ -26,16 +26,6 @@ stateDiagram-v2
     ML --> SL:::category
     SL: Supervised Learning
 
-    SL --> Classification
-    Classification --> NB:::probability
-    NB: Naive Bayes
-
-    NB --> KNN:::geometry
-    KNN: k-Nearest Neighbours
-
-    KNN --> SVM:::algebra
-    SVM: Support Vector Machine
-
     SL --> Regression
     Regression --> LR:::algebra
     LR: Linear Regression
@@ -46,6 +36,16 @@ stateDiagram-v2
     NN --> DT:::logic
     DT: Decision Tree
 
+    SL --> Classification
+    Classification --> NB:::probability
+    NB: Naive Bayes
+
+    NB --> KNN:::geometry
+    KNN: k-Nearest Neighbours
+
+    KNN --> SVM:::algebra
+    SVM: Support Vector Machine
+    
     %% ===== UNSUPERVISED =====
     ML --> USL:::category
     USL: Unsupervised Learning
