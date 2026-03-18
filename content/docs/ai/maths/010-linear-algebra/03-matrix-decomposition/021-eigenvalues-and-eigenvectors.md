@@ -240,9 +240,6 @@ From course discussion:
 - Lecture slides  
 - Webinar problem discussions  
 
-- [My Notes: Linear Systems]({{% relref "linear-systems.md" %}})
-- [My Notes: Vector Spaces]({{% relref "vector-spaces.md" %}})
-
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}
