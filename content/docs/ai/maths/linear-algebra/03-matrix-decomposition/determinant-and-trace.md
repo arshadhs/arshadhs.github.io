@@ -11,11 +11,11 @@ weight: 1310
 
 # Minor
 
-The **minor** of an element \(a_{ij}\) is the determinant of the smaller square matrix formed by:
-- removing **row \(i\)**
-- removing **column \(j\)**
+The **minor** of an element {{< katex >}}a_{ij}{{< /katex >}} is the determinant of the smaller square matrix formed by:
+- removing **row** {{< katex >}}i{{< /katex >}}
+- removing **column** {{< katex >}}j{{< /katex >}}
 
-The minor is denoted \(M_{ij}\).
+The minor is denoted {{< katex >}}M_{ij}{{< /katex >}}.
 
 {{% hint info %}}
 Minors are used to compute **cofactors**, which are used for determinants and inverses (via adjoint/adjugate).
@@ -25,20 +25,20 @@ Minors are used to compute **cofactors**, which are used for determinants and in
 
 # Cofactor
 
-The **cofactor** of \(a_{ij}\), denoted \(C_{ij}\), is:
+The **cofactor** of {{< katex >}}a_{ij}{{< /katex >}}, denoted {{< katex >}}C_{ij}{{< /katex >}}, is:
 
 {{< katex display=true >}}
 C_{ij} = (-1)^{i+j} M_{ij}
 {{< /katex >}}
 
 Where:
-- \(i\) is the row index
-- \(j\) is the column index
-- \(M_{ij}\) is the minor
+- {{< katex >}}i{{< /katex >}} is the row index
+- {{< katex >}}j{{< /katex >}} is the column index
+- {{< katex >}}M_{ij}{{< /katex >}} is the minor
 
 ## Why the sign term exists
 
-The factor \( (-1)^{i+j} \) accounts for alternating signs depending on position in the matrix.
+The factor {{< katex >}}(-1)^{i+j}{{< /katex >}} accounts for alternating signs depending on position in the matrix.
 
 ---
 
@@ -54,10 +54,11 @@ The **cofactor matrix** is the matrix formed by taking the cofactor of every ent
 
 The **determinant** is a **scalar value** that can be calculated for a **square matrix** (m x m).
 
-The determinant of a square matrix,  \( det(A) \), is a function that maps matrices to real scalars. The determinant is equal to the product of all the eigenvalues of the matrix.
+The determinant of a square matrix, {{< katex >}}\det(A){{< /katex >}}, maps matrices to real scalars. It is equal to the product of all the eigenvalues of the matrix.
 
 It is written as:
-- \( det(A) \) or \( |A| \)
+- {{< katex >}}\det(A){{< /katex >}}
+- {{< katex >}}|A|{{< /katex >}}
 
 
 - It serves as a scaling factor that is used for the transformation of a matrix.
@@ -75,7 +76,7 @@ It is written as:
 
 ### 1×1 matrix
 
-If \(X = [a]\), then:
+If {{< katex >}}X = [a]{{< /katex >}}, then:
 
 {{< katex display=true >}}
 \det(X) = a
@@ -106,25 +107,28 @@ c & d
 A 3×3 determinant is computed by expanding into **2×2 determinants**.
 
 This can be done by expanding along:
-- any row (\(R_1, R_2, R_3\))
-- or any column (\(C_1, C_2, C_3\))
+- any row ({{< katex >}}R_1, R_2, R_3{{< /katex >}})
+- or any column ({{< katex >}}C_1, C_2, C_3{{< /katex >}})
 
 ---
 
 ## Adjoint / Adjugate
 
-The **adjoint** (more precisely, **adjugate**) of \(A\) is:
+The **adjoint** (more precisely, **adjugate**) of {{< katex >}}A{{< /katex >}} is:
 
 {{< katex display=true >}}
 \operatorname{adj}(A) = C^T
 {{< /katex >}}
 
 Where:
-- \(C\) is the cofactor matrix
-- \(C^T\) is its transpose
+- {{< katex >}}C{{< /katex >}} is the cofactor matrix
+- {{< katex >}}C^T{{< /katex >}} is its transpose
 
-- Used in the classical formula for the inverse:
-  - \(A^{-1} = \frac{1}{\det(A)}\operatorname{adj}(A)\) (when \(\det(A)\neq 0\))
+Used in the classical formula for the inverse:
+{{< katex display=true >}}
+A^{-1} = \frac{1}{\det(A)}\operatorname{adj}(A)
+\quad \text{when } \det(A)\neq 0
+{{< /katex >}}
 
 ---
 
@@ -140,7 +144,8 @@ Where:
   - a zero row/column, or
   - two identical rows/columns, or
   - two proportional rows/columns  
-  then \( \det(A)=0 \)
+
+  then {{< katex >}}\det(A)=0{{< /katex >}}
 
 - **Row/column swap**
   Swapping two rows/columns changes the sign:
@@ -149,7 +154,7 @@ Where:
   {{< /katex >}}
 
 - **Scalar multiple**
-  Multiplying one row/column by \(k\) multiplies the determinant by \(k\)
+  Multiplying one row/column by {{< katex >}}k{{< /katex >}} multiplies the determinant by {{< katex >}}k{{< /katex >}}.
 
 - **Row operation invariance**
   Adding a multiple of one row/column to another does not change the determinant:
@@ -168,13 +173,13 @@ Where:
   {{< /katex >}}
 
 - **Triangular matrices**
-  For upper/lower triangular matrices, determinant equals the product of diagonal entries
+  For upper/lower triangular matrices, the determinant equals the product of diagonal entries.
 
 ---
 
 ## Trace
 
-The **trace** of an \( n \times n \) square matrix \( A \) is defined as the **sum of its diagonal elements**.
+The **trace** of an {{< katex >}}n \times n{{< /katex >}} square matrix {{< katex >}}A{{< /katex >}} is defined as the **sum of its diagonal elements**.
 
 {{% hint danger %}}
 {{< katex display=true >}}
@@ -212,7 +217,7 @@ a_{21} & a_{22}
 
 # Properties of the Trace
 
-Let \( A, B \in \mathbb{R}^{n \times n} \) and \( \alpha \in \mathbb{R} \).
+Let {{< katex >}}A, B \in \mathbb{R}^{n \times n}{{< /katex >}} and {{< katex >}}\alpha \in \mathbb{R}{{< /katex >}}.
 
 ---
 
@@ -244,15 +249,15 @@ Let \( A, B \in \mathbb{R}^{n \times n} \) and \( \alpha \in \mathbb{R} \).
 {{< /katex >}}
 {{% /hint %}}
 
-Because the identity matrix has \( n \) ones on the diagonal.
+Because the identity matrix has {{< katex >}}n{{< /katex >}} ones on the diagonal.
 
 ---
 
 ### 4. Cyclic Property (Very Important ⭐)
 
 If  
-\( A \in \mathbb{R}^{n \times k} \) and  
-\( B \in \mathbb{R}^{k \times n} \), then:
+{{< katex >}}A \in \mathbb{R}^{n \times k}{{< /katex >}} and  
+{{< katex >}}B \in \mathbb{R}^{k \times n}{{< /katex >}}, then:
 
 {{% hint danger %}}
 {{< katex display=true >}}
@@ -261,7 +266,7 @@ If
 {{% /hint %}}
 
 {{% hint info %}}
-This does **not** mean \( AB = BA \).  
+This does **not** mean {{< katex >}}AB = BA{{< /katex >}}.  
 It only means their traces are equal.
 {{% /hint %}}
 
@@ -274,7 +279,7 @@ This property is extremely important in:
 
 ## Important Identity
 
-If \( A \) has eigenvalues \( \lambda_1, \lambda_2, \dots, \lambda_n \), then:
+If {{< katex >}}A{{< /katex >}} has eigenvalues {{< katex >}}\lambda_1, \lambda_2, \dots, \lambda_n{{< /katex >}}, then:
 
 {{% hint danger %}}
 {{< katex display=true >}}
