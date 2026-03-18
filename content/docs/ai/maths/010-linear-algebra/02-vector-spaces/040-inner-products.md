@@ -125,11 +125,12 @@ See: [Cauchy–Schwarz Inequality](/maths/linear-algebra/02-vector-spaces/analyt
 The dot product appears in:
 
 - Linear regression  
-  {{% hint danger %}}
-  {{< katex display=true >}}
-  \hat{y} = \mathbf{w}\cdot\mathbf{x} + b
-  {{< /katex >}}
-  {{% /hint %}}
+
+{{% hint danger %}}
+{{< katex display=true >}}
+\hat{y} = \mathbf{w}\cdot\mathbf{x} + b
+{{< /katex >}}
+{{% /hint %}}
 
 - Neural networks  
 - SVM linear kernel  
