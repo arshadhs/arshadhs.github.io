@@ -3,7 +3,7 @@ title: "Inner Products and Dot Product"
 draft: false
 tags: ["Machine Learning", "Mathematics", "Linear Algebra"]
 categories: ["AI", "ML"]
-weight: 1225
+weight: 40
 ---
 
 # Inner Products and Dot Product

@@ -1,7 +1,7 @@
 ---
 title: "Orthonormal Basis"
 draft: false
-weight: 27
+weight: 70
 tags: ["Linear Algebra", "Vector Spaces"]
 ---
 # Orthonormal Basis

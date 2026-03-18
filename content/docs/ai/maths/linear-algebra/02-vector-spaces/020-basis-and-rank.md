@@ -1,7 +1,7 @@
 ---
 title: "Basis and Rank"
 draft: false
-weight: 22
+weight: 20
 tags: ["Linear Algebra", "Vector Spaces"]
 ---
 

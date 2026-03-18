@@ -1,7 +1,7 @@
 ---
 title: "Lengths and Distances"
 draft: false
-weight: 25
+weight: 50
 tags: ["Linear Algebra", "Vector Spaces"]
 ---
 # Lengths and Distances

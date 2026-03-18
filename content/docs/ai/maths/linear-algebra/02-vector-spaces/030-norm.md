@@ -1,7 +1,7 @@
 ---
 title: "Norm"
 draft: false
-weight: 23
+weight: 30
 tags: ["Linear Algebra", "Vector Spaces"]
 ---
 

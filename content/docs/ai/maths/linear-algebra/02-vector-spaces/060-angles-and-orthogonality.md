@@ -3,7 +3,7 @@ title: "Angles and Orthogonality"
 draft: false
 tags: ["Linear Algebra", "Vector Spaces"]
 categories: ["AI", "ML"]
-weight: 1226
+weight: 60
 ---
 
 # Angles and Orthogonality
