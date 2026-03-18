@@ -19,21 +19,6 @@ Widely used due to its **accuracy and efficiency**.
 Produces **highly accurate results** when trained on good-quality labelled data.  
 
 ---
-{{< mermaid >}}
-mindmap
-  root(Supervised Learning)
-      Regression
-        Linear Regression
-        Multiple Linear Regression
-        Polynomial Regression
-        Logistic Regression
-      Classification
-        Binary Classification
-        Multi Class Classification
-        Multi Label Classification
-{{< /mermaid >}}
-
----
 
 ## Classification
 
@@ -60,6 +45,22 @@ Predicts **numeric outcomes** rather than categories.
 - **Multiple Linear Regression** – Multiple features predict one output.  
 - **Polynomial Regression** – Curved relationships.  
 - **Logistic Regression** – Used for classification (predicting probabilities).  
+
+---
+
+{{< mermaid >}}
+mindmap
+  root(Supervised Learning)
+      Regression
+        Linear Regression
+        Multiple Linear Regression
+        Polynomial Regression
+        Logistic Regression
+      Classification
+        Binary Classification
+        Multi Class Classification
+        Multi Label Classification
+{{< /mermaid >}}
 
 ---
 
