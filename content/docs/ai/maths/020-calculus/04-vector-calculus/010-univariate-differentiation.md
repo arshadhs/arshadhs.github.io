@@ -3,7 +3,7 @@ title: "Differentiation of Univariate Functions"
 draft: false
 tags: ["Machine Learning", "Mathematics", "Vector Calculus"]
 categories: ["AI", "ML"]
-weight: 1410
+weight: 010
 ---
 # Differentiation of Univariate Functions
 

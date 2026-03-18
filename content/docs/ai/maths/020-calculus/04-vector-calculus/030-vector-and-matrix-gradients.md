@@ -3,7 +3,7 @@ title: "Gradients of Vector-Valued and Matrix Functions"
 draft: false
 tags: ["Machine Learning", "Mathematics", "Vector Calculus"]
 categories: ["AI", "ML"]
-weight: 1430
+weight: 030
 ---
 # Gradients of Vector-Valued and Matrix Functions
 

@@ -3,7 +3,7 @@ title: "Useful Gradient Identities"
 draft: false
 tags: ["Machine Learning", "Mathematics", "Vector Calculus"]
 categories: ["AI", "ML"]
-weight: 1440
+weight: 040
 ---
 
 # Useful Gradient Identities

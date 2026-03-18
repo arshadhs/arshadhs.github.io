@@ -3,7 +3,7 @@ title: "Backpropagation and Automatic Differentiation"
 draft: false
 tags: ["Machine Learning", "Mathematics", "Vector Calculus"]
 categories: ["AI", "ML"]
-weight: 1450
+weight: 060
 ---
 # Backpropagation and Automatic Differentiation
 
