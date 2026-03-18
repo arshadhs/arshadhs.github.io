@@ -199,9 +199,8 @@ From lectures:
 - Lecture slides  
 - Webinar problems  
 
-- [My Notes: Eigenvalues]({{% relref "eigenvalues.md" %}})
-- [My Notes: Rank and Null Space]({{% relref "rank-nullspace.md" %}})
-
+- [My Notes: Eigenvalues]({{% relref "020-eigenvalues-and-eigenvectors.md" %}})
+- [My Notes: Rank and Null Space]({{% relref "020-basis-and-rank.md" %}})
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}
