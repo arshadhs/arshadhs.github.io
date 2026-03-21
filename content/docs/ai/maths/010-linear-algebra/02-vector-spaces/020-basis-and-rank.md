@@ -270,8 +270,8 @@ From lectures:
 - Webinar explanations on rank and solutions  
 - Course handout  
 
-- [My Notes: Linear Independence]({{% relref "linear-independence.md" %}})
-- [My Notes: Eigenvalues]({{% relref "eigenvalues.md" %}})
+- [My Notes: Linear Independence]({{% relref "010-linear-independence.md" %}})
+- [My Notes: Eigenvalues]({{% relref "020-eigenvalues-and-eigenvectors.md" %}})
 
 ---
 

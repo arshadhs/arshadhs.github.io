@@ -129,4 +129,10 @@ Dependent.
 - Lecture slides  
 - Course handout  
 {{< home-link "Home" >}} | {{< section-index >}}
+
 ---
+
+{{< home-link "Home" >}} | {{< section-index >}}
+
+---
+
