@@ -23,6 +23,7 @@ Independence means each vector adds **new information**.
 - Detects redundancy
 - Connects to rank and basis
 
+If one vector can already be formed using others, it does not add anything new.  
 {{% hint info %}}
 Key Idea:
 Linear independence tells us whether vectors carry unique information or are redundant.
@@ -38,6 +39,10 @@ Vectors represent directions in space.
 If a vector lies in the span of others, it adds no new direction.
 
 Independent vectors create new dimensions.
+From lecture explanation:
+- Think of vectors as “features”  
+- Independent vectors → new feature  
+- Dependent vectors → repeated feature  
 
 ---
 
@@ -55,6 +60,9 @@ c_1 = c_2 = \cdots = c_k = 0
 {{< /katex >}}
 {{< /colour >}}
 
+This means:
+- only trivial solution exists  
+- no vector depends on others  
 ---
 
 # Linear Dependence
@@ -64,6 +72,13 @@ c_1 = c_2 = \cdots = c_k = 0
 \exists \; c_i \neq 0 \text{ such that } \sum c_i v_i = 0
 {{< /katex >}}
 {{< /colour >}}
+In lectures, this was linked to solving:
+
+{{< katex display=true >}}
+A x = 0
+{{< /katex >}}
+
+If non-trivial solution exists → dependent  
 
 ---
 
@@ -76,6 +91,10 @@ A = [v_1 \; v_2 \; \cdots \; v_k]
 {{< /colour >}}
 
 Columns independent ⇔ full rank.  
+
+From lecture:
+- pivot columns → independent  
+- non-pivot columns → dependent  
 
 ---
 
@@ -93,6 +112,9 @@ Columns independent ⇔ full rank.
 {{< /katex >}}
 {{< /colour >}}
 
+Lecture insight:
+Rank tells how many “useful” columns exist.  
+Anything beyond rank is redundant.  
 ---
 
 ## Dimension Relationship (VERY IMPORTANT)
@@ -109,6 +131,11 @@ k > n \Rightarrow \text{always dependent}
 {{< /katex >}}
 {{< /colour >}}
 
+Lecture intuition:
+Space has limited directions.  
+Extra vectors must reuse existing ones.  
+
+---
 ### Case 2
 
 {{< colour "yellow" >}}
@@ -117,6 +144,12 @@ k = n \Rightarrow \text{check independence}
 {{< /katex >}}
 {{< /colour >}}
 
+Check using:
+- determinant  
+- rank  
+
+---
+
 ### Case 3
 
 {{< colour "yellow" >}}
@@ -124,6 +157,9 @@ k = n \Rightarrow \text{check independence}
 k < n \Rightarrow \text{can be independent}
 {{< /katex >}}
 {{< /colour >}}
+
+But still check:
+- vectors might lie in same direction  
 
 ---
 
@@ -137,6 +173,10 @@ A --> D[3 Vectors]
 D --> E[Dependent]
 {{< /mermaid >}}
 
+Interpretation:
+- 2 vectors → enough for plane  
+- extra vector → redundant  
+
 ---
 
 ## Examples
@@ -149,13 +189,19 @@ D --> E[Dependent]
 {{< /katex >}}
 {{< /colour >}}
 
+Second vector is multiple → no new direction  
+
+---
+
 ### Independent
 
-{{< colour "yellow" >}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 (1,0), (0,1)
 {{< /katex >}}
 {{< /colour >}}
+
+Both directions unique  
 
 ---
 
