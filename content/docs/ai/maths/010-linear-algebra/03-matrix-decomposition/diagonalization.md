@@ -284,9 +284,6 @@ From lectures:
 - Course handout  
 - Webinar discussions  
 
-- [My Notes: Eigenvalues]({{% relref "eigenvalues.md" %}})
-- [My Notes: SVD]({{% relref "svd.md" %}})
-
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}
