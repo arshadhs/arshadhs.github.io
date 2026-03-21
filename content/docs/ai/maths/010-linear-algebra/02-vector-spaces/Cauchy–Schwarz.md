@@ -10,99 +10,208 @@ weight: 1228
 
 The **Cauchy–Schwarz Inequality** is one of the most important results in linear algebra.
 
-It places a fundamental bound on the dot product of two vectors.
+It places a fundamental bound on the inner product of two vectors.
 
-{{% hint warning %}}
+{{% hint info %}}
 If you see **angle**, **cosine**, **similarity**, or **inner product bounds**  
 → think **Cauchy–Schwarz Inequality**
+
+Key Idea:
+The inner product (dot product) can never exceed the product of magnitudes.
+This ensures all geometric interpretations (angles, cosine) are valid.
 {{% /hint %}}
 
 ---
 
 ## Statement of the Inequality
 
-For any vectors  
-{{< katex >}}\mathbf{a}, \mathbf{b} \in \mathbb{R}^n{{< /katex >}}:
+For any vectors:
 
-{{% hint danger %}}
+{{< katex display=true >}}
+\mathbf{a}, \mathbf{b} \in \mathbb{R}^n
+{{< /katex >}}
+
+{{< colour "yellow" >}}
 {{< katex display=true >}}
 |\mathbf{a}\cdot\mathbf{b}|
-\;\le\;
+\le
 \|\mathbf{a}\|\,\|\mathbf{b}\|
 {{< /katex >}}
-{{% /hint %}}
-
-This is one of the most important inequalities in linear algebra.
-
-It guarantees that:
-
-{{% hint info %}}
-The cosine formula for angles is always valid.
-{{% /hint %}}
-
----
-
-## Equality Condition
-
-Equality holds **if and only if** the vectors are **linearly dependent**, i.e.:
-
-{{% hint info %}}
-One vector is a scalar multiple of the other:
-{{< katex >}}\mathbf{a} = \lambda \mathbf{b}{{< /katex >}}
-{{% /hint %}}
-
-This means the vectors point in the **same or opposite direction**.
+{{< /colour >}}
 
 ---
 
 ## Why This Inequality Matters
 
+From lectures on inner product and angles:
+
 Cauchy–Schwarz guarantees that:
 
-{{% hint info %}}
-{{< katex >}}
+{{< colour "yellow" >}}
+{{< katex display=true >}}
 -1 \le
 \frac{\mathbf{a}\cdot\mathbf{b}}
 {\|\mathbf{a}\|\,\|\mathbf{b}\|}
 \le 1
 {{< /katex >}}
-{{% /hint %}}
+{{< /colour >}}
 
-Because of this:
-- The **angle between vectors** is always well-defined
-- The cosine formula never breaks
-- Inner products behave consistently
+This ensures:
+
+- cosine values are always valid  
+- angle between vectors is well-defined  
+- geometric interpretation is consistent  
+
+---
+
+## Equality Condition
+
+Equality holds **if and only if**:
+
+{{< katex display=true >}}
+\mathbf{a} = \lambda \mathbf{b}
+{{< /katex >}}
+
+This means:
+
+- vectors are linearly dependent  
+- vectors lie on the same line  
+- direction is same or opposite  
+
+---
+
+## Connection to Angles
+
+From analytic geometry:
+
+{{< katex display=true >}}
+\cos \alpha =
+\frac{\langle a, b \rangle}
+{\|a\| \|b\|}
+{{< /katex >}}
+
+Cauchy–Schwarz ensures this expression always lies in valid cosine range.
 
 ---
 
 ## Geometric Interpretation
 
-- If the dot product is **large**, vectors align
-- If it is **zero**, vectors are orthogonal
-- If it reaches the bound, vectors are collinear
+If the dot product is:
+- Large dot product → vectors align  
+- Zero dot product → orthogonal vectors  
+- Maximum value → vectors collinear  
 
 {{% hint info %}}
-Cauchy–Schwarz tells us:
-> “The dot product can never exceed the product of lengths.”
+Interpretation:
+“The projection of one vector onto another cannot exceed its length.”
 {{% /hint %}}
+
+---
+
+## Connection to Norm
+
+From lecture:
+
+{{< katex display=true >}}
+\|x\| = \sqrt{x^T x}
+{{< /katex >}}
+
+Cauchy–Schwarz ensures consistency between:
+
+- norm  
+- inner product  
+- distance  
+
+---
+
+## Important Consequence
+
+Triangle inequality is derived using Cauchy–Schwarz:
+
+{{< katex display=true >}}
+\|x + y\| \le \|x\| + \|y\|
+{{< /katex >}}
+
+---
+
+## Example
+
+{{< katex display=true >}}
+a = (1,2), \quad b = (3,4)
+{{< /katex >}}
+
+{{< katex display=true >}}
+a \cdot b = 11
+{{< /katex >}}
+
+{{< katex display=true >}}
+\|a\| = \sqrt{5}, \quad \|b\| = 5
+{{< /katex >}}
+
+{{< katex display=true >}}
+|11| \le \sqrt{5} \cdot 5
+{{< /katex >}}
+
+Inequality holds.
 
 ---
 
 ## Machine Learning Connection
 
-Cauchy–Schwarz appears implicitly in:
+Cauchy–Schwarz appears in:
 
-- **Cosine similarity**
-- **SVM kernels**
-- **Projection formulas**
-- **Gradient bounds**
-- **Proofs of convergence**
+- cosine similarity  
+- projection formulas  
+- optimisation bounds  
+- gradient analysis  
+- kernel methods  
 
 {{% hint info %}}
-Without Cauchy–Schwarz:
-- cosine similarity would be invalid
-- angle-based similarity would not work
+Without this inequality:
+- cosine similarity breaks  
+- angle-based ML models fail  
 {{% /hint %}}
+
+---
+
+## Hidden Exam Pattern
+
+From lectures:
+
+- Used in:
+  - angle proofs  
+  - norm inequalities  
+  - optimisation derivations  
+
+👉 often appears indirectly  
+
+---
+
+## Common Mistakes
+
+- Forgetting absolute value  
+- Mixing dot product and norm  
+- Ignoring equality condition  
+- Not recognising hidden usage  
+
+---
+
+## Strategy to Prepare
+
+1. Memorise inequality  
+2. Understand geometric meaning  
+3. Practice applying in proofs  
+4. Link with norm and angle  
+
+---
+
+## Quick Summary
+
+| Concept | Meaning |
+|--------|--------|
+| Bound | dot product ≤ product of norms |
+| Equality | vectors are dependent |
+| Use | angles, projections, ML |
 
 ---
 
@@ -110,6 +219,11 @@ Without Cauchy–Schwarz:
 
 - [math.berkeley](https://math.berkeley.edu/~arash/54/notes/6_7.pdf)
 
+- Lecture slides (Inner Product, Geometry)  
+- Course handout  
+
 ---
 
 {{< home-link "Home" >}} | {{< section-index >}}
+
+---

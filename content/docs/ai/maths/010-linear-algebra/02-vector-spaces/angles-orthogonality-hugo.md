@@ -18,12 +18,6 @@ Angle measures similarity between vectors.
 Orthogonality means complete independence (no similarity).
 {{% /hint %}}
 
-## Why It Matters in Machine Learning
-
-- PCA produces orthogonal components  
-- Orthogonal features reduce redundancy  
-- Gradient directions depend on angle  
-
 ---
 
 # Angle Formula

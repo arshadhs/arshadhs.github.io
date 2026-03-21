@@ -70,32 +70,9 @@ Examples:
 
 The **rank** of a matrix is the number of linearly independent columns.
 
-- dimension of its column space (number of independent columns)
-- measures the number of linearly independent columns (or rows) of a matrix.
-
 {{< katex display=true >}}
 \text{rank}(A) = \dim(\text{Col}(A))
 {{< /katex >}}
-
-## Interpretation
-- High rank → richer information
-- Low rank → redundancy
-
----
-
-| Condition | Result |
-|---------|--------|
-| {{< katex >}}\text{rank}(A) < \text{rank}([A \mid \mathbf{b}]){{< /katex >}} | **No solution** (Inconsistent system) |
-| {{< katex >}}\text{rank}(A) = \text{rank}([A \mid \mathbf{b}]){{< /katex >}}, no free variables | **Unique solution** |
-| {{< katex >}}\text{rank}(A) = \text{rank}([A \mid \mathbf{b}]){{< /katex >}}, free variables exist | **Infinitely many solutions** |
-
----
-
-{{% hint info %}}
-**Key idea:**  
-The rank measures the number of independent equations.  
-Free variables indicate degrees of freedom in the solution.
-{{% /hint %}}
 
 ---
 
