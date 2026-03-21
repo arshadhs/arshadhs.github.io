@@ -24,15 +24,19 @@ It tells us how data is transformed along orthogonal directions.
 # Definition
 
 For any matrix in real space:
+{{< colour "green" >}}
 {{< katex display=true >}}
 A \in \mathbb{R}^{m \times n}
 {{< /katex >}}
+{{< /colour >}}
 
 Its Singular Value Decomposition is:
 
+{{< colour "green" >}}
 {{< katex display=true >}}
 A = U \Sigma V^T
 {{< /katex >}}
+{{< /colour >}}
 
 Where:
 

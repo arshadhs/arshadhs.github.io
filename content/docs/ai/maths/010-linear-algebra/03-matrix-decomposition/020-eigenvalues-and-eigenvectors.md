@@ -8,102 +8,177 @@ weight: 1320
 
 # Eigenvalues and Eigenvectors
 
-- Eigenvalues give **scaling**.
-- Eigenvectors define **invariant directions** of transformation.
+- Eigenvalues give scaling.  
+- Eigenvectors define invariant directions of transformation.  
 
-Eigenvalues and eigenvectors describe directions that remain unchanged under a linear transformation, except for scaling.
+Eigenvalues and eigenvectors describe directions that remain unchanged under a linear transformation, except for scaling.  
 
-Let {{< katex >}}A \in \mathbb{R}^{n \times n}{{< /katex >}}.
+From lectures:
+matrix multiplication represents a transformation of space.  
+Most vectors change direction and magnitude.  
+Some special vectors only scale.  
+These are eigenvectors.  
 
-A scalar {{< katex >}}\lambda \in \mathbb{R}{{< /katex >}} is an **eigenvalue** of {{< katex >}}A{{< /katex >}}, and a non-zero vector  
-{{< katex >}}\mathbf{x} \in \mathbb{R}^n \setminus \{0\}{{< /katex >}}  
-is an **eigenvector** corresponding to {{< katex >}}\lambda{{< /katex >}} if:
+{{% hint info %}}
+Key Idea:
+A matrix transformation stretches or compresses vectors.
+Eigenvectors are directions that remain unchanged.
+Eigenvalues tell how much scaling happens.
+{{% /hint %}}
 
-{{% hint danger %}}
+---
+
+# Definition
+
+Let:
+
+{{< colour "green" >}}
+{{< katex display=true >}}
+A \in \mathbb{R}^{n \times n}
+{{< /katex >}}
+{{< /colour >}}
+
+A scalar:
+
+{{< colour "green" >}}
+{{< katex display=true >}}
+\lambda \in \mathbb{R}
+{{< /katex >}}
+{{< /colour >}}
+
+and a non-zero vector:
+
+{{< colour "green" >}}
+{{< katex display=true >}}
+\mathbf{x} \in \mathbb{R}^n \setminus \{0\}
+{{< /katex >}}
+{{< /colour >}}
+
+is an eigenvector if:
+
+{{< colour "green" >}}
 {{< katex display=true >}}
 A\mathbf{x} = \lambda \mathbf{x}
 {{< /katex >}}
-{{% /hint %}}
+{{< /colour >}}
 
-This is called the **eigenvalue equation**.
+---
 
-They are fundamental in:
-- PCA  
-- Optimisation  
-- Spectral methods  
-- Stability analysis  
-- Least squares  
-- Neural networks  
+# Intuition (Lecture + Webinar)
+
+- Matrix = transformation  
+- Most vectors → rotate + scale  
+- Eigenvectors → only scale  
+
+Eigenvectors define the “natural directions” of a matrix.
+
+---
+
+# Geometric Interpretation
+
+| Eigenvalue | Meaning |
+|----------|--------|
+| > 1 | Stretch |
+| between 0 and 1 | Shrink |
+| = 1 | No change |
+| = 0 | Collapse |
+| < 0 | Flip |
 
 ---
 
 # Equivalent Characterisations
 
-The following statements are equivalent:
+The following are equivalent:
 
-1. {{< katex >}}\lambda{{< /katex >}} is an eigenvalue of {{< katex >}}A{{< /katex >}}.
-
-2. There exists {{< katex >}}\mathbf{x} \neq 0{{< /katex >}} such that:
-
-{{% hint danger %}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 (A - \lambda I)\mathbf{x} = 0
 {{< /katex >}}
-{{% /hint %}}
+{{< /colour >}}
 
-3. The system has a **non-trivial solution**.
-
-4. Rank condition:
-
-{{% hint danger %}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 \operatorname{rank}(A - \lambda I) < n
 {{< /katex >}}
-{{% /hint %}}
+{{< /colour >}}
 
-5. Determinant condition:
-
-{{% hint danger %}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 \det(A - \lambda I) = 0
 {{< /katex >}}
-{{% /hint %}}
+{{< /colour >}}
 
 ---
 
 # Characteristic Polynomial
 
-{{% hint danger %}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 p_A(\lambda) = \det(A - \lambda I)
 {{< /katex >}}
-{{% /hint %}}
+{{< /colour >}}
 
-Eigenvalues are the **roots** of the characteristic polynomial.
+Eigenvalues are roots.
+
+---
+
+# How to Find Eigenvalues
+
+{{< colour "green" >}}
+{{< katex display=true >}}
+\det(A - \lambda I) = 0
+{{< /katex >}}
+{{< /colour >}}
+
+---
+
+# Finding Eigenvectors
+
+{{< colour "green" >}}
+{{< katex display=true >}}
+(A - \lambda I)\mathbf{x} = 0
+{{< /katex >}}
+{{< /colour >}}
+
+Eigenvectors lie in:
+
+{{< colour "green" >}}
+{{< katex display=true >}}
+\operatorname{Null}(A - \lambda I)
+{{< /katex >}}
+{{< /colour >}}
 
 ---
 
 # Scaling Property
 
-If {{< katex >}}\mathbf{x}{{< /katex >}} is an eigenvector corresponding to {{< katex >}}\lambda{{< /katex >}}, then:
-
-{{% hint danger %}}
+{{< colour "green" >}}
 {{< katex display=true >}}
-c\mathbf{x}, \quad c \in \mathbb{R} \setminus \{0\}
+c\mathbf{x}, \quad c \neq 0
 {{< /katex >}}
-{{% /hint %}}
+{{< /colour >}}
 
-is also an eigenvector.
+---
 
-Eigenvectors are defined **up to scaling**.
+# Eigenspace
+
+{{< colour "green" >}}
+{{< katex display=true >}}
+E_\lambda = \operatorname{Null}(A - \lambda I)
+{{< /katex >}}
+{{< /colour >}}
+
+---
+
+# Spectrum
+
+Set of all eigenvalues = spectrum.
 
 ---
 
 # Worked Example
 
-Consider:
-
-{{% hint danger %}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 A =
 \begin{bmatrix}
@@ -111,180 +186,127 @@ A =
 1 & 1
 \end{bmatrix}
 {{< /katex >}}
-{{% /hint %}}
-
-## Step 1: Characteristic Polynomial
-
-{{% hint danger %}}
-{{< katex display=true >}}
-\det(A - \lambda I)
-=
-\begin{vmatrix}
-1-\lambda & 1 \\
-1 & 1-\lambda
-\end{vmatrix}
-=
-(1-\lambda)^2 - 1
-{{< /katex >}}
-{{% /hint %}}
-
-Solve:
-
-{{% hint danger %}}
-{{< katex display=true >}}
-(1-\lambda)^2 - 1 = 0
-{{< /katex >}}
-{{% /hint %}}
+{{< /colour >}}
 
 Eigenvalues:
 
-{{% hint danger %}}
+{{< colour "green" >}}
 {{< katex display=true >}}
-\lambda = 2, \quad 0
+\lambda = 2, 0
 {{< /katex >}}
-{{% /hint %}}
+{{< /colour >}}
 
----
+Eigenvectors:
 
-## Step 2: Eigenvectors
-
-For {{< katex >}}\lambda = 0{{< /katex >}}:
-
-{{% hint danger %}}
+{{< colour "green" >}}
 {{< katex display=true >}}
-\mathbf{x} =
-\begin{bmatrix}
-1 \\
--1
-\end{bmatrix}
+\begin{bmatrix}1\\1\end{bmatrix}, \quad
+\begin{bmatrix}1\\-1\end{bmatrix}
 {{< /katex >}}
-{{% /hint %}}
-
-For {{< katex >}}\lambda = 2{{< /katex >}}:
-
-{{% hint danger %}}
-{{< katex display=true >}}
-\mathbf{x} =
-\begin{bmatrix}
-1 \\
-1
-\end{bmatrix}
-{{< /katex >}}
-{{% /hint %}}
-
----
-
-# Eigenspace
-
-For eigenvalue {{< katex >}}\lambda{{< /katex >}}, the eigenspace is:
-
-{{% hint danger %}}
-{{< katex display=true >}}
-E_\lambda = \operatorname{Null}(A - \lambda I)
-{{< /katex >}}
-{{% /hint %}}
-
-It is a subspace of {{< katex >}}\mathbb{R}^n{{< /katex >}}.
-
----
-
-# Spectrum
-
-The set of all eigenvalues of {{< katex >}}A{{< /katex >}} is called the **spectrum** of {{< katex >}}A{{< /katex >}}.
+{{< /colour >}}
 
 ---
 
 # Important Properties
 
-### Transpose Property
-
-{{% hint danger %}}
-{{< katex display=true >}}
-\det(A - \lambda I)
-=
-\det(A^T - \lambda I)
-{{< /katex >}}
-{{% /hint %}}
-
-Therefore, {{< katex >}}A{{< /katex >}} and {{< katex >}}A^T{{< /katex >}} have the same eigenvalues.
-
----
-
 ### Distinct Eigenvalues
 
-If an {{< katex >}}n \times n{{< /katex >}} matrix has {{< katex >}}n{{< /katex >}} distinct eigenvalues, its eigenvectors are linearly independent.
+Eigenvectors are linearly independent.
 
 ---
 
-### Identity Matrix Example
+### Transpose Property
 
-For {{< katex >}}I_n{{< /katex >}}:
-
-{{% hint danger %}}
+{{< colour "green" >}}
 {{< katex display=true >}}
-I_n \mathbf{x} = 1 \cdot \mathbf{x}
+\det(A - \lambda I) = \det(A^T - \lambda I)
 {{< /katex >}}
-{{% /hint %}}
-
-- Only eigenvalue: {{< katex >}}\lambda = 1{{< /katex >}}  
-- Eigenspace: {{< katex >}}\mathbb{R}^n{{< /katex >}}
+{{< /colour >}}
 
 ---
 
 # Symmetric Matrices
 
-If {{< katex >}}A{{< /katex >}} is symmetric:
-
-- All eigenvalues are **real**
-- Eigenvectors for distinct eigenvalues are **orthogonal**
+- Eigenvalues are real  
+- Eigenvectors are orthogonal  
 
 ---
 
 # Spectral Theorem
 
-If {{< katex >}}A \in \mathbb{R}^{n \times n}{{< /katex >}} is symmetric:
-
-- There exists an orthonormal basis of eigenvectors
-- All eigenvalues are real
-
-Diagonalisation:
-
-{{% hint danger %}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 A = Q \Lambda Q^T
 {{< /katex >}}
-{{% /hint %}}
+{{< /colour >}}
 
-Where:
-- {{< katex >}}Q{{< /katex >}} is orthogonal  
-- {{< katex >}}\Lambda{{< /katex >}} is diagonal  
+---
+
+# Diagonalisation Link
+
+{{< colour "green" >}}
+{{< katex display=true >}}
+A = P D P^{-1}
+{{< /katex >}}
+{{< /colour >}}
 
 ---
 
 # Machine Learning Connection
 
-If {{< katex >}}A \in \mathbb{R}^{m \times n}{{< /katex >}}, then:
-
-{{% hint danger %}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 A^T A
 {{< /katex >}}
-{{% /hint %}}
+{{< /colour >}}
 
-is symmetric and positive definite (if {{< katex >}}\operatorname{rank}(A)=n{{< /katex >}}), because:
+is symmetric positive definite:
 
-{{% hint danger %}}
+{{< colour "green" >}}
 {{< katex display=true >}}
-\mathbf{x}^T A^T A \mathbf{x}
-=
-\|A\mathbf{x}\|^2 > 0
+x^T A^T A x = \|Ax\|^2 > 0
 {{< /katex >}}
-{{% /hint %}}
+{{< /colour >}}
 
-Appears in:
-- Linear regression  
-- Normal equations  
+Used in:
 - PCA  
+- Regression  
+- SVD  
+
+---
+
+# Common Exam Questions
+
+- Find eigenvalues  
+- Find eigenvectors  
+- Check diagonalisation  
+- Link with null space  
+- Interpret geometrically  
+
+---
+
+# Hidden Exam Pattern
+
+- Concept + computation  
+- Links with rank, null space, SVD  
+
+---
+
+# Mistakes to Avoid
+
+- Zero vector ❌  
+- Missing determinant condition  
+- Not solving null space fully  
+- Ignoring multiplicity  
+
+---
+
+# Strategy to Prepare
+
+1. Practice determinant  
+2. Solve systems  
+3. Connect to rank  
+4. Link with diagonalisation  
 
 ---
 
