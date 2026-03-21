@@ -3,7 +3,7 @@ title: "Eigen Decomposition"
 draft: false
 tags: ["Machine Learning", "Mathematics", "Linear Algebra"]
 categories: ["AI", "ML"]
-weight: 1350
+weight: 1340
 ---
 
 # Eigen Decomposition

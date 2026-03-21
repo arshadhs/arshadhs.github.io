@@ -3,7 +3,7 @@ title: "Matrix Approximation"
 draft: false
 tags: ["Machine Learning", "Mathematics", "Linear Algebra"]
 categories: ["AI", "ML"]
-weight: 1370
+weight: 1360
 ---
 # Matrix Approximation
 

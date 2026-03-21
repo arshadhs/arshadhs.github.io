@@ -3,7 +3,7 @@ title: "Diagonalization"
 draft: false
 tags: ["Machine Learning", "Mathematics", "Linear Algebra"]
 categories: ["AI", "ML"]
-weight: 1330
+weight: 1347
 ---
 # Diagonalization
 
