@@ -71,14 +71,11 @@ These are the decomposition ideas that are explicitly developed in the slides an
 
 ---
 
-## Mermaid Overview of Decomposition Types
-
 {{< mermaid >}}
 flowchart TD
     A["Matrix Decompositions"]
 
     A --> B["Covered in slides / transcript"]
-    A --> C["Not covered in this module"]
 
     B --> B1["Eigen-decomposition"]
     B --> B2["Diagonalization"]
@@ -86,18 +83,31 @@ flowchart TD
     B --> B4["Singular Value Decomposition (SVD)"]
     B --> B5["Matrix approximation<br/>related topic"]
 
+    classDef covered fill:#d9f2d9,stroke:#2e7d32,color:#000,stroke-width:1px;
+    classDef root fill:#e8f5e9,stroke:#1b5e20,color:#000,stroke-width:1.5px;
+
+    class A root;
+    class B,B1,B2,B3,B4,B5 covered;
+{{< /mermaid >}}
+
+---
+
+{{< mermaid >}}
+flowchart TD
+    A["Matrix Decompositions"]
+
+    A --> C["Not covered in this module"]
+
     C --> C1["LU decomposition"]
     C --> C2["QR decomposition"]
     C --> C3["Schur decomposition"]
     C --> C4["Jordan form"]
     C --> C5["LDLᵀ decomposition"]
 
-    classDef covered fill:#d9f2d9,stroke:#2e7d32,color:#000,stroke-width:1px;
     classDef notcovered fill:#f3e5f5,stroke:#7b1fa2,color:#000,stroke-width:1px;
     classDef root fill:#e8f5e9,stroke:#1b5e20,color:#000,stroke-width:1.5px;
 
     class A root;
-    class B,B1,B2,B3,B4,B5 covered;
     class C,C1,C2,C3,C4,C5 notcovered;
 {{< /mermaid >}}
 
