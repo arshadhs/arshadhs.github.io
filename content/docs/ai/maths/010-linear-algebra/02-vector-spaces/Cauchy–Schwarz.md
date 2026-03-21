@@ -31,7 +31,7 @@ For any vectors:
 \mathbf{a}, \mathbf{b} \in \mathbb{R}^n
 {{< /katex >}}
 
-{{< colour "yellow" >}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 |\mathbf{a}\cdot\mathbf{b}|
 \le
@@ -47,7 +47,7 @@ From lectures on inner product and angles:
 
 Cauchy–Schwarz guarantees that:
 
-{{< colour "yellow" >}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 -1 \le
 \frac{\mathbf{a}\cdot\mathbf{b}}

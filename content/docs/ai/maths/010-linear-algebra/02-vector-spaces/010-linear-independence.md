@@ -9,7 +9,7 @@ weight: 21
 
 A set of vectors is **linearly independent** if none of them can be written as a linear combination of the others.
 
-{{< colour "yellow" >}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 c_1\mathbf{v}_1 + \cdots + c_k\mathbf{v}_k = \mathbf{0}
 \;\Rightarrow\;
@@ -48,13 +48,13 @@ From lecture explanation:
 
 ## Formal Definition
 
-{{< colour "yellow" >}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 c_1 v_1 + c_2 v_2 + \cdots + c_k v_k = 0
 {{< /katex >}}
 {{< /colour >}}
 
-{{< colour "yellow" >}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 c_1 = c_2 = \cdots = c_k = 0
 {{< /katex >}}
@@ -67,7 +67,7 @@ This means:
 
 # Linear Dependence
 
-{{< colour "yellow" >}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 \exists \; c_i \neq 0 \text{ such that } \sum c_i v_i = 0
 {{< /katex >}}
@@ -84,7 +84,7 @@ If non-trivial solution exists → dependent
 
 ## Matrix Interpretation
 
-{{< colour "yellow" >}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 A = [v_1 \; v_2 \; \cdots \; v_k]
 {{< /katex >}}
@@ -100,13 +100,13 @@ From lecture:
 
 ## Rank Connection
 
-{{< colour "yellow" >}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 \text{rank}(A) = k \Rightarrow \text{independent}
 {{< /katex >}}
 {{< /colour >}}
 
-{{< colour "yellow" >}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 \text{rank}(A) < k \Rightarrow \text{dependent}
 {{< /katex >}}
@@ -125,7 +125,7 @@ You cannot have more independent vectors than the dimension.
 
 ### Case 1
 
-{{< colour "yellow" >}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 k > n \Rightarrow \text{always dependent}
 {{< /katex >}}
@@ -138,7 +138,7 @@ Extra vectors must reuse existing ones.
 ---
 ### Case 2
 
-{{< colour "yellow" >}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 k = n \Rightarrow \text{check independence}
 {{< /katex >}}
@@ -152,7 +152,7 @@ Check using:
 
 ### Case 3
 
-{{< colour "yellow" >}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 k < n \Rightarrow \text{can be independent}
 {{< /katex >}}
@@ -183,7 +183,7 @@ Interpretation:
 
 ### Dependent
 
-{{< colour "yellow" >}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 (1,2), (2,4)
 {{< /katex >}}

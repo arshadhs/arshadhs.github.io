@@ -36,7 +36,7 @@ For vectors in n-dimensional space:
 
 The cosine of the angle is:
 
-{{< colour "yellow" >}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 \cos \alpha
 =
@@ -47,7 +47,7 @@ The cosine of the angle is:
 
 The angle is:
 
-{{< colour "yellow" >}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 \alpha
 =
@@ -91,7 +91,7 @@ This is the **Cauchy–Schwarz inequality**.
 
 Vectors are orthogonal if:
 
-{{< colour "yellow" >}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 \langle \mathbf{a}, \mathbf{b} \rangle = 0
 {{< /katex >}}
@@ -99,7 +99,7 @@ Vectors are orthogonal if:
 
 This implies:
 
-{{< colour "yellow" >}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 \alpha = \frac{\pi}{2}
 {{< /katex >}}
@@ -136,7 +136,7 @@ So angle depends on both:
 
 # Example
 
-{{< colour "yellow" >}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 \mathbf{a} =
 \begin{bmatrix}
@@ -154,7 +154,7 @@ So angle depends on both:
 
 Dot product:
 
-{{< colour "yellow" >}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 (2)(2) + (2)(-2) = 0
 {{< /katex >}}

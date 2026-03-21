@@ -77,7 +77,7 @@ Q = [e_1 \; e_2 \; \cdots \; e_n]
 
 Then:
 
-{{< colour "yellow" >}}
+{{< colour "green" >}}
 {{< katex display=true >}}
 Q^T Q = I
 {{< /katex >}}
