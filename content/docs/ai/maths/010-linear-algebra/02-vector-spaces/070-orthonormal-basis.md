@@ -258,8 +258,8 @@ From lecture flow:
 - Course handout  
 - Webinar discussions  
 
-- [My Notes: Angles and Orthogonality]({{% relref "angles-orthogonality.md" %}})
-- [My Notes: Norm]({{% relref "norm.md" %}})
+- [My Notes: Angles and Orthogonality]({{% relref "060-angles-and-orthogonality.md" %}})
+- [My Notes: Norm]({{% relref "030-norm.md" %}})
 
 ---
 
