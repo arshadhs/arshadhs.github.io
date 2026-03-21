@@ -100,17 +100,6 @@ These three properties define any valid norm.
 
 # Common Norms
 
-## L2 Norm (Euclidean Norm)
-
-{{< katex display=true >}}
-\lVert x \rVert_2 = \sqrt{\sum_{i=1}^{n} x_i^2}
-{{< /katex >}}
-
-- Most common norm  
-- Corresponds to standard distance  
-
----
-
 ## L1 Norm (Manhattan Norm)
 
 {{< katex display=true >}}
@@ -119,6 +108,17 @@ These three properties define any valid norm.
 
 - Measures path along axes  
 - Used in sparse models  
+
+---
+
+## L2 Norm (Euclidean Norm)
+
+{{< katex display=true >}}
+\lVert x \rVert_2 = \sqrt{\sum_{i=1}^{n} x_i^2}
+{{< /katex >}}
+
+- Most common norm  
+- Corresponds to standard distance  
 
 ---
 

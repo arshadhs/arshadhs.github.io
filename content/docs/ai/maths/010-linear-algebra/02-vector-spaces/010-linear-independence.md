@@ -29,7 +29,7 @@ If even one vector can be expressed using others, the set is dependent.
 
 ---
 
-# Intuition (From Lectures)
+## Intuition (From Lectures)
 
 Vectors represent directions in space.
 
@@ -39,7 +39,7 @@ Independent vectors create new dimensions.
 
 ---
 
-# Formal Definition
+## Formal Definition
 
 {{< katex display=true >}}
 c_1 v_1 + c_2 v_2 + \cdots + c_k v_k = 0
@@ -59,7 +59,7 @@ c_1 = c_2 = \cdots = c_k = 0
 
 ---
 
-# Matrix Interpretation
+## Matrix Interpretation
 
 {{< katex display=true >}}
 A = [v_1 \; v_2 \; \cdots \; v_k]
@@ -69,7 +69,7 @@ Columns independent ⇔ full rank.
 
 ---
 
-# Rank Connection
+## Rank Connection
 
 {{< katex display=true >}}
 \text{rank}(A) = k \Rightarrow \text{independent}
@@ -81,7 +81,7 @@ Columns independent ⇔ full rank.
 
 ---
 
-# REF Method
+## REF Method
 
 1. Convert to REF  
 2. Find pivot columns  
@@ -89,20 +89,20 @@ Columns independent ⇔ full rank.
 
 ---
 
-# Geometric Interpretation
+## Geometric Interpretation
 
 Independent → different directions  
 Dependent → same plane/line  
 
 ---
 
-# Basis Connection
+## Basis Connection
 
 Basis = independent + spanning
 
 ---
 
-# Example
+## Example
 
 {{< katex display=true >}}
 v_1 = (1,2), \quad v_2 = (2,4)
@@ -116,7 +116,7 @@ Dependent.
 
 ---
 
-# Exam Focus
+## Exam Focus
 
 - REF method  
 - Rank relation  
@@ -124,11 +124,10 @@ Dependent.
 
 ---
 
-# References
+## References
 
 - Lecture slides  
 - Course handout  
-{{< home-link "Home" >}} | {{< section-index >}}
 
 ---
 
