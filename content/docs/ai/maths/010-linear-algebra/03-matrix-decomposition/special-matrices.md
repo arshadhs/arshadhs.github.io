@@ -270,7 +270,22 @@ is a scalar (a real number).
 {{< /katex >}}
 {{< /colour >}}
 
+*A (The Matrix)*:
+- Symmetry: must be symmetric, meaning {{< katex >}}A^T = A{{< /katex >}}
+- Eigenvalues: All eigenvalues are strictly positive {{< katex >}}\lambda_i > 0{{< /katex >}}
+- Determinant: The determinant of A is positive, as it is the product of its eigenvalues {{< katex >}}\det(A) = \prod_i \lambda_i > 0{{< /katex >}}
+- Invertibility: is non-singular, meaning {{< katex >}}A^{-1} \text{ exists}{{< /katex >}}
+- Diagonal Elements: All diagonal elements are positive {{< katex >}}a_{ii} > 0{{< /katex >}}
+
 The vectors \( \mathbf{x} \) and \( A\mathbf{x} \) always form an acute angle.
+
+
+*x (The Vector)*:
+- Arbitrary Non-zero Vector: {{< katex >}}\mathbf{x} \in \mathbb{R}^n,\quad \mathbf{x} \ne 0{{< /katex >}}
+- Quadratic Form: The expression {{< katex >}}\mathbf{x}^T A \mathbf{x}{{< /katex >}} is a scalar (a real number).
+- Geometric Interpretation: {{< katex >}}\mathbf{x}^T A \mathbf{x} > 0{{< /katex >}}
+
+The vectors {{< katex >}}\mathbf{x}{{< /katex >}} and {{< katex >}}A\mathbf{x}{{< /katex >}} always form an acute angle.
 
 ---
 
