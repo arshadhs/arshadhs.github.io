@@ -207,78 +207,13 @@ A **symmetric matrix A** is positive definite if:
 ### Properties
 
 *A (The Matrix)*:
-- Symmetry: must be symmetric, meaning  
-{{< colour "green" >}}
-{{< katex display=true >}}
-A^T = A
-{{< /katex >}}
-{{< /colour >}}
-
-- Eigenvalues: All eigenvalues are strictly positive  
-{{< colour "green" >}}
-{{< katex display=true >}}
-\lambda_i > 0
-{{< /katex >}}
-{{< /colour >}}
-
-- Determinant: The determinant of A is positive, as it is the product of its eigenvalues  
-{{< colour "green" >}}
-{{< katex display=true >}}
-\det(A) = \prod_i \lambda_i > 0
-{{< /katex >}}
-{{< /colour >}}
-
-- Invertibility: is non-singular, meaning  
-{{< colour "green" >}}
-{{< katex display=true >}}
-A^{-1} \text{ exists}
-{{< /katex >}}
-{{< /colour >}}
-
-- Diagonal Elements: All diagonal elements are positive  
-{{< colour "green" >}}
-{{< katex display=true >}}
-a_{ii} > 0
-{{< /katex >}}
-{{< /colour >}}
-
-- All eigenvalues are positive  
-- Determinant is positive  
-- Matrix is invertible  
-- Cholesky decomposition exists  
-
-
-*A (The Matrix)*:
 - Symmetry: must be symmetric, meaning {{< katex >}}A^T = A{{< /katex >}}
 - Eigenvalues: All eigenvalues are strictly positive {{< katex >}}\lambda_i > 0{{< /katex >}}
-- Determinant: The determinant of A is positive, as it is the product of its eigenvalues {{< katex >}}\det(A) = \prod_i \lambda_i > 0{{< /katex >}}
+- Determinant: det(A) is positive, as it is the product of its eigenvalues {{< katex >}}\det(A) = \prod_i \lambda_i > 0{{< /katex >}}
+- Matrix is invertible  
 - Invertibility: is non-singular, meaning {{< katex >}}A^{-1} \text{ exists}{{< /katex >}}
 - Diagonal Elements: All diagonal elements are positive {{< katex >}}a_{ii} > 0{{< /katex >}}
-
-*x (The Vector)*:
-- Arbitrary Non-zero Vector:  
-{{< colour "green" >}}
-{{< katex display=true >}}
-\mathbf{x} \in \mathbb{R}^n,\quad \mathbf{x} \ne 0
-{{< /katex >}}
-{{< /colour >}}
-
-- Quadratic Form: The expression  
-{{< colour "green" >}}
-{{< katex display=true >}}
-\mathbf{x}^T A \mathbf{x}
-{{< /katex >}}
-{{< /colour >}}
-is a scalar (a real number).
-
-- Geometric Interpretation:  
-{{< colour "green" >}}
-{{< katex display=true >}}
-\mathbf{x}^T A \mathbf{x} > 0
-{{< /katex >}}
-{{< /colour >}}
-
-The vectors \( \mathbf{x} \) and \( A\mathbf{x} \) always form an acute angle.
+- Cholesky Decomposition exists  
 
 *x (The Vector)*:
 - Arbitrary Non-zero Vector: {{< katex >}}\mathbf{x} \in \mathbb{R}^n,\quad \mathbf{x} \ne 0{{< /katex >}}
