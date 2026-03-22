@@ -9,7 +9,7 @@ weight: 1310
 
 ---
 
-# Minor
+## Minor
 
 The **minor** of an element {{< katex >}}a_{ij}{{< /katex >}} is the determinant of the smaller square matrix formed by:
 - removing **row** {{< katex >}}i{{< /katex >}}
@@ -23,7 +23,7 @@ Minors are used to compute **cofactors**, which are used for determinants and in
 
 ---
 
-# Cofactor
+## Cofactor
 
 The **cofactor** of {{< katex >}}a_{ij}{{< /katex >}}, denoted {{< katex >}}C_{ij}{{< /katex >}}, is:
 
@@ -36,13 +36,11 @@ Where:
 - {{< katex >}}j{{< /katex >}} is the column index
 - {{< katex >}}M_{ij}{{< /katex >}} is the minor
 
-## Why the sign term exists
+*Why the sign term exists?*
 
 The factor {{< katex >}}(-1)^{i+j}{{< /katex >}} accounts for alternating signs depending on position in the matrix.
 
 ---
-
-# Cofactor Matrix and Adjoint (Adjugate)
 
 ## Cofactor matrix
 
@@ -72,9 +70,9 @@ It is written as:
 
 ---
 
-## Determinants of different sizes
+### Determinants of different sizes
 
-### 1×1 matrix
+#### 1×1 matrix
 
 If {{< katex >}}X = [a]{{< /katex >}}, then:
 
@@ -84,7 +82,7 @@ If {{< katex >}}X = [a]{{< /katex >}}, then:
 
 ---
 
-### 2×2 matrix
+#### 2×2 matrix
 
 For:
 
@@ -102,7 +100,7 @@ c & d
 
 ---
 
-### 3×3 matrix (concept)
+#### 3×3 matrix (concept)
 
 A 3×3 determinant is computed by expanding into **2×2 determinants**.
 
@@ -132,7 +130,7 @@ A^{-1} = \frac{1}{\det(A)}\operatorname{adj}(A)
 
 ---
 
-# Properties of the determinant
+### Properties of Determinant
 
 - **Transpose property**
   {{< katex display=true >}}
@@ -193,7 +191,7 @@ In simple terms:
 
 ---
 
-## Example
+### Example
 
 For:
 
@@ -215,13 +213,13 @@ a_{21} & a_{22}
 
 ---
 
-# Properties of the Trace
+### Properties of Trace
 
 Let {{< katex >}}A, B \in \mathbb{R}^{n \times n}{{< /katex >}} and {{< katex >}}\alpha \in \mathbb{R}{{< /katex >}}.
 
 ---
 
-### 1. Linearity (Addition)
+#### 1. Linearity (Addition)
 
 {{% hint danger %}}
 {{< katex display=true >}}
@@ -231,7 +229,7 @@ Let {{< katex >}}A, B \in \mathbb{R}^{n \times n}{{< /katex >}} and {{< katex >}
 
 ---
 
-### 2. Scalar Multiplication
+#### 2. Scalar Multiplication
 
 {{% hint danger %}}
 {{< katex display=true >}}
@@ -241,7 +239,7 @@ Let {{< katex >}}A, B \in \mathbb{R}^{n \times n}{{< /katex >}} and {{< katex >}
 
 ---
 
-### 3. Trace of Identity
+#### 3. Trace of Identity
 
 {{% hint danger %}}
 {{< katex display=true >}}
@@ -253,7 +251,7 @@ Because the identity matrix has {{< katex >}}n{{< /katex >}} ones on the diagona
 
 ---
 
-### 4. Cyclic Property (Very Important ⭐)
+#### 4. Cyclic Property (Very Important ⭐)
 
 If  
 {{< katex >}}A \in \mathbb{R}^{n \times k}{{< /katex >}} and  
@@ -277,7 +275,7 @@ This property is extremely important in:
 
 ---
 
-## Important Identity
+### Important Identity
 
 If {{< katex >}}A{{< /katex >}} has eigenvalues {{< katex >}}\lambda_1, \lambda_2, \dots, \lambda_n{{< /katex >}}, then:
 
@@ -289,7 +287,7 @@ If {{< katex >}}A{{< /katex >}} has eigenvalues {{< katex >}}\lambda_1, \lambda_
 
 ---
 
-## Why Trace Matters in Machine Learning
+### Why Trace Matters in Machine Learning
 
 Trace appears in:
 
