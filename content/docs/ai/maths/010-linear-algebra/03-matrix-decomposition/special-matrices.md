@@ -247,6 +247,14 @@ a_{ii} > 0
 - Matrix is invertible  
 - Cholesky decomposition exists  
 
+
+*A (The Matrix)*:
+- Symmetry: must be symmetric, meaning {{< katex >}}A^T = A{{< /katex >}}
+- Eigenvalues: All eigenvalues are strictly positive {{< katex >}}\lambda_i > 0{{< /katex >}}
+- Determinant: The determinant of A is positive, as it is the product of its eigenvalues {{< katex >}}\det(A) = \prod_i \lambda_i > 0{{< /katex >}}
+- Invertibility: is non-singular, meaning {{< katex >}}A^{-1} \text{ exists}{{< /katex >}}
+- Diagonal Elements: All diagonal elements are positive {{< katex >}}a_{ii} > 0{{< /katex >}}
+
 *x (The Vector)*:
 - Arbitrary Non-zero Vector:  
 {{< colour "green" >}}
@@ -270,15 +278,7 @@ is a scalar (a real number).
 {{< /katex >}}
 {{< /colour >}}
 
-*A (The Matrix)*:
-- Symmetry: must be symmetric, meaning {{< katex >}}A^T = A{{< /katex >}}
-- Eigenvalues: All eigenvalues are strictly positive {{< katex >}}\lambda_i > 0{{< /katex >}}
-- Determinant: The determinant of A is positive, as it is the product of its eigenvalues {{< katex >}}\det(A) = \prod_i \lambda_i > 0{{< /katex >}}
-- Invertibility: is non-singular, meaning {{< katex >}}A^{-1} \text{ exists}{{< /katex >}}
-- Diagonal Elements: All diagonal elements are positive {{< katex >}}a_{ii} > 0{{< /katex >}}
-
 The vectors \( \mathbf{x} \) and \( A\mathbf{x} \) always form an acute angle.
-
 
 *x (The Vector)*:
 - Arbitrary Non-zero Vector: {{< katex >}}\mathbf{x} \in \mathbb{R}^n,\quad \mathbf{x} \ne 0{{< /katex >}}
