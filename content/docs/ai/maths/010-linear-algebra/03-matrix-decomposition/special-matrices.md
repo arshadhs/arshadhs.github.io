@@ -204,7 +204,7 @@ A **symmetric matrix A** is positive definite if:
 \mathbf{x}^T A \mathbf{x} > 0 \quad \forall \mathbf{x} \neq 0
 {{< /katex >}}
 
-### Positive Definite Matrix – Properties
+### Properties
 
 *A (The Matrix)*:
 - Symmetry: must be symmetric, meaning  
