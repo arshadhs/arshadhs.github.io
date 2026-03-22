@@ -6,11 +6,9 @@ weight: 1126
 
 # Special Matrices
 
-Certain types of matrices have special structural properties that are widely used in linear algebra and machine learning.
+Certain types of matrices have special structural properties that are widely used in linear algebra and ML.
 
 ## 1. Symmetric Matrix
-
-A matrix is **symmetric** if:
 
 {{< katex display=true >}}
 A^T = A
@@ -22,7 +20,7 @@ A^T = A
 - Optimisation  
 
 
-The matrix is symmetric about its main diagonal.
+- Symmetric about its main diagonal.
 
 ---
 
@@ -40,11 +38,103 @@ This implies:
 a_{ii} = 0
 {{< /katex >}}
 
-This implies all diagonal elements are zero.
+- All diagonal elements are zero.
 
 ---
 
-## 3. Diagonal Matrix
+## 3. Upper Triangular Matrix
+
+- All elements below the main diagonal are zero
+
+{{< katex display=true >}}
+a_{ij} = 0 \quad \text{for } i > j
+{{< /katex >}}
+
+---
+
+## 4. Lower Triangular Matrix
+
+- All elements above the main diagonal are zero
+
+{{< katex display=true >}}
+a_{ij} = 0 \quad \text{for } i < j
+{{< /katex >}}
+
+---
+
+### Determinant of Triangular Matrices ⭐
+
+For **both upper and lower triangular matrices**:
+
+{{< katex display=true >}}
+\det(A) = \prod_{i=1}^{n} a_{ii}
+{{< /katex >}}
+
+- The determinant equals the **product of diagonal entries**.
+
+{{% hint info %}}
+This makes computing determinants extremely fast for triangular matrices.
+{{% /hint %}}
+
+---
+
+### Inverse of Triangular Matrices ⭐
+
+A triangular matrix is invertible **if and only if**:
+
+{{< katex display=true >}}
+a_{ii} \neq 0 \quad \forall i
+{{< /katex >}}
+
+If invertible:
+
+{{< katex display=true >}}
+A^{-1} \text{ is also triangular of the same type}
+{{< /katex >}}
+
+- Upper triangular → inverse is upper triangular  
+- Lower triangular → inverse is lower triangular  
+
+---
+
+### Strictly Lower Triangular Matrix
+
+All elements on and above the diagonal are zero:
+
+{{< katex display=true >}}
+a_{ij} = 0 \quad \text{for } i \le j
+{{< /katex >}}
+
+---
+
+### Unit Lower Triangular Matrix
+
+Diagonal entries are 1:
+
+{{< katex display=true >}}
+a_{ii} = 1
+{{< /katex >}}
+
+Appears in **LU decomposition**.
+
+---
+
+### Solving Systems with Triangular Matrices
+
+For lower triangular:
+
+{{< katex display=true >}}
+A\mathbf{x} = \mathbf{b}
+{{< /katex >}}
+
+Solve using **forward substitution**.
+
+For upper triangular:
+
+Use **back substitution**.
+---
+
+## 5. Diagonal Matrix
 
 {{< colour "green" >}}
 {{< katex display=true >}}
@@ -52,7 +142,7 @@ a_{ij} = 0 \quad \text{for } i \ne j
 {{< /katex >}}
 {{< /colour >}}
 
-A matrix with non-zero elements only on its main diagonal.
+- Non-zero elements only on its main diagonal.
 
 {{< katex display=true >}}
 A =
@@ -65,7 +155,7 @@ a_1 & 0 & 0 \\
 
 ---
 
-## 4. Identity Matrix
+## 6. Identity Matrix
 
 {{< colour "green" >}}
 {{< katex display=true >}}
@@ -92,7 +182,7 @@ I =
 \end{bmatrix}
 {{< /katex >}}
 
-### Key Property
+### Property
 
 {{< katex display=true >}}
 AI = IA = A
@@ -103,103 +193,6 @@ AI = IA = A
 {{< katex display=true >}}
 \det(I) = 1
 {{< /katex >}}
-
----
-
-# Triangular Matrices
-
----
-
-## 5. Upper Triangular Matrix
-
-All elements below the main diagonal are zero:
-
-{{< katex display=true >}}
-a_{ij} = 0 \quad \text{for } i > j
-{{< /katex >}}
-
----
-
-## 6. Lower Triangular Matrix
-
-All elements above the main diagonal are zero:
-
-{{< katex display=true >}}
-a_{ij} = 0 \quad \text{for } i < j
-{{< /katex >}}
-
----
-
-## Determinant of Triangular Matrices ⭐
-
-For **both upper and lower triangular matrices**:
-
-{{< katex display=true >}}
-\det(A) = \prod_{i=1}^{n} a_{ii}
-{{< /katex >}}
-
-- The determinant equals the **product of diagonal entries**.
-
-{{% hint info %}}
-This makes computing determinants extremely fast for triangular matrices.
-{{% /hint %}}
-
----
-
-## Inverse of Triangular Matrices ⭐
-
-A triangular matrix is invertible **if and only if**:
-
-{{< katex display=true >}}
-a_{ii} \neq 0 \quad \forall i
-{{< /katex >}}
-
-If invertible:
-
-{{< katex display=true >}}
-A^{-1} \text{ is also triangular of the same type}
-{{< /katex >}}
-
-- Upper triangular → inverse is upper triangular  
-- Lower triangular → inverse is lower triangular  
-
----
-
-## Strictly Lower Triangular Matrix
-
-All elements on and above the diagonal are zero:
-
-{{< katex display=true >}}
-a_{ij} = 0 \quad \text{for } i \le j
-{{< /katex >}}
-
----
-
-## Unit Lower Triangular Matrix
-
-Diagonal entries are 1:
-
-{{< katex display=true >}}
-a_{ii} = 1
-{{< /katex >}}
-
-Appears in **LU decomposition**.
-
----
-
-## Solving Systems with Triangular Matrices
-
-For lower triangular:
-
-{{< katex display=true >}}
-A\mathbf{x} = \mathbf{b}
-{{< /katex >}}
-
-Solve using **forward substitution**.
-
-For upper triangular:
-
-Use **back substitution**.
 
 ---
 
@@ -221,7 +214,7 @@ A symmetric matrix \(A\) is **positive definite** if:
 
 ---
 
-## Key Properties
+### Properties
 
 If \(A\) is positive definite:
 
@@ -232,7 +225,7 @@ If \(A\) is positive definite:
 
 ---
 
-## Why Positive Definite Matters in ML
+### Why Positive Definite Matters in ML
 
 - Covariance matrices are positive semi-definite  
 - Hessian matrix in optimisation  
