@@ -8,9 +8,74 @@ weight: 1126
 
 Certain types of matrices have special structural properties that are widely used in linear algebra and machine learning.
 
+## 1. Symmetric Matrix
+
+A matrix is **symmetric** if:
+
+{{< katex display=true >}}
+A^T = A
+{{< /katex >}}
+
+**Used in**
+- Covariance matrices  
+- Quadratic forms  
+- Optimisation  
+
+
+The matrix is symmetric about its main diagonal.
+
 ---
 
-## Identity Matrix
+## 2. Skew-Symmetric Matrix
+
+A matrix is **skew-symmetric** if:
+
+{{< katex display=true >}}
+A^T = -A
+{{< /katex >}}
+
+This implies:
+
+{{< katex display=true >}}
+a_{ii} = 0
+{{< /katex >}}
+
+This implies all diagonal elements are zero.
+
+---
+
+## 3. Diagonal Matrix
+
+{{< colour "green" >}}
+{{< katex display=true >}}
+a_{ij} = 0 \quad \text{for } i \ne j
+{{< /katex >}}
+{{< /colour >}}
+
+A matrix with non-zero elements only on its main diagonal.
+
+{{< katex display=true >}}
+A =
+\begin{bmatrix}
+a_1 & 0 & 0 \\
+0 & a_2 & 0 \\
+0 & 0 & a_3
+\end{bmatrix}
+{{< /katex >}}
+
+---
+
+## 4. Identity Matrix
+
+{{< colour "green" >}}
+{{< katex display=true >}}
+a_{ij} =
+\begin{cases}
+1, & i = j \
+0, & \text{otherwise}
+\end{cases}
+{{< /katex >}}
+{{< /colour >}}
 
 An **identity matrix** is a square matrix where:
 - all diagonal entries are 1
@@ -41,62 +106,11 @@ AI = IA = A
 
 ---
 
-## Symmetric Matrix
-
-A matrix is **symmetric** if:
-
-{{< katex display=true >}}
-A^T = A
-{{< /katex >}}
-
-**Used in**
-- Covariance matrices  
-- Quadratic forms  
-- Optimisation  
-
-
-The matrix is symmetric about its main diagonal.
-
----
-
-## Skew-Symmetric Matrix
-
-A matrix is **skew-symmetric** if:
-
-{{< katex display=true >}}
-A^T = -A
-{{< /katex >}}
-
-This implies:
-
-{{< katex display=true >}}
-a_{ii} = 0
-{{< /katex >}}
-
-This implies all diagonal elements are zero.
-
----
-
-## Diagonal Matrix
-
-A matrix with non-zero elements only on its main diagonal.
-
-{{< katex display=true >}}
-A =
-\begin{bmatrix}
-a_1 & 0 & 0 \\
-0 & a_2 & 0 \\
-0 & 0 & a_3
-\end{bmatrix}
-{{< /katex >}}
-
----
-
 # Triangular Matrices
 
 ---
 
-## Upper Triangular Matrix
+## 5. Upper Triangular Matrix
 
 All elements below the main diagonal are zero:
 
@@ -106,7 +120,7 @@ a_{ij} = 0 \quad \text{for } i > j
 
 ---
 
-## Lower Triangular Matrix
+## 6. Lower Triangular Matrix
 
 All elements above the main diagonal are zero:
 
@@ -189,7 +203,7 @@ Use **back substitution**.
 
 ---
 
-## Positive Definite Matrix ⭐
+## 7. Positive Definite Matrix ⭐
 
 A symmetric matrix \(A\) is **positive definite** if:
 
@@ -199,7 +213,7 @@ A symmetric matrix \(A\) is **positive definite** if:
 
 ---
 
-## Positive Semi-Definite
+## 8. Positive Semi-Definite
 
 {{< katex display=true >}}
 \mathbf{x}^T A \mathbf{x} \ge 0
@@ -235,7 +249,7 @@ If \(A\) is positive definite → function has a **unique global minimum**.
 
 ---
 
-## Sparse Matrix
+## 9. Sparse Matrix
 
 A matrix with mostly zero entries.
 
