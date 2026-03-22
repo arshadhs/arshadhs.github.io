@@ -14,13 +14,12 @@ Certain types of matrices have special structural properties that are widely use
 A^T = A
 {{< /katex >}}
 
+- Symmetric about its main diagonal.
+
 **Used in**
 - Covariance matrices  
 - Quadratic forms  
 - Optimisation  
-
-
-- Symmetric about its main diagonal.
 
 ---
 
@@ -32,13 +31,13 @@ A matrix is **skew-symmetric** if:
 A^T = -A
 {{< /katex >}}
 
+- All diagonal elements are zero.
+
 This implies:
 
 {{< katex display=true >}}
 a_{ii} = 0
 {{< /katex >}}
-
-- All diagonal elements are zero.
 
 ---
 
@@ -132,6 +131,7 @@ Solve using **forward substitution**.
 For upper triangular:
 
 Use **back substitution**.
+
 ---
 
 ## 5. Diagonal Matrix
@@ -198,18 +198,79 @@ AI = IA = A
 
 ## 7. Positive Definite Matrix ⭐
 
-A symmetric matrix \(A\) is **positive definite** if:
-
 {{< katex display=true >}}
 \mathbf{x}^T A \mathbf{x} > 0 \quad \forall \mathbf{x} \neq 0
 {{< /katex >}}
+
+### Positive Definite Matrix – Properties
+
+*A (The Matrix)*:
+- Symmetry: must be symmetric, meaning  
+{{< colour "green" >}}
+{{< katex display=true >}}
+A^T = A
+{{< /katex >}}
+{{< /colour >}}
+
+- Eigenvalues: All eigenvalues are strictly positive  
+{{< colour "green" >}}
+{{< katex display=true >}}
+\lambda_i > 0
+{{< /katex >}}
+{{< /colour >}}
+
+- Determinant: The determinant of A is positive, as it is the product of its eigenvalues  
+{{< colour "green" >}}
+{{< katex display=true >}}
+\det(A) = \prod_i \lambda_i > 0
+{{< /katex >}}
+{{< /colour >}}
+
+- Invertibility: is non-singular, meaning  
+{{< colour "green" >}}
+{{< katex display=true >}}
+A^{-1} \text{ exists}
+{{< /katex >}}
+{{< /colour >}}
+
+- Diagonal Elements: All diagonal elements are positive  
+{{< colour "green" >}}
+{{< katex display=true >}}
+a_{ii} > 0
+{{< /katex >}}
+{{< /colour >}}
+
+*x (The Vector)*:
+- Arbitrary Non-zero Vector:  
+{{< colour "green" >}}
+{{< katex display=true >}}
+\mathbf{x} \in \mathbb{R}^n,\quad \mathbf{x} \ne 0
+{{< /katex >}}
+{{< /colour >}}
+
+- Quadratic Form: The expression  
+{{< colour "green" >}}
+{{< katex display=true >}}
+\mathbf{x}^T A \mathbf{x}
+{{< /katex >}}
+{{< /colour >}}
+is a scalar (a real number).
+
+- Geometric Interpretation:  
+{{< colour "green" >}}
+{{< katex display=true >}}
+\mathbf{x}^T A \mathbf{x} > 0
+{{< /katex >}}
+{{< /colour >}}
+
+The vectors \( \mathbf{x} \) and \( A\mathbf{x} \) always form an acute angle.
 
 ---
 
 ## 8. Positive Semi-Definite
 
 {{< katex display=true >}}
-\mathbf{x}^T A \mathbf{x} \ge 0
+\mathbf{x}^T A \mathbf{x} \ge 0 \quad \forall \mathbf{x} \neq 0
 {{< /katex >}}
 
 ---
