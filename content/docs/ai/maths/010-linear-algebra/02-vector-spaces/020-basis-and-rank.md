@@ -17,13 +17,7 @@ Basis = independence + spanning.
 Rank tells us how many independent directions exist in a matrix.
 {{% /hint %}}
 
----
-
-# Basis (From Lecture Understanding)
-
-From lecture discussions:
-
-- A basis must satisfy two conditions:
+A basis must satisfy two conditions ⭐
   1. Vectors must be linearly independent  
   2. Vectors must span the space  
 
@@ -31,10 +25,6 @@ This means:
 
 - No redundancy (independence)  
 - Full coverage (spanning)  
-
----
-
-# Formal Definition
 
 {{< katex display=true >}}
 \text{Span}(v_1, v_2, \dots, v_k) = V
@@ -46,7 +36,7 @@ c_1 v_1 + \cdots + c_k v_k = 0 \Rightarrow c_i = 0
 
 ---
 
-# Why Basis Matters
+## Why Basis Matters
 
 - Represents space efficiently  
 - Removes redundancy  
@@ -99,17 +89,15 @@ Free variables indicate degrees of freedom in the solution.
 
 ---
 
-# Rank (From Lecture Insight)
+## Note ⭐
 
-From transcripts:
-
-- Rank = number of pivot elements in REF  
+- Rank = number of pivot elements in REF / RREF 
 - Pivot columns are independent  
 - Non-pivot columns are dependent  
 
 ---
 
-# How to Find Rank (Exam Method)
+## How to Find Rank ⭐
 
 Step-by-step:
 
@@ -151,7 +139,7 @@ A x = 0
 
 ---
 
-# Solution of Linear Systems (Important)
+# Solution of Linear Systems ⭐
 
 {{< katex display=true >}}
 A x = b
@@ -165,7 +153,7 @@ System is consistent if:
 
 ---
 
-# Interpretation of Solutions
+## Interpretation of Solutions
 
 | Condition | Result |
 |---------|--------|
@@ -175,7 +163,7 @@ System is consistent if:
 
 ---
 
-# Geometric Interpretation
+## Geometric Interpretation
 
 - Rank = number of independent directions  
 - Basis = coordinate system  
@@ -188,7 +176,7 @@ Examples:
 
 ---
 
-# Basis from Matrix (Exam Pattern)
+## Basis from Matrix ⭐
 
 Steps:
 
@@ -200,7 +188,7 @@ These columns form a basis.
 
 ---
 
-# Example
+## Example
 
 {{< katex display=true >}}
 A =
@@ -217,7 +205,7 @@ Basis = first column
 
 ---
 
-# Important Theorems
+# Important Theorems ⭐
 
 1. Pivot columns form a basis  
 2. Rank = number of pivots  
