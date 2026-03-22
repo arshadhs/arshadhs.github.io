@@ -198,6 +198,8 @@ AI = IA = A
 
 ## 7. Positive Definite Matrix ⭐
 
+A **symmetric matrix A** is positive definite if:
+
 {{< katex display=true >}}
 \mathbf{x}^T A \mathbf{x} > 0 \quad \forall \mathbf{x} \neq 0
 {{< /katex >}}
@@ -240,6 +242,11 @@ a_{ii} > 0
 {{< /katex >}}
 {{< /colour >}}
 
+- All eigenvalues are positive  
+- Determinant is positive  
+- Matrix is invertible  
+- Cholesky decomposition exists  
+
 *x (The Vector)*:
 - Arbitrary Non-zero Vector:  
 {{< colour "green" >}}
@@ -273,18 +280,6 @@ The vectors \( \mathbf{x} \) and \( A\mathbf{x} \) always form an acute angle.
 \mathbf{x}^T A \mathbf{x} \ge 0 \quad \forall \mathbf{x} \neq 0
 {{< /katex >}}
 
----
-
-### Properties
-
-If \(A\) is positive definite:
-
-- All eigenvalues are positive  
-- Determinant is positive  
-- Matrix is invertible  
-- Cholesky decomposition exists  
-
----
 
 ### Why Positive Definite Matters in ML
 
