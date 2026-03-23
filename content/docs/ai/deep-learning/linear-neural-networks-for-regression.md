@@ -40,19 +40,21 @@ This is the cleanest “first example” of the full ML pipeline: data → model
 
 {{< mermaid >}}
 flowchart LR
-  D["Data<br/>X, y"] --> M["Model<br/>Single neuron"]
-  M --> L["Loss<br/>MSE"]
-  L --> O["Optimiser<br/>Batch Gradient Descent"]
+  D["Data<br/>X, y"] --> M["Linear model<br/>w, b<br/>Single neuron"]
+  M --> A["Activation<br/>Identity"]
+  A --> L["Loss<br/>MSE (Squared error)"]
+  L --> O["Optimiser<br/>Batch Gradient DescentBatch GD / Mini-batch GD"]
   O --> P["Parameters<br/>w, b"]
-  P --> I["Inference<br/>Predict ŷ for new x"]
+  P --> I["Inference<br/>Predict ŷ (number) for new x"]
 
   %% Pastel colour scheme
   style D fill:#E3F2FD,stroke:#1E88E5,stroke-width:1px
   style M fill:#E8F5E9,stroke:#43A047,stroke-width:1px
-  style L fill:#FFF3E0,stroke:#FB8C00,stroke-width:1px
+  style A fill:#FFF3E0,stroke:#FB8C00,stroke-width:1px
+  style L fill:#FCE4EC,stroke:#D81B60,stroke-width:1px
   style O fill:#F3E5F5,stroke:#8E24AA,stroke-width:1px
-  style P fill:#FCE4EC,stroke:#D81B60,stroke-width:1px
-  style I fill:#E0F7FA,stroke:#00838F,stroke-width:1px
+  style P fill:#E0F7FA,stroke:#00838F,stroke-width:1px
+  style I fill:#F1F8E9,stroke:#558B2F,stroke-width:1px
 {{< /mermaid >}}
 
 ## Mathematical Form
