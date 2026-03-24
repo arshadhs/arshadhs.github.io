@@ -15,6 +15,19 @@ bookCollapseSection: true
 
 ---
 
+## Operational Steps for Neural Architectures
+
+| Step | Perceptron (Boolean/Logic) | Linear Regression Network | Binary Classification (Logistic) | DFNN / MLP (Classification) |
+|------|----------------------------|--------------------------|----------------------------------|------------------------------|
+| **1. Input** | Take binary or discrete inputs {{< katex >}}x_1, \dots, x_n{{< /katex >}} | Take numerical features {{< katex >}}x{{< /katex >}} | Take numerical features {{< katex >}}x{{< /katex >}} | Take high-dimensional numerical or categorical features |
+| **2. Weighted Sum** | Single calculation: {{< katex >}}z = \sum (w_i x_i) + b{{< /katex >}} | Single calculation: {{< katex >}}\hat{y} = w_0 + w_1 x{{< /katex >}} | Single calculation: {{< katex >}}z = W x + b{{< /katex >}} | Multiple stages: {{< katex >}}z^{[l]} = W^{[l]} a^{[l-1]} + b^{[l]}{{< /katex >}} for each layer {{< katex >}}l{{< /katex >}} |
+| **3. Activation** | Step Function: Output 1 if {{< katex >}}z \geq 0{{< /katex >}}, else 0 | Identity: The output remains {{< katex >}}z{{< /katex >}} (no non-linear change) | Sigmoid: Maps {{< katex >}}z{{< /katex >}} to a probability between 0 and 1 | ReLU for hidden layers; Softmax/Sigmoid for the output layer |
+| **4. Loss / Error** | Error = Target − Output | Mean Squared Error (MSE): {{< katex >}}J = \frac{1}{2N} \sum (Y - \hat{y})^2{{< /katex >}} | Binary Cross-Entropy (BCE): penalises based on probability distance | BCE or Categorical Cross-Entropy for multiple classes |
+| **5. Optimisation** | Update weights only on misclassification | Gradient Descent: compute gradients at initialization and update weights | Backpropagation: compute error signals {{< katex >}}\delta{{< /katex >}} and gradients {{< katex >}}dW{{< /katex >}} | Backpropagation: recursive chain rule to update all hidden layer weights |
+| **6. Output** | Discrete Boolean value (0 or 1) | Continuous numerical value (e.g., house prices) | Single probability score or class label | A vector of probabilities for multiple classes |
+
+---
+
 {{< section_tree >}}
 
 ---
