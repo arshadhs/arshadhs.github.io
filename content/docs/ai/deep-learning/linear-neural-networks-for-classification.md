@@ -20,6 +20,27 @@ Neural-network view:
 
 ---
 
+{{< mermaid >}}
+flowchart LR
+  D["Data<br/>X, y"] --> M["Linear model<br/>w, b"]
+  M --> A["Activation<br/>Sigmoid / Softmax"]
+  A --> L["Loss<br/>Cross-entropy"]
+  L --> O["Optimiser<br/>Mini-batch GD / Adam"]
+  O --> P["Updated parameters<br/>w, b"]
+  P --> I["Inference<br/>Probabilities → class"]
+
+  %% Pastel colour scheme
+  style D fill:#E3F2FD,stroke:#1E88E5,stroke-width:1px
+  style M fill:#E8F5E9,stroke:#43A047,stroke-width:1px
+  style A fill:#FFF3E0,stroke:#FB8C00,stroke-width:1px
+  style L fill:#FCE4EC,stroke:#D81B60,stroke-width:1px
+  style O fill:#F3E5F5,stroke:#8E24AA,stroke-width:1px
+  style P fill:#E0F7FA,stroke:#00838F,stroke-width:1px
+  style I fill:#F1F8E9,stroke:#558B2F,stroke-width:1px
+{{< /mermaid >}}
+
+---
+
 ## Classification
 
 Classification predicts a **discrete class label**.  
@@ -234,29 +255,6 @@ Binary:
 Multi-class:
 - compute {{< katex >}}\hat{p}_1,\dots,\hat{p}_K{{< /katex >}}
 - choose {{< katex >}}\arg\max_k \hat{p}_k{{< /katex >}}
-
----
-
-## Pipeline view
-
-{{< mermaid >}}
-flowchart LR
-  D["Data<br/>X, y"] --> M["Linear model<br/>w, b"]
-  M --> A["Activation<br/>Sigmoid / Softmax"]
-  A --> L["Loss<br/>Cross-entropy"]
-  L --> O["Optimiser<br/>Mini-batch GD / Adam"]
-  O --> P["Updated parameters<br/>w, b"]
-  P --> I["Inference<br/>Probabilities → class"]
-
-  %% Pastel colour scheme
-  style D fill:#E3F2FD,stroke:#1E88E5,stroke-width:1px
-  style M fill:#E8F5E9,stroke:#43A047,stroke-width:1px
-  style A fill:#FFF3E0,stroke:#FB8C00,stroke-width:1px
-  style L fill:#FCE4EC,stroke:#D81B60,stroke-width:1px
-  style O fill:#F3E5F5,stroke:#8E24AA,stroke-width:1px
-  style P fill:#E0F7FA,stroke:#00838F,stroke-width:1px
-  style I fill:#F1F8E9,stroke:#558B2F,stroke-width:1px
-{{< /mermaid >}}
 
 ---
 

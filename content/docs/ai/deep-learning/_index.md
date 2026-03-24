@@ -113,6 +113,19 @@ flowchart LR
 
 ---
 
+## Operational Steps for Neural Architectures
+
+| Step | Perceptron (Boolean/Logic) | Linear Regression Network | Binary Classification (Logistic) | DFNN / MLP (Classification) |
+|------|----------------------------|--------------------------|----------------------------------|------------------------------|
+| **1. Input** | Binary/discrete inputs {{< katex >}}x_1, \dots, x_n{{< /katex >}} | Numerical features {{< katex >}}x{{< /katex >}} | Numerical features {{< katex >}}x{{< /katex >}} | High-dimensional numerical or categorical features |
+| **2. Weighted Sum** | {{< katex >}}z = \sum (w_i x_i) + b{{< /katex >}} | {{< katex >}}\hat{y} = w_0 + w_1 x{{< /katex >}} | {{< katex >}}z = W x + b{{< /katex >}} | {{< katex >}}z^{[l]} = W^{[l]} a^{[l-1]} + b^{[l]}{{< /katex >}} |
+| **3. Activation** | Step: 1 if {{< katex >}}z \geq 0{{< /katex >}}, else 0 | Identity: output = {{< katex >}}z{{< /katex >}} | Sigmoid: maps {{< katex >}}z{{< /katex >}} to probability | ReLU (hidden), Softmax/Sigmoid (output) |
+| **4. Loss / Error** | Error = Target − Output | {{< katex >}}J = \frac{1}{2N} \sum (Y - \hat{y})^2{{< /katex >}} | Binary Cross-Entropy (BCE) | BCE or Categorical Cross-Entropy |
+| **5. Optimisation** | Update on misclassification | Gradient Descent | Backpropagation (single layer) | Backpropagation (multi-layer chain rule) |
+| **6. Output** | Boolean (0 or 1) | Continuous value | Probability score | Probability vector (multi-class) |
+
+---
+
 ## Applications
 
 - Computer Vision (e.g., face detection, medical imaging)

@@ -17,26 +17,7 @@ A **linear neural network for regression** is a model that predicts a **continuo
 - Prediction (inference)
 - Eg: Auto MPG (UCI) style prediction with a single neuron (from-scratch code)
 
-## Regression
-
-Regression is a supervised learning task that predicts a continuous-valued output based on input features.
-
-Typical use-cases:
-- house prices prediction
-- temperature forecasting
-- stock price prediction
-- other continuous predictions
-
-## Linear Regression
-
-Linear regression assumes the output is a linear combination of the input features.
-
-{{% hint info %}}
-**Linear regression as a single-neuron neural network** with an **identity activation**.  
-This is the cleanest “first example” of the full ML pipeline: data → model → loss → optimisation → evaluation.
-{{% /hint %}}
-
-## ML Pipeline
+---
 
 {{< mermaid >}}
 flowchart LR
@@ -56,6 +37,27 @@ flowchart LR
   style P fill:#E0F7FA,stroke:#00838F,stroke-width:1px
   style I fill:#F1F8E9,stroke:#558B2F,stroke-width:1px
 {{< /mermaid >}}
+
+---
+
+## Regression
+
+Regression is a supervised learning task that predicts a continuous-valued output based on input features.
+
+Typical use-cases:
+- house prices prediction
+- temperature forecasting
+- stock price prediction
+- other continuous predictions
+
+## Linear Regression
+
+Linear regression assumes the output is a linear combination of the input features.
+
+{{% hint info %}}
+**Linear regression as a single-neuron neural network** with an **identity activation**.  
+This is the cleanest “first example” of the full ML pipeline: data → model → loss → optimisation → evaluation.
+{{% /hint %}}
 
 ## Mathematical Form
 
