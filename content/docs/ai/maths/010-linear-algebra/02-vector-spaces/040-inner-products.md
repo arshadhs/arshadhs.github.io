@@ -24,7 +24,7 @@ T --> FN["Function-space<br/>(integral)"]
 T --> HERM["Complex<br/>Hermitian"]
 T --> MAT["Matrix<br/>inner product<br/>(Frobenius)"]
 
-DOT --> Rn["Vectors in<br/>R^n {{< katex >}}\mathbb{R}^n{{< /katex >}}"]
+DOT --> Rn["Vectors in<br/>{{< katex >}}\mathbb{R}^n{{< /katex >}}"]
 WIP --> SPD["SPD matrix<br/>W"]
 FN --> L2["L2 space<br/>functions"]
 HERM --> Cn["Vectors in<br/>C^n"]
