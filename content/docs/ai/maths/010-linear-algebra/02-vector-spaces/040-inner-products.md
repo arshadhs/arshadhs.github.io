@@ -4,7 +4,6 @@ draft: false
 tags: ["Machine Learning", "Mathematics", "Linear Algebra"]
 categories: ["AI", "ML"]
 weight: 40
----
 
 # Inner Products and Dot Product
 
@@ -19,13 +18,13 @@ It allows us to measure:
 
 {{< mermaid >}}
 flowchart TD
-T["Inner<br/>products<br/>(types)"] --> DOT["Euclidean<br/>dot product"]
+T["Inner<br/>products<br/>(types)"] --> DOT["Euclidean<br/>Dot product"]
 T --> WIP["Weighted<br/>inner product"]
 T --> FN["Function-space<br/>(integral)"]
 T --> HERM["Complex<br/>Hermitian"]
 T --> MAT["Matrix<br/>inner product<br/>(Frobenius)"]
 
-DOT --> Rn["Vectors in<br/>R^n"]
+DOT --> Rn["Vectors in<br/>R^n \mathbb{R}^n"]
 WIP --> SPD["SPD matrix<br/>W"]
 FN --> L2["L2 space<br/>functions"]
 HERM --> Cn["Vectors in<br/>C^n"]
