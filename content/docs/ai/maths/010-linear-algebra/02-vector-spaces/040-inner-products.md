@@ -17,6 +17,35 @@ It allows us to measure:
 - projections  
 - orthogonality  
 
+{{< mermaid >}}
+flowchart TD
+T["Inner<br/>products<br/>(types)"] --> DOT["Euclidean<br/>dot product"]
+T --> WIP["Weighted<br/>inner product"]
+T --> FN["Function-space<br/>(integral)"]
+T --> HERM["Complex<br/>Hermitian"]
+T --> MAT["Matrix<br/>inner product<br/>(Frobenius)"]
+
+DOT --> Rn["Vectors in<br/>R^n"]
+WIP --> SPD["SPD matrix<br/>W"]
+FN --> L2["L2 space<br/>functions"]
+HERM --> Cn["Vectors in<br/>C^n"]
+MAT --> Mnm["Matrices<br/>R^{m×n}"]
+
+style T fill:#90CAF9,stroke:#1E88E5,color:#000
+
+style DOT fill:#C8E6C9,stroke:#2E7D32,color:#000
+style WIP fill:#C8E6C9,stroke:#2E7D32,color:#000
+style FN fill:#C8E6C9,stroke:#2E7D32,color:#000
+style HERM fill:#C8E6C9,stroke:#2E7D32,color:#000
+style MAT fill:#C8E6C9,stroke:#2E7D32,color:#000
+
+style Rn fill:#CE93D8,stroke:#8E24AA,color:#000
+style SPD fill:#CE93D8,stroke:#8E24AA,color:#000
+style L2 fill:#CE93D8,stroke:#8E24AA,color:#000
+style Cn fill:#CE93D8,stroke:#8E24AA,color:#000
+style Mnm fill:#CE93D8,stroke:#8E24AA,color:#000
+{{< /mermaid >}}
+
 ---
 
 ## Definition
