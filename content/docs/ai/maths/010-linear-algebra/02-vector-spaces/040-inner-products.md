@@ -4,6 +4,7 @@ draft: false
 tags: ["Machine Learning", "Mathematics", "Linear Algebra"]
 categories: ["AI", "ML"]
 weight: 40
+---
 
 # Inner Products and Dot Product
 
