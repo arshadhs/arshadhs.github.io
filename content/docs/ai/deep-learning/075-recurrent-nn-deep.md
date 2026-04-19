@@ -550,9 +550,6 @@ Remember the transcript guidance:
 - **GRU and LSTM exist mainly to reduce the training difficulty of vanilla RNNs on long sequences.**
 {{% /hint %}}
 
-## Related pages
-
-- [My Notes: RNN Fundamentals]({{% relref "080-rnn-fundamentals.md" %}})
 ## References
 - **Dive into deep learning. Cambridge University Press.**. (T1 – Ch 10)
 - R4 – Ch 9
