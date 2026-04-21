@@ -30,11 +30,11 @@ Preprocessing ensures data is suitable for machine learning.
 
 # 2. Missing Values
 
-## Why they occur
+**Why they occur**
 - Sensor errors
 - Data collection issues
 
-## Methods
+**Methods**
 
 - Numerical → Median (robust to outliers)
 - Categorical → Mode
@@ -43,7 +43,7 @@ Preprocessing ensures data is suitable for machine learning.
 
 # 3. Outlier Handling
 
-## IQR Method
+**IQR Method**
 
 \[
 IQR = Q3 - Q1
@@ -60,7 +60,7 @@ Upper = Q3 + 1.5 \times IQR
 
 ---
 
-## Isolation Forest
+**Isolation Forest**
 
 - Detects anomalies using tree structures
 - Works on multiple features
@@ -72,11 +72,11 @@ Upper = Q3 + 1.5 \times IQR
 
 # 4. Encoding
 
-## One-Hot Encoding
+**One-Hot Encoding**
 - Converts categories to binary columns
 - No ordering assumption
 
-## Ordinal Encoding
+**Ordinal Encoding**
 - Converts categories to integers
 - Can introduce false relationships
 
@@ -84,17 +84,17 @@ Upper = Q3 + 1.5 \times IQR
 
 # 5. Feature Scaling
 
-## StandardScaler
+**StandardScaler**
 \[
 z = \frac{x - \mu}{\sigma}
 \]
 
-## MinMaxScaler
+**MinMaxScaler**
 \[
 x' = \frac{x - min}{max - min}
 \]
 
-## RobustScaler
+**RobustScaler**
 \[
 x' = \frac{x - median}{IQR}
 \]
@@ -105,7 +105,7 @@ x' = \frac{x - median}{IQR}
 
 # 6. Feature Engineering
 
-## Examples
+**Examples**
 
 - Discomfort Index = Temperature × Humidity  
 - Pressure × Visibility  
@@ -115,10 +115,10 @@ x' = \frac{x - median}{IQR}
 
 # 7. Feature Selection
 
-## Mutual Information
+**Mutual Information**
 - Detects non-linear relationships
 
-## Random Forest Importance
+**Random Forest Importance**
 - Model-based ranking
 
 ---
@@ -129,21 +129,21 @@ x' = \frac{x - median}{IQR}
 
 # 8.1 k-Nearest Neighbours (k-NN)
 
-## Idea
+**Idea**
 - Predict based on closest data points
 
-## Key concept
+**Key concept**
 Distance:
 
 \[
 d = \sqrt{\sum (x_i - y_i)^2}
 \]
 
-## Pros
+**Pros**
 - Simple
 - No training phase
 
-## Cons
+**Cons**
 - Sensitive to scaling
 - Slow on large datasets
 
@@ -151,18 +151,18 @@ d = \sqrt{\sum (x_i - y_i)^2}
 
 # 8.2 Support Vector Machine (SVM)
 
-## Idea
+**Idea**
 - Find best boundary (hyperplane)
 
-## Linear SVM
+**Linear SVM**
 \[
 w \cdot x + b = 0
 \]
 
-## Pros
+**Pros**
 - Works well in high dimensions
 
-## Cons
+**Cons**
 - Sensitive to parameters
 - Requires scaling
 
@@ -170,51 +170,51 @@ w \cdot x + b = 0
 
 # 8.3 Decision Tree
 
-## Idea
+**Idea**
 - Split data based on conditions
 
-## Example rule
+**Example rule**
 Temperature > 25 → Hot
 
-## Pros
+**Pros**
 - Easy to interpret
 
-## Cons
+**Cons
 - Overfitting
 
 ---
 
 # 8.4 Naive Bayes
 
-## Idea
+**Idea**
 Based on probability:
 
 \[
 P(A|B) = \frac{P(B|A)P(A)}{P(B)}
 \]
 
-## Assumption
+**Assumption**
 Features are independent
 
-## Pros
+**Pros**
 - Fast
 - Works well for simple problems
 
-## Cons
+**Cons**
 - Independence assumption unrealistic
 
 ---
 
 # 8.5 Random Forest
 
-## Idea
+**Idea**
 - Ensemble of decision trees
 
-## Pros
+**Pros**
 - High accuracy
 - Handles non-linearity
 
-## Cons
+**Cons**
 - Less interpretable
 
 ---
