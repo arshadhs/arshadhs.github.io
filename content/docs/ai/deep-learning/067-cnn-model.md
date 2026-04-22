@@ -1,25 +1,26 @@
 ---
-title: "Convolutional Neural Networks (CNN) - Complete Guide"
+title: "CNN Pipeline"
+date: 2026-04-22
 draft: false
-tags: ["Machine Learning", "Deep Learning", "CNN"]
-categories: ["AI", "ML"]
-weight: 1325
+weight: 1326
+tags: ["deep-learning", "cnn", "keras"]
+categories: ["ai", "deep-learning"]
 ---
 
-# Convolutional Neural Networks (CNN)
+# CNN Pipeline: Preprocessing & Models
 
-Convolutional Neural Networks are specialised neural networks designed for **grid-like data such as images**.
+- Understand CNN concepts deeply
+- Build CNN models step-by-step
+- Apply CNNs in assignments using Keras
 
-They exploit:
-- Spatial structure
-- Local connectivity
-- Parameter sharing
+{{% hint info %}}
+Think of CNN as a pipeline:
+Image → Features → Patterns → Prediction
+{{% /hint %}}
 
 ---
 
-# Image Representation
-
-An image is represented as a tensor:
+# 1. Image Representation
 
 {{% colour "green" %}}
 {{< katex display=true >}}
@@ -27,35 +28,26 @@ X \in \mathbb{R}^{H \times W \times C}
 {{< /katex >}}
 {{% /colour %}}
 
-Where:
-- H = height
-- W = width
-- C = channels
+- H = Height  
+- W = Width  
+- C = Channels  
 
 ---
 
-# Convolution Operation
-
-A filter (kernel) slides over the image:
+# 2. Convolution Operation
 
 {{% colour "green" %}}
 {{< katex display=true >}}
-Z(i,j) = \sum_{m}\sum_{n} X(i+m, j+n)K(m,n)
+Z(i,j) = \sum_{m,n} X(i+m, j+n) \cdot K(m,n)
 {{< /katex >}}
 {{% /colour %}}
 
-- Produces a **feature map**
-- Detects patterns like edges
+- Sliding filter extracts features  
+- Produces feature maps  
 
 ---
 
-# Stride and Padding
-
-## Stride
-Controls movement of filter
-
-## Padding
-Adds zeros to preserve size
+# 3. Stride & Padding
 
 {{% colour "green" %}}
 {{< katex display=true >}}
@@ -65,9 +57,7 @@ Output = \frac{N - F + 2P}{S} + 1
 
 ---
 
-# Activation Functions
-
-## ReLU
+# 4. Activation (ReLU)
 
 {{% colour "green" %}}
 {{< katex display=true >}}
@@ -77,23 +67,14 @@ ReLU(x) = max(0, x)
 
 ---
 
-# Pooling
+# 5. Pooling
 
-## Max Pooling
-- Takes maximum value
-
-## Average Pooling
-- Takes mean
-
-Reduces:
-- Computation
-- Overfitting
+- Max Pooling → strongest feature  
+- Average Pooling → smooth  
 
 ---
 
-# Global Average Pooling (GAP)
-
-Replaces flatten layer:
+# 6. Global Average Pooling
 
 {{% colour "green" %}}
 {{< katex display=true >}}
@@ -101,29 +82,9 @@ y_k = \frac{1}{HW} \sum_{i,j} x_{i,j,k}
 {{< /katex >}}
 {{% /colour %}}
 
-Advantages:
-- Fewer parameters
-- Better generalisation
-
 ---
 
-# CNN Architecture
-
-```mermaid
-graph LR
-A[Input Image] --> B[Conv]
-B --> C[ReLU]
-C --> D[Pooling]
-D --> E[Conv Layers]
-E --> F[GAP]
-F --> G[Softmax]
-```
-
----
-
-# Loss Function (Classification)
-
-## Cross Entropy
+# 7. Loss Function
 
 {{% colour "green" %}}
 {{< katex display=true >}}
@@ -133,63 +94,91 @@ L = - \sum y \log(\hat{y})
 
 ---
 
-# Backpropagation in CNN
-
-Gradients computed via chain rule:
-
-{{% colour "green" %}}
-{{< katex display=true >}}
-\frac{\partial L}{\partial W}
-{{< /katex >}}
-{{% /colour %}}
-
----
-
-# Why CNN Works
-
-- Local feature detection
-- Translation invariance
-- Hierarchical learning
-
----
-
-# Deep CNN Architectures
-
-## VGG
-- Stacked 3x3 convolutions
-
-## ResNet
-- Skip connections
-
-{{% colour "green" %}}
-{{< katex display=true >}}
-y = F(x) + x
-{{< /katex >}}
-{{% /colour %}}
-
-## Inception
-- Parallel convolutions
-
----
-
-# Training Pipeline
+# 8. CNN Architecture
 
 ```mermaid
 graph LR
-A[Input] --> B[Forward Pass]
-B --> C[Loss]
-C --> D[Backprop]
-D --> E[Update Weights]
+A[Input Image] --> B[Conv]
+B --> C[ReLU]
+C --> D[Pooling]
+D --> E[Conv Layers]
+E --> F[Flatten / GAP]
+F --> G[Dense]
+G --> H[Output]
 ```
 
 ---
 
-# Summary
+# 9. Training
 
-- CNNs process images using convolution
-- Use pooling for reduction
-- GAP replaces dense layers
-- Deep architectures improve performance
+- Forward pass  
+- Loss computation  
+- Backpropagation  
+- Weight update  
+
+---
+
+# 10. Keras Implementation
+
+## Model
+
+```python
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Conv2D, MaxPooling2D, Dense, Flatten
+
+model = Sequential()
+
+model.add(Conv2D(32, (3,3), activation='relu', input_shape=(64,64,3)))
+model.add(MaxPooling2D((2,2)))
+
+model.add(Conv2D(64, (3,3), activation='relu'))
+model.add(MaxPooling2D((2,2)))
+
+model.add(Flatten())
+
+model.add(Dense(128, activation='relu'))
+model.add(Dense(1, activation='sigmoid'))
+```
+
+---
+
+## Compile
+
+```python
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+```
+
+---
+
+## Train
+
+```python
+model.fit(X_train, y_train, epochs=10, batch_size=32)
+```
+
+---
+
+## Predict
+
+```python
+pred = model.predict(X_test)
+```
+
+---
+
+# 11. Tips
+
+- Normalize images  
+- Use small filters  
+- Avoid too many dense layers  
+
+---
+
+# 12. Summary
+
+{{% hint info %}}
+CNN = Automatic feature extractor + classifier
+{{% /hint %}}
 
 ---
 
