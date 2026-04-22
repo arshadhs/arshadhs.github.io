@@ -2,7 +2,7 @@
 title: "CNN Pipeline"
 date: 2026-04-22
 draft: false
-weight: 1326
+weight: 657
 tags: ["deep-learning", "cnn", "keras"]
 categories: ["ai", "deep-learning"]
 ---
