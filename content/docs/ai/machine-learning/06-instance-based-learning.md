@@ -56,7 +56,7 @@ In your course handout, **Instance-based Learning** is a full module and explici
 
 ---
 {{< mermaid >}}
-graph TD
+graph LR
     IBL[Instance-Based Learning]
     
     %% Main Branches
