@@ -33,6 +33,19 @@ and knowing why nearby data should matter more than faraway data.
 
 ---
 
+### Comparison: Instance-Based vs. Model-Based
+
+
+| Feature | Instance-Based Learning | Model-Based Learning |
+| :--- | :--- | :--- |
+| **Approach** | Memorizes examples | Learns general patterns/rules |
+| **Training Time** | Minimal (just stores data) | Can be long (building the model) |
+| **Prediction Time** | Slow (searches all data) | Fast (uses a pre-built formula) |
+| **Storage** | High (must keep all data) | Low (only stores the model) |
+| **Adaptability** | Adapts instantly to new data | Requires retraining to update |
+
+---
+
 ## Where this topic fits
 
 In your course handout, **Instance-based Learning** is a full module and explicitly includes:
@@ -41,10 +54,35 @@ In your course handout, **Instance-based Learning** is a full module and explici
 - Locally Weighted Regression (LWR) Learning
 - Radial Basis Functions
 
-So this is not a side topic.
-
-It is part of the core syllabus and is useful for both understanding and exams.
-
+---
+{{< mermaid >}}
+graph TD
+    IBL[Instance-Based Learning]
+    
+    %% Main Branches
+    IBL --> Numeric[Numerical / Distance-Based]
+    IBL --> Symbolic[Symbolic / Reasoning-Based]
+    IBL --> Density[Density / Distribution-Based]
+    
+    %% Numerical Examples
+    Numeric --> KNN[k-Nearest Neighbours]
+    Numeric --> LWR[Locally Weighted Regression]
+    Numeric --> RBF[Radial Basis Functions]
+    Numeric --> LVQ[Learning Vector Quantization]
+    
+    %% Symbolic Examples
+    Symbolic --> CBR[Case-Based Reasoning]
+    
+    %% Density Examples
+    Density --> KDE[Kernel Density Estimation]
+    Density --> PW[Parzen Windows]
+    
+    %% Styling
+    style IBL fill:#f9f,stroke:#333,stroke-width:4px
+    style Numeric fill:#bbf,stroke:#333
+    style Symbolic fill:#dfd,stroke:#333
+    style Density fill:#ffd,stroke:#333
+{{< /mermaid >}}
 ---
 
 ## Model-based vs Instance-based learning
