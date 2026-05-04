@@ -392,7 +392,7 @@ A larger distance means smaller weight; a smaller distance means larger weight. 
 
 ---
 
-## LWR
+## Locally Weighted Regression
 
 LWR is the regression counterpart of the "nearby points should matter more" idea, and is one of the key syllabus items in this module.
 
@@ -459,11 +459,7 @@ The kernel is not one formula for all datasets — experimentation is needed. Po
 
 ---
 
-## RBF
-
-RBF is listed explicitly in the course handout as part of the core syllabus.
-
-### Core Idea
+## Radial Basis Functions (RBF)
 
 An RBF is a function whose value depends mainly on the **distance from a centre**. A common Gaussian RBF:
 
