@@ -26,7 +26,7 @@ Instance-based Learning covers three linked ideas:
 
 ---
 
-### Comparison: Instance-Based vs. Model-Based
+## Model-Based vs. Instance-Based
 
 
 | Feature | Instance-Based Learning | Model-Based Learning |
@@ -36,8 +36,6 @@ Instance-based Learning covers three linked ideas:
 | **Prediction Time** | Slow (searches all data) | Fast (uses a pre-built formula) |
 | **Storage** | High (must keep all data) | Low (only stores the model) |
 | **Adaptability** | Adapts instantly to new data | Requires retraining to update |
-
----
 
 {{< mermaid >}}
 graph LR
@@ -60,17 +58,20 @@ graph LR
     %% Density Examples
     Density --> KDE[Kernel Density Estimation]
     Density --> PW[Parzen Windows]
-    
-    %% Styling
-    style IBL fill:#f9f,stroke:#333,stroke-width:4px
-    style Numeric fill:#bbf,stroke:#333
-    style Symbolic fill:#dfd,stroke:#333
-    style Density fill:#ffd,stroke:#333
+
+    %% Pastel Styling
+    style IBL fill:#F8D7E8,stroke:#7A6170,stroke-width:3px,color:#2F2F2F
+    style Numeric fill:#D8EAFE,stroke:#5E7084,color:#2F2F2F
+    style Symbolic fill:#DDF5E4,stroke:#637A68,color:#2F2F2F
+    style Density fill:#FFF1C7,stroke:#8A7A54,color:#2F2F2F
+    style KNN fill:#E6E0FF,stroke:#6F6690,color:#2F2F2F
+    style LWR fill:#D7F3F0,stroke:#5B7D7A,color:#2F2F2F
+    style RBF fill:#FFE0CC,stroke:#8B6A58,color:#2F2F2F
+    style LVQ fill:#EDE7D9,stroke:#7B7062,color:#2F2F2F
+    style CBR fill:#E2F0CB,stroke:#687A55,color:#2F2F2F
+    style KDE fill:#FFE5EC,stroke:#8A6570,color:#2F2F2F
+    style PW fill:#FDE2E4,stroke:#8A6570,color:#2F2F2F
 {{< /mermaid >}}
-
----
-
-## Model-based vs Instance-based Learning
 
 **Model-based** includes:
 
@@ -78,7 +79,10 @@ graph LR
 - Logistic Regression
 - Decision Trees
 
-These methods try to learn a compact predictive model during training. Instance-based learning behaves differently: it keeps the training data and postpones most of the computation until prediction time.
+These methods try to learn a compact predictive model during training. 
+
+Instance-based learning behaves differently:
+it keeps the training data and postpones most of the computation until prediction time.
 
 {{< mermaid >}}
 flowchart LR
@@ -91,6 +95,18 @@ flowchart LR
   D --> H[Store training instances]
   D --> I[Less training time]
   D --> J[More prediction time]
+
+  %% Pastel Styling
+  style A fill:#FFF1C7,stroke:#8A7A54,color:#2F2F2F
+  style B fill:#F8D7E8,stroke:#7A6170,color:#2F2F2F
+  style C fill:#D8EAFE,stroke:#5E7084,color:#2F2F2F
+  style D fill:#DDF5E4,stroke:#637A68,color:#2F2F2F
+  style E fill:#EAF4FF,stroke:#6B7D90,color:#2F2F2F
+  style F fill:#EAF4FF,stroke:#6B7D90,color:#2F2F2F
+  style G fill:#EAF4FF,stroke:#6B7D90,color:#2F2F2F
+  style H fill:#EAF8EE,stroke:#637A68,color:#2F2F2F
+  style I fill:#EAF8EE,stroke:#637A68,color:#2F2F2F
+  style J fill:#EAF8EE,stroke:#637A68,color:#2F2F2F
 {{< /mermaid >}}
 
 ### Eager Learners vs Lazy Learners
@@ -109,7 +125,9 @@ This distinction is one of the most important conceptual points.
 
 ---
 
-## Core Intuition
+## KNN
+
+**Core Intuition**
 
 A simple intuition:
 
@@ -126,7 +144,7 @@ The whole method depends on two questions:
 
 ---
 
-## General Workflow
+**General Workflow**
 
 {{< mermaid >}}
 flowchart TD
@@ -138,6 +156,16 @@ flowchart TD
   E --> G[Regression: average or weighted average]
   F --> H[Predicted class]
   G --> I[Predicted value]
+  %% Pastel Styling
+  style A fill:#DDF5E4,stroke:#637A68,color:#2F2F2F
+  style B fill:#FFF1C7,stroke:#8A7A54,color:#2F2F2F
+  style C fill:#D8EAFE,stroke:#5E7084,color:#2F2F2F
+  style D fill:#E6E0FF,stroke:#6F6690,color:#2F2F2F
+  style E fill:#F8D7E8,stroke:#7A6170,color:#2F2F2F
+  style F fill:#FFE0CC,stroke:#8B6A58,color:#2F2F2F
+  style G fill:#D7F3F0,stroke:#5B7D7A,color:#2F2F2F
+  style H fill:#EAF8EE,stroke:#637A68,color:#2F2F2F
+  style I fill:#EAF8EE,stroke:#637A68,color:#2F2F2F
 {{< /mermaid >}}
 
 In words:
@@ -150,11 +178,11 @@ In words:
 
 ---
 
-## k-Nearest Neighbour (KNN) Learning
+### k-Nearest Neighbour Learning
 
 KNN is the most commonly discussed instance-based learning algorithm. It can be used for both **classification** and **regression**.
 
-### Basic Notation
+**Basic Notation**
 
 Suppose the training set contains examples $\langle x_i, f(x_i) \rangle$. For a new query point $x_q$, find the nearest examples and use their outputs to estimate $f^*(x_q)$.
 
@@ -197,13 +225,13 @@ Median can be more robust when outliers are present.
 
 ---
 
-## Training and Prediction in KNN
+### Training and Prediction in KNN
 
-### Training Phase
+**Training Phase**
 
 KNN does almost no parameter learning. It mainly stores input features and corresponding outputs, so training is simple and fast.
 
-### Prediction Phase
+**Prediction Phase**
 
 Prediction is costlier because for each query point the algorithm must:
 
@@ -216,9 +244,9 @@ This is why KNN is called a lazy learner.
 
 ---
 
-## Step-by-Step KNN Procedure
+### Step-by-Step KNN Procedure
 
-### For Classification
+**For Classification**
 
 1. Take the query point $x_q$
 2. Compute distance from $x_q$ to every training point
@@ -227,7 +255,7 @@ This is why KNN is called a lazy learner.
 5. Count the class labels among them
 6. Return the class with the highest count
 
-### For Regression
+**For Regression**
 
 1. Take the query point $x_q$
 2. Compute distance to all training points
@@ -237,20 +265,20 @@ This is why KNN is called a lazy learner.
 
 ---
 
-## Choosing the Value of $k$
+### Choosing the Value of $k$
 
 The value of $k$ is the key hyperparameter in KNN.
 
-### Why $k$ Matters
+Why $k$ Matters?
 
 - If $k$ is too small, the model becomes too sensitive to noise
 - If $k$ is too large, the model becomes too smooth and may ignore local structure
 
-### Practical Recommendations
+**Practical Recommendations**
 
 In classification, using an **odd** value of $k$ is often recommended for binary classification, because it helps avoid ties in voting. Using an even $k$ may result in equal votes for two classes.
 
-### Rule of Thumb
+**Rule of Thumb**
 
 {{% colour "blue" %}}
 {{< katex display=true >}}
@@ -278,7 +306,7 @@ A common example in the lesson identifies $k=3$ as the visual elbow point.
 
 ---
 
-## Numerical Template: KNN Problems
+### Numerical Template: KNN Problems
 
 This is a very common exam pattern.
 
@@ -293,13 +321,13 @@ This is a very common exam pattern.
 
 ---
 
-## Why Distance Matters
+### Why Distance Matters
 
 KNN does not learn a separating equation in advance, so the quality of its prediction depends heavily on the quality of the distance or similarity function. If the distance is badly chosen, the "nearest" neighbours may not be the most meaningful ones.
 
 ---
 
-## Data Matrix vs Distance Matrix
+### Data Matrix vs Distance Matrix
 
 | Object | Description |
 |--------|-------------|
@@ -308,9 +336,9 @@ KNN does not learn a separating equation in advance, so the quality of its predi
 
 ---
 
-## Measures of Distance and Similarity
+### Measures of Distance and Similarity
 
-### Properties of a Valid Metric
+**Properties of a Valid Metric**
 
 For a valid distance function $d(i,j)$:
 
@@ -319,7 +347,7 @@ For a valid distance function $d(i,j)$:
 - $d(i,j)=d(j,i)$ (symmetry)
 - $d(i,j) \le d(i,k)+d(k,j)$ (triangle inequality)
 
-### Minkowski Distance
+**Minkowski Distance**
 
 A general distance family used in the lesson:
 
@@ -335,7 +363,7 @@ where:
 - $j=(x_{j1},x_{j2},\dots,x_{jp})$
 - $h$ is the order of the norm
 
-#### Special Cases
+**Special Cases**
 
 **Manhattan distance ($L_1$)**
 
@@ -361,7 +389,7 @@ d(i,j)=\max_f |x_{if}-x_{jf}|
 {{< /katex >}}
 {{% /colour %}}
 
-#### When to Use Which
+**When to Use Which**
 
 - **Manhattan**: useful when absolute coordinate-wise difference matters
 - **Euclidean**: the most common geometric distance
@@ -369,16 +397,16 @@ d(i,j)=\max_f |x_{if}-x_{jf}|
 
 ---
 
-## Similarity for Different Attribute Types
+### Similarity for Different Attribute Types
 
-### Nominal Attributes
+**Nominal Attributes**
 
 Nominal attributes have no natural order (e.g., profession, colour, mother tongue).
 
 - **Simple matching**: matching values contribute similarity; differing values contribute dissimilarity
 - **Binary indicator encoding**: create one binary feature per possible nominal state (similar to one-hot encoding)
 
-### Binary Attributes
+**Binary Attributes**
 
 - **Symmetric binary**: both states are equally important (e.g., gender)
 - **Asymmetric binary**: one state is more important, common in presence/absence situations (e.g., symptoms, test results)
@@ -433,7 +461,7 @@ The **Gower distance** handles mixed types by:
 
 ---
 
-## Standardising Numeric Data
+### Standardising Numeric Data
 
 KNN is sensitive to scale. If one numeric feature has a much larger range than another, it can dominate the distance computation.
 
@@ -461,30 +489,28 @@ This is one of the most common practical mistakes in KNN.
 
 ---
 
-## Curse of Dimensionality
-
-### Main Idea
+### Curse of Dimensionality
 
 If you use many features and only a few are truly relevant, two genuinely similar records may appear far apart because distance is computed across many irrelevant dimensions.
 
-### Why It Happens
+**Why It Happens**
 
 Traditional KNN uses **all attributes** unless you intervene. Irrelevant attributes distort the geometry of the space.
 
-### Remedies
+**Remedies**
 
 **1. Remove less relevant attributes.** If exploration suggests some features are irrelevant, remove them and validate performance again.
 
 **2. Weight attributes differently.** Give lower weight to less relevant features and higher weight to more relevant ones. Conceptually, this means shortening less relevant axes and lengthening more relevant ones.
 
-### Key Exam Wording
+**Key Exam Wording**
 
 - High-dimensional instance spaces can mislead nearest neighbour methods
 - KNN works best when relevant similarity is well captured by the chosen distance function
 
 ---
 
-## Challenges of KNN
+### Challenges of KNN
 
 | Challenge | Description |
 |-----------|-------------|
@@ -495,22 +521,22 @@ Traditional KNN uses **all attributes** unless you intervene. Irrelevant attribu
 
 ---
 
-## Distance-weighted KNN
+### Distance-weighted KNN
 
-### Why Plain KNN May Fail
+**Why Plain KNN May Fail**
 
 Suppose a query point lies near a few very close positive examples, but the majority of slightly farther neighbours are negative. A plain majority vote may incorrectly predict the negative class.
 
 Distance-weighted KNN fixes this by assigning **larger influence to closer points**.
 
-### Core Idea
+**Core Idea**
 
 - Near neighbours get high weight
 - Far neighbours get low weight
 
 The question becomes: "How much weighted evidence does each class receive?" rather than simply "How many neighbours belong to each class?"
 
-### Weight Function via a Kernel
+**Weight Function via a Kernel**
 
 {{% colour "blue" %}}
 {{< katex display=true >}}
@@ -538,7 +564,7 @@ K\big(d(x_q,x_i)\big)=\exp\left(-\left(\frac{d(x_q,x_i)}{\sigma_0}\right)^2\righ
 {{< /katex >}}
 {{% /colour %}}
 
-### Weighted Classification Rule
+**Weighted Classification Rule**
 
 {{% colour "blue" %}}
 {{< katex display=true >}}
@@ -546,7 +572,7 @@ K\big(d(x_q,x_i)\big)=\exp\left(-\left(\frac{d(x_q,x_i)}{\sigma_0}\right)^2\righ
 {{< /katex >}}
 {{% /colour %}}
 
-### Weighted Regression Rule
+**Weighted Regression Rule**
 
 {{% colour "blue" %}}
 {{< katex display=true >}}
@@ -556,9 +582,7 @@ K\big(d(x_q,x_i)\big)=\exp\left(-\left(\frac{d(x_q,x_i)}{\sigma_0}\right)^2\righ
 
 **Interpretation:** A larger distance means smaller weight; a smaller distance means larger weight. Similarity increases the influence of that training instance on the final prediction.
 
----
-
-## Numerical Template: Weighted KNN
+**Numerical Template: Weighted KNN**
 
 1. Prepare the data: normalise numeric variables, rank ordinal variables, handle nominal attributes using match/mismatch distance
 2. Compute the distance from query $x_q$ to each record
@@ -573,14 +597,14 @@ K\big(d(x_q,x_i)\big)=\exp\left(-\left(\frac{d(x_q,x_i)}{\sigma_0}\right)^2\righ
 
 LWR is the regression counterpart of the "nearby points should matter more" idea, and is one of the key syllabus items in this module.
 
-### Intuition
+**Intuition**
 
 - **Global linear regression** fits **one line** for all data points
 - **Locally weighted regression** fits a **small weighted local model around the query point**
 
 If the query changes, its local fitted line may also change.
 
-### How LWR Differs from Ordinary Linear Regression
+**How LWR Differs from Ordinary Linear Regression**
 
 | Ordinary Linear Regression | Locally Weighted Regression |
 |---------------------------|------------------------------|
@@ -588,7 +612,7 @@ If the query changes, its local fitted line may also change.
 | Shared slope and intercept | Coefficients depend on the query |
 | Same line used for all predictions | Different local line for different queries |
 
-### LWR Workflow
+**LWR Workflow**
 
 1. Take query point $x_q$
 2. Compute distance from every training point to $x_q$
@@ -597,7 +621,7 @@ If the query changes, its local fitted line may also change.
 5. Evaluate the fitted model at $x_q$
 6. Return the local prediction
 
-### LWR as Weighted Least Squares
+**LWR as Weighted Least Squares**
 
 {{% colour "blue" %}}
 {{< katex display=true >}}
@@ -617,13 +641,13 @@ The final query prediction is:
 
 The effective parameters $w^{(q)}$ depend on the query point, so the fitted local model changes from query to query.
 
-### Two Design Viewpoints
+**Two Design Viewpoints**
 
 **View 1 — Local approximation:** Use only nearby neighbours, then fit a local regression on that neighbourhood.
 
 **View 2 — Weighted global approximation:** Use all data, but multiply each error term by a weight that decreases with distance from the query. Far points contribute very little. This gives the benefit of using the full dataset while still focusing on the neighbourhood.
 
-### Kernel Choice and Bandwidth
+**Kernel Choice and Bandwidth**
 
 The kernel is not "one formula for all datasets" — experimentation is needed. Possible choices include inverse distance, inverse squared distance, exponential/Gaussian weighting, and quadratic kernel variants.
 
@@ -632,17 +656,17 @@ The kernel is not "one formula for all datasets" — experimentation is needed. 
 - **Small bandwidth**: very local behaviour, strong emphasis on nearby points
 - **Large bandwidth**: smoother behaviour, broader neighbourhood influence
 
-### When LWR Is Useful
+**When LWR Is Useful**
 
 - One single global linear trend is too crude
 - The relationship varies across the input space
 - Nearby points are more informative than distant ones
 
-### Simple Exam Explanation of LWR
+**Simple Exam Explanation of LWR**
 
 > "Locally weighted regression predicts a query by fitting a small regression model around the query point, with higher weights for nearby training examples and lower weights for faraway ones."
 
-### Numerical Template: LWR Questions
+**Numerical Template: LWR Questions**
 
 1. Identify the query point $x_q$
 2. Compute distance from each training point to $x_q$
@@ -654,23 +678,11 @@ The kernel is not "one formula for all datasets" — experimentation is needed. 
 
 ---
 
-## Relationship Between Weighted KNN and LWR
-
-| | Distance-weighted KNN | LWR |
-|---|---|---|
-| Local regression fit | No | Yes |
-| Uses neighbour outputs directly | Yes | No |
-| Decision rule | Weighted vote or weighted average | Value from local fitted model |
-
-LWR is a more structured local regression version of the "nearby points matter more" principle.
-
----
-
 ## Radial Basis Functions (RBF)
 
 RBF is listed explicitly in the course handout as part of the core syllabus.
 
-### Core Idea
+**Core Idea**
 
 An RBF is a function whose value depends mainly on the **distance from a centre**. A common Gaussian RBF:
 
@@ -687,7 +699,7 @@ where $c_j$ is the centre of the basis function and $\sigma$ controls the spread
 - If $x$ is close to $c_j$, then $\phi_j(x)$ is large
 - If $x$ is far from $c_j$, then $\phi_j(x)$ becomes small
 
-### RBF Model Form
+**RBF Model Form**
 
 {{% colour "blue" %}}
 {{< katex display=true >}}
@@ -697,7 +709,7 @@ where $c_j$ is the centre of the basis function and $\sigma$ controls the spread
 
 This is linear in the weights $w_j$ but non-linear in the original input $x$.
 
-### Why RBF Belongs in This Module
+**Why RBF Belongs in This Module**
 
 RBF shares the same local-neighbourhood philosophy as KNN and LWR:
 
@@ -707,7 +719,16 @@ RBF shares the same local-neighbourhood philosophy as KNN and LWR:
 
 ---
 
-## KNN, LWR, and RBF at a Glance
+## Comparison of KNN, LWR RBF
+### Relationship Between Weighted KNN and LWR
+| | Distance-weighted KNN | LWR |
+|---|---|---|
+| Local regression fit | No | Yes |
+| Uses neighbour outputs directly | Yes | No |
+| Decision rule | Weighted vote or weighted average | Value from local fitted model |
+
+LWR is a more structured local regression version of the "nearby points matter more" principle.
+### KNN, LWR, and RBF at a Glance
 
 | Method | Main idea | Output style | What changes with query? |
 |---|---|---|---|
@@ -716,11 +737,10 @@ RBF shares the same local-neighbourhood philosophy as KNN and LWR:
 | LWR | Fit a local weighted regression model around query | Local regression prediction | Local fitted coefficients |
 | RBF | Use local basis functions centred at prototypes | Weighted basis-function output | Basis activations |
 
----
 
-## Advantages and Limitations
+**Advantages and Limitations**
 
-### Advantages
+**Advantages**
 
 - **Conceptually simple**: similar inputs should give similar outputs
 - **Flexible**: no single global model shape is forced on the data
@@ -728,7 +748,7 @@ RBF shares the same local-neighbourhood philosophy as KNN and LWR:
 - **Naturally local**: useful when local neighbourhood structure is more meaningful than one global formula
 - **Little or no training cost**: training often means only storing the examples
 
-### Limitations
+**Limitations**
 
 - **Expensive prediction time**: distance must be computed at query time
 - **Sensitive to scaling**: unscaled features can dominate distance
@@ -737,38 +757,61 @@ RBF shares the same local-neighbourhood philosophy as KNN and LWR:
 - **Suffers in high dimensions**: curse of dimensionality is a major issue
 - **Memory-heavy**: training examples must be stored
 
+### Quick Comparison: Global vs Local Thinking
+
+{{< mermaid >}}
+flowchart TD
+  A[One global regression line] --> B[Ordinary linear regression]
+  C[Neighbour vote or average] --> D[KNN]
+  E[Weighted neighbours] --> F[Distance-weighted KNN]
+  G[Local fitted regression line] --> H[Locally weighted regression]
+  I[Local basis centred at prototypes] --> J[Radial Basis Functions]
+
+  %% Pastel Styling
+  style A fill:#D8EAFE,stroke:#5E7084,color:#2F2F2F
+  style B fill:#EAF4FF,stroke:#6B7D90,color:#2F2F2F
+  style C fill:#DDF5E4,stroke:#637A68,color:#2F2F2F
+  style D fill:#EAF8EE,stroke:#637A68,color:#2F2F2F
+  style E fill:#FFF1C7,stroke:#8A7A54,color:#2F2F2F
+  style F fill:#FFF7DC,stroke:#8A7A54,color:#2F2F2F
+  style G fill:#F8D7E8,stroke:#7A6170,color:#2F2F2F
+  style H fill:#FDEAF3,stroke:#7A6170,color:#2F2F2F
+  style I fill:#FFE0CC,stroke:#8B6A58,color:#2F2F2F
+  style J fill:#FFF0E6,stroke:#8B6A58,color:#2F2F2F
+{{< /mermaid >}}
+
 ---
 
-## Common Exam Question Patterns
+## Study Notes (everythig exam related)
 
-### KNN Classification
+**Common Exam Question Patterns**
+
+1. KNN Classification
 - Compute Euclidean distance, sort neighbours, apply majority vote
 - Compare answers for $k=3$, $k=5$, $k=7$
 
-### KNN Regression
+2. KNN Regression
 - Compute nearest neighbours and average their target values
 
-### Best Value of $k$
+3. Best Value of $k$
 - Use odd $k$ to avoid ties in binary classification
 - Identify elbow point from error plot
 - Explain effect of small vs large $k$
 
-### Mixed-data Dissimilarity
+4. Mixed-data Dissimilarity
 - Normalise numeric features, rank ordinal features, compare nominal features, combine partial distances
 
-### Weighted KNN
+5. Weighted KNN
 - Compute distances, compute kernel weights, show why weighted result may differ from unweighted majority vote
 
-### LWR Conceptual Questions
+6. LWR Conceptual Questions
 - Explain why LWR produces different local lines for different query points
 - Compare global regression with locally weighted regression
 
-### Curse of Dimensionality
+7. Curse of Dimensionality
 - Define it, explain why KNN is misled in high dimensions, suggest remedies
 
----
-
-## High-value Exam Points
+### High-value Exam Points
 
 - KNN is a **lazy learner**; model-based learning is an **eager learner**
 - KNN solves both **classification** (majority vote) and **regression** (mean or median)
@@ -781,20 +824,7 @@ RBF shares the same local-neighbourhood philosophy as KNN and LWR:
 
 ---
 
-## Quick Comparison: Global vs Local Thinking
-
-{{< mermaid >}}
-flowchart TD
-  A[One global regression line] --> B[Ordinary linear regression]
-  C[Neighbour vote or average] --> D[KNN]
-  E[Weighted neighbours] --> F[Distance-weighted KNN]
-  G[Local fitted regression line] --> H[Locally weighted regression]
-  I[Local basis centred at prototypes] --> J[Radial Basis Functions]
-{{< /mermaid >}}
-
----
-
-## Final Summary
+### Summary
 
 Instance-based learning is built on one central belief: **a useful prediction can often be made by looking at similar previously observed examples**.
 
