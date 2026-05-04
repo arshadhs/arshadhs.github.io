@@ -508,9 +508,7 @@ Traditional KNN uses **all attributes** unless you intervene. Irrelevant attribu
 - High-dimensional instance spaces can mislead nearest neighbour methods
 - KNN works best when relevant similarity is well captured by the chosen distance function
 
----
-
-### Challenges of KNN
+**Challenges of KNN**
 
 | Challenge | Description |
 |-----------|-------------|
@@ -720,7 +718,9 @@ RBF shares the same local-neighbourhood philosophy as KNN and LWR:
 ---
 
 ## Comparison of KNN, LWR RBF
-### Relationship Between Weighted KNN and LWR
+
+**Relationship Between Weighted KNN and LWR**
+
 | | Distance-weighted KNN | LWR |
 |---|---|---|
 | Local regression fit | No | Yes |
@@ -728,7 +728,8 @@ RBF shares the same local-neighbourhood philosophy as KNN and LWR:
 | Decision rule | Weighted vote or weighted average | Value from local fitted model |
 
 LWR is a more structured local regression version of the "nearby points matter more" principle.
-### KNN, LWR, and RBF at a Glance
+
+**KNN, LWR, and RBF at a Glance**
 
 | Method | Main idea | Output style | What changes with query? |
 |---|---|---|---|
@@ -757,7 +758,7 @@ LWR is a more structured local regression version of the "nearby points matter m
 - **Suffers in high dimensions**: curse of dimensionality is a major issue
 - **Memory-heavy**: training examples must be stored
 
-### Quick Comparison: Global vs Local Thinking
+**Quick Comparison: Global vs Local Thinking**
 
 {{< mermaid >}}
 flowchart TD
@@ -811,7 +812,7 @@ flowchart TD
 7. Curse of Dimensionality
 - Define it, explain why KNN is misled in high dimensions, suggest remedies
 
-### High-value Exam Points
+**High-value Exam Points**
 
 - KNN is a **lazy learner**; model-based learning is an **eager learner**
 - KNN solves both **classification** (majority vote) and **regression** (mean or median)
@@ -824,7 +825,7 @@ flowchart TD
 
 ---
 
-### Summary
+## Summary
 
 Instance-based learning is built on one central belief: **a useful prediction can often be made by looking at similar previously observed examples**.
 
