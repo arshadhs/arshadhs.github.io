@@ -14,7 +14,7 @@ Instead, they **store training examples** and delay most of the work until a new
 
 When a new point must be classified or predicted, the algorithm compares it with previously seen examples, finds the most relevant neighbours, and uses them to produce the answer.
 
-This module covers three linked ideas:
+Instance-based Learning covers three linked ideas:
 
 - $k$-Nearest Neighbour (KNN) learning
 - Locally Weighted Regression (LWR)
@@ -24,11 +24,49 @@ This module covers three linked ideas:
 **Key takeaway:** Instance-based learning is a **lazy learning** approach. Training is usually cheap because we mainly store the data. Prediction is more expensive because the algorithm must search for similar records at query time. The most important ideas for exams are: choosing a good distance measure, choosing $k$, understanding weighted neighbours, and knowing why nearby data should matter more than faraway data.
 {{% /hint %}}
 
-**Instance-based Learning** includes:
+---
 
-- $k$-Nearest Neighbour Learning
-- Locally Weighted Regression (LWR) Learning
-- Radial Basis Functions
+### Comparison: Instance-Based vs. Model-Based
+
+
+| Feature | Instance-Based Learning | Model-Based Learning |
+| :--- | :--- | :--- |
+| **Approach** | Memorizes examples | Learns general patterns/rules |
+| **Training Time** | Minimal (just stores data) | Can be long (building the model) |
+| **Prediction Time** | Slow (searches all data) | Fast (uses a pre-built formula) |
+| **Storage** | High (must keep all data) | Low (only stores the model) |
+| **Adaptability** | Adapts instantly to new data | Requires retraining to update |
+
+---
+
+{{< mermaid >}}
+graph LR
+    IBL[Instance-Based Learning]
+    
+    %% Main Branches
+    IBL --> Numeric[Numerical / Distance-Based]
+    IBL --> Symbolic[Symbolic / Reasoning-Based]
+    IBL --> Density[Density / Distribution-Based]
+    
+    %% Numerical Examples
+    Numeric --> KNN[k-Nearest Neighbours]
+    Numeric --> LWR[Locally Weighted Regression]
+    Numeric --> RBF[Radial Basis Functions]
+    Numeric --> LVQ[Learning Vector Quantization]
+    
+    %% Symbolic Examples
+    Symbolic --> CBR[Case-Based Reasoning]
+    
+    %% Density Examples
+    Density --> KDE[Kernel Density Estimation]
+    Density --> PW[Parzen Windows]
+    
+    %% Styling
+    style IBL fill:#f9f,stroke:#333,stroke-width:4px
+    style Numeric fill:#bbf,stroke:#333
+    style Symbolic fill:#dfd,stroke:#333
+    style Density fill:#ffd,stroke:#333
+{{< /mermaid >}}
 
 ---
 
