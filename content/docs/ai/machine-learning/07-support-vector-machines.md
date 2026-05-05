@@ -37,19 +37,19 @@ A larger margin usually leads to **better generalisation** on unseen data.
 
 {{% steps %}}
 
-1. ## Hyperplane
+1. Hyperplane
   - The **decision boundary**
   - In 2D → a line  
   - In 3D → a plane  
   - In higher dimensions → a hyperplane  
 
-2.  ## Margin
+2. Margin
   - Distance between the hyperplane and the nearest points
   - SVM **maximises** this margin
 
   Larger margin = better generalisation
 
-3.  ## Support Vectors
+3. Support Vectors
   - The **closest points** to the hyperplane
   - They **define** the decision boundary
   - Removing them changes the model
