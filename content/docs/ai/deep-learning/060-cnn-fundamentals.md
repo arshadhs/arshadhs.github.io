@@ -139,29 +139,11 @@ So an image of size `32 × 32 × 3` has:
 
 This channel view is important because convolutional layers create many new channels called **feature maps**.
 
-## The basic CNN pipeline
+## CNN pipeline
 
 A classical CNN usually follows a pipeline like this:
 
-{{< mermaid >}}
-flowchart LR
-    A[Input] --> B[Convolution]
-    B --> C[Activation]
-    C --> D[Pooling or strided convolution]
-    D --> E[More convolution blocks]
-    E --> F[Flatten or global average pooling]
-    F --> G[Dense layer or classifier head]
-    G --> H[Softmax or sigmoid output]
-
-    style A fill:#E1F5FE
-    style B fill:#C8E6C9
-    style C fill:#FFF9C4
-    style D fill:#EDE7F6
-    style E fill:#C8E6C9
-    style F fill:#FFF9C4
-    style G fill:#EDE7F6
-    style H fill:#FFE0B2
-{{< /mermaid >}}
+Input → Convolution → Activation → Pooling or strided convolution → More convolution blocks → Flatten or global average pooling → Dense layer or classifier head → Softmax or sigmoid output
 
 So a CNN does two broad jobs:
 
@@ -181,9 +163,7 @@ At each spatial position, the layer:
 
 That produces one value in the output feature map.
 
-### Intuition
-
-A kernel is a small pattern detector. One kernel may respond strongly to vertical edges, another to horizontal edges, another to texture. During training, the network learns useful filters automatically by backpropagation and gradient descent.
+Intuition: A **kernel** is a small pattern detector. One kernel may respond strongly to vertical edges, another to horizontal edges, another to texture. During training, the network learns useful filters automatically by backpropagation and gradient descent.
 
 ### Single-channel convolution
 
@@ -203,7 +183,7 @@ Where:
 
 ---
 
-## Multi-channel convolution
+### Multi-channel convolution
 
 If the input is:
 
@@ -241,7 +221,7 @@ output channels.
 {{< /katex >}}
 {{% /colour %}}
 
-### Why this formula matters
+**Why this formula matters**
 
 This is a key exam formula. Notice that the number of learnable parameters depends on:
 
@@ -270,13 +250,13 @@ The **receptive field** of a neuron is the region of the input that can affect t
 
 This is a very important concept because it explains why deeper layers can capture more global information.
 
-### Intuition of receptive field growth
+**Intuition of receptive field growth**
 
 - early layers see only small local regions,
 - deeper layers indirectly depend on larger parts of the image,
 - so deeper layers capture more context and more meaningful structure.
 
-### Why receptive field matters
+**Why receptive field matters**
 
 - **Small receptive field**  
   good for local detail, but poor for large objects or global context.
@@ -284,7 +264,7 @@ This is a very important concept because it explains why deeper layers can captu
 - **Large receptive field**  
   better for understanding object structure, relationships, and scene context.
 
-### Ways to increase receptive field
+**Ways to increase receptive field**
 
 - stack more convolutional layers,
 - use larger kernels,
@@ -318,7 +298,7 @@ Without padding, convolution shrinks the spatial size. In deep networks, repeate
 - **Same padding**  
   padding is added so that the output size is preserved when stride is 1.
 
-### Output size formula
+**Output size formula**
 
 {{% colour "green" %}}
 {{< katex display=true >}}
@@ -358,7 +338,7 @@ P=\frac{K-1}{2}
 {{< /katex >}}
 {{% /colour %}}
 
-### Example
+**Example**
 
 Input size `32 × 32`, kernel `3 × 3`, stride `1`, padding `1`:
 
@@ -506,7 +486,7 @@ It performs smoother downsampling and is often used later in a network.
 
 Global average pooling averages each channel over the full spatial map and produces one value per channel. It can replace dense layers and greatly reduce parameters.
 
-### Important exam point
+### Exams
 
 Pooling layers have **zero learnable parameters**.
 
@@ -516,11 +496,11 @@ Pooling layers have **zero learnable parameters**.
 {{< /katex >}}
 {{% /colour %}}
 
-## `1 × 1` convolution
+**`1 × 1` convolution**
 
 A `1 × 1` convolution does not combine neighbouring spatial pixels. Instead, it mixes information **across channels** at each spatial location.
 
-### Why `1 × 1` convolution is useful
+**Why `1 × 1` convolution is useful**
 
 It can:
 
@@ -651,7 +631,7 @@ This comparison is often asked directly.
 
 A multilayer perceptron can classify images, but it ignores the geometry that makes images meaningful. CNNs are designed specifically to exploit that structure.
 
-## Short worked examples
+## Examples
 
 ### Example 1: output size after convolution
 
@@ -710,7 +690,7 @@ A `2 × 2` max-pooling layer simply takes the maximum in each local window. Sinc
 {{< /katex >}}
 {{% /colour %}}
 
-## Exam-ready summary
+## Exams Summary
 
 You should be able to explain clearly:
 
