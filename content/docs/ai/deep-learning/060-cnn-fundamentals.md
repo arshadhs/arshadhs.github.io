@@ -23,7 +23,9 @@ Convolutional Neural Networks (CNNs) are specialised neural networks designed fo
 
 {{% hint info %}}
 **Key takeaway:**  
-A CNN is powerful because it does **not** treat an image as just a long vector. Instead, it uses **local connectivity**, **parameter sharing**, and **hierarchical feature learning** through the pattern **convolution → activation → pooling / downsampling → deeper feature extraction → classifier**.
+A CNN is powerful because it does **not** treat an image as just a long vector. Instead, it uses **local connectivity**, **parameter sharing**, and **hierarchical feature learning** through the pattern:
+
+convolution → activation → pooling / downsampling → deeper feature extraction → classifier
 {{% /hint %}}
 
 {{% hint warning %}}
@@ -98,6 +100,13 @@ flowchart LR
     C --> D[Textures and shapes]
     D --> E[Object parts]
     E --> F[Class decision]
+
+    style A fill:#E1F5FE
+    style B fill:#C8E6C9
+    style C fill:#FFF9C4
+    style D fill:#EDE7F6
+    style E fill:#C8E6C9
+    style F fill:#FFE0B2
 {{< /mermaid >}}
 
 ## Images as tensors
@@ -143,6 +152,15 @@ flowchart LR
     E --> F[Flatten or global average pooling]
     F --> G[Dense layer or classifier head]
     G --> H[Softmax or sigmoid output]
+
+    style A fill:#E1F5FE
+    style B fill:#C8E6C9
+    style C fill:#FFF9C4
+    style D fill:#EDE7F6
+    style E fill:#C8E6C9
+    style F fill:#FFF9C4
+    style G fill:#EDE7F6
+    style H fill:#FFE0B2
 {{< /mermaid >}}
 
 So a CNN does two broad jobs:
@@ -172,34 +190,55 @@ A kernel is a small pattern detector. One kernel may respond strongly to vertica
 For a grayscale image and a `K_h × K_w` kernel:
 
 {{% colour "green" %}}
-$$
+{{< katex display=true >}}
 Y(i,j)=\sum_{m=0}^{K_h-1}\sum_{n=0}^{K_w-1} X(i+m,j+n)\,W(m,n)+b
-$$
+{{< /katex >}}
 {{% /colour %}}
 
 Where:
+- {{< katex >}}X{{< /katex >}} is the input,
+- {{< katex >}}W{{< /katex >}} is the kernel,
+- {{< katex >}}b{{< /katex >}} is the bias,
+- {{< katex >}}Y{{< /katex >}} is the output feature map.
 
-- \(X\) is the input,
-- \(W\) is the kernel,
-- \(b\) is the bias,
-- \(Y\) is the output feature map.
+---
 
-### Multi-channel convolution
+## Multi-channel convolution
 
-Real images usually have multiple channels. If the input is `H × W × C_{in}`, then each filter must span all input channels. So one filter has size:
+If the input is:
 
-- \(K_h \times K_w \times C_{in}\)
+{{< katex >}}H \times W \times C_{in}{{< /katex >}}
 
-One filter produces **one output channel**. If we use \(C_{out}\) filters, we get \(C_{out}\) output channels.
+then each filter spans all input channels.
+
+One filter size is:
+
+{{< katex >}}K_h \times K_w \times C_{in}{{< /katex >}}
+
+One filter produces one output channel.
+
+If we use:
+
+{{< katex >}}C_{out}{{< /katex >}}
+
+filters, we obtain:
+
+{{< katex >}}C_{out}{{< /katex >}}
+
+output channels.
 
 {{% colour "green" %}}
-$$
+{{< katex display=true >}}
 \text{Output channels} = \text{Number of filters}
-$$
+{{< /katex >}}
+{{% /colour %}}
 
-$$
-\text{Parameters in a conv layer}=(K_h \times K_w \times C_{in} + 1)\times C_{out}
-$$
+{{% colour "green" %}}
+{{< katex display=true >}}
+\text{Parameters in a conv layer}
+=
+(K_h \times K_w \times C_{in} + 1)\times C_{out}
+{{< /katex >}}
 {{% /colour %}}
 
 ### Why this formula matters
@@ -259,6 +298,12 @@ flowchart TD
     B --> C[Stack more layers]
     C --> D[Larger effective receptive field]
     D --> E[Shapes object parts and context]
+
+    style A fill:#E1F5FE
+    style B fill:#C8E6C9
+    style C fill:#FFF9C4
+    style D fill:#EDE7F6
+    style E fill:#FFE0B2
 {{< /mermaid >}}
 
 ## Padding
@@ -276,26 +321,41 @@ Without padding, convolution shrinks the spatial size. In deep networks, repeate
 ### Output size formula
 
 {{% colour "green" %}}
-$$
-H_{out}=\left\lfloor \frac{H+2P-K}{S}\right\rfloor+1
-\qquad
-W_{out}=\left\lfloor \frac{W+2P-K}{S}\right\rfloor+1
-$$
+{{< katex display=true >}}
+H_{out}
+=
+\left\lfloor
+\frac{H+2P-K}{S}
+\right\rfloor
++1
+{{< /katex >}}
+{{% /colour %}}
+
+{{% colour "green" %}}
+{{< katex display=true >}}
+W_{out}
+=
+\left\lfloor
+\frac{W+2P-K}{S}
+\right\rfloor
++1
+{{< /katex >}}
 {{% /colour %}}
 
 Where:
+- {{< katex >}}H,W{{< /katex >}} are input dimensions,
+- {{< katex >}}K{{< /katex >}} is kernel size,
+- {{< katex >}}P{{< /katex >}} is padding,
+- {{< katex >}}S{{< /katex >}} is stride.
 
-- \(H, W\) are input height and width,
-- \(K\) is kernel size,
-- \(P\) is padding,
-- \(S\) is stride.
+---
 
 For odd kernels such as `3 × 3` with stride 1, same padding is commonly:
 
 {{% colour "green" %}}
-$$
+{{< katex display=true >}}
 P=\frac{K-1}{2}
-$$
+{{< /katex >}}
 {{% /colour %}}
 
 ### Example
@@ -303,9 +363,18 @@ $$
 Input size `32 × 32`, kernel `3 × 3`, stride `1`, padding `1`:
 
 {{% colour "green" %}}
-$$
-H_{out}=W_{out}=\left\lfloor \frac{32+2(1)-3}{1}\right\rfloor+1=32
-$$
+{{< katex display=true >}}
+H_{out}
+=
+W_{out}
+=
+\left\lfloor
+\frac{32+2(1)-3}{1}
+\right\rfloor
++1
+=
+32
+{{< /katex >}}
 {{% /colour %}}
 
 So the output spatial size is preserved.
@@ -361,22 +430,27 @@ It is especially useful when we want:
 - dense prediction tasks such as segmentation.
 
 {{% colour "green" %}}
-$$
-K_{\text{eff}} = K + (K-1)(r-1)
-$$
+{{< katex display=true >}}
+K_{\text{eff}}
+=
+K + (K-1)(r-1)
+{{< /katex >}}
 {{% /colour %}}
 
 Where:
-
-- \(K\) is the original kernel size,
-- \(r\) is the dilation rate.
+- {{< katex >}}K{{< /katex >}} is kernel size,
+- {{< katex >}}r{{< /katex >}} is dilation rate.
 
 For a `3 × 3` kernel with dilation rate `2`:
 
 {{% colour "green" %}}
-$$
-K_{\text{eff}} = 3 + (3-1)(2-1)=5
-$$
+{{< katex display=true >}}
+K_{\text{eff}}
+=
+3 + (3-1)(2-1)
+=
+5
+{{< /katex >}}
 {{% /colour %}}
 
 So a `3 × 3` kernel acts like a `5 × 5` receptive field while keeping the same number of weights.
@@ -437,9 +511,9 @@ Global average pooling averages each channel over the full spatial map and produ
 Pooling layers have **zero learnable parameters**.
 
 {{% colour "green" %}}
-$$
+{{< katex display=true >}}
 \text{Parameters in pooling layers} = 0
-$$
+{{< /katex >}}
 {{% /colour %}}
 
 ## `1 × 1` convolution
@@ -468,9 +542,9 @@ This idea became central in:
 After convolution, the output usually passes through a non-linear activation. The most common choice is **ReLU**.
 
 {{% colour "green" %}}
-$$
+{{< katex display=true >}}
 \text{ReLU}(x)=\max(0,x)
-$$
+{{< /katex >}}
 {{% /colour %}}
 
 ### Why ReLU is popular
@@ -495,13 +569,17 @@ A dense layer combines the extracted features and maps them to class scores.
 If the input vector has size \(n\) and the output has size \(m\):
 
 {{% colour "green" %}}
-$$
+{{< katex display=true >}}
 y=f(Wx+b)
-$$
+{{< /katex >}}
+{{% /colour %}}
 
-$$
-\text{Parameters in FC layer}=n\times m + m
-$$
+{{% colour "green" %}}
+{{< katex display=true >}}
+\text{Parameters in FC layer}
+=
+n\times m + m
+{{< /katex >}}
 {{% /colour %}}
 
 This is why dense layers are usually much more parameter-heavy than convolutional layers.
@@ -511,9 +589,12 @@ This is why dense layers are usually much more parameter-heavy than convolutiona
 For multi-class classification, the final layer often uses **softmax**.
 
 {{% colour "green" %}}
-$$
-\text{softmax}(z_i)=\frac{e^{z_i}}{\sum_j e^{z_j}}
-$$
+{{< katex display=true >}}
+\text{softmax}(z_i)
+=
+\frac{e^{z_i}}
+{\sum_j e^{z_j}}
+{{< /katex >}}
 {{% /colour %}}
 
 It converts raw class scores into a probability distribution whose entries sum to 1.
@@ -543,6 +624,14 @@ flowchart LR
     D --> E[Pooling]
     E --> F[Dense or GAP]
     F --> G[Softmax output]
+
+    style A fill:#E1F5FE
+    style B fill:#C8E6C9
+    style C fill:#FFF9C4
+    style D fill:#EDE7F6
+    style E fill:#C8E6C9
+    style F fill:#FFF9C4
+    style G fill:#FFE0B2
 {{< /mermaid >}}
 
 ## CNN vs MLP for images
@@ -574,9 +663,18 @@ Input:
 - stride `1`.
 
 {{% colour "green" %}}
-$$
-H_{out}=W_{out}=\left\lfloor \frac{32+2(0)-5}{1}\right\rfloor+1=28
-$$
+{{< katex display=true >}}
+H_{out}
+=
+W_{out}
+=
+\left\lfloor
+\frac{32+2(0)-5}{1}
+\right\rfloor
++1
+=
+28
+{{< /katex >}}
 {{% /colour %}}
 
 So the output is `28 × 28`.
@@ -591,9 +689,13 @@ Suppose:
 - bias included.
 
 {{% colour "green" %}}
-$$
-(3\times 3\times 3 + 1)\times 64 = (27+1)\times 64 = 1792
-$$
+{{< katex display=true >}}
+(3\times 3\times 3 + 1)\times 64
+=
+(27+1)\times 64
+=
+1792
+{{< /katex >}}
 {{% /colour %}}
 
 So the layer has **1792 learnable parameters**.
@@ -603,9 +705,9 @@ So the layer has **1792 learnable parameters**.
 A `2 × 2` max-pooling layer simply takes the maximum in each local window. Since it does not learn weights or biases:
 
 {{% colour "green" %}}
-$$
+{{< katex display=true >}}
 0
-$$
+{{< /katex >}}
 {{% /colour %}}
 
 ## Exam-ready summary
