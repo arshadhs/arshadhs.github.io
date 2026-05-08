@@ -43,12 +43,6 @@ flowchart TD
     A --> D["Adaptive Methods"]
     A --> E["Learning Rate Schedules"]
 
-    B --> B1["Batch Gradient Descent"]
-    B --> B2["Stochastic Gradient Descent"]
-    B --> B3["Mini-batch Gradient Descent"]
-
-    C --> C1["SGD with Momentum"]
-
     D --> D1["Parameter-specific learning rates"]
 
     E --> E1["Learning rate changes during training"]
