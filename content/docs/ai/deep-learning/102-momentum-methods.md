@@ -17,6 +17,33 @@ Instead of using only the current gradient, the optimiser accumulates velocity a
 Momentum helps the optimiser move faster in consistent directions and reduces zigzag movement in directions where gradients oscillate.
 {{% /hint %}}
 
+---
+
+{{< mermaid >}}
+flowchart TD
+    A["Momentum-based Optimiser"] --> B["SGD with Momentum"]
+
+    B --> B1["Adds velocity term"]
+    B --> B2["Accumulates past gradients"]
+    B --> B3["Reduces zig-zag movement"]
+    B --> B4["Speeds up movement in useful direction"]
+    B --> B5["Helps through shallow regions"]
+
+    B1 --> C1["Current update depends on previous update"]
+    B2 --> C2["Builds inertia"]
+    B3 --> C3["Smoother path to minimum"]
+
+    style A fill:#C8E6C9,stroke:#43A047,stroke-width:2px
+    style B fill:#E1F5FE,stroke:#4A90E2
+    style B1 fill:#EDE7F6,stroke:#7E57C2
+    style B2 fill:#FFF9C4,stroke:#FBC02D
+    style B3 fill:#F8BBD0,stroke:#D81B60
+    style B4 fill:#EDE7F6,stroke:#7E57C2
+    style B5 fill:#FFF9C4,stroke:#FBC02D
+{{< /mermaid >}}
+
+---	
+	
 ## Physical Intuition ☆
 
 Momentum is often explained using the analogy of a ball rolling down a hill.

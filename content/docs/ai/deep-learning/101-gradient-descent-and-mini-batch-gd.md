@@ -7,7 +7,7 @@ weight: 1010
 menu: main
 ---
 
-# # Optimisation: Gradient Descent and Mini-Batch Gradient Descent
+# Optimisation: Gradient Descent and Mini-Batch Gradient Descent
 
 Gradient descent is the core optimisation idea behind neural network training.
 It updates the model parameters by moving in the opposite direction of the gradient of the loss.
@@ -18,6 +18,34 @@ Gradient descent uses the gradient to decide how to change the parameters.
 The learning rate controls how large each update step is.
 {{% /hint %}}
 
+---
+
+{{< mermaid >}}
+flowchart TD
+    A["Gradient Descent Variants"] --> B["Batch Gradient Descent"]
+    A --> C["Stochastic Gradient Descent"]
+    A --> D["Mini-batch Gradient Descent"]
+
+    B --> B1["Uses full dataset"]
+    B --> B2["One update per epoch"]
+    B --> B3["Smooth but slow"]
+
+    C --> C1["Uses one example at a time"]
+    C --> C2["Frequent updates"]
+    C --> C3["Fast but noisy"]
+
+    D --> D1["Uses small batches"]
+    D --> D2["Efficient on hardware"]
+    D --> D3["Balanced and practical"]
+
+    style A fill:#E1F5FE,stroke:#4A90E2,stroke-width:2px
+    style B fill:#EDE7F6,stroke:#7E57C2
+    style C fill:#C8E6C9,stroke:#43A047
+    style D fill:#FFF9C4,stroke:#FBC02D
+{{< /mermaid >}}
+
+---
+	
 ## Gradient Descent Rule ☆
 
 The gradient tells us the direction in which the loss increases fastest.

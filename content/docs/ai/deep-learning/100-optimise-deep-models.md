@@ -38,7 +38,7 @@ It learns by using an iterative optimisation algorithm that repeatedly moves the
 
 {{< mermaid >}}
 flowchart TD
-    A["Optimisers"] --> B["Gradient Descent Variants"]
+    A["Optimisers in DNN"] --> B["Gradient Descent Variants"]
     A --> C["Momentum-based Optimiser"]
     A --> D["Adaptive Methods"]
     A --> E["Learning Rate Schedules"]
@@ -47,41 +47,17 @@ flowchart TD
     B --> B2["Stochastic Gradient Descent"]
     B --> B3["Mini-batch Gradient Descent"]
 
-    B1 --> B1a["Uses full dataset for each update"]
-    B1 --> B1b["Smooth but slow"]
-
-    B2 --> B2a["Uses one example at a time"]
-    B2 --> B2b["Fast but noisy"]
-
-    B3 --> B3a["Uses small batches"]
-    B3 --> B3b["Balanced and practical"]
-
     C --> C1["SGD with Momentum"]
-    C1 --> C1a["Uses velocity term"]
-    C1 --> C1b["Reduces zig-zag movement"]
-    C1 --> C1c["Helps move through shallow regions"]
 
     D --> D1["Parameter-specific learning rates"]
-    D --> D2["Useful for sparse features"]
-    D --> D3["Handles different gradient scales"]
 
-    E --> E1["Changes learning rate over time"]
-    E --> E2["Large steps early"]
-    E --> E3["Smaller steps later"]
-    E --> E4["Improves convergence stability"]
+    E --> E1["Learning rate changes during training"]
 
     style A fill:#E1F5FE,stroke:#4A90E2,stroke-width:2px
     style B fill:#EDE7F6,stroke:#7E57C2
     style C fill:#C8E6C9,stroke:#43A047
     style D fill:#FFF9C4,stroke:#FBC02D
-    style E fill:#E1F5FE,stroke:#4A90E2
-
-    style B1 fill:#EDE7F6,stroke:#7E57C2
-    style B2 fill:#EDE7F6,stroke:#7E57C2
-    style B3 fill:#EDE7F6,stroke:#7E57C2
-    style C1 fill:#C8E6C9,stroke:#43A047
-    style D1 fill:#FFF9C4,stroke:#FBC02D
-    style E1 fill:#E1F5FE,stroke:#4A90E2
+    style E fill:#F8BBD0,stroke:#D81B60
 {{< /mermaid >}}	
 
 ---	
