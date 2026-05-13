@@ -318,7 +318,7 @@ P(B\mid A)=P(B)\ \Rightarrow\ P(B\mid A^c)=P(B)
 
 ---
 
-## Mini-check (self-test)
+## Revision Checklist ☆
 
 1) What must be true for {{< katex >}}P(A\mid B){{< /katex >}} to be defined?  
 2) Rewrite {{< katex >}}P(A\cap B){{< /katex >}} using conditional probability.  

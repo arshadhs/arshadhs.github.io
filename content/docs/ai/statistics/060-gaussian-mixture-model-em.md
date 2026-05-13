@@ -20,14 +20,6 @@ K-means gives hard cluster membership.
 GMM gives probabilities of belonging to each cluster.
 {{% /hint %}}
 
----
-
-## Where This Fits in the Course ☆
-
-This topic belongs to **Module 6: Gaussian Mixture Model & Expectation Maximization**.
-
-It covers:
-
 - Gaussian Mixture Model
 - soft clustering
 - mixing coefficients
@@ -454,7 +446,7 @@ EM is the optimisation method that helps estimate its hidden structure.
 
 ---
 
-## Quick Revision Checklist ☆
+## Revision Checklist ☆
 
 - Can I write the GMM density formula?
 - Can I explain mixing coefficients?

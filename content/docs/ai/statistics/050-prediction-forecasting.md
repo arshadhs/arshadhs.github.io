@@ -20,14 +20,6 @@ Prediction estimates a value using a model.
 Forecasting is prediction where the order of time matters.
 {{% /hint %}}
 
----
-
-## Where This Fits in the Course ☆
-
-This topic belongs to **Module 5: Prediction & Forecasting**.
-
-It covers:
-
 - Correlation
 - Regression
 - Time series analysis
@@ -532,7 +524,7 @@ Time series forecasting predicts from temporal patterns.
 
 ---
 
-## Quick Revision Checklist ☆
+## Revision Checklist ☆
 
 - Can I distinguish prediction from forecasting?
 - Can I explain correlation without claiming causation?

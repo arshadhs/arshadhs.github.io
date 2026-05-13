@@ -220,7 +220,7 @@ P(T1\mid R1)=\frac{P(R1\mid T1)P(T1)}{P(R1)}=\frac{0.95(0.4)}{0.44}\approx 0.864
 
 ---
 
-## Practice prompts
+## Revision Checklist ☆
 
 1) Write {{< katex >}}P(A\cap B\cap C\cap D){{< /katex >}} using the multiplication rule.  
 2) If {{< katex >}}P(A)=0.3{{< /katex >}} and {{< katex >}}P(B\mid A)=0.8{{< /katex >}}, find {{< katex >}}P(A\cap B){{< /katex >}}.  
