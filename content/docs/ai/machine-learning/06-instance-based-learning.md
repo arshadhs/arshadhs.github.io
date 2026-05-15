@@ -104,8 +104,6 @@ The machine learning version: if a new point looks similar to known points of a 
 1. How do we define **similarity** or **distance**?
 2. How many neighbours should influence the final answer?
 
-### General Workflow
-
 {{< mermaid >}}
 flowchart TD
   A[Store training examples] --> B[Receive query point x_q]
@@ -192,7 +190,7 @@ Median can be more robust when outliers are present.
 4. Average their target values
 5. Return the average as the prediction
 
-### Choosing $k$
+### Choosing k
 
 The value of $k$ is the key hyperparameter in KNN.
 
@@ -396,8 +394,6 @@ A larger distance means smaller weight; a smaller distance means larger weight. 
 
 LWR is the regression counterpart of the "nearby points should matter more" idea, and is one of the key syllabus items in this module.
 
-### Intuition
-
 - **Global linear regression** fits **one line** for all data points
 - **Locally weighted regression** fits a **small weighted local model around the query point**
 
@@ -494,7 +490,7 @@ RBF shares the same local-neighbourhood philosophy as KNN and LWR:
 
 ---
 
-## Comparison of KNN, LWR, and RBF
+## Comparison - KNN, LWR, and RBF
 
 {{< mermaid >}}
 flowchart TD
@@ -515,7 +511,6 @@ flowchart TD
   style J fill:#FFF0E6,stroke:#8B6A58,color:#2F2F2F
 {{< /mermaid >}}
 
-### Methods at a Glance
 
 | Method | Main idea | Output style | What changes with query? |
 |---|---|---|---|
@@ -555,7 +550,7 @@ LWR is a more structured local regression version of the "nearby points matter m
 
 ---
 
-## Study Notes
+## Notes
 
 ### Key Facts to Remember
 
@@ -598,7 +593,7 @@ LWR is a more structured local regression version of the "nearby points matter m
 6. Use the resulting local model to compute $\hat{y}_q$
 7. Explain why the answer differs from a global regression line
 
-### Common Exam Question Patterns
+### Quick Revision Checklist ☆
 
 1. **KNN Classification** — compute Euclidean distance, sort neighbours, apply majority vote; compare answers for $k=3$, $k=5$, $k=7$
 2. **KNN Regression** — compute nearest neighbours and average their target values
