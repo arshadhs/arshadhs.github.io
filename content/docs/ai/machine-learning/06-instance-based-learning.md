@@ -267,41 +267,28 @@ d(i,j)=\max_f |x_{if}-x_{jf}|
 
 {{< mermaid >}}
 flowchart TD
-    A["Similarity for Different Attribute Types"] --> B["Nominal Attributes"]
+    A["Attribute Similarity"] --> B["Nominal Attributes"]
     A --> C["Binary Attributes"]
-
-    B2 --> B21["Similarity = m / p"]
-    B2 --> B22["Dissimilarity = (p - m) / p"]
 
     C --> D["Symmetric Binary"]
     C --> E["Asymmetric Binary"]
 
-    D --> D1["Both 0 and 1 are equally important"]
-    D --> D2["Shared 1s and shared 0s both count"]
-    D --> D3["Similarity = (q + t) / (q + r + s + t)"]
-    D --> D4["Dissimilarity = (r + s) / (q + r + s + t)"]
+    D --> D1["Dissimilarity"]
 
-    E --> E1["1 means presence"]
-    E --> E2["0 means absence"]
-    E --> E3["Shared 0s are ignored"]
-    E --> F["Jaccard Similarity"]
+    E --> E1["Dissimilarity"]
+    E --> E2["Jaccard Similarity"]
 
-    F --> F1["Similarity = q / (q + r + s)"]
-    F --> F2["Dissimilarity = (r + s) / (q + r + s)"]
-
-    classDef root fill:#f8d7da,stroke:#8b5e5e,color:#222;
+    classDef root fill:#dbeafe,stroke:#5b7db1,color:#222;
     classDef nominal fill:#d8f3dc,stroke:#5f8f6a,color:#222;
-    classDef binary fill:#dbeafe,stroke:#5b7db1,color:#222;
-    classDef sym fill:#fff3bf,stroke:#b59b3b,color:#222;
+    classDef binary fill:#fff3bf,stroke:#b59b3b,color:#222;
+    classDef sym fill:#e1f5fe,stroke:#5b7db1,color:#222;
     classDef asym fill:#e9d8fd,stroke:#8a6fb3,color:#222;
-    classDef formula fill:#f1f5f9,stroke:#94a3b8,color:#222;
 
     class A root;
-    class B,B1,B2,B3,B21,B22 nominal;
+    class B,B1,B2 nominal;
     class C binary;
-    class D,D1,D2 sym;
-    class E,E1,E2,E3,F asym;
-    class D3,D4,F1,F2 formula;
+    class D,D1 sym;
+    class E,E1,E2 asym;
 {{< /mermaid >}}
 
 **Nominal attributes** (no natural order, e.g., profession, colour, mother tongue):
