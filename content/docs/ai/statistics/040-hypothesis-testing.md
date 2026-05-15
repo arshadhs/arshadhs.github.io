@@ -22,14 +22,6 @@ It is about asking:
 > If the null hypothesis were true, how surprising would this sample result be?
 {{% /hint %}}
 
----
-
-## Where This Fits in the Course ☆
-
-This topic belongs to **Module 4: Hypothesis Testing**.
-
-It covers:
-
 - Sampling: random and stratified sampling
 - Sampling distribution
 - Central Limit Theorem
@@ -477,7 +469,7 @@ Hypothesis testing helps decide whether the improvement is likely real or just d
 
 ---
 
-## Quick Revision Checklist ☆
+## Revision Checklist ☆
 
 - Can I define {{< katex >}} H_0 {{< /katex >}} and {{< katex >}} H_1 {{< /katex >}} correctly?
 - Do I know whether the test is one-tailed or two-tailed?
