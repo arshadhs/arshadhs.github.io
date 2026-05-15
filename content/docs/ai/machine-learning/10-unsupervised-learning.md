@@ -3,7 +3,7 @@ title: "Unsupervised Learning"
 draft: false
 tags: ["AI", "ML", "Unsupervised Learning", "K-means", "EM", "GMM", "Clustering"]
 categories: ["AI", "ML"]
-weight: 1000
+weight: 020
 menu: main
 ---
 
@@ -11,9 +11,28 @@ menu: main
 
 Unsupervised Learning is used when we have input data but no target labels.
 
-The model is not told the correct answer.
+The model is not told the correct answer. Instead, it tries to discover hidden structure in the data.
 
-Instead, it tries to discover hidden structure in the data.
+---
+
+## Supervised vs Unsupervised Learning
+
+| Aspect | Supervised Learning | Unsupervised Learning |
+|---|---|---|
+| Data contains target label? | Yes | No |
+| Learns from | Input-output pairs | Input features only |
+| Main goal | Predict output | Discover structure |
+| Example task | Classification, regression | Clustering |
+| Example algorithm | Logistic regression, decision tree | K-means, GMM |
+
+---
+
+- Works on **unlabelled raw data**.
+- The algorithm **discovers hidden patterns** without prior knowledge of outcomes.  
+- Requires **no human intervention** during training.  
+- Does not make direct predictions — it **groups or organises data** instead.
+- Carries a **higher risk** because there’s no ground truth to verify results.  
+- Common techniques include **Clustering**, **Association**, and **Dimensionality Reduction**.  
 
 The most common example is **clustering**, where similar records are grouped together.
 
@@ -31,19 +50,92 @@ For this module, the main focus is clustering: K-means, mixture models, EM, and 
 
 ---
 
-## Supervised vs Unsupervised Learning
+{{< mermaid >}}
+stateDiagram-v2
 
-| Aspect | Supervised Learning | Unsupervised Learning |
-|---|---|---|
-| Data contains target label? | Yes | No |
-| Learns from | Input-output pairs | Input features only |
-| Main goal | Predict output | Discover structure |
-| Example task | Classification, regression | Clustering |
-| Example algorithm | Logistic regression, decision tree | K-means, GMM |
+  %% ML maths-based colours (same palette as supervised)
+  classDef probability fill:#d1fae5,stroke:#065f46,stroke-width:1px
+  classDef geometry fill:#ffedd5,stroke:#9a3412,stroke-width:1px
+  classDef category font-style:italic,font-weight:bold,fill:#f3f4f6,stroke:#374151
+
+  %% Root
+  USL: Unsupervised Learning
+
+  %% Main branches
+  USL --> CLU:::category
+  CLU: Clustering
+
+  USL --> DR:::category
+  DR: Dimensionality Reduction
+
+  %% Clustering algorithms
+  CLU --> KM:::geometry
+  KM: K-Means
+
+  CLU --> HC:::geometry
+  HC: Hierarchical Clustering
+
+  CLU --> DB:::geometry
+  DB: DBSCAN
+
+  %% Probabilistic models
+  USL --> PM:::category
+  PM: Probabilistic Models
+
+  PM --> GMM:::probability
+  GMM: Gaussian Mixture Model
+
+  PM --> HMM:::probability
+  HMM: Hidden Markov Model
+{{< /mermaid >}}
 
 ---
 
-## What Is Clustering? ☆
+## Clustering
+- Groups **similar data points** together based on shared features.  
+- Commonly used for **market segmentation**, **image compression**, and **anomaly detection**.  
+
+## Association
+- Identifies **relationships or correlations** between variables in a dataset.  
+- Commonly used in **market basket analysis** (e.g. "Customers who bought X also bought Y").  
+
+### Common Techniques
+- **Apriori Algorithm** – Finds frequent itemsets and generates association rules.  
+- **Eclat Algorithm** – Similar to Apriori but uses set intersections for faster computation.  
+---
+
+## Dimensionality Reduction
+- Reduces the **number of input variables** to simplify data.  
+- Helps remove noise and redundancy.  
+- Commonly used in **data pre-processing** and **visualisation**.  
+
+### Common Techniques
+- **Principal Component Analysis (PCA)** – Projects data onto fewer dimensions while keeping most variance.  
+- **Linear Discriminant Analysis (LDA)** – Focuses on class separation.  
+- **t-SNE (t-Distributed Stochastic Neighbour Embedding)** – Used for visualising high-dimensional data.  
+- **Autoencoders** – Neural networks that compress and reconstruct data.  
+
+---
+
+{{< mermaid >}}
+mindmap
+  root(Unsupervised Learning)
+    Clustering
+      K Means
+      Hierarchical Clustering
+      DBSCAN
+    Dimensionality Reduction
+      PCA
+      t SNE
+      Autoencoders
+    Probabilistic Models
+      Gaussian Mixture Model
+      Hidden Markov Model
+{{< /mermaid >}}
+
+---
+
+## Clustering ☆
 
 Clustering means grouping data points so that:
 
@@ -70,6 +162,11 @@ flowchart LR
     style D fill:#EDE7F6,stroke:#8a6fb3,color:#222
     style E fill:#FDE2E4,stroke:#b85c68,color:#222
 {{< /mermaid >}}
+
+### Common Types of Clustering
+- **K-Means Clustering** – Divides data into *K* groups based on similarity.  
+- **Hierarchical Clustering** – Builds a hierarchy (tree) of clusters.  
+- **DBSCAN (Density-Based Spatial Clustering)** – Groups points close in density; identifies noise/outliers.  
 
 ---
 
