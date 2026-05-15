@@ -265,6 +265,45 @@ d(i,j)=\max_f |x_{if}-x_{jf}|
 
 ### Similarity for Different Attribute Types
 
+{{< mermaid >}}
+flowchart TD
+    A["Similarity for Different Attribute Types"] --> B["Nominal Attributes"]
+    A --> C["Binary Attributes"]
+
+    B2 --> B21["Similarity = m / p"]
+    B2 --> B22["Dissimilarity = (p - m) / p"]
+
+    C --> D["Symmetric Binary"]
+    C --> E["Asymmetric Binary"]
+
+    D --> D1["Both 0 and 1 are equally important"]
+    D --> D2["Shared 1s and shared 0s both count"]
+    D --> D3["Similarity = (q + t) / (q + r + s + t)"]
+    D --> D4["Dissimilarity = (r + s) / (q + r + s + t)"]
+
+    E --> E1["1 means presence"]
+    E --> E2["0 means absence"]
+    E --> E3["Shared 0s are ignored"]
+    E --> F["Jaccard Similarity"]
+
+    F --> F1["Similarity = q / (q + r + s)"]
+    F --> F2["Dissimilarity = (r + s) / (q + r + s)"]
+
+    classDef root fill:#f8d7da,stroke:#8b5e5e,color:#222;
+    classDef nominal fill:#d8f3dc,stroke:#5f8f6a,color:#222;
+    classDef binary fill:#dbeafe,stroke:#5b7db1,color:#222;
+    classDef sym fill:#fff3bf,stroke:#b59b3b,color:#222;
+    classDef asym fill:#e9d8fd,stroke:#8a6fb3,color:#222;
+    classDef formula fill:#f1f5f9,stroke:#94a3b8,color:#222;
+
+    class A root;
+    class B,B1,B2,B3,B21,B22 nominal;
+    class C binary;
+    class D,D1,D2 sym;
+    class E,E1,E2,E3,F asym;
+    class D3,D4,F1,F2 formula;
+{{< /mermaid >}}
+
 **Nominal attributes** (no natural order, e.g., profession, colour, mother tongue):
 
 - Simple matching: matching values contribute similarity; differing values contribute dissimilarity
@@ -272,10 +311,37 @@ d(i,j)=\max_f |x_{if}-x_{jf}|
 
 **Binary attributes:**
 
+When comparing two objects `i` and `j`, binary attributes can be counted using the following table:
+
+| | Object j = 1 | Object j = 0 |
+|---|---:|---:|
+| **Object i = 1** | q | r |
+| **Object i = 0** | s | t |
+
+Where:
+
+- `q` = number of attributes where both objects are `1`
+- `r` = number of attributes where object `i` is `1` and object `j` is `0`
+- `s` = number of attributes where object `i` is `0` and object `j` is `1`
+- `t` = number of attributes where both objects are `0`
+
 - Symmetric binary: both states are equally important (e.g., gender)
+
+{{% colour "blue" %}}
+{{< katex display=true >}}
+d_{\text{symmetric}}(i,j) = \frac{r+s}{q+r+s+t}
+{{< /katex >}}
+{{% /colour %}}
+
 - Asymmetric binary: one state is more important, common in presence/absence situations (e.g., symptoms, test results)
 
-Jaccard similarity for asymmetric binary variables:
+{{% colour "blue" %}}
+{{< katex display=true >}}
+d_{\text{asymmetric}}(i,j) = \frac{r+s}{q+r+s}
+{{< /katex >}}
+{{% /colour %}}
+
+- Jaccard coefficient (similarity measure for asymmetric binary variables):
 
 {{% colour "blue" %}}
 {{< katex display=true >}}
@@ -283,13 +349,7 @@ Jaccard similarity for asymmetric binary variables:
 {{< /katex >}}
 {{% /colour %}}
 
-where $q$ counts shared positives. The related dissimilarity is:
-
-{{% colour "blue" %}}
-{{< katex display=true >}}
-d(i,j)=\frac{r+s}{q+r+s}
-{{< /katex >}}
-{{% /colour %}}
+where $q$ counts shared positives.
 
 **Ordinal attributes** (ordered values, e.g., Village → Small Town → Suburban → Metropolitan):
 
