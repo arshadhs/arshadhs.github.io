@@ -3,7 +3,7 @@ title: "Unsupervised Learning"
 draft: false
 tags: ["AI", "ML", "Unsupervised Learning", "K-means", "EM", "GMM", "Clustering"]
 categories: ["AI", "ML"]
-weight: 020
+weight: 1000
 menu: main
 ---
 
