@@ -1,10 +1,11 @@
 ---
-title: 'Classification(Linear Models)'
+title: 'Classification (Linear)'
 draft: false
 tags: ["AI", "ML"]
 categories: ["AI", "ML"]
 weight: 400
 ---
+
 # Linear models for Classification
  
 - categorises data by finding a linear boundary (hyperplane) that separates classes
@@ -31,11 +32,10 @@ style SIG fill:#CE93D8,stroke:#8E24AA,color:#000
 style HNG fill:#CE93D8,stroke:#8E24AA,color:#000
 {{< /mermaid >}}
 
-## Discriminant Functions 
-
-## Decision Theory  
-
-## Probabilistic Discriminative Classifiers 
+- Discriminant Functions 
+- Decision Theory  
+- Probabilistic Discriminative Classifiers 
+- Logistic Regression  
 
 ---
 

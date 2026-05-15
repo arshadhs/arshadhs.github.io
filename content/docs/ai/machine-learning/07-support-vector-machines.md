@@ -45,6 +45,11 @@ SVM tries to find a decision boundary that separates the classes with the **larg
 The training points that decide this margin are called **support vectors**.
 {{% /hint %}}
 
+- Linearly separable data  
+- Non-linearly separable data 
+- Kernel Trick (Mercer) 
+- Applications to both structured and unstructured data
+
 ---
 
 ## Where SVM Fits in Machine Learning ☆

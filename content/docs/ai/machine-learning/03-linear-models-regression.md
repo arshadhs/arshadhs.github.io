@@ -1,5 +1,5 @@
 ---
-title: 'Regression(Linear Models)'
+title: 'Regression (Linear)'
 draft: false
 tags: ["AI", "ML"]
 categories: ["AI", "ML"]
@@ -19,6 +19,11 @@ Linear Regression learns parameters by minimising a squared-error cost.
 You can solve it directly (closed form) or iteratively (gradient descent),
 and you can extend it using basis functions and regularisation.
 {{% /hint %}}
+
+- Direct Solution Method 
+- Iterative Method – Gradient Descent (batch/stochastic/mini-batch)  
+- Linear basis function models  
+- Bias-variance decomposition
 
 {{< mermaid >}}
 flowchart TD

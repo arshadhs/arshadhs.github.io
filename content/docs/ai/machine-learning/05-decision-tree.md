@@ -15,6 +15,12 @@ A decision tree grows by repeatedly splitting the training data into **purer** s
 (Entropy / Gini / Classification Error).
 {{% /hint %}}
 
+- Information Theory 
+- Entropy Based Decision Tree Construction  
+- Avoiding Overfitting 
+- Minimum Description Length  
+- Handling Continuous valued attributes, missing attributes  
+
 ---
 
 ## Information Theory

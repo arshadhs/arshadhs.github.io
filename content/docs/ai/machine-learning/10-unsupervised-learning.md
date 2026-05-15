@@ -13,6 +13,11 @@ Unsupervised Learning is used when we have input data but no target labels.
 
 The model is not told the correct answer. Instead, it tries to discover hidden structure in the data.
 
+- K-means Clustering and variants 
+- Review of EM algorithm 
+- GMM based Soft Clustering 
+- Applications 
+
 ---
 
 ## Supervised vs Unsupervised Learning
