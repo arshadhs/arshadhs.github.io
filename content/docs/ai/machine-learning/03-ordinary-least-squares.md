@@ -9,8 +9,66 @@ categories: ["AI", "ML"]
 
 # Direct solution method - Ordinary Least Squares and the Line of Best Fit
 
+
+{{% hint success %}}
+**Revision:**  
+OLS is the direct method for linear regression. It finds the best-fit line by minimising the sum of squared residuals without iterative updates.
+{{% /hint %}}
+
+---
+
+## Direct Method vs Iterative Method ☆
+
+Linear regression parameters can be found in two main ways.
+
+| Method | Main idea | When used |
+|---|---|---|
+| Ordinary Least Squares | Compute the best parameters directly | Small or moderate datasets |
+| Gradient Descent | Start with parameters and update repeatedly | Large datasets or many features |
+
+{{< mermaid >}}
+flowchart LR
+    A["Linear Regression"] --> B["Direct Solution<br/>OLS"]
+    A --> C["Iterative Solution<br/>Gradient Descent"]
+
+    B --> B1["Normal Equation"]
+    B --> B2["No learning rate"]
+    B --> B3["One-shot solution"]
+
+    C --> C1["Learning rate"]
+    C --> C2["Repeated updates"]
+    C --> C3["Stops after convergence"]
+
+    style A fill:#E1F5FE,stroke:#5b7db1,color:#000
+    style B fill:#C8E6C9,stroke:#5f8f6a,color:#000
+    style C fill:#FFF9C4,stroke:#b59b3b,color:#000
+    style B1 fill:#EDE7F6,stroke:#8a6fb3,color:#000
+    style B2 fill:#EDE7F6,stroke:#8a6fb3,color:#000
+    style B3 fill:#EDE7F6,stroke:#8a6fb3,color:#000
+    style C1 fill:#EDE7F6,stroke:#8a6fb3,color:#000
+    style C2 fill:#EDE7F6,stroke:#8a6fb3,color:#000
+    style C3 fill:#EDE7F6,stroke:#8a6fb3,color:#000
+{{< /mermaid >}}
+
+---
+
+## Why It Is Called “Least Squares” ☆
+
+OLS is called **least squares** because it chooses parameters that make the squared residual errors as small as possible.
+
+{{% colour "green" %}}
+{{< katex display=true >}}
+\text{best parameters} = \arg\min_{\beta_0,\beta_1}\sum_{i=1}^{n}\left(y_i-\hat{y}_i\right)^2
+{{< /katex >}}
+{{% /colour %}}
+
+The word **least** means minimum.
+
+The word **squares** refers to squared residuals.
+
+
 It is possible to compute the best parameters for linear regression **in one shot** (closed-form),
-instead of iteratively improving them step-by-step. fileciteturn34file10turn34file6
+instead of iteratively improving them step-by-step.
 
 For linear regression, the direct method is usually **Ordinary Least Squares (OLS)**.
 
@@ -293,6 +351,37 @@ Ordinary Least Squares is:
 - A foundation for extensions like regularisation (ridge, LASSO)
 
 ---
+
+## Notes
+
+- OLS is a direct closed-form method.
+- It minimises the sum of squared residuals.
+- It does not require a learning rate.
+- It can be solved using covariance/variance for one feature.
+- It can be solved using the normal equation for matrix form.
+- Matrix inversion can become expensive for large feature spaces.
+- If features are perfectly correlated, the normal equation may fail because {{< katex >}}X^T X{{< /katex >}} can become singular.
+
+---
+
+## Revision
+
+Use OLS when the question asks for the best-fit line directly and does not mention iterations or learning rate.
+
+{{% colour "green" %}}
+{{< katex display=true >}}
+\theta^* = (X^T X)^{-1}X^T y
+{{< /katex >}}
+{{% /colour %}}
+
+---
+
+## Summary
+
+Ordinary Least Squares finds the linear regression parameters that minimise squared error.
+It is mathematically clean and useful for small or moderate datasets.
+For very large datasets or high-dimensional data, gradient descent may be preferred.
+
 
 ## References
 

@@ -9,6 +9,68 @@ categories: ["AI", "ML"]
 
 # Gradient Descent for Linear Regression
 
+
+{{% hint success %}}
+**Revision:**  
+Gradient descent is the step-by-step method for reducing the cost function when a direct closed-form solution is not convenient.
+{{% /hint %}}
+
+---
+
+## Where Gradient Descent Fits in ML ☆
+
+Gradient descent is used when we want the model to learn parameters by repeatedly improving them.
+
+For linear regression, it adjusts the slope and intercept until the prediction error becomes small.
+
+{{< mermaid >}}
+flowchart LR
+    A["Initial Parameters"] --> B["Make Predictions"]
+    B --> C["Compute Cost"]
+    C --> D["Compute Gradient"]
+    D --> E["Update Parameters"]
+    E --> B
+
+    style A fill:#E1F5FE,stroke:#5b7db1,color:#000
+    style B fill:#C8E6C9,stroke:#5f8f6a,color:#000
+    style C fill:#FFF9C4,stroke:#b59b3b,color:#000
+    style D fill:#EDE7F6,stroke:#8a6fb3,color:#000
+    style E fill:#C8E6C9,stroke:#5f8f6a,color:#000
+{{< /mermaid >}}
+
+---
+
+## Core Idea ☆
+
+The gradient tells us the direction in which the cost increases fastest.
+
+To reduce the cost, we move in the opposite direction.
+
+{{% colour "green" %}}
+{{< katex display=true >}}
+\text{new parameter} = \text{old parameter} - \text{learning rate} \times \text{gradient}
+{{< /katex >}}
+{{% /colour %}}
+
+This is why the update rule subtracts the gradient.
+
+---
+
+## Exam Recognition Cues ☆
+
+Use gradient descent when the question gives:
+
+- initial parameter values
+- learning rate {{< katex >}}\alpha{{< /katex >}} or {{< katex >}}\eta{{< /katex >}}
+- number of iterations
+- wording such as “show the first iteration” or “perform two updates”
+
+{{% hint info %}}
+If a problem asks for only **one iteration**, do not try to find the final optimal line.  
+Use the current parameters, compute predictions, compute gradients, update once, and stop.
+{{% /hint %}}
+
+
 Gradient descent is an iterative optimisation method used to minimise the regression cost function by repeatedly updating parameters in the direction that reduces error.
 
 - **Iterative method**
@@ -240,6 +302,42 @@ Practical habit:
 monitor the cost $J$ across iterations and ensure it decreases steadily.
 
 ---
+
+## Notes
+
+- Gradient descent is iterative.
+- It needs a learning rate.
+- It updates parameters using gradients.
+- Batch GD uses all records per update.
+- Stochastic GD uses one record per update.
+- Mini-batch GD uses a small group of records per update.
+- A very large learning rate may overshoot or diverge.
+- A very small learning rate may converge very slowly.
+
+---
+
+## Revision
+
+The main update pattern is:
+
+{{% colour "green" %}}
+{{< katex display=true >}}
+\theta \leftarrow \theta - \alpha \nabla J(\theta)
+{{< /katex >}}
+{{% /colour %}}
+
+Memory line:
+
+**Predict → Compute error → Compute gradient → Update parameters → Repeat**
+
+---
+
+## Summary
+
+Gradient descent is used to minimise the cost function when training a model.
+It starts with initial parameter values and repeatedly adjusts them in the direction that reduces error.
+For linear regression, it can find the best-fit line without directly using the normal equation.
+
 
 ## References
 

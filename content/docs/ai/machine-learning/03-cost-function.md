@@ -9,6 +9,82 @@ categories: ["AI", "ML"]
 
 # Cost Function
 
+
+{{% hint success %}}
+**Revision:**  
+A cost function converts model error into a single number. Training means changing the model parameters until this number becomes as small as possible.
+{{% /hint %}}
+
+---
+
+## Why Cost Function Matters in ML ☆
+
+A machine learning model needs a way to decide whether one set of parameters is better than another.
+
+For linear regression, every possible value of the parameters gives a different line.
+The cost function tells us which line is better by measuring how far the predictions are from the true values.
+
+In simple words:
+
+- prediction close to actual value → small error
+- prediction far from actual value → large error
+- lower cost → better fit on training data
+- training objective → minimise the cost
+
+{{< mermaid >}}
+flowchart LR
+    A["Training Data"] --> B["Model<br/>with parameters"]
+    B --> C["Predictions"]
+    C --> D["Compare with<br/>Actual values"]
+    D --> E["Cost Function"]
+    E --> F["Update Parameters"]
+    F --> B
+
+    style A fill:#E1F5FE,stroke:#5b7db1,color:#000
+    style B fill:#C8E6C9,stroke:#5f8f6a,color:#000
+    style C fill:#FFF9C4,stroke:#b59b3b,color:#000
+    style D fill:#EDE7F6,stroke:#8a6fb3,color:#000
+    style E fill:#FFF9C4,stroke:#b59b3b,color:#000
+    style F fill:#C8E6C9,stroke:#5f8f6a,color:#000
+{{< /mermaid >}}
+
+---
+
+## Loss Function, Cost Function and Objective Function ☆
+
+These terms are closely related, but they are not exactly the same.
+
+| Term | Meaning | Scope |
+|---|---|---|
+| Loss function | Error for one training example | Single data point |
+| Cost function | Average or total loss across the dataset | Whole training set |
+| Objective function | Function we want to minimise or maximise | General optimisation goal |
+
+For linear regression, the objective is normally to minimise the cost function.
+
+{{% colour "green" %}}
+{{< katex display=true >}}
+\text{Training objective} = \min_{w,b} J(w,b)
+{{< /katex >}}
+{{% /colour %}}
+
+---
+
+## Why Squared Error is Common ☆
+
+Squared error is commonly used because:
+
+- negative and positive errors do not cancel out
+- large mistakes are penalised more strongly
+- the resulting cost surface is smooth
+- for linear regression, the cost is convex, so there is one global minimum
+
+{{% hint warning %}}
+A low training cost does not always mean the model will generalise well.  
+If the model is too complex, it may overfit the training data.
+{{% /hint %}}
+
+
 - also known as an objective function
 
 - **how far the predicted values are from the actual ones**
@@ -328,7 +404,7 @@ choose parameters that minimise the cost on the training data.
 For regression → cost is often squared error.
 For classification → a common cost is cross-entropy (log loss).
 
---
+---
 
 ## Role of Gradient Descent in Updating the Weights
 
@@ -338,6 +414,36 @@ Gradient Descent is an optimisation algorithm used to minimise the cost function
 - each iteration updates the weights in the direction that minimises the cost function leading to the optimal set of parameters.
 
 ---
+
+
+## Notes
+
+- Cost function measures model error over the training set.
+- Linear regression commonly uses squared error.
+- Logistic regression commonly uses cross-entropy / log loss.
+- Lower cost usually means better fit on the training data.
+- Optimisation algorithms such as gradient descent use the cost function to update parameters.
+
+---
+
+## Revision
+
+Remember this sequence:
+
+{{% colour "green" %}}
+{{< katex display=true >}}
+\text{Model} \rightarrow \text{Prediction} \rightarrow \text{Error} \rightarrow \text{Cost} \rightarrow \text{Parameter Update}
+{{< /katex >}}
+{{% /colour %}}
+
+---
+
+## Summary
+
+A cost function is central to machine learning training.
+It gives the model a measurable objective.
+For linear regression, the squared error cost helps us find the best-fit line by minimising prediction errors across the dataset.
+
 
 ## References
 
