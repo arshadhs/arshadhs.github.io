@@ -9,15 +9,15 @@ menu: main
 
 # Optimisation of Deep models
 
-Optimisation is the process of finding the best values of the parameters of a deep neural network.
+Optimizers are algorithms that update neural network parameters to reduce the loss function.
 
-In a neural network, the parameters include weights and biases.
-Training means repeatedly adjusting these parameters so that the loss becomes smaller.
+Deep networks usually have millions or billions of parameters, so there is usually no closed-form solution.
+
+Instead, training uses iterative optimisation.
 
 {{% hint info %}}
 **Key takeaway:**  
-A deep neural network does not usually learn by solving one closed-form equation.
-It learns by using an iterative optimisation algorithm that repeatedly moves the parameters in a direction that reduces the loss.
+An optimiser decides how the model moves through the loss landscape towards lower loss.
 {{% /hint %}}
 
 ---
@@ -56,9 +56,9 @@ flowchart TD
 
 ---	
 
-## Why Optimisation Matters ☆
+## Goal of Optimisation ☆
 
-The machine learning goal is to find the parameters that minimise the loss function.
+The goal is to find parameters {{< katex >}} \theta {{< /katex >}} that minimise the loss.
 
 {{% colour "blue" %}}
 {{< katex display=true >}}
@@ -80,29 +80,99 @@ Instead, we use iterative algorithms such as gradient descent, mini-batch gradie
 
 Without optimisation, the network keeps random weights, produces random predictions, and does not learn useful patterns.
 
-## DNN Training Pipeline
+Without optimisation:
+
+- weights remain random
+- predictions remain random
+- no learning happens
+
+---
+
+## Gradient Descent Core Idea
+
+Gradient descent moves parameters in the opposite direction of the gradient.
+
+{{% colour "blue" %}}
+{{< katex display=true >}}
+\theta_{t+1}=\theta_t-\eta \nabla_{\theta}\mathcal{L}(\theta_t)
+{{< /katex >}}
+{{% /colour %}}
+
+Where:
+
+- {{< katex >}} \eta {{< /katex >}} is the learning rate
+- {{< katex >}} \nabla_{\theta}\mathcal{L} {{< /katex >}} is the gradient of loss
+
+---
+
+## Gradient Descent Variants ☆
+
+| Method | Data used per update | Updates per epoch | Memory | Behaviour |
+|---|---|---:|---|---|
+| Batch GD | full dataset | 1 | high | smooth but slow |
+| SGD | one example | many | low | noisy but fast |
+| Mini-batch GD | batch of examples | medium | medium | balanced and practical |
+
+---
+
+## Mini-Batch Gradient Descent ☆
+
+Mini-batch gradient descent is the practical default for deep learning.
+
+For mini-batch {{< katex >}} B {{< /katex >}}:
+
+{{% colour "blue" %}}
+{{< katex display=true >}}
+\mathcal{L}_B(\theta)=\frac{1}{B}\sum_{i \in B}\ell_i(\theta)
+{{< /katex >}}
+{{% /colour %}}
+
+{{% colour "blue" %}}
+{{< katex display=true >}}
+g = \nabla_{\theta}\mathcal{L}_B(\theta)=\frac{1}{B}\sum_{i \in B}\nabla_{\theta}\ell_i(\theta)
+{{< /katex >}}
+{{% /colour %}}
+
+{{% colour "blue" %}}
+{{< katex display=true >}}
+\theta \leftarrow \theta - \eta g
+{{< /katex >}}
+{{% /colour %}}
+
+Common batch sizes:
+
+- 32
+- 64
+- 128
+- 256
+
+---
+
+## Learning Rate Effects ☆
+
+| Learning rate | Behaviour | Result |
+|---|---|---|
+| Too large | jumps around, oscillates | may diverge |
+| Too small | tiny updates | very slow learning |
+| Just right | stable descent | smooth convergence |
 
 ```mermaid
 flowchart LR
-    A[Input Data] --> B[Forward Pass]
-    B --> C[Prediction]
-    C --> D[Loss Function]
-    D --> E[Gradient Computation]
-    E --> F[Optimizer Update]
-    F --> G[Updated Weights]
-    G --> B
+    A["Learning Rate"] --> B["Too Large"]
+    A --> C["Too Small"]
+    A --> D["Good Value"]
 
-    style A fill:#E1F5FE
-    style B fill:#C8E6C9
-    style C fill:#FFF9C4
-    style D fill:#EDE7F6
-    style E fill:#E1F5FE
-    style F fill:#C8E6C9
-    style G fill:#FFF9C4
+    B --> B1["Oscillation or divergence"]
+    C --> C1["Slow convergence"]
+    D --> D1["Stable loss reduction"]
+
+    style A fill:#E1F5FE,stroke:#4A90E2
+    style B fill:#FFF9C4,stroke:#FBC02D
+    style C fill:#EDE7F6,stroke:#7E57C2
+    style D fill:#C8E6C9,stroke:#43A047
 ```
 
-The process repeats for many iterations.
-Each iteration tries to reduce the loss by changing the parameters slightly.
+---
 
 ## Loss Functions Review ☆
 
@@ -124,7 +194,23 @@ Many useful gradients have the intuitive form:
 This is one reason why backpropagation can efficiently compute updates across many layers.
 {{% /hint %}}
 
-## Optimisation Challenges ☆
+---
+
+## Optimisation Challenges
+
+Deep learning loss surfaces are difficult.
+
+Important challenges:
+
+| Challenge | Meaning |
+|---|---|
+| Local minima | point lower than nearby points but not globally best |
+| Saddle point | gradient is zero, but not a minimum |
+| Plateau | flat region with very small gradient |
+| Non-convex landscape | many valleys, ridges, and irregular paths |
+| Exploding gradient | gradient becomes extremely large |
+| Vanishing gradient | gradient becomes extremely small |
+
 
 Training deep networks is difficult because the loss surface can be complicated.
 The optimiser may face several problems.
@@ -188,13 +274,224 @@ A flat loss curve does not always mean the model has learned well.
 It may also mean that the optimiser is stuck on a plateau, near a saddle point, or using an unsuitable learning rate.
 {{% /hint %}}
 
+---
+
+## Momentum ☆
+
+Momentum adds velocity to gradient descent.
+
+It remembers previous update directions and smooths zig-zag movement.
+
+{{% colour "blue" %}}
+{{< katex display=true >}}
+v_t = \beta v_{t-1} + g_t
+{{< /katex >}}
+{{% /colour %}}
+
+{{% colour "blue" %}}
+{{< katex display=true >}}
+\theta_{t+1}=\theta_t-\eta v_t
+{{< /katex >}}
+{{% /colour %}}
+
+Where:
+
+- {{< katex >}} v_t {{< /katex >}} is velocity
+- {{< katex >}} \beta {{< /katex >}} is momentum coefficient, often around 0.9
+- {{< katex >}} g_t {{< /katex >}} is current gradient
+
+---
+
+## Momentum Intuition
+
+```mermaid
+flowchart TD
+    A["SGD Path"] --> B["Noisy zig-zag"]
+    C["Momentum Path"] --> D["Smoother movement"]
+    D --> E["Faster progress in useful direction"]
+    D --> F["Less oscillation across ravines"]
+
+    style A fill:#FFF9C4,stroke:#FBC02D
+    style B fill:#EDE7F6,stroke:#7E57C2
+    style C fill:#E1F5FE,stroke:#4A90E2
+    style D fill:#C8E6C9,stroke:#43A047
+    style E fill:#C8E6C9,stroke:#43A047
+    style F fill:#C8E6C9,stroke:#43A047
+```
+
+---
+
+## Adaptive Optimisers ☆
+
+Adaptive methods change the effective learning rate for each parameter.
+
+They are useful when:
+
+- gradients vary strongly across dimensions
+- some parameters are sparse
+- some directions are steep
+- fixed learning rate causes zig-zag movement
+
+---
+
+## Adagrad
+
+Adagrad accumulates squared gradients and gives smaller learning rates to frequently updated parameters.
+
+{{% colour "blue" %}}
+{{< katex display=true >}}
+r_t = r_{t-1} + g_t \odot g_t
+{{< /katex >}}
+{{% /colour %}}
+
+{{% colour "blue" %}}
+{{< katex display=true >}}
+\theta_{t+1}=\theta_t-\frac{\eta}{\sqrt{r_t}+\epsilon}\odot g_t
+{{< /katex >}}
+{{% /colour %}}
+
+Good for sparse features, but the learning rate may shrink too much over time.
+
+---
+
+## RMSProp
+
+RMSProp uses an exponentially weighted average of squared gradients.
+
+{{% colour "blue" %}}
+{{< katex display=true >}}
+r_t = \rho r_{t-1} + (1-\rho)g_t \odot g_t
+{{< /katex >}}
+{{% /colour %}}
+
+{{% colour "blue" %}}
+{{< katex display=true >}}
+\theta_{t+1}=\theta_t-\frac{\eta}{\sqrt{r_t}+\epsilon}\odot g_t
+{{< /katex >}}
+{{% /colour %}}
+
+It avoids Adagrad's continuously shrinking learning rate problem.
+
+---
+
+## Adam ☆
+
+Adam combines momentum and RMSProp-style adaptive scaling.
+
+It tracks:
+
+- first moment: average gradient
+- second moment: average squared gradient
+
+{{% colour "blue" %}}
+{{< katex display=true >}}
+m_t = \beta_1 m_{t-1} + (1-\beta_1)g_t
+{{< /katex >}}
+{{% /colour %}}
+
+{{% colour "blue" %}}
+{{< katex display=true >}}
+v_t = \beta_2 v_{t-1} + (1-\beta_2)g_t^2
+{{< /katex >}}
+{{% /colour %}}
+
+Bias correction:
+
+{{% colour "blue" %}}
+{{< katex display=true >}}
+\hat{m}_t = \frac{m_t}{1-\beta_1^t}, \quad \hat{v}_t = \frac{v_t}{1-\beta_2^t}
+{{< /katex >}}
+{{% /colour %}}
+
+Update:
+
+{{% colour "blue" %}}
+{{< katex display=true >}}
+\theta_{t+1}=\theta_t-\eta\frac{\hat{m}_t}{\sqrt{\hat{v}_t}+\epsilon}
+{{< /katex >}}
+{{% /colour %}}
+
+Common defaults:
+
+- {{< katex >}} \beta_1 = 0.9 {{< /katex >}}
+- {{< katex >}} \beta_2 = 0.999 {{< /katex >}}
+- {{< katex >}} \epsilon = 10^{-8} {{< /katex >}}
+
+---
+
+## Adadelta
+
+Adadelta is an adaptive method designed to reduce sensitivity to the initial learning rate.
+
+It uses running averages of squared gradients and squared parameter updates.
+
+For exams, remember it as an extension of adaptive learning-rate methods.
+
+---
+
+## Learning Rate Schedules ☆
+
+Learning rate schedules change the learning rate over training.
+
+Common strategies:
+
+| Schedule | Idea |
+|---|---|
+| Step decay | reduce learning rate at fixed epochs |
+| Exponential decay | gradually reduce by a constant factor |
+| Cosine decay | smooth reduction using cosine curve |
+| Warm-up | start small, then increase early |
+| Reduce on plateau | reduce when validation loss stops improving |
+
+---
+
+## Gradient Clipping
+
+Gradient clipping limits very large gradients.
+
+It is especially useful for RNNs and unstable training.
+
+{{% colour "blue" %}}
+{{< katex display=true >}}
+g \leftarrow g \cdot \frac{c}{\|g\|} \quad \text{if } \|g\| > c
+{{< /katex >}}
+{{% /colour %}}
+
+---
+
+## Choosing an Optimiser
+
+| Situation | Good choice |
+|---|---|
+| Basic baseline | Mini-batch SGD |
+| Noisy gradients | Momentum |
+| Sparse features | Adagrad or Adam |
+| General deep learning default | Adam |
+| Need strong final generalisation | SGD with momentum after tuning |
+| Exploding gradients | optimiser plus gradient clipping |
+
+---
+
 ## Practical Interpretation
 
 Optimisers decide how the model moves through the loss landscape.
 A poor optimiser or a poor learning rate can make training slow, unstable, or completely unsuccessful.
 A good optimiser can speed up training and make deep networks easier to train.
 
-## Exam Notes ☆
+---
+
+## Common Exam Mistakes ☆
+
+- saying optimiser changes the dataset
+- confusing learning rate with momentum
+- forgetting mini-batch is the practical default
+- assuming Adam always gives best generalisation
+- not explaining why too high learning rate diverges
+- forgetting that adaptive methods use parameter-wise scaling
+
+---
+
+## Revision / Summary
 
 Remember these points:
 
@@ -206,11 +503,27 @@ Remember these points:
 - The choice of loss function depends on the task type.
 - The choice of optimiser affects convergence speed and stability.
 
+{{% hint success %}}
+Remember the optimiser progression:
+
+**Gradient Descent → Mini-batch GD → Momentum → Adaptive Methods → Adam → Learning Rate Scheduling**
+{{% /hint %}}
+
+| Optimiser | Main idea |
+|---|---|
+| Batch GD | full dataset update |
+| SGD | one-example update |
+| Mini-batch GD | balanced practical update |
+| Momentum | accumulate velocity |
+| Adagrad | scale by accumulated squared gradients |
+| RMSProp | moving average of squared gradients |
+| Adam | momentum plus adaptive scaling |
+| Adadelta | adaptive method with reduced LR sensitivity |
+
 ---
   
 ## Reference
 - **Dive into deep learning. Cambridge University Press.**. (Ch12)
 
 ---
-
 {{< home-link "Home" >}} | {{< section-index >}}
