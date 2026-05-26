@@ -125,13 +125,39 @@ After **Salām**:
 
 ---
 
-## Rabbana Duas
+## Duaas
 
-{{% details title="Rabanna Duas" open=false %}}
+{{% details title="Duaas" open=false %}}
+
+- Dua for Seeking Allah’s Help and Mercy
+
+> **يَا حَيُّ يَا قَيُّومُ، بِرَحْمَتِكَ أَسْتَغِيثُ، أَصْلِحْ لِي شَأْنِي كُلَّهُ، وَلَا تَكِلْنِي إِلَى نَفْسِي طَرْفَةَ عَيْنٍ**  
+
+  _O Ever-Living, O Sustainer, by Your mercy I seek help. Correct all of my affairs and do not leave me to myself even for the blink of an eye._  
+  **Reference:** Sunan al-Nasāʾī, al-Ḥākim
+
+---
+  
+- Dua for Beneficial Knowledge
+
+> **اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا، وَرِزْقًا طَيِّبًا، وَعَمَلًا مُتَقَبَّلًا**  
+
+  _O Allah, I ask You for beneficial knowledge, pure provision, and accepted deeds._  
+
+  **Reference:** Sunan Ibn Mājah
+
+{{% /details %}}
+
+---
+
+## Rabbana Duaas
+
+{{% details title="Rabanna Duaas" open=false %}}
 
 - Dua for Good in This World and the Hereafter
 
 > **رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ**  
+
   _Our Lord, grant us good in this world and good in the Hereafter, and protect us from the punishment of the Fire._  
   **Reference:** Sūrat al-Baqarah (2:201)
 
@@ -140,6 +166,7 @@ After **Salām**:
 - Dua for Forgiveness of Mistakes and Forgetfulness
 
 > **رَبَّنَا لَا تُؤَاخِذْنَا إِنْ نَسِينَا أَوْ أَخْطَأْنَا**  
+
   _Our Lord, do not take us to account if we forget or make mistakes._  
   **Reference:** Sūrat al-Baqarah (2:286)
 
@@ -148,6 +175,7 @@ After **Salām**:
 - Dua for Ease and Relief from Burdens
 
 > **رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَا إِصْرًا كَمَا حَمَلْتَهُ عَلَى الَّذِينَ مِنْ قَبْلِنَا**  
+
   _Our Lord, do not place upon us a burden like that which You placed upon those before us._  
   **Reference:** Sūrat al-Baqarah (2:286)
 
@@ -156,6 +184,7 @@ After **Salām**:
 - Dua for Mercy, Forgiveness, and Strength
 
 > **رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهِ وَاعْفُ عَنَّا وَاغْفِرْ لَنَا وَارْحَمْنَا**  
+
   _Our Lord, do not burden us with what we cannot bear. Pardon us, forgive us, and have mercy upon us._  
   **Reference:** Sūrat al-Baqarah (2:286)
 
@@ -164,6 +193,7 @@ After **Salām**:
 - Dua for Steadfastness and Guidance
 
 > **رَبَّنَا لَا تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا وَهَبْ لَنَا مِنْ لَدُنْكَ رَحْمَةً إِنَّكَ أَنْتَ الْوَهَّابُ**  
+
   _Our Lord, do not let our hearts deviate after You have guided us, and grant us mercy from Yourself. Indeed, You are the Bestower._  
   **Reference:** Sūrat Āl ʿImrān (3:8)
 
@@ -172,6 +202,7 @@ After **Salām**:
 - Dua for Patience and a Good End
 
 > **رَبَّنَا أَفْرِغْ عَلَيْنَا صَبْرًا وَتَوَفَّنَا مُسْلِمِينَ**  
+
   _Our Lord, pour upon us patience and let us die as Muslims._  
   **Reference:** Sūrat al-Aʿrāf (7:126)
 
@@ -180,6 +211,7 @@ After **Salām**:
 - Dua for Parents and Believers
 
 > **رَبَّنَا اغْفِرْ لِي وَلِوَالِدَيَّ وَلِلْمُؤْمِنِينَ يَوْمَ يَقُومُ الْحِسَابُ**  
+
   _Our Lord, forgive me, my parents, and the believers on the Day the account is established._  
   **Reference:** Sūrat Ibrāhīm (14:41)
 
@@ -187,7 +219,8 @@ After **Salām**:
 
 - Dua for Acceptance of Good Deeds
 
-> **رَبَّنَا تَقَبَّلْ مِنَّا إِنَّكَ أَنْتَ السَّمِيعُ الْعَلِيمُ**  
+> **رَبَّنَا تَقَبَّلْ مِنَّا إِنَّكَ أَنْتَ السَّمِيعُ الْعَلِيمُ** 
+ 
   _Our Lord, accept from us. Indeed, You are the All-Hearing, the All-Knowing._  
   **Reference:** Sūrat al-Baqarah (2:127)
 
@@ -196,6 +229,7 @@ After **Salām**:
 - Dua for Family and Righteous Offspring
 
 > **رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ وَاجْعَلْنَا لِلْمُتَّقِينَ إِمَامًا**  
+
   _Our Lord, grant us from our spouses and offspring comfort to our eyes and make us leaders for the righteous._  
   **Reference:** Sūrat al-Furqān (25:74)
 
