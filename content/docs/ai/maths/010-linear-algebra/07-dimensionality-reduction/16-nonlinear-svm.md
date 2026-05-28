@@ -603,14 +603,6 @@ This page is based mainly on:
 
 ---
 
-## Related Pages
-
-- [My Notes: Mathematical Preliminaries for SVM]({{% relref "14-mathematical-preliminaries-for-svm.md" %}})
-- [My Notes: Primal/Dual Perspective for Linear SVM]({{% relref "15-primal-dual-perspective-for-linear-svm.md" %}})
-- [My Notes: Dimensionality Reduction and PCA]({{% relref "12-dimensionality-reduction-and-pca.md" %}})
-
----
-
 {{< home-link "Home" >}} | {{< section-index >}}
 
 ---

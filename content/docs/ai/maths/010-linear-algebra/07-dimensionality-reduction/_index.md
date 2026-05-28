@@ -775,7 +775,6 @@ This page is based mainly on:
 ---
 
 {{< section_tree >}}
-{{< section_tree >}}
 
 ---
 
