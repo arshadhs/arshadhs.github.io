@@ -690,14 +690,6 @@ This page is based mainly on:
 
 ---
 
-## Related Pages
-
-- [My Notes: Primal/Dual Perspective for Linear SVM]({{% relref "15-primal-dual-perspective-for-linear-svm.md" %}})
-- [My Notes: Nonlinear SVM]({{% relref "16-nonlinear-svm.md" %}})
-- [My Notes: Dimensionality Reduction and PCA]({{% relref "12-dimensionality-reduction-and-pca.md" %}})
-
----
-
-{{< home-link "Home" >}} | {{< section-index >}}
+{{< home-link "Home" >}} | {{< section-index >}}15-primal
 
 ---

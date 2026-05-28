@@ -749,14 +749,7 @@ This page is based mainly on:
 
 ---
 
-## Related Pages
-
-- [My Notes: Eigenvalues and Eigenvectors]({{% relref "04-eigenvalues-and-eigenvectors.md" %}})
-- [My Notes: Singular Value Decomposition]({{% relref "05-singular-value-decomposition.md" %}})
-- [My Notes: Mathematical Preliminaries for SVM]({{% relref "14-mathematical-preliminaries-for-svm.md" %}})
-
----
-
+{{< section_tree >}}
 {{< section_tree >}}
 
 ---

@@ -819,14 +819,6 @@ This page is based mainly on:
 
 ---
 
-## Related Pages
-
-- [My Notes: Mathematical Preliminaries for SVM]({{% relref "14-mathematical-preliminaries-for-svm.md" %}})
-- [My Notes: Nonlinear SVM]({{% relref "16-nonlinear-svm.md" %}})
-- [My Notes: Optimisation]({{% relref "10-optimization.md" %}})
-
----
-
 {{< home-link "Home" >}} | {{< section-index >}}
 
 ---
