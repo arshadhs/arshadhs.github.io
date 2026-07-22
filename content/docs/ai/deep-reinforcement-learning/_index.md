@@ -15,11 +15,10 @@ Deep Reinforcement Learning (DRL) studies how an **agent** can learn to make a s
 Reinforcement learning provides the decision-making framework. Deep learning later provides powerful function approximators for problems where states, actions, or observations are too large to represent in tables.
 
 {{% hint info %}}
-
 > Deep Reinforcement Learning = Reinforcement Learning + Deep Neural Networks
+{{% /hint %}}
 
 Establish the classical reinforcement learning foundations needed before introducing deep value-based and policy-based methods.
-{{% /hint %}}
 
 ---
 

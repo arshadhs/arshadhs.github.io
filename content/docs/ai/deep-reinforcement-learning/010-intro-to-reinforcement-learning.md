@@ -1,5 +1,5 @@
 ---
-title: "Introducing Reinforcement Learning"
+title: "Reinforcement Learning"
 draft: false
 tags: ["AI", "ML", "Reinforcement Learning", "DRL"]
 categories: ["AI", "ML"]
@@ -7,7 +7,7 @@ weight: 100
 menu: main
 ---
 
-# Introducing Reinforcement Learning
+# Reinforcement Learning
 
 Reinforcement Learning (RL) is a learning approach in which an **agent** improves its behaviour by interacting with an **environment** and observing the rewards produced by its actions.
 
