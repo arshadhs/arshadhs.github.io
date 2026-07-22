@@ -94,8 +94,6 @@ The agent's goal is not merely to obtain the largest immediate reward. It must l
 | 7 | Temporal-Difference Learning I | TD(0), SARSA, Q-Learning, Expected SARSA | `070-temporal-difference-learning-i.md` |
 | 8 | Temporal-Difference Learning II and DRL Taxonomy | n-step returns, TD(lambda), model/value/policy and on/off-policy classifications | `080-temporal-difference-learning-ii-drl-taxonomy.md` |
 
-{{% hint warning %}}
-
 ---
 
 ## How the Classical Methods Fit Together
