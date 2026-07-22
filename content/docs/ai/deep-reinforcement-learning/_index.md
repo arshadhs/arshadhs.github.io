@@ -84,16 +84,16 @@ The agent's goal is not merely to obtain the largest immediate reward. It must l
 
 ## Sections
 
-| | Topic | Main focus | File |
-|---:|---|---|---|
-| 1 | Introducing Reinforcement Learning | Agent, environment, state, action, reward, policy, value, model, Tic-Tac-Toe | `010-intro-to-reinforcement-learning.md` |
-| 2 | Multi-Armed Bandit Problem | Action values, exploration versus exploitation, incremental updates, gradient bandits | `020-multi-armed-bandit-problem.md` |
-| 3 | Markov Decision Processes | Goals, rewards, returns, policies, value functions, Bellman equations | `030-markov-decision-processes.md` |
-| 4 | Dynamic Programming | Policy evaluation, policy iteration, value iteration, generalised policy iteration | `040-dynamic-programming.md` |
-| 5 | Monte Carlo Methods I | On-policy prediction and control, first-visit and every-visit methods | `050-monte-carlo-methods-i.md` |
-| 6 | Monte Carlo Methods II | Off-policy learning, importance sampling, prediction and control | `060-monte-carlo-methods-ii.md` |
-| 7 | Temporal-Difference Learning I | TD(0), SARSA, Q-Learning, Expected SARSA | `070-temporal-difference-learning-i.md` |
-| 8 | Temporal-Difference Learning II and DRL Taxonomy | n-step returns, TD(lambda), model/value/policy and on/off-policy classifications | `080-temporal-difference-learning-ii-drl-taxonomy.md` |
+| | Topic | Main focus |
+|---:|---|---|
+| 1 | Introducing Reinforcement Learning | Agent, environment, state, action, reward, policy, value, model, Tic-Tac-Toe |
+| 2 | Multi-Armed Bandit Problem | Action values, exploration versus exploitation, incremental updates, gradient bandits |
+| 3 | Markov Decision Processes | Goals, rewards, returns, policies, value functions, Bellman equations |
+| 4 | Dynamic Programming | Policy evaluation, policy iteration, value iteration, generalised policy iteration |
+| 5 | Monte Carlo Methods I | On-policy prediction and control, first-visit and every-visit methods |
+| 6 | Monte Carlo Methods II | Off-policy learning, importance sampling, prediction and control |
+| 7 | Temporal-Difference Learning I | TD(0), SARSA, Q-Learning, Expected SARSA |
+| 8 | Temporal-Difference Learning II and DRL Taxonomy | n-step returns, TD(lambda), model/value/policy and on/off-policy classifications |
 
 ---
 
@@ -107,11 +107,10 @@ The agent's goal is not merely to obtain the largest immediate reward. It must l
 
 ---
 
-## Course References
+## References
 
 1. Richard S. Sutton and Andrew G. Barto, *Reinforcement Learning: An Introduction*, Second Edition, MIT Press.
 2. Laura Graesser and Wah Loon Keng, *Foundations of Deep Reinforcement Learning: Theory and Practice in Python*.
-3. BITS Pilani Deep Reinforcement Learning course handout and supplied lecture slides.
 
 ---
 {{< home-link "Home" >}} | {{< section-index >}}
