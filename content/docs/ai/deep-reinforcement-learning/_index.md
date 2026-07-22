@@ -24,13 +24,13 @@ Establish the classical reinforcement learning foundations needed before introdu
 
 {{< mermaid >}}
 flowchart TD
-A["Session 1<br/>Introducing RL"] --> B["Session 2<br/>Multi-Armed Bandits"]
-B --> C["Session 3<br/>Markov Decision Processes"]
-C --> D["Session 4<br/>Dynamic Programming"]
-D --> E["Session 5<br/>Monte Carlo Methods I"]
-E --> F["Session 6<br/>Monte Carlo Methods II"]
-F --> G["Session 7<br/>Temporal-Difference Learning I"]
-G --> H["Session 8<br/>TD Learning II<br/>and DRL Taxonomy"]
+A["<br/>RL"] --> B["<br/>Multi-Armed Bandits"]
+B --> C["<br/>Markov Decision Processes"]
+C --> D["<br/>Dynamic Programming"]
+D --> E["<br/>Monte Carlo Methods I"]
+E --> F["<br/>Monte Carlo Methods II"]
+F --> G["<br/>Temporal-Difference Learning I"]
+G --> H["<br/>TD Learning II<br/>and DRL Taxonomy"]
 
 style A fill:#90CAF9,stroke:#1E88E5,color:#000
 style B fill:#90CAF9,stroke:#1E88E5,color:#000
@@ -84,7 +84,7 @@ The agent's goal is not merely to obtain the largest immediate reward. It must l
 
 ## Sections
 
-| Session | Topic | Main focus | File |
+| | Topic | Main focus | File |
 |---:|---|---|---|
 | 1 | Introducing Reinforcement Learning | Agent, environment, state, action, reward, policy, value, model, Tic-Tac-Toe | `010-intro-to-reinforcement-learning.md` |
 | 2 | Multi-Armed Bandit Problem | Action values, exploration versus exploitation, incremental updates, gradient bandits | `020-multi-armed-bandit-problem.md` |
