@@ -22,25 +22,27 @@ Establish the classical reinforcement learning foundations needed before introdu
 
 ---
 
-```mermaid
-flowchart LR
-    A[1. Introducing RL] --> B[2. Multi-Armed Bandits]
-    B --> C[3. Markov Decision Processes]
-    C --> D[4. Dynamic Programming]
-    D --> E[5. Monte Carlo Methods I]
-    E --> F[6. Monte Carlo Methods II]
-    F --> G[7. Temporal-Difference Learning I]
-    G --> H[8. TD Learning II and DRL Taxonomy]
+{{< mermaid >}}
+flowchart TD
+A["Session 1<br/>Introducing RL"] --> B["Session 2<br/>Multi-Armed Bandits"]
+B --> C["Session 3<br/>Markov Decision Processes"]
+C --> D["Session 4<br/>Dynamic Programming"]
+D --> E["Session 5<br/>Monte Carlo Methods I"]
+E --> F["Session 6<br/>Monte Carlo Methods II"]
+F --> G["Session 7<br/>Temporal-Difference Learning I"]
+G --> H["Session 8<br/>TD Learning II<br/>and DRL Taxonomy"]
 
-    style A fill:#E1F5FE
-    style B fill:#C8E6C9
-    style C fill:#FFF9C4
-    style D fill:#EDE7F6
-    style E fill:#E1F5FE
-    style F fill:#C8E6C9
-    style G fill:#FFF9C4
-    style H fill:#EDE7F6
-```
+style A fill:#90CAF9,stroke:#1E88E5,color:#000
+style B fill:#90CAF9,stroke:#1E88E5,color:#000
+style C fill:#90CAF9,stroke:#1E88E5,color:#000
+
+style D fill:#CE93D8,stroke:#8E24AA,color:#000
+style E fill:#CE93D8,stroke:#8E24AA,color:#000
+style F fill:#CE93D8,stroke:#8E24AA,color:#000
+
+style G fill:#C8E6C9,stroke:#2E7D32,color:#000
+style H fill:#C8E6C9,stroke:#2E7D32,color:#000
+{{< /mermaid >}}
 
 Move from the simplest decision problem - choosing one action repeatedly - towards full sequential decision-making with states, returns, policies, value functions, and learning from experience.
 
