@@ -24,13 +24,13 @@ Establish the classical reinforcement learning foundations needed before introdu
 
 {{< mermaid >}}
 flowchart TD
-A["<br/>RL"] --> B["<br/>Multi-Armed Bandits"]
-B --> C["<br/>Markov Decision Processes"]
-C --> D["<br/>Dynamic Programming"]
-D --> E["<br/>Monte Carlo Methods I"]
-E --> F["<br/>Monte Carlo Methods II"]
-F --> G["<br/>Temporal-Difference Learning I"]
-G --> H["<br/>TD Learning II<br/>and DRL Taxonomy"]
+A["RL"] --> B["Multi-Armed Bandits"]
+B --> C["Markov Decision Processes"]
+C --> D["Dynamic Programming"]
+D --> E["Monte Carlo Methods I"]
+E --> F["Monte Carlo Methods II"]
+F --> G["Temporal-Difference Learning I"]
+G --> H["TD Learning II and DRL Taxonomy"]
 
 style A fill:#90CAF9,stroke:#1E88E5,color:#000
 style B fill:#90CAF9,stroke:#1E88E5,color:#000
