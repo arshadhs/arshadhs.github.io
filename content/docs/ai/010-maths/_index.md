@@ -211,6 +211,116 @@ Optimisation is the **process of finding the best model parameters** by **minimi
 
 ---
 
+## Concept checklist
+
+### Linear systems and matrices
+
+- Convert equations into matrix form `Ax = b`
+- Understand solution types: no solution, unique solution, infinite solutions
+- Identify pivot and free variables
+- Understand row operations, REF/RREF, rank, nullity
+- Know matrix inverse and transpose properties
+
+### Vector spaces
+
+- Definition of vector space and subspace
+- Closure under addition and scalar multiplication
+- Span, linear combination, linear independence
+- Basis, dimension, rank
+- Column space, row space, nullspace
+
+### Analytic geometry
+
+- Norm properties
+- Manhattan norm and Euclidean norm
+- Inner product definition
+- Symmetric positive-definite matrices
+- Distance, angle, orthogonality
+- Orthonormal basis and Gram-Schmidt
+
+### Matrix decompositions
+
+- Determinant and trace
+- Cofactor expansion
+- Row operation effect on determinant
+- Eigenvalue equation `Av = λv`
+- Characteristic equation `det(A - λI) = 0`
+- Diagonalisation `A = PDP^{-1}`
+- Spectral theorem for symmetric matrices
+- Cholesky decomposition
+- SVD `A = UΣV^T`
+- Low-rank approximation
+
+### Vector calculus
+
+- Derivative from first principles
+- Partial derivatives
+- Gradient as direction of steepest ascent
+- Gradient of vector-valued functions
+- Matrix-gradient identities
+- Chain rule
+- Backpropagation and automatic differentiation
+
+### Taylor series and Hessian
+
+- Taylor polynomial
+- Taylor series and Maclaurin series
+- Remainder term
+- Taylor series in two variables
+- Hessian matrix
+- First derivative and second derivative tests
+- Maxima, minima and saddle points
+
+### Gradient descent and optimisation
+
+- Negative gradient direction
+- Learning rate/step size
+- Line search
+- Convergence and local minima
+- Constrained vs unconstrained optimisation
+- Lagrange multipliers
+- Convex optimisation
+- SGD and optimisation in ML
+- Feature preprocessing and scaling
+- Overfitting in optimisation examples
+
+### Nonlinear optimisation algorithms
+
+- Difficult surfaces: cliffs, valleys, flat regions
+- Curvature and why first-order methods can struggle
+- Momentum update and intuition
+- AdaGrad
+- RMSProp
+- Adam
+- Learning rate decay
+
+### PCA
+
+- Dimensionality reduction problem
+- Centred data and covariance matrix
+- Maximum variance view
+- Projection/reconstruction view
+- Principal components as eigenvectors of covariance matrix
+- SVD relation to PCA
+- Low-rank approximation and Eckart-Young theorem
+- PCA in high dimensions
+- Practical PCA steps
+
+### SVM
+
+- Linear classifiers
+- Margin and support vectors
+- Hard-margin SVM primal formulation
+- Lagrangian for SVM
+- KKT conditions
+- Primal vs dual perspective
+- Role of inner products
+- Kernel trick
+- Hinge loss
+- Soft-margin SVM
+
+---
+
 ## Refrences
 
 [MML-Book](https://mml-book.github.io/book/mml-book.pdf)
