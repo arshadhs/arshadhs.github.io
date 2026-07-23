@@ -4,7 +4,7 @@ date: 2026-01-26T10:55:52+01:00
 draft: false
 tags: ["AI"]
 categories: ["AI"]
-weight: 000
+weight: 005
 menu: main
 bookCollapseSection: true
 ---
