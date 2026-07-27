@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Natural Language Processing"
+title: "Understanding and Generation"
 draft: false
 tags: ["AI", "NLP", "Natural Language Understanding", "Natural Language Generation"]
 categories: ["AI", "Natural Language Processing"]
@@ -7,11 +7,13 @@ weight: 100
 menu: main
 ---
 
-# Introduction to Natural Language Processing
+# NLP - Understanding and Generation
 
-{{% hint info %}}
-This page is a structured learning template. Replace the comments with clear explanations, examples, diagrams, and practical insights while keeping the Hugo shortcodes intact.
-{{% /hint %}}
+- The Study of Language.
+- Applications of Natural Language Understanding.
+- Evaluating Language Understanding Systems.
+- Different Levels of Language Analysis.
+- Organisation of Natural Language Understanding Systems.
 
 ## Learning Objectives
 
@@ -22,19 +24,19 @@ This page is a structured learning template. Replace the comments with clear exp
 - Explain the relationship between natural language understanding and natural language generation.
 - Identify suitable ways to evaluate different NLP systems.
 
-## Chapter Map
+## Map
 
 | Section | Topic | Status |
 |---|---|---|
-| 1 | What Is Natural Language Processing? | ☐ |
-| 2 | Why NLP Matters | ☐ |
-| 3 | Evolution of NLP | ☐ |
-| 4 | NLP Applications | ☐ |
-| 5 | The NLP Pipeline | ☐ |
-| 6 | Ambiguity and Why NLP Is Difficult | ☐ |
-| 7 | Levels of Language Analysis | ☐ |
-| 8 | Natural Language Understanding and Generation | ☐ |
-| 9 | Evaluating NLP Systems | ☐ |
+| 1 | What Is Natural Language Processing?
+| 2 | Why NLP Matters
+| 3 | Evolution of NLP
+| 4 | NLP Applications
+| 5 | The NLP Pipeline
+| 6 | Ambiguity and Why NLP Is Difficult
+| 7 | Levels of Language Analysis
+| 8 | Natural Language Understanding and Generation
+| 9 | Evaluating NLP Systems
 
 ## Big Picture
 
@@ -504,7 +506,7 @@ Explore tokenisation, sentence splitting, part-of-speech tagging, and named-enti
 - Strong NLP systems require both useful representations and suitable evaluation methods.
 {{% /hint %}}
 
-## Understanding Checklist
+## Checklist
 
 - [ ] I can explain what NLP is and why it is difficult.
 - [ ] I can give examples of important NLP applications.
