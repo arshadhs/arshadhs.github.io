@@ -23,7 +23,7 @@ menu: main
 - Distinguish morphological, lexical, syntactic, semantic, pragmatic, and discourse analysis.
 - Explain the relationship between natural language understanding and natural language generation.
 - Identify suitable ways to evaluate different NLP systems.
-
+<!--
 ## Map
 
 | Section | Topic | Status |
@@ -37,7 +37,7 @@ menu: main
 | 7 | Levels of Language Analysis
 | 8 | Natural Language Understanding and Generation
 | 9 | Evaluating NLP Systems
-
+-->
 ## Big Picture
 
 ```mermaid
@@ -60,17 +60,18 @@ flowchart TD
 
 ## 1. What Is Natural Language Processing? ☆
 
-### Definition
-
 {{% colour "green" %}}
-<!-- Add a precise, one- or two-sentence definition here. -->
+Natural language processing (NLP) is the discipline of building machines that can manipulate human language - or data that resembles human language - in the way that it is written, spoken, and organised. 
 {{% /colour %}}
 
-### Intuition
-
-<!-- Explain the idea in beginner-friendly language and connect it to a familiar example. -->
-
 ### Key Concepts
+
+NLP can be divided into two overlapping subfields: 
+
+1. **Natural Language Understanding (NLU)**, which focuses on semantic analysis or determining the intended meaning of text
+2. **Natural Language Generation (NLG)**, which focuses on text generation by a machine.
+
+NLP is separate from — but often used in conjunction with — speech recognition, which seeks to parse spoken language into words, turning sound into text and vice versa.
 
 - <!-- Key term or component -->
 - <!-- Key term or component -->
@@ -447,7 +448,7 @@ FORMULA HERE
 {{% /colour %}}
 
 For inline mathematics use: {{< katex >}} x {{< /katex >}}
--->
+
 
 ### Worked Example
 
@@ -471,7 +472,7 @@ Explore tokenisation, sentence splitting, part-of-speech tagging, and named-enti
 ```python
 # Add a minimal, well-commented Python example here.
 ```
-
+-->
 ## Comparison Table
 
 | Concept | Main Question | Example |
