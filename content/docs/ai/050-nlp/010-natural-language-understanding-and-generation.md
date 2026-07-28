@@ -69,21 +69,9 @@ NLP can be divided into two overlapping subfields:
 1. **Natural Language Understanding (NLU)**, which focuses on semantic analysis or determining the intended meaning of text
 2. **Natural Language Generation (NLG)**, which focuses on text generation by a machine.
 
-- <!-- Key term or component -->
-- <!-- Key term or component -->
-- <!-- Key relationship or assumption -->
-
-### Why It Matters in NLP
-
-<!-- Explain where this concept is used in real NLP systems. -->
-
 ### Key Points to Remember
 
 NLP is separate from — but often used in conjunction with — speech recognition, which seeks to parse spoken language into words, turning sound into text and vice versa.
-
-- <!-- Definition or distinction to remember -->
-- <!-- Important explanation, derivation, or comparison -->
-- <!-- Common mistake to avoid -->
 
 ## 2. Why NLP Matters
 
@@ -121,6 +109,342 @@ Humans communicate using unstructured data like text and voice, while computers 
 
 ## 5. The NLP Pipeline ☆
 
+An **NLP pipeline** is a sequence of steps that converts raw human language into a structured form that a computer can analyse and use.
+
+{{% hint info %}}
+NLP system does not immediately understand a sentence.
+
+It gradually:
+
+**collects the text → cleans it → analyses its language structure → converts it into numbers → applies a model → produces a useful result**
+{{% /hint %}}
+
+```mermaid
+flowchart TD
+    A[Raw Language] --> B[Text Acquisition]
+    B --> C[Pre-processing]
+    C --> D[Linguistic Annotation]
+    D --> E[Feature Representation]
+    E --> F[Modelling]
+    F --> G[Evaluation]
+    G --> H[Application]
+
+    style A fill:#E1F5FE
+    style B fill:#C8E6C9
+    style C fill:#FFF9C4
+    style D fill:#EDE7F6
+    style E fill:#E1F5FE
+    style F fill:#C8E6C9
+    style G fill:#FFF9C4
+    style H fill:#EDE7F6
+```
+
+### Running Example
+
+Consider the following movie review:
+
+> **The movie was not bad at all!**
+
+The goal is to determine whether the review expresses a positive or negative sentiment.
+
+### 1. Text Acquisition
+
+The first step is to collect language data from a source.
+
+Possible sources include:
+
+- Customer reviews
+- Emails
+- Web pages
+- Social media posts
+- Documents
+- Chat conversations
+- Speech converted into text
+
+For the running example, the acquired text is:
+
+```text
+The movie was not bad at all!
+```
+
+### 2. Text Pre-processing ☆
+
+Pre-processing cleans and normalises the raw text before further analysis.
+
+Common operations include:
+
+- Converting text to lowercase
+- Removing unnecessary punctuation
+- Tokenisation
+- Removing selected stop words
+- Stemming
+- Lemmatisation
+
+After lowercasing and tokenisation:
+
+```text
+[the, movie, was, not, bad, at, all]
+```
+
+#### Tokenisation
+
+**Tokenisation** divides text into smaller units called **tokens**.
+
+For example:
+
+```text
+Natural language processing is useful.
+```
+
+becomes:
+
+```text
+[Natural, language, processing, is, useful]
+```
+
+#### Stemming and Lemmatisation
+
+Both techniques reduce related word forms to a common base.
+
+| Technique | Example |
+|---|---|
+| Stemming | `studies → studi` |
+| Lemmatisation | `studies → study` |
+| Stemming | `running → run` |
+| Lemmatisation | `better → good` |
+
+{{% hint warning %}}
+Pre-processing must not blindly remove words.
+
+In the sentence **“The movie was not bad”**, the word **not** is essential. Removing it would change the meaning from positive to negative.
+{{% /hint %}}
+
+### 3. Linguistic Annotation ☆
+
+Linguistic annotation adds grammatical and linguistic information to the text.
+
+It may include:
+
+- Part-of-speech tagging
+- Named entity recognition
+- Syntactic parsing
+- Dependency parsing
+- Lemma identification
+- Negation detection
+
+A possible part-of-speech representation is:
+
+| Word | Tag | Meaning |
+|---|---|---|
+| The | DT | Determiner |
+| movie | NN | Noun |
+| was | VBD | Past-tense verb |
+| not | RB | Adverb |
+| bad | JJ | Adjective |
+| at | IN | Preposition |
+| all | DT | Determiner |
+
+The system must also identify that **not** modifies **bad**.
+
+```text
+not → bad
+```
+
+This relationship helps the system recognise that:
+
+```text
+not bad
+```
+
+does not carry the same meaning as:
+
+```text
+bad
+```
+
+### 4. Feature Representation ☆
+
+Machine-learning models work with numbers rather than raw words.
+
+The text must therefore be converted into a numerical representation.
+
+Common representation methods include:
+
+- Bag of Words
+- TF-IDF
+- Word2Vec
+- GloVe
+- Contextual embeddings
+- Transformer embeddings
+
+Conceptually:
+
+```text
+"The movie was not bad at all"
+                ↓
+[0.12, -0.45, 0.81, 0.26, ...]
+```
+
+The numerical representation should preserve useful information about:
+
+- Word meaning
+- Word relationships
+- Context
+- Word order
+- Negation
+
+{{% hint info %}}
+Traditional approaches such as **Bag of Words** and **TF-IDF** mainly represent word occurrence.
+
+Modern embeddings attempt to represent the **meaning and context** of words.
+{{% /hint %}}
+
+### 5. Modelling ☆
+
+The numerical representation is passed to a model that performs the required NLP task.
+
+Possible models include:
+
+- Naïve Bayes
+- Logistic regression
+- Support Vector Machine
+- Hidden Markov Model
+- Neural network
+- Transformer
+- Large Language Model
+
+For sentiment analysis, the model may produce:
+
+```text
+Positive sentiment: 0.94
+Negative sentiment: 0.06
+```
+
+The predicted result is therefore:
+
+```text
+Positive sentiment
+```
+
+The model has learned that the expression **not bad** usually communicates a mildly positive meaning.
+
+### 6. Evaluation ☆
+
+Evaluation measures how well the NLP system performs.
+
+For classification tasks, common measures include:
+
+- Accuracy
+- Precision
+- Recall
+- F1-score
+
+For language-generation tasks, measures may include:
+
+- BLEU
+- ROUGE
+- Human evaluation
+- Fluency
+- Relevance
+- Factual correctness
+
+Evaluation is important because producing an output does not automatically mean that the output is correct, reliable or useful.
+
+### 7. Application
+
+The final result is delivered through an application.
+
+Examples include:
+
+- Sentiment-analysis dashboards
+- Chatbots
+- Search engines
+- Recommendation systems
+- Spam filters
+- Translation systems
+- Document classifiers
+- Question-answering systems
+
+For the running example:
+
+```text
+Input:
+The movie was not bad at all!
+
+Output:
+Positive sentiment — 94% confidence
+```
+
+The result could then be displayed on a review dashboard or used to calculate an overall customer-satisfaction score.
+
+### Complete Pipeline Example
+
+| Pipeline Stage | What Happens |
+|---|---|
+| Text acquisition | The movie review is collected |
+| Pre-processing | The text is lowercased and tokenised |
+| Linguistic annotation | Part-of-speech tags and negation are identified |
+| Feature representation | The text is converted into TF-IDF values or embeddings |
+| Modelling | A classifier predicts the sentiment |
+| Evaluation | The prediction is compared with the correct label |
+| Application | The result is displayed on a dashboard |
+
+### Classical and Modern NLP Pipelines
+
+#### Classical NLP Pipeline
+
+```mermaid
+flowchart TD
+    A[Text] --> B[Manual Pre-processing]
+    B --> C[Feature Engineering]
+    C --> D[Machine-learning Model]
+    D --> E[Prediction]
+
+    style A fill:#E1F5FE
+    style B fill:#FFF9C4
+    style C fill:#EDE7F6
+    style D fill:#C8E6C9
+    style E fill:#E1F5FE
+```
+
+Classical NLP normally requires explicit steps such as:
+
+- Tokenisation
+- Stop-word handling
+- Stemming or lemmatisation
+- TF-IDF calculation
+- Manual feature selection
+
+#### Modern NLP Pipeline
+
+```mermaid
+flowchart TD
+    A[Text] --> B[Tokenizer]
+    B --> C[Pre-trained Transformer]
+    C --> D[Task Output]
+
+    style A fill:#E1F5FE
+    style B fill:#FFF9C4
+    style C fill:#EDE7F6
+    style D fill:#C8E6C9
+```
+
+Modern transformer models can learn many linguistic features automatically.
+
+However, important steps still remain:
+
+- Collecting appropriate data
+- Cleaning malformed input
+- Choosing the correct model
+- Evaluating the output
+- Monitoring bias and errors
+- Integrating the result into an application
+
+{{% hint success %}}
+The NLP pipeline can be remembered as:
+
+**Text → Tokens → Linguistic information → Numerical representation → Model → Evaluation → Application**
+{{% /hint %}}
 
 ## 6. Ambiguity and Why NLP Is Difficult ☆
 
@@ -139,7 +463,7 @@ Explore tokenisation, sentence splitting, part-of-speech tagging, and named-enti
 ```python
 # Add a minimal, well-commented Python example here.
 ```
--->
+
 ## Comparison Table
 
 | Concept | Main Question | Example |
