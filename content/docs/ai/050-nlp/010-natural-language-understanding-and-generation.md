@@ -60,9 +60,7 @@ flowchart TD
 
 ## 1. What Is Natural Language Processing? ☆
 
-{{% colour "green" %}}
 Natural language processing (NLP) is the discipline of building machines that can manipulate human language - or data that resembles human language - in the way that it is written, spoken, and organised. 
-{{% /colour %}}
 
 ### Key Concepts
 
@@ -71,34 +69,17 @@ NLP can be divided into two overlapping subfields:
 1. **Natural Language Understanding (NLU)**, which focuses on semantic analysis or determining the intended meaning of text
 2. **Natural Language Generation (NLG)**, which focuses on text generation by a machine.
 
-NLP is separate from — but often used in conjunction with — speech recognition, which seeks to parse spoken language into words, turning sound into text and vice versa.
-
 - <!-- Key term or component -->
 - <!-- Key term or component -->
 - <!-- Key relationship or assumption -->
-
-### Formula or Model
-
-<!-- Add mathematics only when it supports understanding. Use this exact structure:
-
-{{% colour "green" %}}
-{{< katex display=true >}}
-FORMULA HERE
-{{< /katex >}}
-{{% /colour %}}
-
-For inline mathematics use: {{< katex >}} x {{< /katex >}}
--->
-
-### Worked Example
-
-<!-- Add a small step-by-step example. -->
 
 ### Why It Matters in NLP
 
 <!-- Explain where this concept is used in real NLP systems. -->
 
 ### Key Points to Remember
+
+NLP is separate from — but often used in conjunction with — speech recognition, which seeks to parse spoken language into words, turning sound into text and vice versa.
 
 - <!-- Definition or distinction to remember -->
 - <!-- Important explanation, derivation, or comparison -->
@@ -106,363 +87,49 @@ For inline mathematics use: {{< katex >}} x {{< /katex >}}
 
 ## 2. Why NLP Matters
 
-### Definition
-
-{{% colour "green" %}}
-<!-- Add a precise, one- or two-sentence definition here. -->
-{{% /colour %}}
-
-### Intuition
-
-<!-- Explain the idea in beginner-friendly language and connect it to a familiar example. -->
-
-### Key Concepts
-
-- <!-- Key term or component -->
-- <!-- Key term or component -->
-- <!-- Key relationship or assumption -->
-
-### Formula or Model
-
-<!-- Add mathematics only when it supports understanding. Use this exact structure:
-
-{{% colour "green" %}}
-{{< katex display=true >}}
-FORMULA HERE
-{{< /katex >}}
-{{% /colour %}}
-
-For inline mathematics use: {{< katex >}} x {{< /katex >}}
--->
-
-### Worked Example
-
-<!-- Add a small step-by-step example. -->
-
-### Why It Matters in NLP
-
-<!-- Explain where this concept is used in real NLP systems. -->
-
-### Key Points to Remember
-
-- <!-- Definition or distinction to remember -->
-- <!-- Important explanation, derivation, or comparison -->
-- <!-- Common mistake to avoid -->
+Humans communicate using unstructured data like text and voice, while computers require structured data like binary code. NLP acts as a digital translator, allowing machines to understand, interpret, and respond to human language in a valuable way.
 
 ## 3. Evolution of NLP
 
-### Definition
-
-{{% colour "green" %}}
-<!-- Add a precise, one- or two-sentence definition here. -->
-{{% /colour %}}
-
-### Intuition
-
-<!-- Explain the idea in beginner-friendly language and connect it to a familiar example. -->
-
-### Key Concepts
-
-- <!-- Key term or component -->
-- <!-- Key term or component -->
-- <!-- Key relationship or assumption -->
-
-### Formula or Model
-
-<!-- Add mathematics only when it supports understanding. Use this exact structure:
-
-{{% colour "green" %}}
-{{< katex display=true >}}
-FORMULA HERE
-{{< /katex >}}
-{{% /colour %}}
-
-For inline mathematics use: {{< katex >}} x {{< /katex >}}
--->
-
-### Worked Example
-
-<!-- Add a small step-by-step example. -->
-
-### Why It Matters in NLP
-
-<!-- Explain where this concept is used in real NLP systems. -->
-
-### Key Points to Remember
-
-- <!-- Definition or distinction to remember -->
-- <!-- Important explanation, derivation, or comparison -->
-- <!-- Common mistake to avoid -->
 
 ## 4. NLP Applications
 
-### Definition
+**Daily Communication Tools**
+- Email filters
+- Autocorrect
+- Grammar checkers
+- Predictive text
+- Language translation platforms
 
-{{% colour "green" %}}
-<!-- Add a precise, one- or two-sentence definition here. -->
-{{% /colour %}}
+**Conversational AI & Search**
+- Smart virtual assistants
+- Customer service chatbots
+- Search engine autocomplete
+- Semantic search engines
 
-### Intuition
+**Content Processing & Text Analytics**
+- Sentiment analysis
+- Automatic text summarisation
+- Automated audio transcription
+- Named entity recognition (NER)
+- Resume screening systems
 
-<!-- Explain the idea in beginner-friendly language and connect it to a familiar example. -->
-
-### Key Concepts
-
-- <!-- Key term or component -->
-- <!-- Key term or component -->
-- <!-- Key relationship or assumption -->
-
-### Formula or Model
-
-<!-- Add mathematics only when it supports understanding. Use this exact structure:
-
-{{% colour "green" %}}
-{{< katex display=true >}}
-FORMULA HERE
-{{< /katex >}}
-{{% /colour %}}
-
-For inline mathematics use: {{< katex >}} x {{< /katex >}}
--->
-
-### Worked Example
-
-<!-- Add a small step-by-step example. -->
-
-### Why It Matters in NLP
-
-<!-- Explain where this concept is used in real NLP systems. -->
-
-### Key Points to Remember
-
-- <!-- Definition or distinction to remember -->
-- <!-- Important explanation, derivation, or comparison -->
-- <!-- Common mistake to avoid -->
+**Advanced & Accessibility Applications**
+- Sign language translators
+- Voice-based communication software
+- Automated video captioning
 
 ## 5. The NLP Pipeline ☆
 
-### Definition
-
-{{% colour "green" %}}
-<!-- Add a precise, one- or two-sentence definition here. -->
-{{% /colour %}}
-
-### Intuition
-
-<!-- Explain the idea in beginner-friendly language and connect it to a familiar example. -->
-
-### Key Concepts
-
-- <!-- Key term or component -->
-- <!-- Key term or component -->
-- <!-- Key relationship or assumption -->
-
-### Formula or Model
-
-<!-- Add mathematics only when it supports understanding. Use this exact structure:
-
-{{% colour "green" %}}
-{{< katex display=true >}}
-FORMULA HERE
-{{< /katex >}}
-{{% /colour %}}
-
-For inline mathematics use: {{< katex >}} x {{< /katex >}}
--->
-
-### Worked Example
-
-<!-- Add a small step-by-step example. -->
-
-### Why It Matters in NLP
-
-<!-- Explain where this concept is used in real NLP systems. -->
-
-### Key Points to Remember
-
-- <!-- Definition or distinction to remember -->
-- <!-- Important explanation, derivation, or comparison -->
-- <!-- Common mistake to avoid -->
 
 ## 6. Ambiguity and Why NLP Is Difficult ☆
 
-### Definition
-
-{{% colour "green" %}}
-<!-- Add a precise, one- or two-sentence definition here. -->
-{{% /colour %}}
-
-### Intuition
-
-<!-- Explain the idea in beginner-friendly language and connect it to a familiar example. -->
-
-### Key Concepts
-
-- <!-- Key term or component -->
-- <!-- Key term or component -->
-- <!-- Key relationship or assumption -->
-
-### Formula or Model
-
-<!-- Add mathematics only when it supports understanding. Use this exact structure:
-
-{{% colour "green" %}}
-{{< katex display=true >}}
-FORMULA HERE
-{{< /katex >}}
-{{% /colour %}}
-
-For inline mathematics use: {{< katex >}} x {{< /katex >}}
--->
-
-### Worked Example
-
-<!-- Add a small step-by-step example. -->
-
-### Why It Matters in NLP
-
-<!-- Explain where this concept is used in real NLP systems. -->
-
-### Key Points to Remember
-
-- <!-- Definition or distinction to remember -->
-- <!-- Important explanation, derivation, or comparison -->
-- <!-- Common mistake to avoid -->
-
 ## 7. Levels of Language Analysis ☆
-
-### Definition
-
-{{% colour "green" %}}
-<!-- Add a precise, one- or two-sentence definition here. -->
-{{% /colour %}}
-
-### Intuition
-
-<!-- Explain the idea in beginner-friendly language and connect it to a familiar example. -->
-
-### Key Concepts
-
-- <!-- Key term or component -->
-- <!-- Key term or component -->
-- <!-- Key relationship or assumption -->
-
-### Formula or Model
-
-<!-- Add mathematics only when it supports understanding. Use this exact structure:
-
-{{% colour "green" %}}
-{{< katex display=true >}}
-FORMULA HERE
-{{< /katex >}}
-{{% /colour %}}
-
-For inline mathematics use: {{< katex >}} x {{< /katex >}}
--->
-
-### Worked Example
-
-<!-- Add a small step-by-step example. -->
-
-### Why It Matters in NLP
-
-<!-- Explain where this concept is used in real NLP systems. -->
-
-### Key Points to Remember
-
-- <!-- Definition or distinction to remember -->
-- <!-- Important explanation, derivation, or comparison -->
-- <!-- Common mistake to avoid -->
 
 ## 8. Natural Language Understanding and Generation ☆
 
-### Definition
-
-{{% colour "green" %}}
-<!-- Add a precise, one- or two-sentence definition here. -->
-{{% /colour %}}
-
-### Intuition
-
-<!-- Explain the idea in beginner-friendly language and connect it to a familiar example. -->
-
-### Key Concepts
-
-- <!-- Key term or component -->
-- <!-- Key term or component -->
-- <!-- Key relationship or assumption -->
-
-### Formula or Model
-
-<!-- Add mathematics only when it supports understanding. Use this exact structure:
-
-{{% colour "green" %}}
-{{< katex display=true >}}
-FORMULA HERE
-{{< /katex >}}
-{{% /colour %}}
-
-For inline mathematics use: {{< katex >}} x {{< /katex >}}
--->
-
-### Worked Example
-
-<!-- Add a small step-by-step example. -->
-
-### Why It Matters in NLP
-
-<!-- Explain where this concept is used in real NLP systems. -->
-
-### Key Points to Remember
-
-- <!-- Definition or distinction to remember -->
-- <!-- Important explanation, derivation, or comparison -->
-- <!-- Common mistake to avoid -->
 
 ## 9. Evaluating NLP Systems ☆
-
-### Definition
-
-{{% colour "green" %}}
-<!-- Add a precise, one- or two-sentence definition here. -->
-{{% /colour %}}
-
-### Intuition
-
-<!-- Explain the idea in beginner-friendly language and connect it to a familiar example. -->
-
-### Key Concepts
-
-- <!-- Key term or component -->
-- <!-- Key term or component -->
-- <!-- Key relationship or assumption -->
-
-### Formula or Model
-
-<!-- Add mathematics only when it supports understanding. Use this exact structure:
-
-{{% colour "green" %}}
-{{< katex display=true >}}
-FORMULA HERE
-{{< /katex >}}
-{{% /colour %}}
-
-For inline mathematics use: {{< katex >}} x {{< /katex >}}
-
-
-### Worked Example
-
-<!-- Add a small step-by-step example. -->
-
-### Why It Matters in NLP
-
-<!-- Explain where this concept is used in real NLP systems. -->
-
-### Key Points to Remember
-
-- <!-- Definition or distinction to remember -->
-- <!-- Important explanation, derivation, or comparison -->
-- <!-- Common mistake to avoid -->
 
 
 ## Practical Exploration
