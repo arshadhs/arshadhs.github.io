@@ -542,7 +542,7 @@ The issue where a system encounters brand-new slang, internet acronyms, or rapid
 ## 7. Levels of Language Analysis ☆
 
 ### Morphological Knowledge
-Understanding how individual words are built from smaller, meaningful units like roots, prefixes, and suffixes (e.g., recognizing that "re-align-ed" represents a past-tense action of aligning again).
+Understanding how individual words are built from smaller, meaningful units like roots, prefixes, and suffixes (e.g., recognising that "re-align-ed" represents a past-tense action of aligning again).
 
 ### Lexical Knowledge
 Possessing a comprehensive internal dictionary of words, including their spelling, independent meanings, and valid parts of speech (e.g., knowing that "run" can act as both a noun and a verb).
@@ -554,7 +554,7 @@ Understanding the structural and grammatical rules that dictate how words must b
 Understanding the literal, explicit meaning of words and how those individual concepts combine to form the baseline message of a full sentence.
 
 ### Pragmatic Knowledge
-Understanding how external context, social dynamics, tone, and real-world situations alter the true intent behind a statement beyond its literal wording (e.g., recognizing sarcasm or unstated requests).
+Understanding how external context, social dynamics, tone, and real-world situations alter the true intent behind a statement beyond its literal wording (e.g., recognising sarcasm or unstated requests).
 
 ### Discourse Knowledge
 Understanding how multiple sentences connect, flow, and interact across a larger paragraph or conversation to maintain structural cohesion and thematic continuity.
