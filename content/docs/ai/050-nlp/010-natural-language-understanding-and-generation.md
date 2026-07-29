@@ -270,12 +270,12 @@ The text must therefore be converted into a numerical representation.
 
 Common representation methods include:
 
-- Bag of Words
-- TF-IDF
-- Word2Vec
-- GloVe
-- Contextual embeddings
-- Transformer embeddings
+- **Bag of Words**: Counts word frequencies per document while completely ignoring grammar and word order.
+- **TF-IDF**: Weights words by how frequent they are locally versus how rare they are across all documents.
+- **Word2Vec**: Learns static word vectors using a neural network to predict words based on their local neighbors.
+- **GloVe**: Creates static word vectors by factoring a macro-level matrix of global word co-occurrence statistics.
+- **Contextual Embeddings**: Uses sequential neural networks to dynamically change a word's vector based on its surrounding sentence.
+- **Transformer Embeddings**: Uses simultaneous self-attention to calculate fluid, long-range word relationships across entire documents in parallel.
 
 Conceptually:
 
