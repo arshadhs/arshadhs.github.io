@@ -294,10 +294,84 @@ The numerical representation should preserve useful information about:
 - Negation
 
 {{% hint info %}}
+
 Traditional approaches such as **Bag of Words** and **TF-IDF** mainly represent word occurrence.
 
 Modern embeddings attempt to represent the **meaning and context** of words.
+
 {{% /hint %}}
+
+```
+import numpy as np
+from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
+from gensim.models import Word2Vec
+import gensim.downloader as api
+from transformers import AutoTokenizer, AutoModel, pipeline
+import torch
+
+# 1. Sample Data
+documents = [
+    "The bank lowered interest rates",
+    "The river bank overflowed"
+]
+tokenized_docs = [doc.lower().split() for doc in documents]
+
+# ==========================================
+# SCIKIT-LEARN (Lexical / Frequency Based)
+# ==========================================
+
+# 2. Bag of Words (CountVectorizer)
+bow_vectorizer = CountVectorizer()
+bow_matrix = bow_vectorizer.fit_transform(documents).toarray()
+print("Bag of Words Shape:", bow_matrix.shape)
+
+# 3. TF-IDF
+tfidf_vectorizer = TfidfVectorizer()
+tfidf_matrix = tfidf_vectorizer.fit_transform(documents).toarray()
+print("TF-IDF Shape:", tfidf_matrix.shape)
+
+# ==========================================
+# GENSIM (Static Word Vectors)
+# ==========================================
+
+# 4. Word2Vec (Trained from scratch locally)
+w2v_model = Word2Vec(sentences=tokenized_docs, vector_size=50, window=3, min_count=1)
+w2v_vector = w2v_model.wv['bank']
+print("Word2Vec 'bank' Vector Shape:", w2v_vector.shape)
+
+# 5. GloVe (Using a pre-trained Global Co-occurrence model)
+# Note: This downloads a 66MB model on first run
+glove_vectors = api.load("glove-wiki-gigaword-50")
+glove_vector = glove_vectors['bank']
+print("GloVe 'bank' Vector Shape:", glove_vector.shape)
+
+# ==========================================
+# HUGGING FACE (Contextual / Transformers)
+# ==========================================
+
+# 6. Contextual Embeddings (BiLSTM / Feature-based via pipeline)
+# DistilBERT works well here to show context shifts dynamically
+nlp_pipe = pipeline("feature-extraction", model="distilbert-base-uncased")
+
+# Notice how the vector for 'bank' shifts between doc 1 and doc 2
+context_doc1 = np.array(nlp_pipe(documents[0]))  # Shape: (1, sequence_length, hidden_dim)
+context_doc2 = np.array(nlp_pipe(documents[1]))
+print("Contextual (DistilBERT) Sequence Shape:", context_doc1.shape)
+
+# 7. Transformer Embeddings (Manual Hugging Face PyTorch Workflow)
+model_name = "bert-base-uncased"
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModel.from_pretrained(model_name)
+
+inputs = tokenizer(documents, padding=True, truncation=True, return_tensors="pt")
+with torch.no_grad():
+    outputs = model(**inputs)
+
+# The last hidden state contains the precise contextualized self-attention embeddings
+transformer_embeddings = outputs.last_hidden_state
+print("Transformer Last Hidden State Shape:", transformer_embeddings.shape)
+```
+
 
 ### 5. Modelling ☆
 
@@ -444,9 +518,26 @@ However, important steps still remain:
 The NLP pipeline can be remembered as:
 
 **Text → Tokens → Linguistic information → Numerical representation → Model → Evaluation → Application**
+
 {{% /hint %}}
 
+
 ## 6. Ambiguity and Why NLP Is Difficult ☆
+
+### 1. Lexical Ambiguity (Polysemy and Homonymy)~
+Occurs when a single word has multiple potential meanings, such as "bank" referring to either a financial institution or a river's edge.
+ 
+### 2. Syntactic Structure Ambiguity
+Occurs when a sentence can be parsed into multiple different grammatical structures, altering who performs an action (e.g., "I saw the man with the telescope").
+ 
+### 3. Anaphora and Coreference Resolution
+The challenge of correctly mapping pronouns or references (like "it" or "they") back to the specific noun they represent across a text.
+ 
+### 4. Semantic and Pragmatic Ambiguity (Sarcasm and Metaphor)
+Occurs when the literal meaning of words conflicts with the speaker's true contextual intent, tone, or cultural figure of speech.
+ 
+### 5. Out-of-Vocabulary (OOV) and Evolving Language
+The issue where a system encounters brand-new slang, internet acronyms, or rapidly changing definitions that do not exist in its trained dataset.
 
 ## 7. Levels of Language Analysis ☆
 
