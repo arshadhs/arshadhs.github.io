@@ -524,22 +524,40 @@ The NLP pipeline can be remembered as:
 
 ## 6. Ambiguity and Why NLP Is Difficult ☆
 
-### 1. Lexical Ambiguity (Polysemy and Homonymy)~
+### Lexical Ambiguity (Polysemy and Homonymy)~
 Occurs when a single word has multiple potential meanings, such as "bank" referring to either a financial institution or a river's edge.
  
-### 2. Syntactic Structure Ambiguity
+### Syntactic Structure Ambiguity
 Occurs when a sentence can be parsed into multiple different grammatical structures, altering who performs an action (e.g., "I saw the man with the telescope").
  
-### 3. Anaphora and Coreference Resolution
+### Anaphora and Coreference Resolution
 The challenge of correctly mapping pronouns or references (like "it" or "they") back to the specific noun they represent across a text.
  
-### 4. Semantic and Pragmatic Ambiguity (Sarcasm and Metaphor)
+### Semantic and Pragmatic Ambiguity (Sarcasm and Metaphor)
 Occurs when the literal meaning of words conflicts with the speaker's true contextual intent, tone, or cultural figure of speech.
  
-### 5. Out-of-Vocabulary (OOV) and Evolving Language
+### Out-of-Vocabulary (OOV) and Evolving Language
 The issue where a system encounters brand-new slang, internet acronyms, or rapidly changing definitions that do not exist in its trained dataset.
 
 ## 7. Levels of Language Analysis ☆
+
+### Morphological Knowledge
+Understanding how individual words are built from smaller, meaningful units like roots, prefixes, and suffixes (e.g., recognizing that "re-align-ed" represents a past-tense action of aligning again).
+
+### Lexical Knowledge
+Possessing a comprehensive internal dictionary of words, including their spelling, independent meanings, and valid parts of speech (e.g., knowing that "run" can act as both a noun and a verb).
+
+### Syntactic Knowledge
+Understanding the structural and grammatical rules that dictate how words must be ordered to form valid phrases and sentences (e.g., knowing that English typically follows a Subject-Verb-Object pattern).
+
+### Semantic Knowledge
+Understanding the literal, explicit meaning of words and how those individual concepts combine to form the baseline message of a full sentence.
+
+### Pragmatic Knowledge
+Understanding how external context, social dynamics, tone, and real-world situations alter the true intent behind a statement beyond its literal wording (e.g., recognizing sarcasm or unstated requests).
+
+### Discourse Knowledge
+Understanding how multiple sentences connect, flow, and interact across a larger paragraph or conversation to maintain structural cohesion and thematic continuity.
 
 ## 8. Natural Language Understanding and Generation ☆
 
