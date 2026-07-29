@@ -561,9 +561,57 @@ Understanding how multiple sentences connect, flow, and interact across a larger
 
 ## 8. Natural Language Understanding and Generation ☆
 
+ **NLU** acts as the "**reader**" that dissects human input into structured digital data, **NLG** acts as the "**writer**" that translates structured digital data back into fluid human language.
 
 ## 9. Evaluating NLP Systems ☆
 
+### Evaluating NLU Systems (Comprehension & Classification)
+   
+   **Accuracy**
+   Calculates the percentage of total predictions the model gets exactly right.
+   Works best when datasets have a balanced number of examples per category.
+   
+   **Precision**
+   Measures how many items flagged as positive are actually correct.
+   Minimises costly false alarms, like misclassifying legitimate emails as spam.
+   
+   **Recall** (Sensitivity)
+   Measures the model's ability to find all actual positive cases in a dataset.
+   Prevents critical misses, making it vital for tasks like medical diagnostics.
+   
+   **F1-Score**
+   Combines precision and recall into a single, balanced metric using their harmonic mean.
+   Gives an honest performance score when working with highly unbalanced datasets.
+   
+### Evaluating NLG Systems (Generation & Translation)
+
+**BLEU** (Bilingual Evaluation Understudy)
+Counts identical overlapping words and short phrases (n-grams) against a human reference.
+Serves as the standard benchmark for testing machine translation accuracy.
+Penalises alternative phrasing, counting synonyms like "couch" and "sofa" as mismatched.
+
+**ROUGE** (Recall-Oriented Understudy for Gisting Evaluation)
+Measures how much information from the human reference text is captured in the summary.
+Serves as the primary metric for text summarisation and abstract creation.Focuses entirely on content recall, occasionally overlooking poor sentence grammar.
+
+**METEOR**
+Compares generated text to references by factoring in exact matches, word stems, and synonyms.
+Matches words with identical roots, such as pairing "running" with "runs".
+Aligns closely with subjective human judgements of text quality than BLEU.
+
+**Perplexity**
+Tracks how confused or uncertain a language model is when predicting the next word.
+Indicates lower numbers mean the generated text is fluent, natural, and predictable.
+
+### LLM-Based Evaluation (Modern Approach)
+
+**LLM-as-a-Judge**
+Uses advanced Large Language Models to grade text outputs based on explicit rubrics.
+Evaluates abstract criteria like tone, nuance, and helpfulness that math formulas miss.
+
+**Faithfulness and Grounding**
+Verifies if generated information is factually supported by the source document.
+Catches and penalises artificial fabrications or hallucinations in the text.
 
 ## Practical Exploration
 
