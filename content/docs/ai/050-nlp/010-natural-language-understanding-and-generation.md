@@ -270,12 +270,12 @@ The text must therefore be converted into a numerical representation.
 
 Common representation methods include:
 
-- Bag of Words
-- TF-IDF
-- Word2Vec
-- GloVe
-- Contextual embeddings
-- Transformer embeddings
+- **Bag of Words**: Counts word frequencies per document while completely ignoring grammar and word order.
+- **TF-IDF**: Weights words by how frequent they are locally versus how rare they are across all documents.
+- **Word2Vec**: Learns static word vectors using a neural network to predict words based on their local neighbors.
+- **GloVe**: Creates static word vectors by factoring a macro-level matrix of global word co-occurrence statistics.
+- **Contextual Embeddings**: Uses sequential neural networks to dynamically change a word's vector based on its surrounding sentence.
+- **Transformer Embeddings**: Uses simultaneous self-attention to calculate fluid, long-range word relationships across entire documents in parallel.
 
 Conceptually:
 
@@ -294,10 +294,84 @@ The numerical representation should preserve useful information about:
 - Negation
 
 {{% hint info %}}
+
 Traditional approaches such as **Bag of Words** and **TF-IDF** mainly represent word occurrence.
 
 Modern embeddings attempt to represent the **meaning and context** of words.
+
 {{% /hint %}}
+
+```
+import numpy as np
+from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
+from gensim.models import Word2Vec
+import gensim.downloader as api
+from transformers import AutoTokenizer, AutoModel, pipeline
+import torch
+
+# 1. Sample Data
+documents = [
+    "The bank lowered interest rates",
+    "The river bank overflowed"
+]
+tokenized_docs = [doc.lower().split() for doc in documents]
+
+# ==========================================
+# SCIKIT-LEARN (Lexical / Frequency Based)
+# ==========================================
+
+# 2. Bag of Words (CountVectorizer)
+bow_vectorizer = CountVectorizer()
+bow_matrix = bow_vectorizer.fit_transform(documents).toarray()
+print("Bag of Words Shape:", bow_matrix.shape)
+
+# 3. TF-IDF
+tfidf_vectorizer = TfidfVectorizer()
+tfidf_matrix = tfidf_vectorizer.fit_transform(documents).toarray()
+print("TF-IDF Shape:", tfidf_matrix.shape)
+
+# ==========================================
+# GENSIM (Static Word Vectors)
+# ==========================================
+
+# 4. Word2Vec (Trained from scratch locally)
+w2v_model = Word2Vec(sentences=tokenized_docs, vector_size=50, window=3, min_count=1)
+w2v_vector = w2v_model.wv['bank']
+print("Word2Vec 'bank' Vector Shape:", w2v_vector.shape)
+
+# 5. GloVe (Using a pre-trained Global Co-occurrence model)
+# Note: This downloads a 66MB model on first run
+glove_vectors = api.load("glove-wiki-gigaword-50")
+glove_vector = glove_vectors['bank']
+print("GloVe 'bank' Vector Shape:", glove_vector.shape)
+
+# ==========================================
+# HUGGING FACE (Contextual / Transformers)
+# ==========================================
+
+# 6. Contextual Embeddings (BiLSTM / Feature-based via pipeline)
+# DistilBERT works well here to show context shifts dynamically
+nlp_pipe = pipeline("feature-extraction", model="distilbert-base-uncased")
+
+# Notice how the vector for 'bank' shifts between doc 1 and doc 2
+context_doc1 = np.array(nlp_pipe(documents[0]))  # Shape: (1, sequence_length, hidden_dim)
+context_doc2 = np.array(nlp_pipe(documents[1]))
+print("Contextual (DistilBERT) Sequence Shape:", context_doc1.shape)
+
+# 7. Transformer Embeddings (Manual Hugging Face PyTorch Workflow)
+model_name = "bert-base-uncased"
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModel.from_pretrained(model_name)
+
+inputs = tokenizer(documents, padding=True, truncation=True, return_tensors="pt")
+with torch.no_grad():
+    outputs = model(**inputs)
+
+# The last hidden state contains the precise contextualized self-attention embeddings
+transformer_embeddings = outputs.last_hidden_state
+print("Transformer Last Hidden State Shape:", transformer_embeddings.shape)
+```
+
 
 ### 5. Modelling ☆
 
@@ -444,17 +518,100 @@ However, important steps still remain:
 The NLP pipeline can be remembered as:
 
 **Text → Tokens → Linguistic information → Numerical representation → Model → Evaluation → Application**
+
 {{% /hint %}}
+
 
 ## 6. Ambiguity and Why NLP Is Difficult ☆
 
+### Lexical Ambiguity (Polysemy and Homonymy)~
+Occurs when a single word has multiple potential meanings, such as "bank" referring to either a financial institution or a river's edge.
+ 
+### Syntactic Structure Ambiguity
+Occurs when a sentence can be parsed into multiple different grammatical structures, altering who performs an action (e.g., "I saw the man with the telescope").
+ 
+### Anaphora and Coreference Resolution
+The challenge of correctly mapping pronouns or references (like "it" or "they") back to the specific noun they represent across a text.
+ 
+### Semantic and Pragmatic Ambiguity (Sarcasm and Metaphor)
+Occurs when the literal meaning of words conflicts with the speaker's true contextual intent, tone, or cultural figure of speech.
+ 
+### Out-of-Vocabulary (OOV) and Evolving Language
+The issue where a system encounters brand-new slang, internet acronyms, or rapidly changing definitions that do not exist in its trained dataset.
+
 ## 7. Levels of Language Analysis ☆
+
+### Morphological Knowledge
+Understanding how individual words are built from smaller, meaningful units like roots, prefixes, and suffixes (e.g., recognising that "re-align-ed" represents a past-tense action of aligning again).
+
+### Lexical Knowledge
+Possessing a comprehensive internal dictionary of words, including their spelling, independent meanings, and valid parts of speech (e.g., knowing that "run" can act as both a noun and a verb).
+
+### Syntactic Knowledge
+Understanding the structural and grammatical rules that dictate how words must be ordered to form valid phrases and sentences (e.g., knowing that English typically follows a Subject-Verb-Object pattern).
+
+### Semantic Knowledge
+Understanding the literal, explicit meaning of words and how those individual concepts combine to form the baseline message of a full sentence.
+
+### Pragmatic Knowledge
+Understanding how external context, social dynamics, tone, and real-world situations alter the true intent behind a statement beyond its literal wording (e.g., recognising sarcasm or unstated requests).
+
+### Discourse Knowledge
+Understanding how multiple sentences connect, flow, and interact across a larger paragraph or conversation to maintain structural cohesion and thematic continuity.
 
 ## 8. Natural Language Understanding and Generation ☆
 
+ **NLU** acts as the "**reader**" that dissects human input into structured digital data, **NLG** acts as the "**writer**" that translates structured digital data back into fluid human language.
 
 ## 9. Evaluating NLP Systems ☆
 
+### Evaluating NLU Systems (Comprehension & Classification)
+   
+   **Accuracy**
+   Calculates the percentage of total predictions the model gets exactly right.
+   Works best when datasets have a balanced number of examples per category.
+   
+   **Precision**
+   Measures how many items flagged as positive are actually correct.
+   Minimises costly false alarms, like misclassifying legitimate emails as spam.
+   
+   **Recall** (Sensitivity)
+   Measures the model's ability to find all actual positive cases in a dataset.
+   Prevents critical misses, making it vital for tasks like medical diagnostics.
+   
+   **F1-Score**
+   Combines precision and recall into a single, balanced metric using their harmonic mean.
+   Gives an honest performance score when working with highly unbalanced datasets.
+   
+### Evaluating NLG Systems (Generation & Translation)
+
+**BLEU** (Bilingual Evaluation Understudy)
+Counts identical overlapping words and short phrases (n-grams) against a human reference.
+Serves as the standard benchmark for testing machine translation accuracy.
+Penalises alternative phrasing, counting synonyms like "couch" and "sofa" as mismatched.
+
+**ROUGE** (Recall-Oriented Understudy for Gisting Evaluation)
+Measures how much information from the human reference text is captured in the summary.
+Serves as the primary metric for text summarisation and abstract creation.Focuses entirely on content recall, occasionally overlooking poor sentence grammar.
+
+**METEOR**
+Compares generated text to references by factoring in exact matches, word stems, and synonyms.
+Matches words with identical roots, such as pairing "running" with "runs".
+Aligns closely with subjective human judgements of text quality than BLEU.
+
+**Perplexity**
+Tracks how confused or uncertain a language model is when predicting the next word.
+Indicates lower numbers mean the generated text is fluent, natural, and predictable.
+
+### LLM-Based Evaluation (Modern Approach)
+
+**LLM-as-a-Judge**
+Uses advanced Large Language Models to grade text outputs based on explicit rubrics.
+Evaluates abstract criteria like tone, nuance, and helpfulness that math formulas miss.
+
+**Faithfulness and Grounding**
+Verifies if generated information is factually supported by the source document.
+Catches and penalises artificial fabrications or hallucinations in the text.
 
 ## Practical Exploration
 
