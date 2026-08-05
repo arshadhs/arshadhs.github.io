@@ -1,7 +1,7 @@
 ---
 title: "Vector Semantics and Embedding"
 draft: false
-tags: ["AI", "NLP", "Vector Semantics", "Word Embeddings", "TF-IDF"]
+tags: ["AI", "NLP", "Vector Semantics", "Word Embeddings"]
 categories: ["AI", "Natural Language Processing"]
 weight: 200
 menu: main
