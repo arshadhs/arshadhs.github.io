@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Artificial Intelligence"
+title: "Artificial Intelligence"
 draft: false
 tags: ["AI", "Artificial Intelligence", "ACI", "Intelligent Agents"]
 categories: ["AI", "Artificial and Computational Intelligence"]
@@ -7,15 +7,13 @@ weight: 100
 menu: main
 ---
 
-# Introduction to Artificial Intelligence
+# Artificial Intelligence
 
 Artificial Intelligence (AI) is concerned with building systems that can **perceive, reason, learn, decide and act** in ways that achieve useful goals.
 
-This page introduces the foundations of AI, its major application areas, four classic ways of thinking about intelligence, important milestones in its development, and some of the risks that accompany increasingly capable AI systems.
+The foundations of AI, its major application areas, four classic ways of thinking about intelligence, important milestones in its development, and some of the risks that accompany increasingly capable AI systems.
 
 ## Learning Objectives
-
-By the end of this page, you should be able to:
 
 - explain what intelligence and artificial intelligence mean in practical terms
 - identify the major disciplines that contributed to AI
@@ -43,6 +41,29 @@ flowchart TD
     style F fill:#C8E6C9
     style G fill:#C8E6C9
 ```
+
+---
+
+1. Agent
+2. Explore (all possible solutions)
+3. Environment
+4. Sensor → i/p → Percept
+5. Actuator
+6. Action
+7. Initial State: Source
+8. Transition Model
+9. Random-isation
+10. Learned Info → FACT → Knowledge Base
+11. Backtracking
+
+- State Space Transition Diagram / Search Tree
+- Performance Measure → Numerical Measure (Minimise or Maximise)
+
+M2 → Search
+M4 → Game
+M5 → Knowledge → Fact → KB → Inference
+
+---
 
 ## 1. What Is Intelligence?
 

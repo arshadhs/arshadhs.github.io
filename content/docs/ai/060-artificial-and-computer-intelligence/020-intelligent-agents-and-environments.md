@@ -11,11 +11,9 @@ menu: main
 
 An intelligent agent connects **perception** with **action**. It observes an environment through sensors, uses the information it receives to decide what to do, and affects the environment through actuators.
 
-This page develops the core vocabulary for reasoning about intelligent agents: percepts, actions, rationality, performance measures, PEAS and the different properties an environment can have.
+Develop the core vocabulary for reasoning about intelligent agents: percepts, actions, rationality, performance measures, PEAS and the different properties an environment can have.
 
 ## Learning Objectives
-
-By the end of this page, you should be able to:
 
 - explain the relationship between an agent and its environment
 - distinguish sensors, percepts, actions and actuators
