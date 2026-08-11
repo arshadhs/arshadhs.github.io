@@ -1,6 +1,6 @@
 ---
 title: "Advanced NLP Topics Consolidation"
-draft: false
+draft: true
 tags: ["AI", "NLP", "Advanced Topics", "Consolidation"]
 categories: ["AI", "Natural Language Processing"]
 weight: 1600

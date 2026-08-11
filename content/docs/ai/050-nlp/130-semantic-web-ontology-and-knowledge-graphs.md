@@ -1,6 +1,6 @@
 ---
 title: "Semantic Web Ontology and Knowledge Graphs"
-draft: false
+draft: true
 tags: ["AI", "NLP", "Semantic Web", "Knowledge Graphs"]
 categories: ["AI", "Natural Language Processing"]
 weight: 1300

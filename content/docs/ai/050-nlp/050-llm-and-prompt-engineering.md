@@ -1,6 +1,6 @@
 ---
 title: "Introduction to LLM and Prompt Engineering"
-draft: false
+draft: true
 tags: ["AI", "NLP", "Large Language Models", "Prompt Engineering"]
 categories: ["AI", "Natural Language Processing"]
 weight: 500

@@ -1,6 +1,6 @@
 ---
 title: "Dependency Parsing"
-draft: false
+draft: true
 tags: ["AI", "NLP", "Dependency Parsing", "Syntax"]
 categories: ["AI", "Natural Language Processing"]
 weight: 1000

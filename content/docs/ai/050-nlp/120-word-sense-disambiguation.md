@@ -1,6 +1,6 @@
 ---
 title: "Word Sense Disambiguation"
-draft: false
+draft: true
 tags: ["AI", "NLP", "WordNet", "Word Sense Disambiguation"]
 categories: ["AI", "Natural Language Processing"]
 weight: 1200

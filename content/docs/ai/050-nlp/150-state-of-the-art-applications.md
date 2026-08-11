@@ -1,6 +1,6 @@
 ---
 title: "State-of-the-Art Applications"
-draft: false
+draft: true
 tags: ["AI", "NLP", "Text Summarisation", "NLP Applications"]
 categories: ["AI", "Natural Language Processing"]
 weight: 1500

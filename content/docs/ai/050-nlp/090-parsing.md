@@ -1,6 +1,6 @@
 ---
 title: "Parsing"
-draft: false
+draft: true
 tags: ["AI", "NLP", "Parsing", "Context-Free Grammar"]
 categories: ["AI", "Natural Language Processing"]
 weight: 900

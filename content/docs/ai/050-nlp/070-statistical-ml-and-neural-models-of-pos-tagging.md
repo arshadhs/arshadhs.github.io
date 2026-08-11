@@ -1,6 +1,6 @@
 ---
 title: "Statistical, ML and Neural Models of POS Tagging"
-draft: false
+draft: true
 tags: ["AI", "NLP", "Sequence Labelling", "Machine Learning"]
 categories: ["AI", "Natural Language Processing"]
 weight: 700

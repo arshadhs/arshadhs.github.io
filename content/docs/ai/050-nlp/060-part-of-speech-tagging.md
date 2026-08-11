@@ -1,6 +1,6 @@
 ---
 title: "Part-of-Speech Tagging"
-draft: false
+draft: true
 tags: ["AI", "NLP", "Part-of-Speech Tagging", "Hidden Markov Models"]
 categories: ["AI", "Natural Language Processing"]
 weight: 600

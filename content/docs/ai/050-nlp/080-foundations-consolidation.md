@@ -1,6 +1,6 @@
 ---
 title: "NLP Foundations Consolidation"
-draft: false
+draft: true
 tags: ["AI", "NLP", "Foundations", "Consolidation"]
 categories: ["AI", "Natural Language Processing"]
 weight: 800

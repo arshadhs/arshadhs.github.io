@@ -1,6 +1,6 @@
 ---
 title: "Retrieval Augmented Generation"
-draft: false
+draft: true
 tags: ["AI", "NLP", "RAG", "Large Language Models"]
 categories: ["AI", "Natural Language Processing"]
 weight: 1400

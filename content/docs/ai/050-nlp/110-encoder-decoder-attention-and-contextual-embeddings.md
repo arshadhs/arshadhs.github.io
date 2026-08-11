@@ -1,6 +1,6 @@
 ---
 title: "Encoder-Decoder Models, Attention and Contextual Embeddings"
-draft: false
+draft: true
 tags: ["AI", "NLP", "Transformers", "BERT"]
 categories: ["AI", "Natural Language Processing"]
 weight: 1100
