@@ -20,6 +20,15 @@ Reinforcement learning provides the framework for sequential decision-making. De
 
 The learning path begins with classical reinforcement learning foundations and progresses towards value-based deep learning, policy-gradient methods, model-based approaches, and imitation learning.
 
+## Foundation
+
+| File | Topic | Foundation stage |
+|---|---|---|
+| `010-intro-to-reinforcement-learning.md` | Reinforcement Learning foundations | Introduction |
+| `020-multi-armed-bandit-problem.md` | Multi-Armed Bandits | Action selection |
+| `030-markov-decision-process-framework.md` | MDP framework and formulation | Sequential modelling |
+| `040-rewards-returns-policies-and-value-functions.md` | Returns, value functions and Bellman equations | Policy evaluation and optimality |
+
 ---
 
 ## Big Picture

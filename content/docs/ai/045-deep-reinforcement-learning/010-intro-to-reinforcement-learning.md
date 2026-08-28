@@ -13,7 +13,7 @@ Reinforcement Learning (RL) is a learning approach in which an **agent** improve
 
 Unlike supervised learning, the agent is not given a correct action label for every situation. It must discover useful behaviour through trial, feedback, and repeated interaction.
 
-{{% colour "green" %}}**Reinforcement learning is goal-oriented learning through interaction.**{{% /colour %}}
+{{% colour "blue" %}}**Reinforcement learning is goal-oriented learning through interaction.**{{% /colour %}}
 
 ---
 
@@ -30,18 +30,29 @@ Typical examples include:
 - healthcare decision support;
 - recommendation or adaptive systems.
 
-The supplied slides highlight three broad situations in which RL is useful:
+RL is particularly useful in three broad situations:
 
 1. a model of the environment is known, but an analytical solution is unavailable;
 2. only a simulation of the environment is available;
 3. the only practical way to learn about the environment is to interact with it.
 
 {{% hint info %}}
-
 ### Intuition
 
 A supervised learner is shown the correct answer. An RL agent is shown the **consequence** of its decision and must work out which behaviour is best over time.
 {{% /hint %}}
+
+### Learning Without an Upfront Dataset
+
+Saying that RL does not require data can be misleading. It does require experience, but that experience is usually **generated during interaction** rather than supplied beforehand as a fixed labelled dataset.
+
+An agent repeatedly produces experience of the form:
+
+```text
+state -> action -> reward -> next state
+```
+
+This experience becomes the data from which the policy and value estimates improve.
 
 ---
 
@@ -133,7 +144,7 @@ A positive reward encourages behaviour associated with a useful outcome. A negat
 
 A **policy** describes how the agent selects actions in different situations.
 
-{{% colour "green" %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
 \pi(a \mid s) = \Pr(A_t = a \mid S_t = s)
 {{< /katex >}}
@@ -158,6 +169,21 @@ A model may predict:
 - or a probability distribution over possible outcomes.
 
 A model is optional: some RL methods learn directly from experience without one.
+
+### What Is Specified and What Is Learned? ☆
+
+In a typical RL formulation, the designer identifies the available states, actions and reward mechanism. The agent is not directly told which action is correct in every state.
+
+| Usually specified by the designer | Learned through interaction |
+|---|---|
+| State representation | Which actions work well in each state |
+| Available actions | Policy |
+| Reward mechanism | State and action values |
+| Environment or simulator, when available | Behaviour that maximises long-term reward |
+
+{{% hint warning %}}
+Defining the reward well is crucial. An agent optimises the reward it is given, which may differ from the behaviour the designer intended if the reward is poorly chosen.
+{{% /hint %}}
 
 ---
 
@@ -188,7 +214,7 @@ The agent plays many games and gradually updates the estimated values of visited
 
 ### Value Update Rule ☆
 
-{{% colour "green" %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
 V(S_t) \leftarrow V(S_t) + \alpha \left[V(S_{t+1}) - V(S_t)\right]
 {{< /katex >}}
@@ -275,7 +301,7 @@ This example shows why RL is a sequential problem: one steering or braking decis
 
 ---
 
-## Summary ☆
+## Key Takeaways ☆
 
 Be able to explain:
 
@@ -296,8 +322,7 @@ Be able to explain:
 ## References
 
 1. Sutton and Barto, *Reinforcement Learning: An Introduction*, Chapter 1.
-2. BITS Pilani Deep Reinforcement Learning course handout, Contact Session 1.
-3. Supplied lecture slides, Session 1: Introduction to the Course and Introducing Reinforcement Learning.
+2. Supplied introductory Deep Reinforcement Learning slides and recordings.
 
 ---
 {{< home-link "Home" >}} | {{< section-index >}}

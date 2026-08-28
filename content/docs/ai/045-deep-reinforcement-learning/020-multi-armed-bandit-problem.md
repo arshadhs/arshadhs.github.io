@@ -13,7 +13,7 @@ The Multi-Armed Bandit (MAB) problem is the simplest setting for studying **deci
 
 An agent repeatedly chooses one of {{< katex >}} k {{< /katex >}} actions. Each action produces a numerical reward drawn from an unknown distribution. The objective is to maximise the expected total reward over time.
 
-{{% colour "green" %}}**The central challenge is deciding when to exploit current knowledge and when to explore uncertain alternatives.**{{% /colour %}}
+{{% colour "blue" %}}**The central challenge is deciding when to exploit current knowledge and when to explore uncertain alternatives.**{{% /colour %}}
 
 ---
 
@@ -45,7 +45,7 @@ flowchart LR
 
 The true value of action {{< katex >}} a {{< /katex >}} is its expected reward.
 
-{{% colour "green" %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
 q_*(a) \doteq \mathbb{E}\left[R_t \mid A_t = a\right]
 {{< /katex >}}
@@ -69,7 +69,7 @@ Let {{< katex >}} Q_t(a) {{< /katex >}} denote the estimated value of action {{<
 
 Using the sample-average method:
 
-{{% colour "green" %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
 Q_t(a) =
 \frac{\sum_{i=1}^{t-1} R_i\,\mathbf{1}_{A_i=a}}
@@ -85,7 +85,7 @@ This is the average of the rewards observed on previous occasions when action {{
 
 A greedy method chooses the action with the highest current estimate.
 
-{{% colour "green" %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
 A_t = \underset{a}{\operatorname{arg\,max}}\;Q_t(a)
 {{< /katex >}}
@@ -118,7 +118,7 @@ This is not a one-time decision. The agent must manage the trade-off throughout 
 
 An epsilon-greedy policy behaves greedily most of the time and selects a random action with probability {{< katex >}} \varepsilon {{< /katex >}}.
 
-{{% colour "green" %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
 A_t =
 \begin{cases}
@@ -134,7 +134,7 @@ The random choice is made from all actions, so the greedy action can also be sel
 
 With {{< katex >}} k {{< /katex >}} actions and one unique greedy action:
 
-{{% colour "green" %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
 \Pr(\text{greedy action}) = (1-\varepsilon) + \frac{\varepsilon}{k}
 {{< /katex >}}
@@ -142,7 +142,7 @@ With {{< katex >}} k {{< /katex >}} actions and one unique greedy action:
 
 For two actions and {{< katex >}} \varepsilon = 0.5 {{< /katex >}}:
 
-{{% colour "green" %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
 \Pr(\text{greedy action}) = 0.5 + \frac{0.5}{2} = 0.75
 {{< /katex >}}
@@ -152,7 +152,7 @@ For two actions and {{< katex >}} \varepsilon = 0.5 {{< /katex >}}:
 
 ## The 10-Armed Testbed
 
-The slides compare greedy and epsilon-greedy methods on a 10-armed testbed.
+Greedy and epsilon-greedy methods can be compared on a 10-armed testbed.
 
 The qualitative result is:
 
@@ -171,7 +171,7 @@ The best value of {{< katex >}} \varepsilon {{< /katex >}} depends on reward unc
 
 Recomputing a complete average after every reward is inefficient. The estimate can be updated incrementally.
 
-{{% colour "green" %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
 Q_{n+1} = Q_n + \frac{1}{n}\left[R_n - Q_n\right]
 {{< /katex >}}
@@ -179,7 +179,7 @@ Q_{n+1} = Q_n + \frac{1}{n}\left[R_n - Q_n\right]
 
 This has the general form:
 
-{{% colour "green" %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
 \text{New Estimate}
 =
@@ -258,7 +258,7 @@ Older rewards may no longer describe the current problem, so recent observations
 
 A constant step size is used:
 
-{{% colour "green" %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
 Q_{n+1} = Q_n + \alpha\left[R_n-Q_n\right]
 {{< /katex >}}
@@ -266,7 +266,7 @@ Q_{n+1} = Q_n + \alpha\left[R_n-Q_n\right]
 
 Expanding the recursion gives an exponentially recency-weighted average:
 
-{{% colour "green" %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
 Q_{n+1}
 =
@@ -315,7 +315,7 @@ For example, setting every estimate to {{< katex >}} 5 {{< /katex >}} makes the 
 
 Epsilon-greedy exploration treats non-greedy actions indiscriminately. Upper-Confidence-Bound (UCB) action selection instead prefers actions that are either promising or uncertain.
 
-{{% colour "green" %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
 A_t
 =
@@ -347,7 +347,7 @@ Value-based bandit methods estimate {{< katex >}} Q(a) {{< /katex >}}. Gradient 
 
 A softmax function converts preferences into probabilities.
 
-{{% colour "green" %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
 \pi_t(a)
 =
@@ -367,7 +367,7 @@ After choosing action {{< katex >}} A_t {{< /katex >}} and receiving reward {{< 
 
 For the selected action:
 
-{{% colour "green" %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
 H_{t+1}(A_t)
 =
@@ -379,7 +379,7 @@ H_t(A_t)
 
 For every other action:
 
-{{% colour "green" %}}
+{{% colour "blue" %}}
 {{< katex display=true >}}
 H_{t+1}(a)
 =
@@ -407,7 +407,7 @@ A basic bandit is **non-associative**: the agent repeatedly faces the same actio
 
 An associative or contextual bandit includes a situation or context. The best action may differ from one context to another.
 
-{{% colour "green" %}}**Policy: a mapping from situations to actions that are best in those situations.**{{% /colour %}}
+{{% colour "blue" %}}**Policy: a mapping from situations to actions that are best in those situations.**{{% /colour %}}
 
 Examples include:
 
@@ -469,8 +469,7 @@ You should be able to:
 ## References
 
 1. Sutton and Barto, *Reinforcement Learning: An Introduction*, Chapter 2.
-2. BITS Pilani Deep Reinforcement Learning course handout, Contact Session 2.
-3. Supplied lecture slides on Multi-Armed Bandits, including action-value methods, non-stationarity, UCB, gradient bandits, and associative search.
+2. Supplied Multi-Armed Bandit slides and recordings, including action-value methods, non-stationarity, UCB, gradient bandits, and associative search.
 
 ---
 {{< home-link "Home" >}} | {{< section-index >}}
