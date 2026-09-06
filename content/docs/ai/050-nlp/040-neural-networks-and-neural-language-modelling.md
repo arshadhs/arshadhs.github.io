@@ -1,5 +1,5 @@
 ---
-title: "Neural Networks and Neural Language Modelling"
+title: "NN and Neural Language Modelling"
 draft: false
 tags: ["Natural Language Processing", "NLP", "Neural Networks", "Feed-Forward Networks", "Neural Language Models", "Word Embeddings"]
 categories: ["AI", "ML"]

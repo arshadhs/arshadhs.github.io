@@ -1,5 +1,5 @@
 ---
-title: "Large Language Models and Prompt Engineering"
+title: "LLM and Prompt Engineering"
 draft: false
 tags: ["Natural Language Processing", "NLP", "Large Language Models", "LLM", "Prompt Engineering", "Transfer Learning"]
 categories: ["AI", "ML"]
@@ -7,7 +7,7 @@ weight: 500
 menu: main
 ---
 
-# Large Language Models and Prompt Engineering
+# LLMs and Prompt Engineering
 
 A Large Language Model extends neural language modelling through much larger datasets, many more parameters, broad pretraining and adaptation to many downstream tasks. Its central operation remains next-token prediction.
 

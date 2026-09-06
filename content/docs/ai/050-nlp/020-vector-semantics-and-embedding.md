@@ -16,6 +16,10 @@ menu: main
 - Document and word vectors.
 - Dot product and cosine similarity.
 - Term Frequency–Inverse Document Frequency (TF-IDF).
+- Prediction-based word embeddings and self-supervision.
+- Word2Vec using Skip-gram with Negative Sampling and CBOW.
+- Embedding matrices, context-window choices, analogies, visualisation, and bias.
+- GloVe and global word–word co-occurrence statistics.
 
 ## Learning Objectives
 
@@ -27,6 +31,14 @@ menu: main
 - Calculate dot product and cosine similarity between vectors.
 - Explain why raw word frequency can be misleading.
 - Calculate TF, IDF, and TF-IDF weights.
+- Explain how Word2Vec learns embeddings from a prediction task.
+- Construct positive and negative Skip-gram training pairs.
+- Explain how sigmoid, negative sampling, and gradient descent train SGNS.
+- Compare Skip-gram with CBOW.
+- Explain how context-window size affects the relationships captured.
+- Interpret word analogies and two-dimensional embedding visualisations.
+- Explain how GloVe combines global counts with learned dense vectors.
+- Recognise how social biases can be encoded in word embeddings.
 
 <!--
 ## Map
@@ -426,6 +438,8 @@ Prediction-based methods:
 - Give similar words similar vector representations.
 
 This page develops the foundations using **count-based representations** and **TF-IDF**. Prediction-based approaches are introduced separately.
+
+The prediction-based approaches are developed in Sections 15–23 after the count-based foundations and their applications.
 
 ---
 
@@ -966,6 +980,463 @@ Once words and documents are represented as vectors, an NLP system can:
 
 ---
 
+## 15. From Counting to Predicting ☆
+
+Frequency-based methods construct vectors from explicit co-occurrence counts. Prediction-based methods learn vectors by solving a prediction problem.
+
+Word2Vec asks whether two words genuinely occur in one another's context. The prediction task is a means to an end: after training, the valuable output is the set of learned word embeddings.
+
+```mermaid
+flowchart TD
+    A[Text Corpus] --> B[Context Windows]
+    B --> C[Positive and Negative Pairs]
+    C --> D[Train a Classifier]
+    D --> E[Update Word Vectors]
+    E --> F[Keep the Embeddings]
+
+    style A fill:#E1F5FE
+    style B fill:#C8E6C9
+    style C fill:#FFF9C4
+    style D fill:#EDE7F6
+    style E fill:#E1F5FE
+    style F fill:#C8E6C9
+```
+
+### Self-Supervision
+
+Word2Vec does not require people to label examples manually. The corpus supplies its own training signal:
+
+- Words that really occur together form **positive examples**.
+- Randomly sampled words form **negative examples**.
+
+{{% hint info %}}
+The text supervises the model itself. Nearby words supply the positive labels, while sampled unrelated words supply contrasting examples.
+{{% /hint %}}
+
+The two principal Word2Vec architectures reverse the prediction direction:
+
+| Architecture | Input | Prediction |
+|---|---|---|
+| Skip-gram | Centre word | Surrounding context words |
+| CBOW | Surrounding context words | Centre word |
+
+---
+
+## 16. One-Hot Vectors and Embedding Matrices
+
+### One-Hot Representation
+
+A one-hot vector has one dimension for every word in the vocabulary. The position corresponding to the selected word contains `1`; all other positions contain `0`.
+
+For a vocabulary of six words:
+
+```text
+man    → [1, 0, 0, 0, 0, 0]
+woman  → [0, 1, 0, 0, 0, 0]
+king   → [0, 0, 1, 0, 0, 0]
+queen  → [0, 0, 0, 1, 0, 0]
+apple  → [0, 0, 0, 0, 1, 0]
+orange → [0, 0, 0, 0, 0, 1]
+```
+
+One-hot vectors identify words but do not encode similarity. The vector for `king` is no closer to `queen` than it is to `apple`.
+
+### Hand-Designed Features
+
+Words could instead be described using manually chosen features such as gender, royalty, age, or food. This would make the dimensions meaningful, but defining suitable features for every word in a large vocabulary is impractical.
+
+### Learned Embeddings
+
+An embedding matrix learns compact features automatically.
+
+For a vocabulary of size {{< katex >}} |V| {{< /katex >}} and embedding dimension {{< katex >}} d {{< /katex >}}, the embedding matrix has shape:
+
+{{% colour "red" %}}
+{{< katex display=true >}}
+|V|\times d
+{{< /katex >}}
+{{% /colour %}}
+
+Multiplying a one-hot word vector by the matrix selects the corresponding row. This operation is an **embedding lookup**.
+
+```mermaid
+flowchart LR
+    A[One-Hot Word] --> B[Embedding Matrix]
+    B --> C[Dense Vector]
+
+    style A fill:#E1F5FE
+    style B fill:#C8E6C9
+    style C fill:#FFF9C4
+```
+
+Dense vectors commonly use a few hundred dimensions rather than one dimension for every vocabulary word.
+
+---
+
+## 17. Word2Vec Skip-gram with Negative Sampling ☆
+
+**Skip-gram with Negative Sampling**, abbreviated **SGNS**, trains a binary classifier to distinguish genuine centre–context pairs from sampled false pairs.
+
+### Creating Positive Pairs
+
+Consider a context half-window of 2:
+
+```text
+... a tablespoon of apricot jam, a pinch ...
+                       ↑
+                    centre
+```
+
+If `apricot` is the centre word, nearby words such as `tablespoon`, `of`, `jam`, and `a` form positive pairs:
+
+```text
+(apricot, tablespoon) → 1
+(apricot, of)         → 1
+(apricot, jam)        → 1
+(apricot, a)          → 1
+```
+
+### Creating Negative Pairs
+
+Other vocabulary words are sampled to create pairs that did not occur in the window:
+
+```text
+(apricot, aardvark) → 0
+(apricot, Tolstoy)  → 0
+(apricot, matrix)   → 0
+```
+
+For each positive example, several negative examples are normally sampled. The original Word2Vec guidance uses roughly 2–5 negative examples for large datasets and 5–20 for smaller datasets.
+
+Negative words are sampled according to word frequency rather than uniformly. Frequent words are therefore more likely to be sampled, but the distribution is softened so that extremely frequent words do not dominate completely.
+
+{{% colour "red" %}}
+{{< katex display=true >}}
+P_{\mathrm{neg}}(w)=\frac{C(w)^{0.75}}{\sum_{u\in V}C(u)^{0.75}}
+{{< /katex >}}
+{{% /colour %}}
+
+---
+
+## 18. The Skip-gram Classifier ☆
+
+The classifier receives a centre word {{< katex >}} w {{< /katex >}} and a candidate context word {{< katex >}} c {{< /katex >}}.
+
+Their compatibility is measured using the dot product of their embeddings:
+
+{{% colour "red" %}}
+{{< katex display=true >}}
+\operatorname{score}(w,c)=\mathbf{w}^{\mathsf T}\mathbf{c}
+{{< /katex >}}
+{{% /colour %}}
+
+A large positive dot product suggests that the words form a likely pair. The dot product is not itself a probability, so SGNS passes it through the sigmoid function:
+
+{{% colour "red" %}}
+{{< katex display=true >}}
+\sigma(x)=\frac{1}{1+e^{-x}}
+{{< /katex >}}
+{{% /colour %}}
+
+The probability of a positive pair is:
+
+{{% colour "red" %}}
+{{< katex display=true >}}
+P(+\mid w,c)=\sigma(\mathbf{w}^{\mathsf T}\mathbf{c})
+{{< /katex >}}
+{{% /colour %}}
+
+The probability of a negative pair is:
+
+{{% colour "red" %}}
+{{< katex display=true >}}
+P(-\mid w,c)=1-P(+\mid w,c)=\sigma(-\mathbf{w}^{\mathsf T}\mathbf{c})
+{{< /katex >}}
+{{% /colour %}}
+
+{{% hint warning %}}
+Cosine similarity and dot product measure vector relationships, but neither is automatically a probability. The sigmoid converts the Skip-gram dot product into a value between 0 and 1.
+{{% /hint %}}
+
+### SGNS Loss
+
+For one positive context word and {{< katex >}} k {{< /katex >}} negative context words, the loss is:
+
+{{% colour "red" %}}
+{{< katex display=true >}}
+L=-\log\sigma(\mathbf{w}^{\mathsf T}\mathbf{c}_{pos})
+-\sum_{j=1}^{k}\log\sigma(-\mathbf{w}^{\mathsf T}\mathbf{c}_{neg,j})
+{{< /katex >}}
+{{% /colour %}}
+
+Minimising this loss:
+
+- increases the similarity of genuine centre–context pairs
+- decreases the similarity of sampled negative pairs
+
+---
+
+## 19. Learning the Skip-gram Embeddings
+
+The embedding vectors begin with small random values. Stochastic Gradient Descent updates the vectors one training example at a time or in small batches.
+
+{{% colour "red" %}}
+{{< katex display=true >}}
+\theta_{new}=\theta_{old}-\eta\nabla_{\theta}L
+{{< /katex >}}
+{{% /colour %}}
+
+where {{< katex >}} \eta {{< /katex >}} is the learning rate.
+
+Each update moves:
+
+- the centre-word vector closer to a genuine context vector
+- the centre-word vector farther from negative context vectors
+
+### Worked Training Illustration
+
+Consider:
+
+```text
+Corpus: Ned Stark is the most honourable man
+Positive pair: (Ned, Stark)
+Negative words: pimples, zebra, idiot
+```
+
+An initial forward pass produces:
+
+| Candidate context | Dot product | Sigmoid probability | Target |
+|---|---:|---:|---:|
+| Stark | 0.508 | 0.624 | 1 |
+| pimples | 0.213 | 0.553 | 0 |
+| zebra | 0.136 | 0.534 | 0 |
+| idiot | -0.132 | 0.467 | 0 |
+
+The model is not yet confident: the positive probability is only `0.624`, while several negative probabilities exceed `0.5`.
+
+Backpropagation calculates the prediction errors. Gradient descent then adjusts the vectors so that `Ned` and `Stark` become more compatible and the negative pairs become less compatible.
+
+Repeated updates across the corpus gradually organise the embedding space.
+
+### Two Embedding Matrices
+
+SGNS learns two vectors for every word:
+
+- a vector in the **target embedding matrix** {{< katex >}} W {{< /katex >}}
+- a vector in the **context embedding matrix** {{< katex >}} C {{< /katex >}}
+
+Both matrices contain one {{< katex >}} d {{< /katex >}}-dimensional vector for every word in the vocabulary. A common final representation for word {{< katex >}} i {{< /katex >}} is:
+
+{{% colour "red" %}}
+{{< katex display=true >}}
+\mathbf{e}_i=\mathbf{w}_i+\mathbf{c}_i
+{{< /katex >}}
+{{% /colour %}}
+
+After training, the classifier objective can be discarded and the learned embeddings retained for other NLP tasks.
+
+---
+
+## 20. Choosing the Context-Window Size
+
+Window size influences the type of relationship captured by the embeddings.
+
+| Window | Tends to capture | Example neighbours for `Hogwarts` |
+|---|---|---|
+| Small, such as ±2 | Syntactic or functional similarity | Other fictional schools |
+| Larger, such as ±5 | Broader semantic relatedness | Dumbledore, half-blood |
+
+A small window focuses on words that occupy similar local grammatical positions. A larger window includes more of the surrounding topic or semantic field.
+
+The appropriate size depends on the task and can be tuned experimentally.
+
+---
+
+## 21. Continuous Bag of Words ☆
+
+**Continuous Bag of Words**, abbreviated **CBOW**, reverses the Skip-gram direction. It uses surrounding context words to predict the centre word.
+
+```text
+Sentence: I am [happy] because I am learning
+Context:  I, am, because, I
+Target:   happy
+```
+
+### Generating Training Examples
+
+A fixed window slides across the corpus. At each position:
+
+1. The centre word becomes the target.
+2. The surrounding words become the input context.
+3. The window moves to the next position.
+
+### CBOW Architecture
+
+The context-word embeddings are combined, commonly by averaging:
+
+{{% colour "red" %}}
+{{< katex display=true >}}
+\mathbf{h}=\frac{1}{2C}\sum_{-C\leq j\leq C,\;j\neq 0}\mathbf{e}_{t+j}
+{{< /katex >}}
+{{% /colour %}}
+
+The combined vector is passed to an output layer. Softmax produces a probability distribution across the vocabulary:
+
+{{% colour "red" %}}
+{{< katex display=true >}}
+P(w_t=i\mid\mathrm{context})=
+\frac{\exp(\mathbf{u}_i^{\mathsf T}\mathbf{h})}
+{\sum_{j\in V}\exp(\mathbf{u}_j^{\mathsf T}\mathbf{h})}
+{{< /katex >}}
+{{% /colour %}}
+
+The predicted target is the vocabulary word receiving the highest probability.
+
+### Skip-gram and CBOW Compared
+
+| Feature | Skip-gram | CBOW |
+|---|---|---|
+| Direction | Centre → context | Context → centre |
+| Typical training method shown | Negative sampling | Softmax |
+| Training speed | Generally slower | Generally faster |
+| Smaller training data | Often works well | May be less effective |
+| Rare words and phrases | Often represented better | Less emphasis on rare words |
+| Frequent words | Strong | Often slightly better |
+
+{{% hint success %}}
+**Skip-gram predicts the surroundings from the word. CBOW predicts the word from its surroundings.**
+{{% /hint %}}
+
+---
+
+## 22. Interpreting and Inspecting Embeddings
+
+### Analogical Relationships ☆
+
+Some relationships appear as consistent directions in an embedding space.
+
+```text
+king − man + woman ≈ queen
+Paris − France + Italy ≈ Rome
+```
+
+For an analogy {{< katex >}} a:a^*::b:b^* {{< /katex >}}, the estimated answer vector is:
+
+{{% colour "red" %}}
+{{< katex display=true >}}
+\mathbf{b}^*\approx\mathbf{b}-\mathbf{a}+\mathbf{a}^*
+{{< /katex >}}
+{{% /colour %}}
+
+The nearest embedding to the resulting vector is selected as the answer.
+
+### Visualising Embeddings
+
+Learned vectors may contain 100 or more dimensions. Dimensionality-reduction methods such as **t-SNE** and **PCA** can project them into two dimensions for visual inspection.
+
+Related words may form visible clusters, such as:
+
+- `king`, `queen`, `man`, and `woman`
+- `cat`, `dog`, and `fish`
+- `apple`, `grape`, and `orange`
+- number words such as `one`, `two`, `three`, and `four`
+
+{{% hint warning %}}
+A two-dimensional projection is an approximation. It helps reveal patterns, but cannot preserve every distance and relationship from the original high-dimensional space.
+{{% /hint %}}
+
+### Semantic Change over Time
+
+Embeddings trained on text from different historical periods can reveal changes in word usage. Comparing the nearest neighbours of the same word across decades provides evidence of semantic change.
+
+### Bias in Word Embeddings ☆
+
+Embeddings learn relationships from the statistics of their training text. They can therefore encode and sometimes amplify social stereotypes present in the corpus.
+
+For example, useful gender relationships may coexist with undesirable associations:
+
+```text
+king − man + woman ≈ queen
+computer programmer − man + woman ≈ homemaker
+father : doctor :: mother : nurse
+```
+
+If biased embeddings are used in applications such as candidate search or ranking, their associations can affect real decisions.
+
+Bias-reduction techniques can lessen unwanted associations, but generally cannot guarantee that all bias has been removed.
+
+---
+
+## 23. Count-Based Methods, Word2Vec, and GloVe
+
+### Count-Based and Prediction-Based Methods
+
+| Count-based methods | Prediction-based methods |
+|---|---|
+| Fast to construct | Training scales with corpus size |
+| Use observed statistics efficiently | Repeatedly process examples during training |
+| Often produce sparse vectors | Produce dense vectors |
+| Large counts can dominate | Can capture richer learned patterns |
+| Strong baseline for similarity | Often useful for downstream NLP tasks |
+
+### GloVe ☆
+
+**GloVe** stands for **Global Vectors for Word Representation**.
+
+Like Word2Vec, it learns dense word embeddings. Unlike Word2Vec's local prediction windows, GloVe begins with global word–word co-occurrence statistics collected across the corpus.
+
+```mermaid
+flowchart TD
+    A[Text Corpus] --> B[Global Co-occurrence Matrix]
+    B --> C[Learn Dense Vectors]
+    C --> D[Preserve Statistical Relations]
+
+    style A fill:#E1F5FE
+    style B fill:#C8E6C9
+    style C fill:#FFF9C4
+    style D fill:#EDE7F6
+```
+
+Let {{< katex >}} X_{ij} {{< /katex >}} be the number of times context word {{< katex >}} j {{< /katex >}} occurs near target word {{< katex >}} i {{< /katex >}}.
+
+The total number of context occurrences for word {{< katex >}} i {{< /katex >}} is:
+
+{{% colour "red" %}}
+{{< katex display=true >}}
+X_i=\sum_k X_{ik}
+{{< /katex >}}
+{{% /colour %}}
+
+The probability of observing context word {{< katex >}} j {{< /katex >}} near word {{< katex >}} i {{< /katex >}} is:
+
+{{% colour "red" %}}
+{{< katex display=true >}}
+P_{ij}=P(j\mid i)=\frac{X_{ij}}{X_i}
+{{< /katex >}}
+{{% /colour %}}
+
+### Probability-Ratio Intuition
+
+Suppose the target words are `ice` and `steam`, and {{< katex >}} k {{< /katex >}} is a possible context word. Consider:
+
+{{% colour "red" %}}
+{{< katex display=true >}}
+\frac{P(k\mid\mathrm{ice})}{P(k\mid\mathrm{steam})}
+{{< /katex >}}
+{{% /colour %}}
+
+Interpretation:
+
+- A ratio much greater than 1 means {{< katex >}} k {{< /katex >}} is strongly associated with `ice`.
+- A ratio much less than 1 means {{< katex >}} k {{< /katex >}} is strongly associated with `steam`.
+- A ratio close to 1 means {{< katex >}} k {{< /katex >}} is similarly associated with both.
+
+{{% hint success %}}
+GloVe combines global co-occurrence evidence with learned dense representations that preserve relationships found in those statistics.
+{{% /hint %}}
+
+---
+
 ## Practical Exploration
 
 The following example creates TF-IDF document vectors and compares them using cosine similarity.
@@ -1011,6 +1482,11 @@ The first two documents should receive a higher similarity score because they sh
 | Dot product | Unnormalised vector overlap | `v · w` |
 | Cosine similarity | Normalised directional similarity | `cos(v, w)` |
 | TF-IDF | Weighted term importance | `tf × idf` |
+| One-hot vector | Vocabulary-sized identity representation | `[0, 0, 1, 0]` |
+| Embedding matrix | Stores a dense vector for every vocabulary word | {{< katex >}} \lvert V\rvert\times d {{< /katex >}} |
+| SGNS | Learns from genuine and sampled centre–context pairs | `(apricot, jam)` |
+| CBOW | Predicts a centre word from its context | context → `happy` |
+| GloVe | Learns dense vectors from global co-occurrence statistics | {{< katex >}} X_{ij} {{< /katex >}} |
 
 ## Common Mistakes
 
@@ -1022,6 +1498,12 @@ The first two documents should receive a higher similarity score because they sh
 - Confusing document frequency with total collection frequency.
 - Assuming that a high term frequency always makes a word informative.
 - Treating TF-IDF as a deep contextual representation rather than a weighted count-based representation.
+- Confusing Skip-gram's centre-to-context direction with CBOW's context-to-centre direction.
+- Treating the SGNS dot product or cosine similarity as a probability without applying sigmoid.
+- Assuming negative samples are manually labelled rather than sampled from the vocabulary.
+- Forgetting that SGNS learns separate target and context embedding matrices.
+- Treating a two-dimensional t-SNE plot as a perfect copy of the original embedding space.
+- Assuming that embeddings are neutral simply because they are numerical representations.
 {{% /hint %}}
 
 ## Practice Questions
@@ -1036,6 +1518,15 @@ The first two documents should receive a higher similarity score because they sh
 8. Distinguish collection frequency from document frequency.
 9. Calculate TF, IDF, and TF-IDF for a term in a small document collection.
 10. Explain why `good` can receive a TF-IDF value of zero even when it occurs many times.
+11. Explain how a corpus provides supervision for Word2Vec without manual labels.
+12. Generate positive and negative Skip-gram pairs for a short sentence.
+13. Explain how sigmoid converts a centre–context dot product into a probability.
+14. What changes occur to positive and negative word pairs during SGNS training?
+15. Compare the input, output, speed, and typical strengths of Skip-gram and CBOW.
+16. Explain how context-window size affects the type of relationship captured.
+17. Interpret the analogy `king − man + woman ≈ queen` geometrically.
+18. Explain why embeddings can reproduce social bias from their training corpus.
+19. How does GloVe differ from Word2Vec in its use of co-occurrence evidence?
 
 ## Key Takeaways
 
@@ -1047,6 +1538,12 @@ The first two documents should receive a higher similarity score because they sh
 - Dot product measures overlap but is affected by vector magnitude.
 - Cosine similarity compares vector direction after normalisation.
 - TF-IDF rewards words that are frequent locally but uncommon across the collection.
+- Word2Vec learns dense embeddings through a self-supervised prediction task.
+- SGNS uses sigmoid and negative sampling to distinguish genuine context pairs from sampled pairs.
+- CBOW predicts a centre word from its surrounding context and commonly trains faster than Skip-gram.
+- Window size influences whether embeddings emphasise local syntactic similarity or broader semantic relatedness.
+- Embeddings can support analogies and visual clustering, but can also encode social bias.
+- GloVe learns dense vectors from global word–word co-occurrence statistics.
 {{% /hint %}}
 
 ## Checklist
@@ -1059,6 +1556,15 @@ The first two documents should receive a higher similarity score because they sh
 - [ ] I can calculate and interpret cosine similarity.
 - [ ] I can distinguish TF, document frequency, IDF, and TF-IDF.
 - [ ] I can explain why TF-IDF is more informative than raw counts.
+- [ ] I can explain how an embedding matrix maps a one-hot word to a dense vector.
+- [ ] I can construct Skip-gram positive and negative training pairs.
+- [ ] I can explain the SGNS classifier, loss, and gradient update.
+- [ ] I can distinguish the target and context embedding matrices.
+- [ ] I can compare Skip-gram and CBOW.
+- [ ] I can explain the effect of changing the context-window size.
+- [ ] I can interpret word analogies and embedding visualisations carefully.
+- [ ] I can explain how bias enters learned embeddings.
+- [ ] I can describe the global co-occurrence intuition behind GloVe.
 
 ---
 {{< home-link "Home" >}} | {{< section-index >}}
