@@ -1,310 +1,247 @@
 ---
-title: "Introduction to LLM and Prompt Engineering"
-draft: true
-tags: ["AI", "NLP", "Large Language Models", "Prompt Engineering"]
-categories: ["AI", "Natural Language Processing"]
+title: "Large Language Models and Prompt Engineering"
+draft: false
+tags: ["Natural Language Processing", "NLP", "Large Language Models", "LLM", "Prompt Engineering", "Transfer Learning"]
+categories: ["AI", "ML"]
 weight: 500
 menu: main
 ---
 
-# Introduction to LLM and Prompt Engineering
+# Large Language Models and Prompt Engineering
 
-
-{{% hint info %}}
-This page is a structured learning template. Replace the comments with clear explanations, examples, formulas, diagrams, and practical insights while keeping the Hugo shortcodes intact.
-{{% /hint %}}
+A Large Language Model extends neural language modelling through much larger datasets, many more parameters, broad pretraining and adaptation to many downstream tasks. Its central operation remains next-token prediction.
 
 ## Learning Objectives
 
-- Explain what a large language model is and how it is used for language tasks.
-- Describe the role of instructions, context, examples, and output constraints in prompts.
-- Compare zero-shot, one-shot, and few-shot prompting.
-- Recognise when structured reasoning or generated knowledge may improve a response.
-
-## Chapter Map
-
-| Section | Topic | Status |
-|---|---|---|
-| 1 | Introduction to Large Language Models | ☐ |
-| 2 | Introduction to Prompt Engineering | ☐ |
-| 3 | N-shot Prompting | ☐ |
-| 4 | Chain-of-Thought Prompting | ☐ |
-| 5 | Generated Knowledge Prompting | ☐ |
+- Explain how neural language modelling develops into an LLM.
+- Describe the meaning of large, general-purpose and pretrained.
+- Explain how a prompt guides generation.
+- Distinguish zero-shot and few-shot prompting.
+- Compare prompting with model adaptation.
 
 ## Big Picture
 
-<!-- Explain how the chapter connects to earlier topics and what problem it solves. -->
+{{< mermaid >}}
+flowchart TD
+    A["Broad Text Data"] --> B["Large-scale Pretraining"]
+    B --> C["General Language Model"]
+    C --> D["Prompt or Adaptation"]
+    D --> E["Task Output"]
 
-## 1. Introduction to Large Language Models ☆
+    style A fill:#E1F5FE
+    style B fill:#C8E6C9
+    style C fill:#FFF9C4
+    style D fill:#EDE7F6
+    style E fill:#E1F5FE
+{{< /mermaid >}}
 
-### Definition
+## 1. From Neural Language Models to LLMs ☆
 
-{{% colour "green" %}}
-<!-- Add a precise, one- or two-sentence definition here. -->
-{{% /colour %}}
+A neural language model learns a conditional probability for the next token:
 
-### Intuition
-
-<!-- Explain the idea in beginner-friendly language and connect it to a familiar example. -->
-
-### Key Concepts
-
-- <!-- Key term or component -->
-- <!-- Key term or component -->
-- <!-- Key relationship or assumption -->
-
-### Formula or Model
-
-<!-- Add mathematics only when it supports understanding. Use this exact structure:
-
-{{% colour "green" %}}
+{{% colour "red" %}}
 {{< katex display=true >}}
-FORMULA HERE
+P(w_t\mid w_1,w_2,\ldots,w_{t-1})
 {{< /katex >}}
 {{% /colour %}}
 
-For inline mathematics use: {{< katex >}} x {{< /katex >}}
--->
+The idea becomes a Large Language Model when it is scaled using:
 
-### Worked Example
+- much larger training datasets
+- many more learned parameters
+- general-purpose language modelling
+- pretraining followed by adaptation or prompting
 
-<!-- Add a small step-by-step example. -->
+{{% hint info %}}
+An LLM generates one token at a time. Each generated token becomes part of the context used to predict the next token.
+{{% /hint %}}
 
-### Why It Matters in NLP
+## 2. Main Characteristics of an LLM
 
-<!-- Explain where this concept is used in real NLP systems. -->
+### Large
 
-### Key Points to Remember
+The model is trained on extensive data and contains a large number of parameters. These parameters encode patterns learned from the training data.
 
-- <!-- Definition or distinction to remember -->
-- <!-- Important explanation, derivation, or comparison -->
-- <!-- Common mistake to avoid -->
+### General-purpose
 
-## 2. Introduction to Prompt Engineering ☆
+Training uses broad language data rather than data for only one narrow task. The resulting model can support activities such as:
 
-### Definition
+- text generation
+- summarisation
+- question answering
+- classification
+- information extraction
+- coding assistance
+- interaction with external tools and APIs
 
-{{% colour "green" %}}
-<!-- Add a precise, one- or two-sentence definition here. -->
-{{% /colour %}}
+### Pretrained
 
-### Intuition
+The model first learns general language patterns through pretraining. It can then be guided through prompts or adapted for a particular task or domain.
 
-<!-- Explain the idea in beginner-friendly language and connect it to a familiar example. -->
+## 3. The Prompt ☆
 
-### Key Concepts
+A prompt is the information supplied to the model before it generates a response. The visible user instruction may be only one part of the complete context; a system can also add conversation history or other relevant information.
 
-- <!-- Key term or component -->
-- <!-- Key term or component -->
-- <!-- Key relationship or assumption -->
+A useful prompt may contain:
 
-### Formula or Model
+| Component | Purpose |
+|---|---|
+| Task | States what the model should do |
+| Context | Supplies relevant background or input data |
+| Constraints | Controls length, tone, format or boundaries |
+| Examples | Demonstrates the expected input-output pattern |
 
-<!-- Add mathematics only when it supports understanding. Use this exact structure:
+Example:
 
-{{% colour "green" %}}
-{{< katex display=true >}}
-FORMULA HERE
-{{< /katex >}}
-{{% /colour %}}
-
-For inline mathematics use: {{< katex >}} x {{< /katex >}}
--->
-
-### Worked Example
-
-<!-- Add a small step-by-step example. -->
-
-### Why It Matters in NLP
-
-<!-- Explain where this concept is used in real NLP systems. -->
-
-### Key Points to Remember
-
-- <!-- Definition or distinction to remember -->
-- <!-- Important explanation, derivation, or comparison -->
-- <!-- Common mistake to avoid -->
-
-## 3. N-shot Prompting ☆
-
-### Definition
-
-{{% colour "green" %}}
-<!-- Add a precise, one- or two-sentence definition here. -->
-{{% /colour %}}
-
-### Intuition
-
-<!-- Explain the idea in beginner-friendly language and connect it to a familiar example. -->
-
-### Key Concepts
-
-- <!-- Key term or component -->
-- <!-- Key term or component -->
-- <!-- Key relationship or assumption -->
-
-### Formula or Model
-
-<!-- Add mathematics only when it supports understanding. Use this exact structure:
-
-{{% colour "green" %}}
-{{< katex display=true >}}
-FORMULA HERE
-{{< /katex >}}
-{{% /colour %}}
-
-For inline mathematics use: {{< katex >}} x {{< /katex >}}
--->
-
-### Worked Example
-
-<!-- Add a small step-by-step example. -->
-
-### Why It Matters in NLP
-
-<!-- Explain where this concept is used in real NLP systems. -->
-
-### Key Points to Remember
-
-- <!-- Definition or distinction to remember -->
-- <!-- Important explanation, derivation, or comparison -->
-- <!-- Common mistake to avoid -->
-
-## 4. Chain-of-Thought Prompting ☆
-
-### Definition
-
-{{% colour "green" %}}
-<!-- Add a precise, one- or two-sentence definition here. -->
-{{% /colour %}}
-
-### Intuition
-
-<!-- Explain the idea in beginner-friendly language and connect it to a familiar example. -->
-
-### Key Concepts
-
-- <!-- Key term or component -->
-- <!-- Key term or component -->
-- <!-- Key relationship or assumption -->
-
-### Formula or Model
-
-<!-- Add mathematics only when it supports understanding. Use this exact structure:
-
-{{% colour "green" %}}
-{{< katex display=true >}}
-FORMULA HERE
-{{< /katex >}}
-{{% /colour %}}
-
-For inline mathematics use: {{< katex >}} x {{< /katex >}}
--->
-
-### Worked Example
-
-<!-- Add a small step-by-step example. -->
-
-### Why It Matters in NLP
-
-<!-- Explain where this concept is used in real NLP systems. -->
-
-### Key Points to Remember
-
-- <!-- Definition or distinction to remember -->
-- <!-- Important explanation, derivation, or comparison -->
-- <!-- Common mistake to avoid -->
-
-## 5. Generated Knowledge Prompting ☆
-
-### Definition
-
-{{% colour "green" %}}
-<!-- Add a precise, one- or two-sentence definition here. -->
-{{% /colour %}}
-
-### Intuition
-
-<!-- Explain the idea in beginner-friendly language and connect it to a familiar example. -->
-
-### Key Concepts
-
-- <!-- Key term or component -->
-- <!-- Key term or component -->
-- <!-- Key relationship or assumption -->
-
-### Formula or Model
-
-<!-- Add mathematics only when it supports understanding. Use this exact structure:
-
-{{% colour "green" %}}
-{{< katex display=true >}}
-FORMULA HERE
-{{< /katex >}}
-{{% /colour %}}
-
-For inline mathematics use: {{< katex >}} x {{< /katex >}}
--->
-
-### Worked Example
-
-<!-- Add a small step-by-step example. -->
-
-### Why It Matters in NLP
-
-<!-- Explain where this concept is used in real NLP systems. -->
-
-### Key Points to Remember
-
-- <!-- Definition or distinction to remember -->
-- <!-- Important explanation, derivation, or comparison -->
-- <!-- Common mistake to avoid -->
-
-## Practical Exploration
-
-Design and compare prompts for classification, extraction, summarisation, and question answering.
-
-```python
-# Add a minimal, well-commented Python example here.
+```text
+Task: Classify the review as positive or negative.
+Review: I love this movie.
+Output format: Sentiment: <label>
 ```
 
-## Comparison Table
+The model uses the prompt and its learned parameters to estimate the most probable continuation.
 
-| Concept or Model | Main Idea | Strength | Limitation | Typical Use |
-|---|---|---|---|---|
-| <!-- Item 1 --> | <!-- Idea --> | <!-- Strength --> | <!-- Limitation --> | <!-- Use --> |
-| <!-- Item 2 --> | <!-- Idea --> | <!-- Strength --> | <!-- Limitation --> | <!-- Use --> |
+## 4. Prompt Engineering
+
+Prompt engineering is the design of prompts intended to elicit useful model behaviour.
+
+It can help specify:
+
+- the goal
+- relevant information
+- the desired response format
+- constraints or guardrails
+- examples of correct behaviour
+
+Changing the prompt changes the immediate context, not the model's learned weights.
+
+{{% hint success %}}
+Prompting steers an existing model at use time; it does not retrain the model.
+{{% /hint %}}
+
+## 5. Zero-shot Prompting ☆
+
+Zero-shot prompting provides an instruction but no worked examples.
+
+```text
+Classify this review as positive or negative.
+
+Review: I love this movie.
+Sentiment:
+```
+
+The model must infer the required task and output from the instruction and its pretrained knowledge.
+
+## 6. Few-shot Prompting ☆
+
+Few-shot prompting includes a small number of demonstrations.
+
+```text
+Review: The story was excellent.
+Sentiment: Positive
+
+Review: The film was tedious.
+Sentiment: Negative
+
+Review: I love this movie.
+Sentiment:
+```
+
+The examples help establish the intended mapping and output style. The model adapts its response using the supplied context, while its core parameters remain unchanged.
+
+| Method | Instruction | Examples | Weight update |
+|---|---|---:|---:|
+| Zero-shot | Yes | None | No |
+| Few-shot | Yes | A small number | No |
+
+## 7. Pretraining and Transfer Learning
+
+Training a separate deep model from scratch for every NLP task is difficult because it requires large amounts of data and computation. Labelled data for a target domain may also be limited.
+
+Transfer learning begins with a pretrained model and adapts its learned knowledge to a new task.
+
+{{< mermaid >}}
+flowchart TD
+    A["Pretrained Model"] --> B["Feature Extraction"]
+    A --> C["Partial Fine-tuning"]
+    A --> D["Full Fine-tuning"]
+
+    style A fill:#E1F5FE
+    style B fill:#C8E6C9
+    style C fill:#FFF9C4
+    style D fill:#EDE7F6
+{{< /mermaid >}}
+
+### Feature Extraction
+
+Most pretrained parameters remain fixed. The model supplies useful representations while only a small task-specific component is trained.
+
+### Partial Fine-tuning
+
+Some pretrained layers or parameters are updated, while others remain fixed.
+
+### Full Fine-tuning
+
+Most or all model parameters may be updated for the target task. This allows stronger adaptation but requires more data and computation.
+
+## 8. Choosing an Adaptation Strategy
+
+The appropriate strategy depends on:
+
+- how different the new task is from pretraining
+- how much labelled data is available
+- the required specialisation
+- available computation
+- how much general knowledge should be retained
+
+Updating too many parameters on limited or narrow data can cause **catastrophic forgetting**, where the model loses useful knowledge acquired during pretraining.
+
+| Approach | Changes weights? | Typical effort | Main purpose |
+|---|---:|---:|---|
+| Prompting | No | Low | Guide a model at use time |
+| Feature extraction | Small task head only | Moderate | Reuse learned representations |
+| Fine-tuning | Some or many | Higher | Specialise model behaviour |
+
+## 9. Limitations and Care
+
+An LLM predicts likely continuations; likelihood is not a guarantee of factual correctness. Output quality depends on the model, its learned data patterns, the supplied context and the clarity of the task.
+
+The model may also be excessive for a simple task where a smaller classifier or language model would be faster and easier to operate.
 
 ## Common Mistakes
 
 {{% hint warning %}}
-- <!-- Add a common conceptual mistake. -->
-- <!-- Add a common mathematical or algorithmic mistake. -->
-- <!-- Add a terminology or interpretation mistake. -->
+- Prompting does not modify the model's stored parameters.
+- Few-shot prompting means examples are placed in the prompt; it is not the same as training on a small dataset.
+- An LLM is more than a large vocabulary: scale also concerns data, parameters and general-purpose pretraining.
+- A probable continuation is not automatically a true statement.
 {{% /hint %}}
 
 ## Practice Questions
 
-1. <!-- Definition or explanation question -->
-2. <!-- Comparison question -->
-3. <!-- Calculation, trace, or worked-example question -->
-4. <!-- Application or design question -->
+1. How does a neural language model develop into an LLM?
+2. What four components can make a prompt more precise?
+3. Compare zero-shot and few-shot prompting.
+4. Why might an organisation adapt a pretrained model instead of training from scratch?
+5. What trade-off separates feature extraction from full fine-tuning?
 
 ## Key Takeaways
 
 {{% hint success %}}
-- <!-- Most important takeaway -->
-- <!-- Second takeaway -->
-- <!-- Practical interpretation -->
+- An LLM is a large-scale, general-purpose, pretrained neural language model.
+- Its core operation is predicting the next token from the available context.
+- Prompts can specify a task, context, constraints and examples.
+- Zero-shot prompting supplies no examples; few-shot prompting supplies a small number.
+- Transfer learning reuses pretrained knowledge, while fine-tuning changes selected model parameters.
 {{% /hint %}}
 
-## Understanding Checklist
+## Checklist
 
-- [ ] I can explain **Introduction to Large Language Models** without referring to notes.
-- [ ] I can explain **Introduction to Prompt Engineering** without referring to notes.
-- [ ] I can explain **N-shot Prompting** without referring to notes.
-- [ ] I can explain **Chain-of-Thought Prompting** without referring to notes.
-- [ ] I can explain **Generated Knowledge Prompting** without referring to notes.
+- [ ] I can explain an LLM as a scaled neural language model.
+- [ ] I can describe the main components of a prompt.
+- [ ] I can distinguish zero-shot from few-shot prompting.
+- [ ] I can distinguish prompting from fine-tuning.
+- [ ] I can explain catastrophic forgetting.
 
 ---
 {{< home-link "Home" >}} | {{< section-index >}}

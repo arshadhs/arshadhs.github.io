@@ -1,357 +1,293 @@
 ---
-title: "Part-of-Speech Tagging"
-draft: true
-tags: ["AI", "NLP", "Part-of-Speech Tagging", "Hidden Markov Models"]
-categories: ["AI", "Natural Language Processing"]
+title: "Part-of-Speech Tagging and Hidden Markov Models"
+draft: false
+tags: ["Natural Language Processing", "NLP", "Part-of-Speech Tagging", "POS", "Markov Chains", "Hidden Markov Models", "HMM"]
+categories: ["AI", "ML"]
 weight: 600
 menu: main
 ---
 
-# Part-of-Speech Tagging
+# Part-of-Speech Tagging and Hidden Markov Models
 
-
-{{% hint info %}}
-This page is a structured learning template. Replace the comments with clear explanations, examples, formulas, diagrams, and practical insights while keeping the Hugo shortcodes intact.
-{{% /hint %}}
+Part-of-Speech tagging assigns a grammatical category to each word in a sequence. Because many words can play different grammatical roles, a tagger must use surrounding context rather than examine each word independently.
 
 ## Learning Objectives
 
-- Identify common English word classes and Penn Treebank POS tags.
-- Explain POS tagging as a sequence-labelling task.
-- Describe Markov chains and hidden Markov models.
-- Relate transition and emission probabilities to HMM POS tagging.
-
-## Chapter Map
-
-| Section | Topic | Status |
-|---|---|---|
-| 1 | (Mostly) English Word Classes | ☐ |
-| 2 | The Penn Treebank Part-of-Speech Tag Set | ☐ |
-| 3 | Part-of-Speech Tagging | ☐ |
-| 4 | Markov Chains | ☐ |
-| 5 | The Hidden Markov Model | ☐ |
-| 6 | HMM Part-of-Speech Tagging | ☐ |
+- Identify common English word classes and Penn Treebank tags.
+- Explain why POS tagging is a sequence-labelling problem.
+- Describe the Markov assumption.
+- Distinguish a Markov Chain from a Hidden Markov Model.
+- Explain how an HMM represents POS tagging.
 
 ## Big Picture
 
-<!-- Explain how the chapter connects to earlier topics and what problem it solves. -->
-
-## 1. (Mostly) English Word Classes ☆
-
-### Definition
-
-{{% colour "green" %}}
-<!-- Add a precise, one- or two-sentence definition here. -->
-{{% /colour %}}
-
-### Intuition
-
-<!-- Explain the idea in beginner-friendly language and connect it to a familiar example. -->
-
-### Key Concepts
-
-- <!-- Key term or component -->
-- <!-- Key term or component -->
-- <!-- Key relationship or assumption -->
-
-### Formula or Model
-
-<!-- Add mathematics only when it supports understanding. Use this exact structure:
-
-{{% colour "green" %}}
-{{< katex display=true >}}
-FORMULA HERE
-{{< /katex >}}
-{{% /colour %}}
-
-For inline mathematics use: {{< katex >}} x {{< /katex >}}
--->
-
-### Worked Example
-
-<!-- Add a small step-by-step example. -->
-
-### Why It Matters in NLP
-
-<!-- Explain where this concept is used in real NLP systems. -->
-
-### Key Points to Remember
-
-- <!-- Definition or distinction to remember -->
-- <!-- Important explanation, derivation, or comparison -->
-- <!-- Common mistake to avoid -->
-
-## 2. The Penn Treebank Part-of-Speech Tag Set ☆
-
-### Definition
-
-{{% colour "green" %}}
-<!-- Add a precise, one- or two-sentence definition here. -->
-{{% /colour %}}
-
-### Intuition
-
-<!-- Explain the idea in beginner-friendly language and connect it to a familiar example. -->
-
-### Key Concepts
-
-- <!-- Key term or component -->
-- <!-- Key term or component -->
-- <!-- Key relationship or assumption -->
-
-### Formula or Model
-
-<!-- Add mathematics only when it supports understanding. Use this exact structure:
-
-{{% colour "green" %}}
-{{< katex display=true >}}
-FORMULA HERE
-{{< /katex >}}
-{{% /colour %}}
-
-For inline mathematics use: {{< katex >}} x {{< /katex >}}
--->
-
-### Worked Example
-
-<!-- Add a small step-by-step example. -->
-
-### Why It Matters in NLP
-
-<!-- Explain where this concept is used in real NLP systems. -->
-
-### Key Points to Remember
-
-- <!-- Definition or distinction to remember -->
-- <!-- Important explanation, derivation, or comparison -->
-- <!-- Common mistake to avoid -->
-
-## 3. Part-of-Speech Tagging ☆
-
-### Definition
-
-{{% colour "green" %}}
-<!-- Add a precise, one- or two-sentence definition here. -->
-{{% /colour %}}
-
-### Intuition
-
-<!-- Explain the idea in beginner-friendly language and connect it to a familiar example. -->
-
-### Key Concepts
-
-- <!-- Key term or component -->
-- <!-- Key term or component -->
-- <!-- Key relationship or assumption -->
-
-### Formula or Model
-
-<!-- Add mathematics only when it supports understanding. Use this exact structure:
-
-{{% colour "green" %}}
-{{< katex display=true >}}
-FORMULA HERE
-{{< /katex >}}
-{{% /colour %}}
-
-For inline mathematics use: {{< katex >}} x {{< /katex >}}
--->
-
-### Worked Example
-
-<!-- Add a small step-by-step example. -->
-
-### Why It Matters in NLP
-
-<!-- Explain where this concept is used in real NLP systems. -->
-
-### Key Points to Remember
-
-- <!-- Definition or distinction to remember -->
-- <!-- Important explanation, derivation, or comparison -->
-- <!-- Common mistake to avoid -->
-
-## 4. Markov Chains ☆
-
-### Definition
-
-{{% colour "green" %}}
-<!-- Add a precise, one- or two-sentence definition here. -->
-{{% /colour %}}
-
-### Intuition
-
-<!-- Explain the idea in beginner-friendly language and connect it to a familiar example. -->
-
-### Key Concepts
-
-- <!-- Key term or component -->
-- <!-- Key term or component -->
-- <!-- Key relationship or assumption -->
-
-### Formula or Model
-
-<!-- Add mathematics only when it supports understanding. Use this exact structure:
-
-{{% colour "green" %}}
-{{< katex display=true >}}
-FORMULA HERE
-{{< /katex >}}
-{{% /colour %}}
-
-For inline mathematics use: {{< katex >}} x {{< /katex >}}
--->
-
-### Worked Example
-
-<!-- Add a small step-by-step example. -->
-
-### Why It Matters in NLP
-
-<!-- Explain where this concept is used in real NLP systems. -->
-
-### Key Points to Remember
-
-- <!-- Definition or distinction to remember -->
-- <!-- Important explanation, derivation, or comparison -->
-- <!-- Common mistake to avoid -->
-
-## 5. The Hidden Markov Model ☆
-
-### Definition
-
-{{% colour "green" %}}
-<!-- Add a precise, one- or two-sentence definition here. -->
-{{% /colour %}}
-
-### Intuition
-
-<!-- Explain the idea in beginner-friendly language and connect it to a familiar example. -->
-
-### Key Concepts
-
-- <!-- Key term or component -->
-- <!-- Key term or component -->
-- <!-- Key relationship or assumption -->
-
-### Formula or Model
-
-<!-- Add mathematics only when it supports understanding. Use this exact structure:
-
-{{% colour "green" %}}
-{{< katex display=true >}}
-FORMULA HERE
-{{< /katex >}}
-{{% /colour %}}
-
-For inline mathematics use: {{< katex >}} x {{< /katex >}}
--->
-
-### Worked Example
-
-<!-- Add a small step-by-step example. -->
-
-### Why It Matters in NLP
-
-<!-- Explain where this concept is used in real NLP systems. -->
-
-### Key Points to Remember
-
-- <!-- Definition or distinction to remember -->
-- <!-- Important explanation, derivation, or comparison -->
-- <!-- Common mistake to avoid -->
-
-## 6. HMM Part-of-Speech Tagging ☆
-
-### Definition
-
-{{% colour "green" %}}
-<!-- Add a precise, one- or two-sentence definition here. -->
-{{% /colour %}}
-
-### Intuition
-
-<!-- Explain the idea in beginner-friendly language and connect it to a familiar example. -->
-
-### Key Concepts
-
-- <!-- Key term or component -->
-- <!-- Key term or component -->
-- <!-- Key relationship or assumption -->
-
-### Formula or Model
-
-<!-- Add mathematics only when it supports understanding. Use this exact structure:
-
-{{% colour "green" %}}
-{{< katex display=true >}}
-FORMULA HERE
-{{< /katex >}}
-{{% /colour %}}
-
-For inline mathematics use: {{< katex >}} x {{< /katex >}}
--->
-
-### Worked Example
-
-<!-- Add a small step-by-step example. -->
-
-### Why It Matters in NLP
-
-<!-- Explain where this concept is used in real NLP systems. -->
-
-### Key Points to Remember
-
-- <!-- Definition or distinction to remember -->
-- <!-- Important explanation, derivation, or comparison -->
-- <!-- Common mistake to avoid -->
-
-## Practical Exploration
-
-Tag text using NLTK or spaCy and compare the result with a simple HMM-based tagger.
-
-```python
-# Add a minimal, well-commented Python example here.
+{{< mermaid >}}
+flowchart TD
+    A["Word Sequence"] --> B["Use Context"]
+    B --> C["Infer Hidden Tags"]
+    C --> D["Tagged Sequence"]
+
+    style A fill:#E1F5FE
+    style B fill:#C8E6C9
+    style C fill:#FFF9C4
+    style D fill:#EDE7F6
+{{< /mermaid >}}
+
+## 1. What Is Part-of-Speech Tagging? ☆
+
+A part of speech describes the grammatical role played by a word in a sentence. POS tagging assigns one tag to every word in a sequence.
+
+```text
+The/DT students/NNS are/VBP studying/VBG artificial/JJ intelligence/NN
 ```
 
-## Comparison Table
+Knowing these roles supports later NLP processing, including parsing, information extraction and other forms of language analysis.
 
-| Concept or Model | Main Idea | Strength | Limitation | Typical Use |
-|---|---|---|---|---|
-| <!-- Item 1 --> | <!-- Idea --> | <!-- Strength --> | <!-- Limitation --> | <!-- Use --> |
-| <!-- Item 2 --> | <!-- Idea --> | <!-- Strength --> | <!-- Limitation --> | <!-- Use --> |
+## 2. Why Context Is Necessary
+
+A word does not always have one fixed part of speech.
+
+```text
+They race every weekend.   → race is a verb
+The race starts at noon.   → race is a noun
+```
+
+Likewise, `back` can act as a noun, verb, adjective or adverb depending on its use.
+
+{{% hint info %}}
+The word itself provides lexical evidence, while neighbouring words provide contextual evidence. POS tagging combines both.
+{{% /hint %}}
+
+## 3. English Word Classes
+
+| Word class | Main role | Examples |
+|---|---|---|
+| Noun | Entity or concept | dog, student |
+| Verb | Action or state | run, think |
+| Adjective | Modifies a noun | large, red |
+| Adverb | Modifies a verb or description | quickly, very |
+| Pronoun | Stands for a noun phrase | he, they |
+| Determiner | Specifies a noun | the, a |
+| Preposition | Expresses a relation | in, on |
+| Conjunction | Connects expressions | and, but |
+| Auxiliary or modal | Adds grammatical information | is, can |
+
+These broad categories are useful linguistically, but computational systems require a fixed, precisely defined tag inventory.
+
+## 4. POS Tagsets ☆
+
+Different corpora may use different tagsets:
+
+- **Penn Treebank** — detailed English tags
+- **Universal POS** — a smaller cross-linguistic set such as `NOUN`, `VERB` and `ADJ`
+- **Brown Corpus tagset** — an earlier, more detailed English inventory
+
+Common Penn Treebank tags include:
+
+| Tag | Meaning | Example |
+|---|---|---|
+| NN | Singular or mass noun | bill |
+| NNS | Plural noun | students |
+| NNP | Proper singular noun | Janet |
+| VB | Base-form verb | back |
+| VBP | Present-tense verb | are |
+| VBG | Gerund or present participle | studying |
+| JJ | Adjective | artificial |
+| DT | Determiner | the |
+| MD | Modal | will |
+
+## 5. POS Tagging as Sequence Labelling ☆
+
+Given a word sequence:
+
+{{% colour "red" %}}
+{{< katex display=true >}}
+W=w_1,w_2,\ldots,w_n
+{{< /katex >}}
+{{% /colour %}}
+
+the goal is to find a corresponding tag sequence:
+
+{{% colour "red" %}}
+{{< katex display=true >}}
+T=t_1,t_2,\ldots,t_n
+{{< /katex >}}
+{{% /colour %}}
+
+The best tag sequence is the one with the highest conditional probability:
+
+{{% colour "red" %}}
+{{< katex display=true >}}
+\hat{T}=\underset{T}{\operatorname{argmax}}\;P(T\mid W)
+{{< /katex >}}
+{{% /colour %}}
+
+Using Bayes' rule and dropping the fixed denominator gives:
+
+{{% colour "red" %}}
+{{< katex display=true >}}
+\hat{T}=\underset{T}{\operatorname{argmax}}\;P(W\mid T)P(T)
+{{< /katex >}}
+{{% /colour %}}
+
+This separates the task into:
+
+- how probable the tag sequence is
+- how probable the observed words are for those tags
+
+## 6. Markov Chains
+
+A Markov Chain models a sequence of observable states. Under the first-order Markov assumption, the next state depends only on the current state, not on the full history.
+
+{{% colour "red" %}}
+{{< katex display=true >}}
+P(q_i\mid q_1,\ldots,q_{i-1})\approx P(q_i\mid q_{i-1})
+{{< /katex >}}
+{{% /colour %}}
+
+A Markov Chain is specified by:
+
+- a set of states
+- initial-state probabilities
+- transition probabilities between states
+
+The transition probability is:
+
+{{% colour "red" %}}
+{{< katex display=true >}}
+a_{ij}=P(q_j\mid q_i)
+{{< /katex >}}
+{{% /colour %}}
+
+## 7. Hidden Markov Models ☆
+
+A Hidden Markov Model adds observations generated by states that cannot be observed directly.
+
+For example, the actual weather may be hidden while a person's activity is observed. The activity provides evidence about the weather state.
+
+An HMM contains:
+
+| Symbol | Component | Meaning |
+|---|---|---|
+| {{< katex >}} Q {{< /katex >}} | States | Possible hidden states |
+| {{< katex >}} A {{< /katex >}} | Transitions | Probabilities of moving between states |
+| {{< katex >}} B {{< /katex >}} | Emissions | Probabilities of observations from states |
+| {{< katex >}} \pi {{< /katex >}} | Initial distribution | Probabilities of starting states |
+
+The emission probability is:
+
+{{% colour "red" %}}
+{{< katex display=true >}}
+b_j(o)=P(o\mid q_j)
+{{< /katex >}}
+{{% /colour %}}
+
+## 8. Markov Chain and HMM
+
+| Property | Markov Chain | Hidden Markov Model |
+|---|---|---|
+| States | Observable | Hidden |
+| Observations | The states themselves | Generated by hidden states |
+| Main probabilities | Initial and transition | Initial, transition and emission |
+| POS interpretation | Tags would be directly known | Tags are inferred from words |
+
+## 9. HMM for POS Tagging ☆
+
+POS tagging maps naturally to an HMM:
+
+| HMM concept | POS-tagging interpretation |
+|---|---|
+| Hidden state | POS tag |
+| Observation | Word |
+| Transition | Probability of one tag following another |
+| Emission | Probability of a word being produced by a tag |
+
+{{< mermaid >}}
+flowchart TD
+    T1["Tag: DT"] --> T2["Tag: NN"]
+    T2 --> T3["Tag: VB"]
+    T1 --> W1["Word: the"]
+    T2 --> W2["Word: dog"]
+    T3 --> W3["Word: barks"]
+
+    style T1 fill:#E1F5FE
+    style T2 fill:#E1F5FE
+    style T3 fill:#E1F5FE
+    style W1 fill:#C8E6C9
+    style W2 fill:#C8E6C9
+    style W3 fill:#C8E6C9
+{{< /mermaid >}}
+
+For `the dog barks` with tags `DT NN VB`, the model combines tag-transition probabilities and word-emission probabilities.
+
+Under the HMM assumptions:
+
+{{% colour "red" %}}
+{{< katex display=true >}}
+P(T)\approx\prod_{i=1}^{n}P(t_i\mid t_{i-1})
+{{< /katex >}}
+{{% /colour %}}
+
+{{% colour "red" %}}
+{{< katex display=true >}}
+P(W\mid T)\approx\prod_{i=1}^{n}P(w_i\mid t_i)
+{{< /katex >}}
+{{% /colour %}}
+
+Therefore:
+
+{{% colour "red" %}}
+{{< katex display=true >}}
+\hat{T}=\underset{T}{\operatorname{argmax}}\;\prod_{i=1}^{n}P(w_i\mid t_i)P(t_i\mid t_{i-1})
+{{< /katex >}}
+{{% /colour %}}
+
+The transition and emission probabilities can be learned by counting events in a tagged corpus.
+
+## 10. Three HMM Problems
+
+An HMM gives rise to three general problems:
+
+1. **Likelihood** — calculate the probability of an observation sequence under a known model.
+2. **Decoding** — find the most likely hidden-state sequence for the observations.
+3. **Learning** — estimate model parameters from data.
+
+For POS tagging, decoding means finding the most probable sequence of grammatical tags for the observed words. The specific dynamic-programming algorithms for likelihood and decoding form the next stage of this topic family.
 
 ## Common Mistakes
 
 {{% hint warning %}}
-- <!-- Add a common conceptual mistake. -->
-- <!-- Add a common mathematical or algorithmic mistake. -->
-- <!-- Add a terminology or interpretation mistake. -->
+- A word does not have one universal POS tag; its role depends on context.
+- In an HMM tagger, words are observed and POS tags are hidden.
+- A transition probability concerns neighbouring tags, while an emission probability connects a tag to a word.
+- The Markov assumption is a simplifying approximation, not a claim that earlier context never matters in real language.
 {{% /hint %}}
 
 ## Practice Questions
 
-1. <!-- Definition or explanation question -->
-2. <!-- Comparison question -->
-3. <!-- Calculation, trace, or worked-example question -->
-4. <!-- Application or design question -->
+1. Why can the word `race` require different tags in different sentences?
+2. Tag `Janet will back the bill` using suitable Penn Treebank tags.
+3. What is the difference between a transition and an emission probability?
+4. Why are POS tags treated as hidden states in an HMM?
+5. State the three general problems associated with an HMM.
 
 ## Key Takeaways
 
 {{% hint success %}}
-- <!-- Most important takeaway -->
-- <!-- Second takeaway -->
-- <!-- Practical interpretation -->
+- POS tagging assigns a grammatical category to every word using lexical and contextual evidence.
+- It is a sequence-labelling problem because neighbouring tags and words influence the decision.
+- A Markov Chain models transitions between observable states.
+- An HMM represents hidden tags that generate observed words.
+- HMM tagging combines tag-transition and word-emission probabilities.
 {{% /hint %}}
 
-## Understanding Checklist
+## Checklist
 
-- [ ] I can explain **(Mostly) English Word Classes** without referring to notes.
-- [ ] I can explain **The Penn Treebank Part-of-Speech Tag Set** without referring to notes.
-- [ ] I can explain **Part-of-Speech Tagging** without referring to notes.
-- [ ] I can explain **Markov Chains** without referring to notes.
-- [ ] I can explain **The Hidden Markov Model** without referring to notes.
-- [ ] I can explain **HMM Part-of-Speech Tagging** without referring to notes.
+- [ ] I can identify the main English word classes.
+- [ ] I can interpret common Penn Treebank tags.
+- [ ] I can explain POS tagging as sequence labelling.
+- [ ] I can distinguish a Markov Chain from an HMM.
+- [ ] I can map HMM states, transitions and emissions to POS tagging.
 
 ---
 {{< home-link "Home" >}} | {{< section-index >}}
