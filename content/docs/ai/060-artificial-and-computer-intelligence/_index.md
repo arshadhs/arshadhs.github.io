@@ -1,14 +1,27 @@
 ---
 title: "Artificial and Computational Intelligence"
 draft: false
-tags: ["Deep Reinforcement Learning"]
+tags: ["AI", "ACI", "Artificial and Computational Intelligence"]
 categories: ["AI", "ML"]
-weight: 060
+weight: 60
 menu: main
 bookCollapseSection: true
 ---
 
 # Artificial and Computational Intelligence
+
+Artificial and Computational Intelligence studies how agents perceive, reason, search, optimise, learn and act in complex environments.
+
+## Core Learning Pages
+
+| # | Topic |
+|---|---|
+| 1 | Artificial Intelligence |
+| 2 | Intelligent Agents and Environments |
+| 3 | Problem Solving and Uninformed Search |
+| 4 | Informed Search and Heuristic Design |
+| 5 | Local Search and Optimisation |
+| 6 | Evolutionary and Population-Based Search |
 
 ## Modular Structure
 

@@ -20,6 +20,7 @@ Develop the core vocabulary for reasoning about intelligent agents: percepts, ac
 - explain percept sequences and the agent function
 - describe what makes an agent rational
 - distinguish rationality from omniscience
+- compare the five basic agent architectures
 - specify a task environment using **PEAS**
 - classify environments using standard AI properties
 - explain why environment properties affect agent design
@@ -220,7 +221,86 @@ flowchart TD
     style E fill:#C8E6C9
 ```
 
-## 7. PEAS - Specifying a Task Environment ☆
+## 7. Agent Architectures ☆
+
+Agents can be organised into five broad types according to the information they use and how they choose actions.
+
+| Agent type | Basis for action | Main capability |
+|---|---|---|
+| Simple reflex | Current percept | Applies condition-action rules |
+| Model-based reflex | Current percept and internal state | Tracks aspects of the world that are not directly visible |
+| Goal-based | Internal state and goal | Considers which actions lead towards the goal |
+| Utility-based | Expected utility | Compares how desirable different outcomes are |
+| Learning-based | Experience and feedback | Improves its behaviour over time |
+
+### Simple reflex agent
+
+A **simple reflex agent** selects an action using only the current percept. It applies rules of the form:
+
+```text
+if condition, then action
+```
+
+For example, a vacuum-cleaner agent may use the rule: **if the current square is dirty, then suck**.
+
+This design is simple and fast, but it works reliably only when the current percept contains enough information to choose the correct action.
+
+### Model-based reflex agent
+
+A **model-based reflex agent** maintains an internal state describing parts of the environment that may not currently be visible. It updates that state using:
+
+- the previous internal state
+- the previous action
+- the new percept
+- a model of how the world changes
+
+It is therefore better suited to partially observable environments.
+
+### Goal-based agent
+
+A **goal-based agent** considers a desired goal when choosing an action. It may search or plan ahead to determine which sequence of actions can reach that goal.
+
+Knowing the goal makes the agent more flexible than a reflex agent because it can compare alternative future states.
+
+### Utility-based agent
+
+A goal distinguishes success from failure, but it may not distinguish between several successful outcomes. A **utility-based agent** assigns a numerical preference to outcomes and chooses the action with the highest expected utility.
+
+For example, several routes may reach the same destination, but they can differ in safety, time, comfort and cost.
+
+### Learning-based agent
+
+A **learning-based agent** improves from experience. Its main components are:
+
+| Component | Role |
+|---|---|
+| Performance element | Selects external actions |
+| Learning element | Improves the performance element |
+| Critic | Provides feedback on how well the agent performed |
+| Problem generator | Suggests exploratory actions that may produce useful experience |
+
+{{% hint info %}}
+The problem generator may deliberately recommend an action that does not appear immediately best. The resulting experience can help the agent discover better behaviour later.
+{{% /hint %}}
+
+```mermaid
+flowchart TD
+    P[Percepts] --> E[Performance element]
+    E --> A[Actions]
+    A --> C[Critic]
+    C --> L[Learning element]
+    L --> E
+    G[Problem generator] --> E
+
+    style P fill:#E1F5FE
+    style E fill:#C8E6C9
+    style A fill:#FFF9C4
+    style C fill:#EDE7F6
+    style L fill:#C8E6C9
+    style G fill:#FFF9C4
+```
+
+## 8. PEAS - Specifying a Task Environment ☆
 
 Before designing an intelligent agent, we need to describe the task it is expected to perform and the world in which it operates.
 
@@ -268,7 +348,7 @@ The performance measure is deliberately broader than simply "reach the destinati
 
 The PEAS description changes with the task. It should therefore be defined from the **problem statement**, not copied from another agent.
 
-## 8. Properties of Environments ☆
+## 9. Properties of Environments ☆
 
 The nature of the environment strongly influences how an intelligent agent should be designed.
 
@@ -344,7 +424,7 @@ Multi-agent relationships may be:
 
 Game playing is an obvious example, but many real-world environments are also multi-agent because people, vehicles or software systems interact with one another.
 
-## 9. Environment Classification Examples
+## 10. Environment Classification Examples
 
 | Property | Chess-like game | Mobile robot in the real world |
 |---|---|---|
@@ -357,7 +437,7 @@ Game playing is an obvious example, but many real-world environments are also mu
 
 The real world is commonly **partially observable, stochastic, sequential, dynamic, continuous and multi-agent**. This combination makes real-world agent design substantially harder than simple toy environments.
 
-## 10. Why Environment Properties Matter
+## 11. Why Environment Properties Matter
 
 Environment classification is not just terminology. It guides the design of the agent.
 
@@ -386,7 +466,7 @@ flowchart TD
     style E fill:#C8E6C9
 ```
 
-## 11. AI Agent and Agentic AI - A Useful Distinction
+## 12. AI Agent and Agentic AI - A Useful Distinction
 
 The broad AI definition of an **agent** is older and more general than the recent use of the phrase **agentic AI**.
 
@@ -413,11 +493,14 @@ The important point for this topic is that the theory of intelligent agents does
 3. Explain what the agent function {{< katex >}} f : P^{*} \rightarrow A {{< /katex >}} represents.
 4. Why is rationality different from omniscience?
 5. Give four possible performance measures for a vacuum-cleaner agent.
-6. Construct a PEAS description for an autonomous delivery robot.
-7. Distinguish deterministic and stochastic environments with examples.
-8. Why is image classification usually treated as episodic while navigation is sequential?
-9. What is the difference between static, dynamic and semi-dynamic environments?
-10. Classify an autonomous taxi environment across the major environment properties and justify each choice.
+6. Compare simple reflex and model-based reflex agents.
+7. Why does a utility-based agent provide more flexibility than a goal-based agent?
+8. Explain the roles of the four components of a learning agent.
+9. Construct a PEAS description for an autonomous delivery robot.
+10. Distinguish deterministic and stochastic environments with examples.
+11. Why is image classification usually treated as episodic while navigation is sequential?
+12. What is the difference between static, dynamic and semi-dynamic environments?
+13. Classify an autonomous taxi environment across the major environment properties and justify each choice.
 
 ## Key Takeaways
 
@@ -426,6 +509,7 @@ The important point for this topic is that the theory of intelligent agents does
 - A percept is one observation; a percept sequence is the history of observations.
 - The agent function maps percept sequences to actions.
 - A rational agent selects actions expected to maximise its performance measure using the information available.
+- Reflex, model-based, goal-based, utility-based and learning agents use progressively richer information to select actions.
 - **PEAS = Performance measure, Environment, Actuators, Sensors.**
 - Environment properties determine what information and decision-making capabilities an agent needs.
 {{% /hint %}}
@@ -436,6 +520,8 @@ The important point for this topic is that the theory of intelligent agents does
 - [ ] I can distinguish sensors, percepts, actions and actuators.
 - [ ] I can explain the agent function and percept sequence.
 - [ ] I can distinguish rationality from omniscience.
+- [ ] I can compare the five basic agent architectures.
+- [ ] I can explain the components of a learning agent.
 - [ ] I can construct a PEAS description for a new problem.
 - [ ] I can classify an environment by observability, determinism, dependency, dynamics, continuity and number of agents.
 - [ ] I can explain why environment properties influence agent design.

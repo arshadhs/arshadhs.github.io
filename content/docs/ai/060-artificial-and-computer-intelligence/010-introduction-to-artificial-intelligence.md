@@ -11,7 +11,7 @@ menu: main
 
 Artificial Intelligence (AI) is concerned with building systems that can **perceive, reason, learn, decide and act** in ways that achieve useful goals.
 
-The foundations of AI, its major application areas, four classic ways of thinking about intelligence, important milestones in its development, and some of the risks that accompany increasingly capable AI systems.
+This page introduces the foundations of AI, its major application areas, four classic ways of thinking about intelligence, important milestones in its development, and some of the risks that accompany increasingly capable AI systems.
 
 ## Learning Objectives
 
@@ -41,29 +41,6 @@ flowchart TD
     style F fill:#C8E6C9
     style G fill:#C8E6C9
 ```
-
----
-
-1. Agent
-2. Explore (all possible solutions)
-3. Environment
-4. Sensor → i/p → Percept
-5. Actuator
-6. Action
-7. Initial State: Source
-8. Transition Model
-9. Random-isation
-10. Learned Info → FACT → Knowledge Base
-11. Backtracking
-
-- State Space Transition Diagram / Search Tree
-- Performance Measure → Numerical Measure (Minimise or Maximise)
-
-M2 → Search
-M4 → Game
-M5 → Knowledge → Fact → KB → Inference
-
----
 
 ## 1. What Is Intelligence?
 
