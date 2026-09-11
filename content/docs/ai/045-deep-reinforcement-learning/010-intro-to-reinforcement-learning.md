@@ -74,7 +74,7 @@ RL is **not a type of neural network**. It is a learning and decision-making fra
 
 ## Characteristics of Reinforcement Learning ☆
 
-The course slides emphasise four characteristics:
+Four characteristics distinguish reinforcement learning from other learning paradigms:
 
 - there is no direct supervision; the main feedback is a reward signal;
 - decision-making is sequential;
@@ -202,7 +202,7 @@ A state may produce a small immediate reward but still have high value if it lea
 
 ## Example: Learning Tic-Tac-Toe
 
-The lecture uses Tic-Tac-Toe to show how an agent can learn state values through repeated games.
+Tic-Tac-Toe shows how an agent can learn state values through repeated games.
 
 A simple initialisation is:
 
@@ -249,7 +249,7 @@ A purely greedy player may stop improving because it repeatedly chooses the firs
 
 ## Understanding the Step Size ☆
 
-The slides ask what happens under different choices of {{< katex >}} \alpha {{< /katex >}}.
+The effect of the step size becomes clearer by comparing different choices of {{< katex >}} \alpha {{< /katex >}}.
 
 | Step-size behaviour | Practical effect |
 |---|---|

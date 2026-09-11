@@ -28,6 +28,9 @@ The learning path begins with classical reinforcement learning foundations and p
 | `020-multi-armed-bandit-problem.md` | Multi-Armed Bandits | Action selection |
 | `030-markov-decision-process-framework.md` | MDP framework and formulation | Sequential modelling |
 | `040-rewards-returns-policies-and-value-functions.md` | Returns, value functions and Bellman equations | Policy evaluation and optimality |
+| `050-dynamic-programming.md` | Dynamic Programming | Model-based planning |
+| `060-monte-carlo-methods.md` | Monte Carlo prediction and control | Learning from complete episodes |
+| `070-temporal-difference-learning.md` | TD(0), SARSA, Expected SARSA and Q-learning | Bootstrapped learning from experience |
 
 ---
 
