@@ -3,7 +3,7 @@ title: "Monte Carlo Methods"
 draft: false
 tags: ["AI", "ML", "Reinforcement Learning", "Monte Carlo Methods"]
 categories: ["AI", "ML"]
-weight: 600
+weight: 500
 menu: main
 ---
 

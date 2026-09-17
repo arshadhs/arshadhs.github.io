@@ -3,7 +3,7 @@ title: "Dynamic Programming"
 draft: false
 tags: ["AI", "ML", "Reinforcement Learning", "Dynamic Programming"]
 categories: ["AI", "ML"]
-weight: 500
+weight: 400
 menu: main
 ---
 

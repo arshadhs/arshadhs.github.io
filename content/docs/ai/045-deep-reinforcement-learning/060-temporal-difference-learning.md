@@ -3,7 +3,7 @@ title: "Temporal-Difference Learning"
 draft: false
 tags: ["AI", "ML", "Reinforcement Learning", "Temporal-Difference Learning"]
 categories: ["AI", "ML"]
-weight: 700
+weight: 600
 menu: main
 ---
 

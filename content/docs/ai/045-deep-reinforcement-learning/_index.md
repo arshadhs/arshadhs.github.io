@@ -18,7 +18,7 @@ Reinforcement learning provides the framework for sequential decision-making. De
 **Deep Reinforcement Learning = Reinforcement Learning + Deep Neural Networks**
 {{% /hint %}}
 
-The learning path begins with classical reinforcement learning foundations and progresses towards value-based deep learning, policy-gradient methods, model-based approaches, and imitation learning.
+Classical reinforcement learning foundations → progresses towards → value-based deep learning → policy-gradient methods → model-based approaches → imitation learning.
 
 {{< mermaid >}}
 flowchart TD
@@ -76,15 +76,15 @@ flowchart TD
 
 ## Foundation
 
-| File | Topic | Foundation stage |
-|---|---|---|
-| `010-intro-to-reinforcement-learning.md` | Reinforcement Learning foundations | Introduction |
-| `020-multi-armed-bandit-problem.md` | Multi-Armed Bandits | Action selection |
-| `030-markov-decision-process-framework.md` | MDP framework and formulation | Sequential modelling |
-| `040-rewards-returns-policies-and-value-functions.md` | Returns, value functions and Bellman equations | Policy evaluation and optimality |
-| `050-dynamic-programming.md` | Dynamic Programming | Model-based planning |
-| `060-monte-carlo-methods.md` | Monte Carlo prediction and control | Learning from complete episodes |
-| `070-temporal-difference-learning.md` | TD(0), SARSA, Expected SARSA and Q-learning | Bootstrapped learning from experience |
+| Topic | Foundation stage |
+|---|---|
+| Reinforcement Learning foundations | Introduction |
+| Multi-Armed Bandits | Action selection |
+| MDP framework and formulation | Sequential modelling |
+| Returns, value functions and Bellman equations | Policy evaluation and optimality |
+| Dynamic Programming | Model-based planning |
+| Monte Carlo prediction and control | Learning from complete episodes |
+| TD(0), SARSA, Expected SARSA and Q-learning | Bootstrapped learning from experience |
 
 ---
 
