@@ -7,38 +7,19 @@ weight: 300
 menu: main
 ---
 
-<!--
-Merged source metadata preserved for traceability.
+# Markov Decision Processes
 
-Source 1: 030-markov-decision-process-framework.md
----
-title: "Markov Decision Process Framework"
-draft: false
-tags: ["AI", "ML", "Reinforcement Learning", "Markov Decision Process"]
-categories: ["AI", "ML"]
-weight: 300
-menu: main
----
+A **Markov Decision Process (MDP)** is the mathematical framework used to describe sequential decision-making in reinforcement learning. It brings together the **agent**, **environment**, **states**, **actions**, **transition dynamics**, **rewards**, **returns**, **policies**, and **value functions** in one model.
 
-Source 2: 040-rewards-returns-policies-and-value-functions.md
----
-title: "Rewards, Returns, Policies and Value Functions"
-draft: false
-tags: ["AI", "ML", "Reinforcement Learning", "MDP", "Bellman Equation"]
-categories: ["AI", "ML"]
-weight: 400
-menu: main
----
--->
+A basic bandit asks which action is best in a recurring situation. An MDP goes further: the action taken now can change the **next state**, which changes the decisions and rewards that become possible later.
 
+Once the MDP itself is defined, the next questions are: **What is the agent trying to achieve? How should rewards over time be counted? How good is a state or action? How do we evaluate a policy, and what does optimal behaviour mean?**
 
-# Markov Decision Process Framework
+{{% colour "blue" %}}**An MDP models states, actions, transitions and rewards; returns, policies and value functions tell us how good behaviour is over time.**{{% /colour %}}
 
-A **Markov Decision Process (MDP)** is a mathematical framework for modelling sequential decisions. It describes the situations an agent may encounter, the actions it may take, how the environment may change, and the rewards produced by those changes.
-
-Bandit problems ask which action is best in a single recurring situation. An MDP adds changing states: an action affects not only the immediate reward but also the situation faced next.
-
-{{% colour "blue" %}}**An MDP turns agent-environment interaction into a precise model of states, actions, transitions and rewards.**{{% /colour %}}
+{{% hint info %}}
+**Reward = immediate feedback. Return = accumulated future reward. Value = expected return.**
+{{% /hint %}}
 
 ---
 
@@ -78,6 +59,8 @@ A simple way to distinguish the two settings is this: a bandit learns **which ac
 
 ---
 
+---
+
 ## Agent-Environment Interface ☆
 
 The **agent** is the learner and decision-maker. Everything outside the agent is considered part of the **environment**.
@@ -98,6 +81,8 @@ S_0, A_0, R_1, S_1, A_1, R_2, S_2, \ldots
 {{% /colour %}}
 
 The boundary between agent and environment marks the limit of the agent's direct control. It does not necessarily mark the limit of its knowledge.
+
+---
 
 ---
 
@@ -131,6 +116,8 @@ The physical world may be Markovian while the agent's observation is not. If imp
 
 ---
 
+---
+
 ## Components of a Finite MDP ☆
 
 A finite MDP is commonly described using:
@@ -145,6 +132,8 @@ A finite MDP is commonly described using:
 | Terminal state, when applicable | Where an episode ends |
 
 Some problems allow different actions in different states, written as {{< katex >}} \mathcal{A}(s) {{< /katex >}}.
+
+---
 
 ---
 
@@ -207,6 +196,8 @@ The transition model may be deterministic or stochastic:
 
 ---
 
+---
+
 ## Gridworld Example ☆
 
 Consider an agent moving through a grid:
@@ -227,6 +218,8 @@ For example, an intended north action may move:
 If the sampled direction is blocked by a wall, the agent remains in the same cell.
 
 This is a sequential decision problem because the chosen movement changes the state from which the next decision must be made.
+
+---
 
 ---
 
@@ -268,6 +261,8 @@ The actions available can depend on the state. Recharge, for example, may only b
 
 ---
 
+---
+
 ## State Design Matters
 
 A useful state representation should:
@@ -285,6 +280,8 @@ A practical test is to ask: if two observations look identical to the agent, sho
 
 ---
 
+---
+
 ## Model-Based and Model-Free Perspective
 
 The transition and reward rules collectively form a **model of the environment**.
@@ -297,67 +294,6 @@ The transition and reward rules collectively form a **model of the environment**
 An MDP describes the decision problem whether or not the learning algorithm is explicitly given the model.
 
 ---
-
-## Common Mistakes ☆
-
-{{% hint warning %}}
-- Treating actions as states or sensor readings as actions.
-- Assuming every action leads deterministically to one next state.
-- Including too little information in the state to satisfy the Markov property.
-- Confusing a contextual bandit with an MDP: in an MDP, actions influence future states and rewards.
-- Assuming the agent-environment boundary must coincide with a physical boundary.
-{{% /hint %}}
-
----
-
-## Practice Questions
-
-1. Why is a basic multi-armed bandit described as non-associative?
-2. Explain the Markov property using a chess or navigation example.
-3. Distinguish {{< katex >}} p(s',r\mid s,a) {{< /katex >}} from {{< katex >}} p(s'\mid s,a) {{< /katex >}}.
-4. Formulate states, actions and rewards for a lift-control system.
-5. Why can a poor state representation make an apparently Markov problem non-Markov from the agent's perspective?
-
----
-
-## Key Takeaways ☆
-
-{{% hint success %}}
-- An MDP models sequential interaction using states, actions, transition probabilities and rewards.
-- The Markov property requires the present state to contain the information needed for predicting what follows.
-- Actions affect both immediate rewards and future states.
-- MDP formulation begins by carefully choosing the state, action, reward and dynamics representations.
-- Gridworld, video games, traffic control and recycling robots can all be expressed using the same abstract framework.
-{{% /hint %}}
-
----
-
-## Checklist
-
-- [ ] I can distinguish a bandit problem from an MDP.
-- [ ] I can explain the agent-environment interface.
-- [ ] I can state and interpret the Markov property.
-- [ ] I can interpret {{< katex >}} p(s',r\mid s,a) {{< /katex >}}.
-- [ ] I can identify states, actions, rewards and dynamics in a new problem.
-- [ ] I can explain why state representation affects whether the Markov property holds.
-
----
-
-## References
-
-1. Sutton and Barto, *Reinforcement Learning: An Introduction*, Chapter 3.
-2. Supplied Deep Reinforcement Learning slides and recordings on Markov Decision Processes and associative tasks.
-
----
-
-
-# Rewards, Returns, Policies and Value Functions
-
-An MDP describes how states, actions, rewards and transitions fit together. The next task is to evaluate behaviour: what should the agent try to achieve, how should future rewards be counted, and how good is a state or action over the long term?
-
-Rewards define the objective, returns combine rewards across time, a policy describes behaviour, and value functions predict the long-term quality of that behaviour.
-
-{{% colour "blue" %}}**Reward is immediate feedback; return is accumulated feedback; value is expected return.**{{% /colour %}}
 
 ---
 
@@ -393,6 +329,8 @@ An RL agent follows the incentives encoded in the reward, not the designer's uns
 
 ---
 
+---
+
 ## Reward versus Return ☆
 
 The reward {{< katex >}} R_{t+1} {{< /katex >}} is the immediate feedback received after action {{< katex >}} A_t {{< /katex >}}.
@@ -406,6 +344,8 @@ The **return** {{< katex >}} G_t {{< /katex >}} combines rewards that arrive fro
 | {{< katex >}} V_\pi(s) {{< /katex >}} | Expected return from state {{< katex >}} s {{< /katex >}} under policy {{< katex >}} \pi {{< /katex >}} |
 
 An agent aims to maximise expected return rather than a single immediate reward.
+
+---
 
 ---
 
@@ -430,6 +370,8 @@ R_{t+1}+R_{t+2}+\cdots+R_T
 {{% /colour %}}
 
 A new episode begins after the terminal state is reached.
+
+---
 
 ---
 
@@ -489,6 +431,8 @@ G_t
 
 ---
 
+---
+
 ## Recursive Form of Return ☆
 
 The discounted return can be separated into the immediate reward and the remaining return:
@@ -506,6 +450,8 @@ This one-step recursive relationship is fundamental. It allows long-term quantit
 {{% hint success %}}
 The Bellman equations are built from the same pattern: **current reward plus discounted future value**.
 {{% /hint %}}
+
+---
 
 ---
 
@@ -530,6 +476,8 @@ The physical system may be identical, but the return and terminal-state design c
 
 ---
 
+---
+
 ## Policy ☆
 
 A **policy** maps states to probabilities of selecting actions.
@@ -545,6 +493,8 @@ A **policy** maps states to probabilities of selecting actions.
 A deterministic policy selects one action in each state. A stochastic policy assigns a probability distribution over the available actions.
 
 The purpose of learning is to improve the policy using experience.
+
+---
 
 ---
 
@@ -566,6 +516,8 @@ It answers:
 
 ---
 
+---
+
 ## Action-Value Function ☆
 
 The action-value function under policy {{< katex >}} \pi {{< /katex >}} is the expected return after taking action {{< katex >}} a {{< /katex >}} in state {{< katex >}} s {{< /katex >}} and then following {{< katex >}} \pi {{< /katex >}}.
@@ -581,6 +533,8 @@ q_\pi(s,a)
 It answers:
 
 > How good is this action in this state while following this policy afterwards?
+
+---
 
 ---
 
@@ -615,6 +569,8 @@ p(s',r\mid s,a)
 
 ---
 
+---
+
 ## Bellman Expectation Equation ☆
 
 The Bellman equation decomposes a state's value into:
@@ -643,6 +599,8 @@ The Bellman equation does not merely add rewards. It links the value of one stat
 
 ---
 
+---
+
 ## Gridworld Interpretation
 
 Suppose a gridworld uses an equiprobable random policy with four actions. Each action is selected with probability {{< katex >}} 1/4 {{< /katex >}}.
@@ -665,6 +623,8 @@ Repeated Bellman updates propagate this information through the grid.
 
 ---
 
+---
+
 ## Comparing Policies ☆
 
 A policy {{< katex >}} \pi {{< /katex >}} is at least as good as policy {{< katex >}} \pi' {{< /katex >}} if:
@@ -677,6 +637,8 @@ v_\pi(s)\geq v_{\pi'}(s)
 {{% /colour %}}
 
 An **optimal policy**, denoted {{< katex >}} \pi_* {{< /katex >}}, is at least as good as every other policy. More than one optimal policy may exist.
+
+---
 
 ---
 
@@ -703,6 +665,8 @@ q_*(s,a)
 {{% /colour %}}
 
 If {{< katex >}} q_*(s,a) {{< /katex >}} is known, an optimal policy can choose an action that maximises it.
+
+---
 
 ---
 
@@ -744,61 +708,125 @@ Do not replace an expectation with a maximum unless the objective is optimal con
 
 ---
 
+---
+
 ## Common Mistakes ☆
 
+
+
 {{% hint warning %}}
+
+- Treating actions as states or sensor readings as actions.
+- Assuming every action leads deterministically to one next state.
+- Including too little information in the state to satisfy the Markov property.
+- Confusing a contextual bandit with an MDP: in an MDP, actions influence future states and rewards.
+- Assuming the agent-environment boundary must coincide with a physical boundary.
+
 - Treating immediate reward as the same quantity as return or value.
 - Assuming {{< katex >}} \gamma=0 {{< /katex >}} removes all rewards; it retains the immediate reward.
 - Using {{< katex >}} \gamma=1 {{< /katex >}} in an infinite continuing task without checking whether the return remains finite.
 - Confusing {{< katex >}} v_\pi(s) {{< /katex >}} with {{< katex >}} q_\pi(s,a) {{< /katex >}}.
 - Using a maximum in the Bellman expectation equation for a fixed stochastic policy.
 - Assuming an apparently reasonable reward cannot be exploited in an unintended way.
+
 {{% /hint %}}
 
 ---
 
 ## Practice Questions
 
-1. Explain why maximising immediate reward can produce poor long-term behaviour.
-2. Calculate the infinite discounted return for reward {{< katex >}} +2 {{< /katex >}} and {{< katex >}} \gamma=0.8 {{< /katex >}}.
-3. What changes when {{< katex >}} \gamma {{< /katex >}} is set to zero?
-4. Compare episodic and continuing formulations of cart-pole.
-5. Explain the difference between {{< katex >}} v_\pi(s) {{< /katex >}} and {{< katex >}} q_\pi(s,a) {{< /katex >}}.
-6. Why does the Bellman expectation equation average over actions while the Bellman optimality equation uses a maximum?
-7. Give an example of reward hacking and propose a better reward design.
+
+
+1. Why is a basic multi-armed bandit described as non-associative?
+
+2. Explain the Markov property using a chess or navigation example.
+
+3. Distinguish {{< katex >}} p(s',r\mid s,a) {{< /katex >}} from {{< katex >}} p(s'\mid s,a) {{< /katex >}}.
+
+4. Formulate states, actions and rewards for a lift-control system.
+
+5. Why can a poor state representation make an apparently Markov problem non-Markov from the agent's perspective? ---
+
+6. Explain why maximising immediate reward can produce poor long-term behaviour.
+
+7. Calculate the infinite discounted return for reward {{< katex >}} +2 {{< /katex >}} and {{< katex >}} \gamma=0.8 {{< /katex >}}.
+
+8. What changes when {{< katex >}} \gamma {{< /katex >}} is set to zero?
+
+9. Compare episodic and continuing formulations of cart-pole.
+
+10. Explain the difference between {{< katex >}} v_\pi(s) {{< /katex >}} and {{< katex >}} q_\pi(s,a) {{< /katex >}}.
+
+11. Why does the Bellman expectation equation average over actions while the Bellman optimality equation uses a maximum?
+
+12. Give an example of reward hacking and propose a better reward design. ---
 
 ---
 
 ## Key Takeaways ☆
 
+
+
 {{% hint success %}}
+
+- An MDP models sequential interaction using states, actions, transition probabilities and rewards.
+- The Markov property requires the present state to contain the information needed for predicting what follows.
+- Actions affect both immediate rewards and future states.
+- MDP formulation begins by carefully choosing the state, action, reward and dynamics representations.
+- Gridworld, video games, traffic control and recycling robots can all be expressed using the same abstract framework.
+
 - Rewards specify the agent's objective, so their design must reflect the intended behaviour.
 - Return combines future rewards; discounting controls how strongly distant rewards matter.
 - A policy maps states to action probabilities.
 - State values and action values measure expected return under a policy.
 - Bellman equations express long-term value recursively as immediate reward plus discounted future value.
 - Optimality equations replace policy-weighted action averages with the best available action.
+
 {{% /hint %}}
 
 ---
 
 ## Checklist
 
+
+
+- [ ] I can distinguish a bandit problem from an MDP.
+
+- [ ] I can explain the agent-environment interface.
+
+- [ ] I can state and interpret the Markov property.
+
+- [ ] I can interpret {{< katex >}} p(s',r\mid s,a) {{< /katex >}}.
+
+- [ ] I can identify states, actions, rewards and dynamics in a new problem.
+
+- [ ] I can explain why state representation affects whether the Markov property holds.
+
 - [ ] I can distinguish reward, return and value.
+
 - [ ] I can calculate episodic and discounted returns.
+
 - [ ] I can interpret the discount rate.
+
 - [ ] I can define a policy and distinguish deterministic from stochastic policies.
+
 - [ ] I can explain state-value and action-value functions.
+
 - [ ] I can interpret every term in the Bellman expectation equation.
+
 - [ ] I can distinguish Bellman expectation and Bellman optimality equations.
+
 - [ ] I can explain why reward design can produce unintended behaviour.
 
 ---
 
 ## References
 
+
+
 1. Sutton and Barto, *Reinforcement Learning: An Introduction*, Chapter 3.
-2. Supplied Deep Reinforcement Learning slides and recordings on rewards, returns, policies, value functions and Bellman equations.
+
+2. Supplied Deep Reinforcement Learning slides and recordings on Markov Decision Processes, associative tasks, rewards, returns, policies, value functions and Bellman equations.
 
 ---
 
