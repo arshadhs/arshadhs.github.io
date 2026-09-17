@@ -13,6 +13,12 @@ Dynamic Programming (DP) solves a reinforcement learning problem by repeatedly a
 
 {{% colour "blue" %}}**Dynamic Programming turns a known model of an MDP into a policy for choosing actions.**{{% /colour %}}
 
+- Dynamic Programming 
+- Policy Iteration  
+- Value Iteration  
+- Generalized policy iteration 
+- Efficiency of Dynamic Programming
+
 ---
 
 ## 1. When Dynamic Programming Can Be Used ☆

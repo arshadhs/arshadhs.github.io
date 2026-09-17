@@ -74,17 +74,26 @@ flowchart TD
 
 ---
 
-## Foundation
+## Learning Path
 
-| Topic | Foundation stage |
-|---|---|
-| Reinforcement Learning foundations | Introduction |
-| Multi-Armed Bandits | Action selection |
-| MDP framework and formulation | Sequential modelling |
-| Returns, value functions and Bellman equations | Policy evaluation and optimality |
-| Dynamic Programming | Model-based planning |
-| Monte Carlo prediction and control | Learning from complete episodes |
-| TD(0), SARSA, Expected SARSA and Q-learning | Bootstrapped learning from experience |
+| # | Topic | Focus | Reference |
+|---:|---|---|---|
+| 1 | Introducing Reinforcement Learning | RL concepts, examples, policy, reward, value, environment model, Tic-Tac-Toe, historical background | T1 Ch. 1 |
+| 2 | Multi-Armed Bandit Problem | Bandits, incremental updates, stationary and non-stationary problems, exploration versus exploitation, gradient bandits, associative search | T1 Ch. 2 |
+| 3 | Markov Decision Processes | Agent-environment interaction, goals, rewards, returns, policies, value functions, Bellman equations, optimality | T1 Ch. 3 |
+| 4 | Dynamic Programming | Policy Iteration, Value Iteration, Generalised Policy Iteration, efficiency | T1 Ch. 4 |
+| 5 | Monte Carlo Methods I | On-policy Monte Carlo, first-visit and every-visit prediction, control, exploring starts, epsilon-soft policies | T1 Ch. 5 |
+| 6 | Monte Carlo Methods II | Off-policy Monte Carlo, ordinary and weighted importance sampling, prediction and control, link between MC and TD | T1 Ch. 5 |
+| 7 | Temporal-Difference Learning I | TD learning, TD(0), SARSA, Q-Learning, Expected SARSA | T1 Ch. 6–7 |
+| 8 | Temporal-Difference Learning II and DRL Taxonomy | n-step returns, TD(lambda), model-based/model-free, value-based/policy-based, on-policy/off-policy | T1 Ch. 6–7, Notes |
+| 9 | Value-Based DRL: Function Approximation | Function approximation, tile coding, linear methods, Semi-Gradient TD, off-policy divergence, TD-Gammon | T1 Ch. 9, 16 |
+| 10 | Deep Q-Learning | DQN architecture, target networks, replay buffer, instability and fixes | T2 Ch. 4, DQN paper |
+| 11 | Extensions of DQN | Double DQN, Dueling Networks, Prioritised Replay, Rainbow | T2 Ch. 5 |
+| 12 | Policy Gradient Foundations | Policy Gradient Theorem, REINFORCE, baseline, Actor-Critic, continuing problems | T2 Ch. 13 |
+| 13 | Advanced Policy Optimisation | A2C, A3C, PPO, entropy regularisation | T2 Ch. 6–7, Notes |
+| 14 | Continuous Control | Deterministic Policy Gradient, DDPG, TD3, Soft Actor-Critic | Notes |
+| 15 | Model-Based Deep RL | Model-based learning, AlphaGo Zero, MuZero, PlaNet, Dreamer | Research papers |
+| 16 | Imitation Learning | Behaviour Cloning, DAGGER, GAIL, introduction to Multi-Agent RL and Safe RL | DeepMimic, BAIL, ACM-SUR-IL |
 
 ---
 
@@ -238,29 +247,6 @@ flowchart TD
 - Human-in-the-loop learning
 - Formal methods in Safe RL
 - Offline / Batch Reinforcement Learning
-
----
-
-## 16-Topic Learning Path
-
-| # | Topic | Main Focus | Reference |
-|---:|---|---|---|
-| 1 | Introducing Reinforcement Learning | RL concepts, examples, policy, reward, value, environment model, Tic-Tac-Toe, historical background | T1 Ch. 1 |
-| 2 | Multi-Armed Bandit Problem | Bandits, incremental updates, stationary and non-stationary problems, exploration versus exploitation, gradient bandits, associative search | T1 Ch. 2 |
-| 3 | Markov Decision Processes | Agent-environment interaction, goals, rewards, returns, policies, value functions, Bellman equations, optimality | T1 Ch. 3 |
-| 4 | Dynamic Programming | Policy Iteration, Value Iteration, Generalised Policy Iteration, efficiency | T1 Ch. 4 |
-| 5 | Monte Carlo Methods I | On-policy Monte Carlo, first-visit and every-visit prediction, control, exploring starts, epsilon-soft policies | T1 Ch. 5 |
-| 6 | Monte Carlo Methods II | Off-policy Monte Carlo, ordinary and weighted importance sampling, prediction and control, link between MC and TD | T1 Ch. 5 |
-| 7 | Temporal-Difference Learning I | TD learning, TD(0), SARSA, Q-Learning, Expected SARSA | T1 Ch. 6–7 |
-| 8 | Temporal-Difference Learning II and DRL Taxonomy | n-step returns, TD(lambda), model-based/model-free, value-based/policy-based, on-policy/off-policy | T1 Ch. 6–7, Notes |
-| 9 | Value-Based DRL: Function Approximation | Function approximation, tile coding, linear methods, Semi-Gradient TD, off-policy divergence, TD-Gammon | T1 Ch. 9, 16 |
-| 10 | Deep Q-Learning | DQN architecture, target networks, replay buffer, instability and fixes | T2 Ch. 4, DQN paper |
-| 11 | Extensions of DQN | Double DQN, Dueling Networks, Prioritised Replay, Rainbow | T2 Ch. 5 |
-| 12 | Policy Gradient Foundations | Policy Gradient Theorem, REINFORCE, baseline, Actor-Critic, continuing problems | T2 Ch. 13 |
-| 13 | Advanced Policy Optimisation | A2C, A3C, PPO, entropy regularisation | T2 Ch. 6–7, Notes |
-| 14 | Continuous Control | Deterministic Policy Gradient, DDPG, TD3, Soft Actor-Critic | Notes |
-| 15 | Model-Based Deep RL | Model-based learning, AlphaGo Zero, MuZero, PlaNet, Dreamer | Research papers |
-| 16 | Imitation Learning | Behaviour Cloning, DAGGER, GAIL, introduction to Multi-Agent RL and Safe RL | DeepMimic, BAIL, ACM-SUR-IL |
 
 ---
 

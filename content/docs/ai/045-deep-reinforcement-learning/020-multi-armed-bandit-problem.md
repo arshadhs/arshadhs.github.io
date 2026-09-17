@@ -15,6 +15,11 @@ An agent repeatedly chooses one of {{< katex >}} k {{< /katex >}} actions. Each 
 
 {{% colour "blue" %}}**The central challenge is deciding when to exploit current knowledge and when to explore uncertain alternatives.**{{% /colour %}}
 
+- Multi-armed Bandit Problem - Motivation and Problem Statement 
+- Incremental solution to the stationary & non-stationary MAB problems 
+- Exploration vs. Exploitation trade-off 
+- Bandit Gradient Algorithm as Stochastic Gradient Ascent 
+- Associative Search 
 ---
 
 ## The k-Armed Bandit Problem ☆

@@ -21,6 +21,12 @@ Once the MDP itself is defined, the next questions are: **What is the agent tryi
 **Reward = immediate feedback. Return = accumulated future reward. Value = expected return.**
 {{% /hint %}}
 
+- Markov Decision Processes
+- Modelling Agent-Environment interaction using MDP; Examples 
+- Discussion on Goals , Rewards & Returns; Policy and Value Functions 
+- Bellman Equation for value functions 
+- Optimal Policy and Optimal Value functions 
+
 ---
 
 ## From Bandits to Sequential Decisions ☆
