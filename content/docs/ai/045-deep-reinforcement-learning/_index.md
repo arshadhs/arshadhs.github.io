@@ -20,6 +20,60 @@ Reinforcement learning provides the framework for sequential decision-making. De
 
 The learning path begins with classical reinforcement learning foundations and progresses towards value-based deep learning, policy-gradient methods, model-based approaches, and imitation learning.
 
+{{< mermaid >}}
+flowchart TD
+    RL["Reinforcement Learning"]
+
+    RL --> MB["Model-Based"]
+    RL --> MF["Model-Free"]
+
+    MB --> DP["Dynamic Programming"]
+    DP --> PI["Policy Iteration"]
+    DP --> VI["Value Iteration"]
+
+    MF --> MC["Monte Carlo"]
+    MF --> TD["Temporal-Difference Learning"]
+
+    MC --> MCP["MC Prediction"]
+    MC --> MCC["MC Control"]
+
+    TD --> TD0["TD(0)"]
+    TD --> SARSA["SARSA"]
+    TD --> QL["Q-Learning"]
+    TD --> ESA["Expected SARSA"]
+
+    SARSA --> ON["On-Policy"]
+    QL --> OFF["Off-Policy"]
+
+    classDef root fill:#E1F5FE,stroke:#0288D1,stroke-width:2px;
+    classDef model fill:#C8E6C9,stroke:#388E3C;
+    classDef method fill:#FFF9C4,stroke:#F9A825;
+    classDef detail fill:#EDE7F6,stroke:#7E57C2;
+
+    class RL root;
+    class MB,MF model;
+    class DP,MC,TD method;
+    class PI,VI,MCP,MCC,TD0,SARSA,QL,ESA,ON,OFF detail;
+{{< /mermaid >}}
+
+---
+
+{{% hint success %}}
+- **Bandit** → no state; learn which action gives the best expected reward.
+- **MDP** → state + action + next state + reward.
+- **Model-Based** → model known → **Dynamic Programming**.
+- **Model-Free** → model unknown → **Monte Carlo / TD**.
+- **Dynamic Programming** → known model + Bellman backups.
+- **Monte Carlo** → learn from complete episode returns.
+- **TD** → learn step-by-step by bootstrapping.
+- **SARSA** → on-policy TD control.
+- **Q-Learning** → off-policy TD control.
+- **Value-Based** → learn values, then choose actions.
+- **Policy-Based** → learn the policy directly.
+{{% /hint %}}
+
+---
+
 ## Foundation
 
 | File | Topic | Foundation stage |
