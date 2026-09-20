@@ -11,16 +11,14 @@ menu: main
 
 Parallel algorithms need hardware that can execute independent work efficiently. Modern systems therefore combine multiple CPU cores, memory hierarchies, threads, instruction pipelines, GPUs, clusters, and specialised matrix processors.
 
-This page covers:
+Course coverage:
 
-- multi-core CPU organisation
-- cache and memory hierarchy
-- processes, threads, scheduling, and synchronisation
-- instruction pipelining and clock-cycle time
-- SIMD, MIMD, and SIMT execution
-- GPGPU architecture and GPU memory behaviour
-- CPU-only and GPU-accelerated clusters
-- Tensor Processing Units and systolic arrays
+1. **Parallel programming models** for expressing independent work
+2. **MapReduce**, task-parallel, and request-parallel patterns
+3. **Multi-core CPUs and GPGPUs:** SIMD, MIMD, SIMT, memory hierarchy, and bandwidth
+4. **Distributed clusters:** CPU-only and GPU-accelerated systems, data sharding, parameter servers, and all-reduce
+
+The hardware sections also cover specialised matrix processors and the performance limits introduced by memory and communication.
 
 ## Learning Objectives
 
@@ -32,8 +30,10 @@ By the end of this page, you should be able to:
 - explain scheduling, context switching, synchronisation, lost updates, and deadlock
 - describe instruction pipelining and its effect on throughput
 - compare SIMD, MIMD, and SIMT execution
+- explain the MapReduce pattern and compare static with dynamic scheduling
 - explain how GPU memory access affects performance
 - compare CPU-only, GPU-accelerated, and TPU-based computing
+- distinguish parameter-server and all-reduce coordination
 
 ## Big Picture
 
@@ -60,6 +60,42 @@ flowchart TD
     style I fill:#E1F5FE
     style J fill:#C8E6C9
 {{< /mermaid >}}
+
+## Programming Models at a Glance
+
+A programming model describes how work and data are organised for concurrent execution. It provides abstractions that are easier to reason about than individual instructions or network messages.
+
+| Model or Pattern | Unit of Parallel Work | Coordination | Typical Use |
+|---|---|---|---|
+| Shared-memory threads | Threads operating on shared data | Locks, barriers, atomics | Multi-core CPU programs |
+| MapReduce | Map tasks over partitions, then reduce by key | Shuffle between phases | Batch aggregation over large datasets |
+| Request parallelism | Independent service requests | Queue and worker pool | Online inference services |
+| GPU kernel | Many lightweight threads | Thread blocks and device barriers | Dense tensor and vector operations |
+| Distributed workers | Processes on different machines | Network collectives or a parameter server | Large-scale model training |
+
+### MapReduce Pattern ☆
+
+MapReduce separates a distributed computation into three conceptual stages:
+
+1. **Map:** process input partitions independently and emit intermediate key-value pairs.
+2. **Shuffle:** move all values for the same key to the same reducer.
+3. **Reduce:** combine the grouped values into final outputs.
+
+{{< mermaid >}}
+flowchart LR
+    A["Input Shards"] --> B["Map Workers"]
+    B --> C["Shuffle by Key"]
+    C --> D["Reduce Workers"]
+    D --> E["Output"]
+
+    style A fill:#E1F5FE
+    style B fill:#C8E6C9
+    style C fill:#FFF9C4
+    style D fill:#EDE7F6
+    style E fill:#E1F5FE
+{{< /mermaid >}}
+
+The map phase exposes data parallelism. The shuffle is often the expensive stage because it performs network transfer, sorting, and synchronisation. The reduce phase combines partial results, such as sums, counts, or local model statistics.
 
 ## 1. Why Multi-core CPUs?
 
@@ -116,6 +152,10 @@ In a typical multi-core system:
 - cores communicate with main memory through a memory controller and an interconnection network
 
 This shared-memory organisation makes communication between threads convenient, but it also creates contention and consistency challenges.
+
+### Simultaneous Multithreading
+
+**Simultaneous multithreading (SMT)** allows one physical CPU core to maintain more than one hardware thread. When one thread stalls on memory or another dependency, the core may issue instructions from another thread. SMT can improve utilisation, but it does not duplicate the execution units or cache; hardware threads compete for those resources.
 
 ## 3. Cache and Memory Hierarchy ☆
 
@@ -255,6 +295,13 @@ On a single-core CPU, only one thread executes at an instant. Time slicing creat
 
 If runnable threads outnumber cores, the system is **oversubscribed**. The scheduler must alternate threads through context switching and attempt to balance work across cores.
 
+Two common work-allocation strategies are:
+
+- **Static scheduling:** assign work before execution. It has low overhead and suits tasks with similar cost.
+- **Dynamic scheduling:** assign work as workers become free. It handles irregular tasks better but adds queueing and coordination.
+
+Chunk size creates a trade-off. Large chunks reduce scheduling overhead but may cause load imbalance; small chunks improve balance but increase coordination.
+
 ### Thread Lifecycle
 
 {{< mermaid >}}
@@ -392,6 +439,10 @@ For four additions, scalar execution uses four addition instructions, while a fo
 For four elements, the ideal instruction-count speedup is `4/1 = 4`.
 
 SIMD works best when operations are regular and branches do not force elements to follow different control paths.
+
+### Branch Divergence
+
+**Branch divergence** occurs when SIMD lanes or GPU threads in the same execution group take different branches. The hardware may execute each path separately while masking lanes that do not belong to it. Correctness is preserved, but useful parallel work per cycle falls. Grouping inputs with similar control flow and removing avoidable branches can reduce divergence.
 
 ### MIMD — Multiple Instruction, Multiple Data
 
@@ -577,6 +628,25 @@ Real scaling is slower because GPUs exchange data, synchronise results, and wait
 | Strength | Flexibility and capacity | Matrix throughput |
 | Main cost | Lower arithmetic throughput | Communication, hardware, power, and complexity |
 
+### Data Sharding, Parameter Servers, and All-Reduce ☆
+
+**Data sharding** partitions a dataset so that different workers process different records. Each worker can compute locally, but model updates must eventually be coordinated.
+
+| Coordination Pattern | How It Works | Strength | Main Limitation |
+|---|---|---|---|
+| Parameter server | Workers send updates to one or more server processes that own model parameters | Flexible central coordination; can support asynchronous updates | Server bottleneck, network hot spots, parameter staleness |
+| All-reduce | Workers collectively combine gradients and return the aggregate to every worker | No single central server; efficient for synchronous data parallelism | Every worker waits at the collective; sensitive to slow workers |
+
+For synchronous data-parallel training, worker `i` computes a local gradient `g_i`. An averaging all-reduce produces:
+
+{{% colour "green" %}}
+{{< katex display=true >}}
+g = \frac{1}{p}\sum_{i=1}^{p} g_i
+{{< /katex >}}
+{{% /colour %}}
+
+The choice depends on model size, network topology, tolerance for stale updates, and whether the algorithm requires strict synchronisation.
+
 ## 13. Tensor Processing Units and Systolic Arrays
 
 A **Tensor Processing Unit** is a specialised accelerator designed around the tensor and matrix operations used heavily in neural networks.
@@ -641,6 +711,8 @@ The decision should be based on measured bottlenecks rather than core count or p
 - Assuming that locks have no performance cost.
 - Treating pipelining as if every instruction finishes in one stage.
 - Confusing SIMD with MIMD or SIMT.
+- Ignoring branch divergence in SIMD or SIMT execution.
+- Assuming a MapReduce shuffle is free.
 - Assuming that every workload is suitable for a GPU.
 - Expecting linear scaling when additional GPUs must exchange and synchronise data.
 {{% /hint %}}
@@ -662,6 +734,9 @@ The decision should be based on measured bottlenecks rather than core count or p
 13. Compare CPU-only and GPU-accelerated clusters.
 14. Why does adding GPUs not normally provide perfectly linear speedup?
 15. What is the purpose of a systolic array in a TPU?
+16. Explain the map, shuffle, and reduce stages using one ML example.
+17. Compare static and dynamic scheduling.
+18. Compare a parameter server with all-reduce.
 
 ## Key Takeaways
 
@@ -673,6 +748,8 @@ The decision should be based on measured bottlenecks rather than core count or p
 - SIMD applies one instruction to multiple data elements; MIMD executes independent instruction streams; GPUs commonly expose SIMT threads.
 - GPU performance depends on parallelism, memory bandwidth, coalescing, and occupancy.
 - Cluster scaling is limited by communication, synchronisation, and memory placement.
+- MapReduce separates partition-local maps from a shuffle and keyed reduction.
+- Distributed training commonly coordinates updates through a parameter server or all-reduce.
 - TPUs specialise in tensor and matrix computation using structures such as systolic arrays.
 {{% /hint %}}
 
@@ -682,10 +759,12 @@ The decision should be based on measured bottlenecks rather than core count or p
 - [ ] I can explain cache hits, misses, and effective memory access time.
 - [ ] I can distinguish processes and threads.
 - [ ] I can explain scheduling, races, lost updates, and deadlock.
+- [ ] I can compare static and dynamic scheduling.
 - [ ] I can describe instruction pipelining and clock-cycle time.
 - [ ] I can compare SIMD, MIMD, and SIMT.
 - [ ] I can explain GPU memory hierarchy and coalescing.
 - [ ] I can compare CPU, GPU, and TPU systems.
+- [ ] I can explain MapReduce, data sharding, parameter servers, and all-reduce.
 
 ---
 {{< home-link "Home" >}} | {{< section-index >}}

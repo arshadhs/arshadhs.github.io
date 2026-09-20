@@ -11,15 +11,14 @@ menu: main
 
 Parallelisation divides computational work into parts that can execute concurrently. The purpose is to reduce completion time or increase throughput, but the gain depends on how much work is genuinely independent and how much overhead is introduced.
 
-This page covers:
+Course coverage:
 
-- speedup, maximum speedup, and processor efficiency
-- Amdahl's Law
-- data-level parallelism
-- task-level parallelism
-- algorithm-specific parallelism
-- communication, synchronisation, scheduling, and load-balancing overhead
-- parallel merge sort and matrix multiplication
+1. **Systems and performance:** execution time, throughput, efficiency, and bottlenecks
+2. **Speedup—approaches and issues:** Amdahl's Law, serial work, overhead, and load imbalance
+3. **Data parallelism versus task parallelism versus request parallelism**
+4. **Scale-out clusters:** communication cost and its impact on speedup
+
+The worked algorithms also show how divide-and-conquer and matrix operations expose parallel work.
 
 ## Learning Objectives
 
@@ -27,10 +26,11 @@ By the end of this page, you should be able to:
 
 - calculate speedup and efficiency
 - use Amdahl's Law to estimate the limit of parallel execution
-- distinguish data-level, task-level, and algorithm-specific parallelism
+- distinguish data-level, task-level, request-level, and algorithm-specific parallelism
 - explain critical-path time and load imbalance
 - identify the effect of communication and synchronisation overhead
 - explain how divide-and-conquer algorithms expose parallel work
+- estimate when scale-out communication will erase a computational gain
 
 ## Big Picture
 
@@ -381,7 +381,52 @@ T_{\text{parallel}}
 
 Good scheduling attempts to distribute total work evenly without creating excessive coordination cost.
 
-## 7. Algorithm-Specific Parallelism ☆
+## 7. Request-Level Parallelism ☆
+
+Request-level parallelism processes independent user or service requests concurrently. Unlike data parallelism, the requests need not belong to one shared calculation; unlike task parallelism, they are usually repeated instances of the same service path.
+
+Examples include serving several image-classification requests, processing multiple search queries, or running independent training jobs. If `R` independent requests each take time `t`, ideal serial time is `Rt`, whereas `p` identical workers require approximately:
+
+{{% colour "green" %}}
+{{< katex display=true >}}
+T_{\text{parallel}} \approx \left\lceil \frac{R}{p} \right\rceil t
+{{< /katex >}}
+{{% /colour %}}
+
+Real services must also account for queueing, batching, contention, and unequal request sizes. Batching may raise throughput while increasing the waiting time of an individual request.
+
+## 8. Scale-Out Clusters and Communication Cost ☆
+
+**Scale-up** uses a more capable single machine. **Scale-out** adds machines and divides the workload across them. Scale-out offers more aggregate compute and memory, but workers must exchange data over a network.
+
+A useful model is:
+
+{{% colour "green" %}}
+{{< katex display=true >}}
+T_p = \frac{T_{\text{compute}}}{p}
+      + T_{\text{communication}}
+      + T_{\text{synchronisation}}
+      + T_{\text{imbalance}}
+{{< /katex >}}
+{{% /colour %}}
+
+For a message of `m` bytes, communication time is often approximated by:
+
+{{% colour "green" %}}
+{{< katex display=true >}}
+T_{\text{message}} = \alpha + \frac{m}{\beta}
+{{< /katex >}}
+{{% /colour %}}
+
+where `α` is start-up latency and `β` is effective bandwidth. Many small messages repeatedly pay the latency term; one large message may instead become bandwidth-bound.
+
+**Example.** A job needs `100` seconds of compute on one worker. Four workers reduce compute to `25` seconds, but communication and synchronisation add `10` seconds. The actual speedup is `100/35 = 2.86`, not `4`.
+
+{{% hint warning %}}
+Scale-out helps when each worker performs enough useful computation between communications. Fine-grained work with frequent global synchronisation can slow down as workers are added.
+{{% /hint %}}
+
+## 9. Algorithm-Specific Parallelism ☆
 
 Algorithm-specific parallelism exploits the mathematical structure of an algorithm. Instead of merely dividing data or assigning unrelated tasks, it looks for concurrency within:
 
@@ -460,12 +505,13 @@ T_{\text{parallel}}(n)
 
 The recursive multiplications benefit from parallelism, while combining the results remains a limiting component.
 
-## 8. Comparing the Three Paradigms
+## 10. Comparing the Parallelism Paradigms
 
 | Paradigm | What Is Divided? | Operations | Typical Example | Main Limitation |
 |---|---|---|---|---|
 | Data-level | Data elements | Same operation | Vector addition or image filtering | Dependencies and memory access |
 | Task-level | Independent tasks | Different operations are possible | Independent modules or services | Critical path and load imbalance |
+| Request-level | Independent requests | Usually the same service path | Concurrent inference requests | Queueing, batching, and contention |
 | Algorithm-specific | Algorithm structure | Determined by the algorithm | Merge sort or blocked matrix multiplication | Sequential combine step |
 
 The paradigms can be combined. For example, independent tasks may run concurrently while each task uses data-level parallelism internally.
@@ -477,6 +523,7 @@ The paradigms can be combined. For example, independent tasks may run concurrent
 - Ignoring the sequential fraction when estimating scalability.
 - Ignoring communication and synchronisation overhead.
 - Confusing data-level parallelism with task-level parallelism.
+- Confusing request concurrency with parallelising one request.
 - Distributing tasks evenly by count while ignoring differences in task duration.
 - Assuming that a recursive algorithm is fully parallel because its recursive calls are independent; the combine step may remain sequential.
 {{% /hint %}}
@@ -488,11 +535,12 @@ The paradigms can be combined. For example, independent tasks may run concurrent
 3. Use Amdahl's Law to calculate the speedup when `P = 0.9` and `N = 8`.
 4. Find the maximum speedup when `15%` of a program is sequential.
 5. Explain why adding processors may reduce efficiency.
-6. Compare data-level and task-level parallelism using one example of each.
+6. Compare data-level, task-level, and request-level parallelism using one example of each.
 7. Tasks take `8`, `5`, `4`, and `3` seconds. Find the serial time and the ideal parallel time using four processors.
 8. Why does the merge step limit the speedup of parallel merge sort?
 9. Explain how matrix multiplication exposes algorithm-specific parallelism.
 10. Why can communication overhead make a smaller number of processors faster than a larger number?
+11. A one-worker job takes `100` seconds. Four workers need `25` seconds of compute plus `10` seconds of communication. Find speedup and efficiency.
 
 ## Key Takeaways
 
@@ -503,6 +551,7 @@ The paradigms can be combined. For example, independent tasks may run concurrent
 - Efficiency normally decreases as processors are added.
 - Data-level parallelism applies one operation to many data elements.
 - Task-level parallelism executes different tasks concurrently.
+- Request-level parallelism serves independent requests concurrently.
 - Algorithm-specific parallelism extracts concurrency from the mathematical structure of an algorithm.
 - Communication, synchronisation, scheduling, and load imbalance determine practical performance.
 {{% /hint %}}
@@ -511,10 +560,11 @@ The paradigms can be combined. For example, independent tasks may run concurrent
 
 - [ ] I can calculate speedup and efficiency.
 - [ ] I can apply Amdahl's Law and find maximum speedup.
-- [ ] I can distinguish the three parallelisation paradigms.
+- [ ] I can distinguish data, task, request, and algorithm-specific parallelism.
 - [ ] I can identify the critical path in a group of tasks.
 - [ ] I can explain load imbalance and parallel overhead.
 - [ ] I can describe parallelism in merge sort and matrix multiplication.
+- [ ] I can explain how cluster communication limits scale-out speedup.
 
 ---
 {{< home-link "Home" >}} | {{< section-index >}}

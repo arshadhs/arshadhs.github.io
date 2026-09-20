@@ -136,13 +136,13 @@ flowchart TD
 
 | # | Topic | Main Focus | Module |
 |---:|---|---|---|
-| 1 | ML and DL System Performance | Complexity, running time, throughput, response time, scaling, tuning, training and deployment environments | Foundations |
-| 2 | Parallel and Distributed Algorithms | Systems performance, speedup, Amdahl's Law, parallelism types, communication cost, scale-up and scale-out | Foundations |
-| 3 | Parallel Programming Models | MapReduce, task and request parallelism, multi-core and GPGPU execution, memory hierarchy, sharding, parameter server and all-reduce | Foundations |
-| 4 | Parallelisation of ML Algorithms | Problem decomposition, ensemble methods, XGBoost, k-means, distributed trees, random forests, and SVM | Distributed ML Algorithms |
-| 5 | Communication-Aware Distributed ML | Communication overhead, distributed k-means, model parallelism, distributed k-NN, synchronous and asynchronous SGD | Distributed ML Algorithms |
-| 6 | Clusters, Hadoop, and Spark | Cluster computing, MapReduce k-means, streaming variants, communication reduction, distributed CNNs, and mixed precision | Distributed ML Algorithms |
-| 7 | Distributed Training Strategies | Data, model, and pipeline parallelism, gradient checkpointing, and mixed-precision training | Distributed ML Algorithms |
+| 1 | [ML and DL System Performance]({{< relref "010-ml-and-dl-system-performance.md" >}}) | Complexity, running time, throughput, response time, scaling, tuning, training and deployment environments | Foundations |
+| 2 | [Parallel and Distributed Algorithms]({{< relref "020-parallel-and-distributed-algorithms.md" >}}) | Systems performance, speedup, Amdahl's Law, parallelism types, communication cost, scale-up and scale-out | Foundations |
+| 3 | [Parallel Programming Models]({{< relref "030-parallel-programming-models.md" >}}) | MapReduce, task and request parallelism, multi-core and GPGPU execution, memory hierarchy, sharding, parameter server and all-reduce | Foundations |
+| 4 | [Parallelisation of ML Algorithms]({{< relref "040-parallelisation-of-ml-algorithms.md" >}}) | Problem decomposition, ensemble methods, XGBoost, k-means, distributed trees, random forests, and SVM | Distributed ML Algorithms |
+| 5 | [Communication-Aware Distributed ML]({{< relref "050-communication-aware-distributed-ml.md" >}}) | Communication overhead, distributed k-means, model parallelism, distributed k-NN, synchronous and asynchronous SGD | Distributed ML Algorithms |
+| 6 | [Clusters, Hadoop, and Spark]({{< relref "060-clusters-hadoop-and-spark.md" >}}) | Cluster computing, MapReduce k-means, streaming variants, communication reduction, distributed CNNs, and mixed precision | Distributed ML Algorithms |
+| 7 | [Distributed Training Strategies]({{< relref "070-distributed-training-strategies.md" >}}) | Data, model, and pipeline parallelism, gradient checkpointing, and mixed-precision training | Distributed ML Algorithms |
 | 8 | ML Platforms and Frameworks | Parameter Server model, SGD, TensorFlow architecture, distributed strategies, batching, model compression, I/O, and shuffling | Scale-Out Systems |
 | 9 | Distributed Deep Learning | Decentralised SGD, all-reduce, asynchronous parallelism, Hogwild!, parameter staleness, local SGD, and matrix multiplication | Scale-Out Systems |
 | 10 | Locality and Large-Scale Parallelism | Locality-aware programs, GPGPUs, model parallelism, pipeline scheduling, GPU clusters, and memory-efficient checkpointing | Scale-Out Systems |

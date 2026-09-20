@@ -11,12 +11,12 @@ menu: main
 
 Machine learning system optimisation begins with measurement. Before changing an algorithm, adding processors, or moving work to a GPU, we need to understand **what is slow**, **which resource is limiting performance**, and **how performance changes as the workload grows**.
 
-This page covers:
+Course coverage:
 
-- time and space complexity
-- throughput and latency
-- the relationship between workload, throughput, and latency
-- the main measurements used to describe system performance
+1. **Metrics:** time complexity, running time, space, throughput, latency, and response time
+2. **Performance scaling and tuning:** measuring bottlenecks and predicting how a workload grows
+3. **Training versus deployment:** different objectives, workloads, and constraints
+4. **Deployment environments:** distributed and cloud systems, embedded devices, and mobile systems
 
 ## Learning Objectives
 
@@ -28,6 +28,7 @@ By the end of this page, you should be able to:
 - distinguish throughput from latency
 - use Little's Law to connect system load, arrival rate, and response time
 - recognise what happens when a system approaches saturation
+- compare the performance priorities of training and deployment environments
 
 ## Big Picture
 
@@ -312,7 +313,29 @@ where `μ` is the service rate. As `λ` approaches `μ`, the denominator approac
 Running a system close to 100% utilisation can produce very high queueing delay. A system may report high throughput while its response time becomes unacceptable.
 {{% /hint %}}
 
-## 7. Core Performance Measurements
+## 7. Training and Deployment Environments
+
+Training and deployment optimise different parts of the ML lifecycle. **Training** repeatedly processes large datasets, computes gradients, and updates model parameters. It usually values high throughput and efficient accelerator use. **Deployment** serves predictions from an already trained model and often values low response time, predictable tail latency, memory efficiency, and energy efficiency.
+
+| Environment | Main Goal | Typical Constraint | Useful Metric |
+|---|---|---|---|
+| Distributed training cluster | Finish training sooner | Communication and synchronisation | Samples per second, scaling efficiency |
+| Cloud inference service | Serve many users reliably | Queueing and cost | Requests per second, p95/p99 latency |
+| Mobile device | Responsive local inference | Battery and memory | Latency, energy per inference, model size |
+| Embedded system | Meet a fixed real-time budget | Limited compute and memory | Worst-case response time, memory footprint |
+
+Moving an ML workload to faster hardware does not guarantee improvement. The limiting resource may be data loading, memory bandwidth, communication, or queueing rather than arithmetic. Tuning therefore follows a measurement loop:
+
+1. establish a baseline;
+2. identify the dominant bottleneck;
+3. change one relevant factor, such as batch size, worker count, precision, or data pipeline;
+4. remeasure throughput, latency, memory, and model quality.
+
+{{% hint info %}}
+Training is commonly **throughput-oriented**, while interactive deployment is commonly **latency-oriented**. The correct optimisation target comes from the system's service objective.
+{{% /hint %}}
+
+## 8. Core Performance Measurements
 
 | Measurement | Meaning | What It Reveals |
 |---|---|---|
@@ -346,6 +369,7 @@ No single metric gives a complete picture. The correct optimisation target depen
 6. A stable system contains an average of `48` requests and processes `12` requests per second. Use Little's Law to find the average time in the system.
 7. Explain why latency rises sharply when the arrival rate approaches the service rate.
 8. Give an example in which batching improves throughput but increases latency.
+9. Compare the principal performance objectives of distributed training, cloud inference, mobile inference, and embedded inference.
 
 ## Key Takeaways
 
@@ -356,6 +380,7 @@ No single metric gives a complete picture. The correct optimisation target depen
 - Throughput measures total productivity, while latency measures the experience of one task.
 - Little's Law connects system load, throughput, and average response time.
 - Near saturation, queueing delay can increase dramatically.
+- Training often prioritises throughput, while interactive deployment prioritises predictable latency.
 {{% /hint %}}
 
 ## Checklist
@@ -366,6 +391,7 @@ No single metric gives a complete picture. The correct optimisation target depen
 - [ ] I can calculate throughput and latency.
 - [ ] I can apply Little's Law.
 - [ ] I can explain why high utilisation may cause high latency.
+- [ ] I can choose suitable metrics for training, cloud, mobile, and embedded environments.
 
 ---
 {{< home-link "Home" >}} | {{< section-index >}}
