@@ -11,7 +11,7 @@ menu: main
 
 An intelligent agent connects **perception** with **action**. It observes an environment through sensors, uses the information it receives to decide what to do, and affects the environment through actuators.
 
-Develop the core vocabulary for reasoning about intelligent agents: percepts, actions, rationality, performance measures, PEAS and the different properties an environment can have.
+This page develops the core vocabulary for reasoning about intelligent agents: percepts, actions, rationality, performance measures, PEAS and the different properties an environment can have.
 
 ## Learning Objectives
 
@@ -27,18 +27,18 @@ Develop the core vocabulary for reasoning about intelligent agents: percepts, ac
 
 ## Big Picture
 
-```mermaid
+{{< mermaid >}}
 flowchart TD
-    E[Environment] -->|Percepts| S[Sensors]
-    S --> A[Agent]
-    A --> C[Actuators]
+    E["Environment"] -->|Percepts| S["Sensors"]
+    S --> A["Agent"]
+    A --> C["Actuators"]
     C -->|Actions| E
 
     style E fill:#E1F5FE
     style S fill:#FFF9C4
     style A fill:#C8E6C9
     style C fill:#EDE7F6
-```
+{{< /mermaid >}}
 
 {{% hint info %}}
 Think of an agent as a continuous loop: **observe → decide → act → observe again**. An action may change the environment, so the next observation may be different.
@@ -207,19 +207,19 @@ Perfect rationality is usually unrealistic because an agent has limited:
 
 **Bounded rationality** recognises these limits. The aim is to choose the best practical action given the agent's knowledge and available computational resources.
 
-```mermaid
+{{< mermaid >}}
 flowchart TD
-    A[Performance objective] --> B[Available knowledge]
-    B --> C[Possible actions]
-    C --> D[Resource limits]
-    D --> E[Best practical action]
+    A["Performance objective"] --> B["Available knowledge"]
+    B --> C["Possible actions"]
+    C --> D["Resource limits"]
+    D --> E["Best practical action"]
 
     style A fill:#E1F5FE
     style B fill:#FFF9C4
     style C fill:#EDE7F6
     style D fill:#FFF9C4
     style E fill:#C8E6C9
-```
+{{< /mermaid >}}
 
 ## 7. Agent Architectures ☆
 
@@ -283,14 +283,14 @@ A **learning-based agent** improves from experience. Its main components are:
 The problem generator may deliberately recommend an action that does not appear immediately best. The resulting experience can help the agent discover better behaviour later.
 {{% /hint %}}
 
-```mermaid
+{{< mermaid >}}
 flowchart TD
-    P[Percepts] --> E[Performance element]
-    E --> A[Actions]
-    A --> C[Critic]
-    C --> L[Learning element]
+    P["Percepts"] --> E["Performance element"]
+    E --> A["Actions"]
+    A --> C["Critic"]
+    C --> L["Learning element"]
     L --> E
-    G[Problem generator] --> E
+    G["Problem generator"] --> E
 
     style P fill:#E1F5FE
     style E fill:#C8E6C9
@@ -298,7 +298,7 @@ flowchart TD
     style C fill:#EDE7F6
     style L fill:#C8E6C9
     style G fill:#FFF9C4
-```
+{{< /mermaid >}}
 
 ## 8. PEAS - Specifying a Task Environment ☆
 
@@ -348,7 +348,38 @@ The performance measure is deliberately broader than simply "reach the destinati
 
 The PEAS description changes with the task. It should therefore be defined from the **problem statement**, not copied from another agent.
 
-## 9. Properties of Environments ☆
+## 9. Analysing a New Agent Scenario ☆
+
+A reliable way to analyse a new scenario is to make two passes.
+
+1. Extract the four PEAS components directly from the scenario.
+2. Classify the environment and justify every label using evidence from the scenario.
+
+Ask these questions in order:
+
+| Pass | Question | Typical evidence |
+|---|---|---|
+| Performance | What outcomes should be rewarded or penalised? | Safety, time, accuracy, cost, energy or user satisfaction |
+| Environment | Which external entities affect the task? | People, vehicles, rooms, devices, rules or information systems |
+| Actuators | Through what mechanisms can the agent affect the world? | Motors, arms, displays, messages, alarms or control commands |
+| Sensors | Through what mechanisms does the agent receive information? | Cameras, microphones, meters, databases or application inputs |
+
+### Worked scenario: terminal service robot
+
+| PEAS component | Examples |
+|---|---|
+| Performance | Safe movement, timely assistance, correct luggage handling, request priority, information security and energy efficiency |
+| Environment | Passengers, luggage, gates, corridors, airport vehicles, staff, restricted areas and flight-information systems |
+| Actuators | Wheels, steering, robotic gripper, display, speaker, notifications and security alerts |
+| Sensors | Cameras, lidar, proximity sensors, microphones, RFID or barcode readers, localisation, battery sensors and network data |
+
+Its environment is normally **partially observable** because intentions and occluded obstacles are hidden; **stochastic** because people and vehicles behave unpredictably; **sequential**, **dynamic**, **continuous** and **multi-agent**.
+
+{{% hint warning %}}
+Several classifications can sometimes be defensible. State the modelling assumption and give a one-line justification instead of presenting an unsupported label.
+{{% /hint %}}
+
+## 10. Properties of Environments ☆
 
 The nature of the environment strongly influences how an intelligent agent should be designed.
 
@@ -424,7 +455,7 @@ Multi-agent relationships may be:
 
 Game playing is an obvious example, but many real-world environments are also multi-agent because people, vehicles or software systems interact with one another.
 
-## 10. Environment Classification Examples
+## 11. Environment Classification Examples
 
 | Property | Chess-like game | Mobile robot in the real world |
 |---|---|---|
@@ -437,7 +468,7 @@ Game playing is an obvious example, but many real-world environments are also mu
 
 The real world is commonly **partially observable, stochastic, sequential, dynamic, continuous and multi-agent**. This combination makes real-world agent design substantially harder than simple toy environments.
 
-## 11. Why Environment Properties Matter
+## 12. Why Environment Properties Matter
 
 Environment classification is not just terminology. It guides the design of the agent.
 
@@ -450,12 +481,12 @@ For example:
 - continuous environments need methods that can handle continuous quantities
 - multi-agent environments require reasoning about the actions of others
 
-```mermaid
+{{< mermaid >}}
 flowchart TD
-    A[Environment properties] --> B[What can be observed?]
-    A --> C[How does the world change?]
-    A --> D[Do actions affect the future?]
-    B --> E[Agent design]
+    A["Environment properties"] --> B["What can be observed?"]
+    A --> C["How does the world change?"]
+    A --> D["Do actions affect the future?"]
+    B --> E["Agent design"]
     C --> E
     D --> E
 
@@ -464,9 +495,9 @@ flowchart TD
     style C fill:#EDE7F6
     style D fill:#FFF9C4
     style E fill:#C8E6C9
-```
+{{< /mermaid >}}
 
-## 12. AI Agent and Agentic AI - A Useful Distinction
+## 13. AI Agent and Agentic AI - A Useful Distinction
 
 The broad AI definition of an **agent** is older and more general than the recent use of the phrase **agentic AI**.
 
@@ -496,7 +527,7 @@ The important point for this topic is that the theory of intelligent agents does
 6. Compare simple reflex and model-based reflex agents.
 7. Why does a utility-based agent provide more flexibility than a goal-based agent?
 8. Explain the roles of the four components of a learning agent.
-9. Construct a PEAS description for an autonomous delivery robot.
+9. Construct a PEAS description for an autonomous delivery robot, then classify its environment with one-line justifications.
 10. Distinguish deterministic and stochastic environments with examples.
 11. Why is image classification usually treated as episodic while navigation is sequential?
 12. What is the difference between static, dynamic and semi-dynamic environments?
@@ -511,6 +542,7 @@ The important point for this topic is that the theory of intelligent agents does
 - A rational agent selects actions expected to maximise its performance measure using the information available.
 - Reflex, model-based, goal-based, utility-based and learning agents use progressively richer information to select actions.
 - **PEAS = Performance measure, Environment, Actuators, Sensors.**
+- PEAS should be extracted from the scenario, while every environment label should be supported by a short justification.
 - Environment properties determine what information and decision-making capabilities an agent needs.
 {{% /hint %}}
 
@@ -523,6 +555,7 @@ The important point for this topic is that the theory of intelligent agents does
 - [ ] I can compare the five basic agent architectures.
 - [ ] I can explain the components of a learning agent.
 - [ ] I can construct a PEAS description for a new problem.
+- [ ] I can justify each environment classification using evidence from a scenario.
 - [ ] I can classify an environment by observability, determinism, dependency, dynamics, continuity and number of agents.
 - [ ] I can explain why environment properties influence agent design.
 

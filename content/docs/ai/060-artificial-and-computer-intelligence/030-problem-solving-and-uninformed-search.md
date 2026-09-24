@@ -16,23 +16,24 @@ A problem-solving agent converts a goal into a precisely defined search problem.
 - formulate a search problem using five components
 - distinguish a state-space graph from a search tree
 - explain nodes, frontiers and node expansion
+- compare tree search with graph search when states repeat
 - compare BFS, DFS, UCS, DLS and IDS
 - select an appropriate uninformed strategy for a problem
 - distinguish offline and online search
 
 ## Big Picture
 
-```mermaid
+{{< mermaid >}}
 flowchart TD
-    G[Goal] --> F[Formulate problem]
-    F --> S[Search for actions]
-    S --> X[Execute solution]
+    G["Goal"] --> F["Formulate problem"]
+    F --> S["Search for actions"]
+    S --> X["Execute solution"]
 
     style G fill:#E1F5FE
     style F fill:#C8E6C9
     style S fill:#FFF9C4
     style X fill:#EDE7F6
-```
+{{< /mermaid >}}
 
 ## 1. Problem-Solving Agents ☆
 
@@ -63,6 +64,18 @@ A useful formulation ignores details that do not affect the solution. In route p
 {{% hint info %}}
 Abstraction makes search manageable: retain enough information to choose correctly, but omit irrelevant real-world detail.
 {{% /hint %}}
+
+### Worked formulation: smart parking
+
+| Component | Example formulation |
+|---|---|
+| Initial state | Current vacant and occupied spaces, arriving vehicles, queues and system status |
+| Actions | Assign a space, reserve or release a space, redirect a vehicle, update a display or send a notification |
+| Transition model | Updates occupancy, queues, reservations and guidance information after an action |
+| Goal test | Every eligible arriving vehicle is assigned an available suitable space without conflicting reservations |
+| Path cost | A weighted combination of waiting time, driving distance, congestion and invalid assignments |
+
+The exact state must include everything needed to predict the result of an assignment. Omitting active reservations, for example, could make the transition model incorrect.
 
 ## 3. State, State Space and Path
 
@@ -96,7 +109,22 @@ The **frontier** contains generated nodes waiting to be explored. **Expanding** 
 | LIFO stack | Newest node first | DFS |
 | Priority queue by {{< katex >}} g(n) {{< /katex >}} | Cheapest path first | UCS |
 
-## 5. Evaluating Search Strategies
+## 5. Tree Search and Graph Search ☆
+
+**Tree search** treats every generated path as a new node, even when several paths reach the same world state. This is simple, but repeated states can duplicate large subtrees or create cycles.
+
+**Graph search** records explored states and checks whether a state is already in the frontier or explored set. It avoids unnecessary repetition, at the cost of additional memory and duplicate-detection work.
+
+| Aspect | Tree search | Graph search |
+|---|---|---|
+| Repeated state | May be generated and expanded many times | Detected and normally expanded once per best-known path |
+| Cycles | Can loop without a depth or path check | Explored-state checking prevents repeated cycling |
+| Memory | Usually lower | Higher because visited states are stored |
+| Best use | Small tree-like spaces with few repeated states | Graphs with many converging paths or cycles |
+
+Graph search significantly outperforms tree search when many action sequences reach the same states. If the state space is almost a tree, its extra bookkeeping gives less benefit.
+
+## 6. Evaluating Search Strategies
 
 Search algorithms are compared using:
 
@@ -111,17 +139,17 @@ Common symbols are:
 - {{< katex >}} d {{< /katex >}} — depth of the shallowest solution
 - {{< katex >}} m {{< /katex >}} — maximum depth of the state space
 
-## 6. Breadth-First Search ☆
+## 7. Breadth-First Search ☆
 
 **Breadth-First Search (BFS)** expands all nodes at one depth before moving to the next depth. It uses a FIFO queue.
 
-```mermaid
+{{< mermaid >}}
 flowchart TD
-    A[Depth 0] --> B[Depth 1]
-    A --> C[Depth 1]
-    B --> D[Depth 2]
-    B --> E[Depth 2]
-    C --> F[Depth 2]
+    A["Depth 0"] --> B["Depth 1"]
+    A --> C["Depth 1"]
+    B --> D["Depth 2"]
+    B --> E["Depth 2"]
+    C --> F["Depth 2"]
 
     style A fill:#C8E6C9
     style B fill:#E1F5FE
@@ -129,11 +157,11 @@ flowchart TD
     style D fill:#FFF9C4
     style E fill:#FFF9C4
     style F fill:#FFF9C4
-```
+{{< /mermaid >}}
 
 BFS is complete for finite branching and optimal when every step has the same cost. Its main weakness is high memory use because it stores a wide frontier.
 
-## 7. Depth-First Search ☆
+## 8. Depth-First Search ☆
 
 **Depth-First Search (DFS)** follows one path as deeply as possible before backtracking. It uses a LIFO stack or recursion.
 
@@ -143,7 +171,7 @@ DFS uses much less memory than BFS, but it can follow an unproductive or infinit
 Use DFS when memory is the main concern and finding an optimal path is not essential.
 {{% /hint %}}
 
-## 8. Uniform-Cost Search ☆
+## 9. Uniform-Cost Search ☆
 
 **Uniform-Cost Search (UCS)** expands the frontier node with the smallest accumulated path cost.
 
@@ -166,11 +194,11 @@ Suppose:
 
 UCS chooses {{< katex >}} S \rightarrow B \rightarrow G {{< /katex >}} because its total cost is 9.
 
-## 9. Depth-Limited Search
+## 10. Depth-Limited Search
 
 **Depth-Limited Search (DLS)** is DFS with a fixed depth limit. It prevents the search from descending indefinitely, but it cannot find a solution located beyond the chosen limit.
 
-## 10. Iterative Deepening Search ☆
+## 11. Iterative Deepening Search ☆
 
 **Iterative Deepening Search (IDS)** repeatedly runs DLS with increasing limits:
 
@@ -192,7 +220,7 @@ IDS is complete and is optimal when all step costs are equal. Re-expanding upper
 At depth limit 0, the root is visited and goal-tested, but its children are not generated. Under the standard definition, it is therefore not expanded in that iteration.
 {{% /hint %}}
 
-## 11. Comparing Uninformed Search Algorithms
+## 12. Comparing Uninformed Search Algorithms
 
 | Strategy | Chooses | Main advantage | Main limitation |
 |---|---|---|---|
@@ -202,7 +230,7 @@ At depth limit 0, the root is visited and goal-tested, but its children are not 
 | DLS | Deepest node within limit | Avoids infinite descent | Misses deeper solutions |
 | IDS | Increasing depth limits | Complete with low memory | Repeats some work |
 
-## 12. Offline and Online Search
+## 13. Offline and Online Search
 
 In **offline search**, the agent has a model of the problem, plans first and then executes the plan. BFS, DFS, UCS and A* are normally described this way.
 
@@ -221,6 +249,7 @@ Online search is useful when an environment is unknown, dynamic or too large to 
 - BFS finds the shallowest solution, not automatically the cheapest one when edge costs differ.
 - UCS tests a goal when it is selected for expansion; the first generated goal may not be cheapest.
 - A search node and a world state are not the same thing.
+- Tree search may repeatedly expand the same state; graph search uses memory to prevent this duplication.
 - DFS saves memory but does not normally guarantee an optimal path.
 - IDS revisits the root at every depth limit, but visiting is not always the same as expanding.
 {{% /hint %}}
@@ -230,16 +259,18 @@ Online search is useful when an environment is unknown, dynamic or too large to 
 1. Formulate the 8-puzzle using the five problem components.
 2. Explain why abstraction is necessary in route planning.
 3. Distinguish a search node from a state.
-4. When does BFS guarantee an optimal solution?
-5. Why is the first goal generated by UCS not necessarily optimal?
-6. Why can DFS require less memory than BFS?
-7. Explain how IDS combines properties of BFS and DFS.
-8. When would an online search agent be more suitable than an offline agent?
+4. Explain how repeated states affect tree search and graph search differently.
+5. When does BFS guarantee an optimal solution?
+6. Why is the first goal generated by UCS not necessarily optimal?
+7. Why can DFS require less memory than BFS?
+8. Explain how IDS combines properties of BFS and DFS.
+9. When would an online search agent be more suitable than an offline agent?
 
 ## Key Takeaways
 
 {{% hint success %}}
 - A search problem requires an initial state, actions, transition model, goal test and path cost.
+- Graph search is especially valuable when repeated states or cycles would make tree search duplicate work.
 - BFS explores by depth, DFS explores one branch deeply, and UCS explores by accumulated cost.
 - IDS provides completeness and low memory use by repeating depth-limited searches.
 - Uninformed search uses only the problem definition; it has no estimate of which non-goal state is closer to the goal.
@@ -250,6 +281,7 @@ Online search is useful when an environment is unknown, dynamic or too large to 
 
 - [ ] I can formulate a search problem using five components.
 - [ ] I can distinguish states, nodes, paths and the frontier.
+- [ ] I can explain when graph search is preferable to tree search.
 - [ ] I can compare BFS, DFS, UCS, DLS and IDS.
 - [ ] I can explain when each strategy is complete or optimal.
 - [ ] I can distinguish online and offline search.

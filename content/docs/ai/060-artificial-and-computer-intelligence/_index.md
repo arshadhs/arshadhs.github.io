@@ -22,6 +22,7 @@ Artificial and Computational Intelligence studies how agents perceive, reason, s
 | 4 | Informed Search and Heuristic Design |
 | 5 | Local Search and Optimisation |
 | 6 | Evolutionary and Population-Based Search |
+| 7 | Game Playing and Adversarial Search |
 
 ## Modular Structure
 

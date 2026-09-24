@@ -18,24 +18,24 @@ Local search improves one or a few complete candidate solutions by moving throug
 - apply hill climbing and its variants
 - recognise local maxima, plateaus and ridges
 - explain random-restart and stochastic hill climbing
-- describe local and stochastic beam search
+- describe local and stochastic beam search and trace one beam update
 
 ## Big Picture
 
-```mermaid
+{{< mermaid >}}
 flowchart TD
-    S[Current state] --> N[Generate neighbours]
-    N --> E[Evaluate values]
-    E --> B[Choose candidate]
+    S["Current state"] --> N["Generate neighbours"]
+    N --> E["Evaluate values"]
+    E --> B["Choose candidate"]
     B --> S
-    B --> G[Stop condition]
+    B --> G["Stop condition"]
 
     style S fill:#E1F5FE
     style N fill:#FFF9C4
     style E fill:#EDE7F6
     style B fill:#C8E6C9
     style G fill:#C8E6C9
-```
+{{< /mermaid >}}
 
 ## 1. Path Optimisation vs State Optimisation ☆
 
@@ -194,6 +194,16 @@ The states share information indirectly because all their successors compete for
 
 The beam can become concentrated in one region because similar high-scoring successors replace diverse alternatives. The search then behaves like several copies of the same local search.
 
+### Worked beam update
+
+Suppose a maximisation problem uses {{< katex >}} k=3 {{< /katex >}} and the current states have values 12, 15 and 10. Their combined successor pool is:
+
+| Successor | A | B | C | D | E | F |
+|---|---:|---:|---:|---:|---:|---:|
+| Value | 16 | 11 | 14 | 18 | 13 | 17 |
+
+Local beam search keeps the best three successors overall: **D(18), F(17) and A(16)**. They need not come from three different parents. This sharing of the pooled successors is what makes local beam search different from three independent hill climbs.
+
 ## 10. Stochastic Beam Search
 
 Stochastic beam search selects the next {{< katex >}} k {{< /katex >}} states probabilistically according to fitness. Better states are more likely to survive, but weaker states still have some chance.
@@ -233,7 +243,8 @@ In each case, a neighbour represents a small modification: swap two timetable en
 5. Why does random restart improve the chance of finding a global optimum?
 6. Compare stochastic hill climbing with steepest-ascent hill climbing.
 7. How does local beam search differ from running {{< katex >}} k {{< /katex >}} independent hill-climbing searches?
-8. Why might stochastic beam search retain more diversity?
+8. Given a pool of successor values, perform one local beam update for a stated value of {{< katex >}} k {{< /katex >}}.
+9. Why might stochastic beam search retain more diversity?
 
 ## Key Takeaways
 
@@ -252,6 +263,7 @@ In each case, a neighbour represents a small modification: swap two timetable en
 - [ ] I can explain standard, stochastic and random-restart hill climbing.
 - [ ] I can identify local optima, plateaus and ridges.
 - [ ] I can explain local and stochastic beam search.
+- [ ] I can select the next {{< katex >}} k {{< /katex >}} states from a combined successor pool.
 
 ---
 {{< home-link "Home" >}} | {{< section-index >}}

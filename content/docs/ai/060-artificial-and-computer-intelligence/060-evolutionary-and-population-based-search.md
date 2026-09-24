@@ -15,26 +15,26 @@ Population-based search explores with many candidate solutions at once. Genetic 
 
 - explain the purpose of population-based search
 - describe representation, fitness, selection, crossover and mutation
-- trace the core Genetic Algorithm loop
+- trace the core Genetic Algorithm loop and one numerical iteration
 - explain exploration and exploitation in Ant Colony Optimisation
 - interpret the main ACO transition and pheromone-update equations
 - distinguish NAS, NEAT, DeepNEAT and CoDeepNEAT
 
 ## Big Picture
 
-```mermaid
+{{< mermaid >}}
 flowchart TD
-    P[Population-based search] --> G[Genetic Algorithms]
-    P --> A[Ant Colony Optimisation]
-    G --> N[Neuroevolution]
-    N --> D[Deep network design]
+    P["Population-based search"] --> G["Genetic Algorithms"]
+    P --> A["Ant Colony Optimisation"]
+    G --> N["Neuroevolution"]
+    N --> D["Deep network design"]
 
     style P fill:#E1F5FE
     style G fill:#C8E6C9
     style A fill:#FFF9C4
     style N fill:#EDE7F6
     style D fill:#C8E6C9
-```
+{{< /mermaid >}}
 
 ## 1. Why Use a Population? ☆
 
@@ -68,13 +68,13 @@ The search begins with a population of candidate solutions. Candidates with bett
 
 ## 3. The Genetic Algorithm Cycle ☆
 
-```mermaid
+{{< mermaid >}}
 flowchart TD
-    I[Initial population] --> F[Evaluate fitness]
-    F --> S[Select parents]
-    S --> C[Crossover]
-    C --> M[Mutation]
-    M --> R[Replacement]
+    I["Initial population"] --> F["Evaluate fitness"]
+    F --> S["Select parents"]
+    S --> C["Crossover"]
+    C --> M["Mutation"]
+    M --> R["Replacement"]
     R --> F
 
     style I fill:#E1F5FE
@@ -83,7 +83,7 @@ flowchart TD
     style C fill:#EDE7F6
     style M fill:#FFF9C4
     style R fill:#C8E6C9
-```
+{{< /mermaid >}}
 
 The process stops when a satisfactory fitness is reached, a generation limit is reached or improvement has stalled. A GA does not normally guarantee convergence to the global optimum.
 
@@ -131,6 +131,30 @@ Common forms include:
 Selection exploits known good candidates. Mutation supports exploration. Crossover attempts to combine useful structures already discovered.
 {{% /hint %}}
 
+### Worked GA iteration: constrained payload selection
+
+Suppose a four-bit chromosome uses the order `[MC, TS, RD, HA]`. The instrument weights are 4, 3, 2 and 5 kg, and their values are 40, 35, 30 and 50. Capacity is 9 kg; an overweight chromosome receives half of its total value.
+
+| Chromosome | Total weight | Total value | Fitness |
+|---|---:|---:|---:|
+| `[1,1,1,0]` | 9 | 105 | 105 |
+| `[1,0,0,1]` | 9 | 90 | 90 |
+| `[0,1,1,1]` | 10 | 115 | 57.5 |
+| `[0,1,1,0]` | 5 | 65 | 65 |
+
+The total fitness is 317.5, so roulette-wheel selection gives the first chromosome probability {{< katex >}} 105/317.5\approx0.331 {{< /katex >}}. Higher fitness increases selection probability but does not make selection certain.
+
+Using the first two chromosomes as parents and cutting after gene 2:
+
+```text
+Parent 1: [1,1 | 1,0]
+Parent 2: [1,0 | 0,1]
+Child 1:  [1,1 | 0,1]
+Child 2:  [1,0 | 1,0]
+```
+
+Child 1 has weight 12 and value 125, so its penalised fitness is 62.5. Child 2 has weight 6 and fitness 70. If mutation changes Child 2's TS gene from 0 to 1, it becomes `[1,1,1,0]`, with weight 9 and fitness 105. Every offspring must be evaluated again after crossover and mutation.
+
 ## 7. Genetic Algorithm Strengths and Limitations
 
 | Strength | Limitation |
@@ -171,6 +195,17 @@ p_{ij}^{k}=\frac{(\tau_{ij})^{\alpha}(\eta_{ij})^{\beta}}
 
 This probability balances collective experience with the immediate cost of an edge.
 
+### Worked transition probability
+
+Suppose an ant at node {{< katex >}} i {{< /katex >}} can choose A or B, with {{< katex >}} \alpha=\beta=1 {{< /katex >}}:
+
+| Edge | Pheromone {{< katex >}} \tau {{< /katex >}} | Distance {{< katex >}} d {{< /katex >}} | Desirability {{< katex >}} \eta=1/d {{< /katex >}} | Unnormalised score |
+|---|---:|---:|---:|---:|
+| i-A | 3 | 2 | 0.5 | 1.5 |
+| i-B | 1 | 1 | 1 | 1 |
+
+Therefore {{< katex >}} P(i,A)=1.5/(1.5+1)=0.6 {{< /katex >}} and {{< katex >}} P(i,B)=0.4 {{< /katex >}}.
+
 ## 10. Updating Pheromone ☆
 
 After routes are constructed, pheromone is updated through evaporation and reinforcement:
@@ -196,6 +231,18 @@ Q/f_k, & \text{if ant } k \text{ used edge } (i,j)\\
 {{% /colour %}}
 
 Here, {{< katex >}} f_k {{< /katex >}} is the route cost. A shorter route deposits more pheromone because {{< katex >}} Q/f_k {{< /katex >}} is larger.
+
+### Continuing the worked example
+
+If the ant uses i-A, completes a route of cost 30, and {{< katex >}} \rho=0.1, Q=90 {{< /katex >}}, then {{< katex >}} \Delta\tau_{iA}=90/30=3 {{< /katex >}} and:
+
+{{% colour "green" %}}
+{{< katex display=true >}}
+\tau_{iA}^{new}=0.9(3)+3=5.7
+{{< /katex >}}
+{{% /colour %}}
+
+An unused i-B edge only evaporates, giving {{< katex >}} \tau_{iB}^{new}=0.9(1)=0.9 {{< /katex >}}.
 
 ### Exploration and exploitation
 
@@ -281,6 +328,23 @@ Selected modules are inserted into blueprint positions to construct complete net
 | DeepNEAT | Layers and layer connections | Deep architectures |
 | CoDeepNEAT | Modules and blueprints | Modular deep architectures |
 
+### Why repeated module references matter
+
+If several blueprint nodes reference the same module species, evolution can reuse a successful building block instead of searching independently for every position. This reduces the effective architecture search space and gives the module fitness evidence from several contexts.
+
+Reuse can also create a coherent repeated structure in the final network. The trade-off is reduced architectural diversity: if one module family is unsuitable at every depth, repeating it may limit representational capacity.
+
+### Improving a weak evolved CNN
+
+If validation performance stalls, useful changes include:
+
+- increase population size or generations to search more architectures
+- add mutations for filter size, depth, skip connections, pooling and activation functions
+- preserve diversity through speciation or less aggressive selection
+- train candidate weights for longer or improve the inner optimiser and learning-rate schedule
+- use validation fitness, regularisation and data augmentation to reduce overfitting
+- use multi-objective fitness when accuracy must be balanced with model size or latency
+
 ## Common Mistakes
 
 {{% hint warning %}}
@@ -297,11 +361,14 @@ Selected modules are inserted into blueprint positions to construct complete net
 1. Why can a population explore more broadly than single-state hill climbing?
 2. Represent an N-Queens candidate as a chromosome and define its fitness.
 3. Explain selection, crossover and mutation using one continuous example.
-4. Why is mutation important for maintaining diversity?
-5. Explain the roles of {{< katex >}} \tau {{< /katex >}}, {{< katex >}} \eta {{< /katex >}}, {{< katex >}} \alpha {{< /katex >}}, {{< katex >}} \beta {{< /katex >}} and {{< katex >}} \rho {{< /katex >}} in ACO.
-6. How do evaporation and reinforcement balance exploration and exploitation?
-7. What is the difference between architecture search and weight learning?
-8. Compare NEAT, DeepNEAT and CoDeepNEAT.
+4. Calculate fitness, selection probability, crossover and mutation for a constrained chromosome.
+5. Why is mutation important for maintaining diversity?
+6. Explain the roles of {{< katex >}} \tau {{< /katex >}}, {{< katex >}} \eta {{< /katex >}}, {{< katex >}} \alpha {{< /katex >}}, {{< katex >}} \beta {{< /katex >}} and {{< katex >}} \rho {{< /katex >}} in ACO.
+7. Calculate one ACO transition probability and pheromone update.
+8. How do evaporation and reinforcement balance exploration and exploitation?
+9. What is the difference between architecture search and weight learning?
+10. Compare NEAT, DeepNEAT and CoDeepNEAT.
+11. Explain the benefit and risk of several blueprint nodes referencing one module species.
 
 ## Key Takeaways
 
@@ -317,10 +384,13 @@ Selected modules are inserted into blueprint positions to construct complete net
 
 - [ ] I can explain the GA cycle and its vocabulary.
 - [ ] I can distinguish selection, crossover and mutation.
+- [ ] I can perform one numerical GA iteration and re-evaluate the offspring.
 - [ ] I can interpret ACO transition and pheromone-update formulas.
+- [ ] I can calculate one ACO transition probability and update used and unused edges.
 - [ ] I can explain exploration and exploitation in ACO.
 - [ ] I can distinguish NAS from weight learning.
 - [ ] I can compare NEAT, DeepNEAT and CoDeepNEAT.
+- [ ] I can reason about module reuse, diversity and fitness in CoDeepNEAT.
 
 ---
 {{< home-link "Home" >}} | {{< section-index >}}

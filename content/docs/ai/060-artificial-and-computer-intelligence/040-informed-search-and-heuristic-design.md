@@ -15,6 +15,7 @@ Informed search uses additional knowledge to estimate which states are most prom
 
 - explain the purpose of a heuristic function
 - compare Greedy Best-First Search and A* Search
+- trace A* using OPEN and CLOSED lists
 - test heuristics for admissibility and consistency
 - explain heuristic dominance and effective branching factor
 - derive heuristics from relaxed problems and subproblems
@@ -68,7 +69,37 @@ At each step, A* expands the frontier node with the smallest {{< katex >}} f(n) 
 | GBFS | {{< katex >}} h(n) {{< /katex >}} | Apparently closest to goal |
 | A* | {{< katex >}} g(n)+h(n) {{< /katex >}} | Balances travelled and remaining cost |
 
-## 4. Admissible Heuristics ☆
+## 4. Tracing A* with OPEN and CLOSED ☆
+
+An A* trace should make the frontier and expansion order explicit.
+
+1. Put the initial node in **OPEN** and leave **CLOSED** empty.
+2. Select the OPEN node with the smallest {{< katex >}} f(n) {{< /katex >}}. State a tie-breaking rule if the problem does not provide one.
+3. Remove that node from OPEN and add it to CLOSED. This is one CLOSED-list update.
+4. If the selected node is a goal, reconstruct the path through its parent links.
+5. Otherwise generate every valid successor and calculate its cumulative {{< katex >}} g(n) {{< /katex >}}, its {{< katex >}} h(n) {{< /katex >}} and then {{< katex >}} f(n) {{< /katex >}}.
+6. Add a new state to OPEN. If a cheaper path reaches an existing state, update its cost and parent; reopen it when the chosen graph-search procedure requires this.
+7. Re-sort OPEN and repeat.
+
+{{% hint warning %}}
+- {{< katex >}} g(n) {{< /katex >}} is cumulative from the initial state; it is not merely the latest edge cost.
+- {{< katex >}} h(n) {{< /katex >}} estimates from the current node to a goal; it does not estimate the cost to the next node.
+- Under standard A* graph search, stop when the goal is selected for expansion, not merely when it first appears in OPEN.
+{{% /hint %}}
+
+### Compact trace example
+
+Suppose {{< katex >}} S\rightarrow A {{< /katex >}} costs 2 with {{< katex >}} h(A)=4 {{< /katex >}}, and {{< katex >}} S\rightarrow B {{< /katex >}} costs 1 with {{< katex >}} h(B)=7 {{< /katex >}}. From A, the goal G costs a further 5.
+
+| CLOSED update | Node expanded | Newly calculated values | OPEN after update |
+|---:|---|---|---|
+| 1 | S | A: {{< katex >}} g=2,\ h=4,\ f=6 {{< /katex >}}; B: {{< katex >}} g=1,\ h=7,\ f=8 {{< /katex >}} | A(6), B(8) |
+| 2 | A | G: {{< katex >}} g=7,\ h=0,\ f=7 {{< /katex >}} | G(7), B(8) |
+| 3 | G | Goal selected | B(8) |
+
+The returned path is {{< katex >}} S\rightarrow A\rightarrow G {{< /katex >}} with cost 7.
+
+## 5. Admissible Heuristics ☆
 
 A heuristic is **admissible** if it never overestimates the true remaining cost.
 
@@ -82,7 +113,7 @@ Here, {{< katex >}} h^{*}(n) {{< /katex >}} is the actual cheapest cost from {{<
 
 An admissible heuristic is optimistic: it may underestimate, but it does not exaggerate. Straight-line distance is an admissible estimate of road distance because a road route cannot be shorter than the direct geometric distance.
 
-## 5. Consistent Heuristics ☆
+## 6. Consistent Heuristics ☆
 
 A heuristic is **consistent** if its estimate obeys a triangle-like condition across every transition:
 
@@ -98,7 +129,7 @@ Consistency ensures that {{< katex >}} f(n) {{< /katex >}} values do not decreas
 
 Every consistent heuristic with {{< katex >}} h(Goal)=0 {{< /katex >}} is admissible, but an admissible heuristic need not always be consistent.
 
-## 6. What Makes a Good Heuristic?
+## 7. What Makes a Good Heuristic?
 
 A useful heuristic should be:
 
@@ -122,7 +153,16 @@ for every node. Then {{< katex >}} h_2 {{< /katex >}} **dominates** {{< katex >}
 
 If {{< katex >}} h(n)=0 {{< /katex >}} for every node, A* behaves like UCS.
 
-## 7. Effective Branching Factor
+### Choosing between misplaced tiles and Manhattan distance
+
+For a sliding-tile puzzle:
+
+- {{< katex >}} h_1 {{< /katex >}} counts misplaced numbered tiles.
+- {{< katex >}} h_2 {{< /katex >}} sums each numbered tile's Manhattan distance from its goal position.
+
+Both ignore the empty tile. If both are admissible, Manhattan distance is normally preferred because every misplaced tile is at least one move away, while some are several moves away. Therefore {{< katex >}} h_2(n)\geq h_1(n) {{< /katex >}} and {{< katex >}} h_2 {{< /katex >}} dominates {{< katex >}} h_1 {{< /katex >}}.
+
+## 8. Effective Branching Factor
 
 The **effective branching factor** measures how strongly a heuristic reduces the apparent width of a search tree.
 
@@ -136,7 +176,7 @@ N+1 = 1+b^{*}+(b^{*})^2+\cdots +(b^{*})^d
 
 A smaller {{< katex >}} b^{*} {{< /katex >}} indicates better guidance and fewer generated nodes.
 
-## 8. Heuristics from Relaxed Problems ☆
+## 9. Heuristics from Relaxed Problems ☆
 
 A **relaxed problem** removes one or more constraints from the original problem, making it easier to solve.
 
@@ -146,8 +186,8 @@ The optimal cost of the relaxed problem is a lower bound on the original cost be
 
 | Relaxation | Resulting heuristic |
 |---|---|
-| A tile may move to any position | Number of misplaced tiles |
-| Tiles may move through one another | Sum of Manhattan distances |
+| A numbered tile may move into the blank from any position | Number of misplaced tiles |
+| A numbered tile may move to an adjacent square even when it is occupied | Sum of Manhattan distances |
 
 Manhattan distance is usually more informative because it accounts for how far each tile is from its goal position.
 
@@ -155,7 +195,7 @@ Manhattan distance is usually more informative because it accounts for how far e
 Relax the rules, solve the easier problem, and use that solution cost as a lower-bound estimate for the original problem.
 {{% /hint %}}
 
-## 9. Pattern Databases ☆
+## 10. Pattern Databases ☆
 
 A **pattern database** stores exact solution costs for abstracted subproblems.
 
@@ -163,11 +203,31 @@ For a sliding-tile puzzle, it may precompute the optimal cost for configurations
 
 Pattern databases exchange preparation time and storage for faster search later.
 
-## 10. Landmarks
+### Abstraction mapping and admissibility
+
+An abstraction mapping {{< katex >}} \alpha {{< /katex >}} removes details from a complete state while retaining the features used by the pattern database:
+
+{{% colour "green" %}}
+{{< katex display=true >}}
+h_{PDB}(s)=PDB[\alpha(s)]
+{{< /katex >}}
+{{% /colour %}}
+
+For a cleaning robot, a complete state might contain its position, every remaining oil and chemical spill, battery state and other details. One abstraction could retain only:
+
+{{% colour "green" %}}
+{{< katex display=true >}}
+\alpha(s)=(\text{robot position},\ \text{nearest required oil spill},\ \text{remaining chemical spills})
+{{< /katex >}}
+{{% /colour %}}
+
+The PDB entry is the exact optimal cost in this simpler abstract problem. It is admissible when the abstraction only removes constraints or information: the abstract solution cannot cost more than solving the full problem, so {{< katex >}} h_{PDB}(s)\leq h^{*}(s) {{< /katex >}}.
+
+## 11. Landmarks
 
 A landmark heuristic precomputes distances involving selected important states. In a road network, landmarks might be major cities or interchanges. These known distances help estimate the cost between a current location and a destination without solving every route from scratch.
 
-## 11. Learning Heuristics from Experience
+## 12. Learning Heuristics from Experience
 
 Instead of designing every heuristic manually, a model can learn to predict remaining cost from previously solved problems.
 
@@ -191,23 +251,26 @@ A learned heuristic may guide search well without being admissible. Prediction a
 - An admissible heuristic need not be exact; it only must not overestimate.
 - The most accurate heuristic is not automatically best if it is extremely expensive to compute.
 - A relaxed problem removes constraints; it does not add new restrictions.
+- A PDB is admissible only when its abstraction gives a lower bound on the original problem's cost.
 {{% /hint %}}
 
 ## Practice Questions
 
 1. Explain the different roles of {{< katex >}} g(n) {{< /katex >}}, {{< katex >}} h(n) {{< /katex >}} and {{< katex >}} f(n) {{< /katex >}} in A*.
 2. Why can GBFS reach a non-optimal solution?
-3. Test whether a given heuristic is admissible.
-4. Test consistency across an edge with cost {{< katex >}} c(n,a,n') {{< /katex >}}.
-5. Why does a relaxed problem produce a lower bound?
-6. Compare misplaced tiles with Manhattan distance for the 8-puzzle.
-7. What does a pattern database store?
-8. Why can a more informative heuristic reduce the effective branching factor?
+3. Trace A* using OPEN and CLOSED lists, showing every {{< katex >}} g,\ h,\ f {{< /katex >}} update.
+4. Test whether a given heuristic is admissible.
+5. Test consistency across an edge with cost {{< katex >}} c(n,a,n') {{< /katex >}}.
+6. Why does a relaxed problem produce a lower bound?
+7. Compare misplaced tiles with Manhattan distance for the 8-puzzle.
+8. Define an abstraction mapping for a pattern database and justify its admissibility.
+9. Why can a more informative heuristic reduce the effective branching factor?
 
 ## Key Takeaways
 
 {{% hint success %}}
 - GBFS chooses by estimated remaining cost; A* combines actual and estimated cost.
+- A clear A* trace records cumulative path cost and the OPEN/CLOSED status after every expansion.
 - Admissibility prevents overestimation, while consistency constrains estimates across neighbouring states.
 - A more informative admissible heuristic normally allows A* to expand fewer nodes.
 - Relaxed problems, pattern databases, landmarks and experience can all produce useful heuristics.
@@ -218,10 +281,12 @@ A learned heuristic may guide search well without being admissible. Prediction a
 
 - [ ] I can calculate {{< katex >}} f(n)=g(n)+h(n) {{< /katex >}}.
 - [ ] I can distinguish GBFS, UCS and A*.
+- [ ] I can trace A* with OPEN and CLOSED lists.
 - [ ] I can test admissibility and consistency.
 - [ ] I can explain heuristic dominance and effective branching factor.
 - [ ] I can derive a heuristic from a relaxed problem.
 - [ ] I can explain pattern databases and learned heuristics.
+- [ ] I can define a PDB abstraction and justify why it is admissible.
 
 ---
 {{< home-link "Home" >}} | {{< section-index >}}

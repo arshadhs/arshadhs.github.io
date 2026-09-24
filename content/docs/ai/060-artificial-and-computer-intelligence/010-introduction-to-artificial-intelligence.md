@@ -24,14 +24,14 @@ This page introduces the foundations of AI, its major application areas, four cl
 
 ## Big Picture
 
-```mermaid
+{{< mermaid >}}
 flowchart TD
-    A[Artificial Intelligence] --> B[Human-like]
-    A --> C[Rational]
-    B --> D[Think like humans]
-    B --> E[Act like humans]
-    C --> F[Think rationally]
-    C --> G[Act rationally]
+    A["Artificial Intelligence"] --> B["Human-like"]
+    A --> C["Rational"]
+    B --> D["Think like humans"]
+    B --> E["Act like humans"]
+    C --> F["Think rationally"]
+    C --> G["Act rationally"]
 
     style A fill:#C8E6C9
     style B fill:#E1F5FE
@@ -40,7 +40,7 @@ flowchart TD
     style E fill:#EDE7F6
     style F fill:#C8E6C9
     style G fill:#C8E6C9
-```
+{{< /mermaid >}}
 
 ## 1. What Is Intelligence?
 
@@ -207,40 +207,34 @@ These foundations explain why AI includes such a wide range of techniques: searc
 
 ## 9. AI Application Areas
 
-AI techniques are used across many domains, including:
+The same AI capability can appear in very different domains. Perception can support medical-image analysis, autonomous driving or robotic inspection, while reasoning can support diagnosis, planning or decision support.
 
-- healthcare
-- finance
-- education
-- automotive systems
-- retail
-- manufacturing
-- customer service
-- natural language processing
-- computer vision
-- robotics
-- smart cities
-- agriculture
-- entertainment
-- cybersecurity
-- environmental conservation
-- transportation
+| Domain | Typical applications | Important challenges |
+|---|---|---|
+| Healthcare | Diagnosis support, medical imaging and treatment planning | Patient privacy, biased data, explainability and safety-critical errors |
+| Finance | Fraud detection, credit assessment and risk modelling | Regulation, concept drift, fairness and costly false decisions |
+| Transport | Route planning, driver assistance and autonomous vehicles | Real-time decisions, rare hazards, uncertain behaviour and physical safety |
+| Education | Intelligent tutoring, feedback and adaptive learning | Student privacy, unequal access, bias and over-reliance on automation |
+| Manufacturing | Inspection, predictive maintenance and industrial robotics | Sensor noise, downtime, integration and worker safety |
+| Language and customer service | Translation, search, assistants and summarisation | Ambiguity, hallucination, multilingual bias and context handling |
+| Cybersecurity | Anomaly detection, threat analysis and automated response | Adaptive attackers, false alarms and misuse of the same techniques |
+| Agriculture and conservation | Crop monitoring, precision farming and wildlife observation | Sparse data, changing weather and deployment in difficult environments |
 
-The same underlying AI capability can appear in very different applications. For example, perception can support medical image analysis, autonomous driving or robotic inspection, while reasoning can support diagnosis, planning or decision support.
+When discussing an application, separate the **AI task** from the **domain challenge**. For example, detecting a tumour is a perception task; protecting clinical data and avoiding a dangerous false negative are deployment challenges.
 
 ## 10. A Short History of AI
 
 The development of AI has not been a steady upward progression. It has alternated between periods of strong optimism, rapid progress and periods of reduced expectations and investment.
 
-```mermaid
+{{< mermaid >}}
 flowchart TD
-    A[Early computing and cybernetics] --> B[Turing and machine intelligence]
-    B --> C[AI emerges as a field]
-    C --> D[Early symbolic AI]
-    D --> E[AI winters]
-    E --> F[Machine learning revival]
-    F --> G[Deep learning]
-    G --> H[Transformers and generative AI]
+    A["Early computing and cybernetics"] --> B["Turing and machine intelligence"]
+    B --> C["AI emerges as a field"]
+    C --> D["Early symbolic AI"]
+    D --> E["AI winters"]
+    E --> F["Machine learning revival"]
+    F --> G["Deep learning"]
+    G --> H["Transformers and generative AI"]
 
     style A fill:#E1F5FE
     style B fill:#FFF9C4
@@ -250,7 +244,7 @@ flowchart TD
     style F fill:#C8E6C9
     style G fill:#E1F5FE
     style H fill:#C8E6C9
-```
+{{< /mermaid >}}
 
 Important milestones include:
 
@@ -324,7 +318,7 @@ AI capability and AI safety are not separate concerns. The more influence a syst
 4. Why is thinking rationally not sufficient for every intelligent behaviour?
 5. Explain the difference between acting humanly and acting rationally.
 6. Why are philosophy, mathematics, economics and psychology relevant to AI?
-7. Give three application areas of AI and identify the intelligent capability used in each.
+7. Give three application areas of AI, identify the intelligent capability used in each and explain one challenge per domain.
 8. Why has AI development experienced periods of rapid progress and periods of reduced expectations?
 9. Describe three risks associated with widespread use of AI.
 
