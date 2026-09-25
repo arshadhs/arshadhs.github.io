@@ -13,6 +13,10 @@ Artificial Intelligence (AI) is concerned with building systems that can **perce
 
 This page introduces the foundations of AI, its major application areas, four classic ways of thinking about intelligence, important milestones in its development, and some of the risks that accompany increasingly capable AI systems.
 
+- Artificial Intelligence: Foundations, Overview of Modern AI & Application Domains.
+- What is Artificial Intelligence: Acting Humanly, Thinking humanly, Thinking rationally, Acting Rationally
+- Foundations of AI , Brief Overview of Modern AI & Application Domains
+
 ## Learning Objectives
 
 - explain what intelligence and artificial intelligence mean in practical terms

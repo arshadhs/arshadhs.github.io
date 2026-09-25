@@ -11,6 +11,13 @@ menu: main
 
 Game-playing agents search in environments where other agents influence the outcome. In competitive games, a good move must account not only for what the agent wants to achieve, but also for the strongest response an opponent can make.
 
+- Searching to play games
+- Minimax Algorithm
+- Alpha-Beta Pruning
+
+- Monte Carlo Tree Search
+- Stochastic Games
+
 ## Learning Objectives
 
 - formulate a game as an adversarial search problem

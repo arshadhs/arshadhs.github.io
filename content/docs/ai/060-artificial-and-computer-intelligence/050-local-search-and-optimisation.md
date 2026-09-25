@@ -11,6 +11,11 @@ menu: main
 
 Local search improves one or a few complete candidate solutions by moving through their neighbourhoods. It is especially useful when the final configuration matters but the path used to reach it does not.
 
+-- Local Search Algorithms & Optimisation Problems
+	- Hill Climbing Search
+	- Local Beam Search
+- Online Search Agents
+
 ## Learning Objectives
 
 - distinguish path optimisation from state optimisation

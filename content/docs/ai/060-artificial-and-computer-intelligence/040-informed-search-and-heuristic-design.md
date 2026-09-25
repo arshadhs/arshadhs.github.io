@@ -11,6 +11,14 @@ menu: main
 
 Informed search uses additional knowledge to estimate which states are most promising. A good heuristic can greatly reduce unnecessary exploration while preserving solution quality.
 
+- Notion of Heuristics
+- Informed Search Algorithms : Greedy best first search, A* search
+- Optimality of A*
+- Heuristic Functions
+- Heuristic Accuracy & Algorithm performance
+- Admissible heuristics from relaxed problems, pattern databases. Experience.
+- Use case : Learning Heuristics using Supervised Learning
+
 ## Learning Objectives
 
 - explain the purpose of a heuristic function

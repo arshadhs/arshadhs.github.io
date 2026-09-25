@@ -11,6 +11,12 @@ menu: main
 
 Population-based search explores with many candidate solutions at once. Genetic Algorithms evolve encoded solutions, Ant Colony Optimisation builds paths using collective pheromone signals, and neuroevolution applies evolutionary ideas to neural-network design.
 
+- Genetic Algorithm
+- Ant Colony Optimisation
+
+- Neural Architecture Search
+- Use case : Neuro Evolution - Evolutionary computation to design or train neural networks 
+
 ## Learning Objectives
 
 - explain the purpose of population-based search

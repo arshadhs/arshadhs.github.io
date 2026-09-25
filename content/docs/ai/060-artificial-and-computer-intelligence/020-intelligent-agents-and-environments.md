@@ -13,6 +13,9 @@ An intelligent agent connects **perception** with **action**. It observes an env
 
 This page develops the core vocabulary for reasoning about intelligent agents: percepts, actions, rationality, performance measures, PEAS and the different properties an environment can have.
 
+- Intelligent Agents: Notion of Agents and Environments, Rationality
+- Nature of Environments, Structure of Agents
+
 ## Learning Objectives
 
 - explain the relationship between an agent and its environment
