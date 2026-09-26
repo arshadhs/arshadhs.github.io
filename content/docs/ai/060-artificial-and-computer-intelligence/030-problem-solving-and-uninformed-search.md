@@ -11,6 +11,10 @@ menu: main
 
 A problem-solving agent converts a goal into a precisely defined search problem. An uninformed search algorithm then explores the state space using only the information in that problem definition.
 
+- Problem Solving Agent 
+- Problem Formulation - Examples
+- From Uninformed to Informed Search Algorithms
+
 ## Learning Objectives
 
 - formulate a search problem using five components

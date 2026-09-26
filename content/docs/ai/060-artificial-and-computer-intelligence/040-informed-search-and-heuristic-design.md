@@ -90,8 +90,8 @@ An A* trace should make the frontier and expansion order explicit.
 7. Re-sort OPEN and repeat.
 
 {{% hint warning %}}
-- {{< katex >}} g(n) {{< /katex >}} is cumulative from the initial state; it is not merely the latest edge cost.
-- {{< katex >}} h(n) {{< /katex >}} estimates from the current node to a goal; it does not estimate the cost to the next node.
+- g(n) is cumulative from the initial state; it is not merely the latest edge cost.
+- h(n) estimates from the current node to a goal; it does not estimate the cost to the next node.
 - Under standard A* graph search, stop when the goal is selected for expansion, not merely when it first appears in OPEN.
 {{% /hint %}}
 
@@ -254,8 +254,8 @@ A learned heuristic may guide search well without being admissible. Prediction a
 ## Common Mistakes
 
 {{% hint warning %}}
-- {{< katex >}} h(n) {{< /katex >}} estimates the cost from the current node to the goal; {{< katex >}} g(n) {{< /katex >}} is the cost already paid.
-- GBFS uses only {{< katex >}} h(n) {{< /katex >}}; A* uses both {{< katex >}} g(n) {{< /katex >}} and {{< katex >}} h(n) {{< /katex >}}.
+- h(n) estimates the cost from the current node to the goal; g(n) is the cost already paid.
+- GBFS uses only h(n); A* uses both g(n) and h(n).
 - An admissible heuristic need not be exact; it only must not overestimate.
 - The most accurate heuristic is not automatically best if it is extremely expensive to compute.
 - A relaxed problem removes constraints; it does not add new restrictions.
@@ -295,6 +295,10 @@ A learned heuristic may guide search well without being admissible. Prediction a
 - [ ] I can derive a heuristic from a relaxed problem.
 - [ ] I can explain pattern databases and learned heuristics.
 - [ ] I can define a PDB abstraction and justify why it is admissible.
+
+
+## Reference
+- [A* search algorithm](https://www.geeksforgeeks.org/dsa/a-search-algorithm/)
 
 ---
 {{< home-link "Home" >}} | {{< section-index >}}
