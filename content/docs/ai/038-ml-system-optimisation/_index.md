@@ -143,7 +143,7 @@ flowchart TD
 | 5 | [Communication-Aware Distributed ML]({{< relref "050-communication-aware-distributed-ml.md" >}}) | Communication overhead, distributed k-means, model parallelism, distributed k-NN, synchronous and asynchronous SGD | Distributed ML Algorithms |
 | 6 | [Clusters, Hadoop, and Spark]({{< relref "060-clusters-hadoop-and-spark.md" >}}) | Cluster computing, MapReduce k-means, streaming variants, communication reduction, distributed CNNs, and mixed precision | Distributed ML Algorithms |
 | 7 | [Distributed Training Strategies]({{< relref "070-distributed-training-strategies.md" >}}) | Data, model, and pipeline parallelism, gradient checkpointing, and mixed-precision training | Distributed ML Algorithms |
-| 8 | ML Platforms and Frameworks | Parameter Server model, SGD, TensorFlow architecture, distributed strategies, batching, model compression, I/O, and shuffling | Scale-Out Systems |
+| 8 | [ML Platforms and Frameworks]({{< relref "080-ml-platforms-and-frameworks.md" >}}) | Parameter Server model, SGD, TensorFlow architecture, distributed strategies, batching, model compression, I/O, and shuffling | Scale-Out Systems |
 | 9 | Distributed Deep Learning | Decentralised SGD, all-reduce, asynchronous parallelism, Hogwild!, parameter staleness, local SGD, and matrix multiplication | Scale-Out Systems |
 | 10 | Locality and Large-Scale Parallelism | Locality-aware programs, GPGPUs, model parallelism, pipeline scheduling, GPU clusters, and memory-efficient checkpointing | Scale-Out Systems |
 | 11 | GPU Architecture and Federated Learning | GPU threading, parallel matrix operations, non-IID data, privacy, secure aggregation, and decentralised federated learning | Scale-Out Systems |
