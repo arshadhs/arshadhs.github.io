@@ -1,5 +1,5 @@
 ---
-title: "Temporal-Difference Learning"
+title: "Temporal-Difference Learning I"
 draft: false
 tags: ["AI", "ML", "Reinforcement Learning", "Temporal-Difference Learning"]
 categories: ["AI", "ML"]
@@ -7,11 +7,29 @@ weight: 600
 menu: main
 ---
 
-# Temporal-Difference Learning
+# Temporal-Difference Learning I
 
 Temporal-Difference (TD) learning updates predictions from one transition at a time. It learns directly from experience like Monte Carlo methods, but it does not need to wait until the episode ends.
 
+**Course Content covered in this module:**
+
+- Temporal-Difference Learning
+- TD(0), SARSA, Q-Learning and Expected SARSA
+
 {{% colour "blue" %}}**TD learning updates an estimate using an immediate reward and another current estimate.**{{% /colour %}}
+
+---
+
+## Learning Objectives
+
+By the end of this module, you should be able to:
+
+- explain how TD learning combines sampling with bootstrapping;
+- calculate the TD target, TD error and a TD(0) update;
+- distinguish prediction from control;
+- apply SARSA, Expected SARSA and Q-learning;
+- distinguish on-policy from off-policy TD control; and
+- explain maximisation bias and how Double Q-learning reduces it.
 
 ---
 
@@ -164,6 +182,17 @@ The main one-step TD control methods differ in how they choose the next value us
 - SARSA uses the action actually selected next.
 - Expected SARSA averages over actions under the policy.
 - Q-learning uses the highest next-action value.
+
+### Where Epsilon-Greedy Fits
+
+The learning rate {{< katex >}} \alpha {{< /katex >}} controls the size of the value update. By contrast, {{< katex >}} \varepsilon {{< /katex >}} belongs to the action-selection policy.
+
+Under an {{< katex >}} \varepsilon {{< /katex >}}-greedy policy:
+
+- with probability {{< katex >}} 1-\varepsilon {{< /katex >}}, the agent selects a greedy action;
+- with probability {{< katex >}} \varepsilon {{< /katex >}}, it explores.
+
+When a numerical question already supplies the trajectory, the selected actions are known. Therefore, {{< katex >}} \varepsilon {{< /katex >}} explains how those actions may have been generated but does not appear directly in the TD update.
 
 ---
 
@@ -365,7 +394,48 @@ The algorithms observe the same transition but learn from different assumptions 
 
 ---
 
-## 11. Terminal States
+## 11. Maximisation Bias and Double Q-Learning ☆
+
+Q-learning uses the maximum of estimated action values. If those estimates contain noise, the maximum tends to favour actions whose values have been overestimated. This creates **maximisation bias**.
+
+Double Q-learning maintains two estimates, {{< katex >}} Q_1 {{< /katex >}} and {{< katex >}} Q_2 {{< /katex >}}. One estimate selects the action, while the other evaluates it.
+
+For an update to {{< katex >}} Q_1 {{< /katex >}}:
+
+{{% colour "blue" %}}
+{{< katex display=true >}}
+A^*
+=
+\underset{a}{\operatorname{arg\,max}}\;Q_1(S_{t+1},a)
+{{< /katex >}}
+{{% /colour %}}
+
+{{% colour "blue" %}}
+{{< katex display=true >}}
+Q_1(S_t,A_t)
+\leftarrow
+Q_1(S_t,A_t)
++
+\alpha
+\left[
+R_{t+1}
++
+\gamma Q_2(S_{t+1},A^*)
+-
+Q_1(S_t,A_t)
+\right]
+{{< /katex >}}
+{{% /colour %}}
+
+When {{< katex >}} Q_2 {{< /katex >}} is updated, its roles are reversed: {{< katex >}} Q_2 {{< /katex >}} selects the action and {{< katex >}} Q_1 {{< /katex >}} evaluates it.
+
+{{% hint warning %}}
+**Double Q-learning** uses two value estimates to reduce maximisation bias. It is different from **Deep Q-Learning**, which uses a neural network to approximate Q-values.
+{{% /hint %}}
+
+---
+
+## 12. Terminal States
 
 If {{< katex >}} S_{t+1} {{< /katex >}} is terminal, it has no future return. Its successor value is treated as zero.
 
@@ -381,7 +451,7 @@ This applies to TD(0), SARSA, Expected SARSA and Q-learning.
 
 ---
 
-## 12. Advantages and Limitations of TD Learning
+## 13. Advantages and Limitations of TD Learning
 
 ### Advantages
 
@@ -406,8 +476,10 @@ This applies to TD(0), SARSA, Expected SARSA and Q-learning.
 - TD(0) does not wait for the complete return; it uses the next state's current estimate.
 - SARSA is on-policy because its target uses the next action selected by the behaviour policy.
 - Q-learning may behave epsilon-greedily while learning about a greedy target policy.
+- Epsilon controls action selection; it is not an additional term in the TD update.
 - The max in Q-learning is taken over next-state actions, not over possible rewards.
 - Expected SARSA uses a probability-weighted expectation, not a simple unweighted average.
+- Double Q-learning and Deep Q-Learning are different methods.
 {{% /hint %}}
 
 ---
@@ -421,6 +493,8 @@ This applies to TD(0), SARSA, Expected SARSA and Q-learning.
 5. Compare the targets used by SARSA, Expected SARSA and Q-learning.
 6. What happens to the TD target when the next state is terminal?
 7. Explain how TD learning combines ideas from Dynamic Programming and Monte Carlo.
+8. Why can the maximum operation in Q-learning cause positive bias?
+9. How does Double Q-learning separate action selection from evaluation?
 
 ---
 
@@ -432,6 +506,8 @@ This applies to TD(0), SARSA, Expected SARSA and Q-learning.
 - SARSA uses the next action actually selected and is on-policy.
 - Expected SARSA averages next-action values under the policy.
 - Q-learning uses the maximum next-action value and is off-policy.
+- Epsilon-greedy controls exploration during action selection rather than changing the update equation.
+- Double Q-learning reduces maximisation bias by maintaining two value estimates.
 - Q-learning provides the tabular foundation for Deep Q-Networks.
 {{% /hint %}}
 
@@ -444,6 +520,8 @@ This applies to TD(0), SARSA, Expected SARSA and Q-learning.
 - [ ] I can write the SARSA and Q-learning updates.
 - [ ] I can distinguish on-policy from off-policy TD control.
 - [ ] I can calculate an Expected SARSA target.
+- [ ] I can explain the role of epsilon-greedy action selection.
+- [ ] I can explain maximisation bias and Double Q-learning.
 - [ ] I can handle terminal states correctly.
 
 ---
@@ -451,7 +529,7 @@ This applies to TD(0), SARSA, Expected SARSA and Q-learning.
 ## References
 
 1. Sutton and Barto, *Reinforcement Learning: An Introduction*, Chapters 6 and 7.
-2. Supplied material on TD(0), SARSA, Expected SARSA and Q-learning.
+2. Supplied material on TD(0), SARSA, Expected SARSA, Q-learning and Double Q-learning.
 
 ---
 {{< home-link "Home" >}} | {{< section-index >}}
