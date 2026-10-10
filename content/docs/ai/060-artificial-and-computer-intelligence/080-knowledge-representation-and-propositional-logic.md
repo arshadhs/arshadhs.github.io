@@ -19,6 +19,10 @@ An intelligent agent can store observations and rules, combine them through logi
 
 The explanations below develop knowledge-based agents and propositional reasoning, using one continuous Wumpus World example.
 
+{{% hint info %}}
+In modern AI, knowledge representation and logical reasoning are used when a system must follow explicit rules, satisfy constraints, or justify its conclusions. For example, a planning system can represent action preconditions and effects, then check whether a proposed sequence of actions achieves a goal. A neural model can recognise objects or suggest solutions, while a symbolic reasoning component checks what follows from the available facts and rules. Google DeepMind’s AlphaGeometry illustrates this combination: a neural language model proposes useful geometric constructions, and a symbolic deduction engine develops proofs. Its reasoning uses richer mathematical representations than basic propositional logic, but follows the same principle of deriving conclusions from explicit knowledge. These methods are especially useful when correctness and traceability matter; their conclusions still depend on the accuracy of the facts and rules supplied.
+{{% /hint %}}
+
 ## Learning Objectives
 
 - distinguish facts, rules, queries and inferred conclusions
@@ -103,6 +107,26 @@ When facts can change over time, their time or state must be represented appropr
 ## 3. Propositional Logic: Language and Meaning
 
 **Propositional logic** represents statements that are either true or false. Compound sentences are built by joining simpler statements with logical connectives.
+
+{{< mermaid >}}
+flowchart LR
+    PL[Propositional Logic]
+    TT[Truth Table (TT) Entails Inference]
+    TP[Theorem Proving]
+    PC[Proof By Contradiction]
+    CMF[Resolution Using CNF Conversion]
+
+    PL --> TT
+    PL --> TP
+    PL --> PC
+    PL --> CMF
+
+    style PL fill:#E1F5FE
+    style TT fill:#C8E6C9
+    style TP fill:#C8E6C9
+    style PC fill:#C8E6C9
+    style CMF fill:#C8E6C9
+{{< /mermaid >}}
 
 ### Basic terminology
 
