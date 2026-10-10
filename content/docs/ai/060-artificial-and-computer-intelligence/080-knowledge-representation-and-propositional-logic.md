@@ -23,6 +23,40 @@ The explanations below develop knowledge-based agents and propositional reasonin
 In modern AI, knowledge representation and logical reasoning are used when a system must follow explicit rules, satisfy constraints, or justify its conclusions. For example, a planning system can represent action preconditions and effects, then check whether a proposed sequence of actions achieves a goal. A neural model can recognise objects or suggest solutions, while a symbolic reasoning component checks what follows from the available facts and rules. Google DeepMind’s AlphaGeometry illustrates this combination: a neural language model proposes useful geometric constructions, and a symbolic deduction engine develops proofs. Its reasoning uses richer mathematical representations than basic propositional logic, but follows the same principle of deriving conclusions from explicit knowledge. These methods are especially useful when correctness and traceability matter; their conclusions still depend on the accuracy of the facts and rules supplied.
 {{% /hint %}}
 
+{{< mermaid >}}
+flowchart TD
+  L["Logic"] --> PL["Propositional<br/>Logic"]
+  L --> PDL["Predicate Logic<br/>(First-Order Logic)"]
+
+  PL --> PROP["Propositions<br/>True or False"]
+  PL --> INF["Inference"]
+
+  INF --> TT["Truth Table<br/>Entailment"]
+  INF --> TP["Theorem<br/>Proving"]
+
+  TP --> PC["Proof by<br/>Contradiction"]
+  TP --> RES["Resolution<br/>using CNF"]
+
+  PDL --> OBJ["Objects and<br/>Predicates"]
+  PDL --> VAR["Variables"]
+  PDL --> Q["Quantifiers<br/>forall / exists"]
+
+  style L fill:#90CAF9,stroke:#1E88E5,color:#000
+
+  style PL fill:#CE93D8,stroke:#8E24AA,color:#000
+  style PDL fill:#CE93D8,stroke:#8E24AA,color:#000
+  style INF fill:#CE93D8,stroke:#8E24AA,color:#000
+
+  style PROP fill:#C8E6C9,stroke:#2E7D32,color:#000
+  style TT fill:#C8E6C9,stroke:#2E7D32,color:#000
+  style TP fill:#C8E6C9,stroke:#2E7D32,color:#000
+  style PC fill:#C8E6C9,stroke:#2E7D32,color:#000
+  style RES fill:#C8E6C9,stroke:#2E7D32,color:#000
+  style OBJ fill:#C8E6C9,stroke:#2E7D32,color:#000
+  style VAR fill:#C8E6C9,stroke:#2E7D32,color:#000
+  style Q fill:#C8E6C9,stroke:#2E7D32,color:#000
+{{< /mermaid >}}
+
 ## Learning Objectives
 
 - distinguish facts, rules, queries and inferred conclusions
@@ -109,23 +143,21 @@ When facts can change over time, their time or state must be represented appropr
 **Propositional logic** represents statements that are either true or false. Compound sentences are built by joining simpler statements with logical connectives.
 
 {{< mermaid >}}
-flowchart LR
-    PL[Propositional Logic]
-    TT[Truth Table (TT) Entails Inference]
-    TP[Theorem Proving]
-    PC[Proof By Contradiction]
-    CMF[Resolution Using CNF Conversion]
+flowchart TD
+    PL["Propositional Logic"] --> INF["Inference"]
+    INF --> TT["Truth Table<br/>Entailment"]
+    INF --> TP["Theorem<br/>Proving"]
 
-    PL --> TT
-    PL --> TP
-    PL --> PC
-    PL --> CMF
+    TP --> PC["Proof by<br/>Contradiction"]
+    TP --> RES["Resolution<br/>using CNF"]
 
-    style PL fill:#E1F5FE
-    style TT fill:#C8E6C9
-    style TP fill:#C8E6C9
-    style PC fill:#C8E6C9
-    style CMF fill:#C8E6C9
+style PL fill:#90CAF9,stroke:#1E88E5,color:#000
+style INF fill:#CE93D8,stroke:#8E24AA,color:#000
+style TT fill:#C8E6C9,stroke:#2E7D32,color:#000
+style TP fill:#C8E6C9,stroke:#2E7D32,color:#000
+style PC fill:#C8E6C9,stroke:#2E7D32,color:#000
+style RES fill:#C8E6C9,stroke:#2E7D32,color:#000
+
 {{< /mermaid >}}
 
 ### Basic terminology
