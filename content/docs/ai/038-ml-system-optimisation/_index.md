@@ -4,7 +4,9 @@ draft: false
 tags: ["ML System Optimisation", "MLSysOps", "Distributed Machine Learning", "AI", "ML"]
 categories: ["AI", "ML"]
 weight: 900
-menu: main
+menu:
+  main:
+    identifier: mlsysops
 bookCollapseSection: true
 ---
 
@@ -42,116 +44,20 @@ flowchart TD
 
 ---
 
-## Modular Structure
+## Modules
 
-### 1. Foundations
+The learning path follows four modules. Each module has its own overview, topic outline, and chapter links.
 
-- Machine learning and deep learning workloads
-- Performance metrics
-  - Time and space complexity
-  - Running time
-  - Throughput
-  - Latency and response time
-- Performance scaling and tuning
-- Training versus deployment environments
-- Distributed, cloud, embedded, and mobile systems
-- Parallel and distributed algorithms
-- Speedup and Amdahl's Law ☆
-- Scale-up versus scale-out
-- Data, task, and request parallelism
-- Parallel programming models
-- MapReduce pattern
-- Multi-core and GPGPU parallelism
-- SIMD versus MIMD execution
-- Memory hierarchy and bandwidth
-- CPU and GPU clusters
-- Data sharding
-- Parameter-server and all-reduce paradigms
+| Module | Chapters | Focus |
+|---|---:|---|
+| [M1: Foundations]({{< relref "m1-foundations/_index.md" >}}) | 1–3 | Performance metrics, complexity, parallelisation, and hardware |
+| [M2: Distributed ML Algorithms]({{< relref "m2-distributed-ML-algorithms/_index.md" >}}) | 4–7 | Parallel ML algorithms and distributed training strategies |
+| [M3: Scale-Out Systems]({{< relref "m3-scale-out-systems/_index.md" >}}) | 8–11 | Platforms, distributed deep learning, and federated learning |
+| [M4: Constrained Systems]({{< relref "m4-constrained-systems/_index.md" >}}) | 12–16 | Compression, edge deployment, and performance trade-offs |
 
-### 2. Distributed ML Algorithms
+Read the modules in order for a continuous learning path, or use a module index to find a particular topic. The indexes distinguish existing chapter pages from planned topics.
 
-- Problem decomposition
-- Parallelisation of machine learning algorithms
-- Ensemble methods and XGBoost
-- Distributed decision trees and random forests
-- Parallel support vector machines
-- Communication overhead
-- Distributed k-means
-- Distributed k-nearest neighbours
-- Gradient descent and stochastic gradient descent
-- Synchronous versus asynchronous SGD ☆
-- Hadoop and Spark
-- Distributed convolutional neural networks
-- Data, model, and pipeline parallelism ☆
-- Gradient checkpointing
-- Mixed-precision training
-
-### 3. Scale-Out Systems
-
-- ML platforms and frameworks
-- Parameter Server model ☆
-- TensorFlow distributed architecture
-- Distributed training strategies
-- Batch and micro-batch sizing
-- I/O and shuffling overhead
-- Decentralised SGD
-- Ring-based and tree-based all-reduce ☆
-- Asynchronous parallelism and parameter staleness
-- Local SGD
-- Locality-aware programs
-- Massive multithreading and GPGPUs
-- Model and pipeline parallelism
-- Micro-batch pipelining and pipeline bubbles
-- Large-scale neural-network training
-- GPU architecture and threading model
-- Parallel matrix operations
-- Federated learning
-- Non-IID data, privacy, and secure aggregation
-- Decentralised federated learning
-
-### 4. Constrained Systems
-
-- GPU implementation of convolutional neural networks
-- Model compression
-- Quantisation ☆
-- Network pruning ☆
-- Low-rank factorisation
-- Weight sharing and encoding
-- Knowledge distillation ☆
-- Edge intelligence
-- Reduced-precision arithmetic
-- Hardware support for efficient inference
-- Structured and unstructured pruning
-- Sparsity, FLOPs reduction, and accuracy loss
-- Deep compression pipeline
-- Small language models
-- TensorFlow Lite Micro
-- Hardware- and compiler-aware optimisation
-- Energy-aware algorithms
-- Accuracy, model size, throughput, latency, and energy trade-offs ☆
-
----
-
-## 16-Topic Learning Path
-
-| # | Topic | Main Focus | Module |
-|---:|---|---|---|
-| 1 | [ML and DL System Performance]({{< relref "010-ml-and-dl-system-performance.md" >}}) | Complexity, running time, throughput, response time, scaling, tuning, training and deployment environments | Foundations |
-| 2 | [Parallel and Distributed Algorithms]({{< relref "020-parallel-and-distributed-algorithms.md" >}}) | Systems performance, speedup, Amdahl's Law, parallelism types, communication cost, scale-up and scale-out | Foundations |
-| 3 | [Parallel Programming Models]({{< relref "030-parallel-programming-models.md" >}}) | MapReduce, task and request parallelism, multi-core and GPGPU execution, memory hierarchy, sharding, parameter server and all-reduce | Foundations |
-| 4 | [Parallelisation of ML Algorithms]({{< relref "040-parallelisation-of-ml-algorithms.md" >}}) | Problem decomposition, ensemble methods, XGBoost, k-means, distributed trees, random forests, and SVM | Distributed ML Algorithms |
-| 5 | [Communication-Aware Distributed ML]({{< relref "050-communication-aware-distributed-ml.md" >}}) | Communication overhead, distributed k-means, model parallelism, distributed k-NN, synchronous and asynchronous SGD | Distributed ML Algorithms |
-| 6 | [Clusters, Hadoop, and Spark]({{< relref "060-clusters-hadoop-and-spark.md" >}}) | Cluster computing, MapReduce k-means, streaming variants, communication reduction, distributed CNNs, and mixed precision | Distributed ML Algorithms |
-| 7 | [Distributed Training Strategies]({{< relref "070-distributed-training-strategies.md" >}}) | Data, model, and pipeline parallelism, gradient checkpointing, and mixed-precision training | Distributed ML Algorithms |
-| 8 | [ML Platforms and Frameworks]({{< relref "080-ml-platforms-and-frameworks.md" >}}) | Parameter Server model, SGD, TensorFlow architecture, distributed strategies, batching, model compression, I/O, and shuffling | Scale-Out Systems |
-| 9 | Distributed Deep Learning | Decentralised SGD, all-reduce, asynchronous parallelism, Hogwild!, parameter staleness, local SGD, and matrix multiplication | Scale-Out Systems |
-| 10 | Locality and Large-Scale Parallelism | Locality-aware programs, GPGPUs, model parallelism, pipeline scheduling, GPU clusters, and memory-efficient checkpointing | Scale-Out Systems |
-| 11 | GPU Architecture and Federated Learning | GPU threading, parallel matrix operations, non-IID data, privacy, secure aggregation, and decentralised federated learning | Scale-Out Systems |
-| 12 | Model Compression Foundations | CNNs on GPUs, quantisation, pruning, low-rank factorisation, weight sharing, encoding, and knowledge distillation | Constrained Systems |
-| 13 | Quantisation and Edge Intelligence | Edge case studies, quantisation methods, reduced-precision arithmetic, and hardware support | Constrained Systems |
-| 14 | Pruning and Deep Compression | Structured and unstructured pruning, sparsity metrics, FLOPs reduction, accuracy loss, and the deep compression pipeline | Constrained Systems |
-| 15 | Optimisation Landscape and Small Language Models | Generic and platform-specific optimisation, frameworks, hardware, compilers, federated learning, and TensorFlow Lite Micro | Constrained Systems |
-| 16 | Energy-Constrained ML | Adapting algorithms for constrained devices and balancing accuracy, model size, throughput, response time, and energy | Constrained Systems |
+<!-- Module names and boundaries follow _COURSE_MLSysOps_ZG516.pdf, pages 2–7. -->
 
 ---
 
