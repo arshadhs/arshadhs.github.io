@@ -35,11 +35,11 @@ Module coverage:
 | Chapter | Topic | Availability |
 |---:|---|---|
 | 8 | [ML Platforms and Frameworks]({{< relref "080-ml-platforms-and-frameworks.md" >}}) | Page available; currently focuses on the Parameter Server model |
-| 9 | Distributed Deep Learning | Planned |
+| 9 | [Distributed Deep Learning: Synchronisation and Communication]({{< relref "090-distributed-deep-learning.md" >}}) | Page available; parameter-server synchronisation, compression, overlap, and placement |
 | 10 | Locality and Large-Scale Parallelism | Planned |
 | 11 | GPU Architecture and Federated Learning | Planned |
 
-The outline below describes the full module scope. Planned topics have no chapter page yet.
+The outline below describes the full module scope. Planned topics have no chapter page yet. Chapter 9 currently covers parameter-server execution policies and communication optimisation; collective communication, matrix multiplication, and Local SGD remain to be added from their source material.
 
 ## Topic Outline
 
