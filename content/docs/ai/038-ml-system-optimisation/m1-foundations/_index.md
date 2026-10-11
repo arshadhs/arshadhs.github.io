@@ -68,7 +68,7 @@ Module coverage:
 
 ## How This Module Connects
 
-Performance measurement and parallel execution provide the basis for [M2: Distributed ML Algorithms]({{< relref "../M2/_index.md" >}}). Communication and memory limits remain relevant throughout the later modules.
+Performance measurement and parallel execution provide the basis for [M2: Distributed ML Algorithms]({{< relref "../m2-distributed-ML-algorithms/_index.md" >}}). Communication and memory limits remain relevant throughout the later modules.
 
 [ML System Optimisation overview]({{< relref "../_index.md" >}})
 

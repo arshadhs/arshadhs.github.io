@@ -89,7 +89,7 @@ This index records the module scope. Chapter pages can be added here as their so
 
 ## How This Module Connects
 
-[M1: Foundations]({{< relref "../M1/_index.md" >}}) supplies the performance metrics, while [M3: Scale-Out Systems]({{< relref "../M3/_index.md" >}}) provides the larger-system context. Here the emphasis shifts towards fitting useful models within tighter resource budgets.
+[M1: Foundations]({{< relref "../m1-foundations/_index.md" >}}) supplies the performance metrics, while [M3: Scale-Out Systems]({{< relref "../m3-scale-out-systems/_index.md" >}}) provides the larger-system context. Here the emphasis shifts towards fitting useful models within tighter resource budgets.
 
 [ML System Optimisation overview]({{< relref "../_index.md" >}})
 

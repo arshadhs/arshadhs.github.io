@@ -77,7 +77,7 @@ Module coverage:
 
 ## How This Module Connects
 
-Use [M1: Foundations]({{< relref "../M1/_index.md" >}}) to interpret complexity and speedup. Continue to [M3: Scale-Out Systems]({{< relref "../M3/_index.md" >}}) for the platforms and communication mechanisms that support larger training runs.
+Use [M1: Foundations]({{< relref "../m1-foundations/_index.md" >}}) to interpret complexity and speedup. Continue to [M3: Scale-Out Systems]({{< relref "../m3-scale-out-systems/_index.md" >}}) for the platforms and communication mechanisms that support larger training runs.
 
 [ML System Optimisation overview]({{< relref "../_index.md" >}})
 

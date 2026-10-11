@@ -50,10 +50,10 @@ The learning path follows four modules. Each module has its own overview, topic 
 
 | Module | Chapters | Focus |
 |---|---:|---|
-| [M1: Foundations]({{< relref "M1/_index.md" >}}) | 1–3 | Performance metrics, complexity, parallelisation, and hardware |
-| [M2: Distributed ML Algorithms]({{< relref "M2/_index.md" >}}) | 4–7 | Parallel ML algorithms and distributed training strategies |
-| [M3: Scale-Out Systems]({{< relref "M3/_index.md" >}}) | 8–11 | Platforms, distributed deep learning, and federated learning |
-| [M4: Constrained Systems]({{< relref "M4/_index.md" >}}) | 12–16 | Compression, edge deployment, and performance trade-offs |
+| [M1: Foundations]({{< relref "m1-foundations/_index.md" >}}) | 1–3 | Performance metrics, complexity, parallelisation, and hardware |
+| [M2: Distributed ML Algorithms]({{< relref "m2-distributed-ML-algorithms/_index.md" >}}) | 4–7 | Parallel ML algorithms and distributed training strategies |
+| [M3: Scale-Out Systems]({{< relref "m3-scale-out-systems/_index.md" >}}) | 8–11 | Platforms, distributed deep learning, and federated learning |
+| [M4: Constrained Systems]({{< relref "m4-constrained-systems/_index.md" >}}) | 12–16 | Compression, edge deployment, and performance trade-offs |
 
 Read the modules in order for a continuous learning path, or use a module index to find a particular topic. The indexes distinguish existing chapter pages from planned topics.
 

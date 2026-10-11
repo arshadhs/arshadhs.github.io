@@ -79,7 +79,7 @@ The outline below describes the full module scope. Planned topics have no chapte
 
 ## How This Module Connects
 
-Build on [M2: Distributed ML Algorithms]({{< relref "../M2/_index.md" >}}). For model optimisation and deployment under tighter resource limits, continue to [M4: Constrained Systems]({{< relref "../M4/_index.md" >}}).
+Build on [M2: Distributed ML Algorithms]({{< relref "../m2-distributed-ML-algorithms/_index.md" >}}). For model optimisation and deployment under tighter resource limits, continue to [M4: Constrained Systems]({{< relref "../m4-constrained-systems/_index.md" >}}).
 
 [ML System Optimisation overview]({{< relref "../_index.md" >}})
 
