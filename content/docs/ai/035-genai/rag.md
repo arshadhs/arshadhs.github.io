@@ -119,18 +119,20 @@ graph TB
     %% Vertical RAG Pipeline Diagram
     subgraph "RAG Pipeline"
         
-        %% 1. Data Indexing Phase (Top)
+        %% 1. Data Indexing Phase (Top Stack)
         subgraph Data_Indexing ["1. Data Indexing Phase"]
+            direction LR
             DI1[Raw Documents] -->|Loading| DI2[Text Chunks]
             DI2 -->|Splitting| DI3[Vector Embeddings]
             DI3 -->|Embedding| DI4[(Vector DB)]
         end
 
-        %% Invisible connector to force vertical stacking
-        DI4 -->|Populates Database| DR3
+        %% Explicit vertical flow constraint to force the next block down
+        Data_Indexing --> Data_Retrieval_Generation
 
-        %% 2. Retrieval & Generation Phase (Bottom)
+        %% 2. Retrieval & Generation Phase (Bottom Stack)
         subgraph Data_Retrieval_Generation ["2. Retrieval & Generation Phase"]
+            direction LR
             DR1[User Query] -->|Embedding Search| DR3[(Vector DB)]
             DR3 -->|Retrieves Context| DR4[Top-K Chunks]
             
@@ -154,7 +156,6 @@ graph TB
     style DR4 fill:#FCA5A5,stroke:#DC2626,stroke-width:1px
     style DR5 fill:#E9D5FF,stroke:#9333EA,stroke-width:2px
     style DR6 fill:#99F6E4,stroke:#0D9488,stroke-width:2px
-
 {{< /mermaid >}}
 
 ---
