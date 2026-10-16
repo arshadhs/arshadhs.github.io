@@ -472,5 +472,13 @@ These questions check the concepts and worked examples on this page. They are no
 - [ ] I can explain error feedback and the limits of overlap.
 - [ ] I can identify access imbalance despite equal shard counts.
 
+## References
+
+[5] J. Dean et al., "Large scale distributed deep networks," in Proc. NIPS, 2012.
+https://research.google/pubs/large-scale-distributed-deep-networks/
+
+[6] J. Chen, X. Pan, R. Monga, S. Bengio and R. Jozefowicz, "Revisiting distributed synchronous SGD," arXiv:1604.00981, 2016.
+1604.00981
+
 ---
 {{< home-link "Home" >}} | {{< section-index >}}

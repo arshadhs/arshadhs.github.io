@@ -36,7 +36,7 @@ It changes what the model *sees* at inference time by adding retrieved context.
 ## High-Level Flow
 
 {{< mermaid >}}
-flowchart LR
+flowchart TD
     U[User Question] --> E[Embed Question]
     E --> R[Retriever / Vector Search]
     R --> C[Top-k Relevant Chunks]
@@ -75,7 +75,18 @@ The retriever uses similarity search to find the best matches.
 
 ---
 
-### 4. Retriever (Search)
+### 4. Knowledge Base
+
+- Smart Database (Supports CRUD Operations on Vector Data - Create, Read, Update, and Delete)
+
+Stores:
+- Embedding
+- Searching Algorithm
+- Text & Metadata
+
+---
+
+### 5. Retriever (Search)
 The retriever returns the top-k most relevant chunks.
 
 Common retrieval methods:
@@ -85,7 +96,7 @@ Common retrieval methods:
 
 ---
 
-### 5. Prompt Augmentation
+### 6. Prompt Augmentation
 The retrieved chunks are inserted into the prompt (context window), usually as:
 
 - “Use the following context…”
@@ -94,10 +105,55 @@ The retrieved chunks are inserted into the prompt (context window), usually as:
 
 ---
 
-### 6. LLM Generation
+### 7. LLM Generation
 The LLM generates the final response using:
 - the user query
 - the retrieved context
+
+---
+
+{{< mermaid >}}
+graph TD
+    %% Basic RAG Pipeline Diagram
+    subgraph "Basic RAG Pipeline"
+        
+        %% Data Indexing Subgraph
+        subgraph Data_Indexing ["Data Indexing"]
+            DI1[Documents] -->|Data Loading| DI2[Text Chunks]
+            DI2 -->|Data Splitting| DI3[Vector Embeddings]
+            DI3 -->|Data Embedding| DI4[(Vector DB)]
+            
+            style DI1 fill:#E2E8F0,stroke:#334155,stroke-width:1px
+            style DI2 fill:#BAE6FD,stroke:#0284C7,stroke-width:1px
+            style DI3 fill:#BBF7D0,stroke:#16A34A,stroke-width:1px
+            style DI4 fill:#FEF08A,stroke:#CA8A04,stroke-width:2px
+        end
+
+        %% Data Retrieval & Generation Subgraph
+        subgraph Data_Retrieval_Generation ["Data Retrieval & Generation"]
+            %% Retrieval Flow
+            DR1[User Query] -->|Vector Embedding| DR2[Vector Embedding]
+            DR2 --> DR3[(Vector DB)]
+            DR3 -->|Retrieval| DR4[Top-K Chunks]
+            
+            %% Generation Flow
+            DR1 --> DR5[LLM]
+            DR4 -->|Generation| DR5
+            DR5 --> DR6[Response]
+
+            style DR1 fill:#BAE6FD,stroke:#0284C7,stroke-width:2px
+            style DR2 fill:#BBF7D0,stroke:#16A34A,stroke-width:1px
+            style DR3 fill:#FEF08A,stroke:#CA8A04,stroke-width:2px
+            style DR4 fill:#FCA5A5,stroke:#DC2626,stroke-width:1px
+            style DR5 fill:#E9D5FF,stroke:#9333EA,stroke-width:2px
+            style DR6 fill:#99F6E4,stroke:#0D9488,stroke-width:2px
+        end
+    end
+
+    %% Styles for Subgraphs
+    style Data_Indexing fill:#FFFFFF,stroke:#475569,stroke-width:1px,stroke-dasharray: 5 5
+    style Data_Retrieval_Generation fill:#FFFFFF,stroke:#475569,stroke-width:1px,stroke-dasharray: 5 5
+{{< /mermaid >}}
 
 ---
 
@@ -129,6 +185,16 @@ Fine-tuning is not a substitute for retrieval.
 
 - **Confident hallucination when context is missing**  
   → Add a rule: “If context is insufficient, say you don’t know.”
+
+---
+
+## Core Scenarios to Implement RAG
+
+An organisation should deploy a RAG system under the following conditions:
+• **You have vast, frequently changing internal data**: If your company relies on data that updates daily or hourly (e.g., inventory levels, live ticket tracking, or market data), conventional LLMs will be outdated. RAG fetches information on demand and in real-time.
+• **You need absolute accuracy and auditability**: General LLMs are prone to "hallucinations". RAG forces the model to ground its answers in your verified documentation and can provide direct citations and audit logs, making it crucial for legal, financial, or medical compliance.
+• **You must protect strict data permissions**: Fine-tuning a model bakes data directly into the AI, meaning anyone using it might see sensitive info. RAG keeps data outside the model. It allows you to maintain access control, ensuring an employee only retrieves files they have explicit permission to see.
+• **You want to optimize operational costs**: Training a proprietary LLM from scratch or constantly fine-tuning it is computationally expensive. RAG provides a highly cost-effective scalability model, allowing you to easily swap or upgrade the underlying LLM without losing access to your knowledge base.
 
 ---
 
