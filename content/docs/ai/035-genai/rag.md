@@ -112,6 +112,8 @@ The LLM generates the final response using:
 
 ---
 
+## RAG Pipeline
+
 {{< mermaid >}}
 graph TD
     %% Basic RAG Pipeline Diagram
