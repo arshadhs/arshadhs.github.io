@@ -36,10 +36,11 @@ Module coverage:
 |---:|---|---|
 | 8 | [ML Platforms and Frameworks]({{< relref "080-ml-platforms-and-frameworks.md" >}}) | Page available; currently focuses on the Parameter Server model |
 | 9 | [Distributed Deep Learning: Synchronisation and Communication]({{< relref "090-distributed-deep-learning.md" >}}) | Page available; parameter-server synchronisation, compression, overlap, and placement |
-| 10 | Locality and Large-Scale Parallelism | Planned |
-| 11 | GPU Architecture and Federated Learning | Planned |
+| 9, continued | [Distributed SGD and All-Reduce]({{< relref "095-distributed-sgd-and-all-reduce.md" >}}) | Page available; weighted objectives, decentralised consensus, collective algorithms, and topology |
+| 10 | [Locality and Large-Scale Parallelism]({{< relref "100-locality-and-large-scale-parallelism.md" >}}) | Introductory definitions; ready for later expansion |
+| 11 | [GPU Architecture and Federated Learning]({{< relref "110-gpu-architecture-and-federated-learning.md" >}}) | Introductory definitions; ready for later expansion |
 
-The outline below describes the full module scope. Planned topics have no chapter page yet. Chapter 9 currently covers parameter-server execution policies and communication optimisation; collective communication, matrix multiplication, and Local SGD remain to be added from their source material.
+The outline below describes the full module scope. Chapter 9 spans the two linked pages above; Hogwild! and Local SGD remain to be added from their source material. Chapters 10–11 currently provide short definitions and reading links, including an introduction to matrix multiplication; detailed explanations will be added later.
 
 ## Topic Outline
 

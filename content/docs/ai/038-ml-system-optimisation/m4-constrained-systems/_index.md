@@ -30,17 +30,17 @@ Module coverage:
 - Explain the role of knowledge distillation and deployment frameworks.
 - Evaluate accuracy, latency, throughput, model size, and energy together.
 
-## Planned Topics
+## Pages
 
 | Chapter | Topic | Availability |
 |---:|---|---|
-| 12 | Model Compression Foundations | Planned |
-| 13 | Quantisation and Edge Intelligence | Planned |
-| 14 | Pruning and Deep Compression | Planned |
-| 15 | Optimisation Landscape and Small Language Models | Planned |
-| 16 | Energy-Constrained ML | Planned |
+| 12 | [Model Compression Foundations]({{< relref "120-model-compression-foundations.md" >}}) | Introductory definitions |
+| 13 | [Quantisation and Edge Intelligence]({{< relref "130-quantisation-and-edge-intelligence.md" >}}) | Introductory definitions |
+| 14 | [Pruning and Deep Compression]({{< relref "140-pruning-and-deep-compression.md" >}}) | Introductory definitions |
+| 15 | [Optimisation Landscape and Small Language Models]({{< relref "150-optimisation-landscape-and-small-language-models.md" >}}) | Introductory definitions |
+| 16 | [Energy-Constrained ML]({{< relref "160-energy-constrained-ml.md" >}}) | Introductory definitions |
 
-This index records the module scope. Chapter pages can be added here as their source material becomes available.
+These short overviews introduce the terminology and provide reading links. They will be expanded as detailed source material becomes available.
 
 ## Topic Outline
 

@@ -25,6 +25,8 @@ Relevant themes from the content outline:
 
 The [Parameter Server model]({{< relref "080-ml-platforms-and-frameworks.md" >}}) provides the architectural foundation. Here, the focus is on the policies that determine its performance.
 
+Continue with [Distributed SGD and All-Reduce]({{< relref "095-distributed-sgd-and-all-reduce.md" >}}) for weighted objectives, neighbour-based consensus, and ring, tree, and recursive collective algorithms.
+
 ## Learning Objectives
 
 - Compare synchronous, asynchronous, and bounded-staleness execution.
